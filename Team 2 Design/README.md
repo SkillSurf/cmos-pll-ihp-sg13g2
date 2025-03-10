@@ -3,7 +3,7 @@
 ### 1. Team 2 Members (Department of Electronic and Telecommunication Engineering, University of Moratuwa)
 
 - Avishka Herath
-- 
+- Manimohan Thiriloganathan
 - 
 - 
 - Instructor: Kithmin Wickremasinghe (MASc).
