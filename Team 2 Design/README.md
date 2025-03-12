@@ -5,7 +5,7 @@
 - Avishka Herath
 - Manimohan Thiriloganathan
 - Hansa Marasinghe
-- 
+- Upeksha Dilhara
 - Instructor: Kithmin Wickremasinghe (MASc).
 - Supervisor: Dr. Subramaniam Thayaparan (PhD).
 
