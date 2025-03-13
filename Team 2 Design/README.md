@@ -2,10 +2,10 @@
 
 ### 1. Team 2 Members (Department of Electronic and Telecommunication Engineering, University of Moratuwa)
 
-- 
-- 
-- 
-- 
+- Avishka Herath
+- Manimohan Thiriloganathan
+- Hansa Marasinghe
+- Upeksha Dilhara
 - Instructor: Kithmin Wickremasinghe (MASc).
 - Supervisor: Dr. Subramaniam Thayaparan (PhD).
 
