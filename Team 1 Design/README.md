@@ -5,7 +5,6 @@
 - Yasiru Amarasinghe
 - Nilasi Methsarani
 - Nimesh Kavinda
-- 
 - Instructor: Kithmin Wickremasinghe (MASc).
 - Supervisor: Dr. Subramaniam Thayaparan (PhD).
 
