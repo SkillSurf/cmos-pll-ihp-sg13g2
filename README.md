@@ -48,6 +48,8 @@ The PLL is a charge-pump (CP) based (Type-II) PLL which uses a standard fraction
 
 ### 8. Layout Design:
 
-### 9. Post-layout Verification:
+### 9. Physical Verification (DRC, LVS):
 
-### 10. Pin Layout:
+### 10. Post-layout Verification after PEX:
+
+### 11. GDS streaming:
