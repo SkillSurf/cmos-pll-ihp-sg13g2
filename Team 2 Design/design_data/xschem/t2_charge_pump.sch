@@ -57,7 +57,7 @@ spiceprefix=X
 C {sg13g2_stdcells/sg13g2_inv_1.sym} 10 -170 0 0 {name=x1 VDD=VDD VSS=VSS prefix=sg13g2_ }
 C {iopin.sym} -350 -420 2 0 {name=p1 lab=VPWR}
 C {ipin.sym} -350 -300 0 0 {name=p2 lab=up}
-C {opin.sym} -210 -300 0 0 {name=p3 lab=out}
+C {opin.sym} -280 -330 0 0 {name=p3 lab=out}
 C {iopin.sym} -350 -400 2 0 {name=p4 lab=VPB}
 C {iopin.sym} -350 -380 2 0 {name=p5 lab=VGND}
 C {iopin.sym} -350 -360 2 0 {name=p6 lab=VNB}
