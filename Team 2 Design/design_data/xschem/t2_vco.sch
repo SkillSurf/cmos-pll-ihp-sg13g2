@@ -50,6 +50,15 @@ N 780 150 880 150 {lab=mid[1..0],out_int}
 N 1080 150 1180 150 {lab=#net3}
 N 960 220 960 310 {lab=3*vco_sink}
 N 960 0 960 80 {lab=3*vco_source}
+N 260 -160 320 -160 {lab=VPB}
+N 20 -60 80 -60 {lab=VPB}
+N 480 -60 550 -60 {lab=VPB}
+N 80 90 150 90 {lab=VNB}
+N 10 240 80 240 {lab=#net4}
+N 480 240 550 240 {lab=#net5}
+N 260 360 330 360 {lab=#net6}
+N -160 360 -80 360 {lab=#net7}
+N 1630 250 1710 250 {lab=#net8}
 C {sg13g2_pr/sg13_lv_pmos.sym} 240 -160 0 0 {name=M1
 l=0.13u
 w=0.15u
@@ -151,3 +160,18 @@ C {lab_pin.sym} 1830 140 0 1 {name=p21 sig_type=std_logic lab=out
 C {lab_pin.sym} 1630 340 0 0 {name=p22 sig_type=std_logic lab=VGND}
 C {lab_pin.sym} 1550 250 0 0 {name=p23 sig_type=std_logic lab=enb}
 C {lab_pin.sym} -320 360 0 0 {name=p24 sig_type=std_logic lab=enb}
+C {lab_pin.sym} 320 -160 0 1 {name=p25 sig_type=std_logic lab=VPB}
+C {lab_pin.sym} 150 90 0 1 {name=p26 sig_type=std_logic lab=VNB
+}
+C {lab_pin.sym} 550 -60 0 1 {name=p27 sig_type=std_logic lab=VPB}
+C {lab_pin.sym} 20 -60 0 0 {name=p28 sig_type=std_logic lab=VPB}
+C {lab_pin.sym} 550 240 0 1 {name=p29 sig_type=std_logic lab=VNB
+}
+C {lab_pin.sym} 330 360 0 1 {name=p30 sig_type=std_logic lab=VNB
+}
+C {lab_pin.sym} -80 360 0 1 {name=p31 sig_type=std_logic lab=VNB
+}
+C {lab_pin.sym} 10 240 0 0 {name=p32 sig_type=std_logic lab=VNB
+}
+C {lab_pin.sym} 1710 250 0 1 {name=p33 sig_type=std_logic lab=VNB
+}
