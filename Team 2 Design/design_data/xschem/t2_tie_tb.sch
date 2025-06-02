@@ -47,7 +47,7 @@ C {lab_pin.sym} -130 -100 0 0 {name=p1 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 140 -20 2 0 {name=p4 sig_type=std_logic lab=HI}
 C {devices/code_shown.sym} -140 -270 0 0 {name=NGSPICE only_toplevel=true 
 value="
-.param temp=127
+.param temp=27
 .control
 save all 
 tran 50p 20n

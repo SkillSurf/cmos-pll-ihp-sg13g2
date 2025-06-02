@@ -27,7 +27,7 @@ unitx=1
 logx=0
 logy=0
 hilight_wave=0}
-B 2 320 20 1120 420 {flags=graph
+B 2 320 30 1120 430 {flags=graph
 y1=-0.34
 y2=1.6
 ypos1=0
@@ -78,7 +78,7 @@ C {lab_pin.sym} -200 20 0 0 {name=p3 sig_type=std_logic lab=B}
 C {lab_pin.sym} 180 0 2 0 {name=p4 sig_type=std_logic lab=F}
 C {devices/code_shown.sym} -380 -340 0 0 {name=NGSPICE only_toplevel=true 
 value="
-.param temp=127
+.param temp=27
 .control
 save all 
 tran 50p 20n
@@ -91,4 +91,4 @@ format="tcleval( @value )"
 value="
 .lib cornerMOSlv.lib mos_ff
 "}
-C {t2_nand2.sym} 10 0 0 0 {name=x1}
+C {t2_nand2.sym} 0 0 0 0 {name=x1}
