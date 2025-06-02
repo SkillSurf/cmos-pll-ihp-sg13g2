@@ -64,7 +64,6 @@ N -200 170 -200 200 {lab=GND}
 N -360 100 -360 150 {lab=GND}
 N -280 100 -280 150 {lab=GND}
 N -200 20 -200 110 {lab=B}
-C {t2_nand2.sym} 10 0 0 0 {name=x1}
 C {vsource.sym} -280 70 0 0 {name=VinA value="dc 0 ac 0 pulse(0, 1.2, 2n, 100p, 100p, 4n, 6n)"}
 C {vsource.sym} -200 140 0 0 {name=VinB value="dc 0 ac 0 pulse(0, 1.2, 0, 100p, 100p, 2n, 4n)" savecurrent=false}
 C {vsource.sym} -360 70 0 0 {name=Vs value=1.2 savecurrent=false}
@@ -77,7 +76,7 @@ C {lab_pin.sym} -360 -60 0 0 {name=p1 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} -280 -20 0 0 {name=p2 sig_type=std_logic lab=A}
 C {lab_pin.sym} -200 20 0 0 {name=p3 sig_type=std_logic lab=B}
 C {lab_pin.sym} 180 0 2 0 {name=p4 sig_type=std_logic lab=F}
-C {devices/code_shown.sym} -360 -340 0 0 {name=NGSPICE only_toplevel=true 
+C {devices/code_shown.sym} -380 -340 0 0 {name=NGSPICE only_toplevel=true 
 value="
 .param temp=127
 .control
@@ -87,8 +86,9 @@ meas tran tdelay TRIG v(b) VAl=0.9 FALl=1 TARG v(f) VAl=0.9 RISE=1
 write tran_t2_nand2.raw
 .endc
 "}
-C {devices/code_shown.sym} -360 330 0 0 {name=MODEL only_toplevel=true
+C {devices/code_shown.sym} -380 330 0 0 {name=MODEL only_toplevel=true
 format="tcleval( @value )"
 value="
 .lib cornerMOSlv.lib mos_ff
 "}
+C {t2_nand2.sym} 10 0 0 0 {name=x1}

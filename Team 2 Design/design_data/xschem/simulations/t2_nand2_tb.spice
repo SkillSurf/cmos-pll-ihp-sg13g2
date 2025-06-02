@@ -1,10 +1,10 @@
 ** sch_path: /foss/designs/PROJECTS/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_nand2_tb.sch
 **.subckt t2_nand2_tb
-x1 VDD A B F GND t2_nand2
 VinA A GND dc 0 ac 0 pulse(0, 1.2, 2n, 100p, 100p, 4n, 6n)
 VinB B GND dc 0 ac 0 pulse(0, 1.2, 0, 100p, 100p, 2n, 4n)
 Vs VDD GND 1.2
 * noconn F
+x1 VDD A B F GND t2_nand2
 **** begin user architecture code
 
 
@@ -32,10 +32,10 @@ write tran_t2_nand2.raw
 *.ipin inB
 *.opin out
 *.iopin VDD
-XM1 out inA VDD VDD sg13_lv_pmos w=1u l=0.45u ng=1 m=1
-XM2 out inB VDD VDD sg13_lv_pmos w=1u l=0.45u ng=1 m=1
-XM3 out inB net1 VSS sg13_lv_nmos w=0.5u l=0.45u ng=1 m=1
-XM4 net1 inA VSS VSS sg13_lv_nmos w=0.5u l=0.45u ng=1 m=1
+XM1 out inA VDD VDD sg13_lv_pmos w=0.3u l=0.15u ng=1 m=1
+XM2 out inB VDD VDD sg13_lv_pmos w=0.3u l=0.13u ng=1 m=1
+XM3 out inB net1 VSS sg13_lv_nmos w=0.15u l=0.13u ng=1 m=1
+XM4 net1 inA VSS VSS sg13_lv_nmos w=0.15u l=0.13u ng=1 m=1
 .ends
 
 .GLOBAL GND
