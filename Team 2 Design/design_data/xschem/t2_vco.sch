@@ -38,27 +38,36 @@ N -160 90 -160 330 {lab=vctl}
 N -160 90 40 90 {lab=vctl}
 N -320 90 -160 90 {lab=vctl}
 N -320 360 -200 360 {lab=enb}
-N 1630 140 1690 140 {lab=out_int}
-N 1630 140 1630 220 {lab=out_int}
-N 1550 140 1630 140 {lab=out_int}
-N 1550 250 1590 250 {lab=enb}
-N 1630 280 1630 340 {lab=VGND}
-N 1770 140 1830 140 {lab=out}
+N 2060 160 2120 160 {lab=out_int}
+N 2060 160 2060 240 {lab=out_int}
+N 1980 160 2060 160 {lab=out_int}
+N 1980 270 2020 270 {lab=enb}
+N 2060 300 2060 360 {lab=VGND}
+N 2200 160 2260 160 {lab=out}
 N 480 -30 480 80 {lab=vco_source}
 N 480 120 480 210 {lab=vco_sink}
 N 780 150 880 150 {lab=mid[1..0],out_int}
-N 1080 150 1180 150 {lab=#net3}
-N 960 220 960 310 {lab=3*vco_sink}
-N 960 0 960 80 {lab=3*vco_source}
+N 960 220 960 310 {lab=vco_sink}
+N 960 0 960 80 {lab=vco_source}
 N 260 -160 320 -160 {lab=VPB}
 N 20 -60 80 -60 {lab=VPB}
 N 480 -60 550 -60 {lab=VPB}
 N 80 90 150 90 {lab=VNB}
-N 10 240 80 240 {lab=#net4}
-N 480 240 550 240 {lab=#net5}
-N 260 360 330 360 {lab=#net6}
-N -160 360 -80 360 {lab=#net7}
-N 1630 250 1710 250 {lab=#net8}
+N 10 240 80 240 {lab=VNB}
+N 480 240 550 240 {lab=VNB}
+N 260 360 330 360 {lab=VNB}
+N -160 360 -80 360 {lab=VNB}
+N 2060 270 2140 270 {lab=VNB}
+N 1080 150 1140 150 {lab=#net3}
+N 1340 150 1400 150 {lab=#net4}
+N 1220 220 1220 310 {lab=vco_sink}
+N 1480 220 1480 310 {lab=vco_sink}
+N 1220 0 1220 80 {lab=vco_source}
+N 1480 0 1480 80 {lab=vco_source}
+N 1600 150 1650 150 {lab=mid[1..0],out_int}
+N 1650 150 1650 360 {lab=mid[1..0],out_int}
+N 780 360 1650 360 {lab=mid[1..0],out_int}
+N 780 150 780 360 {lab=mid[1..0],out_int}
 C {sg13g2_pr/sg13_lv_pmos.sym} 240 -160 0 0 {name=M1
 l=0.13u
 w=0.15u
@@ -123,8 +132,8 @@ m=1
 model=sg13_lv_nmos
 spiceprefix=X
 }
-C {sg13g2_stdcells/sg13g2_buf_1.sym} 1730 140 0 0 {name=x1 VDD=VDD VSS=VSS prefix=sg13g2_ }
-C {sg13g2_pr/sg13_lv_nmos.sym} 1610 250 0 0 {name=M9
+C {sg13g2_stdcells/sg13g2_buf_1.sym} 2160 160 0 0 {name=x1 VDD=VDD VSS=VSS prefix=sg13g2_ }
+C {sg13g2_pr/sg13_lv_nmos.sym} 2040 270 0 0 {name=M9
 l=0.13u
 w=0.15u
 ng=1
@@ -148,17 +157,16 @@ C {lab_pin.sym} 480 120 0 0 {name=p12 sig_type=std_logic lab=vco_sink}
 C {lab_pin.sym} 160 -160 0 0 {name=p13 sig_type=std_logic lab=en}
 C {lab_pin.sym} 170 360 0 0 {name=p14 sig_type=std_logic lab=enb}
 C {lab_pin.sym} -150 460 0 0 {name=p15 sig_type=std_logic lab=VGND}
-C {lab_pin.sym} 960 0 0 0 {name=p16 sig_type=std_logic lab=3*vco_source
+C {lab_pin.sym} 960 0 0 0 {name=p16 sig_type=std_logic lab=vco_source
 }
-C {lab_pin.sym} 960 310 0 0 {name=p17 sig_type=std_logic lab=3*vco_sink
+C {lab_pin.sym} 960 310 0 0 {name=p17 sig_type=std_logic lab=vco_sink
 }
-C {lab_pin.sym} 780 150 0 0 {name=p18 sig_type=std_logic lab=mid[1..0],out_int}
-C {lab_pin.sym} 1190 150 0 1 {name=p19 sig_type=std_logic lab=out_int,mid[1..0]}
-C {lab_pin.sym} 1550 140 0 0 {name=p20 sig_type=std_logic lab=out_int}
-C {lab_pin.sym} 1830 140 0 1 {name=p21 sig_type=std_logic lab=out
+C {lab_pin.sym} 780 150 0 0 {name=p18 sig_type=std_logic lab=out_int}
+C {lab_pin.sym} 1980 160 0 0 {name=p20 sig_type=std_logic lab=out_int}
+C {lab_pin.sym} 2260 160 0 1 {name=p21 sig_type=std_logic lab=out
 }
-C {lab_pin.sym} 1630 340 0 0 {name=p22 sig_type=std_logic lab=VGND}
-C {lab_pin.sym} 1550 250 0 0 {name=p23 sig_type=std_logic lab=enb}
+C {lab_pin.sym} 2060 360 0 0 {name=p22 sig_type=std_logic lab=VGND}
+C {lab_pin.sym} 1980 270 0 0 {name=p23 sig_type=std_logic lab=enb}
 C {lab_pin.sym} -320 360 0 0 {name=p24 sig_type=std_logic lab=enb}
 C {lab_pin.sym} 320 -160 0 1 {name=p25 sig_type=std_logic lab=VPB}
 C {lab_pin.sym} 150 90 0 1 {name=p26 sig_type=std_logic lab=VNB
@@ -173,5 +181,15 @@ C {lab_pin.sym} -80 360 0 1 {name=p31 sig_type=std_logic lab=VNB
 }
 C {lab_pin.sym} 10 240 0 0 {name=p32 sig_type=std_logic lab=VNB
 }
-C {lab_pin.sym} 1710 250 0 1 {name=p33 sig_type=std_logic lab=VNB
+C {lab_pin.sym} 2140 270 0 1 {name=p33 sig_type=std_logic lab=VNB
+}
+C {/foss/designs/IHP/Inverter/t2_inverter.sym} 1220 150 0 0 {name=x3}
+C {/foss/designs/IHP/Inverter/t2_inverter.sym} 1480 150 0 0 {name=x4}
+C {lab_pin.sym} 1220 310 0 0 {name=p19 sig_type=std_logic lab=vco_sink
+}
+C {lab_pin.sym} 1480 310 0 0 {name=p34 sig_type=std_logic lab=vco_sink
+}
+C {lab_pin.sym} 1220 0 0 0 {name=p35 sig_type=std_logic lab=vco_source
+}
+C {lab_pin.sym} 1480 0 0 0 {name=p36 sig_type=std_logic lab=vco_source
 }
