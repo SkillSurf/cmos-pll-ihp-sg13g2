@@ -135,7 +135,6 @@ N -140 -140 -40 -140 {lab=GND}
 N -0 110 0 160 {lab=RST}
 N 0 220 0 270 {lab=GND}
 N -530 -180 -530 30 {lab=VDD}
-C {t2_dff.sym} 0 0 0 0 {name=x1}
 C {vsource.sym} -530 60 0 0 {name=Vs value=1.2 savecurrent=false}
 C {gnd.sym} -430 140 0 0 {name=l1 lab=GND}
 C {gnd.sym} -330 230 0 0 {name=l2 lab=GND}
@@ -154,7 +153,7 @@ value="
 .control
 save all 
 tran 10p 15n
-write tran_t2_dff.raw
+write tran_t2_dff_1.raw
 .endc
 "}
 C {devices/code_shown.sym} -480 350 0 0 {name=MODEL only_toplevel=true
@@ -167,3 +166,4 @@ C {lab_pin.sym} 0 130 0 1 {name=p6 sig_type=std_logic lab=RST}
 C {vsource.sym} -430 60 0 0 {name=Vdin value="dc 0 ac 0 pulse(0, 1.2, 0, 50p, 50p, 2.5n, 5n)" savecurrent=false}
 C {vsource.sym} -330 150 0 0 {name=Vclk value="dc 0 ac 0 pulse(0, 1.2, 0, 50p, 50p, 1.25n, 2.5n)" savecurrent=false}
 C {vsource.sym} 0 190 0 0 {name=Vrst value="dc 0 ac 0 pulse(0, 1.2, 0, 50p, 50p, 8n, 15n)" savecurrent=false}
+C {t2_dff_1.sym} 0 0 0 0 {name=x1}
