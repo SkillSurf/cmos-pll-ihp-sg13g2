@@ -1,0 +1,50 @@
+** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_charge_pump_tb.sch
+**.subckt t2_charge_pump_tb
+x1 VDD VDD GND GND vout up down bais_p bais_n t2_charge_pump
+V1 VDD GND 1.2
+V2 bais_p GND 0.7
+V3 bais_n GND 0.5
+V4 up GND 0
+V5 down GND 0
+XC2 vout GND cap_cmim w=7.0e-6 l=7.0e-6 m=1
+**** begin user architecture code
+
+
+.param temp=27
+.control
+tran 1n 10n
+run
+plot v(up) v(down) v(vout)
+.endc
+
+
+ .lib cornerMOSlv.lib mos_tt
+
+
+.lib /foss/pdks/ihp-sg13g2/libs.tech/ngspice/models/cornerCAP.lib cap_typ
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  /foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_charge_pump.sym # of pins=9
+** sym_path: /foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_charge_pump.sym
+** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_charge_pump.sch
+.subckt t2_charge_pump VPWR VPB VGND VNB out up down bais_p bais_n
+*.iopin VPWR
+*.ipin up
+*.opin out
+*.iopin VPB
+*.iopin VGND
+*.iopin VNB
+*.ipin down
+*.ipin bais_p
+*.ipin bais_n
+XM1 i_down bais_n VGND VNB sg13_lv_nmos w=0.15u l=0.13u ng=1 m=1
+XM2 out down i_down VNB sg13_lv_nmos w=0.15u l=0.13u ng=1 m=1
+XM3 i_up bais_p VPWR VPB sg13_lv_pmos w=0.3u l=0.13u ng=1 m=1
+XM4 out up i_up VPB sg13_lv_pmos w=0.15u l=0.13u ng=1 m=1
+.ends
+
+.GLOBAL GND
+.GLOBAL VDD
+.end
