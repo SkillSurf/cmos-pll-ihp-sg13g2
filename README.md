@@ -1,4 +1,4 @@
-## A PFD-CP Type-II ∆Σ Fractional-N Phase Locked Loop (PLL) Clock Multiplier Layout in IHP SG13T2 Process
+## A PFD-CP Type-II ∆Σ Fractional-N Phase Locked Loop (PLL) Clock Multiplier Layout in IHP SG13G2 Process
 
 ### 1. Members (Department of Electronic and Telecommunication Engineering, University of Moratuwa)
 
