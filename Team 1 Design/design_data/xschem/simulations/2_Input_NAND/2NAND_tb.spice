@@ -1,0 +1,38 @@
+** sch_path: /foss/designs/Team2/2NAND/2NAND_tb.sch
+**.subckt 2NAND_tb Vout
+*.opin Vout
+x1 VA Vout VB 2NAND
+Vin VB GND dc 0 ac 0 pulse(0, 1.2, 0, 0.8n, 0.8n, 2n, 4n)
+Vin1 VA GND dc 0 ac 0 pulse(0, 1.2, 2n, 100p, 100p, 2n, 4n)
+C1 Vout GND 100f m=1
+**** begin user architecture code
+ .lib cornerMOSlv.lib mos_tt
+
+
+
+.param temp=27
+.control
+save all
+tran 50p 20n
+.endc
+
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  /foss/designs/Team2/2NAND/2NAND.sym # of pins=3
+** sym_path: /foss/designs/Team2/2NAND/2NAND.sym
+** sch_path: /foss/designs/Team2/2NAND/2NAND.sch
+.subckt 2NAND A Y B
+*.ipin B
+*.opin Y
+*.ipin A
+XM1 Y A net1 net1 sg13_lv_pmos w=2u l=0.13u ng=1 m=1
+XM2 Y B net1 net1 sg13_lv_pmos w=2u l=0.13u ng=1 m=1
+XM3 Y B net2 GND sg13_lv_nmos w=1u l=0.13u ng=1 m=1
+XM4 net2 A GND GND sg13_lv_nmos w=1u l=0.13u ng=1 m=1
+V1 net1 GND 1.2
+.ends
+
+.GLOBAL GND
+.end
