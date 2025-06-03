@@ -1,0 +1,108 @@
+** sch_path: /foss/designs/Team2/PFD/PFD_tb.sch
+**.subckt PFD_tb UP UPB DN DNB
+*.opin UP
+*.opin UPB
+*.opin DN
+*.opin DNB
+Vin1 net1 GND dc 0 ac 0 pulse(0, 1.2, 2n, 2n, 2n, 2n, 4n)
+Vin2 net2 GND dc 0 ac 0 pulse(0, 1.2, 2n, 2n, 2n, 3n, 6n)
+C1 UP GND 2p m=1
+C2 UPB GND 2p m=1
+C3 DN GND 2p m=1
+C4 DNB GND 2p m=1
+x1 net1 UP UPB DN DNB net2 PFD
+**** begin user architecture code
+ .lib cornerMOSlv.lib mos_tt
+
+
+
+.param temp=27
+.control
+save all
+tran 50p 20n
+.endc
+
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  /foss/designs/Team2/PFD/PFD.sym # of pins=6
+** sym_path: /foss/designs/Team2/PFD/PFD.sym
+** sch_path: /foss/designs/Team2/PFD/PFD.sch
+.subckt PFD Fref UP UPB DN DNB Ffeed
+*.ipin Fref
+*.ipin Ffeed
+*.opin UP
+*.opin UPB
+*.opin DN
+*.opin DNB
+x1 net1 Fref inverter
+x2 net2 Ffeed inverter
+x3 UPB net3 net1 2NAND
+x4 net2 net9 DNB 2NAND
+x5 net3 net5 net4 2NAND
+x6 net5 net4 net6 2NAND
+x7 net6 net7 net8 2NAND
+x8 net7 net8 net9 2NAND
+x9 net3 net10 net5 2NAND
+x10 net8 net11 net9 2NAND
+x11 net10 net12 net10 2NAND
+x12 net11 net13 net11 2NAND
+x13 net12 net6 net13 2NAND
+x14 UPB net3 net5 net6 3NAND
+x15 DNB net6 net8 net9 3NAND
+x16 UP UPB inverter
+x17 DN DNB inverter
+C1 UP GND 100p m=1
+C2 UPB GND 100p m=1
+C3 DN GND 100p m=1
+C4 DNB GND 100p m=1
+.ends
+
+
+* expanding   symbol:  /foss/designs/Team2/inverter/inverter.sym # of pins=2
+** sym_path: /foss/designs/Team2/inverter/inverter.sym
+** sch_path: /foss/designs/Team2/inverter/inverter.sch
+.subckt inverter Y A
+*.ipin A
+*.opin Y
+XM1 Y A net1 net1 sg13_lv_pmos w=2u l=0.13u ng=1 m=1 rfmode=1
+XM2 Y A GND GND sg13_lv_nmos w=1u l=0.13u ng=1 m=1 rfmode=1
+V1 net1 GND 1.2
+.ends
+
+
+* expanding   symbol:  /foss/designs/Team2/2NAND/2NAND.sym # of pins=3
+** sym_path: /foss/designs/Team2/2NAND/2NAND.sym
+** sch_path: /foss/designs/Team2/2NAND/2NAND.sch
+.subckt 2NAND A Y B
+*.ipin B
+*.opin Y
+*.ipin A
+XM1 Y A net1 net1 sg13_lv_pmos w=2u l=0.13u ng=1 m=1
+XM2 Y B net1 net1 sg13_lv_pmos w=2u l=0.13u ng=1 m=1
+XM3 Y B net2 GND sg13_lv_nmos w=1u l=0.13u ng=1 m=1
+XM4 net2 A GND GND sg13_lv_nmos w=1u l=0.13u ng=1 m=1
+V1 net1 GND 1.2
+.ends
+
+
+* expanding   symbol:  /foss/designs/Team2/3NAND/3NAND.sym # of pins=4
+** sym_path: /foss/designs/Team2/3NAND/3NAND.sym
+** sch_path: /foss/designs/Team2/3NAND/3NAND.sch
+.subckt 3NAND Y A B C
+*.ipin A
+*.ipin B
+*.ipin C
+*.opin Y
+XM1 Y A Vdd Vdd sg13_lv_pmos w=2u l=0.13u ng=1 m=1
+XM2 Y B Vdd Vdd sg13_lv_pmos w=2u l=0.13u ng=1 m=1
+XM3 Y C Vdd Vdd sg13_lv_pmos w=2u l=0.13u ng=1 m=1
+XM4 Y A net1 GND sg13_lv_nmos w=1u l=0.13u ng=1 m=1
+XM5 net1 B net2 GND sg13_lv_nmos w=1u l=0.13u ng=1 m=1
+XM6 net2 C GND GND sg13_lv_nmos w=1u l=0.13u ng=1 m=1
+V1 Vdd GND 1.2
+.ends
+
+.GLOBAL GND
+.end

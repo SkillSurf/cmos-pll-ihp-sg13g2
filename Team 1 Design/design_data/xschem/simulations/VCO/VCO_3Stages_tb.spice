@@ -1,0 +1,62 @@
+** sch_path: /foss/designs/Team2/VCO/VCO_3Stages_tb.sch
+**.subckt VCO_3Stages_tb VOUT
+*.opin VOUT
+x1 VDD VOUT Vin GND VCO_3Stages
+VDD VDD GND 1.2
+Vin Vin GND 0.7
+C1 VOUT GND 1f m=1
+**** begin user architecture code
+
+
+.param temp=27
+.control
+save all
+.ic v(VOUT) = 1 v(x1.net5)=0.6 v(x1.net4)=0.3 v(x1.net3)=0.1
+.options maxstep=10n reltol=1e-3 abstol=1e-6
+tran 1u 100u
+plot v(VOUT)
+.endc
+
+
+ .lib cornerMOSlv.lib mos_tt
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  /foss/designs/Team2/VCO/VCO_3Stages.sym # of pins=4
+** sym_path: /foss/designs/Team2/VCO/VCO_3Stages.sym
+** sch_path: /foss/designs/Team2/VCO/VCO_3Stages.sch
+.subckt VCO_3Stages VDD VOUT VCON VSS
+*.iopin VDD
+*.iopin VSS
+*.ipin VCON
+*.opin VOUT
+x1 net8 net5 net3 net2 inverterv1
+x2 net9 net3 net4 net6 inverterv1
+x3 net10 net4 net5 net7 inverterv1
+x4 VDD net5 VOUT VSS inverterv1
+XM1 net1 net1 VDD VDD sg13_lv_pmos w=2u l=0.13u ng=1 m=1
+XM2 net8 net1 VDD VDD sg13_lv_pmos w=2u l=0.13u ng=1 m=1
+XM3 net9 net1 VDD VDD sg13_lv_pmos w=2u l=0.13u ng=1 m=1
+XM4 net10 net1 VDD VDD sg13_lv_pmos w=2u l=0.13u ng=1 m=1
+XM5 net1 VCON VSS VSS sg13_lv_nmos w=1u l=0.13u ng=1 m=1
+XM6 net2 VCON VSS VSS sg13_lv_nmos w=1u l=0.13u ng=1 m=1
+XM7 net6 VCON VSS VSS sg13_lv_nmos w=1u l=0.13u ng=1 m=1
+XM8 net7 VCON VSS VSS sg13_lv_nmos w=1u l=0.13u ng=1 m=1
+.ends
+
+
+* expanding   symbol:  /foss/designs/Team2/New_inverter/inverterv1.sym # of pins=4
+** sym_path: /foss/designs/Team2/New_inverter/inverterv1.sym
+** sch_path: /foss/designs/Team2/New_inverter/inverterv1.sch
+.subckt inverterv1 VP A Y VN
+*.ipin A
+*.opin Y
+*.iopin VN
+*.iopin VP
+XM1 Y A VP VP sg13_lv_pmos w=2u l=0.13u ng=1 m=1 rfmode=1
+XM2 Y A VN VN sg13_lv_nmos w=1u l=0.13u ng=1 m=1 rfmode=1
+.ends
+
+.GLOBAL GND
+.end
