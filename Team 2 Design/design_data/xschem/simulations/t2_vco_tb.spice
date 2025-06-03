@@ -1,0 +1,68 @@
+** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_vco_tb.sch
+**.subckt t2_vco_tb Vout
+*.opin Vout
+x1 net6 net1 GND net2 Vout net5 net4 net3 t2_vco
+VDD net6 GND 1.2
+vctl net5 GND 0
+Ven net4 GND 1.2
+Venb net3 GND 0
+VNB net2 GND 0
+VPB net1 GND 1.2
+**** begin user architecture code
+ .lib cornerMOSlv.lib mos_tt
+
+
+
+.param temp=27
+.control
+save all
+dc vctl 0 1.5 0.01
+plot v(Vout)
+.endc
+
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  /foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_vco.sym # of pins=8
+** sym_path: /foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_vco.sym
+** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_vco.sch
+.subckt t2_vco VPWR VPB VGND VNB out vctl en enb
+*.iopin VPWR
+*.iopin VPB
+*.iopin VGND
+*.iopin VNB
+*.ipin vctl
+*.ipin en
+*.ipin enb
+*.opin out
+XM1 net1 en VPWR VPB sg13_lv_pmos w=1.0u l=0.15u ng=1 m=1
+XM2 net1 net1 VPWR VPB sg13_lv_pmos w=3.0u l=0.15u ng=1 m=1
+XM3 vco_source net1 VPWR VPB sg13_lv_pmos w=3.0u l=0.15u ng=1 m=1
+XM4 net1 vctl net2 VNB sg13_lv_nmos w=1.5u l=0.15u ng=1 m=1
+XM5 net2 net2 VGND VNB sg13_lv_nmos w=1.5u l=0.15u ng=1 m=1
+XM6 vco_sink net2 VGND VNB sg13_lv_nmos w=1.5u l=0.15u ng=1 m=1
+XM7 net2 enb VGND VNB sg13_lv_nmos w=0.5u l=0.15u ng=1 m=1
+XM8 vctl enb VGND VNB sg13_lv_nmos w=0.5u l=0.15u ng=1 m=1
+x1 out_int VPWR VGND out sg13g2_buf_1
+XM9 out_int enb VGND VNB sg13_lv_nmos w=0.5u l=0.15u ng=1 m=1
+x2 vco_source out_int net3 vco_sink t2_inverter
+x3 vco_source net3 net4 vco_sink t2_inverter
+x4 vco_source net4 out_int vco_sink t2_inverter
+.ends
+
+
+* expanding   symbol:  /foss/designs/IHP/Inverter/t2_inverter.sym # of pins=4
+** sym_path: /foss/designs/IHP/Inverter/t2_inverter.sym
+** sch_path: /foss/designs/IHP/Inverter/t2_inverter.sch
+.subckt t2_inverter VP A Y VN
+*.iopin VP
+*.iopin VN
+*.ipin A
+*.opin Y
+XM2 Y A VP VP sg13_lv_pmos w=0.3u l=0.13u ng=1 m=1
+XM1 Y A VN VN sg13_lv_nmos w=0.15u l=0.13u ng=1 m=1
+.ends
+
+.GLOBAL GND
+.end

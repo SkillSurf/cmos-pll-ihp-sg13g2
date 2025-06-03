@@ -24,13 +24,12 @@ N -520 -60 -520 60 {lab=#net6}
 N -520 -60 -0 -60 {lab=#net6}
 N 0 80 0 210 {lab=GND}
 N 150 10 200 10 {lab=Vout}
-C {/foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_vco.sym} 0 10 0 0 {name=x1}
-C {vsource.sym} -520 90 0 0 {name=VPWR value=1.5 savecurrent=false}
-C {vsource.sym} -460 90 0 0 {name=vctl value=0 savecurrent=false}
-C {vsource.sym} -400 90 0 0 {name=en value=1.5 savecurrent=false}
-C {vsource.sym} -330 90 0 0 {name=enb value=0 savecurrent=false}
-C {vsource.sym} -280 90 0 0 {name=VNB value=0 savecurrent=false}
-C {vsource.sym} -230 90 0 0 {name=VPB value=1.5 savecurrent=false}
+C {vsource.sym} -520 90 0 0 {name=VDD value=1.2 savecurrent=false}
+C {vsource.sym} -460 90 0 0 {name=vctl value=1.2 savecurrent=false}
+C {vsource.sym} -400 90 0 0 {name=Ven value=1.2 savecurrent=false}
+C {vsource.sym} -330 90 0 0 {name=Venb value=0 savecurrent=false}
+C {vsource.sym} -280 90 0 0 {name=VNB value=1.2 savecurrent=false}
+C {vsource.sym} -230 90 0 0 {name=VPB value=0 savecurrent=false}
 C {gnd.sym} 0 210 0 0 {name=l1 lab=GND}
 C {gnd.sym} -230 210 0 0 {name=l2 lab=GND}
 C {gnd.sym} -280 210 0 0 {name=l3 lab=GND}
@@ -43,12 +42,15 @@ C {devices/code_shown.sym} -580 -160 0 0 {name=MODEL only_toplevel=true
 format="tcleval( @value )"
 value=".lib cornerMOSlv.lib mos_tt
 "}
-C {devices/code_shown.sym} 330 -150 0 0 {name=NGSPICE only_toplevel=true 
+C {devices/code_shown.sym} 310 10 0 0 {name=NGSPICE only_toplevel=true 
 value="
 .param temp=27
+.ic V(Vout)=0
+.lib cornerMOSlv.lib mos_tt
 .control
 save all 
-dc vctl 0 1.5 0.01
+tran 10 5u
 plot v(Vout)
 .endc
 "}
+C {/foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_vco.sym} 0 10 0 0 {name=x1}
