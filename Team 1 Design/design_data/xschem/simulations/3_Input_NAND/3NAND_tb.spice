@@ -1,11 +1,11 @@
 ** sch_path: /foss/designs/Team2/3NAND/3NAND_tb.sch
 **.subckt 3NAND_tb Vout
 *.opin Vout
-Vin VB GND dc 0 ac 0 pulse(0, 1.2, 0, 100p, 100p, 8n, 16n)
-Vin1 VA GND dc 0 ac 0 pulse(0, 1.2, 2n, 100p, 100p, 2n, 4n)
+Vin VB GND dc 0 ac 0 pulse(0, 1.2, 0, 10p, 10p, 8n, 16n)
+Vin1 VA GND dc 0 ac 0 pulse(0, 1.2, 2n, 10p, 10p, 2n, 4n)
 C1 Vout GND 100f m=1
 x1 Vout VA VB VC 3NAND
-Vin2 VC GND dc 0 ac 0 pulse(0, 1.2, 5n, 0.8n, 0.8n, 5n, 10n)
+Vin2 VC GND dc 0 ac 0 pulse(0, 1.2, 5n, 10p, 10p, 5n, 10n)
 **** begin user architecture code
  .lib cornerMOSlv.lib mos_tt
 
@@ -14,7 +14,8 @@ Vin2 VC GND dc 0 ac 0 pulse(0, 1.2, 5n, 0.8n, 0.8n, 5n, 10n)
 .param temp=27
 .control
 save all
-tran 50p 20n
+tran 10n 30n
+plot v(VA)+6 v(VB)+4 v(VC)+2 v(Vout)
 .endc
 
 
