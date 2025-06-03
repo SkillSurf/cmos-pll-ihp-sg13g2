@@ -55,18 +55,24 @@ N 480 240 550 240 {lab=VNB}
 N 260 360 330 360 {lab=VNB}
 N -160 360 -80 360 {lab=VNB}
 N 1930 260 2010 260 {lab=VNB}
-N 1080 150 1140 150 {lab=#net3}
-N 1340 150 1400 150 {lab=#net4}
 N 1220 220 1220 310 {lab=vco_sink}
 N 1480 220 1480 310 {lab=vco_sink}
 N 1220 0 1220 80 {lab=vco_source}
 N 1480 0 1480 80 {lab=vco_source}
-N 1600 150 1650 150 {lab=Vout}
 N 1650 150 1650 360 {lab=Vout}
 N 780 360 1650 360 {lab=Vout}
 N 780 150 780 360 {lab=Vout}
 N 1650 150 1930 150 {lab=Vout}
 N 1930 150 2070 150 {lab=Vout}
+N 1060 150 1140 150 {lab=#net3}
+N 1320 150 1400 150 {lab=#net4}
+N 1580 150 1650 150 {lab=Vout}
+N 1500 220 1500 310 {lab=VNB}
+N 1240 220 1240 310 {lab=VNB}
+N 980 220 980 310 {lab=VNB}
+N 980 0 980 80 {lab=#net6}
+N 1240 0 1240 80 {lab=#net6}
+N 1500 0 1500 80 {lab=#net6}
 C {sg13g2_pr/sg13_lv_pmos.sym} 240 -160 0 0 {name=M1
 l=0.15u
 w=1.0u
@@ -93,9 +99,9 @@ spiceprefix=X
 }
 C {sg13g2_pr/sg13_lv_nmos.sym} 60 90 0 0 {name=M4
 l=0.15u
-w=1.5u
+w=0.75u
 ng=1
-m=1
+m=2
 model=sg13_lv_nmos
 spiceprefix=X
 }
@@ -139,7 +145,6 @@ m=1
 model=sg13_lv_nmos
 spiceprefix=X
 }
-C {/foss/designs/IHP/Inverter/t2_inverter.sym} 960 150 0 0 {name=x2}
 C {iopin.sym} -550 -290 0 1 {name=p1 lab=VPWR}
 C {iopin.sym} -550 -260 0 1 {name=p2 lab=VPB}
 C {iopin.sym} -550 -230 0 1 {name=p3 lab=VGND}
@@ -178,8 +183,6 @@ C {lab_pin.sym} 10 240 0 0 {name=p32 sig_type=std_logic lab=VNB
 }
 C {lab_pin.sym} 2010 260 0 1 {name=p33 sig_type=std_logic lab=VNB
 }
-C {/foss/designs/IHP/Inverter/t2_inverter.sym} 1220 150 0 0 {name=x3}
-C {/foss/designs/IHP/Inverter/t2_inverter.sym} 1480 150 0 0 {name=x4}
 C {lab_pin.sym} 1220 310 0 0 {name=p19 sig_type=std_logic lab=vco_sink
 }
 C {lab_pin.sym} 1480 310 0 0 {name=p34 sig_type=std_logic lab=vco_sink
@@ -187,4 +190,19 @@ C {lab_pin.sym} 1480 310 0 0 {name=p34 sig_type=std_logic lab=vco_sink
 C {lab_pin.sym} 1220 0 0 0 {name=p35 sig_type=std_logic lab=vco_source
 }
 C {lab_pin.sym} 1480 0 0 0 {name=p36 sig_type=std_logic lab=vco_source
+}
+C {/foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_vco_inverter.sym} 970 150 0 0 {name=x1}
+C {/foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_vco_inverter.sym} 1230 150 0 0 {name=x2}
+C {/foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_vco_inverter.sym} 1490 150 0 0 {name=x3}
+C {lab_pin.sym} 1500 310 0 1 {name=p20 sig_type=std_logic lab=VNB
+}
+C {lab_pin.sym} 1240 310 0 1 {name=p21 sig_type=std_logic lab=VNB
+}
+C {lab_pin.sym} 980 310 0 1 {name=p37 sig_type=std_logic lab=VNB
+}
+C {lab_pin.sym} 980 0 0 1 {name=p38 sig_type=std_logic lab=VPB
+}
+C {lab_pin.sym} 1240 0 0 1 {name=p39 sig_type=std_logic lab=VPB
+}
+C {lab_pin.sym} 1500 0 0 1 {name=p40 sig_type=std_logic lab=VPB
 }

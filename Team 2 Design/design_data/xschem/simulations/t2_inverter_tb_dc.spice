@@ -2,17 +2,18 @@
 **.subckt t2_inverter_tb_dc Vout
 *.opin Vout
 Vin Vin GND 0
-Vdd Vdd GND 1.8
+Vdd Vdd GND 1.2
 x1 Vdd Vin Vout GND t2_inverter
 **** begin user architecture code
  .lib cornerMOSlv.lib mos_tt
 
 
 
+
 .param temp=27
 .control
-save all
-dc Vin 0 1.8 0.1
+dc Vin 0 1.2 0.1
+.save all
 plot v(Vin) v(Vout)
 .endc
 

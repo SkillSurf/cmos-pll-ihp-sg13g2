@@ -23,8 +23,7 @@ N 350 -120 380 -120 {lab=en}
 N 420 -40 560 -40 {lab=bias_p}
 N 420 -90 420 -40 {lab=bias_p}
 N 340 -40 420 -40 {lab=bias_p}
-N 600 220 600 250 {lab=bias_p}
-N 280 220 280 250 {lab=bias_p}
+N 600 220 600 250 {lab=bias_n}
 N 340 -40 340 10 {lab=bias_p}
 N 320 -40 340 -40 {lab=bias_p}
 N 280 10 340 10 {lab=bias_p}
@@ -43,19 +42,17 @@ N 420 390 420 480 {lab=VGND}
 N 280 480 420 480 {lab=VGND}
 N 280 310 280 480 {lab=VGND}
 N 80 480 280 480 {lab=VGND}
-N 530 280 560 280 {lab=bias_p}
-N 420 280 420 330 {lab=bias_p}
-N 360 280 420 280 {lab=bias_p}
-N 530 220 530 280 {lab=bias_p}
-N 420 280 530 280 {lab=bias_p}
-N 530 220 600 220 {lab=bias_p}
-N 600 -10 600 220 {lab=bias_p}
-N 280 220 360 220 {lab=bias_p}
-N 280 110 280 220 {lab=bias_p}
-N 360 220 360 280 {lab=bias_p}
-N 320 280 360 280 {lab=bias_p}
-N 120 220 120 280 {lab=bias_p}
-N 120 220 280 220 {lab=bias_p}
+N 530 280 560 280 {lab=bias_n}
+N 420 280 420 330 {lab=bias_n}
+N 360 280 420 280 {lab=bias_n}
+N 530 220 530 280 {lab=bias_n}
+N 420 280 530 280 {lab=bias_n}
+N 530 220 600 220 {lab=bias_n}
+N 600 -10 600 220 {lab=bias_n}
+N 280 110 280 250 {lab=bias_p}
+N 360 220 360 280 {lab=bias_n}
+N 320 280 360 280 {lab=bias_n}
+N 120 220 120 280 {lab=bias_n}
 N 80 310 80 480 {lab=VGND}
 N -180 480 80 480 {lab=VGND}
 N -270 360 -220 360 {lab=en}
@@ -67,6 +64,19 @@ N 80 -290 80 -260 {lab=dio_mid}
 N 340 360 380 360 {lab=enb}
 N 600 -380 600 -260 {lab=VPWR}
 N 600 -200 600 -70 {lab=res_bot}
+N -180 -320 -100 -320 {lab=VPB}
+N 80 -320 160 -320 {lab=VPB}
+N 80 -120 150 -120 {lab=VPB}
+N 210 -40 280 -40 {lab=VPB}
+N 420 -120 490 -120 {lab=VPB}
+N 600 -40 670 -40 {lab=VPB}
+N -250 190 -180 190 {lab=VNB}
+N -0 280 80 280 {lab=VNB}
+N 200 280 280 280 {lab=VNB}
+N 600 280 670 280 {lab=VNB}
+N 420 360 500 360 {lab=VNB}
+N -180 360 -80 360 {lab=VNB}
+N 120 220 360 220 {lab=bias_n}
 C {iopin.sym} -550 -290 0 1 {name=p1 lab=VPWR}
 C {iopin.sym} -550 -260 0 1 {name=p2 lab=VPB}
 C {iopin.sym} -550 -230 0 1 {name=p3 lab=VGND}
@@ -75,96 +85,96 @@ C {ipin.sym} -550 -110 0 0 {name=p6 lab=en}
 C {ipin.sym} -550 -70 0 0 {name=p7 lab=enb}
 C {opin.sym} -500 -110 0 0 {name=p8 lab=bias_n}
 C {sg13g2_pr/sg13_lv_pmos.sym} -200 -320 0 0 {name=M9
-l=0.13u
-w=0.15u
+l=0.15u
+w=0.5u
 ng=1
 m=1
 model=sg13_lv_pmos
 spiceprefix=X
 }
 C {sg13g2_pr/sg13_lv_pmos.sym} 300 -40 0 1 {name=M10
-l=0.13u
-w=0.15u
+l=1.0u
+w=2.0u
 ng=1
 m=1
 model=sg13_lv_pmos
 spiceprefix=X
 }
 C {sg13g2_pr/sg13_lv_pmos.sym} 60 -320 0 0 {name=M1
-l=0.13u
-w=0.15u
+l=0.15u
+w=0.5u
 ng=1
 m=1
 model=sg13_lv_pmos
 spiceprefix=X
 }
 C {sg13g2_pr/sg13_lv_pmos.sym} 60 -120 0 0 {name=M2
-l=0.13u
-w=0.15u
+l=0.15u
+w=0.5u
 ng=1
 m=1
 model=sg13_lv_pmos
 spiceprefix=X
 }
 C {sg13g2_pr/sg13_lv_pmos.sym} 400 -120 0 0 {name=M3
-l=0.13u
-w=0.15u
+l=0.15u
+w=0.5u
 ng=1
 m=1
 model=sg13_lv_pmos
 spiceprefix=X
 }
 C {sg13g2_pr/sg13_lv_pmos.sym} 580 -40 0 0 {name=M4
-l=0.13u
-w=0.15u
+l=1.0u
+w=2.0u
 ng=1
-m=1
+m=2
 model=sg13_lv_pmos
 spiceprefix=X
 }
 C {sg13g2_pr/sg13_lv_nmos.sym} -200 360 0 0 {name=M11
-l=0.13u
-w=0.15u
+l=0.15u
+w=0.5u
 ng=1
 m=1
 model=sg13_lv_nmos
 spiceprefix=X
 }
 C {sg13g2_pr/sg13_lv_nmos.sym} -160 190 0 1 {name=M12
-l=0.13u
-w=0.15u
+l=0.15u
+w=0.5u
 ng=1
 m=1
 model=sg13_lv_nmos
 spiceprefix=X
 }
 C {sg13g2_pr/sg13_lv_nmos.sym} 100 280 0 1 {name=M5
-l=0.13u
-w=0.15u
+l=1.0u
+w=1.0u
 ng=1
 m=1
 model=sg13_lv_nmos
 spiceprefix=X
 }
 C {sg13g2_pr/sg13_lv_nmos.sym} 300 280 0 1 {name=M6
-l=0.13u
-w=0.15u
+l=1.0u
+w=1.0u
 ng=1
 m=1
 model=sg13_lv_nmos
 spiceprefix=X
 }
 C {sg13g2_pr/sg13_lv_nmos.sym} 400 360 0 0 {name=M7
-l=0.13u
-w=0.15u
+l=0.15u
+w=0.5u
 ng=1
 m=1
 model=sg13_lv_nmos
 spiceprefix=X
 }
 C {sg13g2_pr/sg13_lv_nmos.sym} 580 280 0 0 {name=M8
-l=0.13u
-w=0.15u
+l=1.0u
+w=1.0u
 ng=1
 m=1
 model=sg13_lv_nmos
@@ -179,7 +189,7 @@ C {lab_pin.sym} 280 170 0 0 {name=p13 sig_type=std_logic lab=bias_p}
 C {lab_pin.sym} 600 130 0 0 {name=p14 sig_type=std_logic lab=bias_n}
 C {lab_pin.sym} 600 480 0 1 {name=p15 sig_type=std_logic lab=VGND}
 C {lab_pin.sym} 80 -210 0 0 {name=p16 sig_type=std_logic lab=dio_mid}
-C {lab_pin.sym} 600 -100 0 0 {name=p17 sig_type=std_logic lab=res_bot}
+C {lab_pin.sym} 600 -150 0 0 {name=p17 sig_type=std_logic lab=res_bot}
 C {lab_pin.sym} 350 -120 0 0 {name=p18 sig_type=std_logic lab=en}
 C {lab_pin.sym} 340 360 0 0 {name=p19 sig_type=std_logic lab=enb}
 C {sg13g2_pr/rhigh.sym} 600 -230 0 0 {name=R1
@@ -190,3 +200,15 @@ spiceprefix=X
 b=0
 m=1
 }
+C {lab_pin.sym} -100 -320 0 1 {name=p20 sig_type=std_logic lab=VPB}
+C {lab_pin.sym} 210 -40 0 0 {name=p21 sig_type=std_logic lab=VPB}
+C {lab_pin.sym} -250 190 0 0 {name=p22 sig_type=std_logic lab=VNB}
+C {lab_pin.sym} 500 360 0 1 {name=p23 sig_type=std_logic lab=VNB}
+C {lab_pin.sym} 150 -320 0 1 {name=p24 sig_type=std_logic lab=VPB}
+C {lab_pin.sym} 150 -120 0 1 {name=p25 sig_type=std_logic lab=VPB}
+C {lab_pin.sym} 490 -120 0 1 {name=p26 sig_type=std_logic lab=VPB}
+C {lab_pin.sym} 670 -40 0 1 {name=p27 sig_type=std_logic lab=VPB}
+C {lab_pin.sym} 0 280 0 0 {name=p28 sig_type=std_logic lab=VNB}
+C {lab_pin.sym} 200 280 0 0 {name=p29 sig_type=std_logic lab=VNB}
+C {lab_pin.sym} 670 280 0 1 {name=p30 sig_type=std_logic lab=VNB}
+C {lab_pin.sym} -80 360 0 1 {name=p31 sig_type=std_logic lab=VNB}

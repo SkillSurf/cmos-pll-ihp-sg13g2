@@ -1,0 +1,55 @@
+** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_bias_tb.sch
+**.subckt t2_bias_tb bias_n bias_p
+*.opin bias_n
+*.opin bias_p
+VPB net1 GND 1.2
+VNB net2 GND 0
+Venb net3 GND 0
+Ven net4 GND 1.2
+VPWR net5 GND 1.2
+x1 net5 net2 GND net1 net4 bias_n bias_p net3 t2_bias
+**** begin user architecture code
+ .lib cornerMOSlv.lib mos_tt
+
+
+
+.param temp=27
+.control
+dc en 0 1.2 0.1
+.save all
+plot  v(bias_n)
+.endc
+
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  /foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_bias.sym # of pins=8
+** sym_path: /foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_bias.sym
+** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_bias.sch
+.subckt t2_bias VPWR VPB VGND VNB en bias_n bias_p enb
+*.iopin VPWR
+*.iopin VPB
+*.iopin VGND
+*.iopin VNB
+*.ipin en
+*.ipin enb
+*.opin bias_n
+*.opin bias_p
+XM9 net1 en VPWR VPB sg13_lv_pmos w=0.5u l=0.15u ng=1 m=1
+XM10 bias_p bias_p VPWR VPB sg13_lv_pmos w=2.0u l=1.0u ng=1 m=1
+XM1 dio_mid dio_mid VPWR VPB sg13_lv_pmos w=0.5u l=0.15u ng=1 m=1
+XM2 net1 net1 dio_mid VPB sg13_lv_pmos w=0.5u l=0.15u ng=1 m=1
+XM3 bias_p en VPWR VPB sg13_lv_pmos w=0.5u l=0.15u ng=1 m=1
+XM4 bias_n bias_p res_bot VPB sg13_lv_pmos w=2.0u l=1.0u ng=1 m=2
+XM11 kick_sw en VGND net2 sg13_lv_nmos w=0.5u l=0.15u ng=1 m=1
+XM12 bias_p net1 kick_sw VNB sg13_lv_nmos w=0.5u l=0.15u ng=1 m=1
+XM5 net1 bias_n VGND VNB sg13_lv_nmos w=1.0u l=1.0u ng=1 m=1
+XM6 bias_p bias_n VGND VNB sg13_lv_nmos w=1.0u l=1.0u ng=1 m=1
+XM7 bias_n enb VGND VNB sg13_lv_nmos w=0.5u l=0.15u ng=1 m=1
+XM8 bias_n bias_n VGND VNB sg13_lv_nmos w=1.0u l=1.0u ng=1 m=1
+XR1 res_bot VPWR rhigh w=0.5e-6 l=0.5e-6 m=1 b=0
+.ends
+
+.GLOBAL GND
+.end
