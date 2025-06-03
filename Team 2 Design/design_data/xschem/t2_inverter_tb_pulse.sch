@@ -42,4 +42,4 @@ tran 0.1n 100n
 plot v(Vin) v(Vout)
 .endc
 "}
-C {t2_inverter.sym} -100 20 0 0 {name=x2}
+C {/foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_inverter.sym} -100 20 0 0 {name=x1}

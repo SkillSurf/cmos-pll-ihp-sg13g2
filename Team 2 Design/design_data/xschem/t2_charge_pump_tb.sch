@@ -12,8 +12,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=1e-11
-x2=1e-06
+x1=-9.9989e-08
+x2=9.00001e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -47,7 +47,6 @@ N -40 140 -40 200 {lab=bais_n}
 N 90 70 90 90 {lab=vout}
 N 90 150 90 170 {lab=GND}
 N 20 70 90 70 {lab=vout}
-C {t2_charge_pump.sym} -60 70 0 0 {name=x1}
 C {vsource.sym} -470 -80 0 0 {name=V1 value=1.2 savecurrent=false}
 C {gnd.sym} -470 -30 0 0 {name=l1 lab=GND}
 C {vdd.sym} -470 -130 0 0 {name=l2 lab=VDD}
@@ -57,9 +56,9 @@ C {vsource.sym} -420 -80 0 0 {name=V2 value=0.8 savecurrent=false}
 C {gnd.sym} -420 -30 0 0 {name=l5 lab=GND}
 C {vsource.sym} -360 -80 0 0 {name=V3 value=0.4 savecurrent=false}
 C {gnd.sym} -360 -30 0 0 {name=l6 lab=GND}
-C {vsource.sym} -360 150 0 0 {name=V4 value="PULSE(1.2 1.2 2NS 2NS 2NS 50NS 100NS)" savecurrent=false}
+C {vsource.sym} -360 150 0 0 {name=V4 value="PULSE(0 1.2 2NS 2NS 2NS 50NS 100NS)" savecurrent=false}
 C {gnd.sym} -360 200 0 0 {name=l7 lab=GND}
-C {vsource.sym} -310 150 0 0 {name=V5 value="PULSE(0 1.2 2NS 2NS 2NS 50NS 100NS)" savecurrent=false}
+C {vsource.sym} -310 150 0 0 {name=V5 value="PULSE(0 0 2NS 2NS 2NS 50NS 100NS)" savecurrent=false}
 C {gnd.sym} -310 200 0 0 {name=l8 lab=GND}
 C {lab_wire.sym} -40 -40 1 0 {name=p3 sig_type=std_logic lab=bais_p}
 C {lab_wire.sym} -40 200 1 0 {name=p4 sig_type=std_logic lab=bais_n}
@@ -88,3 +87,4 @@ C {launcher.sym} 480 -100 0 0 {name=h5
 descr="load waves (press Ctrl + left click)" 
 tclcommand="xschem raw_read $netlist_dir/t2_charge_pump_tb.raw tran"
 }
+C {/foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_charge_pump.sym} -60 70 0 0 {name=x1}
