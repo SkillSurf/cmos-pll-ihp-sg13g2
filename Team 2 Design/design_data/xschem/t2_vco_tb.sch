@@ -4,6 +4,27 @@ K {}
 V {}
 S {}
 E {}
+B 2 200 -590 1000 -190 {flags=graph
+y1=0
+y2=2
+ypos1=0
+ypos2=2
+divy=5
+subdivy=1
+unity=1
+x1=2.7379902e-06
+x2=1.273799e-05
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+node=""
+color=""
+dataset=-1
+unitx=1
+logx=0
+logy=0
+}
 N -520 120 -520 210 {lab=GND}
 N -460 120 -460 210 {lab=GND}
 N -400 120 -400 210 {lab=GND}
@@ -54,3 +75,7 @@ plot v(Vout)
 .endc
 "}
 C {/foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_vco.sym} 0 10 0 0 {name=x1}
+C {launcher.sym} 710 -130 0 0 {name=h5
+descr="load waves" 
+tclcommand="xschem raw_read $netlist_dir/t2_vco_tb.raw tran"
+}

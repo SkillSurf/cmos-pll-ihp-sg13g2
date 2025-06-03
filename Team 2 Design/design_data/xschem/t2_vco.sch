@@ -38,12 +38,12 @@ N -160 90 -160 330 {lab=vctl}
 N -160 90 40 90 {lab=vctl}
 N -320 90 -160 90 {lab=vctl}
 N -320 360 -200 360 {lab=enb}
-N 1930 150 1930 230 {lab=#net3}
+N 1930 150 1930 230 {lab=Vout}
 N 1850 260 1890 260 {lab=enb}
 N 1930 290 1930 350 {lab=VGND}
 N 480 -30 480 80 {lab=vco_source}
 N 480 120 480 210 {lab=vco_sink}
-N 780 150 880 150 {lab=#net3}
+N 780 150 880 150 {lab=Vout}
 N 960 220 960 310 {lab=vco_sink}
 N 960 0 960 80 {lab=vco_source}
 N 260 -160 320 -160 {lab=VPB}
@@ -55,18 +55,18 @@ N 480 240 550 240 {lab=VNB}
 N 260 360 330 360 {lab=VNB}
 N -160 360 -80 360 {lab=VNB}
 N 1930 260 2010 260 {lab=VNB}
-N 1080 150 1140 150 {lab=#net4}
-N 1340 150 1400 150 {lab=#net5}
+N 1080 150 1140 150 {lab=#net3}
+N 1340 150 1400 150 {lab=#net4}
 N 1220 220 1220 310 {lab=vco_sink}
 N 1480 220 1480 310 {lab=vco_sink}
 N 1220 0 1220 80 {lab=vco_source}
 N 1480 0 1480 80 {lab=vco_source}
-N 1600 150 1650 150 {lab=#net3}
-N 1650 150 1650 360 {lab=#net3}
-N 780 360 1650 360 {lab=#net3}
-N 780 150 780 360 {lab=#net3}
-N 1650 150 1930 150 {lab=#net3}
-N 2010 150 2070 150 {lab=Vout}
+N 1600 150 1650 150 {lab=Vout}
+N 1650 150 1650 360 {lab=Vout}
+N 780 360 1650 360 {lab=Vout}
+N 780 150 780 360 {lab=Vout}
+N 1650 150 1930 150 {lab=Vout}
+N 1930 150 2070 150 {lab=Vout}
 C {sg13g2_pr/sg13_lv_pmos.sym} 240 -160 0 0 {name=M1
 l=0.15u
 w=1.0u
@@ -188,4 +188,3 @@ C {lab_pin.sym} 1220 0 0 0 {name=p35 sig_type=std_logic lab=vco_source
 }
 C {lab_pin.sym} 1480 0 0 0 {name=p36 sig_type=std_logic lab=vco_source
 }
-C {sg13g2_stdcells/sg13g2_buf_1.sym} 1970 150 0 0 {name=x1 VDD=VPWR VSS=VGND prefix=sg13g2_ }

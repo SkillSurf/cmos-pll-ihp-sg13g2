@@ -19,7 +19,6 @@ x1 net6 net2 GND net1 Vout net5 net4 net3 t2_vco
 .control
 save all
 tran 10 5u
-plot v(Vout)
 .endc
 
 

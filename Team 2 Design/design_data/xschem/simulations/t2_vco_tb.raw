@@ -1,0 +1,75 @@
+Failed: ngspice {/foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/simulations/t2_vco_tb.spice} -a
+stderr:
+Warning: redefinition of .subckt sg13_lv_nmos, ignored
+Warning: redefinition of .subckt sg13_lv_pmos, ignored
+Warning: redefinition of .subckt nmoscl_2, ignored
+Warning: redefinition of .subckt nmoscl_4, ignored
+data:
+******
+** ngspice-44.2 : Circuit level simulation program
+** Compiled with KLU Direct Linear Solver
+** The U. C. Berkeley CAD Group
+** Copyright 1985-1994, Regents of the University of California.
+** Copyright 2001-2024, The ngspice team.
+** Please get your ngspice manual from https://ngspice.sourceforge.io/docs.html
+** Please file your bug-reports at http://ngspice.sourceforge.net/bugrep.html
+** Creation Date: Sat May 24 09:32:34 UTC 2025
+******
+
+Note: No compatibility mode selected!
+
+
+Circuit: ** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/team 2 design/design_data/xschem/t2_vco_tb.sch
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+net6                                       1.2
+net5                                       1.2
+net4                                       1.2
+net3                                         0
+net2                                       1.2
+net1                                         0
+x1.net1                               0.649712
+x1.vco_source                         0.838879
+x1.net2                                0.54392
+x1.vco_sink                        6.41038e-08
+vout                                         0
+x1.net3                               0.838879
+x1.net4                            1.29781e-07
+vpb#branch                         5.54106e-15
+vnb#branch                        -6.78849e-14
+venb#branch                        5.94765e-13
+ven#branch                        -2.00451e-13
+vctl#branch                       -1.57796e-11
+vdd#branch                         -3.8124e-05
+
+ Reference value :  6.25000e-11
+ Reference value :  2.54706e-10
+ Reference value :  6.35155e-10
+ Reference value :  9.06039e-10
+ Reference value :  2.62372e-09
+ Reference value :  6.26027e-09
+ Reference value :  1.37808e-08
+ Reference value :  1.93799e-08
+ Reference value :  2.20442e-08
+ Reference value :  2.47211e-08
+ Reference value :  2.60995e-08
+ Reference value :  2.94155e-08
+ Reference value :  3.76070e-08
+ Reference value :  4.65381e-08
+ Reference value :  4.94752e-08
+ Reference value :  5.41392e-08
+ Reference value :  7.06562e-08
+ Reference value :  1.72658e-07
+ Reference value :  1.18009e-06
+ Reference value :  2.48009e-06
+ Reference value :  3.98009e-06
+No. of Data Rows : 132
+[?2004hngspice 1 -> 
