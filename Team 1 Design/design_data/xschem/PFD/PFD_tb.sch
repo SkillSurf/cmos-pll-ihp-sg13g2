@@ -9,11 +9,11 @@ N 140 0 300 -0 {lab=UPB}
 N 220 40 300 40 {lab=DN}
 N 40 60 300 60 {lab=DNB}
 N -460 130 -460 260 {lab=GND}
-N -460 0 -460 70 {lab=#net1}
-N -460 -0 -120 -0 {lab=#net1}
+N -460 0 -460 70 {lab=Fref}
+N -460 -0 -120 -0 {lab=Fref}
 N -280 170 -280 300 {lab=GND}
-N -280 40 -280 110 {lab=#net2}
-N -280 40 -120 40 {lab=#net2}
+N -280 40 -280 110 {lab=Ffeed}
+N -280 40 -120 40 {lab=Ffeed}
 N 60 210 60 320 {lab=GND}
 N 140 210 140 320 {lab=GND}
 N 220 210 220 320 {lab=GND}
@@ -37,13 +37,15 @@ C {devices/code_shown.sym} 450 -70 0 0 {name=NGSPICE only_toplevel=true
 value="
 .param temp=27
 .control
+.options abstol=1e-12 reltol=1e-3 vntol=1e-6 chgtol=1e-15 trtol=2
 save all 
 tran 1n 20n
+plot v(Fref)+6 v(Ffeed)+4 v(UP)+2 v(DN)
 .endc
 "}
-C {vsource.sym} -460 100 0 0 {name=Vin1 value="dc 0 ac 0 pulse(0, 1.2, 2n, 2n, 2n, 2n, 4n)" savecurrent=false}
+C {vsource.sym} -460 100 0 0 {name=Vin1 value="dc 0 ac 0 pulse(0, 1.2, 0, 10p, 10p, 2n, 4n)" savecurrent=false}
 C {gnd.sym} -460 260 0 0 {name=l1 lab=GND}
-C {vsource.sym} -280 140 0 0 {name=Vin2 value="dc 0 ac 0 pulse(0, 1.2, 2n, 2n, 2n, 3n, 6n)" savecurrent=false}
+C {vsource.sym} -280 140 0 0 {name=Vin2 value="dc 0 ac 0 pulse(0, 1.2, 2n, 10p, 10p, 1n, 2n)" savecurrent=false}
 C {gnd.sym} -280 300 0 0 {name=l2 lab=GND}
 C {gnd.sym} 60 320 0 0 {name=l4 lab=GND}
 C {gnd.sym} 140 320 0 0 {name=l3 lab=GND}
@@ -70,3 +72,5 @@ value=10k
 footprint=1206
 device=resistor
 m=1}
+C {lab_pin.sym} -340 0 1 0 {name=p5 sig_type=std_logic lab=Fref}
+C {lab_pin.sym} -240 40 1 0 {name=p6 sig_type=std_logic lab=Ffeed}
