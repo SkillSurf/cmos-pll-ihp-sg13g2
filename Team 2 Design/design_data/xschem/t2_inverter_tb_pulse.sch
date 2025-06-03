@@ -42,4 +42,4 @@ tran 0.1n 100n
 plot v(Vin) v(Vout)
 .endc
 "}
-C {/foss/designs/IHP/Inverter/t2_inverter.sym} -100 20 0 0 {name=x1}
+C {t2_inverter.sym} -100 20 0 0 {name=x2}
