@@ -2,8 +2,8 @@
 **.subckt 2NAND_tb Vout
 *.opin Vout
 x1 VA Vout VB 2NAND
-Vin VB GND dc 0 ac 0 pulse(0, 1.2, 0, 0.8n, 0.8n, 2n, 4n)
-Vin1 VA GND dc 0 ac 0 pulse(0, 1.2, 2n, 100p, 100p, 2n, 4n)
+Vin VB GND dc 0 ac 0 pulse(0, 1.2, 0, 10p, 10p, 2n, 4n)
+Vin1 VA GND dc 0 ac 0 pulse(0, 1.2, 5n, 10p, 10p, 3n, 6n)
 C1 Vout GND 100f m=1
 **** begin user architecture code
  .lib cornerMOSlv.lib mos_tt
@@ -13,7 +13,8 @@ C1 Vout GND 100f m=1
 .param temp=27
 .control
 save all
-tran 50p 20n
+tran 1n 20n
+plot v(VA)+4 v(VB)+2 v(Vout)
 .endc
 
 
