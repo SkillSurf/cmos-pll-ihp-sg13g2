@@ -38,12 +38,12 @@ N -160 90 -160 330 {lab=vctl}
 N -160 90 40 90 {lab=vctl}
 N -320 90 -160 90 {lab=vctl}
 N -320 360 -200 360 {lab=enb}
-N 2060 160 2120 160 {lab=out_int}
-N 2060 160 2060 240 {lab=out_int}
-N 1980 160 2060 160 {lab=out_int}
-N 1980 270 2020 270 {lab=enb}
-N 2060 300 2060 360 {lab=VGND}
-N 2200 160 2260 160 {lab=out}
+N 1930 150 1990 150 {lab=out_int}
+N 1930 150 1930 230 {lab=out_int}
+N 1850 150 1930 150 {lab=out_int}
+N 1850 260 1890 260 {lab=enb}
+N 1930 290 1930 350 {lab=VGND}
+N 2070 150 2130 150 {lab=out}
 N 480 -30 480 80 {lab=vco_source}
 N 480 120 480 210 {lab=vco_sink}
 N 780 150 880 150 {lab=out_int}
@@ -57,7 +57,7 @@ N 10 240 80 240 {lab=VNB}
 N 480 240 550 240 {lab=VNB}
 N 260 360 330 360 {lab=VNB}
 N -160 360 -80 360 {lab=VNB}
-N 2060 270 2140 270 {lab=VNB}
+N 1930 260 2010 260 {lab=VNB}
 N 1080 150 1140 150 {lab=#net3}
 N 1340 150 1400 150 {lab=#net4}
 N 1220 220 1220 310 {lab=vco_sink}
@@ -69,73 +69,73 @@ N 1650 150 1650 360 {lab=out_int}
 N 780 360 1650 360 {lab=out_int}
 N 780 150 780 360 {lab=out_int}
 C {sg13g2_pr/sg13_lv_pmos.sym} 240 -160 0 0 {name=M1
-l=0.13u
-w=0.15u
+l=0.15u
+w=1.0u
 ng=1
 m=1
 model=sg13_lv_pmos
 spiceprefix=X
 }
 C {sg13g2_pr/sg13_lv_pmos.sym} 100 -60 0 1 {name=M2
-l=0.13u
-w=0.15u
+l=0.15u
+w=3.0u
 ng=1
 m=1
 model=sg13_lv_pmos
 spiceprefix=X
 }
 C {sg13g2_pr/sg13_lv_pmos.sym} 460 -60 0 0 {name=M3
-l=0.13u
-w=0.15u
+l=0.15u
+w=3.0u
 ng=1
 m=1
 model=sg13_lv_pmos
 spiceprefix=X
 }
 C {sg13g2_pr/sg13_lv_nmos.sym} 60 90 0 0 {name=M4
-l=0.13u
-w=0.15u
+l=0.15u
+w=1.5u
 ng=1
 m=1
 model=sg13_lv_nmos
 spiceprefix=X
 }
 C {sg13g2_pr/sg13_lv_nmos.sym} 100 240 0 1 {name=M5
-l=0.13u
-w=0.15u
+l=0.15u
+w=1.5u
 ng=1
 m=1
 model=sg13_lv_nmos
 spiceprefix=X
 }
 C {sg13g2_pr/sg13_lv_nmos.sym} 460 240 0 0 {name=M6
-l=0.13u
-w=0.15u
+l=0.15u
+w=1.5u
 ng=1
 m=1
 model=sg13_lv_nmos
 spiceprefix=X
 }
 C {sg13g2_pr/sg13_lv_nmos.sym} 240 360 0 0 {name=M7
-l=0.13u
-w=0.15u
+l=0.15u
+w=0.5u
 ng=1
 m=1
 model=sg13_lv_nmos
 spiceprefix=X
 }
 C {sg13g2_pr/sg13_lv_nmos.sym} -180 360 0 0 {name=M8
-l=0.13u
-w=0.15u
+l=0.15u
+w=0.5u
 ng=1
 m=1
 model=sg13_lv_nmos
 spiceprefix=X
 }
-C {sg13g2_stdcells/sg13g2_buf_1.sym} 2160 160 0 0 {name=x1 VDD=VDD VSS=VSS prefix=sg13g2_ }
-C {sg13g2_pr/sg13_lv_nmos.sym} 2040 270 0 0 {name=M9
-l=0.13u
-w=0.15u
+C {sg13g2_stdcells/sg13g2_buf_1.sym} 2030 150 0 0 {name=x1 VDD=VPWR VSS=VGND prefix=sg13g2_ }
+C {sg13g2_pr/sg13_lv_nmos.sym} 1910 260 0 0 {name=M9
+l=0.15u
+w=0.5u
 ng=1
 m=1
 model=sg13_lv_nmos
@@ -162,11 +162,11 @@ C {lab_pin.sym} 960 0 0 0 {name=p16 sig_type=std_logic lab=vco_source
 C {lab_pin.sym} 960 310 0 0 {name=p17 sig_type=std_logic lab=vco_sink
 }
 C {lab_pin.sym} 780 150 0 0 {name=p18 sig_type=std_logic lab=out_int}
-C {lab_pin.sym} 1980 160 0 0 {name=p20 sig_type=std_logic lab=out_int}
-C {lab_pin.sym} 2260 160 0 1 {name=p21 sig_type=std_logic lab=out
+C {lab_pin.sym} 1850 150 0 0 {name=p20 sig_type=std_logic lab=out_int}
+C {lab_pin.sym} 2130 150 0 1 {name=p21 sig_type=std_logic lab=out
 }
-C {lab_pin.sym} 2060 360 0 0 {name=p22 sig_type=std_logic lab=VGND}
-C {lab_pin.sym} 1980 270 0 0 {name=p23 sig_type=std_logic lab=enb}
+C {lab_pin.sym} 1930 350 0 0 {name=p22 sig_type=std_logic lab=VGND}
+C {lab_pin.sym} 1850 260 0 0 {name=p23 sig_type=std_logic lab=enb}
 C {lab_pin.sym} -320 360 0 0 {name=p24 sig_type=std_logic lab=enb}
 C {lab_pin.sym} 320 -160 0 1 {name=p25 sig_type=std_logic lab=VPB}
 C {lab_pin.sym} 150 90 0 1 {name=p26 sig_type=std_logic lab=VNB
@@ -181,7 +181,7 @@ C {lab_pin.sym} -80 360 0 1 {name=p31 sig_type=std_logic lab=VNB
 }
 C {lab_pin.sym} 10 240 0 0 {name=p32 sig_type=std_logic lab=VNB
 }
-C {lab_pin.sym} 2140 270 0 1 {name=p33 sig_type=std_logic lab=VNB
+C {lab_pin.sym} 2010 260 0 1 {name=p33 sig_type=std_logic lab=VNB
 }
 C {/foss/designs/IHP/Inverter/t2_inverter.sym} 1220 150 0 0 {name=x3}
 C {/foss/designs/IHP/Inverter/t2_inverter.sym} 1480 150 0 0 {name=x4}
