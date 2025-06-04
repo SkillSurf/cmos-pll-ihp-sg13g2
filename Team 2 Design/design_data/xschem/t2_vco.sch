@@ -87,7 +87,7 @@ N 1640 150 1640 450 {lab=Vout}
 N 1590 150 1640 150 {lab=Vout}
 C {sg13g2_pr/sg13_lv_pmos.sym} 240 -160 0 0 {name=M1
 l=0.15u
-w=1.0u
+w=2.0u
 ng=1
 m=1
 model=sg13_lv_pmos
@@ -95,7 +95,7 @@ spiceprefix=X
 }
 C {sg13g2_pr/sg13_lv_pmos.sym} 100 -60 0 1 {name=M2
 l=0.15u
-w=3.0u
+w=4.0u
 ng=1
 m=1
 model=sg13_lv_pmos
@@ -103,7 +103,7 @@ spiceprefix=X
 }
 C {sg13g2_pr/sg13_lv_pmos.sym} 460 -60 0 0 {name=M3
 l=0.15u
-w=3.0u
+w=4.0u
 ng=1
 m=1
 model=sg13_lv_pmos
@@ -111,7 +111,7 @@ spiceprefix=X
 }
 C {sg13g2_pr/sg13_lv_nmos.sym} 60 90 0 0 {name=M4
 l=0.15u
-w=0.75u
+w=1.5u
 ng=1
 m=2
 model=sg13_lv_nmos
@@ -119,7 +119,7 @@ spiceprefix=X
 }
 C {sg13g2_pr/sg13_lv_nmos.sym} 100 240 0 1 {name=M5
 l=0.15u
-w=1.5u
+w=2.0u
 ng=1
 m=1
 model=sg13_lv_nmos
@@ -127,7 +127,7 @@ spiceprefix=X
 }
 C {sg13g2_pr/sg13_lv_nmos.sym} 460 240 0 0 {name=M6
 l=0.15u
-w=1.5u
+w=2.0u
 ng=1
 m=1
 model=sg13_lv_nmos
@@ -135,7 +135,7 @@ spiceprefix=X
 }
 C {sg13g2_pr/sg13_lv_nmos.sym} 240 360 0 0 {name=M7
 l=0.15u
-w=0.5u
+w=1u
 ng=1
 m=1
 model=sg13_lv_nmos
@@ -143,7 +143,7 @@ spiceprefix=X
 }
 C {sg13g2_pr/sg13_lv_nmos.sym} -180 360 0 0 {name=M8
 l=0.15u
-w=0.5u
+w=1u
 ng=1
 m=1
 model=sg13_lv_nmos
@@ -157,14 +157,14 @@ m=1
 model=sg13_lv_nmos
 spiceprefix=X
 }
-C {iopin.sym} -550 -290 0 1 {name=p1 lab=VPWR}
-C {iopin.sym} -550 -260 0 1 {name=p2 lab=VPB}
-C {iopin.sym} -550 -230 0 1 {name=p3 lab=VGND}
-C {iopin.sym} -550 -200 0 1 {name=p4 lab=VNB}
-C {ipin.sym} -550 -150 0 0 {name=p5 lab=vctl}
-C {ipin.sym} -550 -110 0 0 {name=p6 lab=en}
-C {ipin.sym} -550 -70 0 0 {name=p7 lab=enb}
-C {opin.sym} -500 -170 0 0 {name=p8 lab=Vout}
+C {iopin.sym} -370 -280 0 1 {name=p1 lab=VPWR}
+C {iopin.sym} -370 -250 0 1 {name=p2 lab=VPB}
+C {iopin.sym} -370 -220 0 1 {name=p3 lab=VGND}
+C {iopin.sym} -370 -190 0 1 {name=p4 lab=VNB}
+C {ipin.sym} -370 -140 0 0 {name=p5 lab=vctl}
+C {ipin.sym} -370 -100 0 0 {name=p6 lab=en}
+C {ipin.sym} -370 -60 0 0 {name=p7 lab=enb}
+C {opin.sym} -320 -160 0 0 {name=p8 lab=Vout}
 C {lab_pin.sym} -320 90 0 0 {name=p9 sig_type=std_logic lab=vctl}
 C {lab_pin.sym} 80 -260 0 0 {name=p10 sig_type=std_logic lab=VPWR}
 C {lab_pin.sym} 480 80 0 0 {name=p11 sig_type=std_logic lab=vco_source}

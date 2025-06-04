@@ -13,7 +13,7 @@ divy=5
 subdivy=1
 unity=1
 x1=0
-x2=1.2e-07
+x2=1.5e-08
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -35,7 +35,7 @@ divy=5
 subdivy=1
 unity=1
 x1=0
-x2=1.2e-07
+x2=1.5e-08
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -58,29 +58,29 @@ N 880 90 920 90 {lab=clk_out}
 N 920 60 920 90 {lab=clk_out}
 N 920 90 960 90 {lab=clk_out}
 N 500 60 540 60 {lab=clk_in}
-N 650 230 650 280 {lab=#net1}
-N 690 230 690 300 {lab=#net2}
-N 730 230 730 320 {lab=#net3}
-N 770 230 770 340 {lab=#net4}
+N 650 230 650 280 {lab=a0}
+N 690 230 690 300 {lab=a1}
+N 730 230 730 320 {lab=a0}
+N 770 230 770 340 {lab=#net1}
 N 430 220 430 260 {lab=GND}
-N 430 120 430 160 {lab=#net5}
+N 430 120 430 160 {lab=#net2}
 N 500 400 500 440 {lab=GND}
 N 590 400 590 440 {lab=GND}
 N 680 400 680 440 {lab=GND}
 N 770 400 770 440 {lab=GND}
-N 680 320 680 340 {lab=#net3}
-N 680 320 730 320 {lab=#net3}
-N 590 300 590 340 {lab=#net2}
-N 500 280 500 340 {lab=#net1}
-N 430 120 540 120 {lab=#net5}
-N 500 280 650 280 {lab=#net1}
-N 590 300 690 300 {lab=#net2}
+N 680 320 680 340 {lab=a0}
+N 680 320 730 320 {lab=a0}
+N 590 300 590 340 {lab=a1}
+N 500 280 500 340 {lab=a0}
+N 430 120 540 120 {lab=#net2}
+N 500 280 650 280 {lab=a0}
+N 590 300 690 300 {lab=a1}
 C {devices/code_shown.sym} -140 -430 0 0 {name=NGSPICE only_toplevel=true 
 value="
 .param temp=27
 .control
 save all 
-tran 100p 120n
+tran 250p 15n
 write tran_t2_freq_divider.raw
 .endc
 "}
@@ -120,9 +120,9 @@ value="
 .param EN = 1.2
 
 .param A0 = 1.2
-.param A1 = 1.2
-.param A2 = 1.2
-.param A3 = 1.2
+.param A1 = 0
+.param A2 = 0
+.param A3 = 0
 "}
 C {vsource.sym} 430 190 0 0 {name=Ven value="dc \{EN\}" savecurrent=false}
 C {gnd.sym} 430 260 0 0 {name=l4 lab=GND}
@@ -134,3 +134,8 @@ C {vsource.sym} 680 370 0 0 {name=Va2 value="dc \{A2\}" savecurrent=false}
 C {gnd.sym} 680 440 0 0 {name=l7 lab=GND}
 C {vsource.sym} 770 370 0 0 {name=Va3 value="dc \{A3\}" savecurrent=false}
 C {gnd.sym} 770 440 0 0 {name=l9 lab=GND}
+C {lab_pin.sym} 500 300 0 0 {name=p3 sig_type=std_logic lab=a0}
+C {lab_pin.sym} 590 310 0 0 {name=p4 sig_type=std_logic lab=a1}
+C {lab_pin.sym} 680 320 0 0 {name=p5 sig_type=std_logic lab=a2}
+C {lab_pin.sym} 770 320 2 0 {name=p6 sig_type=std_logic lab=a3}
+C {lab_pin.sym} 430 120 0 0 {name=p7 sig_type=std_logic lab=en}

@@ -1,8 +1,8 @@
 ** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_vco_tb.sch
 **.subckt t2_vco_tb Vout
 *.opin Vout
-VDD net4 GND 1.2
-vctl net3 GND 1.2
+VPWR net4 GND 1.2
+vctl net3 GND 1
 Ven net2 GND 1.2
 Venb net1 GND 0
 VNB net5 GND 0
@@ -14,8 +14,7 @@ x1 net4 net6 GND net5 Vout net3 net2 net1 t2_vco
 
 
 .param temp=27
-.ic v(Vout)=0
-.tran 10 5u
+.tran 50p 50n
 .save all
 
 
@@ -43,10 +42,9 @@ XM6 vco_sink net2 VGND VNB sg13_lv_nmos w=1.5u l=0.15u ng=1 m=1
 XM7 net2 enb VGND VNB sg13_lv_nmos w=0.5u l=0.15u ng=1 m=1
 XM8 vctl enb VGND VNB sg13_lv_nmos w=0.5u l=0.15u ng=1 m=1
 XM9 Vout enb VGND VNB sg13_lv_nmos w=0.5u l=0.15u ng=1 m=1
-x1 vco_source VPB Vout net4 VNB vco_sink t2_vco_inverter
-x2 vco_source VPB net4 net3 VNB vco_sink t2_vco_inverter
-x3 vco_source VPB Vout net4 VNB vco_sink t2_vco_inverter
-x4 vco_source VPB net3 Vout VNB vco_sink t2_vco_inverter
+x1 vco_source VPB Vout net3 VNB vco_sink t2_vco_inverter
+x2 vco_source VPB net3 net4 VNB vco_sink t2_vco_inverter
+x3 vco_source VPB net4 Vout VNB vco_sink t2_vco_inverter
 .ends
 
 
