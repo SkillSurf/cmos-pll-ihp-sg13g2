@@ -5,15 +5,15 @@ V {}
 S {}
 E {}
 B 2 200 -590 1000 -190 {flags=graph
-y1=0.2064
-y2=1.6984
+y1=-0.3904
+y2=1.1016
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=8.7500806e-07
-x2=1.7505076e-06
+x1=0
+x2=0.001
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -33,8 +33,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=8.7500806e-07
-x2=1.7505076e-06
+x1=0
+x2=0.001
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -64,8 +64,8 @@ N -280 60 -10 60 {lab=#net5}
 N -580 -100 -580 60 {lab=#net6}
 N -580 -100 10 -100 {lab=#net6}
 N 10 -100 10 -80 {lab=#net6}
-C {vsource.sym} -520 90 0 0 {name=VDD value=1.2 savecurrent=false}
-C {vsource.sym} -460 90 0 0 {name=vctl value=1.2 savecurrent=false}
+C {vsource.sym} -520 90 0 0 {name=VPWR value=1.2 savecurrent=false}
+C {vsource.sym} -460 90 0 0 {name=vctl value=0.2 savecurrent=false}
 C {vsource.sym} -400 90 0 0 {name=Ven value=1.2 savecurrent=false}
 C {vsource.sym} -330 90 0 0 {name=Venb value=0 savecurrent=false}
 C {vsource.sym} -280 90 0 0 {name=VNB value=0 savecurrent=false}
@@ -85,14 +85,12 @@ value=".lib cornerMOSlv.lib mos_tt
 C {devices/code_shown.sym} 310 10 0 0 {name=NGSPICE only_toplevel=true 
 value="
 .param temp=27
-.ic v(Vout)=0
-.tran 10 5u
+.ic v(Vout)=1
+.tran 10 1000u
 .save all
-.plot v(Vout)
-.endc
 "}
-C {/foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_vco.sym} 0 -10 0 0 {name=x1}
-C {launcher.sym} 710 -130 0 0 {name=h5
+C {launcher.sym} 720 -110 0 0 {name=h5
 descr="load waves (press ctrl + left click)" 
 tclcommand="xschem raw_read $netlist_dir/t2_vco_tb.raw tran"
 }
+C {/foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_vco.sym} 0 -10 0 0 {name=x1}

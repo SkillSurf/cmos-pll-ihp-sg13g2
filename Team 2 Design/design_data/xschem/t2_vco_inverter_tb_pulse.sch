@@ -28,7 +28,6 @@ logy=0
 }
 N -400 -40 -400 0 {lab=Vdd}
 N -310 -40 -310 0 {lab=Vin}
-N -210 20 -180 20 {lab=Vin}
 N -100 -70 -100 -50 {lab=Vdd}
 N -100 120 -100 140 {lab=GND}
 N -310 60 -310 140 {lab=GND}
@@ -39,7 +38,8 @@ N -100 90 -100 120 {lab=GND}
 N -80 -70 -80 -50 {lab=Vdd}
 N -100 -70 -80 -70 {lab=Vdd}
 N -100 -80 -100 -70 {lab=Vdd}
-N 0 20 80 20 {lab=Vout}
+N -210 20 -190 20 {lab=Vin}
+N 20 20 70 20 {lab=Vout}
 C {vsource.sym} -310 30 0 0 {name=Vin value="PULSE(0 1.2 0 1n 1n 10n 20n)" savecurrent=false}
 C {vsource.sym} -400 30 0 0 {name=Vdd value=1.2 savecurrent=false}
 C {gnd.sym} -400 140 0 0 {name=l1 lab=GND}

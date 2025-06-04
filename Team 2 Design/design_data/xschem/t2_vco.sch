@@ -43,9 +43,6 @@ N 1850 260 1890 260 {lab=enb}
 N 1930 290 1930 350 {lab=VGND}
 N 480 -30 480 80 {lab=vco_source}
 N 480 120 480 210 {lab=vco_sink}
-N 780 150 880 150 {lab=Vout}
-N 960 220 960 310 {lab=vco_sink}
-N 960 0 960 80 {lab=vco_source}
 N 260 -160 320 -160 {lab=VPB}
 N 20 -60 80 -60 {lab=VPB}
 N 480 -60 550 -60 {lab=VPB}
@@ -55,24 +52,39 @@ N 480 240 550 240 {lab=VNB}
 N 260 360 330 360 {lab=VNB}
 N -160 360 -80 360 {lab=VNB}
 N 1930 260 2010 260 {lab=VNB}
-N 1220 220 1220 310 {lab=vco_sink}
-N 1480 220 1480 310 {lab=vco_sink}
-N 1220 0 1220 80 {lab=vco_source}
-N 1480 0 1480 80 {lab=vco_source}
-N 1650 150 1650 360 {lab=Vout}
-N 780 360 1650 360 {lab=Vout}
-N 780 150 780 360 {lab=Vout}
-N 1650 150 1930 150 {lab=Vout}
 N 1930 150 2070 150 {lab=Vout}
-N 1060 150 1140 150 {lab=#net3}
-N 1320 150 1400 150 {lab=#net4}
-N 1580 150 1650 150 {lab=Vout}
-N 1500 220 1500 310 {lab=VNB}
-N 1240 220 1240 310 {lab=VNB}
-N 980 220 980 310 {lab=VNB}
-N 980 0 980 80 {lab=#net6}
-N 1240 0 1240 80 {lab=#net6}
-N 1500 0 1500 80 {lab=#net6}
+N 1240 -80 1240 60 {lab=3*VPB}
+N 1080 150 1130 150 {lab=#net3}
+N 780 150 870 150 {lab=Vout}
+N 960 40 960 80 {lab=3*vco_source}
+N 960 40 1220 40 {lab=3*vco_source}
+N 1220 40 1220 80 {lab=3*vco_source}
+N 1220 40 1470 40 {lab=3*vco_source}
+N 1470 40 1470 80 {lab=3*vco_source}
+N 980 60 980 80 {lab=3*VPB}
+N 1240 60 1490 60 {lab=3*VPB}
+N 1490 60 1490 80 {lab=3*VPB}
+N 1240 60 1240 80 {lab=3*VPB}
+N 980 60 1240 60 {lab=3*VPB}
+N 1220 -80 1220 40 {lab=3*vco_source}
+N 960 280 1220 280 {lab=3*vco_sink}
+N 960 220 960 280 {lab=3*vco_sink}
+N 1470 220 1470 280 {lab=3*vco_sink}
+N 1220 280 1470 280 {lab=3*vco_sink}
+N 1240 220 1240 260 {lab=3*VNB}
+N 1240 260 1490 260 {lab=3*VNB}
+N 1490 220 1490 260 {lab=3*VNB}
+N 980 260 1240 260 {lab=3*VNB}
+N 980 220 980 260 {lab=3*VNB}
+N 1220 280 1220 400 {lab=3*vco_sink}
+N 1220 220 1220 280 {lab=3*vco_sink}
+N 1240 260 1240 400 {lab=3*VNB}
+N 1340 150 1380 150 {lab=#net4}
+N 780 150 780 450 {lab=Vout}
+N 780 450 1640 450 {lab=Vout}
+N 1640 150 1930 150 {lab=Vout}
+N 1640 150 1640 450 {lab=Vout}
+N 1590 150 1640 150 {lab=Vout}
 C {sg13g2_pr/sg13_lv_pmos.sym} 240 -160 0 0 {name=M1
 l=0.15u
 w=1.0u
@@ -123,7 +135,7 @@ spiceprefix=X
 }
 C {sg13g2_pr/sg13_lv_nmos.sym} 240 360 0 0 {name=M7
 l=0.15u
-w=0.5u
+w=0.15u
 ng=1
 m=1
 model=sg13_lv_nmos
@@ -160,9 +172,9 @@ C {lab_pin.sym} 480 120 0 0 {name=p12 sig_type=std_logic lab=vco_sink}
 C {lab_pin.sym} 150 -160 0 0 {name=p13 sig_type=std_logic lab=en}
 C {lab_pin.sym} 170 360 0 0 {name=p14 sig_type=std_logic lab=enb}
 C {lab_pin.sym} -150 460 0 0 {name=p15 sig_type=std_logic lab=VGND}
-C {lab_pin.sym} 960 0 0 0 {name=p16 sig_type=std_logic lab=vco_source
+C {lab_pin.sym} 1220 -80 0 0 {name=p16 sig_type=std_logic lab=3*vco_source
 }
-C {lab_pin.sym} 960 310 0 0 {name=p17 sig_type=std_logic lab=vco_sink
+C {lab_pin.sym} 1220 400 0 0 {name=p17 sig_type=std_logic lab=3*vco_sink
 }
 C {lab_pin.sym} 2070 150 0 1 {name=p18 sig_type=std_logic lab=Vout}
 C {lab_pin.sym} 1930 350 0 0 {name=p22 sig_type=std_logic lab=VGND}
@@ -183,26 +195,12 @@ C {lab_pin.sym} 10 240 0 0 {name=p32 sig_type=std_logic lab=VNB
 }
 C {lab_pin.sym} 2010 260 0 1 {name=p33 sig_type=std_logic lab=VNB
 }
-C {lab_pin.sym} 1220 310 0 0 {name=p19 sig_type=std_logic lab=vco_sink
+C {lab_pin.sym} 1240 400 0 1 {name=p37 sig_type=std_logic lab=3*VNB
 }
-C {lab_pin.sym} 1480 310 0 0 {name=p34 sig_type=std_logic lab=vco_sink
+C {lab_pin.sym} 1240 -80 0 1 {name=p38 sig_type=std_logic lab=3*VPB
 }
-C {lab_pin.sym} 1220 0 0 0 {name=p35 sig_type=std_logic lab=vco_source
+C {/foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_vco_inverter.sym} 970 150 0 0 {name=x1
 }
-C {lab_pin.sym} 1480 0 0 0 {name=p36 sig_type=std_logic lab=vco_source
-}
-C {/foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_vco_inverter.sym} 970 150 0 0 {name=x1}
+C {lab_pin.sym} 780 150 0 0 {name=p20 sig_type=std_logic lab=Vout}
 C {/foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_vco_inverter.sym} 1230 150 0 0 {name=x2}
-C {/foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_vco_inverter.sym} 1490 150 0 0 {name=x3}
-C {lab_pin.sym} 1500 310 0 1 {name=p20 sig_type=std_logic lab=VNB
-}
-C {lab_pin.sym} 1240 310 0 1 {name=p21 sig_type=std_logic lab=VNB
-}
-C {lab_pin.sym} 980 310 0 1 {name=p37 sig_type=std_logic lab=VNB
-}
-C {lab_pin.sym} 980 0 0 1 {name=p38 sig_type=std_logic lab=VPB
-}
-C {lab_pin.sym} 1240 0 0 1 {name=p39 sig_type=std_logic lab=VPB
-}
-C {lab_pin.sym} 1500 0 0 1 {name=p40 sig_type=std_logic lab=VPB
-}
+C {/foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_vco_inverter.sym} 1480 150 0 0 {name=x3}
