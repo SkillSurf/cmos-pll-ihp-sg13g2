@@ -104,26 +104,26 @@ N -1500 -400 -1410 -400 {lab=UPB}
 N -1190 -400 -920 -400 {lab=UP}
 N -1420 80 -1420 120 {lab=DNB}
 N -1420 40 -1420 80 {lab=DNB}
-C {/foss/designs/Team2/2NAND/2NAND.sym} -3600 -580 0 0 {name=x3}
-C {/foss/designs/Team2/2NAND/2NAND.sym} -3600 400 0 0 {name=x4}
-C {/foss/designs/Team2/2NAND/2NAND.sym} -3280 -540 0 0 {name=x5}
-C {/foss/designs/Team2/2NAND/2NAND.sym} -3280 -300 0 0 {name=x6}
-C {/foss/designs/Team2/2NAND/2NAND.sym} -3280 -60 0 0 {name=x7}
-C {/foss/designs/Team2/2NAND/2NAND.sym} -3280 180 0 0 {name=x8}
-C {/foss/designs/Team2/2NAND/2NAND.sym} -2740 -400 0 0 {name=x9}
-C {/foss/designs/Team2/2NAND/2NAND.sym} -2740 40 0 0 {name=x10}
-C {/foss/designs/Team2/2NAND/2NAND.sym} -2380 -400 0 0 {name=x11}
-C {/foss/designs/Team2/2NAND/2NAND.sym} -2380 40 0 0 {name=x12}
-C {/foss/designs/Team2/2NAND/2NAND.sym} -2040 -190 0 0 {name=x13}
-C {/foss/designs/Team2/3NAND/3NAND.sym} -1740 -400 0 0 {name=x14}
-C {/foss/designs/Team2/3NAND/3NAND.sym} -1740 80 0 0 {name=x15}
 C {ipin.sym} -4200 -540 0 0 {name=p1 lab=Fref}
 C {ipin.sym} -4200 360 0 0 {name=p2 lab=Ffeed}
 C {opin.sym} -920 -400 0 0 {name=p3 lab=UP}
 C {opin.sym} -920 -280 0 0 {name=p4 lab=UPB}
 C {opin.sym} -920 80 0 0 {name=p5 lab=DN}
 C {opin.sym} -920 220 0 0 {name=p6 lab=DNB}
-C {/foss/designs/Team2/2NAND/2NAND.sym} -3900 -540 0 0 {name=x1}
-C {/foss/designs/Team2/2NAND/2NAND.sym} -3900 360 0 0 {name=x2}
-C {/foss/designs/Team2/2NAND/2NAND.sym} -1190 -400 0 0 {name=x16}
-C {/foss/designs/Team2/2NAND/2NAND.sym} -1200 80 0 0 {name=x17}
+C {/foss/designs/Team1/2NAND/2NAND.sym} -3900 -540 0 0 {name=x1}
+C {/foss/designs/Team1/2NAND/2NAND.sym} -3600 -580 0 0 {name=x2}
+C {/foss/designs/Team1/2NAND/2NAND.sym} -3280 -540 0 0 {name=x3}
+C {/foss/designs/Team1/2NAND/2NAND.sym} -3280 -300 0 0 {name=x4}
+C {/foss/designs/Team1/2NAND/2NAND.sym} -3280 -60 0 0 {name=x5}
+C {/foss/designs/Team1/2NAND/2NAND.sym} -3900 360 0 0 {name=x6}
+C {/foss/designs/Team1/2NAND/2NAND.sym} -3600 400 0 0 {name=x7}
+C {/foss/designs/Team1/2NAND/2NAND.sym} -3280 180 0 0 {name=x8}
+C {/foss/designs/Team1/2NAND/2NAND.sym} -2740 40 0 0 {name=x9}
+C {/foss/designs/Team1/2NAND/2NAND.sym} -2740 -400 0 0 {name=x10}
+C {/foss/designs/Team1/2NAND/2NAND.sym} -2380 -400 0 0 {name=x11}
+C {/foss/designs/Team1/2NAND/2NAND.sym} -2380 40 0 0 {name=x12}
+C {/foss/designs/Team1/2NAND/2NAND.sym} -2040 -190 0 0 {name=x13}
+C {/foss/designs/Team1/2NAND/2NAND.sym} -1190 -400 0 0 {name=x14}
+C {/foss/designs/Team1/2NAND/2NAND.sym} -1200 80 0 0 {name=x15}
+C {/foss/designs/Team1/3NAND/3NAND.sym} -1740 -400 0 0 {name=x16}
+C {/foss/designs/Team1/3NAND/3NAND.sym} -1740 80 0 0 {name=x17}
