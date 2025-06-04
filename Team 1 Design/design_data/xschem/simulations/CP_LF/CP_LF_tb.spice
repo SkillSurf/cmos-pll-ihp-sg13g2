@@ -57,8 +57,8 @@ XM20 net10 net8 VSS VSS sg13_lv_nmos w=10u l=0.2u ng=1 m=1
 XM21 net8 ICP net9 VSS sg13_lv_nmos w=10u l=0.2u ng=1 m=1
 XM22 net9 net8 VSS VSS sg13_lv_nmos w=10u l=0.2u ng=1 m=1
 R1 VCON net11 1k m=1
-C1 net11 VSS 5p m=1
-C2 VCON VSS 1p m=1
+C1 net11 VSS 50f m=1
+C2 VCON VSS 10f m=1
 XM23 ICP ICP VSS VSS sg13_lv_nmos w=2u l=0.2u ng=1 m=1
 .ends
 
