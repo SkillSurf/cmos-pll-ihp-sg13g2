@@ -176,10 +176,6 @@ C {iopin.sym} -840 -360 2 0 {name=p1 lab=VDD}
 C {iopin.sym} -840 400 2 0 {name=p2 lab=VSS}
 C {ipin.sym} -840 250 0 0 {name=p3 lab=VCON}
 C {opin.sym} 940 20 0 0 {name=p4 lab=VOUT}
-C {/foss/designs/Team2/New_2NAND/New_2NAND.sym} -240 20 0 0 {name=x1}
-C {/foss/designs/Team2/New_2NAND/New_2NAND.sym} 80 20 0 0 {name=x2}
-C {/foss/designs/Team2/New_2NAND/New_2NAND.sym} 400 20 0 0 {name=x3}
-C {/foss/designs/Team2/New_2NAND/New_2NAND.sym} 700 20 0 0 {name=x4}
 C {capa.sym} 560 170 0 0 {name=C1
 m=1
 value=10f
@@ -190,3 +186,7 @@ m=1
 value=20f
 footprint=1206
 device="ceramic capacitor"}
+C {/foss/designs/Team1/New_2NAND/New_2NAND.sym} -240 20 0 0 {name=x1}
+C {/foss/designs/Team1/New_2NAND/New_2NAND.sym} 80 20 0 0 {name=x2}
+C {/foss/designs/Team1/New_2NAND/New_2NAND.sym} 400 20 0 0 {name=x3}
+C {/foss/designs/Team1/New_2NAND/New_2NAND.sym} 700 20 0 0 {name=x4}

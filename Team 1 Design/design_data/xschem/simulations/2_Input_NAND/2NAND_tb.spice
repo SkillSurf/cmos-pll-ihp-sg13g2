@@ -1,10 +1,10 @@
-** sch_path: /foss/designs/Team2/2NAND/2NAND_tb.sch
+** sch_path: /foss/designs/Team1/2NAND/2NAND_tb.sch
 **.subckt 2NAND_tb Vout
 *.opin Vout
-x1 VA Vout VB 2NAND
 Vin VB GND dc 0 ac 0 pulse(0, 1.2, 0, 10p, 10p, 2n, 4n)
 Vin1 VA GND dc 0 ac 0 pulse(0, 1.2, 5n, 10p, 10p, 3n, 6n)
 C1 Vout GND 100f m=1
+x1 VA Vout VB 2NAND
 **** begin user architecture code
  .lib cornerMOSlv.lib mos_tt
 
@@ -21,9 +21,9 @@ plot v(VA)+4 v(VB)+2 v(Vout)
 **** end user architecture code
 **.ends
 
-* expanding   symbol:  /foss/designs/Team2/2NAND/2NAND.sym # of pins=3
-** sym_path: /foss/designs/Team2/2NAND/2NAND.sym
-** sch_path: /foss/designs/Team2/2NAND/2NAND.sch
+* expanding   symbol:  /foss/designs/Team1/2NAND/2NAND.sym # of pins=3
+** sym_path: /foss/designs/Team1/2NAND/2NAND.sym
+** sch_path: /foss/designs/Team1/2NAND/2NAND.sch
 .subckt 2NAND A Y B
 *.ipin B
 *.opin Y

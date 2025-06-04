@@ -12,7 +12,6 @@ N -340 60 -340 120 {lab=GND}
 N -200 60 -200 120 {lab=GND}
 N -20 60 -20 120 {lab=GND}
 N 60 0 120 0 {lab=VOUT}
-C {/foss/designs/Team2/VCO/VCO_3Stages.sym} 0 0 0 0 {name=x1}
 C {vsource.sym} -340 30 0 0 {name=VDD value=1.2 savecurrent=false}
 C {vsource.sym} -200 30 0 0 {name=Vin value=0.8 savecurrent=false}
 C {gnd.sym} -340 120 0 0 {name=l1 lab=GND}
@@ -37,3 +36,4 @@ C {devices/code_shown.sym} 210 10 0 0 {name=MODEL only_toplevel=true
 format="tcleval( @value )"
 value=".lib cornerMOSlv.lib mos_tt
 "}
+C {/foss/designs/Team1/VCO/VCO_3Stages.sym} 0 0 0 0 {name=x1}

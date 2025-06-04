@@ -10,7 +10,6 @@ N -180 0 -20 0 {lab=Vin}
 N 320 0 320 30 {lab=Vout}
 N 320 90 320 200 {lab=GND}
 N 220 -0 320 0 {lab=Vout}
-C {/foss/designs/Team2/inverter/inverter.sym} 100 0 0 0 {name=x1}
 C {vsource.sym} -180 30 0 0 {name=Vin value="dc 0 ac 0 pulse(0, 1.2, 0, 0.8n, 0.8n, 2n, 4n)" savecurrent=false}
 C {gnd.sym} -180 210 0 0 {name=l2 lab=GND}
 C {opin.sym} 340 0 0 0 {name=p1 lab=Vout}
@@ -33,3 +32,4 @@ value=100f
 footprint=1206
 device="ceramic capacitor"}
 C {gnd.sym} 320 200 0 0 {name=l4 lab=GND}
+C {/foss/designs/Team1/inverter/inverter.sym} 100 0 0 0 {name=x1}

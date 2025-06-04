@@ -1,9 +1,9 @@
-** sch_path: /foss/designs/Team2/VCO/VCO_3Stages_tb.sch
+** sch_path: /foss/designs/Team1/VCO/VCO_3Stages_tb.sch
 **.subckt VCO_3Stages_tb VOUT
 *.opin VOUT
-x1 VDD VOUT Vin GND VCO_3Stages
 VDD VDD GND 1.2
 Vin Vin GND 0.8
+x1 VDD VOUT Vin GND VCO_3Stages
 **** begin user architecture code
 
 
@@ -23,9 +23,9 @@ plot v(VOUT)
 **** end user architecture code
 **.ends
 
-* expanding   symbol:  /foss/designs/Team2/VCO/VCO_3Stages.sym # of pins=4
-** sym_path: /foss/designs/Team2/VCO/VCO_3Stages.sym
-** sch_path: /foss/designs/Team2/VCO/VCO_3Stages.sch
+* expanding   symbol:  /foss/designs/Team1/VCO/VCO_3Stages.sym # of pins=4
+** sym_path: /foss/designs/Team1/VCO/VCO_3Stages.sym
+** sch_path: /foss/designs/Team1/VCO/VCO_3Stages.sch
 .subckt VCO_3Stages VDD VOUT VCON VSS
 *.iopin VDD
 *.iopin VSS
@@ -39,18 +39,18 @@ XM5 net1 VCON VSS VSS sg13_lv_nmos w=1u l=0.13u ng=1 m=1
 XM6 net3 VCON VSS VSS sg13_lv_nmos w=1u l=0.13u ng=1 m=1
 XM7 net8 VCON VSS VSS sg13_lv_nmos w=1u l=0.13u ng=1 m=1
 XM8 net9 VCON VSS VSS sg13_lv_nmos w=1u l=0.13u ng=1 m=1
+C1 net2 VSS 10f m=1
+C2 VOUT VSS 20f m=1
 x1 net4 net3 net2 net5 net2 New_2NAND
 x2 net7 net8 net5 net6 net5 New_2NAND
 x3 net10 net9 net6 net2 net6 New_2NAND
 x4 VDD VSS net2 VOUT net2 New_2NAND
-C1 net2 VSS 10f m=1
-C2 VOUT VSS 20f m=1
 .ends
 
 
-* expanding   symbol:  /foss/designs/Team2/New_2NAND/New_2NAND.sym # of pins=5
-** sym_path: /foss/designs/Team2/New_2NAND/New_2NAND.sym
-** sch_path: /foss/designs/Team2/New_2NAND/New_2NAND.sch
+* expanding   symbol:  /foss/designs/Team1/New_2NAND/New_2NAND.sym # of pins=5
+** sym_path: /foss/designs/Team1/New_2NAND/New_2NAND.sym
+** sch_path: /foss/designs/Team1/New_2NAND/New_2NAND.sch
 .subckt New_2NAND VDD VSS A Y B
 *.ipin B
 *.opin Y
