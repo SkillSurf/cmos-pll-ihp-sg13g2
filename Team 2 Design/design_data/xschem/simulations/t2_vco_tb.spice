@@ -33,14 +33,14 @@ x1 net4 net6 GND net5 Vout net3 net2 net1 t2_vco
 *.ipin en
 *.ipin enb
 *.opin Vout
-XM1 net1 en VPWR VPB sg13_lv_pmos w=1.0u l=0.15u ng=1 m=1
-XM2 net1 net1 VPWR VPB sg13_lv_pmos w=3.0u l=0.15u ng=1 m=1
-XM3 vco_source net1 VPWR VPB sg13_lv_pmos w=3.0u l=0.15u ng=1 m=1
-XM4 net1 vctl net2 VNB sg13_lv_nmos w=0.75u l=0.15u ng=1 m=2
-XM5 net2 net2 VGND VNB sg13_lv_nmos w=1.5u l=0.15u ng=1 m=1
-XM6 vco_sink net2 VGND VNB sg13_lv_nmos w=1.5u l=0.15u ng=1 m=1
-XM7 net2 enb VGND VNB sg13_lv_nmos w=0.5u l=0.15u ng=1 m=1
-XM8 vctl enb VGND VNB sg13_lv_nmos w=0.5u l=0.15u ng=1 m=1
+XM1 net1 en VPWR VPB sg13_lv_pmos w=2.0u l=0.15u ng=1 m=1
+XM2 net1 net1 VPWR VPB sg13_lv_pmos w=4.0u l=0.15u ng=1 m=1
+XM3 vco_source net1 VPWR VPB sg13_lv_pmos w=4.0u l=0.15u ng=1 m=1
+XM4 net1 vctl net2 VNB sg13_lv_nmos w=1.5u l=0.15u ng=1 m=2
+XM5 net2 net2 VGND VNB sg13_lv_nmos w=2.0u l=0.15u ng=1 m=1
+XM6 vco_sink net2 VGND VNB sg13_lv_nmos w=2.0u l=0.15u ng=1 m=1
+XM7 net2 enb VGND VNB sg13_lv_nmos w=1u l=0.15u ng=1 m=1
+XM8 vctl enb VGND VNB sg13_lv_nmos w=1u l=0.15u ng=1 m=1
 XM9 Vout enb VGND VNB sg13_lv_nmos w=0.5u l=0.15u ng=1 m=1
 x1 vco_source VPB Vout net3 VNB vco_sink t2_vco_inverter
 x2 vco_source VPB net3 net4 VNB vco_sink t2_vco_inverter
@@ -58,8 +58,8 @@ x3 vco_source VPB net4 Vout VNB vco_sink t2_vco_inverter
 *.opin Y
 *.iopin VPB
 *.iopin VNB
-XM2 Y A VPWR VPB sg13_lv_pmos w=0.3u l=0.13u ng=1 m=1
-XM1 Y A VGND VNB sg13_lv_nmos w=0.15u l=0.13u ng=1 m=1
+XM2 Y A VPWR VPB sg13_lv_pmos w=1u l=0.13u ng=1 m=1
+XM1 Y A VGND VNB sg13_lv_nmos w=0.5u l=0.13u ng=1 m=1
 .ends
 
 .GLOBAL GND
