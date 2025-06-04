@@ -1,11 +1,11 @@
-** sch_path: /foss/designs/Team2/DFlop/DFlop_tb.sch
+** sch_path: /foss/designs/Team1/DFlop/DFlop_tb.sch
 **.subckt DFlop_tb Q QBAR
 *.opin Q
 *.opin QBAR
-x1 VDD D Q CLK QBAR GND DFlop
 VDD VDD GND 1.2
 Vin D GND dc 0 ac 0 pulse(0, 1.2, 3n, 100p, 100p, 3n, 6n)
 Vin2 CLK GND dc 0 ac 0 pulse(0, 1.2, 5n, 100p, 100p, 5n, 10n)
+x1 VDD D Q CLK QBAR GND DFlop
 **** begin user architecture code
  .lib cornerMOSlv.lib mos_tt
 
@@ -22,9 +22,9 @@ plot v(D)+4 v(CLK)+2 v(Q)
 **** end user architecture code
 **.ends
 
-* expanding   symbol:  /foss/designs/Team2/DFlop/DFlop.sym # of pins=6
-** sym_path: /foss/designs/Team2/DFlop/DFlop.sym
-** sch_path: /foss/designs/Team2/DFlop/DFlop.sch
+* expanding   symbol:  /foss/designs/Team1/DFlop/DFlop.sym # of pins=6
+** sym_path: /foss/designs/Team1/DFlop/DFlop.sym
+** sch_path: /foss/designs/Team1/DFlop/DFlop.sch
 .subckt DFlop VDD D Q CLK QBAR VSS
 *.iopin VDD
 *.iopin VSS
