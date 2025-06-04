@@ -1,12 +1,12 @@
 ** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_charge_pump_tb.sch
 **.subckt t2_charge_pump_tb
-x1 VDD VDD GND GND vout up down bais_p bais_n t2_charge_pump
 V1 VDD GND 1.2
 V2 bais_p GND 0.8
 V3 bais_n GND 0.4
-V4 up GND PULSE(1.2 1.2 2NS 2NS 2NS 50NS 100NS)
-V5 down GND PULSE(0 1.2 2NS 2NS 2NS 50NS 100NS)
+V4 up GND PULSE(0 1.2 2NS 2NS 2NS 50NS 100NS)
+V5 down GND PULSE(0 0 2NS 2NS 2NS 50NS 100NS)
 C1 vout GND 100f ic=0.6 m=1
+x1 VDD VDD GND GND vout up down bais_p bais_n t2_charge_pump
 **** begin user architecture code
 
 
@@ -36,7 +36,21 @@ C1 vout GND 100f ic=0.6 m=1
 XM1 i_down bais_n VGND VNB sg13_lv_nmos w=0.15u l=0.13u ng=1 m=1
 XM2 out down i_down VNB sg13_lv_nmos w=0.15u l=0.13u ng=1 m=1
 XM3 i_up bais_p VPWR VPB sg13_lv_pmos w=0.3u l=0.13u ng=1 m=1
-XM4 out up i_up VPB sg13_lv_pmos w=0.3u l=0.13u ng=1 m=1
+XM4 out net1 i_up VPB sg13_lv_pmos w=0.3u l=0.13u ng=1 m=1
+x1 VPWR up net1 VGND t2_inverter
+.ends
+
+
+* expanding   symbol:  t2_inverter.sym # of pins=4
+** sym_path: /foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_inverter.sym
+** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_inverter.sch
+.subckt t2_inverter VP A Y VN
+*.iopin VP
+*.iopin VN
+*.ipin A
+*.opin Y
+XM2 Y A VP VP sg13_lv_pmos w=0.3u l=0.13u ng=1 m=1
+XM1 Y A VN VN sg13_lv_nmos w=0.15u l=0.13u ng=1 m=1
 .ends
 
 .GLOBAL GND
