@@ -50,5 +50,5 @@ plot v(Fref)+8 v(Ffeed)+6 v(UP)+4 v(DN)+2 v(VCON)
 "}
 C {lab_pin.sym} 80 0 1 0 {name=p2 sig_type=std_logic lab=UP}
 C {lab_pin.sym} 80 40 3 0 {name=p3 sig_type=std_logic lab=DN}
-C {/foss/designs/Team2/CP_LF/CP_LF.sym} 240 0 0 0 {name=x1}
-C {/foss/designs/Team2/PFD/PFD.sym} -40 0 0 0 {name=x2}
+C {/foss/designs/Team1/CP_LF/CP_LF.sym} 240 0 0 0 {name=x1}
+C {/foss/designs/Team1/PFD/PFD.sym} -40 0 0 0 {name=x2}
