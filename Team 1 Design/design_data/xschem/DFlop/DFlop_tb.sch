@@ -14,7 +14,6 @@ N -560 60 -560 210 {lab=GND}
 N -560 0 -120 -0 {lab=D}
 N -430 80 -430 210 {lab=GND}
 N -430 20 -120 20 {lab=CLK}
-C {/foss/designs/Team2/DFlop/DFlop.sym} -20 0 0 0 {name=x1}
 C {vsource.sym} -740 30 0 0 {name=VDD value=1.2 savecurrent=false}
 C {gnd.sym} -740 180 0 0 {name=l1 lab=GND}
 C {gnd.sym} -20 180 0 0 {name=l2 lab=GND}
@@ -43,3 +42,4 @@ C {vsource.sym} -430 50 0 0 {name=Vin2 value="dc 0 ac 0 pulse(0, 1.2, 5n, 100p, 
 C {gnd.sym} -430 210 0 0 {name=l4 lab=GND}
 C {lab_pin.sym} -220 20 3 0 {name=p6 sig_type=std_logic lab=CLK
 }
+C {/foss/designs/Team1/DFlop/DFlop.sym} -20 0 0 0 {name=x1}
