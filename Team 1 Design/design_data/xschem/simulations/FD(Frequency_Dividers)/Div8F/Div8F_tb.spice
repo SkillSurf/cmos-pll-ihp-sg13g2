@@ -1,4 +1,4 @@
-** sch_path: /foss/designs/Team2/FD/Div8F/Div8F_tb.sch
+** sch_path: /foss/designs/Team1/FD/Div8F/Div8F_tb.sch
 **.subckt Div8F_tb FOUT
 *.opin FOUT
 VDD VDD GND 1.2
@@ -20,9 +20,9 @@ plot v(FIN)+2 v(FOUT)
 **** end user architecture code
 **.ends
 
-* expanding   symbol:  /foss/designs/Team2/FD/Div8F/Div8F.sym # of pins=4
-** sym_path: /foss/designs/Team2/FD/Div8F/Div8F.sym
-** sch_path: /foss/designs/Team2/FD/Div8F/Div8F.sch
+* expanding   symbol:  /foss/designs/Team1/FD/Div8F/Div8F.sym # of pins=4
+** sym_path: /foss/designs/Team1/FD/Div8F/Div8F.sym
+** sch_path: /foss/designs/Team1/FD/Div8F/Div8F.sch
 .subckt Div8F VDD FOUT FIN VSS
 *.opin FOUT
 *.ipin FIN
@@ -34,9 +34,9 @@ x3 VDD net5 FOUT net3 net5 VSS DFlop
 .ends
 
 
-* expanding   symbol:  /foss/designs/Team2/DFlop/DFlop.sym # of pins=6
-** sym_path: /foss/designs/Team2/DFlop/DFlop.sym
-** sch_path: /foss/designs/Team2/DFlop/DFlop.sch
+* expanding   symbol:  /foss/designs/Team1/DFlop/DFlop.sym # of pins=6
+** sym_path: /foss/designs/Team1/DFlop/DFlop.sym
+** sch_path: /foss/designs/Team1/DFlop/DFlop.sch
 .subckt DFlop VDD D Q CLK QBAR VSS
 *.iopin VDD
 *.iopin VSS
