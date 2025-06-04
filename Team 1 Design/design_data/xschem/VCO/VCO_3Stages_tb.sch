@@ -24,10 +24,10 @@ value="
 .param temp=27
 .control
 save all 
-.ic v(VOUT) = 1 v(x1.net5)=0.6 v(x1.net4)=0.3 v(x1.net3)=0.1\\
-v(x1.net8)=0.9 v(x1.net9)=0.4 v(x1.net10)=0.2
+.ic v(VOUT) = 1 v(x1.net5)=0.5 v(x1.net4)=1 v(x1.net3)=0.1\\
+v(x1.net8)=1 v(x1.net9)=1 v(x1.net10)=1
 .options maxstep=10n reltol=1e-3 abstol=1e-6
-tran 1u 100u
+tran 50p 50n
 plot v(VOUT)
 .endc
 "}
