@@ -3,7 +3,7 @@
 *.opin Vout
 x1 net1 GND net2 Vout t2_vco_new
 VPWR net1 GND 1.2
-vctl net2 GND 0.8
+vctl net2 GND 0.3
 **** begin user architecture code
  .lib cornerMOSlv.lib mos_tt
 

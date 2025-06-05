@@ -9,49 +9,24 @@ vctl net2 GND 0.8
 
 
 
-
-.include /foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/simulations/t2_vco_new_sweep_.spice
-
-
-Vctrl vctrl 0 DC 0
-VPWR vpwr 0 DC 1.2
-
-X1 net1 0 net2 vout t2_vco_new_sweep            ; <-- Match subckt pins and names!
-
 .control
-let VPWR = 1.2
-let vstart = 0.1
-let vstop = 1.1
-let vstep = 0.1
-let tol = 0.01       ; 1% frequency tolerance
-let last_freq = 0
+set filetype=ascii
+set numdgt=10
 
-set numdgt=6
-set units=degrees
+foreach vval 0.4 0.5 0.6 0.7 0.8 0.9 1.0 1.1 1.2
+    alter Vctl dc $vval
+    tran 0.1n 1u
+    meas tran t1 TRIG v(Vout) VAL=0.6 RISE=1 TARG v(Vout) VAL=0.6 RISE=2
+    let freq = 1 / t1
+    print freq
+    * Append vctl and freq formatted to txt file
+    shell echo $vval,$freq >> freq_vs_vctl.txt
+end
 
-foreach vctrl $&[vstart:vstep:vstop]
-  alter Vctrl $vctrl
+.endc
+.end
 
-  tran 1n 100n
-  meas tran t1 WHEN v(Vout) VAL={VPWR/2} CROSS=1 RISE
-  meas tran t2 WHEN v(Vout) VAL={VPWR/2} CROSS=2 RISE
-  let tperiod = t2 - t1
-  let timestep = tperiod / 1000
-  let last_freq = 1/tperiod
 
-  let freq = 0
-  let settled = 0
-
-  while not settled
-    tran $timestep 10*$tperiod
-    meas tran new_t1 WHEN v(Vout) VAL={VPWR/2} CROSS=1 RISE
-    meas tran new_t2 WHEN v(Vout) VAL={VPWR/2} CROSS=2 RISE
-    let new_tperiod = new_t2 - new_t1
-    let freq = 1 / new_tperiod
-
-    if abs(freq - last_freq)/last_freq < tol
-      let settled = 1
-      echo Vctrl
 
 **** end user architecture code
 **.ends

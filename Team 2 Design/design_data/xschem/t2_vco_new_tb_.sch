@@ -51,7 +51,7 @@ value="
 "}
 C {/foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_vco_new.sym} 1080 130 0 0 {name=x1}
 C {vsource.sym} 700 170 0 0 {name=VPWR value=1.2 savecurrent=false}
-C {vsource.sym} 780 170 0 0 {name=vctl value=0.8 savecurrent=false}
+C {vsource.sym} 780 170 0 0 {name=vctl value=0.3 savecurrent=false}
 C {gnd.sym} 780 290 0 0 {name=l2 lab=GND}
 C {gnd.sym} 700 290 0 0 {name=l9 lab=GND}
 C {opin.sym} 1240 130 0 0 {name=p17 lab=Vout}
