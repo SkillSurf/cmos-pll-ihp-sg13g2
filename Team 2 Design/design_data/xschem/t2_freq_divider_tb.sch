@@ -13,7 +13,7 @@ divy=5
 subdivy=1
 unity=1
 x1=0
-x2=1.5e-08
+x2=6e-08
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -27,7 +27,7 @@ logx=0
 logy=0
 hilight_wave=-1}
 B 2 1100 40 1900 440 {flags=graph
-y1=-0.017
+y1=-0.015
 y2=1.3
 ypos1=0
 ypos2=2
@@ -35,7 +35,7 @@ divy=5
 subdivy=1
 unity=1
 x1=0
-x2=1.5e-08
+x2=6e-08
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -60,19 +60,19 @@ N 920 90 960 90 {lab=clk_out}
 N 500 60 540 60 {lab=clk_in}
 N 650 230 650 280 {lab=a0}
 N 690 230 690 300 {lab=a1}
-N 730 230 730 320 {lab=a0}
-N 770 230 770 340 {lab=#net1}
+N 730 230 730 320 {lab=a2}
+N 770 230 770 340 {lab=a3}
 N 430 220 430 260 {lab=GND}
-N 430 120 430 160 {lab=#net2}
+N 430 120 430 160 {lab=en}
 N 500 400 500 440 {lab=GND}
 N 590 400 590 440 {lab=GND}
 N 680 400 680 440 {lab=GND}
 N 770 400 770 440 {lab=GND}
-N 680 320 680 340 {lab=a0}
-N 680 320 730 320 {lab=a0}
+N 680 320 680 340 {lab=a2}
+N 680 320 730 320 {lab=a2}
 N 590 300 590 340 {lab=a1}
 N 500 280 500 340 {lab=a0}
-N 430 120 540 120 {lab=#net2}
+N 430 120 540 120 {lab=en}
 N 500 280 650 280 {lab=a0}
 N 590 300 690 300 {lab=a1}
 C {devices/code_shown.sym} -140 -430 0 0 {name=NGSPICE only_toplevel=true 
@@ -80,7 +80,7 @@ value="
 .param temp=27
 .control
 save all 
-tran 250p 15n
+tran 20p 40n
 write tran_t2_freq_divider.raw
 .endc
 "}
@@ -91,7 +91,7 @@ value="
 "}
 C {vsource.sym} -90 130 0 0 {name=Vs value=1.2 savecurrent=false}
 C {lab_pin.sym} -90 60 1 0 {name=p15 sig_type=std_logic lab=VDD}
-C {vsource.sym} 90 130 0 0 {name=Vclk value="dc 0 ac 0 pulse(0, 1.2, 0, 50p, 50p, 1.25n, 2.5n)" savecurrent=false}
+C {vsource.sym} 90 130 0 0 {name=Vclk value="dc 0 ac 0 pulse(0, 1.2, 0, 20p, 20p, 0.776n, 1.552n)" savecurrent=false}
 C {lab_pin.sym} 90 60 1 0 {name=p19 sig_type=std_logic lab=clk_in}
 C {gnd.sym} -90 200 0 0 {name=l2 lab=GND}
 C {gnd.sym} 90 200 0 0 {name=l3 lab=GND}
@@ -120,8 +120,8 @@ value="
 .param EN = 1.2
 
 .param A0 = 1.2
-.param A1 = 0
-.param A2 = 0
+.param A1 = 1.2
+.param A2 = 1.2
 .param A3 = 0
 "}
 C {vsource.sym} 430 190 0 0 {name=Ven value="dc \{EN\}" savecurrent=false}
