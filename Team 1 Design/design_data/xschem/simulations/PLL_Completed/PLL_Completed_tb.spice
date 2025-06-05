@@ -2,8 +2,8 @@
 **.subckt PLL_Completed_tb
 x1 Fref UP net1 DN net2 Ffeed PFD
 x2 Vdd ICP GND net1 UP VCON net2 DN CP_LF
-x3 Vdd net3 VCON GND VCO_3Stages
-x4 Vdd Ffeed net3 GND Div8F
+x3 Vdd VCO_OUT VCON GND VCO_3Stages
+x4 Vdd Ffeed VCO_OUT GND Div8F
 V1 Vdd GND 1.2
 I0 Vdd ICP 80u
 Vin1 Fref GND dc 0 ac 0 pulse(0, 1.2, 0, 10p, 10p, 2.5n, 5n)
@@ -14,8 +14,8 @@ Vin1 Fref GND dc 0 ac 0 pulse(0, 1.2, 0, 10p, 10p, 2.5n, 5n)
 .control
 save all
 .options maxstep=10n reltol=1e-3 abstol=1e-6
-tran 50p 200n
-plot v(Fref)+8 v(UP)+6 v(DN)+4 v(VCON)+2 v(Ffeed)
+tran 50p 1u
+plot v(Fref)+10 v(Ffeed)+8 v(UP)+6 v(DN)+4 v(VCO_OUT)+2 v(VCON) xlimit 600n 1u
 .endc
 
 
