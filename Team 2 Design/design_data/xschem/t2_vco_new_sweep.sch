@@ -4,15 +4,15 @@ K {}
 V {}
 S {}
 E {}
-N 700 200 700 290 {lab=GND}
-N 780 200 780 290 {lab=GND}
-N 700 30 700 140 {lab=#net1}
-N 700 30 1080 30 {lab=#net1}
-N 1080 30 1080 60 {lab=#net1}
-N 780 130 780 140 {lab=#net2}
-N 780 130 970 130 {lab=#net2}
-N 1080 200 1080 280 {lab=GND}
-N 1180 130 1240 130 {lab=Vout}
+N 780 -180 780 -90 {lab=GND}
+N 860 -180 860 -90 {lab=GND}
+N 780 -350 780 -240 {lab=#net1}
+N 780 -350 1160 -350 {lab=#net1}
+N 1160 -350 1160 -320 {lab=#net1}
+N 860 -250 860 -240 {lab=#net2}
+N 860 -250 1050 -250 {lab=#net2}
+N 1160 -180 1160 -100 {lab=GND}
+N 1260 -250 1320 -250 {lab=Vout}
 C {devices/code_shown.sym} 1090 -440 0 0 {name=MODEL only_toplevel=true
 format="tcleval( @value )"
 value=".lib cornerMOSlv.lib mos_tt
@@ -66,10 +66,10 @@ foreach vctrl $&[vstart:vstep:vstop]
 .endc
 .end
 "}
-C {/foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_vco_new.sym} 1080 130 0 0 {name=x1}
-C {vsource.sym} 700 170 0 0 {name=VPWR value=1.2 savecurrent=false}
-C {vsource.sym} 780 170 0 0 {name=vctl value=0.8 savecurrent=false}
-C {gnd.sym} 780 290 0 0 {name=l2 lab=GND}
-C {gnd.sym} 700 290 0 0 {name=l9 lab=GND}
-C {opin.sym} 1240 130 0 0 {name=p17 lab=Vout}
-C {gnd.sym} 1080 280 0 0 {name=l1 lab=GND}
+C {/foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_vco_new.sym} 1160 -250 0 0 {name=x1}
+C {vsource.sym} 780 -210 0 0 {name=VPWR value=1.2 savecurrent=false}
+C {vsource.sym} 860 -210 0 0 {name=vctl value=0.8 savecurrent=false}
+C {gnd.sym} 860 -90 0 0 {name=l2 lab=GND}
+C {gnd.sym} 780 -90 0 0 {name=l9 lab=GND}
+C {opin.sym} 1320 -250 0 0 {name=p17 lab=Vout}
+C {gnd.sym} 1160 -100 0 0 {name=l1 lab=GND}

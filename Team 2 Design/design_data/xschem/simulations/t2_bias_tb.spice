@@ -2,7 +2,7 @@
 **.subckt t2_bias_tb bias_n bias_p
 *.opin bias_n
 *.opin bias_p
-VPB1 net3 GND 1.2
+VPB net3 GND 1.2
 Venb net1 GND 0
 Ven net2 GND 1.2
 VPWR net4 GND 1.2
@@ -13,11 +13,15 @@ x1 net4 net3 GND GND net2 bias_n bias_p net1 t2_bias
 
 
 .param temp=27
-.save all
+.control
 dc Ven 0 1.2 0.1
-plot v(bias_n)
+.save all
+plot v(bias_n) v(bias_p)
 .endc
 
+
+
+.lib /foss/pdks/ihp-sg13g2/libs.tech/ngspice/models/cornerRES.lib res_typ_stat
 
 **** end user architecture code
 **.ends
