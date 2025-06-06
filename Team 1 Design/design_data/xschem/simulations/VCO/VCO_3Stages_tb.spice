@@ -2,7 +2,7 @@
 **.subckt VCO_3Stages_tb VOUT
 *.opin VOUT
 VDD VDD GND 1.2
-Vin Vin GND 0.8
+Vin Vin GND 0.9
 x1 VDD VOUT Vin GND VCO_3Stages
 **** begin user architecture code
 
@@ -11,8 +11,12 @@ x1 VDD VOUT Vin GND VCO_3Stages
 .control
 save all
 .options maxstep=10n reltol=1e-3 abstol=1e-6
-tran 50p 50n
-plot v(VOUT)
+tran 50p 100n
+plot v(VOUT) xlimit 0 100n
+fft v(VOUT)
+let vmag = db(mag(v(VOUT)))
+plot vmag xlabel 'Frequency (Hz)' xlimit 0  5Gig
+wrdata fft_output(Vcon=0.9).txt vmag
 .endc
 
 
@@ -29,19 +33,18 @@ plot v(VOUT)
 *.iopin VSS
 *.ipin VCON
 *.opin VOUT
-XM1 net1 net1 VDD VDD sg13_lv_pmos w=2u l=0.13u ng=1 m=1
-XM2 net4 net1 VDD VDD sg13_lv_pmos w=2u l=0.13u ng=1 m=1
-XM3 net7 net1 VDD VDD sg13_lv_pmos w=2u l=0.13u ng=1 m=1
-XM4 net10 net1 VDD VDD sg13_lv_pmos w=2u l=0.13u ng=1 m=1
-XM5 net1 VCON VSS VSS sg13_lv_nmos w=1u l=0.13u ng=1 m=1
-XM6 net3 VCON VSS VSS sg13_lv_nmos w=1u l=0.13u ng=1 m=1
-XM7 net8 VCON VSS VSS sg13_lv_nmos w=1u l=0.13u ng=1 m=1
-XM8 net9 VCON VSS VSS sg13_lv_nmos w=1u l=0.13u ng=1 m=1
-C1 net2 VSS 10f m=1
-C2 VOUT VSS 20f m=1
-x1 net4 net3 net2 net5 net2 New_2NAND
-x2 net7 net8 net5 net6 net5 New_2NAND
-x3 net10 net9 net6 net2 net6 New_2NAND
+XM1 net1 net1 VDD VDD sg13_lv_pmos w=3u l=0.13u ng=1 m=1
+XM2 net9 net1 VDD VDD sg13_lv_pmos w=3u l=0.13u ng=1 m=1
+XM3 net8 net1 VDD VDD sg13_lv_pmos w=3u l=0.13u ng=1 m=1
+XM4 net6 net1 VDD VDD sg13_lv_pmos w=3u l=0.13u ng=1 m=1
+XM5 net1 VCON VSS VSS sg13_lv_nmos w=2u l=0.13u ng=1 m=1
+XM6 net10 VCON VSS VSS sg13_lv_nmos w=2u l=0.13u ng=1 m=1
+XM7 net7 VCON VSS VSS sg13_lv_nmos w=2u l=0.13u ng=1 m=1
+XM8 net5 VCON VSS VSS sg13_lv_nmos w=2u l=0.13u ng=1 m=1
+C2 VOUT VSS 10f m=1
+x1 net9 net10 net2 net4 net2 New_2NAND
+x2 net8 net7 net4 net3 net4 New_2NAND
+x3 net6 net5 net3 net2 net3 New_2NAND
 x4 VDD VSS net2 VOUT net2 New_2NAND
 .ends
 
@@ -55,10 +58,10 @@ x4 VDD VSS net2 VOUT net2 New_2NAND
 *.ipin A
 *.iopin VDD
 *.iopin VSS
-XM1 Y A VDD VDD sg13_lv_pmos w=2u l=0.13u ng=1 m=1
-XM2 Y B VDD VDD sg13_lv_pmos w=2u l=0.13u ng=1 m=1
-XM3 Y B net1 VSS sg13_lv_nmos w=1u l=0.13u ng=1 m=1
-XM4 net1 A VSS VSS sg13_lv_nmos w=1u l=0.13u ng=1 m=1
+XM1 Y A VDD VDD sg13_lv_pmos w=3u l=0.13u ng=1 m=1
+XM2 Y B VDD VDD sg13_lv_pmos w=3u l=0.13u ng=1 m=1
+XM3 Y B net1 VSS sg13_lv_nmos w=2u l=0.13u ng=1 m=1
+XM4 net1 A VSS VSS sg13_lv_nmos w=2u l=0.13u ng=1 m=1
 .ends
 
 .GLOBAL GND
