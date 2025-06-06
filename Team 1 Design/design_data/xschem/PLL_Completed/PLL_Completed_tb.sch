@@ -12,9 +12,9 @@ N 240 -0 300 0 {lab=VCON}
 N 380 60 380 100 {lab=GND}
 N 140 100 380 100 {lab=GND}
 N 140 80 140 100 {lab=GND}
-N 460 -0 520 -0 {lab=#net3}
-N 520 -0 520 220 {lab=#net3}
-N 180 220 520 220 {lab=#net3}
+N 460 -0 520 -0 {lab=VCO_OUT}
+N 520 -0 520 220 {lab=VCO_OUT}
+N 180 220 520 220 {lab=VCO_OUT}
 N -280 20 -220 20 {lab=Ffeed}
 N -280 20 -280 220 {lab=Ffeed}
 N -280 220 -20 220 {lab=Ffeed}
@@ -50,14 +50,16 @@ C {vsource.sym} -520 30 0 0 {name=Vin1 value="dc 0 ac 0 pulse(0, 1.2, 0, 10p, 10
 C {gnd.sym} -520 190 0 0 {name=l3 lab=GND}
 C {lab_pin.sym} -400 0 1 0 {name=p8 sig_type=std_logic lab=Fref}
 C {lab_pin.sym} -240 220 1 0 {name=p9 sig_type=std_logic lab=Ffeed}
-C {devices/code_shown.sym} 560 -60 0 0 {name=NGSPICE only_toplevel=true 
+C {devices/code_shown.sym} 550 -160 0 0 {name=NGSPICE only_toplevel=true 
 value="
 .param temp=27
 .control
 save all 
 .options maxstep=10n reltol=1e-3 abstol=1e-6
-tran 50p 200n
-plot v(Fref) v(Ffeed)
+tran 50p 600n
+plot v(Fref)+10 v(Ffeed)+8 v(UP)+6 v(DN)+4 v(VCO_OUT)+2 v(VCON) xlimit 400n 600n
+fft v(VCO_OUT)
+plot db(mag(v(VCO_OUT))) xlabel 'Frequency (Hz)' xlimi 0 2Gig
 .endc
 "}
 C {devices/code_shown.sym} 570 170 0 0 {name=MODEL only_toplevel=true
@@ -67,3 +69,4 @@ value=".lib cornerMOSlv.lib mos_tt
 C {lab_pin.sym} 0 0 1 0 {name=p10 sig_type=std_logic lab=UP}
 C {lab_pin.sym} 0 40 3 0 {name=p11 sig_type=std_logic lab=DN}
 C {lab_pin.sym} 260 0 1 0 {name=p12 sig_type=std_logic lab=VCON}
+C {lab_pin.sym} 300 220 1 0 {name=p13 sig_type=std_logic lab=VCO_OUT}
