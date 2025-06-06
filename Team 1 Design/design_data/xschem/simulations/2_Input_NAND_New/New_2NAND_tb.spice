@@ -31,10 +31,10 @@ plot v(VA)+4 v(VB)+2 v(Vout)
 *.ipin A
 *.iopin VDD
 *.iopin VSS
-XM1 Y A VDD VDD sg13_lv_pmos w=2u l=0.13u ng=1 m=1
-XM2 Y B VDD VDD sg13_lv_pmos w=2u l=0.13u ng=1 m=1
-XM3 Y B net1 VSS sg13_lv_nmos w=1u l=0.13u ng=1 m=1
-XM4 net1 A VSS VSS sg13_lv_nmos w=1u l=0.13u ng=1 m=1
+XM1 Y A VDD VDD sg13_lv_pmos w=3u l=0.13u ng=1 m=1
+XM2 Y B VDD VDD sg13_lv_pmos w=3u l=0.13u ng=1 m=1
+XM3 Y B net1 VSS sg13_lv_nmos w=2u l=0.13u ng=1 m=1
+XM4 net1 A VSS VSS sg13_lv_nmos w=2u l=0.13u ng=1 m=1
 .ends
 
 .GLOBAL GND
