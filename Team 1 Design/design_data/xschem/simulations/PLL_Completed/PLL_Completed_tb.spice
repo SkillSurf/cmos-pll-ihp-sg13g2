@@ -17,7 +17,7 @@ save all
 tran 50p 600n
 plot v(Fref)+10 v(Ffeed)+8 v(UP)+6 v(DN)+4 v(VCO_OUT)+2 v(VCON) xlimit 400n 600n
 fft v(VCO_OUT)
-plot db(mag(v(VCO_OUT))) xlabel 'Frequency (Hz)' xlimi 0 2Gig
+plot db(mag(v(VCO_OUT))) xlabel 'Frequency ' xlimit 0 2Gig
 .endc
 
 
