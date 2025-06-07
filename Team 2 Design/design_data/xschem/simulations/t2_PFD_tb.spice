@@ -1,9 +1,9 @@
-** sch_path: /foss/designs/t2_PFD/t2_PFD_tb.sch
+** sch_path: /foss/designs/PROJECTS/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_PFD_tb.sch
 **.subckt t2_PFD_tb
 x1 vdd up GND down ref_clk vco_clk t2_PFD
 V1 vdd GND 1.2
-V2 ref_clk GND PULSE(0 1.2 0 50p 50p 2.5n 5n
-V3 vco_clk GND PULSE(0 1.2 1n 50p 50p 2.5n 5n
+V2 ref_clk GND PULSE(0 1.2 0 50p 50p 10.87n 21.74n
+V3 vco_clk GND PULSE(0 1.2 1n 50p 50p 46.15n 92.3n
 **** begin user architecture code
  .lib cornerMOSlv.lib mos_tt
 
@@ -12,7 +12,7 @@ V3 vco_clk GND PULSE(0 1.2 1n 50p 50p 2.5n 5n
 .param temp=27
 .control
 save all
-tran 10p 40n
+tran 10p 150n
 write tran_pfd_t2.raw
 .endc
 
@@ -21,8 +21,8 @@ write tran_pfd_t2.raw
 **.ends
 
 * expanding   symbol:  t2_PFD.sym # of pins=6
-** sym_path: /foss/designs/t2_PFD/t2_PFD.sym
-** sch_path: /foss/designs/t2_PFD/t2_PFD.sch
+** sym_path: /foss/designs/PROJECTS/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_PFD.sym
+** sch_path: /foss/designs/PROJECTS/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_PFD.sch
 .subckt t2_PFD vdd up vss down ref_clk vco_clk
 *.iopin vdd
 *.ipin ref_clk

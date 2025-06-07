@@ -276,9 +276,9 @@ C {lab_pin.sym} 250 -30 2 1 {name=p18 sig_type=std_logic lab=VPWR
 }
 C {lab_pin.sym} 2430 320 2 0 {name=p2 sig_type=std_logic lab=Vout
 }
-C {/foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_vco_inverter.sym} 560 320 0 0 {name=x1}
-C {/foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_vco_inverter.sym} 880 320 0 0 {name=x2}
-C {/foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_vco_inverter.sym} 1200 320 0 0 {name=x3}
-C {/foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_vco_inverter.sym} 1580 320 0 0 {name=x4}
-C {/foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_vco_inverter.sym} 1900 320 0 0 {name=x5}
-C {/foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_vco_inverter.sym} 2200 320 0 0 {name=x6}
+C {t2_vco_inverter.sym} 560 320 0 0 {name=x1}
+C {t2_vco_inverter.sym} 880 320 0 0 {name=x2}
+C {t2_vco_inverter.sym} 1200 320 0 0 {name=x3}
+C {t2_vco_inverter.sym} 1580 320 0 0 {name=x4}
+C {t2_vco_inverter.sym} 1900 320 0 0 {name=x5}
+C {t2_vco_inverter.sym} 2200 320 0 0 {name=x6}

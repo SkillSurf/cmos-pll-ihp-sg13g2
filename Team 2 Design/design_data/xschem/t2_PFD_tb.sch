@@ -5,8 +5,8 @@ V {}
 S {}
 E {}
 B 2 210 -945 1010 -545 {flags=graph
-y1=-0.2686826
-y2=1.7313169
+y1=0
+y2=1.3
 ypos1=0
 ypos2=2
 divy=5
@@ -27,8 +27,8 @@ logy=0
 rawfile=$netlist_dir/tran_pfd_t2.raw
 sim_type=tran}
 B 2 250 -500 1050 -100 {flags=graph
-y1=-0.34299461
-y2=1.6570053
+y1=0
+y2=1.3
 ypos1=0
 ypos2=2
 divy=5
@@ -50,8 +50,8 @@ autoload=1
 rawfile=$netlist_dir/tran_pfd_t2.raw
 sim_type=tran}
 B 2 -800 -1040 0 -640 {flags=graph
-y1=-0.4
-y2=1.6
+y1=-0.012
+y2=1.3
 ypos1=0
 ypos2=2
 divy=5
@@ -71,8 +71,8 @@ logx=0
 logy=0
 }
 B 2 -800 -680 0 -280 {flags=graph
-y1=-0.4
-y2=1.6
+y1=-0.0045
+y2=0.0018
 ypos1=0
 ypos2=2
 divy=5
@@ -92,8 +92,8 @@ logx=0
 logy=0
 }
 B 2 -800 -1440 0 -1040 {flags=graph
-y1=-0.4
-y2=1.6
+y1=0
+y2=1.3
 ypos1=0
 ypos2=2
 divy=5
@@ -125,12 +125,12 @@ C {t2_PFD.sym} 40 -20 0 0 {name=x1}
 C {vsource.sym} -510 -60 0 0 {name=V1 value=1.2 savecurrent=false}
 C {gnd.sym} -510 -30 0 0 {name=l1 lab=GND}
 C {gnd.sym} 0 0 0 0 {name=l2 lab=GND}
-C {vsource.sym} -430 -60 0 0 {name=V2 value="PULSE(0 1.2 0 50p 50p 2.5n 5n" savecurrent=false}
+C {vsource.sym} -430 -60 0 0 {name=V2 value="PULSE(0 1.2 0 50p 50p 10.87n 21.74n" savecurrent=false}
 C {gnd.sym} -430 -30 0 0 {name=l3 lab=GND}
 C {gnd.sym} -430 100 0 0 {name=l4 lab=GND}
 C {lab_pin.sym} -430 -120 0 0 {name=p2 sig_type=std_logic lab=ref_clk}
 C {lab_pin.sym} -430 10 0 0 {name=p3 sig_type=std_logic lab=vco_clk}
-C {vsource.sym} -430 70 0 0 {name=V3 value="PULSE(0 1.2 1n 50p 50p 2.5n 5n" savecurrent=false}
+C {vsource.sym} -430 70 0 0 {name=V3 value="PULSE(0 1.2 1n 50p 50p 46.15n 92.3n" savecurrent=false}
 C {lab_pin.sym} -150 -80 0 0 {name=p4 sig_type=std_logic lab=ref_clk}
 C {lab_pin.sym} -150 -40 0 0 {name=p5 sig_type=std_logic lab=vco_clk}
 C {lab_pin.sym} -510 -120 0 0 {name=p6 sig_type=std_logic lab=vdd}
@@ -146,7 +146,7 @@ value="
 .param temp=27
 .control
 save all 
-tran 10p 40n
+tran 10p 150n
 write tran_pfd_t2.raw
 .endc
 "}

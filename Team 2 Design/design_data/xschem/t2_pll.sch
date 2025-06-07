@@ -134,7 +134,7 @@ logy=0
 }
 N -990 70 -990 100 {lab=ref_clk}
 N -1150 -180 -1110 -180 {lab=ref_clk}
-N -1150 -140 -1110 -140 {lab=div_clk}
+N -1150 -140 -1110 -140 {lab=vco_clk}
 N -870 -180 -830 -180 {lab=up}
 N -870 -140 -830 -140 {lab=down}
 N -1000 -240 -1000 -220 {lab=VDD}
@@ -156,8 +156,8 @@ N -1000 -100 -1000 -80 {lab=GND}
 N -230 -100 -230 -80 {lab=GND}
 N 810 -10 810 30 {lab=GND}
 N 810 -330 810 -290 {lab=VDD}
-N 870 -150 910 -150 {lab=div_clk}
-N 490 -180 530 -180 {lab=vco_clk}
+N 870 -150 910 -150 {lab=#net1}
+N 490 -180 530 -180 {lab=#net2}
 N 640 -10 640 40 {lab=a0}
 N 680 -10 680 60 {lab=a1}
 N 720 -10 720 80 {lab=a2}
@@ -183,7 +183,7 @@ N -510 -150 -490 -150 {lab=raw_Vctrl}
 N -310 -150 -280 -150 {lab=raw_Vctrl}
 N -170 -150 -130 -150 {lab=Vctrl}
 C {t2_PFD.sym} -960 -120 0 0 {name=x1}
-C {vsource.sym} -990 130 0 0 {name=V2 value="PULSE(0 1.2 0 50p 50p 5n 10n" savecurrent=false}
+C {vsource.sym} -990 130 0 0 {name=V2 value="PULSE(0 1.2 0 50p 50p 3.5n 7n" savecurrent=false}
 C {gnd.sym} -990 160 0 0 {name=l3 lab=GND}
 C {lab_pin.sym} -990 70 0 0 {name=p2 sig_type=std_logic lab=ref_clk}
 C {lab_pin.sym} -1150 -180 0 0 {name=p4 sig_type=std_logic lab=ref_clk}
@@ -240,9 +240,7 @@ C {gnd.sym} 150 -60 0 0 {name=l4 lab=GND}
 C {vdd.sym} 150 -250 0 0 {name=l20 lab=VDD}
 C {lab_wire.sym} 10 -150 0 0 {name=p3 sig_type=std_logic lab=Vctrl}
 C {lab_pin.sym} 290 -150 2 0 {name=p24 sig_type=std_logic lab=vco_clk}
-C {lab_pin.sym} 490 -180 0 0 {name=p5 sig_type=std_logic lab=vco_clk}
-C {lab_pin.sym} 910 -150 2 0 {name=p17 sig_type=std_logic lab=div_clk}
-C {lab_pin.sym} -1150 -140 0 0 {name=p18 sig_type=std_logic lab=div_clk}
+C {lab_pin.sym} -1150 -140 0 0 {name=p18 sig_type=std_logic lab=vco_clk}
 C {devices/code_shown.sym} -200 100 0 0 {name=MODEL1 only_toplevel=true
 format="tcleval( @value )"
 value=".lib cornerMOSlv.lib mos_tt
@@ -252,7 +250,8 @@ value="
 .param temp=27
 .ic v(up) = 0
 .ic v(down) = 0
-.tran 500p 100n uic
+.ic v(Vctrl) = 0.5
+.tran 500p 20n uic
 .save all
 "}
 C {devices/code_shown.sym} -200 160 0 0 {name=MODEL2 only_toplevel=true
@@ -268,3 +267,5 @@ C {launcher.sym} -1200 -340 0 0 {name=h5
 descr="load waves" 
 tclcommand="xschem raw_read $netlist_dir/t2_pll.raw tran"
 }
+C {noconn.sym} 490 -180 0 0 {name=l13}
+C {noconn.sym} 910 -150 2 0 {name=l14}

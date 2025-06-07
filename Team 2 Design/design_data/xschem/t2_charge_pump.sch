@@ -22,7 +22,7 @@ N 120 -390 120 -300 {lab=VPWR}
 N -70 -0 80 -0 {lab=down}
 N 0 -170 80 -170 {lab=#net1}
 N -230 -170 -200 -170 {lab=up}
-N -120 -100 -120 -80 {lab=#net2}
+N -120 -100 -120 -80 {lab=VGND}
 N -120 -260 -120 -240 {lab=VPWR}
 C {sg13g2_pr/sg13_lv_nmos.sym} 100 110 0 0 {name=M1
 l=0.13u
@@ -76,6 +76,6 @@ C {lab_wire.sym} 250 -270 2 0 {name=p17 sig_type=std_logic lab=VPB}
 C {lab_wire.sym} 120 -90 2 0 {name=p18 sig_type=std_logic lab=out}
 C {lab_wire.sym} 120 -210 0 0 {name=p19 sig_type=std_logic lab=i_up}
 C {lab_wire.sym} 120 60 0 0 {name=p20 sig_type=std_logic lab=i_down}
-C {/foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_inverter.sym} -120 -170 0 0 {name=x1}
+C {t2_inverter.sym} -120 -170 0 0 {name=x1}
 C {lab_wire.sym} -120 -260 0 0 {name=p21 sig_type=std_logic lab=VPWR}
 C {lab_wire.sym} -120 -80 0 0 {name=p22 sig_type=std_logic lab=VGND}
