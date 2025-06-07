@@ -38,8 +38,8 @@ C {lab_wire.sym} 140 130 0 0 {name=p4 sig_type=std_logic lab=VGND}
 C {lab_wire.sym} 280 -140 0 0 {name=p6 sig_type=std_logic lab=vout}
 C {lab_wire.sym} 40 -140 0 0 {name=p5 sig_type=std_logic lab=vin}
 C {sg13g2_pr/sg13_lv_nmos.sym} 0 -40 1 0 {name=M1
-l=1.3u
-w=3.0u
+l=0.650u
+w=1.5u
 ng=1
 m=1
 model=sg13_lv_nmos

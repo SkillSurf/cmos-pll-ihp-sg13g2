@@ -4,6 +4,134 @@ K {}
 V {}
 S {}
 E {}
+B 2 -1270 -780 -470 -380 {flags=graph
+y1=0.00023
+y2=1.2
+ypos1=0
+ypos2=2
+divy=5
+subdivy=1
+unity=1
+x1=5e-13
+x2=5e-08
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+node=vco_clk
+color=6
+dataset=-1
+unitx=1
+logx=0
+logy=0
+}
+B 2 -450 -780 350 -380 {flags=graph
+y1=-0.0042
+y2=0.66
+ypos1=0
+ypos2=2
+divy=5
+subdivy=1
+unity=1
+x1=5e-13
+x2=5e-08
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+node=down
+color=8
+dataset=-1
+unitx=1
+logx=0
+logy=0
+}
+B 2 370 -780 1170 -380 {flags=graph
+y1=-0.022
+y2=0.58
+ypos1=0
+ypos2=2
+divy=5
+subdivy=1
+unity=1
+x1=5e-13
+x2=5e-08
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+node=div_clk
+color=14
+dataset=-1
+unitx=1
+logx=0
+logy=0
+}
+B 2 -1270 -1200 -470 -800 {flags=graph
+y1=-0.022
+y2=1.3
+ypos1=0
+ypos2=2
+divy=5
+subdivy=1
+unity=1
+x1=5e-13
+x2=5e-08
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+node="ref_clk
+div_clk"
+color="4 5"
+dataset=-1
+unitx=1
+logx=0
+logy=0
+}
+B 2 -450 -1200 350 -800 {flags=graph
+y1=-0.028
+y2=1.3
+ypos1=0
+ypos2=2
+divy=5
+subdivy=1
+unity=1
+x1=5e-13
+x2=5e-08
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+node=up
+color=7
+dataset=-1
+unitx=1
+logx=0
+logy=0
+}
+B 2 370 -1200 1170 -800 {flags=graph
+y1=0.08
+y2=0.43
+ypos1=0
+ypos2=2
+divy=5
+subdivy=1
+unity=1
+x1=5e-13
+x2=5e-08
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+node="raw_vctrl
+vctrl"
+color="10 11"
+dataset=-1
+unitx=1
+logx=0
+logy=0
+}
 N -990 70 -990 100 {lab=ref_clk}
 N -1150 -180 -1110 -180 {lab=ref_clk}
 N -1150 -140 -1110 -140 {lab=div_clk}
@@ -25,7 +153,7 @@ N -570 -90 -570 -30 {lab=bais_n}
 N -710 -160 -690 -160 {lab=up}
 N -710 -140 -690 -140 {lab=down}
 N -1000 -100 -1000 -80 {lab=GND}
-N -260 -40 -260 -20 {lab=GND}
+N -230 -100 -230 -80 {lab=GND}
 N 810 -10 810 30 {lab=GND}
 N 810 -330 810 -290 {lab=VDD}
 N 870 -150 910 -150 {lab=div_clk}
@@ -51,13 +179,9 @@ N 150 -80 150 -60 {lab=GND}
 N 150 -250 150 -220 {lab=VDD}
 N 10 -150 40 -150 {lab=Vctrl}
 N 250 -150 290 -150 {lab=vco_clk}
-N -510 -150 -490 -150 {lab=#net1}
-N -290 -130 -290 -40 {lab=GND}
-N -260 -40 -230 -40 {lab=GND}
-N -230 -130 -230 -40 {lab=GND}
-N -260 -130 -260 -40 {lab=GND}
-N -290 -40 -260 -40 {lab=GND}
-N -260 -190 -260 -170 {lab=Vctrl}
+N -510 -150 -490 -150 {lab=raw_Vctrl}
+N -310 -150 -280 -150 {lab=raw_Vctrl}
+N -170 -150 -130 -150 {lab=Vctrl}
 C {t2_PFD.sym} -960 -120 0 0 {name=x1}
 C {vsource.sym} -990 130 0 0 {name=V2 value="PULSE(0 1.2 0 50p 50p 5n 10n" savecurrent=false}
 C {gnd.sym} -990 160 0 0 {name=l3 lab=GND}
@@ -83,9 +207,8 @@ C {lab_wire.sym} -710 -140 0 0 {name=p15 sig_type=std_logic lab=down}
 C {t2_charge_pump.sym} -590 -150 0 0 {name=x2}
 C {gnd.sym} -1000 -80 0 0 {name=l1 lab=GND}
 C {vdd.sym} -1000 -240 0 0 {name=l2 lab=VDD}
-C {gnd.sym} -260 -20 0 0 {name=l11 lab=GND}
+C {gnd.sym} -230 -80 0 0 {name=l11 lab=GND}
 C {t2_vco_new.sym} 150 -150 0 0 {name=x4}
-C {lab_wire.sym} -260 -190 0 0 {name=p7 sig_type=std_logic lab=Vctrl}
 C {t2_freq_divider.sym} 410 -150 0 0 {name=x5}
 C {gnd.sym} 810 30 0 0 {name=l12 lab=GND}
 C {lab_pin.sym} 810 -330 1 0 {name=p16 sig_type=std_logic lab=VDD}
@@ -104,7 +227,7 @@ C {lab_pin.sym} 580 70 0 0 {name=p20 sig_type=std_logic lab=a1}
 C {lab_pin.sym} 670 80 0 0 {name=p21 sig_type=std_logic lab=a2}
 C {lab_pin.sym} 760 80 2 0 {name=p22 sig_type=std_logic lab=a3}
 C {lab_pin.sym} 420 -120 0 0 {name=p23 sig_type=std_logic lab=en}
-C {devices/code_shown.sym} 140 120 0 0 {name=PARAMS only_toplevel=true 
+C {devices/code_shown.sym} 300 90 0 0 {name=PARAMS only_toplevel=true 
 value="
 .param EN = 1.2
 
@@ -120,27 +243,28 @@ C {lab_pin.sym} 290 -150 2 0 {name=p24 sig_type=std_logic lab=vco_clk}
 C {lab_pin.sym} 490 -180 0 0 {name=p5 sig_type=std_logic lab=vco_clk}
 C {lab_pin.sym} 910 -150 2 0 {name=p17 sig_type=std_logic lab=div_clk}
 C {lab_pin.sym} -1150 -140 0 0 {name=p18 sig_type=std_logic lab=div_clk}
-C {devices/code_shown.sym} 100 -470 0 0 {name=MODEL1 only_toplevel=true
+C {devices/code_shown.sym} -200 100 0 0 {name=MODEL1 only_toplevel=true
 format="tcleval( @value )"
 value=".lib cornerMOSlv.lib mos_tt
 "}
-C {devices/code_shown.sym} -250 -520 0 0 {name=NGSPICE only_toplevel=true 
+C {devices/code_shown.sym} -410 100 0 0 {name=NGSPICE only_toplevel=true 
 value="
 .param temp=27
-.tran 2n 100n
+.ic v(up) = 0
+.ic v(down) = 0
+.tran 500p 100n uic
 .save all
 "}
-C {devices/code_shown.sym} 100 -410 0 0 {name=MODEL2 only_toplevel=true
+C {devices/code_shown.sym} -200 160 0 0 {name=MODEL2 only_toplevel=true
 format="tcleval( @value )"
 value="
 .lib $::SG13G2_MODELS/cornerRES.lib res_typ_stat
 "}
-C {sg13g2_pr/sg13_lv_nmos.sym} -260 -150 1 0 {name=M1
-l=1.3u
-w=3.0u
-ng=1
-m=1
-model=sg13_lv_nmos
-spiceprefix=X
+C {lab_wire.sym} -490 -150 2 0 {name=p6 sig_type=std_logic lab=raw_Vctrl}
+C {t2_loop_filter.sym} -230 -140 0 0 {name=x3}
+C {lab_wire.sym} -130 -150 2 0 {name=p7 sig_type=std_logic lab=Vctrl}
+C {lab_wire.sym} -310 -150 0 0 {name=p13 sig_type=std_logic lab=raw_Vctrl}
+C {launcher.sym} -1200 -340 0 0 {name=h5
+descr="load waves" 
+tclcommand="xschem raw_read $netlist_dir/t2_pll.raw tran"
 }
-C {lab_wire.sym} -490 -150 2 0 {name=p6 sig_type=std_logic lab=Vctrl}

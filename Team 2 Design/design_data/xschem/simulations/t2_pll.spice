@@ -1,0 +1,359 @@
+** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_pll.sch
+**.subckt t2_pll
+x1 VDD up GND down ref_clk div_clk t2_PFD
+V2 ref_clk GND PULSE(0 1.2 0 50p 50p 5n 10n
+V4 VDD GND 1.2
+V5 bais_p GND 0.8
+V6 bais_n GND 0.4
+x2 VDD VDD GND GND raw_Vctrl up down bais_p bais_n t2_charge_pump
+x4 VDD GND Vctrl vco_clk t2_vco_new
+x5 VDD GND vco_clk en a0 a1 a2 a3 div_clk t2_freq_divider
+Ven en GND dc {EN}
+Va0 a0 GND dc {A0}
+Va1 a1 GND dc {A1}
+Va2 a2 GND dc {A2}
+Va3 a3 GND dc {A3}
+x3 GND Vctrl raw_Vctrl t2_loop_filter
+**** begin user architecture code
+
+
+.param EN = 1.2
+
+.param A0 = 1.2
+.param A1 = 1.2
+.param A2 = 1.2
+.param A3 = 0
+
+
+ .lib cornerMOSlv.lib mos_tt
+
+
+
+.param temp=27
+.ic v(up) = 0
+.ic v(down) = 0
+.tran 500p 100n uic
+.save all
+
+
+
+.lib /foss/pdks/ihp-sg13g2/libs.tech/ngspice/models/cornerRES.lib res_typ_stat
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  t2_PFD.sym # of pins=6
+** sym_path: /foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_PFD.sym
+** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_PFD.sch
+.subckt t2_PFD vdd up vss down ref_clk vco_clk
+*.iopin vdd
+*.ipin ref_clk
+*.iopin vss
+*.ipin vco_clk
+*.opin up
+*.opin down
+XM1 net2 vco_clk vss vss sg13_lv_nmos w=0.36u l=0.15u ng=1 m=1
+XM4 net1 ref_clk net2 vss sg13_lv_nmos w=1.8u l=0.15u ng=1 m=1
+XM5 net3 ref_clk net1 vss sg13_lv_nmos w=0.84u l=0.15u ng=1 m=1
+XM9 net3 ref_clk ref_clk vdd sg13_lv_pmos w=0.64u l=0.15u ng=1 m=1
+XM11 net7 net3 vss vss sg13_lv_nmos w=0.36u l=0.15u ng=1 m=1
+XM12 vdd net3 net7 vdd sg13_lv_pmos w=0.72u l=0.15u ng=1 m=1
+XM13 up net7 vss vss sg13_lv_nmos w=0.48u l=0.15u ng=1 m=1
+XM14 vdd net7 up vdd sg13_lv_pmos w=0.96u l=0.15u ng=1 m=1
+XM3 net1 ref_clk vdd vdd sg13_lv_pmos w=0.64u l=0.15u ng=1 m=1
+XM6 net4 vco_clk vdd vdd sg13_lv_pmos w=0.64u l=0.15u ng=1 m=1
+XM7 net4 vco_clk net5 vss sg13_lv_nmos w=1.8u l=0.15u ng=1 m=1
+XM19 net5 ref_clk vss vss sg13_lv_nmos w=0.36u l=0.15u ng=1 m=1
+XM8 net6 vco_clk net4 vss sg13_lv_nmos w=0.84u l=0.15u ng=1 m=1
+XM10 net6 vco_clk vco_clk vdd sg13_lv_pmos w=0.64u l=0.15u ng=1 m=1
+XM15 vdd net6 net8 vdd sg13_lv_pmos w=0.72u l=0.15u ng=1 m=1
+XM16 net8 net6 vss vss sg13_lv_nmos w=0.36u l=0.15u ng=1 m=1
+XM17 vdd net8 down vdd sg13_lv_pmos w=0.96u l=0.15u ng=1 m=1
+XM18 down net8 vss vss sg13_lv_nmos w=0.48u l=0.15u ng=1 m=1
+.ends
+
+
+* expanding   symbol:  t2_charge_pump.sym # of pins=9
+** sym_path: /foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_charge_pump.sym
+** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_charge_pump.sch
+.subckt t2_charge_pump VPWR VPB VGND VNB out up down bais_p bais_n
+*.iopin VPWR
+*.ipin up
+*.opin out
+*.iopin VPB
+*.iopin VGND
+*.iopin VNB
+*.ipin down
+*.ipin bais_p
+*.ipin bais_n
+XM1 i_down bais_n VGND VNB sg13_lv_nmos w=0.15u l=0.13u ng=1 m=1
+XM2 out down i_down VNB sg13_lv_nmos w=0.15u l=0.13u ng=1 m=1
+XM3 i_up bais_p VPWR VPB sg13_lv_pmos w=0.3u l=0.13u ng=1 m=1
+XM4 out net1 i_up VPB sg13_lv_pmos w=0.3u l=0.13u ng=1 m=1
+x1 VPWR up net1 VGND t2_inverter
+.ends
+
+
+* expanding   symbol:  t2_vco_new.sym # of pins=4
+** sym_path: /foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_vco_new.sym
+** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_vco_new.sch
+.subckt t2_vco_new VPWR VGND vctl Vout
+*.iopin VPWR
+*.iopin VGND
+*.ipin vctl
+*.opin Vout
+XM1 mirror_pg mirror_pg VPWR VPWR sg13_lv_pmos w=2u l=0.13u ng=1 m=1
+XM2 net1 mirror_pg VPWR VPWR sg13_lv_pmos w=2u l=0.13u ng=1 m=1
+XM3 net2 mirror_pg VPWR VPWR sg13_lv_pmos w=2u l=0.13u ng=1 m=1
+XM4 net3 mirror_pg VPWR VPWR sg13_lv_pmos w=2u l=0.13u ng=1 m=1
+XM5 mirror_pg vctl VGND VGND sg13_lv_nmos w=1u l=0.13u ng=1 m=1
+XM6 net9 vctl VGND VGND sg13_lv_nmos w=1u l=0.13u ng=1 m=1
+XM7 net8 vctl VGND VGND sg13_lv_nmos w=1u l=0.13u ng=1 m=1
+XM8 net7 vctl VGND VGND sg13_lv_nmos w=1u l=0.13u ng=1 m=1
+C1 feedback VGND 10f m=1
+C2 Vout VGND 20f m=1
+XM9 net13 mirror_pg VPWR VPWR sg13_lv_pmos w=2u l=0.13u ng=1 m=1
+XM10 net12 mirror_pg VPWR VPWR sg13_lv_pmos w=2u l=0.13u ng=1 m=1
+XM11 net10 vctl VGND VGND sg13_lv_nmos w=1u l=0.13u ng=1 m=1
+XM12 net11 vctl VGND VGND sg13_lv_nmos w=1u l=0.13u ng=1 m=1
+x1 net1 VPWR feedback net4 VGND net9 t2_vco_inverter
+x2 net2 VPWR net4 net5 VGND net8 t2_vco_inverter
+x3 net3 VPWR net5 net6 VGND net7 t2_vco_inverter
+x4 net13 VPWR net6 net14 VGND net10 t2_vco_inverter
+x5 net12 VPWR net14 feedback VGND net11 t2_vco_inverter
+x6 VPWR VPWR feedback Vout VGND VGND t2_vco_inverter
+.ends
+
+
+* expanding   symbol:  t2_freq_divider.sym # of pins=9
+** sym_path: /foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_freq_divider.sym
+** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_freq_divider.sch
+.subckt t2_freq_divider VDD VSS clk_in en lmt0 lmt1 lmt2 lmt3 clk_out
+*.iopin VSS
+*.ipin lmt0
+*.iopin VDD
+*.opin clk_out
+*.ipin lmt1
+*.ipin lmt2
+*.ipin lmt3
+*.ipin clk_in
+*.ipin en
+x1 VDD VSS net2 net5 net1 cout0 t2_ha
+x2 VDD VSS net1 clk_b div_rst net2 net3 t2_dff_1
+x3 VDD VSS net2 lmt0 neq0 t2_xor2
+* noconn #net3
+x4 VDD VSS net5 net4 t2_tie
+* noconn #net4
+* noconn clk_out
+x5 VDD VSS net6 div_rst net8 clk_out net6 t2_dff_1
+x7 VDD VSS net8 net7 t2_tie
+* noconn #net7
+x8 VDD VSS net10 cout0 net9 cout1 t2_ha
+x9 VDD VSS net9 clk_b div_rst net10 net11 t2_dff_1
+x10 VDD VSS net10 lmt1 neq1 t2_xor2
+* noconn #net11
+x11 VDD VSS net13 cout1 net12 cout2 t2_ha
+x12 VDD VSS net12 clk_b div_rst net13 net14 t2_dff_1
+x13 VDD VSS net13 lmt2 neq2 t2_xor2
+* noconn #net14
+x14 VDD VSS net16 cout2 net15 net17 t2_ha
+x15 VDD VSS net15 clk_b div_rst net16 net18 t2_dff_1
+x16 VDD VSS net16 lmt3 neq3 t2_xor2
+* noconn #net18
+* noconn #net17
+x17 VDD VSS neq0 neq1 neq2 neq3 div_rst t2_or4
+x6 VDD clk_in en clk_b VSS t2_nand2
+.ends
+
+
+* expanding   symbol:  t2_loop_filter.sym # of pins=3
+** sym_path: /foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_loop_filter.sym
+** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_loop_filter.sch
+.subckt t2_loop_filter VGND vout vin
+*.iopin VGND
+*.ipin vin
+*.opin vout
+XR1 vin vout rhigh w=0.5e-6 l=0.5e-6 m=1 b=0
+XM1 VGND vin VGND VGND sg13_lv_nmos w=1.5u l=0.650u ng=1 m=1
+XM2 VGND vout VGND VGND sg13_lv_nmos w=0.15u l=0.13u ng=1 m=1
+.ends
+
+
+* expanding   symbol:  t2_inverter.sym # of pins=4
+** sym_path: /foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_inverter.sym
+** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_inverter.sch
+.subckt t2_inverter VP A Y VN
+*.iopin VP
+*.iopin VN
+*.ipin A
+*.opin Y
+XM2 Y A VP VP sg13_lv_pmos w=0.3u l=0.13u ng=1 m=1
+XM1 Y A VN VN sg13_lv_nmos w=0.15u l=0.13u ng=1 m=1
+.ends
+
+
+* expanding   symbol:  t2_vco_inverter.sym # of pins=6
+** sym_path: /foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_vco_inverter.sym
+** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_vco_inverter.sch
+.subckt t2_vco_inverter VPWR VPB A Y VNB VGND
+*.iopin VPWR
+*.iopin VGND
+*.ipin A
+*.opin Y
+*.iopin VPB
+*.iopin VNB
+XM2 Y A VPWR VPB sg13_lv_pmos w=1u l=0.13u ng=1 m=1
+XM1 Y A VGND VNB sg13_lv_nmos w=0.5u l=0.13u ng=1 m=1
+.ends
+
+
+* expanding   symbol:  t2_ha.sym # of pins=6
+** sym_path: /foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_ha.sym
+** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_ha.sch
+.subckt t2_ha VDD VSS inA inB sum cout
+*.iopin VSS
+*.ipin inA
+*.ipin inB
+*.opin sum
+*.iopin VDD
+*.opin cout
+x1 VDD VSS inA inB sum t2_xor2
+x2 VDD VSS inA cout inB t2_and2
+.ends
+
+
+* expanding   symbol:  t2_dff_1.sym # of pins=7
+** sym_path: /foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_dff_1.sym
+** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_dff_1.sch
+.subckt t2_dff_1 VDD VSS D CLK RST Q QN
+*.iopin VSS
+*.ipin D
+*.ipin RST
+*.opin Q
+*.iopin VDD
+*.opin QN
+*.ipin CLK
+x3 VDD net1 QN Q VSS t2_nand2
+x4 VDD VSS Q net2 RST QN t2_nand3
+x1 VDD VSS net4 net5 RST net1 t2_nand3
+x2 VDD VSS net1 net5 net3 net2 t2_nand3
+x6 VDD net3 net1 net4 VSS t2_nand2
+x5 VDD VSS net2 D RST net3 t2_nand3
+x7 VDD CLK net5 VSS t2_inverter
+.ends
+
+
+* expanding   symbol:  t2_xor2.sym # of pins=5
+** sym_path: /foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_xor2.sym
+** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_xor2.sch
+.subckt t2_xor2 VDD VSS inA inB out
+*.iopin VSS
+*.ipin inA
+*.ipin inB
+*.opin out
+*.iopin VDD
+x1 VDD inA inB net1 VSS t2_nand2
+x2 VDD inA net1 net3 VSS t2_nand2
+x3 VDD net1 inB net2 VSS t2_nand2
+x4 VDD net3 net2 out VSS t2_nand2
+.ends
+
+
+* expanding   symbol:  t2_tie.sym # of pins=4
+** sym_path: /foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_tie.sym
+** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_tie.sch
+.subckt t2_tie VDD VSS outHI outLO
+*.iopin VSS
+*.opin outLO
+*.iopin VDD
+*.opin outHI
+XM1 outHI net1 VDD VDD sg13_lv_pmos w=0.3u l=0.13u ng=1 m=1
+XM2 net1 net1 VSS VSS sg13_lv_nmos w=0.15u l=0.13u ng=1 m=1
+XM3 net2 net2 VDD VDD sg13_lv_pmos w=0.3u l=0.13u ng=1 m=1
+XM4 outLO net2 VSS VSS sg13_lv_nmos w=0.15u l=0.13u ng=1 m=1
+.ends
+
+
+* expanding   symbol:  t2_or4.sym # of pins=7
+** sym_path: /foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_or4.sym
+** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_or4.sch
+.subckt t2_or4 VDD VSS inA inB inC inD out
+*.iopin VSS
+*.ipin inD
+*.opin out
+*.iopin VDD
+*.ipin inA
+*.ipin inB
+*.ipin inC
+x1 VDD VSS inA inB net2 t2_or2
+x2 VDD VSS inC inD net1 t2_or2
+x3 VDD VSS net2 net1 out t2_or2
+.ends
+
+
+* expanding   symbol:  t2_nand2.sym # of pins=5
+** sym_path: /foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_nand2.sym
+** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_nand2.sch
+.subckt t2_nand2 VDD inA inB out VSS
+*.iopin VSS
+*.ipin inA
+*.ipin inB
+*.opin out
+*.iopin VDD
+XM1 out inA VDD VDD sg13_lv_pmos w=0.3u l=0.13u ng=1 m=1
+XM2 out inB VDD VDD sg13_lv_pmos w=0.3u l=0.13u ng=1 m=1
+XM3 out inB net1 VSS sg13_lv_nmos w=0.15u l=0.13u ng=1 m=1
+XM4 net1 inA VSS VSS sg13_lv_nmos w=0.15u l=0.13u ng=1 m=1
+.ends
+
+
+* expanding   symbol:  t2_and2.sym # of pins=5
+** sym_path: /foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_and2.sym
+** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_and2.sch
+.subckt t2_and2 VDD VSS inA out inB
+*.iopin VSS
+*.ipin inA
+*.ipin inB
+*.opin out
+*.iopin VDD
+x1 VDD inA inB net1 VSS t2_nand2
+x2 VDD net1 net1 out VSS t2_nand2
+.ends
+
+
+* expanding   symbol:  t2_nand3.sym # of pins=6
+** sym_path: /foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_nand3.sym
+** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_nand3.sch
+.subckt t2_nand3 VDD VSS inA inB inC out
+*.iopin VSS
+*.ipin inA
+*.ipin inC
+*.opin out
+*.iopin VDD
+*.ipin inB
+XM1 out inB VDD VDD sg13_lv_pmos w=0.3u l=0.15u ng=1 m=1
+XM2 out inC VDD VDD sg13_lv_pmos w=0.3u l=0.13u ng=1 m=1
+XM3 out inC net1 VSS sg13_lv_nmos w=0.15u l=0.13u ng=1 m=1
+XM4 net1 inB net2 VSS sg13_lv_nmos w=0.15u l=0.13u ng=1 m=1
+XM5 net2 inA VSS VSS sg13_lv_nmos w=0.15u l=0.13u ng=1 m=1
+XM0 out inA VDD VDD sg13_lv_pmos w=0.3u l=0.15u ng=1 m=1
+.ends
+
+
+* expanding   symbol:  t2_or2.sym # of pins=5
+** sym_path: /foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_or2.sym
+** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_or2.sch
+.subckt t2_or2 VDD VSS inA inB out
+*.iopin VSS
+*.ipin inA
+*.ipin inB
+*.opin out
+*.iopin VDD
+x2 VDD inA inA net2 VSS t2_nand2
+x3 VDD inB inB net1 VSS t2_nand2
+x4 VDD net2 net1 out VSS t2_nand2
+.ends
+
+.GLOBAL GND
+.GLOBAL VDD
+.end
