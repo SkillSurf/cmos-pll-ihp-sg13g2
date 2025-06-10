@@ -55,7 +55,7 @@ N -400 -80 -360 -80 {lab=inA}
 N -400 260 20 260 {lab=inA}
 N -440 260 -400 260 {lab=inA}
 C {sg13g2_pr/sg13_lv_pmos.sym} -140 -80 0 0 {name=M1
-l=0.15u
+l=0.13u
 w=0.3u
 ng=1
 m=1
@@ -100,7 +100,7 @@ model=sg13_lv_nmos
 spiceprefix=X
 }
 C {sg13g2_pr/sg13_lv_pmos.sym} -340 -80 0 0 {name=M0
-l=0.15u
+l=0.13u
 w=0.3u
 ng=1
 m=1
