@@ -1,9 +1,6 @@
-** T2_VCO_INVERTER flat netlist
+** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_vco_inverter.sch
+.subckt t2_vco_inverter VPWR VPB A Y VNB VGND
 *.PININFO VPWR:B VGND:B A:I Y:O VPB:B VNB:B
-*--------BEGIN_XM2->SG13_LV_PMOS
-XM2 Y A VPWR VPB  SG13_LV_PMOS W=1U L=0.13U NG=1 M=1
-*--------END___XM2->SG13_LV_PMOS
-*--------BEGIN_XM1->SG13_LV_NMOS
-XM1 Y A VGND VNB  SG13_LV_NMOS W=0.5U L=0.13U NG=1 M=1
-*--------END___XM1->SG13_LV_NMOS
-.end
+XM2 Y A VPWR VPB sg13_lv_pmos w=1u l=0.13u ng=1 m=1
+XM1 Y A VGND VNB sg13_lv_nmos w=0.5u l=0.13u ng=1 m=1
+.ends

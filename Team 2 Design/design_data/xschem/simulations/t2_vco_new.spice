@@ -1,31 +1,6 @@
-** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_vco_new_tb.sch
-**.subckt t2_vco_new_tb Vout
-*.opin Vout
-x1 net1 GND net2 Vout t2_vco_new
-VPWR net1 GND 1.2
-vctl net2 GND 0.5
-**** begin user architecture code
- .lib cornerMOSlv.lib mos_tt
-
-
-
-.param temp=27
-.tran 50p 40n
-.save all
-.plot v(Vout)
-
-
-**** end user architecture code
-**.ends
-
-* expanding   symbol:  /foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_vco_new.sym # of pins=4
-** sym_path: /foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_vco_new.sym
 ** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_vco_new.sch
 .subckt t2_vco_new VPWR VGND vctl Vout
-*.iopin VPWR
-*.iopin VGND
-*.ipin vctl
-*.opin Vout
+*.PININFO VPWR:B VGND:B vctl:I Vout:O
 XM1 mirror_pg mirror_pg VPWR VPWR sg13_lv_pmos w=2u l=0.13u ng=1 m=1
 XM2 net1 mirror_pg VPWR VPWR sg13_lv_pmos w=2u l=0.13u ng=1 m=1
 XM3 net2 mirror_pg VPWR VPWR sg13_lv_pmos w=2u l=0.13u ng=1 m=1
@@ -48,20 +23,12 @@ x4 net12 VPWR net14 feedback VGND net11 t2_vco_inverter
 x5 VPWR VPWR feedback Vout VGND VGND t2_vco_inverter
 .ends
 
-
 * expanding   symbol:  /foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_vco_inverter.sym # of pins=6
 ** sym_path: /foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_vco_inverter.sym
 ** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_vco_inverter.sch
 .subckt t2_vco_inverter VPWR VPB A Y VNB VGND
-*.iopin VPWR
-*.iopin VGND
-*.ipin A
-*.opin Y
-*.iopin VPB
-*.iopin VNB
+*.PININFO VPWR:B VGND:B A:I Y:O VPB:B VNB:B
 XM2 Y A VPWR VPB sg13_lv_pmos w=1u l=0.13u ng=1 m=1
 XM1 Y A VGND VNB sg13_lv_nmos w=0.5u l=0.13u ng=1 m=1
 .ends
 
-.GLOBAL GND
-.end
