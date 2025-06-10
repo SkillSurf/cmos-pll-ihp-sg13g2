@@ -1,10 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <report-database>
- <description>design rules: sg13g2_minimal | layout cell: TOP</description>
- <original-file>/foss/designs/Analog_Layout_Designs/klayout/Inverter/inverter.gds</original-file>
+ <description>design rules: sg13g2_minimal | layout cell: t2_pmos_bulk</description>
+ <original-file>/foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/gds/t2_pmos_bulk.gds</original-file>
  <generator>drc: script='/foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/drc/sg13g2_minimal.lydrc'</generator>
- <top-cell>TOP</top-cell>
+ <top-cell>t2_pmos_bulk</top-cell>
  <tags>
+  <tag>
+   <name>waived</name>
+   <description/>
+  </tag>
+  <tag>
+   <name>red</name>
+   <description/>
+  </tag>
+  <tag>
+   <name>green</name>
+   <description/>
+  </tag>
+  <tag>
+   <name>blue</name>
+   <description/>
+  </tag>
+  <tag>
+   <name>yellow</name>
+   <description/>
+  </tag>
+  <tag>
+   <name>important</name>
+   <description/>
+  </tag>
  </tags>
  <categories>
   <category>
@@ -472,7 +496,7 @@
  </categories>
  <cells>
   <cell>
-   <name>TOP</name>
+   <name>t2_pmos_bulk</name>
    <variant/>
    <layout-name/>
    <references>
@@ -483,181 +507,157 @@
   <item>
    <tags/>
    <category>'AFil.g/g1'</category>
-   <cell>TOP</cell>
+   <cell>t2_pmos_bulk</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
    <comment/>
    <image/>
    <values>
-    <value>polygon: (-0.7,0.2;-0.7,1.94;1.055,1.94;1.055,0.2)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'AFil.g2/g3'</category>
-   <cell>TOP</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>polygon: (-0.7,0.2;-0.7,1.94;1.055,1.94;1.055,0.2)</value>
+    <value>polygon: (-3.98,4.49;-3.98,8;1.22,8;1.22,4.49)</value>
    </values>
   </item>
   <item>
    <tags/>
    <category>'GFil.g'</category>
-   <cell>TOP</cell>
+   <cell>t2_pmos_bulk</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
    <comment/>
    <image/>
    <values>
-    <value>polygon: (-0.7,0.2;-0.7,1.94;1.055,1.94;1.055,0.2)</value>
+    <value>polygon: (-3.98,4.49;-3.98,8;1.22,8;1.22,4.49)</value>
    </values>
   </item>
   <item>
    <tags/>
    <category>'M1.j/k'</category>
-   <cell>TOP</cell>
+   <cell>t2_pmos_bulk</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
    <comment/>
    <image/>
    <values>
-    <value>polygon: (-0.7,0.2;-0.7,1.94;1.055,1.94;1.055,0.2)</value>
+    <value>polygon: (-3.98,4.49;-3.98,8;1.22,8;1.22,4.49)</value>
    </values>
   </item>
   <item>
    <tags/>
    <category>'M2.j/k'</category>
-   <cell>TOP</cell>
+   <cell>t2_pmos_bulk</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
    <comment/>
    <image/>
    <values>
-    <value>polygon: (-0.7,0.2;-0.7,1.94;1.055,1.94;1.055,0.2)</value>
+    <value>polygon: (-3.98,4.49;-3.98,8;1.22,8;1.22,4.49)</value>
    </values>
   </item>
   <item>
    <tags/>
    <category>'M3.j/k'</category>
-   <cell>TOP</cell>
+   <cell>t2_pmos_bulk</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
    <comment/>
    <image/>
    <values>
-    <value>polygon: (-0.7,0.2;-0.7,1.94;1.055,1.94;1.055,0.2)</value>
+    <value>polygon: (-3.98,4.49;-3.98,8;1.22,8;1.22,4.49)</value>
    </values>
   </item>
   <item>
    <tags/>
    <category>'M4.j/k'</category>
-   <cell>TOP</cell>
+   <cell>t2_pmos_bulk</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
    <comment/>
    <image/>
    <values>
-    <value>polygon: (-0.7,0.2;-0.7,1.94;1.055,1.94;1.055,0.2)</value>
+    <value>polygon: (-3.98,4.49;-3.98,8;1.22,8;1.22,4.49)</value>
    </values>
   </item>
   <item>
    <tags/>
    <category>'M5.j/k'</category>
-   <cell>TOP</cell>
+   <cell>t2_pmos_bulk</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
    <comment/>
    <image/>
    <values>
-    <value>polygon: (-0.7,0.2;-0.7,1.94;1.055,1.94;1.055,0.2)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'M1Fil.h/k'</category>
-   <cell>TOP</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <comment/>
-   <image/>
-   <values>
-    <value>polygon: (-0.7,0.2;-0.7,1.94;1.055,1.94;1.055,0.2)</value>
+    <value>polygon: (-3.98,4.49;-3.98,8;1.22,8;1.22,4.49)</value>
    </values>
   </item>
   <item>
    <tags/>
    <category>'M2Fil.h/k'</category>
-   <cell>TOP</cell>
+   <cell>t2_pmos_bulk</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
    <comment/>
    <image/>
    <values>
-    <value>polygon: (-0.7,0.2;-0.7,1.94;1.055,1.94;1.055,0.2)</value>
+    <value>polygon: (-3.98,4.49;-3.98,8;1.22,8;1.22,4.49)</value>
    </values>
   </item>
   <item>
    <tags/>
    <category>'M3Fil.h/k'</category>
-   <cell>TOP</cell>
+   <cell>t2_pmos_bulk</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
    <comment/>
    <image/>
    <values>
-    <value>polygon: (-0.7,0.2;-0.7,1.94;1.055,1.94;1.055,0.2)</value>
+    <value>polygon: (-3.98,4.49;-3.98,8;1.22,8;1.22,4.49)</value>
    </values>
   </item>
   <item>
    <tags/>
    <category>'M4Fil.h/k'</category>
-   <cell>TOP</cell>
+   <cell>t2_pmos_bulk</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
    <comment/>
    <image/>
    <values>
-    <value>polygon: (-0.7,0.2;-0.7,1.94;1.055,1.94;1.055,0.2)</value>
+    <value>polygon: (-3.98,4.49;-3.98,8;1.22,8;1.22,4.49)</value>
    </values>
   </item>
   <item>
    <tags/>
    <category>'M5Fil.h/k'</category>
-   <cell>TOP</cell>
+   <cell>t2_pmos_bulk</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
    <comment/>
    <image/>
    <values>
-    <value>polygon: (-0.7,0.2;-0.7,1.94;1.055,1.94;1.055,0.2)</value>
+    <value>polygon: (-3.98,4.49;-3.98,8;1.22,8;1.22,4.49)</value>
    </values>
   </item>
   <item>
    <tags/>
    <category>'TM1.c/d'</category>
-   <cell>TOP</cell>
+   <cell>t2_pmos_bulk</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
    <comment/>
    <image/>
    <values>
-    <value>polygon: (-0.7,0.2;-0.7,1.94;1.055,1.94;1.055,0.2)</value>
+    <value>polygon: (-3.98,4.49;-3.98,8;1.22,8;1.22,4.49)</value>
    </values>
   </item>
   <item>
    <tags/>
    <category>'TM2.c/d'</category>
-   <cell>TOP</cell>
+   <cell>t2_pmos_bulk</cell>
    <visited>false</visited>
    <multiplicity>1</multiplicity>
    <comment/>
    <image/>
    <values>
-    <value>polygon: (-0.7,0.2;-0.7,1.94;1.055,1.94;1.055,0.2)</value>
+    <value>polygon: (-3.98,4.49;-3.98,8;1.22,8;1.22,4.49)</value>
    </values>
   </item>
  </items>
