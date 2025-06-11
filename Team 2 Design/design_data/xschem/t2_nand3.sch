@@ -47,13 +47,13 @@ N -320 -140 -320 -110 {lab=VDD}
 N -320 -180 -320 -140 {lab=VDD}
 N -320 -50 -320 -20 {lab=out}
 N -320 -20 -120 -20 {lab=out}
-N -400 -80 -400 260 {lab=inA}
+N -400 -80 -400 260 {lab=inC}
 N -240 160 -200 160 {lab=inB}
 N -200 -80 -160 -80 {lab=inB}
 N -320 -180 -120 -180 {lab=VDD}
-N -400 -80 -360 -80 {lab=inA}
-N -400 260 20 260 {lab=inA}
-N -440 260 -400 260 {lab=inA}
+N -400 -80 -360 -80 {lab=inC}
+N -400 260 20 260 {lab=inC}
+N -440 260 -400 260 {lab=inC}
 C {sg13g2_pr/sg13_lv_pmos.sym} -140 -80 0 0 {name=M1
 l=0.13u
 w=0.3u
@@ -89,7 +89,7 @@ spiceprefix=X
 C {lab_pin.sym} 200 -20 2 0 {name=p1 sig_type=std_logic lab=out}
 C {lab_pin.sym} 0 -200 1 0 {name=p2 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} -240 160 0 0 {name=p3 sig_type=std_logic lab=inB}
-C {lab_pin.sym} -40 60 0 0 {name=p4 sig_type=std_logic lab=inC}
+C {lab_pin.sym} -40 60 0 0 {name=p4 sig_type=std_logic lab=inA}
 C {lab_pin.sym} 60 340 3 0 {name=p10 sig_type=std_logic lab=VSS}
 C {sg13g2_pr/sg13_lv_nmos.sym} 40 260 0 0 {name=M5
 l=0.13u
@@ -107,7 +107,7 @@ m=1
 model=sg13_lv_pmos
 spiceprefix=X
 }
-C {lab_pin.sym} -440 260 0 0 {name=p5 sig_type=std_logic lab=inA}
+C {lab_pin.sym} -440 260 0 0 {name=p5 sig_type=std_logic lab=inC}
 C {iopin.sym} -500 10 2 0 {name=p6 lab=VSS}
 C {ipin.sym} -500 60 0 0 {name=p7 lab=inA}
 C {ipin.sym} -500 120 0 0 {name=p8 lab=inC}
