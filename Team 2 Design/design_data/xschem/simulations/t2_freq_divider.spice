@@ -2,25 +2,25 @@
 .subckt t2_freq_divider VDD VSS clk_in en lmt0 lmt1 lmt2 lmt3 clk_out
 *.PININFO VSS:B lmt0:I VDD:B clk_out:O lmt1:I lmt2:I lmt3:I clk_in:I en:I
 x1 VDD VSS net2 net5 net1 cout0 t2_ha
-x2 VDD VSS net1 clk_b div_rst net2 net3 t2_dff_1
+x2 VDD VSS net1 clk_b div_rst net2 net3 t2_dff
 x3 VDD VSS net2 lmt0 neq0 t2_xor2
 * noconn #net3
 x4 VDD VSS net5 net4 t2_tie
 * noconn #net4
 * noconn clk_out
-x5 VDD VSS net6 div_rst net8 clk_out net6 t2_dff_1
+x5 VDD VSS net6 div_rst net8 clk_out net6 t2_dff
 x7 VDD VSS net8 net7 t2_tie
 * noconn #net7
 x8 VDD VSS net10 cout0 net9 cout1 t2_ha
-x9 VDD VSS net9 clk_b div_rst net10 net11 t2_dff_1
+x9 VDD VSS net9 clk_b div_rst net10 net11 t2_dff
 x10 VDD VSS net10 lmt1 neq1 t2_xor2
 * noconn #net11
 x11 VDD VSS net13 cout1 net12 cout2 t2_ha
-x12 VDD VSS net12 clk_b div_rst net13 net14 t2_dff_1
+x12 VDD VSS net12 clk_b div_rst net13 net14 t2_dff
 x13 VDD VSS net13 lmt2 neq2 t2_xor2
 * noconn #net14
 x14 VDD VSS net16 cout2 net15 net17 t2_ha
-x15 VDD VSS net15 clk_b div_rst net16 net18 t2_dff_1
+x15 VDD VSS net15 clk_b div_rst net16 net18 t2_dff
 x16 VDD VSS net16 lmt3 neq3 t2_xor2
 * noconn #net18
 * noconn #net17
@@ -38,10 +38,10 @@ x2 VDD VSS inA cout inB t2_and2
 .ends
 
 
-* expanding   symbol:  t2_dff_1.sym # of pins=7
-** sym_path: /foss/designs/PROJECTS/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_dff_1.sym
-** sch_path: /foss/designs/PROJECTS/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_dff_1.sch
-.subckt t2_dff_1 VDD VSS D CLK RST Q QN
+* expanding   symbol:  t2_dff.sym # of pins=7
+** sym_path: /foss/designs/PROJECTS/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_dff.sym
+** sch_path: /foss/designs/PROJECTS/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_dff.sch
+.subckt t2_dff VDD VSS D CLK RST Q QN
 *.PININFO VSS:B D:I RST:I Q:O VDD:B QN:O CLK:I
 x3 VDD net1 QN Q VSS t2_nand2
 x4 VDD VSS Q net2 RST QN t2_nand3
@@ -116,11 +116,11 @@ x2 VDD net1 net1 out VSS t2_nand2
 .subckt t2_nand3 VDD VSS inA inB inC out
 *.PININFO VSS:B inA:I inC:I out:O VDD:B inB:I
 M1 out inB VDD VDD sg13_lv_pmos w=0.3u l=0.13u ng=1 m=1
-M2 out inC VDD VDD sg13_lv_pmos w=0.3u l=0.13u ng=1 m=1
-M3 out inC net1 VSS sg13_lv_nmos w=0.15u l=0.13u ng=1 m=1
+M2 out inA VDD VDD sg13_lv_pmos w=0.3u l=0.13u ng=1 m=1
+M3 out inA net1 VSS sg13_lv_nmos w=0.15u l=0.13u ng=1 m=1
 M4 net1 inB net2 VSS sg13_lv_nmos w=0.15u l=0.13u ng=1 m=1
-M5 net2 inA VSS VSS sg13_lv_nmos w=0.15u l=0.13u ng=1 m=1
-M0 out inA VDD VDD sg13_lv_pmos w=0.3u l=0.13u ng=1 m=1
+M5 net2 inC VSS VSS sg13_lv_nmos w=0.15u l=0.13u ng=1 m=1
+M0 out inC VDD VDD sg13_lv_pmos w=0.3u l=0.13u ng=1 m=1
 .ends
 
 
