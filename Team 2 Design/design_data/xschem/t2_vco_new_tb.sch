@@ -4,16 +4,16 @@ K {}
 V {}
 S {}
 E {}
-B 2 1340 -620 2140 -220 {flags=graph
-y1=-2.4750556
-y2=-0.98305556
+B 2 1420 -560 2220 -160 {flags=graph
+y1=-0.14380562
+y2=1.3481945
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=-6e-09
-x2=3.4e-08
+x1=-2.7411261e-08
+x2=1.2892879e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -40,12 +40,12 @@ value=".lib cornerMOSlv.lib mos_tt
 "}
 C {launcher.sym} 1920 -70 0 0 {name=h5
 descr="load waves (press ctrl + left click)" 
-tclcommand="xschem raw_read $netlist_dir/t2_vco_new_tb_.raw tran"
+tclcommand="xschem raw_read $netlist_dir/t2_vco_new_tb.raw tran"
 }
 C {devices/code_shown.sym} 940 -360 0 0 {name=NGSPICE only_toplevel=true 
 value="
 .param temp=27
-.tran 50p 40n
+.tran 50p 500n
 .save all
 .plot v(Vout)
 "}

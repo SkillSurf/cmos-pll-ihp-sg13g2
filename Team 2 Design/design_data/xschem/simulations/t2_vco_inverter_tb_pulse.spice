@@ -27,8 +27,8 @@ x1 Vdd Vdd Vin Vout GND GND t2_vco_inverter
 *.opin Y
 *.iopin VPB
 *.iopin VNB
-XM2 Y A VPWR VPB sg13_lv_pmos w=0.3u l=0.13u ng=1 m=1
-XM1 Y A VGND VNB sg13_lv_nmos w=0.15u l=0.13u ng=1 m=1
+XM2 Y A VPWR VPB sg13_lv_pmos w=1u l=0.13u ng=1 m=1
+XM1 Y A VGND VNB sg13_lv_nmos w=0.5u l=0.13u ng=1 m=1
 .ends
 
 .GLOBAL GND
