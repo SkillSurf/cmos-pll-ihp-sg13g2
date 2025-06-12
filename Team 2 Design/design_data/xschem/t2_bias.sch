@@ -7,11 +7,9 @@ E {}
 N -180 -380 -180 -350 {lab=VPWR}
 N 420 -380 600 -380 {lab=VPWR}
 N 420 -380 420 -150 {lab=VPWR}
-N 280 -380 420 -380 {lab=VPWR}
 N 80 -380 80 -350 {lab=VPWR}
 N -180 -380 80 -380 {lab=VPWR}
-N 280 -380 280 -70 {lab=VPWR}
-N 80 -380 280 -380 {lab=VPWR}
+N 280 -380 420 -380 {lab=VPWR}
 N 80 -260 80 -150 {lab=dio_mid}
 N -180 -290 -180 -120 {lab=#net1}
 N 0 -120 40 -120 {lab=#net1}
@@ -62,7 +60,6 @@ N 0 -320 0 -260 {lab=dio_mid}
 N 0 -260 80 -260 {lab=dio_mid}
 N 80 -290 80 -260 {lab=dio_mid}
 N 340 360 380 360 {lab=enb}
-N 600 -380 600 -260 {lab=VPWR}
 N 600 -200 600 -70 {lab=res_bot}
 N -180 -320 -100 -320 {lab=VPB}
 N 80 -320 160 -320 {lab=VPB}
@@ -77,6 +74,9 @@ N 600 280 670 280 {lab=VNB}
 N 420 360 500 360 {lab=VNB}
 N -180 360 -80 360 {lab=VNB}
 N 120 220 360 220 {lab=bias_n}
+N 600 -380 600 -260 {lab=VPWR}
+N 80 -380 280 -380 {lab=VPWR}
+N 280 -380 280 -70 {lab=VPWR}
 C {iopin.sym} -550 -290 0 1 {name=p1 lab=VPWR}
 C {iopin.sym} -550 -260 0 1 {name=p2 lab=VPB}
 C {iopin.sym} -550 -230 0 1 {name=p3 lab=VGND}

@@ -26,7 +26,7 @@ N -120 -100 -120 -80 {lab=VGND}
 N -120 -260 -120 -240 {lab=VPWR}
 C {sg13g2_pr/sg13_lv_nmos.sym} 100 110 0 0 {name=M1
 l=0.13u
-w=0.15u
+w=0.5u
 ng=1
 m=1
 model=sg13_lv_nmos
@@ -42,7 +42,7 @@ spiceprefix=X
 }
 C {sg13g2_pr/sg13_lv_pmos.sym} 100 -270 0 0 {name=M3
 l=0.13u
-w=0.3u
+w=0.15u
 ng=1
 m=1
 model=sg13_lv_pmos
