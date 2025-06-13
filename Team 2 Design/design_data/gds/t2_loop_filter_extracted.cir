@@ -1,0 +1,7 @@
+* Extracted by KLayout with SG13G2 LVS runset on : 13/06/2025 06:36
+
+.SUBCKT t2_loop_filter
+M$1 4 2 4 1 sg13_lv_nmos L=0.65u W=15u AS=3p AD=3p PS=28u PD=28u
+M$31 5 3 5 1 sg13_lv_nmos L=0.13u W=0.3u AS=0.201p AD=0.201p PS=2.68u PD=2.68u
+R$33 2 3 rhigh w=0.5u l=0.96u ps=0 b=0 m=1
+.ENDS t2_loop_filter
