@@ -16,8 +16,8 @@ N 120 -170 210 -170 {lab=VPB}
 N 120 -270 210 -270 {lab=VPB}
 N 210 -270 210 -170 {lab=VPB}
 N 210 -270 250 -270 {lab=VPB}
-N 0 110 80 110 {lab=bais_n}
-N -0 -270 80 -270 {lab=bais_p}
+N 0 110 80 110 {lab=bias_n}
+N -0 -270 80 -270 {lab=bias_p}
 N 120 -390 120 -300 {lab=VPWR}
 N -70 -0 80 -0 {lab=down}
 N 0 -170 80 -170 {lab=#net1}
@@ -63,12 +63,12 @@ C {iopin.sym} -350 -400 2 0 {name=p4 lab=VPB}
 C {iopin.sym} -350 -380 2 0 {name=p5 lab=VGND}
 C {iopin.sym} -350 -360 2 0 {name=p6 lab=VNB}
 C {ipin.sym} -350 -270 0 0 {name=p7 lab=down}
-C {ipin.sym} -350 -240 0 0 {name=p8 lab=bais_p}
-C {ipin.sym} -350 -210 0 0 {name=p9 lab=bais_n}
+C {ipin.sym} -350 -240 0 0 {name=p8 lab=bias_p}
+C {ipin.sym} -350 -210 0 0 {name=p9 lab=bias_n}
 C {lab_wire.sym} -70 0 0 0 {name=p10 sig_type=std_logic lab=down}
-C {lab_wire.sym} 0 110 0 0 {name=p11 sig_type=std_logic lab=bais_n}
+C {lab_wire.sym} 0 110 0 0 {name=p11 sig_type=std_logic lab=bias_n}
 C {lab_wire.sym} -230 -170 0 0 {name=p12 sig_type=std_logic lab=up}
-C {lab_wire.sym} 0 -270 0 0 {name=p13 sig_type=std_logic lab=bais_p}
+C {lab_wire.sym} 0 -270 0 0 {name=p13 sig_type=std_logic lab=bias_p}
 C {lab_wire.sym} 120 -390 0 0 {name=p14 sig_type=std_logic lab=VPWR}
 C {lab_wire.sym} 120 240 0 0 {name=p15 sig_type=std_logic lab=VGND}
 C {lab_wire.sym} 250 110 2 0 {name=p16 sig_type=std_logic lab=VNB}
