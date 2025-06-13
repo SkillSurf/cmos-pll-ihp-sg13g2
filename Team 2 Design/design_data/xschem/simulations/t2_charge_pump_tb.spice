@@ -3,16 +3,17 @@
 V1 VDD GND 1.2
 V2 en GND 1.2
 V3 enb GND 0
-V4 up GND PULSE(0 1.2 .2NS .2NS .2NS 2NS 10NS)
-V5 down GND PULSE(0 1.2 .2NS .2NS .2NS .4NS 10NS)
-C1 vout GND 100f ic=0.6 m=1
-x1 VDD VDD GND GND vout up down bais_p bais_n t2_charge_pump
+V4 up GND PULSE(0 1.2 .2NS .2NS .2NS 1NS 10NS)
+V5 down GND PULSE(0 1.2 .2NS .2NS .2NS 0.01NS 10NS)
+x1 VDD VDD GND GND net1 up down bais_p bais_n t2_charge_pump
 x2 VDD VDD GND GND en bais_n bais_p enb t2_bias
+x3 GND vout net1 t2_loop_filter
+* noconn vout
 **** begin user architecture code
 
 
 .param temp=27
-.tran 1n 100n uic
+.tran 1n 200n uic
 .save all
 
 
@@ -58,18 +59,32 @@ x1 VPWR up net1 VGND t2_inverter
 *.opin bias_n
 *.opin bias_p
 XM9 net1 en VPWR VPB sg13_lv_pmos w=0.5u l=0.15u ng=1 m=1
-XM10 bias_p bias_p VPWR VPB sg13_lv_pmos w=2.0u l=1.0u ng=1 m=1
+XM10 bias_p bias_p VPWR VPB sg13_lv_pmos w=0.2u l=1.0u ng=1 m=5
 XM1 dio_mid dio_mid VPWR VPB sg13_lv_pmos w=0.5u l=0.15u ng=1 m=1
 XM2 net1 net1 dio_mid VPB sg13_lv_pmos w=0.5u l=0.15u ng=1 m=1
 XM3 bias_p en VPWR VPB sg13_lv_pmos w=0.5u l=0.15u ng=1 m=1
-XM4 bias_n bias_p res_bot VPB sg13_lv_pmos w=2.0u l=1.0u ng=1 m=2
+XM4 bias_n bias_p res_bot VPB sg13_lv_pmos w=0.2u l=1.0u ng=1 m=5
 XM11 kick_sw en VGND VNB sg13_lv_nmos w=0.5u l=0.15u ng=1 m=1
 XM12 bias_p net1 kick_sw VNB sg13_lv_nmos w=0.5u l=0.15u ng=1 m=1
-XM5 net1 bias_n VGND VNB sg13_lv_nmos w=1.0u l=1.0u ng=1 m=1
-XM6 bias_p bias_n VGND VNB sg13_lv_nmos w=1.0u l=1.0u ng=1 m=1
+XM5 net1 bias_n VGND VNB sg13_lv_nmos w=0.2u l=1.0u ng=1 m=5
+XM6 bias_p bias_n VGND VNB sg13_lv_nmos w=0.2u l=1.0u ng=1 m=5
 XM7 bias_n enb VGND VNB sg13_lv_nmos w=0.5u l=0.15u ng=1 m=1
-XM8 bias_n bias_n VGND VNB sg13_lv_nmos w=1.0u l=1.0u ng=1 m=1
+XM8 bias_n bias_n VGND VNB sg13_lv_nmos w=0.2u l=1.0u ng=1 m=5
 XR1 res_bot VPWR rhigh w=0.5e-6 l=0.5e-6 m=1 b=0
+.ends
+
+
+* expanding   symbol:  t2_loop_filter.sym # of pins=3
+** sym_path: /foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_loop_filter.sym
+** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_loop_filter.sch
+.subckt t2_loop_filter VGND vout vin
+*.iopin VGND
+*.ipin vin
+*.opin vout
+XR1 vin vout rhigh w=0.5e-6 l=0.5e-6 m=1 b=0
+XM1 VGND vin VGND VGND sg13_lv_nmos w=0.5u l=0.650u ng=1 m=15
+XM2 VGND vout VGND VGND sg13_lv_nmos w=0.15u l=0.13u ng=1 m=1
+XM3 VGND vin VGND VGND sg13_lv_nmos w=0.5u l=0.650u ng=1 m=15
 .ends
 
 

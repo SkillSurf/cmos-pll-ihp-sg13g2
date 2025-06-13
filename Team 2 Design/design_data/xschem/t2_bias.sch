@@ -94,9 +94,9 @@ spiceprefix=X
 }
 C {sg13g2_pr/sg13_lv_pmos.sym} 300 -40 0 1 {name=M10
 l=1.0u
-w=2.0u
+w=0.2u
 ng=1
-m=1
+m=5
 model=sg13_lv_pmos
 spiceprefix=X
 }
@@ -126,9 +126,9 @@ spiceprefix=X
 }
 C {sg13g2_pr/sg13_lv_pmos.sym} 580 -40 0 0 {name=M4
 l=1.0u
-w=2.0u
+w=0.2u
 ng=1
-m=2
+m=5
 model=sg13_lv_pmos
 spiceprefix=X
 }
@@ -150,17 +150,17 @@ spiceprefix=X
 }
 C {sg13g2_pr/sg13_lv_nmos.sym} 100 280 0 1 {name=M5
 l=1.0u
-w=1.0u
+w=0.2u
 ng=1
-m=1
+m=5
 model=sg13_lv_nmos
 spiceprefix=X
 }
 C {sg13g2_pr/sg13_lv_nmos.sym} 300 280 0 1 {name=M6
 l=1.0u
-w=1.0u
+w=0.2u
 ng=1
-m=1
+m=5
 model=sg13_lv_nmos
 spiceprefix=X
 }
@@ -174,9 +174,9 @@ spiceprefix=X
 }
 C {sg13g2_pr/sg13_lv_nmos.sym} 580 280 0 0 {name=M8
 l=1.0u
-w=1.0u
+w=0.2u
 ng=1
-m=1
+m=5
 model=sg13_lv_nmos
 spiceprefix=X
 }
@@ -201,13 +201,17 @@ b=0
 m=1
 }
 C {lab_pin.sym} -100 -320 0 1 {name=p20 sig_type=std_logic lab=VPB}
-C {lab_pin.sym} 210 -40 0 0 {name=p21 sig_type=std_logic lab=VPB}
+C {lab_pin.sym} 210 -40 0 0 {name=p21 sig_type=std_logic lab=VPB
+w=0.2u
+m=5}
 C {lab_pin.sym} -250 190 0 0 {name=p22 sig_type=std_logic lab=VNB}
 C {lab_pin.sym} 500 360 0 1 {name=p23 sig_type=std_logic lab=VNB}
 C {lab_pin.sym} 150 -320 0 1 {name=p24 sig_type=std_logic lab=VPB}
 C {lab_pin.sym} 150 -120 0 1 {name=p25 sig_type=std_logic lab=VPB}
 C {lab_pin.sym} 490 -120 0 1 {name=p26 sig_type=std_logic lab=VPB}
-C {lab_pin.sym} 670 -40 0 1 {name=p27 sig_type=std_logic lab=VPB}
+C {lab_pin.sym} 670 -40 0 1 {name=p27 sig_type=std_logic lab=VPB
+w=0.2u
+m=5}
 C {lab_pin.sym} 0 280 0 0 {name=p28 sig_type=std_logic lab=VNB}
 C {lab_pin.sym} 200 280 0 0 {name=p29 sig_type=std_logic lab=VNB}
 C {lab_pin.sym} 670 280 0 1 {name=p30 sig_type=std_logic lab=VNB}
