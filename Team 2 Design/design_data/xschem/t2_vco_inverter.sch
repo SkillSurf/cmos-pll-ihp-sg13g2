@@ -16,7 +16,7 @@ N 200 -140 290 -140 {lab=VNB}
 N 200 -110 200 -60 {lab=VGND}
 C {sg13g2_pr/sg13_lv_pmos.sym} 180 -260 0 0 {name=M2
 l=0.13u
-w=1u
+w=2u
 ng=1
 m=1
 model=sg13_lv_pmos
@@ -24,7 +24,7 @@ spiceprefix=X
 }
 C {sg13g2_pr/sg13_lv_nmos.sym} 180 -140 0 0 {name=M1
 l=0.13u
-w=0.5u
+w=1u
 ng=1
 m=1
 model=sg13_lv_nmos

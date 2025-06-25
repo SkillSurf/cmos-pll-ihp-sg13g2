@@ -12,8 +12,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=-2.7411261e-08
-x2=1.2892879e-07
+x1=2.4669403e-07
+x2=2.5245863e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -42,16 +42,23 @@ C {launcher.sym} 1920 -70 0 0 {name=h5
 descr="load waves (press ctrl + left click)" 
 tclcommand="xschem raw_read $netlist_dir/t2_vco_new_tb.raw tran"
 }
-C {devices/code_shown.sym} 940 -360 0 0 {name=NGSPICE only_toplevel=true 
+C {devices/code_shown.sym} 940 -450 0 0 {name=NGSPICE only_toplevel=true 
 value="
 .param temp=27
-.tran 50p 500n
-.save all
-.plot v(Vout)
+.control
+save all
+.options maxstep=10n reltol=1e-3 abstol=1e-6
+tran 50p 3u
+plot v(Vout) xlimit 500n 1u
+fft v(Vout)
+let vmag = db(mag(v(Vout)))
+plot vmag xlabel 'Frequency (Hz)' xlimit 0 400Meg
+wrdata fft_output(Vcon=0.9).txt vmag
+.endc
 "}
 C {/foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_vco_new.sym} 1150 -80 0 0 {name=x1}
 C {vsource.sym} 770 -40 0 0 {name=VPWR value=1.2 savecurrent=false}
-C {vsource.sym} 850 -40 0 0 {name=vctl value=0.5 savecurrent=false}
+C {vsource.sym} 850 -40 0 0 {name=vctl value=1.2 savecurrent=false}
 C {gnd.sym} 850 80 0 0 {name=l2 lab=GND}
 C {gnd.sym} 770 80 0 0 {name=l9 lab=GND}
 C {opin.sym} 1310 -80 0 0 {name=p17 lab=Vout}
