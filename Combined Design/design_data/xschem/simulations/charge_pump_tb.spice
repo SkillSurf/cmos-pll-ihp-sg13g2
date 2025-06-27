@@ -1,0 +1,44 @@
+** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/charge_pump_tb.sch
+**.subckt charge_pump_tb
+V1 VDD GND 1.2
+V2 bais_n GND 1.2
+V3 bais_p GND 0
+V4 up GND PULSE(0 1.2 .2NS .2NS .2NS 1NS 10NS)
+V5 down GND PULSE(0 1.2 .2NS .2NS .2NS 0.01NS 10NS)
+x2 bais_p VDD up vout down GND bais_n charge_pump
+**** begin user architecture code
+
+
+.param temp=27
+.tran 1n 100n
+.save all
+
+
+ .lib cornerMOSlv.lib mos_tt
+
+
+.lib /foss/pdks/ihp-sg13g2/libs.tech/ngspice/models/cornerRES.lib res_typ_stat
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  charge_pump.sym # of pins=7
+** sym_path: /foss/designs/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/charge_pump.sym
+** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/charge_pump.sch
+.subckt charge_pump VP bias_p up vout down bias_n VN
+*.ipin bias_p
+*.ipin up
+*.ipin down
+*.ipin bias_n
+*.iopin VN
+*.iopin VP
+*.opin vout
+XM1 net1 bias_n VN VN sg13_lv_nmos w=0.15u l=0.13u ng=1 m=1
+XM2 vout down net1 VN sg13_lv_nmos w=0.15u l=0.13u ng=1 m=1
+XM3 vout up net2 VP sg13_lv_pmos w=0.30u l=0.13u ng=1 m=1
+XM4 net2 bias_p VP VP sg13_lv_pmos w=0.30u l=0.13u ng=1 m=1
+.ends
+
+.GLOBAL GND
+.GLOBAL VDD
+.end
