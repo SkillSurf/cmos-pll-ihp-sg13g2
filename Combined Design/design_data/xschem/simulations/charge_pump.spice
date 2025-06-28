@@ -7,11 +7,11 @@
 *.iopin VN
 *.iopin VP
 *.opin vout
-x1 net4 up net3 net5 inverter
 XM1 net1 bias_n VN VN sg13_lv_nmos w=0.15u l=0.13u ng=1 m=1
 XM2 vout down net1 VN sg13_lv_nmos w=0.15u l=0.13u ng=1 m=1
 XM3 vout net3 net2 VP sg13_lv_pmos w=0.30u l=0.13u ng=1 m=1
 XM4 net2 bias_p VP VP sg13_lv_pmos w=0.30u l=0.13u ng=1 m=1
+x1 VP up net3 VN inverter
 **.ends
 
 * expanding   symbol:  inverter.sym # of pins=4

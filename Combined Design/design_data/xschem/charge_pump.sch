@@ -10,7 +10,6 @@ N 150 -150 150 -120 {lab=#net2}
 N 150 -230 150 -210 {lab=VP}
 N -130 120 110 120 {lab=bias_n}
 N -130 10 110 10 {lab=down}
-N -130 -90 110 -90 {lab=up}
 N -130 -180 110 -180 {lab=bias_p}
 N 150 120 260 120 {lab=VN}
 N 150 160 260 160 {lab=VN}
@@ -27,6 +26,10 @@ N 150 -40 150 -20 {lab=vout}
 N 150 -280 150 -230 {lab=VP}
 N 150 -40 290 -40 {lab=vout}
 N 150 -60 150 -40 {lab=vout}
+N 79 -90 113 -90 {lab=#net3}
+N -132 -90 -47 -90 {lab=up}
+N -0 -47 0 -32 {lab=VN}
+N 0 -146 -0 -132 {lab=VP}
 C {sg13g2_pr/sg13_lv_nmos.sym} 130 120 0 0 {name=M1
 l=0.13u
 w=0.15u
@@ -45,7 +48,7 @@ spiceprefix=X
 }
 C {sg13g2_pr/sg13_lv_pmos.sym} 130 -90 0 0 {name=M3
 l=0.13u
-w=0.30u
+w=0.3u
 ng=1
 m=1
 model=sg13_lv_pmos
@@ -53,7 +56,7 @@ spiceprefix=X
 }
 C {sg13g2_pr/sg13_lv_pmos.sym} 130 -180 0 0 {name=M4
 l=0.13u
-w=0.30u
+w=0.3u
 ng=1
 m=1
 model=sg13_lv_pmos
@@ -73,3 +76,6 @@ C {lab_wire.sym} -110 120 2 0 {name=p13 sig_type=std_logic lab=bias_n}
 C {lab_wire.sym} 250 -40 2 0 {name=p14 sig_type=std_logic lab=vout}
 C {lab_wire.sym} 150 190 1 0 {name=p15 sig_type=std_logic lab=VN}
 C {lab_wire.sym} 150 -240 1 0 {name=p16 sig_type=std_logic lab=VP}
+C {inverter.sym} 20 -90 0 0 {name=x1}
+C {lab_wire.sym} 0 -32 2 0 {name=p8 sig_type=std_logic lab=VN}
+C {lab_wire.sym} 0 -145 0 0 {name=p9 sig_type=std_logic lab=VP}
