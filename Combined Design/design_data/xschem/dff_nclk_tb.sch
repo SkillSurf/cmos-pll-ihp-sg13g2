@@ -159,8 +159,7 @@ place=header}
 C {devices/code_shown.sym} -470 480 0 0 {name=NGSPICE only_toplevel=true 
 value="
 .param temp=27
-vvdd vdd 0 dc 1.2
-vvss vss 0 0
+
 .control
 pre_osdi ./psp103_nqs.osdi
 save all 
