@@ -25,13 +25,5 @@ C {ipin.sym} -280 0 0 0 {name=p2 lab=D}
 C {ipin.sym} -280 60 0 0 {name=p3 lab=nRST}
 C {opin.sym} 160 -60 0 0 {name=p4 lab=Q}
 C {opin.sym} 160 40 0 0 {name=p5 lab=nQ}
-C {devices/code_shown.sym} -470 150 0 0 {name=MODEL
-only_toplevel=true
-format="tcleval( @value )"
-value="
-.lib $::SG13G2_MODELS/cornerMOSlv.lib mos_tt
-.include $::PDK_ROOT/ihp-sg13g2/libs.ref/sg13g2_stdcell/spice/sg13g2_stdcell.spice
-"
-place=header}
 C {iopin.sym} -280 -130 2 0 {name=p6 lab=VSS}
 C {iopin.sym} -180 -130 2 0 {name=p7 lab=VDD}
