@@ -151,7 +151,7 @@ value="
 .meas tran tperiod_out TRIG v(clk_out) VAL=0.5 FALL=1 TARG v(clk_out) VAL=0.5 FALL=2
 .meas tran freq_out PARAM = '1e-6/tperiod_out'
 "}
-C {devices/code_shown.sym} -320 -410 0 0 {name=MODEL1
+C {devices/code_shown.sym} -320 -410 0 0 {name=MODEL
 only_toplevel=true
 format="tcleval( @value )"
 value="
@@ -159,7 +159,7 @@ value="
 .include $::PDK_ROOT/ihp-sg13g2/libs.ref/sg13g2_stdcell/spice/sg13g2_stdcell.spice
 "
 place=header}
-C {devices/code_shown.sym} -320 -710 0 0 {name=NGSPICE1 only_toplevel=true 
+C {devices/code_shown.sym} -320 -710 0 0 {name=NGSPICE only_toplevel=true 
 value="
 .param temp=27
 
