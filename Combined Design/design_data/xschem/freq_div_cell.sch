@@ -31,7 +31,6 @@ N -40 -110 -40 -90 {lab=VSS}
 N -460 10 -340 10 {lab=Cin}
 N 280 -120 360 -120 {lab=VSS}
 N 280 -160 360 -160 {lab=VDD}
-C {half_add.sym} -270 -10 0 0 {name=x1}
 C {dff_nclk.sym} 0 0 0 0 {name=x2}
 C {sg13g2_stdcells/sg13g2_xor2_1.sym} 220 -10 0 0 {name=x3 VDD=VDD VSS=VSS prefix=sg13g2_ }
 C {lab_pin.sym} -270 -90 1 0 {name=p10 sig_type=std_logic lab=VDD}
@@ -49,3 +48,4 @@ C {iopin.sym} 360 -120 0 0 {name=p62 lab=VSS}
 C {iopin.sym} 360 -160 0 0 {name=p66 lab=VDD}
 C {lab_pin.sym} 280 -160 0 0 {name=p8 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 280 -120 0 0 {name=p9 sig_type=std_logic lab=VSS}
+C {half_add.sym} -270 -10 0 0 {name=x1}
