@@ -85,7 +85,7 @@ value="
 "}
 C {launcher.sym} -610 -430 0 0 {name=h5
 descr="load waves (press Ctrl + left click)" 
-tclcommand="xschem raw_read $netlist_dir/tran_2-bit_freq_divider.raw tran"
+tclcommand="xschem raw_read $netlist_dir/tran_2bit_freq_divider.raw tran"
 }
 C {gnd.sym} -60 270 0 0 {name=l1 lab=GND}
 C {lab_pin.sym} -60 -90 1 0 {name=p1 sig_type=std_logic lab=VDD}
@@ -108,7 +108,6 @@ C {gnd.sym} -120 440 0 0 {name=l6 lab=GND}
 C {lab_pin.sym} -240 300 0 0 {name=p3 sig_type=std_logic lab=A0}
 C {lab_pin.sym} -120 300 0 0 {name=p4 sig_type=std_logic lab=A1}
 C {lab_pin.sym} -450 120 0 0 {name=p7 sig_type=std_logic lab=EN}
-C {2-bit_freq_divider.sym} -170 90 0 0 {name=x1}
 C {devices/code_shown.sym} -1020 -360 0 0 {name=MODEL
 only_toplevel=true
 format="tcleval( @value )"
@@ -126,6 +125,7 @@ pre_osdi ./psp103_nqs.osdi
 save all 
 tran 50p 150n
 
-write tran_2-bit_freq_divider.raw
+write tran_2bit_freq_divider.raw
 .endc
 "}
+C {2bit_freq_divider.sym} -170 90 0 0 {name=x1}
