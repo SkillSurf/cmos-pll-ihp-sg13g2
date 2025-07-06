@@ -1,0 +1,17 @@
+* Extracted by KLayout with SG13G2 LVS runset on : 06/07/2025 12:21
+
+.SUBCKT Bias_gen
+R$1 12 11 rppd w=1u l=4u ps=0 b=0 m=1
+M$2 9 5 3 1 sg13_lv_nmos L=1u W=1u AS=0.34p AD=0.34p PS=2.68u PD=2.68u
+M$3 7 5 3 1 sg13_lv_nmos L=1u W=1u AS=0.34p AD=0.34p PS=2.68u PD=2.68u
+M$4 5 5 3 1 sg13_lv_nmos L=1u W=1u AS=0.34p AD=0.34p PS=2.68u PD=2.68u
+M$5 7 9 6 1 sg13_lv_nmos L=0.15u W=0.5u AS=0.17p AD=0.17p PS=1.68u PD=1.68u
+M$6 5 2 3 1 sg13_lv_nmos L=0.15u W=0.5u AS=0.17p AD=0.17p PS=1.68u PD=1.68u
+M$7 6 4 3 1 sg13_lv_nmos L=0.15u W=0.5u AS=0.17p AD=0.17p PS=1.68u PD=1.68u
+M$8 5 7 11 8 sg13_lv_pmos L=1u W=4u AS=1.06p AD=1.06p PS=7.06u PD=7.06u
+M$10 12 7 7 8 sg13_lv_pmos L=1u W=2u AS=0.68p AD=0.68p PS=4.68u PD=4.68u
+M$11 12 10 10 8 sg13_lv_pmos L=0.15u W=0.5u AS=0.17p AD=0.17p PS=1.68u PD=1.68u
+M$12 12 4 7 8 sg13_lv_pmos L=0.15u W=0.5u AS=0.17p AD=0.17p PS=1.68u PD=1.68u
+M$13 10 9 9 8 sg13_lv_pmos L=0.15u W=0.5u AS=0.17p AD=0.17p PS=1.68u PD=1.68u
+M$14 12 4 9 8 sg13_lv_pmos L=0.15u W=0.5u AS=0.17p AD=0.17p PS=1.68u PD=1.68u
+.ENDS Bias_gen
