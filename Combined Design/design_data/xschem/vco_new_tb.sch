@@ -37,4 +37,4 @@ C {gnd.sym} 850 80 0 0 {name=l2 lab=GND}
 C {gnd.sym} 770 80 0 0 {name=l9 lab=GND}
 C {opin.sym} 1310 -80 0 0 {name=p17 lab=Vout}
 C {gnd.sym} 1150 70 0 0 {name=l1 lab=GND}
-C {/headless/Team1/vco_new/vco_new.sym} 1150 -80 0 0 {name=x1}
+C {vco_new.sym} 1150 -80 0 0 {name=x1}

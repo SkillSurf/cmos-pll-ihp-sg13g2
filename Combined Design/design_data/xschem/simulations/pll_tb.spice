@@ -1,0 +1,173 @@
+** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/pll_tb.sch
+**.subckt pll_tb
+V1 VDD GND 1.2
+V4 up GND PULSE(0 1.2 .2NS .2NS .2NS 2NS 10NS)
+V5 down GND PULSE(0 1.2 .2NS .2NS .2NS 0.02NS 10NS)
+x2 VDD bias_p up vout_cp down bias_n GND charge_pump
+x1 vout_cp vout GND loop_filter
+x3 VDD VDD GND GND net1 bias_n bias_p net2 Bias_gen
+V7 net1 GND 1.2
+V8 net2 GND 0
+VPWR net3 GND 1.2
+vctl net4 GND 1.0
+x4 net3 GND net4 VCO_out vco_new
+**** begin user architecture code
+
+
+.param temp=27
+.tran 1n 1u uic
+.save all
+
+
+ .lib cornerMOSlv.lib mos_tt
+
+
+.lib /foss/pdks/ihp-sg13g2/libs.tech/ngspice/models/cornerRES.lib res_typ_stat
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  charge_pump.sym # of pins=7
+** sym_path: /foss/designs/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/charge_pump.sym
+** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/charge_pump.sch
+.subckt charge_pump VP bias_p up vout down bias_n VN
+*.ipin bias_p
+*.ipin up
+*.ipin down
+*.ipin bias_n
+*.iopin VN
+*.iopin VP
+*.opin vout
+XM1 net1 bias_n VN VN sg13_lv_nmos w=0.15u l=0.13u ng=1 m=1
+XM2 vout down net1 VN sg13_lv_nmos w=0.15u l=0.13u ng=1 m=1
+XM3 vout net3 net2 VP sg13_lv_pmos w=0.3u l=0.13u ng=1 m=1
+XM4 net2 bias_p VP VP sg13_lv_pmos w=0.3u l=0.13u ng=1 m=1
+x1 VP up net3 VN inverter
+.ends
+
+
+* expanding   symbol:  loop_filter.sym # of pins=3
+** sym_path: /foss/designs/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/loop_filter.sym
+** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/loop_filter.sch
+.subckt loop_filter vin vout VN
+*.iopin VN
+*.ipin vin
+*.opin vout
+XR1 vin vout rhigh w=0.6e-6 l=0.96e-6 m=1 b=0
+XM1 VN net1 VN VN sg13_lv_nmos w=0.5u l=0.650u ng=1 m=15
+XM2 VN vout VN VN sg13_lv_nmos w=0.15u l=0.13u ng=1 m=1
+XM3 VN net1 VN VN sg13_lv_nmos w=0.5u l=0.650u ng=1 m=15
+XM4 VN vout VN VN sg13_lv_nmos w=0.15u l=0.13u ng=1 m=1
+XR2 vin net1 rhigh w=0.5e-6 l=0.96e-6 m=1 b=0
+.ends
+
+
+* expanding   symbol:  Bias_gen.sym # of pins=8
+** sym_path: /foss/designs/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/Bias_gen.sym
+** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/Bias_gen.sch
+.subckt Bias_gen VPWR VPB VGND VNB en bias_n bias_p enb
+*.ipin en
+*.opin bias_n
+*.iopin VNB
+*.iopin VGND
+*.iopin VPB
+*.iopin VPWR
+*.ipin enb
+*.opin bias_p
+XM1 bias_p kick kick_sw VNB sg13_lv_nmos w=0.5u l=0.15u ng=1 m=1
+XM2 kick_sw en VGND VNB sg13_lv_nmos w=0.5u l=0.15u ng=1 m=1
+XM3 kick bias_n VGND VNB sg13_lv_nmos w=1.0u l=1.0u ng=1 m=1
+XM4 bias_p bias_n VGND VNB sg13_lv_nmos w=1.0u l=1.0u ng=1 m=1
+XM5 bias_n enb VGND VNB sg13_lv_nmos w=0.5u l=0.15u ng=1 m=1
+XM6 bias_n bias_n VGND VNB sg13_lv_nmos w=1.0u l=1.0u ng=1 m=1
+XM7 kick kick dio_mid VPB sg13_lv_pmos w=0.5u l=0.15u ng=1 m=1
+XM8 bias_p bias_p VPWR VPB sg13_lv_pmos w=2.0u l=1.0u ng=1 m=1
+XM9 bias_p en VPWR VPB sg13_lv_pmos w=0.5u l=0.15u ng=1 m=1
+XM10 bias_n bias_p res_bot VPB sg13_lv_pmos w=4.0u l=1.0u ng=1 m=1
+XM11 kick en VPWR VPB sg13_lv_pmos w=0.5u l=0.15u ng=1 m=1
+XM12 dio_mid dio_mid VPWR VPB sg13_lv_pmos w=0.5u l=0.15u ng=1 m=1
+XR1 res_bot VPWR rhigh w=0.5e-6 l=0.5e-6 m=1 b=0
+.ends
+
+
+* expanding   symbol:  vco_new.sym # of pins=4
+** sym_path: /foss/designs/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/vco_new.sym
+** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/vco_new.sch
+.subckt vco_new VPWR VGND vctl Vout
+*.iopin VPWR
+*.iopin VGND
+*.ipin vctl
+*.opin Vout
+XM21 mirror_pg mirror_pg VPWR VPWR sg13_lv_pmos w=0.8u l=0.13u ng=1 m=1
+XM22 net1 mirror_pg VPWR VPWR sg13_lv_pmos w=0.8u l=0.13u ng=1 m=1
+XM23 net2 mirror_pg VPWR VPWR sg13_lv_pmos w=0.8u l=0.13u ng=1 m=1
+XM24 net3 mirror_pg VPWR VPWR sg13_lv_pmos w=0.8u l=0.13u ng=1 m=1
+XM25 mirror_pg vctl VGND VGND sg13_lv_nmos w=0.6u l=0.13u ng=1 m=1
+XM26 net9 vctl VGND VGND sg13_lv_nmos w=0.6u l=0.13u ng=1 m=1
+XM27 net8 vctl VGND VGND sg13_lv_nmos w=0.6u l=0.13u ng=1 m=1
+XM28 net7 vctl VGND VGND sg13_lv_nmos w=0.6u l=0.13u ng=1 m=1
+C3 feedback VGND 74.6f m=1
+C4 Vout VGND 149.2f m=1
+XM29 net13 mirror_pg VPWR VPWR sg13_lv_pmos w=0.8u l=0.13u ng=1 m=1
+XM30 net12 mirror_pg VPWR VPWR sg13_lv_pmos w=0.8u l=0.13u ng=1 m=1
+XM31 net10 vctl VGND VGND sg13_lv_nmos w=0.6u l=0.13u ng=1 m=1
+XM32 net11 vctl VGND VGND sg13_lv_nmos w=0.6u l=0.13u ng=1 m=1
+XM33 net15 mirror_pg VPWR VPWR sg13_lv_pmos w=0.8u l=0.13u ng=1 m=1
+XM34 net16 mirror_pg VPWR VPWR sg13_lv_pmos w=0.8u l=0.13u ng=1 m=1
+XM35 net20 vctl VGND VGND sg13_lv_nmos w=0.6u l=0.13u ng=1 m=1
+XM36 net19 vctl VGND VGND sg13_lv_nmos w=0.6u l=0.13u ng=1 m=1
+XM37 net24 mirror_pg VPWR VPWR sg13_lv_pmos w=0.8u l=0.13u ng=1 m=1
+XM38 net23 mirror_pg VPWR VPWR sg13_lv_pmos w=0.8u l=0.13u ng=1 m=1
+XM39 net21 vctl VGND VGND sg13_lv_nmos w=0.6u l=0.13u ng=1 m=1
+XM40 net22 vctl VGND VGND sg13_lv_nmos w=0.6u l=0.13u ng=1 m=1
+XM41 net31 mirror_pg VPWR VPWR sg13_lv_pmos w=0.8u l=0.13u ng=1 m=1
+XM42 net30 mirror_pg VPWR VPWR sg13_lv_pmos w=0.8u l=0.13u ng=1 m=1
+XM43 net28 vctl VGND VGND sg13_lv_nmos w=0.6u l=0.13u ng=1 m=1
+XM44 net29 vctl VGND VGND sg13_lv_nmos w=0.6u l=0.13u ng=1 m=1
+C1 net32 VGND 74.6f m=1
+C2 net27 VGND 74.6f m=1
+C5 net25 VGND 74.6f m=1
+C6 net18 VGND 74.6f m=1
+C7 net17 VGND 74.6f m=1
+C8 net26 VGND 74.6f m=1
+C9 net14 VGND 74.6f m=1
+C10 net6 VGND 74.6f m=1
+C11 net5 VGND 74.6f m=1
+C12 net4 VGND 74.6f m=1
+x1 net1 VPWR feedback net4 VGND net9 vco_inverter
+x2 net2 VPWR net4 net5 VGND net8 vco_inverter
+x3 net3 VPWR net5 net6 VGND net7 vco_inverter
+x4 net13 VPWR net6 net14 VGND net10 vco_inverter
+x5 net12 VPWR net14 net26 VGND net11 vco_inverter
+x6 net15 VPWR net26 net17 VGND net20 vco_inverter
+x7 net16 VPWR net17 net18 VGND net19 vco_inverter
+x8 net24 VPWR net18 net25 VGND net21 vco_inverter
+x9 net23 VPWR net25 net27 VGND net22 vco_inverter
+x10 net31 VPWR net27 net32 VGND net28 vco_inverter
+x11 net30 VPWR net32 feedback VGND net29 vco_inverter
+x12 VPWR VPWR feedback Vout VGND VGND vco_inverter
+.ends
+
+
+* expanding   symbol:  inverter.sym # of pins=4
+** sym_path: /foss/designs/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/inverter.sym
+** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/inverter.sch
+.subckt inverter VP IN OUT VN
+*.iopin VN
+*.iopin VP
+*.ipin IN
+*.opin OUT
+XM1 OUT IN VN VN sg13_lv_nmos w=0.15u l=0.13u ng=1 m=1
+XM2 OUT IN VP VP sg13_lv_pmos w=0.3u l=0.13u ng=1 m=1
+.ends
+
+
+* expanding   symbol:  vco_inverter.sym # of pins=6
+** sym_path: /foss/designs/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/vco_inverter.sym
+** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/vco_inverter.sch
+.subckt vco_inverter VPWR VPB A Y VNB VGND
+.ends
+
+.GLOBAL GND
+.GLOBAL VDD
+.end
