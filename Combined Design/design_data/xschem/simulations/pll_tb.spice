@@ -1,16 +1,15 @@
 ** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/pll_tb.sch
 **.subckt pll_tb
 V1 VDD GND 1.2
-V4 up GND PULSE(0 1.2 .2NS .2NS .2NS 2NS 10NS)
-V5 down GND PULSE(0 1.2 .2NS .2NS .2NS 0.02NS 10NS)
 x2 VDD bias_p up vout_cp down bias_n GND charge_pump
 x1 vout_cp vout GND loop_filter
 x3 VDD VDD GND GND net1 bias_n bias_p net2 Bias_gen
 V7 net1 GND 1.2
 V8 net2 GND 0
-VPWR net3 GND 1.2
-vctl net4 GND 1.0
-x4 net3 GND net4 VCO_out vco_new
+x4 VDD GND vout net3 vco_new
+x5 VDD up GND down ref_clk VCO_out PFD
+V2 ref_clk GND PULSE(0 1.2 .2NS .2NS .2NS 15NS 30NS)
+x6 VDD net3 VCO_out GND inverter
 **** begin user architecture code
 
 
@@ -86,7 +85,7 @@ XM9 bias_p en VPWR VPB sg13_lv_pmos w=0.5u l=0.15u ng=1 m=1
 XM10 bias_n bias_p res_bot VPB sg13_lv_pmos w=4.0u l=1.0u ng=1 m=1
 XM11 kick en VPWR VPB sg13_lv_pmos w=0.5u l=0.15u ng=1 m=1
 XM12 dio_mid dio_mid VPWR VPB sg13_lv_pmos w=0.5u l=0.15u ng=1 m=1
-XR1 res_bot VPWR rhigh w=0.5e-6 l=0.5e-6 m=1 b=0
+XR1 res_bot VPWR rhigh w=1.0e-6 l=4.0e-6 m=1 b=0
 .ends
 
 
@@ -149,6 +148,37 @@ x12 VPWR VPWR feedback Vout VGND VGND vco_inverter
 .ends
 
 
+* expanding   symbol:  PFD.sym # of pins=6
+** sym_path: /foss/designs/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/PFD.sym
+** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/PFD.sch
+.subckt PFD vdd up vss down ref_clk vco_clk
+*.iopin vdd
+*.ipin ref_clk
+*.iopin vss
+*.ipin vco_clk
+*.opin up
+*.opin down
+XM1 net2 vco_clk vss vss sg13_lv_nmos w=0.36u l=0.15u ng=1 m=1
+XM4 net1 ref_clk net2 vss sg13_lv_nmos w=1.8u l=0.15u ng=1 m=1
+XM5 net3 ref_clk net1 vss sg13_lv_nmos w=0.84u l=0.15u ng=1 m=1
+XM9 net3 ref_clk ref_clk vdd sg13_lv_pmos w=0.64u l=0.15u ng=1 m=1
+XM11 net7 net3 vss vss sg13_lv_nmos w=0.36u l=0.15u ng=1 m=1
+XM12 vdd net3 net7 vdd sg13_lv_pmos w=0.72u l=0.15u ng=1 m=1
+XM13 up net7 vss vss sg13_lv_nmos w=0.48u l=0.15u ng=1 m=1
+XM14 vdd net7 up vdd sg13_lv_pmos w=0.96u l=0.15u ng=1 m=1
+XM3 net1 ref_clk vdd vdd sg13_lv_pmos w=0.64u l=0.15u ng=1 m=1
+XM6 net4 vco_clk vdd vdd sg13_lv_pmos w=0.64u l=0.15u ng=1 m=1
+XM7 net4 vco_clk net5 vss sg13_lv_nmos w=1.8u l=0.15u ng=1 m=1
+XM19 net5 ref_clk vss vss sg13_lv_nmos w=0.36u l=0.15u ng=1 m=1
+XM8 net6 vco_clk net4 vss sg13_lv_nmos w=0.84u l=0.15u ng=1 m=1
+XM10 net6 vco_clk vco_clk vdd sg13_lv_pmos w=0.64u l=0.15u ng=1 m=1
+XM15 vdd net6 net8 vdd sg13_lv_pmos w=0.72u l=0.15u ng=1 m=1
+XM16 net8 net6 vss vss sg13_lv_nmos w=0.36u l=0.15u ng=1 m=1
+XM17 vdd net8 down vdd sg13_lv_pmos w=0.96u l=0.15u ng=1 m=1
+XM18 down net8 vss vss sg13_lv_nmos w=0.48u l=0.15u ng=1 m=1
+.ends
+
+
 * expanding   symbol:  inverter.sym # of pins=4
 ** sym_path: /foss/designs/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/inverter.sym
 ** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/inverter.sch
@@ -166,6 +196,14 @@ XM2 OUT IN VP VP sg13_lv_pmos w=0.3u l=0.13u ng=1 m=1
 ** sym_path: /foss/designs/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/vco_inverter.sym
 ** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/vco_inverter.sch
 .subckt vco_inverter VPWR VPB A Y VNB VGND
+*.iopin VPWR
+*.iopin VGND
+*.ipin A
+*.opin Y
+*.iopin VPB
+*.iopin VNB
+XM2 Y A VPWR VPB sg13_lv_pmos w=2u l=0.13u ng=1 m=1
+XM1 Y A VGND VNB sg13_lv_nmos w=1u l=0.13u ng=1 m=1
 .ends
 
 .GLOBAL GND
