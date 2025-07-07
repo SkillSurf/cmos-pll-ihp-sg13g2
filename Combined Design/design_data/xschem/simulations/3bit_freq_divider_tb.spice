@@ -1,16 +1,16 @@
-** sch_path: /foss/designs/PROJECTS/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/3-bit_freq_divider_tb.sch
+** sch_path: /foss/designs/PROJECTS/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/3bit_freq_divider_tb.sch
 
 .lib /foss/pdks/ihp-sg13g2/libs.tech/ngspice/models/cornerMOSlv.lib mos_tt
 .include /foss/pdks/ihp-sg13g2/libs.ref/sg13g2_stdcell/spice/sg13g2_stdcell.spice
 
-**.subckt 3-bit_freq_divider_tb
+**.subckt 3bit_freq_divider_tb
 Vs VDD GND 1.2
 Vclk CLK_IN GND dc 0 ac 0 pulse(0, 1.2, 0, 100p, 100p, 6.25n, 12.5n)
 * noconn CLK_OUT
 Ven EN GND dc {EN}
 Va1 A1 GND dc {A1}
 Va2 A2 GND dc {A2}
-x1 A0 CLK_IN EN CLK_OUT A1 VDD GND A2 3-bit_freq_divider
+x1 A0 CLK_IN EN CLK_OUT A1 VDD GND A2 3bit_freq_divider
 Va0 A0 GND dc {A0}
 **** begin user architecture code
 
@@ -42,17 +42,17 @@ pre_osdi ./psp103_nqs.osdi
 save all
 tran 50p 350n
 
-write tran_3-bit_freq_divider.raw
+write tran_3bit_freq_divider.raw
 .endc
 
 
 **** end user architecture code
 **.ends
 
-* expanding   symbol:  3-bit_freq_divider.sym # of pins=8
-** sym_path: /foss/designs/PROJECTS/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/3-bit_freq_divider.sym
-** sch_path: /foss/designs/PROJECTS/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/3-bit_freq_divider.sch
-.subckt 3-bit_freq_divider A0 CLK_IN EN CLK_OUT A1 VDD VSS A2
+* expanding   symbol:  3bit_freq_divider.sym # of pins=8
+** sym_path: /foss/designs/PROJECTS/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/3bit_freq_divider.sym
+** sch_path: /foss/designs/PROJECTS/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/3bit_freq_divider.sch
+.subckt 3bit_freq_divider A0 CLK_IN EN CLK_OUT A1 VDD VSS A2
 *.ipin CLK_IN
 *.ipin EN
 *.ipin A0
@@ -86,10 +86,10 @@ x8 VDD GND nEQ2 net5 CLK Cout DIV_RST A2 freq_div_cell
 *.opin Cout
 *.iopin VSS
 *.iopin VDD
-x1 net2 net1 Cin VDD VSS Cout half_add
 x2 CLK net2 net1 net3 nRST VDD VSS dff_nclk
 x3 net2 BIT VDD VSS DIV sg13g2_xor2_1
 * noconn #net3
+x1 net2 net1 Cin VDD VSS Cout half_add
 .ends
 
 
@@ -112,7 +112,7 @@ x2 nCLK VDD VSS net1 sg13g2_inv_1
 * expanding   symbol:  half_add.sym # of pins=6
 ** sym_path: /foss/designs/PROJECTS/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/half_add.sym
 ** sch_path: /foss/designs/PROJECTS/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/half_add.sch
-.subckt half_add inA sum inB VDD VSS cout
+.subckt half_add inB sum inA VDD VSS cout
 *.ipin inA
 *.ipin inB
 *.opin sum

@@ -89,7 +89,7 @@ value="
 "}
 C {launcher.sym} -610 -430 0 0 {name=h5
 descr="load waves (press Ctrl + left click)" 
-tclcommand="xschem raw_read $netlist_dir/tran_3-bit_freq_divider.raw tran"
+tclcommand="xschem raw_read $netlist_dir/tran_3bit_freq_divider.raw tran"
 }
 C {gnd.sym} -60 270 0 0 {name=l1 lab=GND}
 C {lab_pin.sym} -60 -90 1 0 {name=p1 sig_type=std_logic lab=VDD}
@@ -130,10 +130,10 @@ pre_osdi ./psp103_nqs.osdi
 save all 
 tran 50p 350n
 
-write tran_3-bit_freq_divider.raw
+write tran_3bit_freq_divider.raw
 .endc
 "}
-C {3-bit_freq_divider.sym} -170 90 0 0 {name=x1}
+C {3bit_freq_divider.sym} -170 90 0 0 {name=x1}
 C {vsource.sym} -310 370 0 0 {name=Va0 value="dc \{A0\}" savecurrent=false}
 C {gnd.sym} -310 440 0 0 {name=l7 lab=GND}
 C {lab_pin.sym} -310 260 0 0 {name=p5 sig_type=std_logic lab=A0}
