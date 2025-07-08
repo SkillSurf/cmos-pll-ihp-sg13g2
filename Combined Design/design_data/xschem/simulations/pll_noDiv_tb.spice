@@ -1,4 +1,4 @@
-** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/pll_noDiv_tb.sch
+** sch_path: /foss/designs/PROJECTS/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/pll_noDiv_tb.sch
 **.subckt pll_noDiv_tb
 V1 VDD GND 1.2
 x3 VDD VDD GND GND VDD bias_n bias_p GND Bias_gen
@@ -16,7 +16,7 @@ x1 vout_cp vout GND loop_filter
 .control
 pre_osdi ./psp103_nqs.osdi
 save all
-tran 1n 1u uic
+tran 2n 10u 9u uic
 
 write tran_pll_noDiv_tb.raw
 .endc
@@ -33,7 +33,7 @@ write tran_pll_noDiv_tb.raw
 .meas tran tperiod_in TRIG v(ref_clk) VAL=0.6 FALL=1 TARG v(ref_clk) VAL=0.6 FALL=2
 .meas tran ref_freq PARAM = '1e-6/tperiod_in'
 
-.meas tran tperiod_out TRIG v(vco_out) VAL=0.6 FALL=50 TARG v(vco_out) VAL=0.6 FALL=51
+.meas tran tperiod_out TRIG v(vco_out) VAL=0.6 FALL=1 TARG v(vco_out) VAL=0.6 FALL=2
 .meas tran pll_freq PARAM = '1e-6/tperiod_out'
 
 
@@ -41,8 +41,8 @@ write tran_pll_noDiv_tb.raw
 **.ends
 
 * expanding   symbol:  Bias_gen.sym # of pins=8
-** sym_path: /foss/designs/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/Bias_gen.sym
-** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/Bias_gen.sch
+** sym_path: /foss/designs/PROJECTS/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/Bias_gen.sym
+** sch_path: /foss/designs/PROJECTS/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/Bias_gen.sch
 .subckt Bias_gen VPWR VPB VGND VNB en bias_n bias_p enb
 *.ipin en
 *.opin bias_n
@@ -70,8 +70,8 @@ XR2 VGND net1 rhigh w=1.0e-6 l=12.0e-6 m=1 b=0
 
 
 * expanding   symbol:  vco_new.sym # of pins=4
-** sym_path: /foss/designs/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/vco_new.sym
-** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/vco_new.sch
+** sym_path: /foss/designs/PROJECTS/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/vco_new.sym
+** sch_path: /foss/designs/PROJECTS/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/vco_new.sch
 .subckt vco_new VPWR VGND vctl Vout
 *.iopin VPWR
 *.iopin VGND
@@ -129,8 +129,8 @@ x12 VPWR VPWR feedback Vout VGND VGND vco_inverter
 
 
 * expanding   symbol:  PFD.sym # of pins=6
-** sym_path: /foss/designs/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/PFD.sym
-** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/PFD.sch
+** sym_path: /foss/designs/PROJECTS/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/PFD.sym
+** sch_path: /foss/designs/PROJECTS/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/PFD.sch
 .subckt PFD vdd up vss down ref_clk vco_clk
 *.iopin vdd
 *.ipin ref_clk
@@ -160,8 +160,8 @@ XM18 down net8 vss vss sg13_lv_nmos w=0.48u l=0.15u ng=1 m=1
 
 
 * expanding   symbol:  inverter.sym # of pins=4
-** sym_path: /foss/designs/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/inverter.sym
-** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/inverter.sch
+** sym_path: /foss/designs/PROJECTS/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/inverter.sym
+** sch_path: /foss/designs/PROJECTS/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/inverter.sch
 .subckt inverter VP IN OUT VN
 *.iopin VN
 *.iopin VP
@@ -173,8 +173,8 @@ XM2 OUT IN VP VP sg13_lv_pmos w=0.3u l=0.13u ng=1 m=1
 
 
 * expanding   symbol:  charge_pump.sym # of pins=7
-** sym_path: /foss/designs/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/charge_pump.sym
-** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/charge_pump.sch
+** sym_path: /foss/designs/PROJECTS/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/charge_pump.sym
+** sch_path: /foss/designs/PROJECTS/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/charge_pump.sch
 .subckt charge_pump VP bias_p up vout down bias_n VN
 *.ipin bias_p
 *.ipin up
@@ -192,8 +192,8 @@ x1 VP up net3 VN inverter
 
 
 * expanding   symbol:  loop_filter.sym # of pins=3
-** sym_path: /foss/designs/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/loop_filter.sym
-** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/loop_filter.sch
+** sym_path: /foss/designs/PROJECTS/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/loop_filter.sym
+** sch_path: /foss/designs/PROJECTS/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/loop_filter.sch
 .subckt loop_filter vin vout VN
 *.iopin VN
 *.ipin vin
@@ -210,8 +210,8 @@ XM6 VN vin VN VN sg13_lv_nmos w=1.5u l=0.650u ng=1 m=15
 
 
 * expanding   symbol:  vco_inverter.sym # of pins=6
-** sym_path: /foss/designs/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/vco_inverter.sym
-** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/vco_inverter.sch
+** sym_path: /foss/designs/PROJECTS/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/vco_inverter.sym
+** sch_path: /foss/designs/PROJECTS/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/vco_inverter.sch
 .subckt vco_inverter VPWR VPB A Y VNB VGND
 *.iopin VPWR
 *.iopin VGND

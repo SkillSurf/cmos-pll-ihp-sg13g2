@@ -5,7 +5,7 @@ V {}
 S {}
 E {}
 B 2 -80 -460 720 -60 {flags=graph
-y1=-0.026
+y1=-0.021
 y2=1.3
 ypos1=0
 ypos2=2
@@ -13,7 +13,7 @@ divy=5
 subdivy=1
 unity=1
 x1=1e-12
-x2=1e-06
+x2=2e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -26,15 +26,15 @@ logx=0
 logy=0
 hilight_wave=0}
 B 2 -80 -20 720 380 {flags=graph
-y1=0.011
-y2=1.2
+y1=0.0066
+y2=0.85
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
 x1=1e-12
-x2=1e-06
+x2=2e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -47,7 +47,7 @@ logx=0
 logy=0
 }
 B 2 -1860 -880 -1060 -480 {flags=graph
-y1=-0.06
+y1=-0.061
 y2=1.3
 ypos1=0
 ypos2=2
@@ -55,7 +55,7 @@ divy=5
 subdivy=1
 unity=1
 x1=1e-12
-x2=1e-06
+x2=2e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -68,7 +68,7 @@ logx=0
 logy=0
 }
 B 2 -1000 -880 -200 -480 {flags=graph
-y1=-0.067
+y1=-0.082
 y2=1.3
 ypos1=0
 ypos2=2
@@ -76,7 +76,7 @@ divy=5
 subdivy=1
 unity=1
 x1=1e-12
-x2=1e-06
+x2=2e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -97,7 +97,7 @@ divy=5
 subdivy=1
 unity=1
 x1=1e-12
-x2=1e-06
+x2=2e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -137,7 +137,7 @@ value="
 .control
 pre_osdi ./psp103_nqs.osdi
 save all 
-tran 100p 2u uic
+tran 200p 3u uic
 
 write tran_pll_2bitDiv_tb.raw
 .endc

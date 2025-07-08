@@ -19,7 +19,7 @@ Va1 A1 GND dc {A1}
 .control
 pre_osdi ./psp103_nqs.osdi
 save all
-tran 100p 2u uic
+tran 200p 3u uic
 
 write tran_pll_2bitDiv_tb.raw
 .endc
@@ -81,7 +81,7 @@ x6 nEN VDD VSS EN sg13g2_inv_1
 XM1 bias_p kick kick_sw VNB sg13_lv_nmos w=0.5u l=0.15u ng=1 m=1
 XM2 kick_sw en VGND VNB sg13_lv_nmos w=0.5u l=0.15u ng=1 m=1
 XM3 kick bias_n VGND VNB sg13_lv_nmos w=1.0u l=1.0u ng=1 m=1
-XM4 bias_p bias_n VGND VNB sg13_lv_nmos w=1.0u l=1.0u ng=1 m=1
+XM4 bias_p bias_n net1 VNB sg13_lv_nmos w=1.0u l=1.0u ng=1 m=1
 XM5 bias_n enb VGND VNB sg13_lv_nmos w=0.5u l=0.15u ng=1 m=1
 XM6 bias_n bias_n VGND VNB sg13_lv_nmos w=1.0u l=1.0u ng=1 m=1
 XM7 kick kick dio_mid VPB sg13_lv_pmos w=0.5u l=0.15u ng=1 m=1
@@ -90,7 +90,8 @@ XM9 bias_p en VPWR VPB sg13_lv_pmos w=0.5u l=0.15u ng=1 m=1
 XM10 bias_n bias_p res_bot VPB sg13_lv_pmos w=4.0u l=1.0u ng=1 m=1
 XM11 kick en VPWR VPB sg13_lv_pmos w=0.5u l=0.15u ng=1 m=1
 XM12 dio_mid dio_mid VPWR VPB sg13_lv_pmos w=0.5u l=0.15u ng=1 m=1
-XR1 res_bot VPWR rhigh w=1.0e-6 l=4.0e-6 m=1 b=0
+XR1 res_bot VPWR rhigh w=1.0e-6 l=5.0e-6 m=1 b=0
+XR2 VGND net1 rhigh w=1.0e-6 l=5.0e-6 m=1 b=0
 .ends
 
 
@@ -195,10 +196,10 @@ XM18 down net8 vss vss sg13_lv_nmos w=0.48u l=0.15u ng=1 m=1
 *.iopin VN
 *.iopin VP
 *.opin vout
-XM1 net1 bias_n VN VN sg13_lv_nmos w=0.15u l=0.13u ng=1 m=1
-XM2 vout down net1 VN sg13_lv_nmos w=0.15u l=0.13u ng=1 m=1
-XM3 vout net3 net2 VP sg13_lv_pmos w=0.3u l=0.13u ng=1 m=1
-XM4 net2 bias_p VP VP sg13_lv_pmos w=0.3u l=0.13u ng=1 m=1
+XM1 net1 bias_n VN VN sg13_lv_nmos w=1.2u l=0.13u ng=1 m=1
+XM2 vout down net1 VN sg13_lv_nmos w=1.2u l=0.13u ng=1 m=1
+XM3 vout net3 net2 VP sg13_lv_pmos w=0.15u l=0.13u ng=1 m=1
+XM4 net2 bias_p VP VP sg13_lv_pmos w=0.15u l=0.13u ng=1 m=1
 x1 VP up net3 VN inverter
 .ends
 
@@ -216,6 +217,8 @@ XM2 VN vout VN VN sg13_lv_nmos w=0.15u l=0.13u ng=1 m=1
 XM3 VN net1 VN VN sg13_lv_nmos w=0.5u l=0.650u ng=1 m=15
 XM4 VN vout VN VN sg13_lv_nmos w=0.15u l=0.13u ng=1 m=1
 XR2 vin net1 rhigh w=0.5e-6 l=0.96e-6 m=1 b=0
+XM5 VN vin VN VN sg13_lv_nmos w=1.5u l=0.650u ng=1 m=15
+XM6 VN vin VN VN sg13_lv_nmos w=1.5u l=0.650u ng=1 m=15
 .ends
 
 
