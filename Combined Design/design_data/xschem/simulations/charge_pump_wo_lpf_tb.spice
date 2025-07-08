@@ -1,13 +1,13 @@
-** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/charge_pump_tb.sch
-**.subckt charge_pump_tb
+** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/charge_pump_wo_lpf_tb.sch
+**.subckt charge_pump_wo_lpf_tb
 V1 VDD GND 1.2
-V4 up GND PULSE(0 1.2 .2NS .2NS .2NS 2NS 10NS)
-V5 down GND PULSE(0 1.2 .2NS .2NS .2NS 0.02NS 10NS)
+V4 up GND PULSE(0 1.2 .2NS .2NS .2NS 0.02NS 10NS)
+V5 down GND PULSE(0 1.2 .2NS .2NS .2NS 2NS 10NS)
 x2 VDD bias_p up vout_cp down bias_n GND charge_pump
-x1 vout_cp vout GND loop_filter
 x3 VDD VDD GND GND net1 bias_n bias_p net2 Bias_gen
 V7 net1 GND 1.2
 V8 net2 GND 0
+C1 vout_cp GND 100f ic=0.5 m=1
 **** begin user architecture code
 
 
@@ -40,22 +40,6 @@ XM2 vout down net1 VN sg13_lv_nmos w=1.2u l=0.13u ng=1 m=1
 XM3 vout net3 net2 VP sg13_lv_pmos w=0.15u l=0.13u ng=1 m=1
 XM4 net2 bias_p VP VP sg13_lv_pmos w=0.15u l=0.13u ng=1 m=1
 x1 VP up net3 VN inverter
-.ends
-
-
-* expanding   symbol:  loop_filter.sym # of pins=3
-** sym_path: /foss/designs/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/loop_filter.sym
-** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/loop_filter.sch
-.subckt loop_filter vin vout VN
-*.iopin VN
-*.ipin vin
-*.opin vout
-XR1 vin vout rhigh w=0.6e-6 l=0.96e-6 m=1 b=0
-XM1 VN net1 VN VN sg13_lv_nmos w=0.5u l=0.650u ng=1 m=15
-XM2 VN vout VN VN sg13_lv_nmos w=0.15u l=0.13u ng=1 m=1
-XM3 VN net1 VN VN sg13_lv_nmos w=0.5u l=0.650u ng=1 m=15
-XM4 VN vout VN VN sg13_lv_nmos w=0.15u l=0.13u ng=1 m=1
-XR2 vin net1 rhigh w=0.5e-6 l=0.96e-6 m=1 b=0
 .ends
 
 
