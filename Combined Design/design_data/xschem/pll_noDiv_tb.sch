@@ -13,7 +13,7 @@ divy=5
 subdivy=1
 unity=1
 x1=2e-12
-x2=1e-06
+x2=5e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -24,17 +24,17 @@ dataset=-1
 unitx=1
 logx=0
 logy=0
-hilight_wave=0}
+hilight_wave=-1}
 B 2 -80 -20 720 380 {flags=graph
-y1=0.89
-y2=1.2
+y1=0.018
+y2=0.96
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
 x1=2e-12
-x2=1e-06
+x2=5e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -55,7 +55,7 @@ divy=5
 subdivy=1
 unity=1
 x1=2e-12
-x2=1e-06
+x2=5e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -76,7 +76,7 @@ divy=5
 subdivy=1
 unity=1
 x1=2e-12
-x2=1e-06
+x2=5e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -97,7 +97,7 @@ divy=5
 subdivy=1
 unity=1
 x1=2e-12
-x2=1e-06
+x2=5e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -172,7 +172,7 @@ value="
 .control
 pre_osdi ./psp103_nqs.osdi
 save all 
-tran 1n 1u uic
+tran 1n 5u uic
 
 write tran_pll_noDiv_tb.raw
 .endc
@@ -205,7 +205,7 @@ tclcommand="xschem raw_read $netlist_dir/tran_pll_noDiv_tb.raw tran"
 C {vco_new.sym} -610 -260 0 0 {name=x4}
 C {vdd.sym} -610 -350 0 0 {name=l6 lab=VDD}
 C {PFD.sym} -1390 -260 0 0 {name=x5}
-C {vsource.sym} -1810 -180 0 0 {name=V2 value="PULSE(0 1.2 0.2n 0.2n 0.2n 15n 30n)" savecurrent=false}
+C {vsource.sym} -1810 -180 0 0 {name=V2 value="PULSE(0 1.2 0.2n 0.2n 0.2n 10n 20n)" savecurrent=false}
 C {gnd.sym} -1810 -130 0 0 {name=l10 lab=GND}
 C {lab_pin.sym} -1260 -300 1 0 {name=p12 sig_type=std_logic lab=up}
 C {lab_pin.sym} -1260 -220 3 0 {name=p13 sig_type=std_logic lab=down}

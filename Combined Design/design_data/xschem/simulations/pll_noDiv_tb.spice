@@ -4,7 +4,7 @@ V1 VDD GND 1.2
 x3 VDD VDD GND GND VDD bias_n bias_p GND Bias_gen
 x4 VDD GND vout net1 vco_new
 x5 VDD up GND down ref_clk vco_out PFD
-V2 ref_clk GND PULSE(0 1.2 0.2n 0.2n 0.2n 15n 30n)
+V2 ref_clk GND PULSE(0 1.2 0.2n 0.2n 0.2n 10n 20n)
 x6 VDD net1 vco_out GND inverter
 x2 VDD bias_p up vout_cp down bias_n GND charge_pump
 x1 vout_cp vout GND loop_filter
@@ -16,7 +16,7 @@ x1 vout_cp vout GND loop_filter
 .control
 pre_osdi ./psp103_nqs.osdi
 save all
-tran 1n 1u uic
+tran 1n 5u uic
 
 write tran_pll_noDiv_tb.raw
 .endc
@@ -204,6 +204,8 @@ XM2 VN vout VN VN sg13_lv_nmos w=0.15u l=0.13u ng=1 m=1
 XM3 VN net1 VN VN sg13_lv_nmos w=0.5u l=0.650u ng=1 m=15
 XM4 VN vout VN VN sg13_lv_nmos w=0.15u l=0.13u ng=1 m=1
 XR2 vin net1 rhigh w=0.5e-6 l=0.96e-6 m=1 b=0
+XM5 VN vin VN VN sg13_lv_nmos w=1.5u l=0.650u ng=1 m=15
+XM6 VN vin VN VN sg13_lv_nmos w=1.5u l=0.650u ng=1 m=15
 .ends
 
 
