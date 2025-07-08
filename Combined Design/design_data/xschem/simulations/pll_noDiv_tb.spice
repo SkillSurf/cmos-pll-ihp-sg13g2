@@ -16,7 +16,7 @@ x1 vout_cp vout GND loop_filter
 .control
 pre_osdi ./psp103_nqs.osdi
 save all
-tran 1n 5u uic
+tran 1n 1u uic
 
 write tran_pll_noDiv_tb.raw
 .endc
@@ -64,8 +64,8 @@ XM9 bias_p en VPWR VPB sg13_lv_pmos w=0.5u l=0.15u ng=1 m=1
 XM10 bias_n bias_p res_bot VPB sg13_lv_pmos w=4.0u l=1.0u ng=1 m=1
 XM11 kick en VPWR VPB sg13_lv_pmos w=0.5u l=0.15u ng=1 m=1
 XM12 dio_mid dio_mid VPWR VPB sg13_lv_pmos w=0.5u l=0.15u ng=1 m=1
-XR1 res_bot VPWR rhigh w=1.0e-6 l=5.0e-6 m=1 b=0
-XR2 VGND net1 rhigh w=1.0e-6 l=5.0e-6 m=1 b=0
+XR1 res_bot VPWR rhigh w=1.0e-6 l=12.0e-6 m=1 b=0
+XR2 VGND net1 rhigh w=1.0e-6 l=12.0e-6 m=1 b=0
 .ends
 
 

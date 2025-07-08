@@ -5,7 +5,7 @@ V {}
 S {}
 E {}
 B 2 -80 -460 720 -60 {flags=graph
-y1=-0.055
+y1=-0.076
 y2=1.3
 ypos1=0
 ypos2=2
@@ -13,7 +13,7 @@ divy=5
 subdivy=1
 unity=1
 x1=2e-12
-x2=5e-06
+x2=1.2e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -26,15 +26,15 @@ logx=0
 logy=0
 hilight_wave=-1}
 B 2 -80 -20 720 380 {flags=graph
-y1=0.018
-y2=0.96
+y1=0.0076
+y2=0.78
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
 x1=2e-12
-x2=5e-06
+x2=1.2e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -45,7 +45,7 @@ dataset=-1
 unitx=1
 logx=0
 logy=0
-}
+hilight_wave=0}
 B 2 -1860 -880 -1060 -480 {flags=graph
 y1=-0.034
 y2=1.3
@@ -55,7 +55,7 @@ divy=5
 subdivy=1
 unity=1
 x1=2e-12
-x2=5e-06
+x2=1.2e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -76,7 +76,7 @@ divy=5
 subdivy=1
 unity=1
 x1=2e-12
-x2=5e-06
+x2=1.2e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -97,7 +97,7 @@ divy=5
 subdivy=1
 unity=1
 x1=2e-12
-x2=5e-06
+x2=1.2e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -108,7 +108,7 @@ dataset=-1
 unitx=1
 logx=0
 logy=0
-hilight_wave=0}
+hilight_wave=-1}
 N -1760 200 -1760 220 {lab=GND}
 N -1760 120 -1760 140 {lab=VDD}
 N -880 -190 -880 -170 {lab=GND}
@@ -172,7 +172,7 @@ value="
 .control
 pre_osdi ./psp103_nqs.osdi
 save all 
-tran 1n 5u uic
+tran 1n 1u uic
 
 write tran_pll_noDiv_tb.raw
 .endc

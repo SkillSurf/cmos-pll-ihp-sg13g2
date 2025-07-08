@@ -207,7 +207,7 @@ C {ipin.sym} -1040 -100 0 0 {name=p26 lab=enb}
 C {opin.sym} -960 -100 0 0 {name=p32 lab=bias_p}
 C {sg13g2_pr/rhigh.sym} 260 -490 0 0 {name=R1
 w=1.0e-6
-l=5.0e-6
+l=12.0e-6
 model=rhigh
 spiceprefix=X
 b=0
@@ -215,7 +215,7 @@ m=1
 }
 C {sg13g2_pr/rhigh.sym} -180 230 0 0 {name=R2
 w=1.0e-6
-l=5.0e-6
+l=12.0e-6
 model=rhigh
 spiceprefix=X
 b=0
