@@ -5,14 +5,14 @@ V {}
 S {}
 E {}
 B 2 -80 -460 720 -60 {flags=graph
-y1=-0.03
+y1=-0.026
 y2=1.3
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=2e-12
+x1=1e-12
 x2=1e-06
 divx=5
 subdivx=1
@@ -33,7 +33,7 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=2e-12
+x1=1e-12
 x2=1e-06
 divx=5
 subdivx=1
@@ -47,14 +47,14 @@ logx=0
 logy=0
 }
 B 2 -1860 -880 -1060 -480 {flags=graph
-y1=-0.034
+y1=-0.06
 y2=1.3
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=2e-12
+x1=1e-12
 x2=1e-06
 divx=5
 subdivx=1
@@ -68,14 +68,14 @@ logx=0
 logy=0
 }
 B 2 -1000 -880 -200 -480 {flags=graph
-y1=-0.075
+y1=-0.067
 y2=1.3
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=2e-12
+x1=1e-12
 x2=1e-06
 divx=5
 subdivx=1
@@ -96,7 +96,7 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=2e-12
+x1=1e-12
 x2=1e-06
 divx=5
 subdivx=1
@@ -137,7 +137,7 @@ value="
 .control
 pre_osdi ./psp103_nqs.osdi
 save all 
-tran 1n 10u uic
+tran 100p 2u uic
 
 write tran_pll_2bitDiv_tb.raw
 .endc
