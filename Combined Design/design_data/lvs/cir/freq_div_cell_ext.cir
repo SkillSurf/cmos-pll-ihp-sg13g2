@@ -1,17 +1,17 @@
-* Extracted by KLayout with SG13G2 LVS runset on : 03/07/2025 20:23
+* Extracted by KLayout with SG13G2 LVS runset on : 09/07/2025 19:56
 
-.SUBCKT freq_div_cell Cin Cout CLK nRST BIT DIV
-X$1 Cin \$9 Cout \$10 \$7 \$11 half_add
-X$2 CLK \$9 \$10 nRST \$7 \$11 dff_nclk
-X$3 \$7 DIV \$11 BIT \$10 sg13g2_xor2_1
+.SUBCKT freq_div_cell Cin Cout CLK BIT DIV nRST
+X$1 Cin \$6 \$9 Cout \$7 \$11 half_add
+X$2 CLK \$9 \$6 \$7 nRST \$11 dff_nclk
+X$3 \$7 DIV \$11 BIT \$6 sg13g2_xor2_1
 .ENDS freq_div_cell
 
-.SUBCKT dff_nclk nCLK D Q nRST \$7 \$8
-X$1 \$8 \$7 nCLK \$6 sg13g2_inv_1
-X$2 \$7 nRST nQ Q D \$6 \$8 sg13g2_dfrbp_1
+.SUBCKT dff_nclk nCLK D Q \$6 nRST \$9
+X$1 \$9 \$6 nCLK \$5 sg13g2_inv_1
+X$2 \$6 nRST nQ Q D \$5 \$9 sg13g2_dfrbp_1
 .ENDS dff_nclk
 
-.SUBCKT half_add inA sum cout inB \$5 \$6
+.SUBCKT half_add inA inB sum cout \$5 \$6
 X$1 \$5 sum \$6 inB inA sg13g2_xor2_1
 X$2 \$6 \$5 cout inA inB sg13g2_and2_1
 .ENDS half_add

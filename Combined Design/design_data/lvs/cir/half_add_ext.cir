@@ -1,6 +1,6 @@
-* Extracted by KLayout with SG13G2 LVS runset on : 03/07/2025 08:40
+* Extracted by KLayout with SG13G2 LVS runset on : 09/07/2025 19:39
 
-.SUBCKT half_add inA sum cout inB
+.SUBCKT half_add inA inB sum cout
 X$1 \$5 sum \$6 inB inA sg13g2_xor2_1
 X$2 \$6 \$5 cout inA inB sg13g2_and2_1
 .ENDS half_add

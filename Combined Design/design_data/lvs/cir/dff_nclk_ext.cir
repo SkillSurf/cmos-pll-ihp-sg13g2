@@ -1,8 +1,8 @@
-* Extracted by KLayout with SG13G2 LVS runset on : 28/06/2025 08:48
+* Extracted by KLayout with SG13G2 LVS runset on : 09/07/2025 19:36
 
 .SUBCKT dff_nclk nCLK D nQ Q nRST
-X$1 \$8 \$7 nCLK \$6 sg13g2_inv_1
-X$2 \$7 nRST nQ Q D \$6 \$8 sg13g2_dfrbp_1
+X$1 \$9 \$6 nCLK \$5 sg13g2_inv_1
+X$2 \$6 nRST nQ Q D \$5 \$9 sg13g2_dfrbp_1
 .ENDS dff_nclk
 
 .SUBCKT sg13g2_dfrbp_1 VSS RESET_B Q_N Q D CLK VDD
