@@ -5,15 +5,15 @@ V {}
 S {}
 E {}
 B 2 -80 -460 720 -60 {flags=graph
-y1=-0.021
+y1=-0.033
 y2=1.3
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=1e-12
-x2=2e-06
+x1=9.0001233e-06
+x2=1e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -26,15 +26,15 @@ logx=0
 logy=0
 hilight_wave=0}
 B 2 -80 -20 720 380 {flags=graph
-y1=0.0066
-y2=0.85
+y1=0.68
+y2=0.77
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=1e-12
-x2=2e-06
+x1=9.0001233e-06
+x2=1e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -47,15 +47,15 @@ logx=0
 logy=0
 }
 B 2 -1860 -880 -1060 -480 {flags=graph
-y1=-0.061
+y1=-0.033
 y2=1.3
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=1e-12
-x2=2e-06
+x1=9.0001233e-06
+x2=1e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -68,15 +68,15 @@ logx=0
 logy=0
 }
 B 2 -1000 -880 -200 -480 {flags=graph
-y1=-0.082
+y1=-0.083
 y2=1.3
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=1e-12
-x2=2e-06
+x1=9.0001233e-06
+x2=1e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -96,8 +96,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=1e-12
-x2=2e-06
+x1=9.0001233e-06
+x2=1e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -137,7 +137,7 @@ value="
 .control
 pre_osdi ./psp103_nqs.osdi
 save all 
-tran 200p 3u uic
+tran 100p 20u 18u uic
 
 write tran_pll_2bitDiv_tb.raw
 .endc
@@ -155,7 +155,7 @@ value="
 .meas tran tperiod_in TRIG v(clk_in) VAL=0.6 FALL=1 TARG v(clk_in) VAL=0.6 FALL=2
 .meas tran ref_freq PARAM = '1e-6/tperiod_in'
 
-.meas tran tperiod_out TRIG v(clk_out) VAL=0.6 FALL=50 TARG v(clk_out) VAL=0.6 FALL=51
+.meas tran tperiod_out TRIG v(clk_out) VAL=0.6 FALL=1 TARG v(clk_out) VAL=0.6 FALL=2
 .meas tran pll_freq PARAM = '1e-6/tperiod_out'
 "}
 C {pll_2bitDiv.sym} -1220 -200 0 0 {name=x1}

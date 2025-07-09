@@ -153,7 +153,7 @@ value="
 .control
 pre_osdi ./psp103_nqs.osdi
 save all 
-tran 100p 1u uic
+tran 100p 10u 9u uic
 
 write tran_pll_3bitDiv_tb.raw
 .endc
@@ -171,7 +171,7 @@ value="
 .meas tran tperiod_in TRIG v(clk_in) VAL=0.6 FALL=1 TARG v(clk_in) VAL=0.6 FALL=2
 .meas tran ref_freq PARAM = '1e-6/tperiod_in'
 
-.meas tran tperiod_out TRIG v(clk_out) VAL=0.6 FALL=50 TARG v(clk_out) VAL=0.6 FALL=51
+.meas tran tperiod_out TRIG v(clk_out) VAL=0.6 FALL=1 TARG v(clk_out) VAL=0.6 FALL=2
 .meas tran pll_freq PARAM = '1e-6/tperiod_out'
 "}
 C {vdd.sym} -1180 -160 0 0 {name=l3 lab=VDD}
