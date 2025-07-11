@@ -4,10 +4,8 @@ K {}
 V {}
 S {}
 E {}
-N -150 -60 -150 -30 {lab=GND}
 N -290 -180 -250 -180 {lab=#net1}
 N -150 20 -150 60 {lab=VDD}
-N -150 220 -150 250 {lab=GND}
 N -150 -260 -150 -220 {lab=VDD}
 N -290 -100 -290 100 {lab=#net2}
 N -290 -100 -250 -100 {lab=#net2}
@@ -33,9 +31,6 @@ N 420 220 420 340 {lab=#net4}
 N 540 80 580 80 {lab=CLK_OUT}
 N 540 50 540 80 {lab=CLK_OUT}
 N 500 80 540 80 {lab=CLK_OUT}
-N 300 -40 300 -10 {lab=GND}
-N 380 -40 380 20 {lab=GND}
-N 300 -40 380 -40 {lab=GND}
 N -620 20 -580 20 {lab=CLK}
 N -780 40 -740 40 {lab=EN}
 N -780 0 -740 0 {lab=CLK_IN}
@@ -47,7 +42,6 @@ N 440 -40 440 20 {lab=VDD}
 N -740 320 -660 320 {lab=VSS}
 N -740 280 -660 280 {lab=VDD}
 N -150 300 -150 340 {lab=VDD}
-N -150 500 -150 530 {lab=GND}
 N -290 180 -290 380 {lab=#net5}
 N -290 380 -250 380 {lab=#net5}
 N -290 460 -290 500 {lab=Cout}
@@ -62,11 +56,13 @@ N 0 180 40 180 {lab=nEQ2}
 N 0 100 40 100 {lab=nEQ0}
 N -40 140 -40 180 {lab=nEQ1}
 N -70 140 -40 140 {lab=nEQ1}
+N -150 -60 -150 -20 {lab=VSS}
+N -150 220 -150 260 {lab=VSS}
+N -150 500 -150 540 {lab=VSS}
+N 380 -40 380 20 {lab=VSS}
 C {freq_div_cell.sym} -150 -140 0 0 {name=x1}
 C {freq_div_cell.sym} -150 140 0 0 {name=x2}
-C {gnd.sym} -150 -30 0 0 {name=l4 lab=GND}
 C {sg13g2_stdcells/sg13g2_tiehi.sym} -400 -220 0 0 {name=x3 VDD=VDD VSS=VSS prefix=sg13g2_ }
-C {gnd.sym} -150 250 0 0 {name=l1 lab=GND}
 C {lab_pin.sym} -150 20 2 0 {name=p5 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} -150 -260 2 0 {name=p1 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} -330 -160 0 0 {name=p3 sig_type=std_logic lab=CLK}
@@ -78,7 +74,6 @@ C {lab_pin.sym} -40 180 3 0 {name=p11 sig_type=std_logic lab=nEQ1}
 C {dff_nclk.sym} 420 110 0 0 {name=x5}
 C {sg13g2_stdcells/sg13g2_tiehi.sym} 350 340 0 0 {name=x6 VDD=VDD VSS=VSS prefix=sg13g2_ }
 C {noconn.sym} 540 50 1 0 {name=l2}
-C {gnd.sym} 300 -10 0 0 {name=l6 lab=GND}
 C {lab_pin.sym} 200 180 3 0 {name=p13 sig_type=std_logic lab=DIV_RST}
 C {sg13g2_stdcells/sg13g2_nand2_1.sym} -680 20 0 0 {name=x7 VDD=VDD VSS=VSS prefix=sg13g2_ }
 C {ipin.sym} -780 0 0 0 {name=p14 lab=CLK_IN}
@@ -92,9 +87,8 @@ C {iopin.sym} -660 320 0 0 {name=p62 lab=VSS}
 C {iopin.sym} -660 280 0 0 {name=p66 lab=VDD}
 C {lab_pin.sym} -740 280 0 0 {name=p18 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} -740 320 0 0 {name=p19 sig_type=std_logic lab=VSS}
-C {sg13g2_stdcells/sg13g2_or3_1.sym} 100 140 0 0 {name=x4 VDD=VDD VSS=VSS prefix=sg13g2_ }
+C {sg13g2_stdcells/sg13g2_or3_1.sym} 100 140 2 1 {name=x4 VDD=VDD VSS=VSS prefix=sg13g2_ }
 C {freq_div_cell.sym} -150 420 0 0 {name=x8}
-C {gnd.sym} -150 530 0 0 {name=l3 lab=GND}
 C {lab_pin.sym} -150 300 2 0 {name=p20 sig_type=std_logic lab=VDD}
 C {noconn.sym} -330 460 0 0 {name=l7}
 C {lab_pin.sym} -290 500 3 0 {name=p21 sig_type=std_logic lab=Cout}
@@ -102,3 +96,7 @@ C {lab_pin.sym} -330 400 0 0 {name=p22 sig_type=std_logic lab=CLK}
 C {lab_pin.sym} -410 420 0 0 {name=p23 sig_type=std_logic lab=DIV_RST}
 C {lab_pin.sym} 0 420 2 0 {name=p24 sig_type=std_logic lab=nEQ2}
 C {ipin.sym} -530 440 0 0 {name=p25 lab=A2}
+C {lab_pin.sym} -150 -20 0 0 {name=p2 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} -150 260 0 0 {name=p26 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} -150 540 0 0 {name=p27 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} 380 -40 0 0 {name=p28 sig_type=std_logic lab=VSS}
