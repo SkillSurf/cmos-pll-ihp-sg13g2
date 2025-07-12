@@ -5,15 +5,15 @@ V {}
 S {}
 E {}
 B 2 -80 -460 720 -60 {flags=graph
-y1=-0.028
-y2=1.3
+y1=-0.0014
+y2=0.77
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
 x1=2e-12
-x2=3.9721869e-07
+x2=6.6271873e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -26,15 +26,15 @@ logx=0
 logy=0
 hilight_wave=0}
 B 2 -80 -20 720 380 {flags=graph
-y1=0.012
-y2=1.3
+y1=0.0068
+y2=0.42
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
 x1=2e-12
-x2=3.9721869e-07
+x2=6.6271873e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -47,7 +47,7 @@ logx=0
 logy=0
 }
 B 2 -1860 -880 -1060 -480 {flags=graph
-y1=-0.045
+y1=-0.012
 y2=1.3
 ypos1=0
 ypos2=2
@@ -55,7 +55,7 @@ divy=5
 subdivy=1
 unity=1
 x1=2e-12
-x2=3.9721869e-07
+x2=6.6271873e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -68,15 +68,15 @@ logx=0
 logy=0
 }
 B 2 -1000 -880 -200 -480 {flags=graph
-y1=-0.014
-y2=1.3
+y1=-0.0081
+y2=0.8
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
 x1=2e-12
-x2=3.9721869e-07
+x2=6.6271873e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -97,7 +97,7 @@ divy=5
 subdivy=1
 unity=1
 x1=2e-12
-x2=3.9721869e-07
+x2=6.6271873e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -146,14 +146,17 @@ N -1280 -400 -1280 -130 {lab=B0}
 C {vsource.sym} -1830 20 0 0 {name=V1 value=1.2 savecurrent=false}
 C {gnd.sym} -1830 70 0 0 {name=l1 lab=GND}
 C {vdd.sym} -1830 -30 0 0 {name=l2 lab=VDD}
-C {devices/code_shown.sym} -839 -326 0 0 {name=NGSPICE only_toplevel=true 
+C {devices/code_shown.sym} -859 -326 0 0 {name=NGSPICE only_toplevel=true 
 value="
 .param temp=27
+
+.options method=gear
+.options gmin=1e-10
 
 .control
 pre_osdi ./psp103_nqs.osdi
 save all 
-tran 100p 10u 9u uic
+tran 10n 20u uic maxstep=10n
 
 write tran_pll_3bitDiv_tb.raw
 .endc

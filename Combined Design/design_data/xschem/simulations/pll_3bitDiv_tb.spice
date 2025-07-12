@@ -20,10 +20,13 @@ Vb2 B2 GND dc {B2}
 
 .param temp=27
 
+.options method=gear
+.options gmin=1e-10
+
 .control
 pre_osdi ./psp103_nqs.osdi
 save all
-tran 100p 10u 9u uic
+tran 10n 20u uic maxstep=10n
 
 write tran_pll_3bitDiv_tb.raw
 .endc
@@ -251,15 +254,15 @@ XM6 VN vin VN VN sg13_lv_nmos w=1.5u l=0.650u ng=1 m=15
 *.iopin VSS
 *.iopin VDD
 *.ipin A2
-x1 VDD GND nEQ0 net1 CLK net2 DIV_RST A0 freq_div_cell
-x2 VDD GND nEQ1 net2 CLK net5 DIV_RST A1 freq_div_cell
+x1 VDD VSS nEQ0 net1 CLK net2 DIV_RST A0 freq_div_cell
+x2 VDD VSS nEQ1 net2 CLK net5 DIV_RST A1 freq_div_cell
 x3 net1 VDD VSS sg13g2_tiehi
-x5 DIV_RST CLK_OUT net3 net3 net4 VDD GND dff_nclk
+x5 DIV_RST CLK_OUT net3 net3 net4 VDD VSS dff_nclk
 x6 net4 VDD VSS sg13g2_tiehi
 * noconn CLK_OUT
 x7 CLK_IN EN VDD VSS CLK sg13g2_nand2_1
-x4 nEQ0 nEQ1 nEQ2 VDD VSS DIV_RST sg13g2_or3_1
-x8 VDD GND nEQ2 net5 CLK Cout DIV_RST A2 freq_div_cell
+x4 nEQ2 nEQ1 nEQ0 VDD VSS DIV_RST sg13g2_or3_1
+x8 VDD VSS nEQ2 net5 CLK Cout DIV_RST A2 freq_div_cell
 * noconn Cout
 .ends
 
