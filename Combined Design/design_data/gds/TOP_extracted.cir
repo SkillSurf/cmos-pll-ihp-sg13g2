@@ -1,24 +1,25 @@
-* Extracted by KLayout with SG13G2 LVS runset on : 06/07/2025 12:18
+* Extracted by KLayout with SG13G2 LVS runset on : 13/07/2025 18:41
 
 .SUBCKT TOP
-X$1 12 10 8 1 10 pmos$1
-X$2 12 7 8 1 7 pmos$2
-X$3 5 11 5 8 1 7 7 pmos
-X$4 7 6 1 9 nmos$1
-X$5 9 3 1 5 nmos$2
-X$6 12 11 1 rppd
-X$7 7 3 1 5 nmos$2
-X$8 5 3 1 5 nmos$2
-X$9 5 3 1 2 nmos$1
-X$10 6 3 1 4 nmos$1
-X$11 12 7 8 1 4 pmos$1
-X$12 10 9 8 1 9 pmos$1
-X$13 12 9 8 1 4 pmos$1
+X$1 13 12 9 1 12 pmos$1
+X$2 13 8 9 1 8 pmos$2
+X$3 6 11 6 9 1 8 8 pmos
+X$4 8 7 1 10 nmos$1
+X$5 10 2 1 6 nmos$2
+X$6 13 11 1 rppd$1
+X$7 2 3 1 rppd$1
+X$8 8 3 1 6 nmos$2
+X$9 6 2 1 6 nmos$2
+X$10 6 2 1 4 nmos$1
+X$11 7 2 1 5 nmos$1
+X$12 13 8 9 1 5 pmos$1
+X$13 12 10 9 1 10 pmos$1
+X$14 13 10 9 1 5 pmos$1
 .ENDS TOP
 
-.SUBCKT rppd 1 2 3
-R$1 1 2 rppd w=1u l=4u ps=0 b=0 m=1
-.ENDS rppd
+.SUBCKT rppd$1 1 2 3
+R$1 1 2 rppd w=1u l=12u ps=0 b=0 m=1
+.ENDS rppd$1
 
 .SUBCKT nmos$2 1 2 3 4
 M$1 1 4 2 3 sg13_lv_nmos L=1u W=1u AS=0.34p AD=0.34p PS=2.68u PD=2.68u
