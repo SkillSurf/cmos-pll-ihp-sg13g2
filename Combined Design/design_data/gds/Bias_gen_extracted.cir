@@ -1,8 +1,8 @@
-* Extracted by KLayout with SG13G2 LVS runset on : 13/07/2025 18:45
+* Extracted by KLayout with SG13G2 LVS runset on : 13/07/2025 18:57
 
 .SUBCKT Bias_gen
-R$1 13 11 rppd w=1u l=12u ps=0 b=0 m=1
-R$2 2 3 rppd w=1u l=12u ps=0 b=0 m=1
+R$1 11 13 rhigh w=1u l=12u ps=0 b=0 m=1
+R$2 3 2 rhigh w=1u l=12u ps=0 b=0 m=1
 M$3 10 6 2 1 sg13_lv_nmos L=1u W=1u AS=0.34p AD=0.34p PS=2.68u PD=2.68u
 M$4 8 6 3 1 sg13_lv_nmos L=1u W=1u AS=0.34p AD=0.34p PS=2.68u PD=2.68u
 M$5 6 6 2 1 sg13_lv_nmos L=1u W=1u AS=0.34p AD=0.34p PS=2.68u PD=2.68u
