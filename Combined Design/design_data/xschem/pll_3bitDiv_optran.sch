@@ -4,111 +4,6 @@ K {}
 V {}
 S {}
 E {}
-B 2 -80 -460 720 -60 {flags=graph
-y1=-0.012
-y2=1.3
-ypos1=0
-ypos2=2
-divy=5
-subdivy=1
-unity=1
-x1=2e-12
-x2=1.8656653e-06
-divx=5
-subdivx=1
-xlabmag=1.0
-ylabmag=1.0
-node="clk_out"
-color="6"
-dataset=-1
-unitx=1
-logx=0
-logy=0
-hilight_wave=0}
-B 2 -80 -20 720 380 {flags=graph
-y1=-0.018
-y2=0.84
-ypos1=0
-ypos2=2
-divy=5
-subdivy=1
-unity=1
-x1=2e-12
-x2=1.8656653e-06
-divx=5
-subdivx=1
-xlabmag=1.0
-ylabmag=1.0
-node=x1.vctrl
-color=8
-dataset=-1
-unitx=1
-logx=0
-logy=0
-}
-B 2 -1860 -880 -1060 -480 {flags=graph
-y1=-0.017
-y2=1.3
-ypos1=0
-ypos2=2
-divy=5
-subdivy=1
-unity=1
-x1=2e-12
-x2=1.8656653e-06
-divx=5
-subdivx=1
-xlabmag=1.0
-ylabmag=1.0
-node=x1.up
-color=15
-dataset=-1
-unitx=1
-logx=0
-logy=0
-}
-B 2 -1000 -880 -200 -480 {flags=graph
-y1=-0.018
-y2=0.31
-ypos1=0
-ypos2=2
-divy=5
-subdivy=1
-unity=1
-x1=2e-12
-x2=1.8656653e-06
-divx=5
-subdivx=1
-xlabmag=1.0
-ylabmag=1.0
-node=x1.dn
-color=18
-dataset=-1
-unitx=1
-logx=0
-logy=0
-}
-B 2 -80 -900 720 -500 {flags=graph
-y1=0
-y2=1.3
-ypos1=0
-ypos2=2
-divy=5
-subdivy=1
-unity=1
-x1=2e-12
-x2=1.8656653e-06
-divx=5
-subdivx=1
-xlabmag=1.0
-ylabmag=1.0
-node="clk_in"
-color="4"
-dataset=-1
-unitx=1
-logx=0
-logy=0
-hilight_wave=0}
 N -1830 50 -1830 70 {lab=GND}
 N -1830 -30 -1830 -10 {lab=VDD}
 N -1660 50 -1660 70 {lab=GND}
@@ -146,37 +41,22 @@ N -1280 -400 -1280 -130 {lab=B0}
 C {vsource.sym} -1830 20 0 0 {name=V1 value=1.2 savecurrent=false}
 C {gnd.sym} -1830 70 0 0 {name=l1 lab=GND}
 C {vdd.sym} -1830 -30 0 0 {name=l2 lab=VDD}
-C {devices/code_shown.sym} -909 -356 0 0 {name=NGSPICE only_toplevel=true 
+C {devices/code_shown.sym} -909 -326 0 0 {name=OP_POINT only_toplevel=true 
 value="
 .param temp=27
-.options reltol=1e-3 abstol=1e-9 vntol=1e-6
-.options method=gear
-.options gmin=1e-10
 
+.option savecurrents
+.save all
 .control
-save all
- 
-tran 100p 20u
-
-write tran_pll_3bitDiv_tb.raw
+optran 0 0 0 10n 10u 0
+op
+write pll_3bitDiv_optran.raw
 .endc
 
 "}
-C {launcher.sym} -333 -139 0 0 {name=h5
-descr="load waves" 
-tclcommand="xschem raw_read $netlist_dir/tran_pll_3bitDiv_tb.raw tran"
-}
-C {vsource.sym} -1660 20 0 0 {name=V2 value="PULSE(0 1.2 0.2n 5n 5n 50n 100n)" savecurrent=false}
+C {vsource.sym} -1660 20 0 0 {name=V2 value="PULSE(0 1.2 0.2n 0.2n 0.2n 50n 100n)" savecurrent=false}
 C {gnd.sym} -1660 70 0 0 {name=l10 lab=GND}
 C {lab_pin.sym} -1660 -70 0 0 {name=p15 sig_type=std_logic lab=CLK_IN}
-C {code.sym} -410 -330 0 0 {name=MEASURE only_toplevel=false 
-value="
-.meas tran tperiod_in TRIG v(clk_in) VAL=0.6 FALL=1 TARG v(clk_in) VAL=0.6 FALL=2
-.meas tran ref_freq PARAM = '1e-6/tperiod_in'
-
-.meas tran tperiod_out TRIG v(clk_out) VAL=0.6 FALL=1 TARG v(clk_out) VAL=0.6 FALL=2
-.meas tran pll_freq PARAM = '1e-6/tperiod_out'
-"}
 C {vdd.sym} -1180 -160 0 0 {name=l3 lab=VDD}
 C {gnd.sym} -1180 60 0 0 {name=l4 lab=GND}
 C {gnd.sym} -1400 20 0 0 {name=l5 lab=GND}
@@ -188,13 +68,13 @@ C {lab_pin.sym} -1360 80 0 0 {name=p3 sig_type=std_logic lab=A0}
 C {lab_pin.sym} -1250 100 0 0 {name=p4 sig_type=std_logic lab=A1}
 C {lab_pin.sym} -1030 -50 2 0 {name=p16 sig_type=std_logic lab=CLK_OUT}
 C {noconn.sym} -1070 -80 3 1 {name=l8}
-C {devices/code_shown.sym} -1660 180 0 0 {name=PARAMS_A only_toplevel=true 
+C {devices/code_shown.sym} -550 -170 0 0 {name=PARAMS_A only_toplevel=true 
 value="
 .param A0 = 1.2
 .param A1 = 0
 .param A2 = 0
 "}
-C {devices/code_shown.sym} -940 130 0 0 {name=MODEL
+C {devices/code_shown.sym} -1010 130 0 0 {name=MODEL
 only_toplevel=true
 format="tcleval( @value )"
 value="
@@ -216,7 +96,7 @@ C {gnd.sym} -1400 -180 0 0 {name=l13 lab=GND}
 C {lab_pin.sym} -1280 -400 2 0 {name=p2 sig_type=std_logic lab=B0}
 C {lab_pin.sym} -1250 -360 2 0 {name=p5 sig_type=std_logic lab=B1}
 C {lab_pin.sym} -1220 -320 2 0 {name=p6 sig_type=std_logic lab=B2}
-C {devices/code_shown.sym} -1850 -310 0 0 {name=PARAMS_B only_toplevel=true 
+C {devices/code_shown.sym} -550 -330 0 0 {name=PARAMS_B only_toplevel=true 
 value="
 .param B0 = 1.2
 .param B1 = 0
