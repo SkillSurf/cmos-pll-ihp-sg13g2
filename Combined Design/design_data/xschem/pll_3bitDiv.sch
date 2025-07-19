@@ -71,7 +71,6 @@ C {lab_pin.sym} -770 -230 3 0 {name=p1 sig_type=std_logic lab=VCTRL}
 C {Bias_gen.sym} -1320 160 0 0 {name=x3}
 C {lab_pin.sym} -1150 140 2 0 {name=p2 sig_type=std_logic lab=BIAS_N}
 C {lab_pin.sym} -1150 180 2 0 {name=p10 sig_type=std_logic lab=BIAS_P}
-C {vco_new.sym} -610 -260 0 0 {name=x4}
 C {PFD.sym} -1390 -260 0 0 {name=x5}
 C {lab_pin.sym} -1260 -300 1 0 {name=p12 sig_type=std_logic lab=UP}
 C {lab_pin.sym} -1260 -220 3 0 {name=p13 sig_type=std_logic lab=DN}
@@ -117,3 +116,4 @@ C {ipin.sym} -180 -70 3 0 {name=p38 lab=Y1}
 C {ipin.sym} -140 -70 3 0 {name=p39 lab=Y2}
 C {lab_pin.sym} -400 -200 0 0 {name=p40 sig_type=std_logic lab=EN}
 C {lab_pin.sym} -440 -290 1 0 {name=p41 sig_type=std_logic lab=VCO_OUT}
+C {11Stage_vco_new.sym} -610 -260 0 0 {name=x8}
