@@ -16,6 +16,7 @@ N 1250 -80 1310 -80 {lab=Vout}
 C {devices/code_shown.sym} 1350 -250 0 0 {name=MODEL only_toplevel=true
 format="tcleval( @value )"
 value=".lib cornerMOSlv.lib mos_tt
+.lib $::SG13G2_MODELS/cornerCAP.lib cap_typ_stat
 "}
 C {devices/code_shown.sym} 1410 -150 0 0 {name=NGSPICE only_toplevel=true 
 value="
@@ -23,16 +24,16 @@ value="
 .control
 save all
 .options maxstep=10n reltol=1e-3 abstol=1e-6
-tran 50p 10u
-plot v(Vout) xlimit 500n 10u
+tran 50p 500n
+plot v(Vout) xlimit 0 500n
 fft v(Vout)
 let vmag = db(mag(v(Vout)))
-plot vmag xlabel 'Frequency (Hz)' xlimit 0 10Meg
+plot vmag xlabel 'Frequency (Hz)' xlimit 0 100Meg
 wrdata fft_output(Vcon=0.4).txt vmag
 .endc
 "}
 C {vsource.sym} 770 -40 0 0 {name=VPWR value=1.2 savecurrent=false}
-C {vsource.sym} 850 -40 0 0 {name=vctl value=0.4 savecurrent=false}
+C {vsource.sym} 850 -40 0 0 {name=vctl value=1 savecurrent=false}
 C {gnd.sym} 850 80 0 0 {name=l2 lab=GND}
 C {gnd.sym} 770 80 0 0 {name=l9 lab=GND}
 C {opin.sym} 1310 -80 0 0 {name=p17 lab=Vout}
