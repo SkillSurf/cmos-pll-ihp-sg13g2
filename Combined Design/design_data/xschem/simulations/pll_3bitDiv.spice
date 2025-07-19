@@ -228,6 +228,7 @@ MX5 net5 B VDD VDD sg13_lv_pmos m=1 w=1.12e-06 l=130.00n ng=1
 MX7 X net1 net5 VDD sg13_lv_pmos m=1 w=1.12e-06 l=130.00n ng=1
 .ENDS
 
+
 .SUBCKT sg13g2_and2_1 A B VDD VSS X
 *.PININFO A:I B:I X:O VDD:B VSS:B
 MX0 net4 A net2 VSS sg13_lv_nmos m=1 w=640.00n l=130.00n ng=1
@@ -237,6 +238,7 @@ MX1 net4 B VDD VDD sg13_lv_pmos m=1 w=840.00n l=130.00n ng=1
 MX4 VDD net4 X VDD sg13_lv_pmos m=1 w=1.12e-06 l=130.00n ng=1
 MX5 net4 A VDD VDD sg13_lv_pmos m=1 w=840.00n l=130.00n ng=1
 .ENDS
+
 
 .SUBCKT sg13g2_dfrbp_1 CLK D Q Q_N RESET_B VDD VSS
 *.PININFO CLK:I D:I RESET_B:I Q:O Q_N:O VDD:B VSS:B
@@ -276,11 +278,13 @@ MP13 net3 net2 VDD VDD sg13_lv_pmos m=1 w=420.00n l=130.00n ng=1
 MP5 net1 net5 VDD VDD sg13_lv_pmos m=1 w=840.00n l=130.00n ng=1
 .ENDS
 
+
 .SUBCKT sg13g2_inv_1 A VDD VSS Y
 *.PININFO A:I Y:O VDD:B VSS:B
 MX1 Y A VSS VSS sg13_lv_nmos m=1 w=740.00n l=130.00n ng=1
 MX0 Y A VDD VDD sg13_lv_pmos m=1 w=1.12u l=130.00n ng=1
 .ENDS
+
 
 .SUBCKT sg13g2_tiehi L_HI VDD VSS
 *.PININFO L_HI:O VDD:B VSS:B
@@ -290,6 +294,7 @@ MMP2 L_HI net3 VDD VDD sg13_lv_pmos m=1 w=1.155u l=130.00n ng=1
 MMP1 net2 net1 VDD VDD sg13_lv_pmos m=1 w=660.0n l=130.00n ng=1
 .ENDS
 
+
 .SUBCKT sg13g2_nand2_1 A B VDD VSS Y
 *.PININFO A:I B:I Y:O VDD:B VSS:B
 MP1 Y B VDD VDD sg13_lv_pmos m=1 w=1.12e-06 l=130.00n ng=1
@@ -297,6 +302,7 @@ MP0 Y A VDD VDD sg13_lv_pmos m=1 w=1.12e-06 l=130.00n ng=1
 MN1 net1 B VSS VSS sg13_lv_nmos m=1 w=740.00n l=130.00n ng=1
 MN0 Y A net1 VSS sg13_lv_nmos m=1 w=740.00n l=130.00n ng=1
 .ENDS
+
 
 .SUBCKT sg13g2_or3_1 A B C VDD VSS X
 *.PININFO A:I B:I C:I X:O VDD:B VSS:B
