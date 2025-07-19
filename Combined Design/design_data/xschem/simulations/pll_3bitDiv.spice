@@ -28,8 +28,8 @@ M9 bias_p en VPWR VPB sg13_lv_pmos w=0.5u l=0.15u ng=1 m=1
 M10 bias_n bias_p res_bot VPB sg13_lv_pmos w=4.0u l=1.0u ng=1 m=1
 M11 kick en VPWR VPB sg13_lv_pmos w=0.5u l=0.15u ng=1 m=1
 M12 dio_mid dio_mid VPWR VPB sg13_lv_pmos w=0.5u l=0.15u ng=1 m=1
-XR1 res_bot VPWR rhigh w=1.0e-6 l=12.0e-6 m=1 b=0
-XR2 VGND net1 rhigh w=1.0e-6 l=12.0e-6 m=1 b=0
+R1 res_bot VPWR rhigh w=1.0e-6 l=12.0e-6 m=1 b=0
+R2 VGND net1 rhigh w=1.0e-6 l=12.0e-6 m=1 b=0
 .ENDS
 
 
@@ -77,12 +77,12 @@ x1 VP up net3 VN inverter
 ** sch_path: /foss/designs/PROJECTS/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/loop_filter.sch
 .SUBCKT loop_filter vin vout VN
 *.PININFO VN:B vin:I vout:O
-XR1 vin vout rhigh w=0.6e-6 l=0.96e-6 m=1 b=0
+R1 vin vout rhigh w=0.6e-6 l=0.96e-6 m=1 b=0
 M1 VN net1 VN VN sg13_lv_nmos w=0.5u l=0.650u ng=1 m=15
 M2 VN vout VN VN sg13_lv_nmos w=0.15u l=0.13u ng=1 m=1
 M3 VN net1 VN VN sg13_lv_nmos w=0.5u l=0.650u ng=1 m=15
 M4 VN vout VN VN sg13_lv_nmos w=0.15u l=0.13u ng=1 m=1
-XR2 vin net1 rhigh w=0.5e-6 l=0.96e-6 m=1 b=0
+R2 vin net1 rhigh w=0.5e-6 l=0.96e-6 m=1 b=0
 M5 VN vin VN VN sg13_lv_nmos w=1.5u l=0.650u ng=1 m=15
 M6 VN vin VN VN sg13_lv_nmos w=1.5u l=0.650u ng=1 m=15
 .ENDS
@@ -147,18 +147,18 @@ x10 net31 VPWR net27 net32 VGND net28 vco_inverter
 x11 net30 VPWR net32 feedback VGND net29 vco_inverter
 x12 VPWR VPWR feedback Vout VGND VGND vco_inverter
 M1 net8 vctl VGND VGND sg13_lv_nmos w=0.6u l=0.13u ng=1 m=1
-XC12 VGND net4 cap_cmim w=6.99e-6 l=6.99e-6 m=1
-XC1 VGND net5 cap_cmim w=6.99e-6 l=6.99e-6 m=1
-XC2 VGND net6 cap_cmim w=6.99e-6 l=6.99e-6 m=1
-XC3 VGND net14 cap_cmim w=6.99e-6 l=6.99e-6 m=1
-XC4 VGND net26 cap_cmim w=6.99e-6 l=6.99e-6 m=1
-XC5 VGND net17 cap_cmim w=6.99e-6 l=6.99e-6 m=1
-XC6 VGND net18 cap_cmim w=6.99e-6 l=6.99e-6 m=1
-XC7 VGND net25 cap_cmim w=6.99e-6 l=6.99e-6 m=1
-XC8 VGND net27 cap_cmim w=6.99e-6 l=6.99e-6 m=1
-XC9 VGND net32 cap_cmim w=6.99e-6 l=6.99e-6 m=1
-XC10 VGND feedback cap_cmim w=6.99e-6 l=6.99e-6 m=1
-XC11 VGND Vout cap_cmim w=6.99e-6 l=6.99e-6 m=2
+C12 VGND net4 cap_cmim w=6.99e-6 l=6.99e-6 m=1
+C1 VGND net5 cap_cmim w=6.99e-6 l=6.99e-6 m=1
+C2 VGND net6 cap_cmim w=6.99e-6 l=6.99e-6 m=1
+C3 VGND net14 cap_cmim w=6.99e-6 l=6.99e-6 m=1
+C4 VGND net26 cap_cmim w=6.99e-6 l=6.99e-6 m=1
+C5 VGND net17 cap_cmim w=6.99e-6 l=6.99e-6 m=1
+C6 VGND net18 cap_cmim w=6.99e-6 l=6.99e-6 m=1
+C7 VGND net25 cap_cmim w=6.99e-6 l=6.99e-6 m=1
+C8 VGND net27 cap_cmim w=6.99e-6 l=6.99e-6 m=1
+C9 VGND net32 cap_cmim w=6.99e-6 l=6.99e-6 m=1
+C10 VGND feedback cap_cmim w=6.99e-6 l=6.99e-6 m=1
+C11 VGND Vout cap_cmim w=6.99e-6 l=6.99e-6 m=2
 .ENDS
 
 
