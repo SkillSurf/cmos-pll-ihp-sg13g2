@@ -1,4 +1,4 @@
-** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/pll_3bitDiv_tb.sch
+** sch_path: /foss/designs/PROJECTS/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/pll_3bitDiv_tb.sch
 
 .lib /foss/pdks/ihp-sg13g2/libs.tech/ngspice/models/cornerMOSlv.lib mos_tt
 .lib /foss/pdks/ihp-sg13g2/libs.tech/ngspice/models/cornerRES.lib res_typ_stat
@@ -19,16 +19,15 @@ Vb2 B2 GND dc {B2}
 **** begin user architecture code
 
 
-.include /foss/designs/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/simulations/pll_3bitDiv.pex.spice
+.include pll_3bitDiv.pex.spice
 .param temp=27
-.options reltol=1e-3 abstol=1e-9 vntol=1e-6
 .options method=gear
 .options gmin=1e-10
 
 .control
 save all
 
-tran 10n 5u
+tran 10n 1u uic
 
 write tran_pll_3bitDiv_tb_post.raw
 .endc

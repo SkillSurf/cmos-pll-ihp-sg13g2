@@ -5,15 +5,15 @@ V {}
 S {}
 E {}
 B 2 -80 -460 720 -60 {flags=graph
-y1=-0.012
-y2=1.3
+y1=0
+y2=0.01
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=2.2391738e-06
+x1=2e-12
+x2=1e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -26,15 +26,15 @@ logx=0
 logy=0
 hilight_wave=0}
 B 2 -80 -20 720 380 {flags=graph
-y1=-0.018
-y2=0.84
+y1=0
+y2=0.01
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=2.2391738e-06
+x1=2e-12
+x2=1e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -47,15 +47,15 @@ logx=0
 logy=0
 }
 B 2 -1860 -880 -1060 -480 {flags=graph
-y1=-0.017
-y2=1.3
+y1=0
+y2=0.01
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=2.2391738e-06
+x1=2e-12
+x2=1e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -68,15 +68,15 @@ logx=0
 logy=0
 }
 B 2 -1000 -880 -200 -480 {flags=graph
-y1=-0.018
-y2=0.31
+y1=0
+y2=0.01
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=2.2391738e-06
+x1=2e-12
+x2=1e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -96,8 +96,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=2.2391738e-06
+x1=2e-12
+x2=1e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -146,18 +146,17 @@ N -1280 -400 -1280 -130 {lab=B0}
 C {vsource.sym} -1830 20 0 0 {name=V1 value=1.2 savecurrent=false}
 C {gnd.sym} -1830 70 0 0 {name=l1 lab=GND}
 C {vdd.sym} -1830 -30 0 0 {name=l2 lab=VDD}
-C {devices/code_shown.sym} -1039 -406 0 0 {name=NGSPICE only_toplevel=true 
+C {devices/code_shown.sym} -879 -356 0 0 {name=NGSPICE only_toplevel=true 
 value="
-.include /foss/designs/cmos-pll-ihp-sg13g2/Combined\\ Design/design_data/xschem/simulations/pll_3bitDiv.pex.spice
+.include pll_3bitDiv.pex.spice
 .param temp=27
-.options reltol=1e-3 abstol=1e-9 vntol=1e-6
 .options method=gear
 .options gmin=1e-10
 
 .control
 save all
  
-tran 10n 5u
+tran 10n 1u uic
 
 write tran_pll_3bitDiv_tb_post.raw
 .endc
@@ -165,7 +164,7 @@ write tran_pll_3bitDiv_tb_post.raw
 "}
 C {launcher.sym} -333 -139 0 0 {name=h5
 descr="load waves" 
-tclcommand="xschem raw_read $netlist_dir/tran_pll_3bitDiv_tb.raw tran"
+tclcommand="xschem raw_read $netlist_dir/tran_pll_3bitDiv_tb_post.raw tran"
 }
 C {vsource.sym} -1660 20 0 0 {name=V2 value="PULSE(0 1.2 0.2n 5n 5n 50n 100n)" savecurrent=false}
 C {gnd.sym} -1660 70 0 0 {name=l10 lab=GND}
