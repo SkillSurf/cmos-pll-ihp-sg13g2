@@ -1,13 +1,14 @@
-** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/inverter_tb.sch
+** sch_path: /foss/designs/tutorials/inverter/inverter_tb.sch
 **.subckt inverter_tb
-x1 VDD in out GND inverter
-V4 in GND PULSE(0 1.2 .2NS .2NS .2NS 5NS 10NS)
 V1 VDD GND 1.2
+Vin Vin GND PULSE(0 1.2 .2NS .2NS .2NS 5NS 10NS)
+x1 net1 Vin net2 net3 inverter
 **** begin user architecture code
 
 
+.include= /foss/designs/tutorials/inverter/output_RC/inverter__inverter/magic_RC/inverter.pex.spice
 .param temp=27
-.tran 1n 30n
+.tran 1p 30n uic
 .save all
 
 

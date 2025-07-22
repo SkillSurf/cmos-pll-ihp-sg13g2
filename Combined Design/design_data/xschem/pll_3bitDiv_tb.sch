@@ -12,8 +12,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=2e-12
-x2=1.8656653e-06
+x1=0
+x2=2.2391738e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -33,8 +33,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=2e-12
-x2=1.8656653e-06
+x1=0
+x2=2.2391738e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -54,8 +54,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=2e-12
-x2=1.8656653e-06
+x1=0
+x2=2.2391738e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -75,8 +75,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=2e-12
-x2=1.8656653e-06
+x1=0
+x2=2.2391738e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -96,8 +96,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=2e-12
-x2=1.8656653e-06
+x1=0
+x2=2.2391738e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -146,8 +146,9 @@ N -1280 -400 -1280 -130 {lab=B0}
 C {vsource.sym} -1830 20 0 0 {name=V1 value=1.2 savecurrent=false}
 C {gnd.sym} -1830 70 0 0 {name=l1 lab=GND}
 C {vdd.sym} -1830 -30 0 0 {name=l2 lab=VDD}
-C {devices/code_shown.sym} -909 -356 0 0 {name=NGSPICE only_toplevel=true 
+C {devices/code_shown.sym} -1039 -406 0 0 {name=NGSPICE only_toplevel=true 
 value="
+.include /foss/designs/cmos-pll-ihp-sg13g2/Combined\\ Design/design_data/xschem/simulations/pll_3bitDiv.pex.spice
 .param temp=27
 .options reltol=1e-3 abstol=1e-9 vntol=1e-6
 .options method=gear
@@ -156,9 +157,9 @@ value="
 .control
 save all
  
-tran 100p 20u
+tran 10n 5u
 
-write tran_pll_3bitDiv_tb.raw
+write tran_pll_3bitDiv_tb_post.raw
 .endc
 
 "}
@@ -200,6 +201,7 @@ format="tcleval( @value )"
 value="
 .lib $::SG13G2_MODELS/cornerMOSlv.lib mos_tt
 .lib $::SG13G2_MODELS/cornerRES.lib res_typ_stat
+.lib $::SG13G2_MODELS/cornerCAP.lib cap_typ
 .include $::PDK_ROOT/ihp-sg13g2/libs.ref/sg13g2_stdcell/spice/sg13g2_stdcell.spice
 "
 place=header}
