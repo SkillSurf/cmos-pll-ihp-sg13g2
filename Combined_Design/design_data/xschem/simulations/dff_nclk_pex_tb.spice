@@ -1,0 +1,30 @@
+** sch_path: /foss/designs/PROJECTS/cmos-pll-ihp-sg13g2/Combined_Design/design_data/xschem/dff_nclk_pex_tb.sch
+
+.lib /foss/pdks/ihp-sg13g2/libs.tech/ngspice/models/cornerMOSlv.lib mos_tt
+.include ../../pex/dff_nclk__dff_nclk/magic_RC/dff_nclk.pex.spice
+
+**.subckt dff_nclk_pex_tb
+Vdin D GND dc 0 ac 0 pulse(0, 1.2, 0, 100p, 100p, 12.5n, 25n)
+Vclk nCLK GND dc 0 ac 0 pulse(0, 1.2, 0, 100p, 100p, 6.25n, 12.5n)
+Vrst nRST GND dc 0 ac 0 pulse(0, 1.2, 0, 100p, 100p, 40n, 75n)
+* noconn nQ
+* noconn Q
+x1 nCLK Q D nQ nRST net1 GND dff_nclk
+Vs net1 GND 1.2
+**** begin user architecture code
+
+
+.param temp=27
+
+.control
+save all
+tran 50p 75n
+
+write tran_dff_nclk_pex.raw
+.endc
+
+
+**** end user architecture code
+**.ends
+.GLOBAL GND
+.end

@@ -1,0 +1,43 @@
+scale 1000 1 0.5
+rnode "Q" 0 0 1953 475 0
+rnode "sg13g2_dfrbp_1_0.Q" 0 0 1967 337 0
+resist "sg13g2_dfrbp_1_0.Q" "Q" 9.33154
+rnode "nQ" 0 0 1568 342 0
+rnode "sg13g2_dfrbp_1_0.Q_N" 0 0 1654 332 0
+resist "sg13g2_dfrbp_1_0.Q_N" "nQ" 9.12586
+rnode "D.n0" 0 0 -269 328 0
+rnode "D" 0 0 -322 160 0
+rnode "D.n1" 0 0 -272 189 0
+rnode "sg13g2_dfrbp_1_0.D" 0 0 -302 160 0
+resist "sg13g2_dfrbp_1_0.D" "D.n1" 0.0540678
+resist "D.n1" "D.n0" 5.07548
+resist "D.n1" "D" 9.07586
+rnode "nCLK" 0 0 -721 218 0
+rnode "nCLK.n0" 0 0 -724 253 0
+rnode "nCLK.n1" 0 0 -724 253 0
+rnode "sg13g2_inv_1_0.A" 0 0 -761 220 0
+resist "sg13g2_inv_1_0.A" "nCLK.n1" 0.0611796
+resist "nCLK.n1" "nCLK.n0" 7.5025
+resist "nCLK.n1" "nCLK" 9.0947
+rnode "nRST" 0 0 243 316 0
+rnode "nRST.n0" 0 0 -113 354 0
+rnode "nRST.n1" 0 0 1327 473 0
+rnode "nRST.n2" 0 0 762 361 0
+rnode "nRST.n3" 0 0 690 465 0
+rnode "nRST.n4" 0 0 -110 338 0
+rnode "nRST.n5" 0 0 -110 338 0
+rnode "sg13g2_dfrbp_1_0.RESET_B" 0 0 -134 309 0
+resist "nRST.n4" "nRST.n0" 0.000831494
+resist "nRST.n4" "nRST.n3" 0.00116849
+resist "sg13g2_dfrbp_1_0.RESET_B" "nRST.n5" 0.0260741
+resist "nRST.n5" "nRST" 0.738738
+resist "nRST.n2" "nRST" 1.10945
+resist "nRST.n5" "nRST.n4" 14.0663
+resist "nRST.n3" "nRST.n2" 24.0461
+resist "nRST.n2" "nRST.n1" 25.1622
+rnode "VSS" 0 0 -786 -128 0
+rnode "sg13g2_dfrbp_1_0.VSS" 0 0 -390 -128 0
+resist "sg13g2_dfrbp_1_0.VSS" "VSS" 0.496247
+rnode "VDD" 0 0 -786 628 0
+rnode "sg13g2_dfrbp_1_0.VDD" 0 0 -390 628 0
+resist "sg13g2_dfrbp_1_0.VDD" "VDD" 0.482915

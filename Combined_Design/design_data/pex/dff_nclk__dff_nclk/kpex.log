@@ -1,0 +1,167 @@
+[2025-07-27 13:46:51,429] [INFO]    GDS input file passed, running in LVS mode
+[2025-07-27 13:46:51,452] [INFO]    No explicit top cell specified, using top cell 'dff_nclk'
+[2025-07-27 13:46:51,496] [INFO]    Calling MAGIC
+[2025-07-27 13:46:51,499] [SUBPROCESS]    magic -dnull -noconsole -rcfile /foss/pdks/ihp-sg13g2/libs.tech/magic/ihp-sg13g2.magicrc pex/dff_nclk__dff_nclk/magic_RC/dff_nclk_MAGIC_RC_Script.tcl, output file: pex/dff_nclk__dff_nclk/magic_RC/dff_nclk_MAGIC_RC_Output.txt
+[2025-07-27 13:46:51,543] [SUBPROCESS]    
+[2025-07-27 13:46:51,545] [SUBPROCESS]    Magic 8.3 revision 527 - Compiled on Sat May 24 11:19:49 AM CEST 2025.
+[2025-07-27 13:46:51,546] [SUBPROCESS]    Starting magic under Tcl interpreter
+[2025-07-27 13:46:51,548] [SUBPROCESS]    Using the terminal as the console.
+[2025-07-27 13:46:51,549] [SUBPROCESS]    WARNING: RLIMIT_NOFILE is above 1024 and Tcl_Version<9 this may cause runtime issues [rlim_cur=1048576]
+[2025-07-27 13:46:51,550] [SUBPROCESS]    Using NULL graphics device.
+[2025-07-27 13:46:51,606] [SUBPROCESS]    Processing system .magicrc file
+[2025-07-27 13:46:51,621] [SUBPROCESS]    Sourcing design .magicrc for technology ihp-sg13g2 ...
+[2025-07-27 13:46:51,623] [SUBPROCESS]    2 Magic internal units = 1 Lambda
+[2025-07-27 13:46:51,656] [SUBPROCESS]    Input style sg13g2(): scaleFactor=2, multiplier=2
+[2025-07-27 13:46:51,761] [SUBPROCESS]    The following types are not handled by extraction and will be treated as non-electrical types:
+[2025-07-27 13:46:51,763] [SUBPROCESS]        fillfet sealcont difffill nemitter hvnemitter hvisodiffres sealvia1 sealvia2 sealvia3 sealvia4 sealvia5 sealvia6 pad seal thruvia 
+[2025-07-27 13:46:51,768] [SUBPROCESS]    Scaled tech values by 2 / 1 to match internal grid scaling
+[2025-07-27 13:46:51,770] [SUBPROCESS]    Loading "pex/dff_nclk__dff_nclk/magic_RC/dff_nclk_MAGIC_RC_Script.tcl" from command line.
+[2025-07-27 13:46:51,774] [SUBPROCESS]    Warning: Calma reading is not undoable!  I hope that's OK.
+[2025-07-27 13:46:51,776] [SUBPROCESS]    Library written using GDS-II Release 6.0
+[2025-07-27 13:46:51,777] [SUBPROCESS]    Library name: LIB
+[2025-07-27 13:46:51,778] [SUBPROCESS]    Reading "sg13g2_dfrbp_1".
+[2025-07-27 13:46:51,788] [SUBPROCESS]    Reading "sg13g2_inv_1".
+[2025-07-27 13:46:51,790] [SUBPROCESS]    Reading "dff_nclk".
+[2025-07-27 13:46:51,791] [SUBPROCESS]    CIF file read warning: CIF style sg13g2(): units rescaled by factor of 5 / 1
+[2025-07-27 13:46:51,798] [SUBPROCESS]    Extracting dff_nclk into /foss/designs/PROJECTS/cmos-pll-ihp-sg13g2/Combined_Design/design_data/pex/dff_nclk__dff_nclk/magic_RC/dff_nclk.ext:
+[2025-07-27 13:46:51,819] [SUBPROCESS]    Port: name = VDD is new node 0x564c663c4950
+[2025-07-27 13:46:51,821] [SUBPROCESS]    Location is (-786, 628); drivepoint (-786, 628)
+[2025-07-27 13:46:51,822] [SUBPROCESS]    Port: name = VSS is new node 0x564c66281420
+[2025-07-27 13:46:51,823] [SUBPROCESS]    Location is (-786, -128); drivepoint (-786, -128)
+[2025-07-27 13:46:51,824] [SUBPROCESS]    Port: name = nRST is new node 0x564c663db0d0
+[2025-07-27 13:46:51,826] [SUBPROCESS]    Location is (243, 316); drivepoint (243, 316)
+[2025-07-27 13:46:51,827] [SUBPROCESS]    Port: name = nCLK is new node 0x564c66256f30
+[2025-07-27 13:46:51,828] [SUBPROCESS]    Location is (-721, 218); drivepoint (-721, 218)
+[2025-07-27 13:46:51,830] [SUBPROCESS]    Port: name = D is new node 0x564c6625b290
+[2025-07-27 13:46:51,832] [SUBPROCESS]    Location is (-322, 160); drivepoint (-322, 160)
+[2025-07-27 13:46:51,834] [SUBPROCESS]    Port: name = nQ is new node 0x564c66704a70
+[2025-07-27 13:46:51,835] [SUBPROCESS]    Location is (1568, 342); drivepoint (1568, 342)
+[2025-07-27 13:46:51,838] [SUBPROCESS]    Port: name = Q is new node 0x564c66beecc0
+[2025-07-27 13:46:51,839] [SUBPROCESS]    Location is (1953, 475); drivepoint (1953, 475)
+[2025-07-27 13:46:51,841] [SUBPROCESS]    Total Nets: 7
+[2025-07-27 13:46:51,842] [SUBPROCESS]    Nets extracted: 7 (1.000000)
+[2025-07-27 13:46:51,843] [SUBPROCESS]    Nets output: 7 (1.000000)
+[2025-07-27 13:46:51,849] [SUBPROCESS]    exttospice finished.
+[2025-07-27 13:46:51,859] [INFO]    MAGIC succeeded after 0.3574s
+[2025-07-27 13:46:51,889] [SUBPROCESS]    Report DB saved at: pex/dff_nclk__dff_nclk/magic_RC/dff_nclk_MAGIC_report.rdb.gz
+[2025-07-27 13:46:51,890] [SUBPROCESS]    SPICE netlist saved at: pex/dff_nclk__dff_nclk/magic_RC/dff_nclk.pex.spice
+[2025-07-27 13:46:51,894] [SUBPROCESS]    * NGSPICE file created from dff_nclk.ext - technology: ihp-sg13g2
+
+.subckt dff_nclk VDD VSS nRST nCLK D nQ Q
+X0 a_179_352# a_n17_352# VDD VDD sg13_lv_pmos ad=0.34p pd=2.68u as=0.19p ps=1.38u w=1u l=0.13u
+X1 a_513_423# a_n17_352# a_411_423# VDD sg13_lv_pmos ad=51.45f pd=0.665u as=79.8f ps=0.8u w=0.42u l=0.13u
+X2 a_946_33# a_n17_352# a_562_361# VDD sg13_lv_pmos ad=0.17695p pd=1.56u as=0.19p ps=1.38u w=1u l=0.13u
+X3 a_179_352# a_n17_352# VSS VSS sg13_lv_nmos ad=0.2516p pd=2.16u as=0.1544p ps=1.235u w=0.74u l=0.13u
+X4 a_562_361# a_411_423# VSS VSS sg13_lv_nmos ad=0.19397p pd=1.29u as=0.1825p ps=1.325u w=0.64u l=0.13u
+X5 a_1330_33# nRST VSS VSS sg13_lv_nmos ad=47.25f pd=0.645u as=90.3f ps=0.85u w=0.42u l=0.13u
+X6 VSS a_1192_n3# a_1140_33# VSS sg13_lv_nmos ad=90.3f pd=0.85u as=54.6f ps=0.68u w=0.42u l=0.13u
+X7 a_411_423# a_n17_352# a_n314_38# VSS sg13_lv_nmos ad=79.8f pd=0.8u as=0.1428p ps=1.52u w=0.42u l=0.13u
+X8 a_1192_n3# a_946_33# a_1330_33# VSS sg13_lv_nmos ad=0.1428p pd=1.52u as=47.25f ps=0.645u w=0.42u l=0.13u
+X9 VDD nRST a_n314_38# VDD sg13_lv_pmos ad=0.1428p pd=1.52u as=79.8f ps=0.8u w=0.42u l=0.13u
+X10 sg13g2_dfrbp_1_0.CLK nCLK VSS VSS sg13_lv_nmos ad=0.259p pd=2.18u as=0.259p ps=2.18u w=0.74u l=0.13u
+X11 VDD sg13g2_dfrbp_1_0.CLK a_n17_352# VDD sg13_lv_pmos ad=0.19p pd=1.38u as=0.34p ps=2.68u w=1u l=0.13u
+X12 VDD a_562_361# a_513_423# VDD sg13_lv_pmos ad=0.11785p pd=1.025u as=51.45f ps=0.665u w=0.42u l=0.13u
+X13 nQ a_946_33# VSS VSS sg13_lv_nmos ad=0.2775p pd=2.23u as=0.2516p ps=2.16u w=0.74u l=0.13u
+X14 a_n314_38# D VDD VDD sg13_lv_pmos ad=79.8f pd=0.8u as=0.1428p ps=1.52u w=0.42u l=0.13u
+X15 a_616_78# a_562_361# a_538_78# VSS sg13_lv_nmos ad=48.3f pd=0.65u as=54.6f ps=0.68u w=0.42u l=0.13u
+X16 VSS a_946_33# a_1755_34# VSS sg13_lv_nmos ad=0.14505p pd=1.15u as=0.187p ps=1.78u w=0.55u l=0.13u
+X17 Q a_1755_34# VSS VSS sg13_lv_nmos ad=0.2516p pd=2.16u as=0.14505p ps=1.15u w=0.74u l=0.13u
+X18 VSS nRST a_616_78# VSS sg13_lv_nmos ad=0.1825p pd=1.325u as=48.3f ps=0.65u w=0.42u l=0.13u
+X19 nQ a_946_33# VDD VDD sg13_lv_pmos ad=0.7616p pd=3.6u as=0.2163p ps=1.55u w=1.12u l=0.13u
+X20 VDD a_946_33# a_1755_34# VDD sg13_lv_pmos ad=0.2016p pd=1.5u as=0.2856p ps=2.36u w=0.84u l=0.13u
+X21 VDD a_1192_n3# a_1171_431# VDD sg13_lv_pmos ad=79.8f pd=0.8u as=43.05f ps=0.625u w=0.42u l=0.13u
+X22 a_411_423# nRST VDD VDD sg13_lv_pmos ad=0.1533p pd=1.57u as=0.11785p ps=1.025u w=0.42u l=0.13u
+X23 VSS sg13g2_dfrbp_1_0.CLK a_n17_352# VSS sg13_lv_nmos ad=0.1544p pd=1.235u as=0.2516p ps=2.16u w=0.74u l=0.13u
+X24 a_1192_n3# nRST VDD VDD sg13_lv_pmos ad=79.8f pd=0.8u as=79.8f ps=0.8u w=0.42u l=0.13u
+X25 a_946_33# a_179_352# a_562_361# VSS sg13_lv_nmos ad=0.2017p pd=1.48u as=0.19397p ps=1.29u w=0.64u l=0.13u
+X26 a_1171_431# a_179_352# a_946_33# VDD sg13_lv_pmos ad=43.05f pd=0.625u as=0.17695p ps=1.56u w=0.42u l=0.13u
+X27 VDD a_946_33# a_1192_n3# VDD sg13_lv_pmos ad=0.2163p pd=1.55u as=79.8f ps=0.8u w=0.42u l=0.13u
+X28 a_1140_33# a_n17_352# a_946_33# VSS sg13_lv_nmos ad=54.6f pd=0.68u as=0.2017p ps=1.48u w=0.42u l=0.13u
+X29 sg13g2_dfrbp_1_0.CLK nCLK VDD VDD sg13_lv_pmos ad=0.392p pd=2.94u as=0.392p ps=2.94u w=1.12u l=0.13u
+X30 Q a_1755_34# VDD VDD sg13_lv_pmos ad=0.3808p pd=2.92u as=0.2016p ps=1.5u w=1.12u l=0.13u
+X31 VSS nRST a_n220_38# VSS sg13_lv_nmos ad=0.1428p pd=1.52u as=50.4f ps=0.66u w=0.42u l=0.13u
+X32 a_n220_38# D a_n314_38# VSS sg13_lv_nmos ad=50.4f pd=0.66u as=0.1428p ps=1.52u w=0.42u l=0.13u
+X33 a_562_361# a_411_423# VDD VDD sg13_lv_pmos ad=0.19p pd=1.38u as=0.34p ps=2.68u w=1u l=0.13u
+X34 a_538_78# a_179_352# a_411_423# VSS sg13_lv_nmos ad=54.6f pd=0.68u as=79.8f ps=0.8u w=0.42u l=0.13u
+X35 a_411_423# a_179_352# a_n314_38# VDD sg13_lv_pmos ad=79.8f pd=0.8u as=0.1428p ps=1.52u w=0.42u l=0.13u
+C0 a_562_361# a_946_33# 0.03957f
+C1 sg13g2_dfrbp_1_0.CLK a_n314_38# 0.08437f
+C2 a_n17_352# a_411_423# 0.05314f
+C3 a_179_352# a_411_423# 0.13068f
+C4 a_n17_352# nRST 0.33167f
+C5 nQ VDD 0.18194f
+C6 a_179_352# nRST 0.12142f
+C7 a_411_423# nRST 0.31426f
+C8 a_1755_34# VDD 0.23003f
+C9 a_n17_352# VDD 0.6253f
+C10 nQ a_946_33# 0.05822f
+C11 a_179_352# VDD 0.19308f
+C12 Q VDD 0.16681f
+C13 a_n17_352# sg13g2_dfrbp_1_0.CLK 0.33833f
+C14 D nRST 0.11036f
+C15 sg13g2_dfrbp_1_0.CLK a_179_352# 0.01473f
+C16 a_411_423# VDD 0.29403f
+C17 a_1755_34# a_946_33# 0.09575f
+C18 a_n17_352# a_946_33# 0.02302f
+C19 nRST VDD 0.49998f
+C20 a_179_352# a_946_33# 0.40027f
+C21 D VDD 0.15544f
+C22 sg13g2_dfrbp_1_0.CLK nRST 0.15633f
+C23 a_1192_n3# nQ 0.10118f
+C24 D sg13g2_dfrbp_1_0.CLK 0.14592f
+C25 a_946_33# nRST 0.24823f
+C26 sg13g2_dfrbp_1_0.CLK VDD 0.28775f
+C27 a_1192_n3# a_n17_352# 0.04324f
+C28 a_1192_n3# a_179_352# 0.04306f
+C29 a_946_33# VDD 0.41098f
+C30 a_562_361# a_n17_352# 0.04304f
+C31 nCLK VDD 0.18837f
+C32 a_562_361# a_179_352# 0.66077f
+C33 a_1192_n3# nRST 0.19965f
+C34 sg13g2_dfrbp_1_0.CLK nCLK 0.10376f
+C35 a_562_361# a_411_423# 0.70262f
+C36 a_n17_352# a_n314_38# 0.17766f
+C37 a_179_352# a_n314_38# 0.47248f
+C38 a_562_361# nRST 0.16119f
+C39 a_1192_n3# VDD 0.30436f
+C40 a_411_423# a_n314_38# 0.45825f
+C41 a_1755_34# nQ 0.21609f
+C42 a_n314_38# nRST 0.34866f
+C43 a_562_361# VDD 0.2446f
+C44 D a_n314_38# 0.33816f
+C45 a_1192_n3# a_946_33# 0.41048f
+C46 a_n314_38# VDD 0.36995f
+C47 Q a_1755_34# 0.11473f
+C48 a_n17_352# a_179_352# 0.45047f
+C49 nQ nRST 0.01053f
+R0 nRST.n2 nRST.n1 25.1627
+R1 nRST.n3 nRST.n2 24.0466
+R2 nRST.n5 nRST.n4 14.0668
+R3 nRST.n2 nRST 1.10995
+R4 nRST.n5 nRST 0.739238
+R5 nRST nRST.n5 0.0265741
+R6 nRST.n4 nRST.n3 0.00166849
+R7 nRST.n4 nRST.n0 0.00133149
+R8 nCLK.n1 nCLK 9.0952
+R9 nCLK.n1 nCLK.n0 7.503
+R10 nCLK nCLK.n1 0.0616796
+R11 D.n1 D 9.07636
+R12 D.n1 D.n0 5.07598
+R13 D D.n1 0.0545678
+C50 Q VSS 0.26133f
+C51 nQ VSS 0.11077f
+C52 nRST VSS 1.28345f
+C53 D VSS 0.20056f
+C54 nCLK VSS 0.43292f
+C55 VDD VSS 0.50772f
+C56 a_1192_n3# VSS 0.3362f $ **FLOATING
+C57 a_1755_34# VSS 0.42329f $ **FLOATING
+C58 a_946_33# VSS 0.79413f $ **FLOATING
+C59 a_411_423# VSS 0.25117f $ **FLOATING
+C60 a_562_361# VSS 0.1501f $ **FLOATING
+C61 a_179_352# VSS 1.02261f $ **FLOATING
+C62 a_n314_38# VSS 0.12168f $ **FLOATING
+C63 a_n17_352# VSS 0.81868f $ **FLOATING
+C64 sg13g2_dfrbp_1_0.CLK VSS 0.65383f $ **FLOATING
+.ends
+
