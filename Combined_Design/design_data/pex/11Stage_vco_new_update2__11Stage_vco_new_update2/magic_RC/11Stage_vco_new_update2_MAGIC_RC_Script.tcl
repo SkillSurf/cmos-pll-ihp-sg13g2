@@ -9,7 +9,7 @@ load 11Stage_vco_new_update2_flat
 cellname delete 11Stage_vco_new_update2 -noprompt
 cellname rename 11Stage_vco_new_update2_flat 11Stage_vco_new_update2
 select top cell
-extract path /foss/designs/cmos-pll-ihp-sg13g2/Combined_Design/design_data/gds/output_RC/11Stage_vco_new_update2__11Stage_vco_new_update2/magic_RC
+extract path /foss/designs/cmos-pll-ihp-sg13g2/Combined_Design/design_data/pex/11Stage_vco_new_update2__11Stage_vco_new_update2/magic_RC
 extract do resistance
 extract all
 ext2sim labels on
@@ -23,5 +23,5 @@ ext2spice rthresh 100
 ext2spice extresist on
 ext2spice subcircuits top on
 ext2spice format ngspice
-ext2spice -p /foss/designs/cmos-pll-ihp-sg13g2/Combined_Design/design_data/gds/output_RC/11Stage_vco_new_update2__11Stage_vco_new_update2/magic_RC -o /foss/designs/cmos-pll-ihp-sg13g2/Combined_Design/design_data/gds/output_RC/11Stage_vco_new_update2__11Stage_vco_new_update2/magic_RC/11Stage_vco_new_update2.pex.spice
+ext2spice -p /foss/designs/cmos-pll-ihp-sg13g2/Combined_Design/design_data/pex/11Stage_vco_new_update2__11Stage_vco_new_update2/magic_RC -o /foss/designs/cmos-pll-ihp-sg13g2/Combined_Design/design_data/pex/11Stage_vco_new_update2__11Stage_vco_new_update2/magic_RC/11Stage_vco_new_update2.pex.spice
 quit -noprompt

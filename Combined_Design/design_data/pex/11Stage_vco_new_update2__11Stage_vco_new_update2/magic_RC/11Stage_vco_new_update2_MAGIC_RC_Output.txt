@@ -11,7 +11,7 @@ Input style sg13g2(): scaleFactor=2, multiplier=2
 The following types are not handled by extraction and will be treated as non-electrical types:
     fillfet sealcont difffill nemitter hvnemitter hvisodiffres sealvia1 sealvia2 sealvia3 sealvia4 sealvia5 sealvia6 pad seal thruvia 
 Scaled tech values by 2 / 1 to match internal grid scaling
-Loading "output_RC/11Stage_vco_new_update2__11Stage_vco_new_update2/magic_RC/11Stage_vco_new_update2_MAGIC_RC_Script.tcl" from command line.
+Loading "pex/11Stage_vco_new_update2__11Stage_vco_new_update2/magic_RC/11Stage_vco_new_update2_MAGIC_RC_Script.tcl" from command line.
 Warning: Calma reading is not undoable!  I hope that's OK.
 Library written using GDS-II Release 6.0
 Library name: LIB
@@ -34,61 +34,17 @@ Reading "pmos$3".
 Reading "nmos$5".
 Reading "nmos$6".
 Reading "11Stage_vco_new_update2".
-Extracting 11Stage_vco_new_update2 into /foss/designs/cmos-pll-ihp-sg13g2/Combined_Design/design_data/gds/output_RC/11Stage_vco_new_update2__11Stage_vco_new_update2/magic_RC/11Stage_vco_new_update2.ext:
-exttosim finished.
-Port: name = vctl exists, forcing drivepoint
-Location is (8932, -1059); drivepoint (8932, -1060)
-Port: name = VPWR exists, forcing drivepoint
+Extracting 11Stage_vco_new_update2 into /foss/designs/cmos-pll-ihp-sg13g2/Combined_Design/design_data/pex/11Stage_vco_new_update2__11Stage_vco_new_update2/magic_RC/11Stage_vco_new_update2.ext:
+Port: name = vctl is new node 0x55d1c8241d10
+Location is (8932, -1060); drivepoint (8932, -1060)
+Port: name = VPWR is new node 0x55d1c83b9fe0
 Location is (7662, 1118); drivepoint (7662, 1118)
-Port: name = VGND exists, forcing drivepoint
-Location is (8928, -1845); drivepoint (8928, -1846)
-Port: name = Vout exists, forcing drivepoint
+Port: name = VGND is new node 0x55d1c862d560
+Location is (8928, -1846); drivepoint (8928, -1846)
+Port: name = Vout is new node 0x55d1c83b9e20
 Location is (7645, 89); drivepoint (7645, 89)
-Warning: ndiffc at 6509 -184 smaller than extract section allows
-Adding  m2_5324_104#; Tnew = 0.14ns, Told = 0.00ns
-Adding  m2_4249_107#; Tnew = 0.14ns, Told = 0.00ns
-Adding  m2_7142_93#; Tnew = 0.13ns, Told = 0.00ns
-Adding  m2_3178_104#; Tnew = 0.14ns, Told = 0.00ns
-Adding  m2_1572_105#; Tnew = 0.14ns, Told = 0.00ns
-Adding  a_2087_n2395#; Tnew = 0.15ns, Told = 0.00ns
-Adding  a_745_n2395#; Tnew = 0.12ns, Told = 0.00ns
-Adding  Vout; Tnew = 0.12ns, Told = 0.00ns
-Adding  a_6113_n2395#; Tnew = 0.14ns, Told = 0.00ns
-Adding  m1_785_n2484#; Tnew = 0.18ns, Told = 0.00ns
-Adding  VPWR; Tnew = 0.32ns, Told = 0.00ns
-Adding  a_620_930#; Tnew = 0.88ns, Told = 0.00ns
-Adding  VGND; Tnew = 33.46ns, Told = 0.00ns
-Adding  a_3429_n2395#; Tnew = 0.15ns, Told = 0.00ns
-Adding  a_4771_n2395#; Tnew = 0.12ns, Told = 0.00ns
-Total Nets: 63
-Nets extracted: 38 (0.603175)
-Nets output: 38 (0.603175)
-kill: no such node m1_4699_n1918#
-kill: no such node m1_768_942#
-kill: no such node m1_785_n2484#
-kill: no such node m1_6041_n1918#
-kill: no such node m2_1572_105#
-kill: no such node m2_3178_104#
-kill: no such node m1_673_n2608#
-kill: no such node m2_7142_93#
-kill: no such node m1_7387_n2608#
-kill: no such node m1_3357_n2608#
-kill: no such node m2_4249_107#
-kill: no such node m1_7387_n1916#
-kill: no such node m2_5324_104#
-kill: no such node m1_4699_n2608#
-kill: no such node m1_2015_n2608#
-kill: no such node m1_2110_941#
-kill: no such node m1_2344_n787#
-kill: no such node m1_1001_n788#
-kill: no such node m1_3452_942#
-kill: no such node m1_3685_n788#
-kill: no such node m1_4794_941#
-kill: no such node a_5037_n783#
-kill: no such node m1_6041_n2608#
-kill: no such node m1_673_n1918#
-kill: no such node m1_6136_941#
-kill: no such node a_6379_n783#
-kill: no such node m1_3357_n1918#
-kill: no such node m1_2015_n1918#
+Warning: ndiffc at 7336 -322 smaller than extract section allows
+Total Nets: 4
+Nets extracted: 4 (1.000000)
+Nets output: 4 (1.000000)
 exttospice finished.

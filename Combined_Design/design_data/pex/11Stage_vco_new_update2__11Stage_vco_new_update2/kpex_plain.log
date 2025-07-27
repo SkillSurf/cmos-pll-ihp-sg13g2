@@ -1,8 +1,7 @@
 GDS input file passed, running in LVS mode
 No explicit top cell specified, using top cell '11Stage_vco_new_update2'
-LVS input schematic not specified (argument --schematic), using dummy schematic
 Calling MAGIC
-magic -dnull -noconsole -rcfile /foss/pdks/ihp-sg13g2/libs.tech/magic/ihp-sg13g2.magicrc output_RC/11Stage_vco_new_update2__11Stage_vco_new_update2/magic_RC/11Stage_vco_new_update2_MAGIC_RC_Script.tcl, output file: output_RC/11Stage_vco_new_update2__11Stage_vco_new_update2/magic_RC/11Stage_vco_new_update2_MAGIC_RC_Output.txt
+magic -dnull -noconsole -rcfile /foss/pdks/ihp-sg13g2/libs.tech/magic/ihp-sg13g2.magicrc pex/11Stage_vco_new_update2__11Stage_vco_new_update2/magic_RC/11Stage_vco_new_update2_MAGIC_RC_Script.tcl, output file: pex/11Stage_vco_new_update2__11Stage_vco_new_update2/magic_RC/11Stage_vco_new_update2_MAGIC_RC_Output.txt
 
 Magic 8.3 revision 527 - Compiled on Sat May 24 11:19:49 AM CEST 2025.
 Starting magic under Tcl interpreter
@@ -16,7 +15,7 @@ Input style sg13g2(): scaleFactor=2, multiplier=2
 The following types are not handled by extraction and will be treated as non-electrical types:
     fillfet sealcont difffill nemitter hvnemitter hvisodiffres sealvia1 sealvia2 sealvia3 sealvia4 sealvia5 sealvia6 pad seal thruvia 
 Scaled tech values by 2 / 1 to match internal grid scaling
-Loading "output_RC/11Stage_vco_new_update2__11Stage_vco_new_update2/magic_RC/11Stage_vco_new_update2_MAGIC_RC_Script.tcl" from command line.
+Loading "pex/11Stage_vco_new_update2__11Stage_vco_new_update2/magic_RC/11Stage_vco_new_update2_MAGIC_RC_Script.tcl" from command line.
 Warning: Calma reading is not undoable!  I hope that's OK.
 Library written using GDS-II Release 6.0
 Library name: LIB
@@ -39,2068 +38,694 @@ Reading "pmos$3".
 Reading "nmos$5".
 Reading "nmos$6".
 Reading "11Stage_vco_new_update2".
-Extracting 11Stage_vco_new_update2 into /foss/designs/cmos-pll-ihp-sg13g2/Combined_Design/design_data/gds/output_RC/11Stage_vco_new_update2__11Stage_vco_new_update2/magic_RC/11Stage_vco_new_update2.ext:
-exttosim finished.
-Port: name = vctl exists, forcing drivepoint
-Location is (8932, -1059); drivepoint (8932, -1060)
-Port: name = VPWR exists, forcing drivepoint
+Extracting 11Stage_vco_new_update2 into /foss/designs/cmos-pll-ihp-sg13g2/Combined_Design/design_data/pex/11Stage_vco_new_update2__11Stage_vco_new_update2/magic_RC/11Stage_vco_new_update2.ext:
+Port: name = vctl is new node 0x55d1c8241d10
+Location is (8932, -1060); drivepoint (8932, -1060)
+Port: name = VPWR is new node 0x55d1c83b9fe0
 Location is (7662, 1118); drivepoint (7662, 1118)
-Port: name = VGND exists, forcing drivepoint
-Location is (8928, -1845); drivepoint (8928, -1846)
-Port: name = Vout exists, forcing drivepoint
+Port: name = VGND is new node 0x55d1c862d560
+Location is (8928, -1846); drivepoint (8928, -1846)
+Port: name = Vout is new node 0x55d1c83b9e20
 Location is (7645, 89); drivepoint (7645, 89)
-Warning: ndiffc at 6509 -184 smaller than extract section allows
-Adding  m2_5324_104#; Tnew = 0.14ns, Told = 0.00ns
-Adding  m2_4249_107#; Tnew = 0.14ns, Told = 0.00ns
-Adding  m2_7142_93#; Tnew = 0.13ns, Told = 0.00ns
-Adding  m2_3178_104#; Tnew = 0.14ns, Told = 0.00ns
-Adding  m2_1572_105#; Tnew = 0.14ns, Told = 0.00ns
-Adding  a_2087_n2395#; Tnew = 0.15ns, Told = 0.00ns
-Adding  a_745_n2395#; Tnew = 0.12ns, Told = 0.00ns
-Adding  Vout; Tnew = 0.12ns, Told = 0.00ns
-Adding  a_6113_n2395#; Tnew = 0.14ns, Told = 0.00ns
-Adding  m1_785_n2484#; Tnew = 0.18ns, Told = 0.00ns
-Adding  VPWR; Tnew = 0.32ns, Told = 0.00ns
-Adding  a_620_930#; Tnew = 0.88ns, Told = 0.00ns
-Adding  VGND; Tnew = 33.46ns, Told = 0.00ns
-Adding  a_3429_n2395#; Tnew = 0.15ns, Told = 0.00ns
-Adding  a_4771_n2395#; Tnew = 0.12ns, Told = 0.00ns
-Total Nets: 63
-Nets extracted: 38 (0.603175)
-Nets output: 38 (0.603175)
-kill: no such node m1_4699_n1918#
-kill: no such node m1_768_942#
-kill: no such node m1_785_n2484#
-kill: no such node m1_6041_n1918#
-kill: no such node m2_1572_105#
-kill: no such node m2_3178_104#
-kill: no such node m1_673_n2608#
-kill: no such node m2_7142_93#
-kill: no such node m1_7387_n2608#
-kill: no such node m1_3357_n2608#
-kill: no such node m2_4249_107#
-kill: no such node m1_7387_n1916#
-kill: no such node m2_5324_104#
-kill: no such node m1_4699_n2608#
-kill: no such node m1_2015_n2608#
-kill: no such node m1_2110_941#
-kill: no such node m1_2344_n787#
-kill: no such node m1_1001_n788#
-kill: no such node m1_3452_942#
-kill: no such node m1_3685_n788#
-kill: no such node m1_4794_941#
-kill: no such node a_5037_n783#
-kill: no such node m1_6041_n2608#
-kill: no such node m1_673_n1918#
-kill: no such node m1_6136_941#
-kill: no such node a_6379_n783#
-kill: no such node m1_3357_n1918#
-kill: no such node m1_2015_n1918#
+Warning: ndiffc at 7336 -322 smaller than extract section allows
+Total Nets: 4
+Nets extracted: 4 (1.000000)
+Nets output: 4 (1.000000)
 exttospice finished.
-MAGIC succeeded after 0.5786s
-Report DB saved at: output_RC/11Stage_vco_new_update2__11Stage_vco_new_update2/magic_RC/11Stage_vco_new_update2_MAGIC_report.rdb.gz
-SPICE netlist saved at: output_RC/11Stage_vco_new_update2__11Stage_vco_new_update2/magic_RC/11Stage_vco_new_update2.pex.spice
+MAGIC succeeded after 0.4582s
+Report DB saved at: pex/11Stage_vco_new_update2__11Stage_vco_new_update2/magic_RC/11Stage_vco_new_update2_MAGIC_report.rdb.gz
+SPICE netlist saved at: pex/11Stage_vco_new_update2__11Stage_vco_new_update2/magic_RC/11Stage_vco_new_update2.pex.spice
 * NGSPICE file created from 11Stage_vco_new_update2.ext - technology: ihp-sg13g2
 
 .subckt x11Stage_vco_new_update2 vctl VPWR VGND Vout
-X0 m1_673_n1918.t1 a_745_n2395.t5 m1_785_n2484.t2 VGND.t6 sg13_lv_nmos ad=0.17p pd=1.68u as=0.17p ps=1.68u w=0.5u l=0.13u
-X1 VGND.t50 vctl.t0 m1_7387_n1916.t0 VGND.t33 sg13_lv_nmos ad=0.102p pd=1.28u as=0.102p ps=1.28u w=0.3u l=0.13u
-X2 m2_5324_104.t2 m2_4249_107.t5 a_5037_n783.t2 VGND.t2 sg13_lv_nmos ad=0.17p pd=1.68u as=0.17p ps=1.68u w=0.5u l=0.13u
-X3 a_5037_n783.t0 vctl.t9 VGND.t3 VGND.t2 sg13_lv_nmos ad=0.102p pd=1.28u as=0.102p ps=1.28u w=0.3u l=0.13u
-X4 VPWR.t71 t2_inverter_buffer_0/a_n1182_154# Vout.t0 VPWR.t69 sg13_lv_pmos ad=0.17p pd=1.68u as=0.17p ps=1.68u w=0.5u l=0.13u
-X5 m1_6041_n2608.t1 a_6113_n2395.t5 a_4771_n2395.t0 VPWR.t0 sg13_lv_pmos ad=0.17p pd=1.68u as=0.17p ps=1.68u w=0.5u l=0.13u
-X6 VGND.t58 vctl.t4 m1_2015_n1918.t0 VGND.t45 sg13_lv_nmos ad=0.102p pd=1.28u as=0.102p ps=1.28u w=0.3u l=0.13u
-X7 m1_6136_941.t2 m2_5324_104.t4 m2_7142_93.t1 VPWR.t74 sg13_lv_pmos ad=0.17p pd=1.68u as=0.17p ps=1.68u w=0.5u l=0.13u
-X8 a_5037_n783.t1 m2_4249_107.t5 m2_5324_104.t2 VGND.t0 sg13_lv_nmos ad=0.17p pd=1.68u as=0.17p ps=1.68u w=0.5u l=0.13u
-X9 m1_7387_n2608.t1 m2_7142_93.t3 a_6113_n2395.t1 VPWR.t3 sg13_lv_pmos ad=0.17p pd=1.68u as=0.17p ps=1.68u w=0.5u l=0.13u
-X10 m1_768_942.t4 m1_785_n2484.t4 m2_1572_105.t2 VPWR.t68 sg13_lv_pmos ad=0.17p pd=1.68u as=0.17p ps=1.68u w=0.5u l=0.13u
-X11 VPWR.t42 a_620_930.t13 m1_7387_n2608.t4 VPWR.t9 sg13_lv_pmos ad=0.104p pd=1.34u as=0.104p ps=1.34u w=0.2u l=0.13u
-X12 VGND.t1 vctl.t9 a_5037_n783.t0 VGND.t0 sg13_lv_nmos ad=0.102p pd=1.28u as=0.102p ps=1.28u w=0.3u l=0.13u
-X13 m2_4249_107.t3 VGND.t59 cap_cmim l=6.99u w=6.99u
-X14 Vout.t0 t2_inverter_buffer_0/a_n1182_154# VPWR.t70 VPWR.t69 sg13_lv_pmos ad=0.17p pd=1.68u as=0.17p ps=1.68u w=0.5u l=0.13u
-X15 m1_3357_n2608.t4 a_620_930.t11 VPWR.t37 VPWR.t36 sg13_lv_pmos ad=0.104p pd=1.34u as=0.104p ps=1.34u w=0.2u l=0.13u
-X16 m1_3452_942.t4 a_620_930.t8 VPWR.t31 VPWR.t29 sg13_lv_pmos ad=0.104p pd=1.34u as=0.104p ps=1.34u w=0.2u l=0.13u
-X17 m2_3178_104.t1 m2_1572_105.t4 m1_2110_941.t2 VPWR.t1 sg13_lv_pmos ad=0.17p pd=1.68u as=0.17p ps=1.68u w=0.5u l=0.13u
-X18 VPWR.t51 a_620_930.t10 m1_6041_n2608.t4 VPWR.t39 sg13_lv_pmos ad=0.104p pd=1.34u as=0.104p ps=1.34u w=0.2u l=0.13u
-X19 m1_3357_n2608.t3 a_620_930.t11 VPWR.t53 VPWR.t36 sg13_lv_pmos ad=0.104p pd=1.34u as=0.104p ps=1.34u w=0.2u l=0.13u
-X20 VGND.t7 vctl.t1 m1_673_n1918.t2 VGND.t6 sg13_lv_nmos ad=0.102p pd=1.28u as=0.102p ps=1.28u w=0.3u l=0.13u
-X21 VPWR.t61 a_620_930.t7 m1_4794_941.t1 VPWR.t16 sg13_lv_pmos ad=0.104p pd=1.34u as=0.104p ps=1.34u w=0.2u l=0.13u
-X22 VPWR.t22 a_620_930.t15 m1_673_n2608.t3 VPWR.t14 sg13_lv_pmos ad=0.104p pd=1.34u as=0.104p ps=1.34u w=0.2u l=0.13u
-X23 a_4771_n2395.t2 a_6113_n2395.t3 m1_6041_n1918.t1 VGND.t36 sg13_lv_nmos ad=0.17p pd=1.68u as=0.17p ps=1.68u w=0.5u l=0.13u
-X24 m2_3178_104.t2 m2_1572_105.t4 m1_2110_941.t3 VPWR.t1 sg13_lv_pmos ad=0.17p pd=1.68u as=0.17p ps=1.68u w=0.5u l=0.13u
-X25 a_6113_n2395.t2 m2_7142_93.t4 m1_7387_n1916.t1 VGND.t32 sg13_lv_nmos ad=0.17p pd=1.68u as=0.17p ps=1.68u w=0.5u l=0.13u
-X26 VPWR.t55 a_620_930.t8 m1_3452_942.t4 VPWR.t29 sg13_lv_pmos ad=0.104p pd=1.34u as=0.104p ps=1.34u w=0.2u l=0.13u
-X27 VGND.t62 t2_inverter_buffer_0/a_n1196_n543# Vout.t2 VGND.t60 sg13_lv_nmos ad=0.17p pd=1.68u as=0.17p ps=1.68u w=0.5u l=0.13u
-X28 a_6113_n2395.t1 m2_7142_93.t3 m1_7387_n2608.t0 VPWR.t3 sg13_lv_pmos ad=0.17p pd=1.68u as=0.17p ps=1.68u w=0.5u l=0.13u
-X29 a_745_n2395.t1 a_2087_n2395.t4 m1_2015_n2608.t3 VPWR.t5 sg13_lv_pmos ad=0.17p pd=1.68u as=0.17p ps=1.68u w=0.5u l=0.13u
-X30 m1_4699_n2608.t4 a_620_930.t12 VPWR.t43 VPWR.t34 sg13_lv_pmos ad=0.104p pd=1.34u as=0.104p ps=1.34u w=0.2u l=0.13u
-X31 a_3429_n2395.t2 a_4771_n2395.t5 m1_4699_n2608.t0 VPWR.t2 sg13_lv_pmos ad=0.17p pd=1.68u as=0.17p ps=1.68u w=0.5u l=0.13u
-X32 m1_2015_n2608.t1 a_620_930.t9 VPWR.t50 VPWR.t18 sg13_lv_pmos ad=0.104p pd=1.34u as=0.104p ps=1.34u w=0.2u l=0.13u
-X33 a_745_n2395.t0 a_2087_n2395.t4 m1_2015_n2608.t2 VPWR.t5 sg13_lv_pmos ad=0.17p pd=1.68u as=0.17p ps=1.68u w=0.5u l=0.13u
-X34 m1_6041_n1918.t0 vctl.t10 VGND.t37 VGND.t36 sg13_lv_nmos ad=0.102p pd=1.28u as=0.102p ps=1.28u w=0.3u l=0.13u
-X35 m1_7387_n1916.t0 vctl.t0 VGND.t49 VGND.t32 sg13_lv_nmos ad=0.102p pd=1.28u as=0.102p ps=1.28u w=0.3u l=0.13u
-X36 VPWR.t72 t2_inverter_buffer_0/a_n1182_154# Vout.t1 VPWR.t69 sg13_lv_pmos ad=0.17p pd=1.68u as=0.17p ps=1.68u w=0.5u l=0.13u
-X37 a_6379_n783.t0 m2_5324_104.t5 m2_7142_93.t2 VGND.t41 sg13_lv_nmos ad=0.17p pd=1.68u as=0.17p ps=1.68u w=0.5u l=0.13u
-X38 m1_7387_n2608.t4 a_620_930.t13 VPWR.t10 VPWR.t9 sg13_lv_pmos ad=0.104p pd=1.34u as=0.104p ps=1.34u w=0.2u l=0.13u
-X39 VGND.t42 vctl.t11 a_6379_n783.t2 VGND.t41 sg13_lv_nmos ad=0.102p pd=1.28u as=0.102p ps=1.28u w=0.3u l=0.13u
-X40 Vout.t1 t2_inverter_buffer_0/a_n1182_154# VPWR.t71 VPWR.t69 sg13_lv_pmos ad=0.17p pd=1.68u as=0.17p ps=1.68u w=0.5u l=0.13u
-X41 m1_1001_n788.t1 m1_785_n2484.t5 m2_1572_105.t0 VGND.t8 sg13_lv_nmos ad=0.17p pd=1.68u as=0.17p ps=1.68u w=0.5u l=0.13u
-X42 VGND.t9 vctl.t2 m1_1001_n788.t0 VGND.t8 sg13_lv_nmos ad=0.102p pd=1.28u as=0.102p ps=1.28u w=0.3u l=0.13u
-X43 VPWR.t30 a_620_930.t8 m1_3452_942.t3 VPWR.t29 sg13_lv_pmos ad=0.104p pd=1.34u as=0.104p ps=1.34u w=0.2u l=0.13u
-X44 m2_3178_104.t0 m2_1572_105.t5 m1_2344_n787.t2 VGND.t22 sg13_lv_nmos ad=0.17p pd=1.68u as=0.17p ps=1.68u w=0.5u l=0.13u
-X45 m1_2344_n787.t0 vctl.t5 VGND.t23 VGND.t22 sg13_lv_nmos ad=0.102p pd=1.28u as=0.102p ps=1.28u w=0.3u l=0.13u
-X46 a_2087_n2395.t1 a_3429_n2395.t4 m1_3357_n2608.t1 VPWR.t6 sg13_lv_pmos ad=0.17p pd=1.68u as=0.17p ps=1.68u w=0.5u l=0.13u
-X47 m1_4794_941.t1 a_620_930.t7 VPWR.t23 VPWR.t16 sg13_lv_pmos ad=0.104p pd=1.34u as=0.104p ps=1.34u w=0.2u l=0.13u
-X48 Vout.t4 VGND.t56 cap_cmim l=6.99u w=6.99u
-X49 m1_6041_n2608.t2 a_6113_n2395.t5 a_4771_n2395.t1 VPWR.t0 sg13_lv_pmos ad=0.17p pd=1.68u as=0.17p ps=1.68u w=0.5u l=0.13u
-X50 a_2087_n2395.t2 a_3429_n2395.t4 m1_3357_n2608.t2 VPWR.t6 sg13_lv_pmos ad=0.17p pd=1.68u as=0.17p ps=1.68u w=0.5u l=0.13u
-X51 m1_6136_941.t3 a_620_930.t14 VPWR.t27 VPWR.t26 sg13_lv_pmos ad=0.104p pd=1.34u as=0.104p ps=1.34u w=0.2u l=0.13u
-X52 m1_7387_n2608.t2 m2_7142_93.t3 a_6113_n2395.t0 VPWR.t3 sg13_lv_pmos ad=0.17p pd=1.68u as=0.17p ps=1.68u w=0.5u l=0.13u
-X53 m1_673_n2608.t1 a_745_n2395.t4 m1_785_n2484.t1 VPWR.t67 sg13_lv_pmos ad=0.17p pd=1.68u as=0.17p ps=1.68u w=0.5u l=0.13u
-X54 m1_3452_942.t0 m2_3178_104.t4 m2_4249_107.t0 VPWR.t4 sg13_lv_pmos ad=0.17p pd=1.68u as=0.17p ps=1.68u w=0.5u l=0.13u
-X55 VPWR.t19 a_620_930.t9 m1_2015_n2608.t0 VPWR.t18 sg13_lv_pmos ad=0.104p pd=1.34u as=0.104p ps=1.34u w=0.2u l=0.13u
-X56 m1_2015_n2608.t4 a_2087_n2395.t4 a_745_n2395.t1 VPWR.t5 sg13_lv_pmos ad=0.17p pd=1.68u as=0.17p ps=1.68u w=0.5u l=0.13u
-X57 m1_2110_941.t1 a_620_930.t16 VPWR.t20 VPWR.t12 sg13_lv_pmos ad=0.104p pd=1.34u as=0.104p ps=1.34u w=0.2u l=0.13u
-X58 m1_785_n2484.t3 VGND.t54 cap_cmim l=6.99u w=6.99u
-X59 VPWR.t52 a_620_930.t9 m1_2015_n2608.t1 VPWR.t18 sg13_lv_pmos ad=0.104p pd=1.34u as=0.104p ps=1.34u w=0.2u l=0.13u
-X60 m1_768_942.t0 a_620_930.t6 VPWR.t65 VPWR.t7 sg13_lv_pmos ad=0.104p pd=1.34u as=0.104p ps=1.34u w=0.2u l=0.13u
-X61 m1_2015_n2608.t3 a_2087_n2395.t4 a_745_n2395.t0 VPWR.t5 sg13_lv_pmos ad=0.17p pd=1.68u as=0.17p ps=1.68u w=0.5u l=0.13u
-X62 VPWR.t28 a_620_930.t15 m1_673_n2608.t4 VPWR.t14 sg13_lv_pmos ad=0.104p pd=1.34u as=0.104p ps=1.34u w=0.2u l=0.13u
-X63 a_620_930.t0 vctl.t7 VGND.t19 VGND.t17 sg13_lv_nmos ad=0.102p pd=1.28u as=0.102p ps=1.28u w=0.3u l=0.13u
-X64 m1_3357_n1918.t2 a_3429_n2395.t5 a_2087_n2395.t0 VGND.t14 sg13_lv_nmos ad=0.17p pd=1.68u as=0.17p ps=1.68u w=0.5u l=0.13u
-X65 m1_673_n2608.t2 a_745_n2395.t4 m1_785_n2484.t0 VPWR.t67 sg13_lv_pmos ad=0.17p pd=1.68u as=0.17p ps=1.68u w=0.5u l=0.13u
-X66 m1_4699_n2608.t3 a_620_930.t12 VPWR.t35 VPWR.t34 sg13_lv_pmos ad=0.104p pd=1.34u as=0.104p ps=1.34u w=0.2u l=0.13u
-X67 VPWR.t32 a_620_930.t14 m1_6136_941.t3 VPWR.t26 sg13_lv_pmos ad=0.104p pd=1.34u as=0.104p ps=1.34u w=0.2u l=0.13u
-X68 m1_785_n2484.t2 a_745_n2395.t5 m1_673_n1918.t0 VGND.t4 sg13_lv_nmos ad=0.17p pd=1.68u as=0.17p ps=1.68u w=0.5u l=0.13u
-X69 m1_2110_941.t4 m2_1572_105.t4 m2_3178_104.t1 VPWR.t1 sg13_lv_pmos ad=0.17p pd=1.68u as=0.17p ps=1.68u w=0.5u l=0.13u
-X70 VPWR.t11 a_620_930.t6 m1_768_942.t0 VPWR.t7 sg13_lv_pmos ad=0.104p pd=1.34u as=0.104p ps=1.34u w=0.2u l=0.13u
-X71 m1_2344_n787.t1 m2_1572_105.t5 m2_3178_104.t0 VGND.t21 sg13_lv_nmos ad=0.17p pd=1.68u as=0.17p ps=1.68u w=0.5u l=0.13u
-X72 VGND.t24 vctl.t5 m1_2344_n787.t0 VGND.t21 sg13_lv_nmos ad=0.102p pd=1.28u as=0.102p ps=1.28u w=0.3u l=0.13u
-X73 a_620_930.t2 a_620_930.t1 VPWR.t58 VPWR.t57 sg13_lv_pmos ad=0.104p pd=1.34u as=0.104p ps=1.34u w=0.2u l=0.13u
-X74 VGND.t15 vctl.t3 m1_3357_n1918.t0 VGND.t14 sg13_lv_nmos ad=0.102p pd=1.28u as=0.102p ps=1.28u w=0.3u l=0.13u
-X75 a_3429_n2395.t3 VGND.t52 cap_cmim l=6.99u w=6.99u
-X76 m2_4249_107.t1 m2_3178_104.t4 m1_3452_942.t0 VPWR.t4 sg13_lv_pmos ad=0.17p pd=1.68u as=0.17p ps=1.68u w=0.5u l=0.13u
-X77 VPWR.t37 a_620_930.t11 m1_3357_n2608.t3 VPWR.t36 sg13_lv_pmos ad=0.104p pd=1.34u as=0.104p ps=1.34u w=0.2u l=0.13u
-X78 m1_4794_941.t0 a_620_930.t7 VPWR.t17 VPWR.t16 sg13_lv_pmos ad=0.104p pd=1.34u as=0.104p ps=1.34u w=0.2u l=0.13u
-X79 m2_4249_107.t2 m2_3178_104.t5 m1_3685_n788.t1 VGND.t27 sg13_lv_nmos ad=0.17p pd=1.68u as=0.17p ps=1.68u w=0.5u l=0.13u
-X80 m1_3685_n788.t2 vctl.t6 VGND.t28 VGND.t27 sg13_lv_nmos ad=0.102p pd=1.28u as=0.102p ps=1.28u w=0.3u l=0.13u
-X81 VPWR.t63 a_620_930.t1 a_620_930.t2 VPWR.t57 sg13_lv_pmos ad=0.104p pd=1.34u as=0.104p ps=1.34u w=0.2u l=0.13u
-X82 m1_3357_n2608.t1 a_3429_n2395.t4 a_2087_n2395.t2 VPWR.t6 sg13_lv_pmos ad=0.17p pd=1.68u as=0.17p ps=1.68u w=0.5u l=0.13u
-X83 m1_6041_n2608.t4 a_620_930.t10 VPWR.t48 VPWR.t39 sg13_lv_pmos ad=0.104p pd=1.34u as=0.104p ps=1.34u w=0.2u l=0.13u
-X84 m1_4699_n1918.t1 a_4771_n2395.t3 a_3429_n2395.t0 VGND.t31 sg13_lv_nmos ad=0.17p pd=1.68u as=0.17p ps=1.68u w=0.5u l=0.13u
-X85 m1_673_n1918.t2 vctl.t1 VGND.t5 VGND.t4 sg13_lv_nmos ad=0.102p pd=1.28u as=0.102p ps=1.28u w=0.3u l=0.13u
-X86 m1_4794_941.t2 m2_4249_107.t4 m2_5324_104.t0 VPWR.t75 sg13_lv_pmos ad=0.17p pd=1.68u as=0.17p ps=1.68u w=0.5u l=0.13u
-X87 a_4771_n2395.t4 VGND.t29 cap_cmim l=6.99u w=6.99u
-X88 a_4771_n2395.t1 a_6113_n2395.t5 m1_6041_n2608.t1 VPWR.t0 sg13_lv_pmos ad=0.17p pd=1.68u as=0.17p ps=1.68u w=0.5u l=0.13u
-X89 m2_7142_93.t2 m2_5324_104.t5 a_6379_n783.t1 VGND.t43 sg13_lv_nmos ad=0.17p pd=1.68u as=0.17p ps=1.68u w=0.5u l=0.13u
-X90 a_6379_n783.t2 vctl.t11 VGND.t44 VGND.t43 sg13_lv_nmos ad=0.102p pd=1.28u as=0.102p ps=1.28u w=0.3u l=0.13u
-X91 VPWR.t41 a_620_930.t14 m1_6136_941.t4 VPWR.t26 sg13_lv_pmos ad=0.104p pd=1.34u as=0.104p ps=1.34u w=0.2u l=0.13u
-X92 m1_6041_n2608.t3 a_620_930.t10 VPWR.t40 VPWR.t39 sg13_lv_pmos ad=0.104p pd=1.34u as=0.104p ps=1.34u w=0.2u l=0.13u
-X93 a_4771_n2395.t0 a_6113_n2395.t5 m1_6041_n2608.t0 VPWR.t0 sg13_lv_pmos ad=0.17p pd=1.68u as=0.17p ps=1.68u w=0.5u l=0.13u
-X94 m2_4249_107.t0 m2_3178_104.t4 m1_3452_942.t1 VPWR.t4 sg13_lv_pmos ad=0.17p pd=1.68u as=0.17p ps=1.68u w=0.5u l=0.13u
-X95 m1_4794_941.t4 m2_4249_107.t4 m2_5324_104.t1 VPWR.t75 sg13_lv_pmos ad=0.17p pd=1.68u as=0.17p ps=1.68u w=0.5u l=0.13u
-X96 VPWR.t8 a_620_930.t6 m1_768_942.t1 VPWR.t7 sg13_lv_pmos ad=0.104p pd=1.34u as=0.104p ps=1.34u w=0.2u l=0.13u
-X97 m2_7142_93.t5 VGND.t34 cap_cmim l=6.99u w=6.99u
-X98 VGND.t48 vctl.t8 m1_4699_n1918.t2 VGND.t31 sg13_lv_nmos ad=0.102p pd=1.28u as=0.102p ps=1.28u w=0.3u l=0.13u
-X99 a_2087_n2395.t0 a_3429_n2395.t5 m1_3357_n1918.t1 VGND.t12 sg13_lv_nmos ad=0.17p pd=1.68u as=0.17p ps=1.68u w=0.5u l=0.13u
-X100 m1_3452_942.t2 m2_3178_104.t4 m2_4249_107.t1 VPWR.t4 sg13_lv_pmos ad=0.17p pd=1.68u as=0.17p ps=1.68u w=0.5u l=0.13u
-X101 VPWR.t43 a_620_930.t12 m1_4699_n2608.t3 VPWR.t34 sg13_lv_pmos ad=0.104p pd=1.34u as=0.104p ps=1.34u w=0.2u l=0.13u
-X102 m1_6041_n1918.t2 a_6113_n2395.t3 a_4771_n2395.t2 VGND.t38 sg13_lv_nmos ad=0.17p pd=1.68u as=0.17p ps=1.68u w=0.5u l=0.13u
-X103 m1_768_942.t2 m1_785_n2484.t4 m2_1572_105.t1 VPWR.t68 sg13_lv_pmos ad=0.17p pd=1.68u as=0.17p ps=1.68u w=0.5u l=0.13u
-X104 a_2087_n2395.t3 VGND.t40 cap_cmim l=6.99u w=6.99u
-X105 VGND.t18 vctl.t7 a_620_930.t0 VGND.t17 sg13_lv_nmos ad=0.102p pd=1.28u as=0.102p ps=1.28u w=0.3u l=0.13u
-X106 m2_7142_93.t0 m2_5324_104.t4 m1_6136_941.t1 VPWR.t74 sg13_lv_pmos ad=0.17p pd=1.68u as=0.17p ps=1.68u w=0.5u l=0.13u
-X107 m2_3178_104.t3 VGND.t35 cap_cmim l=6.99u w=6.99u
-X108 a_3429_n2395.t1 a_4771_n2395.t5 m1_4699_n2608.t2 VPWR.t2 sg13_lv_pmos ad=0.17p pd=1.68u as=0.17p ps=1.68u w=0.5u l=0.13u
-X109 a_620_930.t3 a_620_930.t1 VPWR.t60 VPWR.t57 sg13_lv_pmos ad=0.104p pd=1.34u as=0.104p ps=1.34u w=0.2u l=0.13u
-X110 m2_5324_104.t1 m2_4249_107.t4 m1_4794_941.t2 VPWR.t75 sg13_lv_pmos ad=0.17p pd=1.68u as=0.17p ps=1.68u w=0.5u l=0.13u
-X111 m2_1572_105.t3 VGND.t20 cap_cmim l=6.99u w=6.99u
-X112 m1_3357_n1918.t0 vctl.t3 VGND.t13 VGND.t12 sg13_lv_nmos ad=0.102p pd=1.28u as=0.102p ps=1.28u w=0.3u l=0.13u
-X113 VPWR.t47 a_620_930.t12 m1_4699_n2608.t4 VPWR.t34 sg13_lv_pmos ad=0.104p pd=1.34u as=0.104p ps=1.34u w=0.2u l=0.13u
-X114 m1_673_n2608.t3 a_620_930.t15 VPWR.t15 VPWR.t14 sg13_lv_pmos ad=0.104p pd=1.34u as=0.104p ps=1.34u w=0.2u l=0.13u
-X115 VPWR.t10 a_620_930.t13 m1_7387_n2608.t3 VPWR.t9 sg13_lv_pmos ad=0.104p pd=1.34u as=0.104p ps=1.34u w=0.2u l=0.13u
-X116 m1_785_n2484.t1 a_745_n2395.t4 m1_673_n2608.t0 VPWR.t67 sg13_lv_pmos ad=0.17p pd=1.68u as=0.17p ps=1.68u w=0.5u l=0.13u
-X117 m2_5324_104.t0 m2_4249_107.t4 m1_4794_941.t3 VPWR.t75 sg13_lv_pmos ad=0.17p pd=1.68u as=0.17p ps=1.68u w=0.5u l=0.13u
-X118 VGND.t39 vctl.t10 m1_6041_n1918.t0 VGND.t38 sg13_lv_nmos ad=0.102p pd=1.28u as=0.102p ps=1.28u w=0.3u l=0.13u
-X119 a_6113_n2395.t4 VGND.t55 cap_cmim l=6.99u w=6.99u
-X120 VPWR.t58 a_620_930.t1 a_620_930.t3 VPWR.t57 sg13_lv_pmos ad=0.104p pd=1.34u as=0.104p ps=1.34u w=0.2u l=0.13u
-X121 a_745_n2395.t2 a_2087_n2395.t5 m1_2015_n1918.t2 VGND.t46 sg13_lv_nmos ad=0.17p pd=1.68u as=0.17p ps=1.68u w=0.5u l=0.13u
-X122 m1_6136_941.t0 m2_5324_104.t4 m2_7142_93.t0 VPWR.t74 sg13_lv_pmos ad=0.17p pd=1.68u as=0.17p ps=1.68u w=0.5u l=0.13u
-X123 VPWR.t48 a_620_930.t10 m1_6041_n2608.t3 VPWR.t39 sg13_lv_pmos ad=0.104p pd=1.34u as=0.104p ps=1.34u w=0.2u l=0.13u
-X124 a_3429_n2395.t0 a_4771_n2395.t3 m1_4699_n1918.t0 VGND.t30 sg13_lv_nmos ad=0.17p pd=1.68u as=0.17p ps=1.68u w=0.5u l=0.13u
-X125 a_745_n2395.t3 VGND.t53 cap_cmim l=6.99u w=6.99u
-X126 m2_1572_105.t2 m1_785_n2484.t4 m1_768_942.t2 VPWR.t68 sg13_lv_pmos ad=0.17p pd=1.68u as=0.17p ps=1.68u w=0.5u l=0.13u
-X127 m2_5324_104.t3 VGND.t51 cap_cmim l=6.99u w=6.99u
-X128 VPWR.t21 a_620_930.t16 m1_2110_941.t1 VPWR.t12 sg13_lv_pmos ad=0.104p pd=1.34u as=0.104p ps=1.34u w=0.2u l=0.13u
-X129 a_6113_n2395.t0 m2_7142_93.t3 m1_7387_n2608.t1 VPWR.t3 sg13_lv_pmos ad=0.17p pd=1.68u as=0.17p ps=1.68u w=0.5u l=0.13u
-X130 m1_2015_n1918.t0 vctl.t4 VGND.t57 VGND.t46 sg13_lv_nmos ad=0.102p pd=1.28u as=0.102p ps=1.28u w=0.3u l=0.13u
-X131 m1_2110_941.t0 a_620_930.t16 VPWR.t13 VPWR.t12 sg13_lv_pmos ad=0.104p pd=1.34u as=0.104p ps=1.34u w=0.2u l=0.13u
-X132 VPWR.t44 a_620_930.t11 m1_3357_n2608.t4 VPWR.t36 sg13_lv_pmos ad=0.104p pd=1.34u as=0.104p ps=1.34u w=0.2u l=0.13u
-X133 m1_3357_n2608.t0 a_3429_n2395.t4 a_2087_n2395.t1 VPWR.t6 sg13_lv_pmos ad=0.17p pd=1.68u as=0.17p ps=1.68u w=0.5u l=0.13u
-X134 m1_4699_n1918.t2 vctl.t8 VGND.t47 VGND.t30 sg13_lv_nmos ad=0.102p pd=1.28u as=0.102p ps=1.28u w=0.3u l=0.13u
-X135 m1_3452_942.t3 a_620_930.t8 VPWR.t55 VPWR.t29 sg13_lv_pmos ad=0.104p pd=1.34u as=0.104p ps=1.34u w=0.2u l=0.13u
-X136 m2_1572_105.t1 m1_785_n2484.t4 m1_768_942.t3 VPWR.t68 sg13_lv_pmos ad=0.17p pd=1.68u as=0.17p ps=1.68u w=0.5u l=0.13u
-X137 m2_1572_105.t0 m1_785_n2484.t5 m1_1001_n788.t2 VGND.t10 sg13_lv_nmos ad=0.17p pd=1.68u as=0.17p ps=1.68u w=0.5u l=0.13u
-X138 m1_1001_n788.t0 vctl.t2 VGND.t11 VGND.t10 sg13_lv_nmos ad=0.102p pd=1.28u as=0.102p ps=1.28u w=0.3u l=0.13u
-X139 m2_7142_93.t1 m2_5324_104.t4 m1_6136_941.t0 VPWR.t74 sg13_lv_pmos ad=0.17p pd=1.68u as=0.17p ps=1.68u w=0.5u l=0.13u
-X140 VPWR.t23 a_620_930.t7 m1_4794_941.t0 VPWR.t16 sg13_lv_pmos ad=0.104p pd=1.34u as=0.104p ps=1.34u w=0.2u l=0.13u
-X141 m1_6136_941.t4 a_620_930.t14 VPWR.t32 VPWR.t26 sg13_lv_pmos ad=0.104p pd=1.34u as=0.104p ps=1.34u w=0.2u l=0.13u
-X142 m1_673_n2608.t4 a_620_930.t15 VPWR.t22 VPWR.t14 sg13_lv_pmos ad=0.104p pd=1.34u as=0.104p ps=1.34u w=0.2u l=0.13u
-X143 m1_4699_n2608.t0 a_4771_n2395.t5 a_3429_n2395.t1 VPWR.t2 sg13_lv_pmos ad=0.17p pd=1.68u as=0.17p ps=1.68u w=0.5u l=0.13u
-X144 m1_785_n2484.t0 a_745_n2395.t4 m1_673_n2608.t1 VPWR.t67 sg13_lv_pmos ad=0.17p pd=1.68u as=0.17p ps=1.68u w=0.5u l=0.13u
-X145 Vout.t2 t2_inverter_buffer_0/a_n1196_n543# VGND.t61 VGND.t60 sg13_lv_nmos ad=0.17p pd=1.68u as=0.17p ps=1.68u w=0.5u l=0.13u
-X146 m1_2110_941.t2 m2_1572_105.t4 m2_3178_104.t2 VPWR.t1 sg13_lv_pmos ad=0.17p pd=1.68u as=0.17p ps=1.68u w=0.5u l=0.13u
-X147 m1_7387_n1916.t2 m2_7142_93.t4 a_6113_n2395.t2 VGND.t33 sg13_lv_nmos ad=0.17p pd=1.68u as=0.17p ps=1.68u w=0.5u l=0.13u
-X148 m1_768_942.t1 a_620_930.t6 VPWR.t11 VPWR.t7 sg13_lv_pmos ad=0.104p pd=1.34u as=0.104p ps=1.34u w=0.2u l=0.13u
-X149 m1_7387_n2608.t3 a_620_930.t13 VPWR.t24 VPWR.t9 sg13_lv_pmos ad=0.104p pd=1.34u as=0.104p ps=1.34u w=0.2u l=0.13u
-X150 m1_2015_n2608.t0 a_620_930.t9 VPWR.t52 VPWR.t18 sg13_lv_pmos ad=0.104p pd=1.34u as=0.104p ps=1.34u w=0.2u l=0.13u
-X151 VPWR.t20 a_620_930.t16 m1_2110_941.t0 VPWR.t12 sg13_lv_pmos ad=0.104p pd=1.34u as=0.104p ps=1.34u w=0.2u l=0.13u
-X152 m1_2015_n1918.t1 a_2087_n2395.t5 a_745_n2395.t2 VGND.t45 sg13_lv_nmos ad=0.17p pd=1.68u as=0.17p ps=1.68u w=0.5u l=0.13u
-X153 Vout.t3 VGND.t16 cap_cmim l=6.99u w=6.99u
-X154 m1_3685_n788.t0 m2_3178_104.t5 m2_4249_107.t2 VGND.t25 sg13_lv_nmos ad=0.17p pd=1.68u as=0.17p ps=1.68u w=0.5u l=0.13u
-X155 VGND.t26 vctl.t6 m1_3685_n788.t2 VGND.t25 sg13_lv_nmos ad=0.102p pd=1.28u as=0.102p ps=1.28u w=0.3u l=0.13u
-X156 m1_4699_n2608.t1 a_4771_n2395.t5 a_3429_n2395.t2 VPWR.t2 sg13_lv_pmos ad=0.17p pd=1.68u as=0.17p ps=1.68u w=0.5u l=0.13u
-C0 a_750_351# a_2092_351# 0.77984f
-C1 a_6024_351# a_4776_351# 0.1057f
-C2 a_3340_351# a_2092_351# 0.10275f
-C3 a_4682_351# a_4776_351# 0.42665f
-C4 a_1998_351# a_2092_351# 0.42202f
-C5 a_4682_351# a_3434_351# 0.09926f
-C6 a_4709_n2525# VPWR 1.36202f
-C7 a_684_n1958# vctl 0.04284f
-C8 a_6052_n1958# vctl 0.04998f
-C9 a_683_n2525# a_542_269# 0.45412f
-C10 a_4909_n217# vctl 0.08436f
-C11 a_542_269# a_750_351# 0.3548f
-C12 a_1998_351# a_750_351# 0.09188f
-C13 a_2225_n217# vctl 0.07714f
-C14 a_656_351# a_750_351# 0.42803f
-C15 a_883_n217# vctl 0.08086f
-C16 a_656_351# a_542_269# 0.08875f
-C17 vctl a_6118_351# 0.20887f
-C18 a_2225_n217# VPWR 0.01623f
-C19 a_3567_n217# a_3434_351# 0.22378f
-C20 a_6251_n217# vctl 0.08336f
-C21 a_7212_321# Vout 0.09147f
-C22 Vout a_6118_351# 0.77478f
-C23 a_7198_n376# a_6118_351# 0.01604f
-C24 vctl a_4776_351# 0.026f
-C25 a_3567_n217# a_2092_351# 0.03153f
-C26 a_3368_n1958# vctl 0.05041f
-C27 Vout a_4776_351# 0.18866f
-C28 a_7212_321# VPWR 0.44048f
-C29 vctl a_3434_351# 0.02497f
-C30 VPWR a_6118_351# 1.28569f
-C31 VPWR a_4776_351# 1.11414f
-C32 vctl a_2092_351# 0.0248f
-C33 a_3368_n1958# VPWR 0.01475f
-C34 VPWR a_3434_351# 1.00449f
-C35 VPWR a_2092_351# 1.29553f
-C36 a_683_n2525# VPWR 1.35573f
-C37 vctl a_750_351# 0.02282f
-C38 a_7398_n1956# vctl 0.05123f
-C39 VPWR a_750_351# 1.05125f
-C40 a_3340_351# VPWR 1.36686f
-C41 VPWR a_542_269# 0.7984f
-C42 a_7397_n2523# a_6118_351# 0.11621f
-C43 a_1998_351# VPWR 1.37065f
-C44 VPWR a_6024_351# 1.37111f
-C45 a_656_351# VPWR 1.37421f
-C46 VPWR a_4682_351# 1.35049f
-C47 a_6051_n2525# VPWR 1.38336f
-C48 a_3367_n2525# VPWR 1.37334f
-C49 a_3567_n217# vctl 0.0811f
-C50 a_3567_n217# VPWR 0.0108f
-C51 Vout vctl 0.02121f
-C52 a_4710_n1958# vctl 0.05026f
-C53 a_6052_n1958# a_6118_351# 0.02056f
-C54 VPWR vctl 0.28629f
-C55 a_7198_n376# Vout 0.01195f
-C56 VPWR Vout 0.79524f
-C57 a_4909_n217# a_4776_351# 0.22378f
-C58 a_4909_n217# a_3434_351# 0.03153f
-C59 a_7212_321# a_6118_351# 0.02041f
-C60 a_2025_n2525# VPWR 1.36925f
-C61 a_6251_n217# a_6118_351# 0.2448f
-C62 a_4776_351# a_6118_351# 0.20869f
-C63 a_2225_n217# a_2092_351# 0.22378f
-C64 a_2026_n1958# vctl 0.04894f
-C65 a_6251_n217# a_4776_351# 0.03205f
-C66 a_3434_351# a_4776_351# 0.91818f
-C67 a_2026_n1958# VPWR 0.01457f
-C68 a_2092_351# a_3434_351# 0.88103f
-C69 a_684_n1958# a_542_269# 0.23665f
-C70 a_7397_n2523# VPWR 1.38295f
-C71 a_2225_n217# a_750_351# 0.03153f
-C72 a_883_n217# a_750_351# 0.22378f
-C73 a_883_n217# a_542_269# 0.03491f
-C74 a_7398_n1956# a_6118_351# 0.12881f
-C75 a_6024_351# a_6118_351# 0.4131f
-C76 a_3340_351# a_3434_351# 0.42148f
-R0 a_4771_n2395.n1 a_4771_n2395.t4 29.2913
-R1 a_4771_n2395.n2 a_4771_n2395.t2 17.4611
-R2 a_4771_n2395.n3 a_4771_n2395.t1 17.1844
-R3 a_4771_n2395.n0 a_4771_n2395.t5 15.3046
-R4 a_4771_n2395.n0 a_4771_n2395.t3 15.2998
-R5 a_4771_n2395.n2 a_4771_n2395.n1 10.1445
-R6 a_4771_n2395.n1 a_4771_n2395.n0 9.28797
-R7 a_4771_n2395.t0 a_4771_n2395.n3 6.28823
-R8 a_4771_n2395.n3 a_4771_n2395.n2 0.3305
-R9 a_3429_n2395.n2 a_3429_n2395.t3 29.2959
-R10 a_3429_n2395.t0 a_3429_n2395.n3 17.4611
-R11 a_3429_n2395.n0 a_3429_n2395.t2 17.1844
-R12 a_3429_n2395.n1 a_3429_n2395.t4 15.3046
-R13 a_3429_n2395.n1 a_3429_n2395.t5 15.2998
-R14 a_3429_n2395.n3 a_3429_n2395.n2 9.7837
-R15 a_3429_n2395.n2 a_3429_n2395.n1 9.44427
-R16 a_3429_n2395.n0 a_3429_n2395.t1 6.28745
-R17 a_3429_n2395.n3 a_3429_n2395.n0 0.3305
-R18 m1_4699_n1918.n0 m1_4699_n1918.t2 35.6508
-R19 m1_4699_n1918.t1 m1_4699_n1918.n0 17.4167
-R20 m1_4699_n1918.n0 m1_4699_n1918.t0 17.414
-R21 VGND.n284 VGND.n191 408611
-R22 VGND.n276 VGND.n28 36759.9
-R23 VGND.n289 VGND.n287 27000
-R24 VGND.n289 VGND.n31 27000
-R25 VGND.n322 VGND.n31 27000
-R26 VGND.n323 VGND.n322 27000
-R27 VGND.n281 VGND.n280 24089.8
-R28 VGND.n283 VGND.n282 24089.8
-R29 VGND.n285 VGND.n284 22334.8
-R30 VGND.n279 VGND.n278 21736.5
-R31 VGND.n286 VGND.n285 21565.7
-R32 VGND.n323 VGND.n30 20644.2
-R33 VGND.n276 VGND.n275 19846.7
-R34 VGND.n277 VGND.n28 14324.5
-R35 VGND.n326 VGND.n28 11891.2
-R36 VGND.n324 VGND.n323 10432.6
-R37 VGND.n285 VGND.n131 6992.01
-R38 VGND.n278 VGND.n277 6890.98
-R39 VGND.n291 VGND.n289 6755.73
-R40 VGND.n289 VGND.n288 6755.73
-R41 VGND.n290 VGND.n31 6755.73
-R42 VGND.n79 VGND.n31 6755.73
-R43 VGND.n322 VGND.n29 6755.73
-R44 VGND.n322 VGND.n321 6755.73
-R45 VGND.n287 VGND.n176 6755.73
-R46 VGND.n281 VGND.n40 6068.7
-R47 VGND.n282 VGND.n192 6068.7
-R48 VGND.n283 VGND.n86 6068.7
-R49 VGND.n280 VGND.n193 6068.7
-R50 VGND.n279 VGND.n32 6068.7
-R51 VGND.n286 VGND.n191 5388.03
-R52 VGND.n292 VGND.n287 4821.21
-R53 VGND.n293 VGND.n292 4305.75
-R54 VGND.n192 VGND.n191 3571.26
-R55 VGND.n292 VGND.n291 3203.87
-R56 VGND.n212 VGND.n30 3116.17
-R57 VGND.n325 VGND.n324 2715.21
-R58 VGND.n277 VGND.n193 2384.11
-R59 VGND.n193 VGND.n192 2380.84
-R60 VGND.n290 VGND.n29 2371.02
-R61 VGND.n291 VGND.n290 2371.02
-R62 VGND.n324 VGND.n29 2282.62
-R63 VGND.n294 VGND.n293 1211.36
-R64 VGND.n214 VGND.t32 630.639
-R65 VGND.n214 VGND.n4 462.93
-R66 VGND.n296 VGND.t8 375.808
-R67 VGND.t6 VGND.n175 375.808
-R68 VGND.t41 VGND.n196 375.808
-R69 VGND.n256 VGND.t38 375.808
-R70 VGND.t0 VGND.n34 375.808
-R71 VGND.n318 VGND.t31 375.808
-R72 VGND.n106 VGND.t25 375.808
-R73 VGND.n311 VGND.t14 375.808
-R74 VGND.n151 VGND.t21 375.808
-R75 VGND.n304 VGND.t45 375.808
-R76 VGND.n293 VGND.n286 303.187
-R77 VGND.n303 VGND.n131 282.144
-R78 VGND.n297 VGND.n176 281.534
-R79 VGND.n225 VGND.n32 281.534
-R80 VGND.n321 VGND.n320 281.534
-R81 VGND.n317 VGND.n40 281.534
-R82 VGND.n80 VGND.n79 281.534
-R83 VGND.n310 VGND.n86 281.534
-R84 VGND.n288 VGND.n125 281.534
-R85 VGND.n212 VGND.t60 188.936
-R86 VGND.t60 VGND.t33 182.554
-R87 VGND.n275 VGND.n30 167.286
-R88 VGND.t8 VGND.t10 147.224
-R89 VGND.t4 VGND.t6 147.224
-R90 VGND.t43 VGND.t41 147.224
-R91 VGND.t38 VGND.t36 147.224
-R92 VGND.t2 VGND.t0 147.224
-R93 VGND.t31 VGND.t30 147.224
-R94 VGND.t25 VGND.t27 147.224
-R95 VGND.t12 VGND.t14 147.224
-R96 VGND.t21 VGND.t22 147.224
-R97 VGND.t46 VGND.t45 147.224
-R98 VGND.t33 VGND.t32 145.532
-R99 VGND.n275 VGND.n274 112.975
-R100 VGND.t10 VGND.t4 109.772
-R101 VGND.t36 VGND.t43 109.772
-R102 VGND.t30 VGND.t2 109.772
-R103 VGND.t27 VGND.t12 109.772
-R104 VGND.t22 VGND.t46 109.772
-R105 VGND.n326 VGND.n325 83.1935
-R106 VGND.n4 VGND.t17 74.8431
-R107 VGND.t17 VGND.n3 22.8906
-R108 VGND.n278 VGND.n276 22.5473
-R109 VGND.n282 VGND.n281 17.9646
-R110 VGND.n284 VGND.n283 17.9646
-R111 VGND.n280 VGND.n279 17.9646
-R112 VGND.n270 VGND.t42 17.4201
-R113 VGND.n45 VGND.t1 17.4201
-R114 VGND.n90 VGND.t26 17.4201
-R115 VGND.n173 VGND.t5 17.4201
-R116 VGND.n136 VGND.t57 17.4201
-R117 VGND.n91 VGND.t13 17.4201
-R118 VGND.n46 VGND.t47 17.4201
-R119 VGND.n269 VGND.t37 17.4201
-R120 VGND.n270 VGND.t44 17.4175
-R121 VGND.n45 VGND.t3 17.4175
-R122 VGND.n90 VGND.t28 17.4175
-R123 VGND.n172 VGND.t11 17.4175
-R124 VGND.n173 VGND.t7 17.4175
-R125 VGND.n136 VGND.t58 17.4175
-R126 VGND.n91 VGND.t15 17.4175
-R127 VGND.n46 VGND.t48 17.4175
-R128 VGND.n269 VGND.t39 17.4175
-R129 VGND.n135 VGND.t24 17.4111
-R130 VGND.n135 VGND.t23 17.4044
-R131 VGND.n172 VGND.t9 17.397
-R132 VGND.n217 VGND.t61 17.3158
-R133 VGND.n220 VGND.t50 17.2398
-R134 VGND.n219 VGND.t49 17.2315
-R135 VGND.n7 VGND.t19 17.1215
-R136 VGND.n298 VGND.n174 17.0177
-R137 VGND.n178 VGND.n174 17.0164
-R138 VGND.n244 VGND.n233 17.0005
-R139 VGND.n245 VGND.n244 17.0005
-R140 VGND.n231 VGND.n230 17.0005
-R141 VGND.n230 VGND.n229 17.0005
-R142 VGND.n238 VGND.n236 17.0005
-R143 VGND.n239 VGND.n238 17.0005
-R144 VGND.n62 VGND.n53 17.0005
-R145 VGND.n63 VGND.n62 17.0005
-R146 VGND.n51 VGND.n50 17.0005
-R147 VGND.n50 VGND.n49 17.0005
-R148 VGND.n56 VGND.n55 17.0005
-R149 VGND.n57 VGND.n56 17.0005
-R150 VGND.n108 VGND.n98 17.0005
-R151 VGND.n109 VGND.n108 17.0005
-R152 VGND.n96 VGND.n95 17.0005
-R153 VGND.n95 VGND.n94 17.0005
-R154 VGND.n101 VGND.n100 17.0005
-R155 VGND.n102 VGND.n101 17.0005
-R156 VGND.n153 VGND.n143 17.0005
-R157 VGND.n154 VGND.n153 17.0005
-R158 VGND.n141 VGND.n140 17.0005
-R159 VGND.n140 VGND.n139 17.0005
-R160 VGND.n146 VGND.n145 17.0005
-R161 VGND.n147 VGND.n146 17.0005
-R162 VGND.n274 VGND.n194 17.0005
-R163 VGND.n273 VGND.n272 17.0005
-R164 VGND.n273 VGND.n199 17.0005
-R165 VGND.n302 VGND.n301 17.0005
-R166 VGND.n309 VGND.n308 17.0005
-R167 VGND.n316 VGND.n315 17.0005
-R168 VGND.n267 VGND.n266 17.0005
-R169 VGND.n223 VGND.n222 17.0005
-R170 VGND.n222 VGND.n202 17.0005
-R171 VGND.n214 VGND.n207 17.0005
-R172 VGND.n216 VGND.n215 17.0005
-R173 VGND.n325 VGND.n3 13.9544
-R174 VGND.n156 VGND.n142 9.22719
-R175 VGND.n148 VGND.n138 9.22719
-R176 VGND.n111 VGND.n97 9.22719
-R177 VGND.n103 VGND.n93 9.22719
-R178 VGND.n65 VGND.n52 9.22719
-R179 VGND.n58 VGND.n48 9.22719
-R180 VGND.n247 VGND.n232 9.22719
-R181 VGND.n240 VGND.n228 9.22719
-R182 VGND.n157 VGND.n156 9.19438
-R183 VGND.n112 VGND.n111 9.19438
-R184 VGND.n66 VGND.n65 9.19438
-R185 VGND.n248 VGND.n247 9.19438
-R186 VGND.n161 VGND.n133 9.08291
-R187 VGND.n164 VGND.n126 9.08291
-R188 VGND.n116 VGND.n88 9.08291
-R189 VGND.n119 VGND.n81 9.08291
-R190 VGND.n70 VGND.n42 9.08291
-R191 VGND.n73 VGND.n36 9.08291
-R192 VGND.n252 VGND.n226 9.08291
-R193 VGND.n180 VGND.n170 9.08291
-R194 VGND.n260 VGND.n255 9.08291
-R195 VGND.n190 VGND.n189 9.07702
-R196 VGND.n26 VGND.n25 9.04136
-R197 VGND.n26 VGND.n9 9.03256
-R198 VGND.n6 VGND.n0 9.03039
-R199 VGND VGND.n329 9.02847
-R200 VGND.n14 VGND.n9 9.02721
-R201 VGND.n25 VGND.n24 9.0225
-R202 VGND.n13 VGND.n12 9.0005
-R203 VGND.n22 VGND.n15 9.0005
-R204 VGND.n23 VGND.n22 9.0005
-R205 VGND.n12 VGND.n11 9.0005
-R206 VGND.n15 VGND.n14 9.0005
-R207 VGND.n24 VGND.n23 9.0005
-R208 VGND.n11 VGND.n10 9.0005
-R209 VGND.n156 VGND.n155 9.0005
-R210 VGND.n144 VGND.n138 9.0005
-R211 VGND.n166 VGND.n165 9.0005
-R212 VGND.n163 VGND.n162 9.0005
-R213 VGND.n160 VGND.n159 9.0005
-R214 VGND.n111 VGND.n110 9.0005
-R215 VGND.n99 VGND.n93 9.0005
-R216 VGND.n121 VGND.n120 9.0005
-R217 VGND.n118 VGND.n117 9.0005
-R218 VGND.n115 VGND.n114 9.0005
-R219 VGND.n65 VGND.n64 9.0005
-R220 VGND.n54 VGND.n48 9.0005
-R221 VGND.n75 VGND.n74 9.0005
-R222 VGND.n72 VGND.n71 9.0005
-R223 VGND.n69 VGND.n68 9.0005
-R224 VGND.n247 VGND.n246 9.0005
-R225 VGND.n235 VGND.n228 9.0005
-R226 VGND.n254 VGND.n253 9.0005
-R227 VGND.n251 VGND.n250 9.0005
-R228 VGND.n182 VGND.n181 9.0005
-R229 VGND.n184 VGND.n183 9.0005
-R230 VGND.n188 VGND.n179 9.0005
-R231 VGND.n186 VGND.n185 9.0005
-R232 VGND.n262 VGND.n261 9.0005
-R233 VGND.n167 VGND.n137 9.0005
-R234 VGND.n122 VGND.n92 9.0005
-R235 VGND.n76 VGND.n47 9.0005
-R236 VGND.n263 VGND.n199 9.0005
-R237 VGND.n301 VGND.n168 9.0005
-R238 VGND.n308 VGND.n123 9.0005
-R239 VGND.n315 VGND.n77 9.0005
-R240 VGND.n266 VGND.n264 9.0005
-R241 VGND.n2 VGND.n1 9.0005
-R242 VGND.n329 VGND.n328 9.0005
-R243 VGND.n256 VGND.n198 8.501
-R244 VGND.n241 VGND.n232 8.50057
-R245 VGND.n241 VGND.n240 8.50057
-R246 VGND.n59 VGND.n52 8.50057
-R247 VGND.n59 VGND.n58 8.50057
-R248 VGND.n104 VGND.n97 8.50057
-R249 VGND.n104 VGND.n103 8.50057
-R250 VGND.n149 VGND.n142 8.50057
-R251 VGND.n149 VGND.n148 8.50057
-R252 VGND.n327 VGND.n27 8.49487
-R253 VGND.n215 VGND.n205 8.49413
-R254 VGND.n187 VGND.n178 8.4728
-R255 VGND.n298 VGND.n171 8.4706
-R256 VGND.n267 VGND.n227 8.4706
-R257 VGND.n316 VGND.n43 8.4706
-R258 VGND.n309 VGND.n89 8.4706
-R259 VGND.n302 VGND.n134 8.4706
-R260 VGND.n259 VGND.n258 8.4706
-R261 VGND.n208 VGND.n207 8.4706
-R262 VGND.n210 VGND.n209 8.4706
-R263 VGND.n249 VGND.n230 8.05189
-R264 VGND.n67 VGND.n50 8.05189
-R265 VGND.n113 VGND.n95 8.05189
-R266 VGND.n158 VGND.n140 8.05189
-R267 VGND.n327 VGND.n3 7.90729
-R268 VGND.n201 VGND.t62 5.979
-R269 VGND.n8 VGND.t18 5.82643
-R270 VGND.n237 VGND.n225 5.66778
-R271 VGND.n234 VGND.n225 5.66778
-R272 VGND.n243 VGND.n196 5.66778
-R273 VGND.n317 VGND.n39 5.66778
-R274 VGND.n317 VGND.n38 5.66778
-R275 VGND.n61 VGND.n34 5.66778
-R276 VGND.n310 VGND.n85 5.66778
-R277 VGND.n310 VGND.n84 5.66778
-R278 VGND.n107 VGND.n106 5.66778
-R279 VGND.n303 VGND.n130 5.66778
-R280 VGND.n303 VGND.n129 5.66778
-R281 VGND.n152 VGND.n151 5.66778
-R282 VGND.n212 VGND.n211 5.66778
-R283 VGND.n212 VGND.n206 5.66778
-R284 VGND.n242 VGND.n196 5.66767
-R285 VGND.n60 VGND.n34 5.66767
-R286 VGND.n106 VGND.n105 5.66767
-R287 VGND.n151 VGND.n150 5.66767
-R288 VGND.n189 VGND.n178 5.63627
-R289 VGND.n305 VGND.n127 5.63396
-R290 VGND.n312 VGND.n82 5.63396
-R291 VGND.n319 VGND.n37 5.63396
-R292 VGND.n302 VGND.n133 5.63382
-R293 VGND.n305 VGND.n126 5.63382
-R294 VGND.n309 VGND.n88 5.63382
-R295 VGND.n312 VGND.n81 5.63382
-R296 VGND.n316 VGND.n42 5.63382
-R297 VGND.n319 VGND.n36 5.63382
-R298 VGND.n267 VGND.n226 5.63382
-R299 VGND.n298 VGND.n170 5.63382
-R300 VGND.n260 VGND.n194 5.63382
-R301 VGND.n73 VGND.n33 5.40173
-R302 VGND.n255 VGND.n195 5.39516
-R303 VGND.n119 VGND.n83 5.39516
-R304 VGND.n180 VGND.n177 5.39513
-R305 VGND.n164 VGND.n128 5.39513
-R306 VGND.n295 VGND.n190 5.36642
-R307 VGND.n297 VGND.n296 5.16623
-R308 VGND.n294 VGND.n175 5.16623
-R309 VGND.n274 VGND.n196 5.16623
-R310 VGND.n256 VGND.n225 5.16623
-R311 VGND.n320 VGND.n34 5.16623
-R312 VGND.n318 VGND.n317 5.16623
-R313 VGND.n106 VGND.n80 5.16623
-R314 VGND.n311 VGND.n310 5.16623
-R315 VGND.n151 VGND.n125 5.16623
-R316 VGND.n304 VGND.n303 5.16623
-R317 VGND VGND.n0 4.5188
-R318 VGND.n257 VGND.n256 4.25119
-R319 VGND.n222 VGND.n221 4.23725
-R320 VGND.n327 VGND.n5 4.23504
-R321 VGND.n321 VGND.n32 3.8748
-R322 VGND.n79 VGND.n40 3.8748
-R323 VGND.n288 VGND.n86 3.8748
-R324 VGND.n224 VGND.n197 3.57718
-R325 VGND.n204 VGND.n203 3.57375
-R326 VGND.n222 VGND.n201 3.41279
-R327 VGND.n274 VGND.n273 3.4005
-R328 VGND.n215 VGND.n214 3.4005
-R329 VGND.n176 VGND.n131 3.22945
-R330 VGND.n328 VGND.n327 3.13045
-R331 VGND.n132 VGND.n124 2.95676
-R332 VGND.n87 VGND.n78 2.95676
-R333 VGND.n44 VGND.n41 2.95676
-R334 VGND.n271 VGND.n268 2.95676
-R335 VGND.n299 VGND.n298 2.95625
-R336 VGND.n319 VGND.n35 2.95625
-R337 VGND.n313 VGND.n312 2.95625
-R338 VGND.n306 VGND.n305 2.95625
-R339 VGND.n178 VGND.n169 2.95617
-R340 VGND.n296 VGND.n295 2.83517
-R341 VGND.n151 VGND.n132 2.83503
-R342 VGND.n106 VGND.n87 2.83503
-R343 VGND.n41 VGND.n34 2.83503
-R344 VGND.n268 VGND.n196 2.83503
-R345 VGND.n213 VGND.n212 2.83383
-R346 VGND.n214 VGND.n213 2.83383
-R347 VGND.n177 VGND.n175 2.83383
-R348 VGND.n297 VGND.n177 2.83383
-R349 VGND.n298 VGND.n175 2.83383
-R350 VGND.n296 VGND.n178 2.83383
-R351 VGND.n294 VGND.n178 2.83383
-R352 VGND.n295 VGND.n294 2.83383
-R353 VGND.n256 VGND.n195 2.83383
-R354 VGND.n274 VGND.n195 2.83383
-R355 VGND.n318 VGND.n33 2.83383
-R356 VGND.n320 VGND.n33 2.83383
-R357 VGND.n311 VGND.n83 2.83383
-R358 VGND.n83 VGND.n80 2.83383
-R359 VGND.n304 VGND.n128 2.83383
-R360 VGND.n128 VGND.n125 2.83383
-R361 VGND.n267 VGND.n225 2.83383
-R362 VGND.n317 VGND.n316 2.83383
-R363 VGND.n310 VGND.n309 2.83383
-R364 VGND.n303 VGND.n302 2.83383
-R365 VGND.n320 VGND.n319 2.83383
-R366 VGND.n312 VGND.n80 2.83383
-R367 VGND.n305 VGND.n125 2.83383
-R368 VGND.n298 VGND.n297 2.83383
-R369 VGND.n305 VGND.n304 2.83383
-R370 VGND.n312 VGND.n311 2.83383
-R371 VGND.n319 VGND.n318 2.83383
-R372 VGND.n213 VGND.n208 2.37688
-R373 VGND.n158 VGND.n157 0.959378
-R374 VGND.n159 VGND.n158 0.959378
-R375 VGND.n113 VGND.n112 0.959378
-R376 VGND.n114 VGND.n113 0.959378
-R377 VGND.n67 VGND.n66 0.959378
-R378 VGND.n68 VGND.n67 0.959378
-R379 VGND.n249 VGND.n248 0.959378
-R380 VGND.n250 VGND.n249 0.959378
-R381 VGND.n218 VGND.n217 0.875917
-R382 VGND.n327 VGND.n326 0.611453
-R383 VGND.n27 VGND.n8 0.464721
-R384 VGND.n22 VGND.n21 0.431717
-R385 VGND.n161 VGND.n160 0.429669
-R386 VGND.n116 VGND.n115 0.429669
-R387 VGND.n70 VGND.n69 0.429669
-R388 VGND.n252 VGND.n251 0.429669
-R389 VGND.t53 VGND.n16 0.418232
-R390 VGND.n220 VGND.n219 0.3965
-R391 VGND.n217 VGND.n201 0.383208
-R392 VGND.n168 VGND.n167 0.3701
-R393 VGND.n123 VGND.n122 0.3701
-R394 VGND.n77 VGND.n76 0.3701
-R395 VGND.n264 VGND.n263 0.3701
-R396 VGND.n185 VGND.n184 0.3701
-R397 VGND.n328 VGND.n2 0.3555
-R398 VGND.n6 VGND.n2 0.353
-R399 VGND.n7 VGND.n6 0.2955
-R400 VGND.n209 VGND.n208 0.245126
-R401 VGND.n209 VGND.n205 0.198068
-R402 VGND.n160 VGND.n138 0.193423
-R403 VGND.n115 VGND.n93 0.193423
-R404 VGND.n69 VGND.n48 0.193423
-R405 VGND.n251 VGND.n228 0.193423
-R406 VGND.n163 VGND.n161 0.192746
-R407 VGND.n166 VGND.n164 0.192746
-R408 VGND.n118 VGND.n116 0.192746
-R409 VGND.n121 VGND.n119 0.192746
-R410 VGND.n72 VGND.n70 0.192746
-R411 VGND.n75 VGND.n73 0.192746
-R412 VGND.n254 VGND.n252 0.192746
-R413 VGND.n262 VGND.n255 0.192746
-R414 VGND.n190 VGND.n179 0.192746
-R415 VGND.n182 VGND.n180 0.192746
-R416 VGND.n168 VGND.n163 0.191392
-R417 VGND.n167 VGND.n166 0.191392
-R418 VGND.n123 VGND.n118 0.191392
-R419 VGND.n122 VGND.n121 0.191392
-R420 VGND.n77 VGND.n72 0.191392
-R421 VGND.n76 VGND.n75 0.191392
-R422 VGND.n264 VGND.n254 0.191392
-R423 VGND.n263 VGND.n262 0.191392
-R424 VGND.n185 VGND.n179 0.191392
-R425 VGND.n184 VGND.n182 0.191392
-R426 VGND.n17 VGND.t53 0.187456
-R427 VGND.n219 VGND.n216 0.174697
-R428 VGND.t59 VGND.t51 0.1701
-R429 VGND.t35 VGND.t59 0.1701
-R430 VGND.t20 VGND.t35 0.1701
-R431 VGND.n203 VGND.n5 0.168343
-R432 VGND.n162 VGND.n133 0.163122
-R433 VGND.n117 VGND.n88 0.163122
-R434 VGND.n71 VGND.n42 0.163122
-R435 VGND.n253 VGND.n226 0.163122
-R436 VGND.n181 VGND.n170 0.163122
-R437 VGND.n74 VGND.n36 0.163122
-R438 VGND.n120 VGND.n81 0.163122
-R439 VGND.n165 VGND.n126 0.163122
-R440 VGND.n261 VGND.n260 0.163122
-R441 VGND.n307 VGND.n306 0.158669
-R442 VGND.n314 VGND.n313 0.158669
-R443 VGND.n265 VGND.n35 0.158669
-R444 VGND.n300 VGND.n299 0.158669
-R445 VGND.n165 VGND.n127 0.154735
-R446 VGND.n120 VGND.n82 0.154735
-R447 VGND.n74 VGND.n37 0.154735
-R448 VGND.n143 VGND.n142 0.153858
-R449 VGND.n148 VGND.n147 0.153858
-R450 VGND.n98 VGND.n97 0.153858
-R451 VGND.n103 VGND.n102 0.153858
-R452 VGND.n53 VGND.n52 0.153858
-R453 VGND.n58 VGND.n57 0.153858
-R454 VGND.n233 VGND.n232 0.153858
-R455 VGND.n240 VGND.n239 0.153858
-R456 VGND.n189 VGND.n188 0.151468
-R457 VGND.n8 VGND.n7 0.150744
-R458 VGND.n224 VGND.n223 0.144968
-R459 VGND.n21 VGND.n20 0.135243
-R460 VGND.t51 VGND.t56 0.135212
-R461 VGND.n20 VGND.n19 0.132749
-R462 VGND.n135 VGND.n124 0.126008
-R463 VGND.n271 VGND.n270 0.124205
-R464 VGND.n45 VGND.n44 0.124205
-R465 VGND.n90 VGND.n78 0.124205
-R466 VGND.n172 VGND.n169 0.124205
-R467 VGND.n269 VGND.n199 0.123844
-R468 VGND.n47 VGND.n46 0.123844
-R469 VGND.n92 VGND.n91 0.123844
-R470 VGND.n137 VGND.n136 0.123844
-R471 VGND.n162 VGND.n134 0.123672
-R472 VGND.n117 VGND.n89 0.123672
-R473 VGND.n71 VGND.n43 0.123672
-R474 VGND.n253 VGND.n227 0.123672
-R475 VGND.n181 VGND.n171 0.123672
-R476 VGND.n261 VGND.n259 0.123672
-R477 VGND.n154 VGND.n141 0.122531
-R478 VGND.n145 VGND.n139 0.122531
-R479 VGND.n109 VGND.n96 0.122531
-R480 VGND.n100 VGND.n94 0.122531
-R481 VGND.n63 VGND.n51 0.122531
-R482 VGND.n55 VGND.n49 0.122531
-R483 VGND.n245 VGND.n231 0.122531
-R484 VGND.n236 VGND.n229 0.122531
-R485 VGND.n183 VGND.n171 0.120235
-R486 VGND.n188 VGND.n187 0.114798
-R487 VGND.n18 VGND.n17 0.114353
-R488 VGND.n174 VGND.n173 0.112303
-R489 VGND.n187 VGND.n186 0.111609
-R490 VGND.t56 VGND.t16 0.1039
-R491 VGND.n300 VGND.n134 0.0927349
-R492 VGND.n307 VGND.n89 0.0927349
-R493 VGND.n314 VGND.n43 0.0927349
-R494 VGND.n265 VGND.n227 0.0927349
-R495 VGND.n259 VGND.n199 0.0927349
-R496 VGND.n19 VGND.n18 0.0835282
-R497 VGND.n15 VGND.n12 0.0773932
-R498 VGND.t16 VGND.n13 0.0768757
-R499 VGND.n270 VGND.n269 0.0762377
-R500 VGND.n46 VGND.n45 0.0762377
-R501 VGND.n91 VGND.n90 0.0762377
-R502 VGND.n173 VGND.n172 0.0762377
-R503 VGND.n23 VGND.n12 0.0756845
-R504 VGND.n136 VGND.n135 0.0744344
-R505 VGND.n14 VGND.n11 0.0712143
-R506 VGND.n24 VGND.n11 0.0696429
-R507 VGND.n155 VGND.n154 0.062375
-R508 VGND.n145 VGND.n144 0.062375
-R509 VGND.n110 VGND.n109 0.062375
-R510 VGND.n100 VGND.n99 0.062375
-R511 VGND.n64 VGND.n63 0.062375
-R512 VGND.n55 VGND.n54 0.062375
-R513 VGND.n246 VGND.n245 0.062375
-R514 VGND.n236 VGND.n235 0.062375
-R515 VGND.n137 VGND.n127 0.06234
-R516 VGND.n92 VGND.n82 0.06234
-R517 VGND.n47 VGND.n37 0.06234
-R518 VGND.n155 VGND.n143 0.0606562
-R519 VGND.n147 VGND.n144 0.0606562
-R520 VGND.n110 VGND.n98 0.0606562
-R521 VGND.n102 VGND.n99 0.0606562
-R522 VGND.n64 VGND.n53 0.0606562
-R523 VGND.n57 VGND.n54 0.0606562
-R524 VGND.n246 VGND.n233 0.0606562
-R525 VGND.n239 VGND.n235 0.0606562
-R526 VGND.n329 VGND.n1 0.0597227
-R527 VGND.n157 VGND.n141 0.0589375
-R528 VGND.n159 VGND.n139 0.0589375
-R529 VGND.n112 VGND.n96 0.0589375
-R530 VGND.n114 VGND.n94 0.0589375
-R531 VGND.n66 VGND.n51 0.0589375
-R532 VGND.n68 VGND.n49 0.0589375
-R533 VGND.n248 VGND.n231 0.0589375
-R534 VGND.n250 VGND.n229 0.0589375
-R535 VGND.n16 VGND.t20 0.0493352
-R536 VGND.n16 VGND.t54 0.0492814
-R537 VGND.n20 VGND.t55 0.0491203
-R538 VGND.n26 VGND.n5 0.0489664
-R539 VGND.n18 VGND.t52 0.0488516
-R540 VGND.n19 VGND.t29 0.0487979
-R541 VGND.n25 VGND.n10 0.0476429
-R542 VGND.n327 VGND.n4 0.0450667
-R543 VGND.n10 VGND.n9 0.0445
-R544 VGND.n221 VGND.n200 0.0443412
-R545 VGND.n221 VGND.n220 0.0440305
-R546 VGND.n183 VGND.n174 0.04175
-R547 VGND.n186 VGND.n174 0.0403551
-R548 VGND.n17 VGND.t40 0.0402688
-R549 VGND.n219 VGND.n218 0.0332035
-R550 VGND.n1 VGND.n0 0.0302293
-R551 VGND.n27 VGND.n26 0.0302043
-R552 VGND.n205 VGND.n200 0.0147389
-R553 VGND.n223 VGND.n200 0.0132401
-R554 VGND.n220 VGND.n202 0.0126186
-R555 VGND.n21 VGND.t34 0.00991644
-R556 VGND.n218 VGND.n202 0.00391808
-R557 VGND.n44 VGND.n35 0.00274058
-R558 VGND.n313 VGND.n78 0.00274058
-R559 VGND.n306 VGND.n124 0.00274058
-R560 VGND.n299 VGND.n169 0.00274058
-R561 VGND.n272 VGND.n271 0.00194262
-R562 VGND.n266 VGND.n199 0.00194262
-R563 VGND.n315 VGND.n47 0.00194262
-R564 VGND.n308 VGND.n92 0.00194262
-R565 VGND.n301 VGND.n137 0.00194262
-R566 VGND.n197 VGND.n194 0.00170566
-R567 VGND.n207 VGND.n204 0.00170566
-R568 VGND.n153 VGND.n152 0.00166667
-R569 VGND.n146 VGND.n129 0.00166667
-R570 VGND.n146 VGND.n130 0.00166667
-R571 VGND.n108 VGND.n107 0.00166667
-R572 VGND.n101 VGND.n84 0.00166667
-R573 VGND.n101 VGND.n85 0.00166667
-R574 VGND.n62 VGND.n61 0.00166667
-R575 VGND.n56 VGND.n38 0.00166667
-R576 VGND.n56 VGND.n39 0.00166667
-R577 VGND.n244 VGND.n243 0.00166667
-R578 VGND.n238 VGND.n234 0.00166667
-R579 VGND.n238 VGND.n237 0.00166667
-R580 VGND.n210 VGND.n206 0.00166667
-R581 VGND.n211 VGND.n210 0.00166667
-R582 VGND.n258 VGND.n257 0.00162501
-R583 VGND.n257 VGND.n194 0.00137498
-R584 VGND.n241 VGND.n234 0.00133332
-R585 VGND.n243 VGND.n230 0.00133332
-R586 VGND.n237 VGND.n230 0.00133332
-R587 VGND.n59 VGND.n38 0.00133332
-R588 VGND.n61 VGND.n50 0.00133332
-R589 VGND.n50 VGND.n39 0.00133332
-R590 VGND.n104 VGND.n84 0.00133332
-R591 VGND.n107 VGND.n95 0.00133332
-R592 VGND.n95 VGND.n85 0.00133332
-R593 VGND.n149 VGND.n129 0.00133332
-R594 VGND.n152 VGND.n140 0.00133332
-R595 VGND.n140 VGND.n130 0.00133332
-R596 VGND.n215 VGND.n206 0.00133332
-R597 VGND.n211 VGND.n207 0.00133332
-R598 VGND.n273 VGND.n197 0.00129432
-R599 VGND.n215 VGND.n204 0.00129432
-R600 VGND.n268 VGND.n267 0.00125168
-R601 VGND.n316 VGND.n41 0.00125168
-R602 VGND.n309 VGND.n87 0.00125168
-R603 VGND.n302 VGND.n132 0.00125168
-R604 VGND.n153 VGND.n150 0.001
-R605 VGND.n108 VGND.n105 0.001
-R606 VGND.n62 VGND.n60 0.001
-R607 VGND.n244 VGND.n242 0.001
-R608 VGND.n242 VGND.n241 0.001
-R609 VGND.n60 VGND.n59 0.001
-R610 VGND.n105 VGND.n104 0.001
-R611 VGND.n150 VGND.n149 0.001
-R612 VGND.n273 VGND.n198 0.001
-R613 VGND.n258 VGND.n198 0.001
-R614 VGND.n272 VGND.n224 0.000860656
-R615 VGND.n266 VGND.n265 0.000860656
-R616 VGND.n315 VGND.n314 0.000860656
-R617 VGND.n308 VGND.n307 0.000860656
-R618 VGND.n301 VGND.n300 0.000860656
-R619 VGND.n216 VGND.n203 0.000860656
-R620 VGND.n22 VGND.n13 0.000672211
-R621 a_620_930.n4 a_620_930.n3 40.9658
-R622 a_620_930.t0 a_620_930.n12 37.4837
-R623 a_620_930.n0 a_620_930.t14 18.0456
-R624 a_620_930.n10 a_620_930.t2 17.2341
-R625 a_620_930.n12 a_620_930.t3 17.0005
-R626 a_620_930.n4 a_620_930.t15 15.4148
-R627 a_620_930.n3 a_620_930.t6 15.4147
-R628 a_620_930.n2 a_620_930.t16 15.3835
-R629 a_620_930.n6 a_620_930.t11 15.3823
-R630 a_620_930.n7 a_620_930.t12 15.3823
-R631 a_620_930.n8 a_620_930.t10 15.3823
-R632 a_620_930.n9 a_620_930.t13 15.378
-R633 a_620_930.n0 a_620_930.t7 15.3765
-R634 a_620_930.n1 a_620_930.t8 15.3698
-R635 a_620_930.n5 a_620_930.t9 15.3575
-R636 a_620_930.n11 a_620_930.t1 15.0005
-R637 a_620_930.n9 a_620_930.n8 2.6925
-R638 a_620_930.n3 a_620_930.n2 2.69031
-R639 a_620_930.n6 a_620_930.n5 2.6865
-R640 a_620_930.n8 a_620_930.n7 2.6845
-R641 a_620_930.n7 a_620_930.n6 2.6825
-R642 a_620_930.n5 a_620_930.n4 2.6825
-R643 a_620_930.n1 a_620_930.n0 2.67163
-R644 a_620_930.n2 a_620_930.n1 2.67163
-R645 a_620_930.n10 a_620_930.n9 1.2405
-R646 a_620_930.n12 a_620_930.n11 0.409973
-R647 a_620_930.n11 a_620_930.n10 0.153988
-R648 m1_768_942.n2 m1_768_942.n1 18.7016
-R649 m1_768_942.n0 m1_768_942.t4 17.6917
-R650 m1_768_942.n0 m1_768_942.t3 17.6842
-R651 m1_768_942.n2 m1_768_942.t1 17.3852
-R652 m1_768_942.t0 m1_768_942.n2 17.3774
-R653 m1_768_942.n1 m1_768_942.t2 17.1563
-R654 m1_768_942.n1 m1_768_942.n0 0.0591667
-R655 VPWR.n184 VPWR.n183 19.7754
-R656 VPWR.n92 VPWR.n90 19.5067
-R657 VPWR.n163 VPWR.n159 19.4491
-R658 VPWR.n145 VPWR.n144 19.4491
-R659 VPWR.n133 VPWR.n132 19.4491
-R660 VPWR.n121 VPWR.n120 19.4491
-R661 VPWR.n175 VPWR.n155 19.4421
-R662 VPWR.n93 VPWR.n92 19.3419
-R663 VPWR.n164 VPWR.n163 19.3126
-R664 VPWR.n144 VPWR.n143 19.3126
-R665 VPWR.n132 VPWR.n131 19.3126
-R666 VPWR.n120 VPWR.n119 19.3126
-R667 VPWR.n176 VPWR.n175 19.3056
-R668 VPWR.n75 VPWR.t44 17.7417
-R669 VPWR.n152 VPWR.t19 17.7214
-R670 VPWR.n87 VPWR.t42 17.7214
-R671 VPWR.n156 VPWR.t28 17.7058
-R672 VPWR.n83 VPWR.t51 17.7058
-R673 VPWR.n39 VPWR.t8 17.6026
-R674 VPWR.n30 VPWR.t21 17.6026
-R675 VPWR.n21 VPWR.t30 17.6026
-R676 VPWR.n12 VPWR.t61 17.6026
-R677 VPWR.n3 VPWR.t41 17.6026
-R678 VPWR.n79 VPWR.t47 17.6026
-R679 VPWR.n40 VPWR.t65 17.517
-R680 VPWR.n31 VPWR.t13 17.517
-R681 VPWR.n22 VPWR.t31 17.517
-R682 VPWR.n13 VPWR.t17 17.517
-R683 VPWR.n4 VPWR.t27 17.517
-R684 VPWR.n157 VPWR.t15 17.517
-R685 VPWR.n153 VPWR.t50 17.517
-R686 VPWR.n76 VPWR.t53 17.517
-R687 VPWR.n80 VPWR.t35 17.517
-R688 VPWR.n84 VPWR.t40 17.517
-R689 VPWR.n88 VPWR.t24 17.517
-R690 VPWR.n231 VPWR.t72 17.2792
-R691 VPWR.n230 VPWR.t71 17.2792
-R692 VPWR.n229 VPWR.t70 17.2792
-R693 VPWR.n39 VPWR.t11 17.16
-R694 VPWR.n30 VPWR.t20 17.16
-R695 VPWR.n21 VPWR.t55 17.16
-R696 VPWR.n12 VPWR.t23 17.16
-R697 VPWR.n3 VPWR.t32 17.16
-R698 VPWR.n156 VPWR.t22 17.16
-R699 VPWR.n152 VPWR.t52 17.16
-R700 VPWR.n75 VPWR.t37 17.16
-R701 VPWR.n79 VPWR.t43 17.16
-R702 VPWR.n83 VPWR.t48 17.16
-R703 VPWR.n87 VPWR.t10 17.16
-R704 VPWR.n104 VPWR.t58 17.1236
-R705 VPWR.n105 VPWR.t63 17.1215
-R706 VPWR.n103 VPWR.t60 17.1197
-R707 VPWR.n165 VPWR.n164 17.0589
-R708 VPWR.n177 VPWR.n176 17.0589
-R709 VPWR.n146 VPWR.n143 17.0589
-R710 VPWR.n134 VPWR.n131 17.0589
-R711 VPWR.n122 VPWR.n119 17.0589
-R712 VPWR.n56 VPWR.n46 17.0005
-R713 VPWR.n70 VPWR.n37 17.0005
-R714 VPWR.n194 VPWR.n28 17.0005
-R715 VPWR.n208 VPWR.n19 17.0005
-R716 VPWR.n222 VPWR.n10 17.0005
-R717 VPWR.n232 VPWR.n1 17.0005
-R718 VPWR.n58 VPWR.n57 13.0148
-R719 VPWR.n72 VPWR.n71 13.0148
-R720 VPWR.n196 VPWR.n195 13.0148
-R721 VPWR.n210 VPWR.n209 13.0148
-R722 VPWR.n224 VPWR.n223 13.0148
-R723 VPWR.n160 VPWR.n158 9.67085
-R724 VPWR.n50 VPWR.n49 9.64745
-R725 VPWR.n64 VPWR.n63 9.64745
-R726 VPWR.n188 VPWR.n187 9.64745
-R727 VPWR.n202 VPWR.n201 9.64745
-R728 VPWR.n216 VPWR.n215 9.64745
-R729 VPWR.n53 VPWR.n52 9.22409
-R730 VPWR.n67 VPWR.n66 9.22409
-R731 VPWR.n191 VPWR.n190 9.22409
-R732 VPWR.n205 VPWR.n204 9.22409
-R733 VPWR.n219 VPWR.n218 9.22409
-R734 VPWR.n48 VPWR.n41 9.21461
-R735 VPWR.n106 VPWR.n98 9.18426
-R736 VPWR VPWR.n235 9.15651
-R737 VPWR.n228 VPWR.n227 9.08097
-R738 VPWR.n110 VPWR.n109 9.08097
-R739 VPWR.n50 VPWR.n44 9.0005
-R740 VPWR.n54 VPWR.n53 9.0005
-R741 VPWR.n64 VPWR.n35 9.0005
-R742 VPWR.n68 VPWR.n67 9.0005
-R743 VPWR.n188 VPWR.n26 9.0005
-R744 VPWR.n192 VPWR.n191 9.0005
-R745 VPWR.n202 VPWR.n17 9.0005
-R746 VPWR.n206 VPWR.n205 9.0005
-R747 VPWR.n216 VPWR.n8 9.0005
-R748 VPWR.n220 VPWR.n219 9.0005
-R749 VPWR.n89 VPWR.n88 9.0005
-R750 VPWR.n85 VPWR.n84 9.0005
-R751 VPWR.n81 VPWR.n80 9.0005
-R752 VPWR.n77 VPWR.n76 9.0005
-R753 VPWR.n154 VPWR.n153 9.0005
-R754 VPWR.n158 VPWR.n157 9.0005
-R755 VPWR.n112 VPWR.n111 9.0005
-R756 VPWR.n115 VPWR.n114 9.0005
-R757 VPWR.n117 VPWR.n116 9.0005
-R758 VPWR.n127 VPWR.n126 9.0005
-R759 VPWR.n129 VPWR.n128 9.0005
-R760 VPWR.n139 VPWR.n138 9.0005
-R761 VPWR.n141 VPWR.n140 9.0005
-R762 VPWR.n151 VPWR.n150 9.0005
-R763 VPWR.n182 VPWR.n181 9.0005
-R764 VPWR.n172 VPWR.n171 9.0005
-R765 VPWR.n170 VPWR.n169 9.0005
-R766 VPWR.n108 VPWR.n98 9.0005
-R767 VPWR.n5 VPWR.n4 9.0005
-R768 VPWR.n14 VPWR.n13 9.0005
-R769 VPWR.n23 VPWR.n22 9.0005
-R770 VPWR.n32 VPWR.n31 9.0005
-R771 VPWR.n41 VPWR.n40 9.0005
-R772 VPWR.n235 VPWR.n234 9.0005
-R773 VPWR.n2 VPWR.n0 9.0005
-R774 VPWR.n226 VPWR.n225 9.0005
-R775 VPWR.n214 VPWR.n213 9.0005
-R776 VPWR.n212 VPWR.n211 9.0005
-R777 VPWR.n200 VPWR.n199 9.0005
-R778 VPWR.n198 VPWR.n197 9.0005
-R779 VPWR.n186 VPWR.n185 9.0005
-R780 VPWR.n74 VPWR.n73 9.0005
-R781 VPWR.n62 VPWR.n61 9.0005
-R782 VPWR.n60 VPWR.n59 9.0005
-R783 VPWR.n52 VPWR.n51 8.501
-R784 VPWR.n66 VPWR.n65 8.501
-R785 VPWR.n190 VPWR.n189 8.501
-R786 VPWR.n204 VPWR.n203 8.501
-R787 VPWR.n218 VPWR.n217 8.501
-R788 VPWR.t14 VPWR.n161 8.501
-R789 VPWR.t18 VPWR.n173 8.501
-R790 VPWR.t36 VPWR.n142 8.501
-R791 VPWR.t34 VPWR.n130 8.501
-R792 VPWR.t39 VPWR.n118 8.501
-R793 VPWR.n93 VPWR.n91 8.501
-R794 VPWR.n97 VPWR.n96 8.47359
-R795 VPWR.n56 VPWR.n55 8.4706
-R796 VPWR.n70 VPWR.n69 8.4706
-R797 VPWR.n194 VPWR.n193 8.4706
-R798 VPWR.n208 VPWR.n207 8.4706
-R799 VPWR.n222 VPWR.n221 8.4706
-R800 VPWR.n233 VPWR.n232 8.4706
-R801 VPWR.t68 VPWR.n45 5.66778
-R802 VPWR.t1 VPWR.n36 5.66778
-R803 VPWR.t4 VPWR.n27 5.66778
-R804 VPWR.t75 VPWR.n18 5.66778
-R805 VPWR.t74 VPWR.n9 5.66778
-R806 VPWR.n107 VPWR.n101 5.637
-R807 VPWR.n232 VPWR.n228 5.63439
-R808 VPWR.n109 VPWR.n99 5.63439
-R809 VPWR.n179 VPWR.n174 5.61396
-R810 VPWR.n113 VPWR.n91 5.29988
-R811 VPWR.n168 VPWR.n167 5.29729
-R812 VPWR.n149 VPWR.n148 5.29729
-R813 VPWR.n137 VPWR.n136 5.29729
-R814 VPWR.n125 VPWR.n124 5.29729
-R815 VPWR.t9 VPWR.n94 4.251
-R816 VPWR.n165 VPWR.n159 4.19124
-R817 VPWR.n177 VPWR.n155 4.19124
-R818 VPWR.n146 VPWR.n145 4.19124
-R819 VPWR.n134 VPWR.n133 4.19124
-R820 VPWR.n122 VPWR.n121 4.19124
-R821 VPWR.n49 VPWR.n43 4.19118
-R822 VPWR.n63 VPWR.n34 4.19118
-R823 VPWR.n187 VPWR.n25 4.19118
-R824 VPWR.n201 VPWR.n16 4.19118
-R825 VPWR.n215 VPWR.n7 4.19118
-R826 VPWR.n58 VPWR.n43 4.19106
-R827 VPWR.n72 VPWR.n34 4.19106
-R828 VPWR.n196 VPWR.n25 4.19106
-R829 VPWR.n210 VPWR.n16 4.19106
-R830 VPWR.n224 VPWR.n7 4.19106
-R831 VPWR.n167 VPWR.n162 4.17576
-R832 VPWR.n148 VPWR.n78 4.17576
-R833 VPWR.n136 VPWR.n82 4.17576
-R834 VPWR.n124 VPWR.n86 4.17576
-R835 VPWR.n180 VPWR.n179 3.83385
-R836 VPWR.n43 VPWR.n42 3.83379
-R837 VPWR.n34 VPWR.n33 3.83367
-R838 VPWR.n25 VPWR.n24 3.83367
-R839 VPWR.n16 VPWR.n15 3.83367
-R840 VPWR.n7 VPWR.n6 3.83367
-R841 VPWR.n232 VPWR.n231 3.35311
-R842 VPWR.n91 VPWR.n90 3.31747
-R843 VPWR.n103 VPWR.n102 3.18894
-R844 VPWR.n163 VPWR.t67 2.54006
-R845 VPWR.n175 VPWR.t5 2.54006
-R846 VPWR.n144 VPWR.t6 2.54006
-R847 VPWR.n132 VPWR.t2 2.54006
-R848 VPWR.n120 VPWR.t0 2.54006
-R849 VPWR.n92 VPWR.t3 2.53908
-R850 VPWR.n57 VPWR.n56 2.21041
-R851 VPWR.n71 VPWR.n70 2.21041
-R852 VPWR.n195 VPWR.n194 2.21041
-R853 VPWR.n209 VPWR.n208 2.21041
-R854 VPWR.n223 VPWR.n222 2.21041
-R855 VPWR.n95 VPWR.t9 2.126
-R856 VPWR.n47 VPWR.t68 1.88989
-R857 VPWR.n38 VPWR.t1 1.88989
-R858 VPWR.n29 VPWR.t4 1.88989
-R859 VPWR.n20 VPWR.t75 1.88989
-R860 VPWR.n11 VPWR.t74 1.88989
-R861 VPWR.n166 VPWR.t14 1.70136
-R862 VPWR.n178 VPWR.t18 1.70136
-R863 VPWR.n147 VPWR.t36 1.70136
-R864 VPWR.n135 VPWR.t34 1.70136
-R865 VPWR.n123 VPWR.t39 1.70136
-R866 VPWR.n57 VPWR.n44 1.61472
-R867 VPWR.n71 VPWR.n35 1.61472
-R868 VPWR.n195 VPWR.n26 1.61472
-R869 VPWR.n209 VPWR.n17 1.61472
-R870 VPWR.n223 VPWR.n8 1.61472
-R871 VPWR.n43 VPWR.t7 1.41817
-R872 VPWR.n100 VPWR.t57 1.41743
-R873 VPWR.n34 VPWR.t12 1.41717
-R874 VPWR.n25 VPWR.t29 1.41717
-R875 VPWR.n16 VPWR.t16 1.41717
-R876 VPWR.n7 VPWR.t26 1.41717
-R877 VPWR.n232 VPWR.t69 1.41717
-R878 VPWR.n138 VPWR.n137 1.19717
-R879 VPWR.n126 VPWR.n125 1.19717
-R880 VPWR.n168 VPWR.n160 1.19545
-R881 VPWR.n150 VPWR.n149 1.19545
-R882 VPWR.n114 VPWR.n113 1.19143
-R883 VPWR.n62 VPWR.n33 0.885959
-R884 VPWR.n197 VPWR.n24 0.885959
-R885 VPWR.n186 VPWR.n24 0.885959
-R886 VPWR.n211 VPWR.n15 0.885959
-R887 VPWR.n200 VPWR.n15 0.885959
-R888 VPWR.n225 VPWR.n6 0.885959
-R889 VPWR.n214 VPWR.n6 0.885959
-R890 VPWR.n180 VPWR.n172 0.882965
-R891 VPWR.n73 VPWR.n33 0.882522
-R892 VPWR.n181 VPWR.n180 0.882116
-R893 VPWR.n48 VPWR.n42 0.880966
-R894 VPWR.n59 VPWR.n42 0.880664
-R895 VPWR.n115 VPWR.n89 0.670853
-R896 VPWR.n127 VPWR.n85 0.670853
-R897 VPWR.n139 VPWR.n81 0.670853
-R898 VPWR.n151 VPWR.n77 0.670853
-R899 VPWR.n171 VPWR.n154 0.670853
-R900 VPWR.n169 VPWR.n168 0.600355
-R901 VPWR.n149 VPWR.n141 0.596918
-R902 VPWR.n137 VPWR.n129 0.596918
-R903 VPWR.n125 VPWR.n117 0.596918
-R904 VPWR.n113 VPWR.n112 0.589131
-R905 VPWR.n116 VPWR.n115 0.578971
-R906 VPWR.n128 VPWR.n127 0.573794
-R907 VPWR.n171 VPWR.n170 0.573794
-R908 VPWR.n140 VPWR.n139 0.5725
-R909 VPWR.n111 VPWR.n110 0.505206
-R910 VPWR.n182 VPWR.n154 0.497441
-R911 VPWR.n111 VPWR.n89 0.494853
-R912 VPWR.n140 VPWR.n77 0.494853
-R913 VPWR.n116 VPWR.n85 0.493559
-R914 VPWR.n128 VPWR.n81 0.493559
-R915 VPWR.n170 VPWR.n158 0.493559
-R916 VPWR.n231 VPWR.n230 0.332464
-R917 VPWR.n230 VPWR.n229 0.328536
-R918 VPWR.n229 VPWR.n1 0.307911
-R919 VPWR.n212 VPWR.n14 0.291965
-R920 VPWR.n198 VPWR.n23 0.291965
-R921 VPWR.n226 VPWR.n5 0.290844
-R922 VPWR.n74 VPWR.n32 0.290844
-R923 VPWR.n60 VPWR.n41 0.290844
-R924 VPWR.n145 VPWR.n141 0.288913
-R925 VPWR.n133 VPWR.n129 0.288913
-R926 VPWR.n121 VPWR.n117 0.288913
-R927 VPWR.n183 VPWR.n182 0.286363
-R928 VPWR.n169 VPWR.n159 0.285475
-R929 VPWR.n183 VPWR.n151 0.283775
-R930 VPWR.n59 VPWR.n58 0.275545
-R931 VPWR.n49 VPWR.n48 0.275412
-R932 VPWR.n73 VPWR.n72 0.273826
-R933 VPWR.n181 VPWR.n155 0.273444
-R934 VPWR.n197 VPWR.n196 0.270388
-R935 VPWR.n211 VPWR.n210 0.270388
-R936 VPWR.n225 VPWR.n224 0.270388
-R937 VPWR.n63 VPWR.n62 0.270256
-R938 VPWR.n187 VPWR.n186 0.270256
-R939 VPWR.n201 VPWR.n200 0.270256
-R940 VPWR.n215 VPWR.n214 0.270256
-R941 VPWR.n106 VPWR.n105 0.260321
-R942 VPWR.n213 VPWR.n212 0.248245
-R943 VPWR.n61 VPWR.n60 0.248245
-R944 VPWR.n227 VPWR.n226 0.247685
-R945 VPWR.n199 VPWR.n198 0.247124
-R946 VPWR.n164 VPWR.n162 0.241307
-R947 VPWR.n143 VPWR.n78 0.241307
-R948 VPWR.n131 VPWR.n82 0.241307
-R949 VPWR.n119 VPWR.n86 0.241307
-R950 VPWR.n114 VPWR.n90 0.23159
-R951 VPWR.n174 VPWR.n172 0.229051
-R952 VPWR.n199 VPWR.n14 0.214615
-R953 VPWR.n185 VPWR.n23 0.214615
-R954 VPWR.n61 VPWR.n32 0.214615
-R955 VPWR.n213 VPWR.n5 0.213494
-R956 VPWR.n53 VPWR.n50 0.19575
-R957 VPWR.n67 VPWR.n64 0.19575
-R958 VPWR.n191 VPWR.n188 0.19575
-R959 VPWR.n205 VPWR.n202 0.19575
-R960 VPWR.n219 VPWR.n216 0.19575
-R961 VPWR.n97 VPWR.n93 0.192579
-R962 VPWR.n104 VPWR.n103 0.186278
-R963 VPWR.n105 VPWR.n104 0.186278
-R964 VPWR.n162 VPWR.n160 0.184588
-R965 VPWR.n150 VPWR.n78 0.184588
-R966 VPWR.n110 VPWR.n98 0.182971
-R967 VPWR.n138 VPWR.n82 0.182869
-R968 VPWR.n126 VPWR.n86 0.182869
-R969 VPWR.n176 VPWR.n174 0.181265
-R970 VPWR.n112 VPWR.n97 0.165823
-R971 VPWR.n228 VPWR.n2 0.163375
-R972 VPWR.n109 VPWR.n108 0.163375
-R973 VPWR.n52 VPWR.n46 0.15215
-R974 VPWR.n66 VPWR.n37 0.15215
-R975 VPWR.n190 VPWR.n28 0.15215
-R976 VPWR.n204 VPWR.n19 0.15215
-R977 VPWR.n218 VPWR.n10 0.15215
-R978 VPWR.n108 VPWR.n107 0.148136
-R979 VPWR.n184 VPWR.n74 0.128116
-R980 VPWR.n55 VPWR.n44 0.123672
-R981 VPWR.n69 VPWR.n35 0.123672
-R982 VPWR.n193 VPWR.n26 0.123672
-R983 VPWR.n207 VPWR.n17 0.123672
-R984 VPWR.n221 VPWR.n8 0.123672
-R985 VPWR.n234 VPWR.n233 0.123672
-R986 VPWR.n55 VPWR.n54 0.121954
-R987 VPWR.n69 VPWR.n68 0.121954
-R988 VPWR.n193 VPWR.n192 0.121954
-R989 VPWR.n207 VPWR.n206 0.121954
-R990 VPWR.n221 VPWR.n220 0.121954
-R991 VPWR.n233 VPWR.n2 0.121954
-R992 VPWR.n185 VPWR.n184 0.121389
-R993 VPWR.n235 VPWR.n0 0.0800924
-R994 VPWR.n227 VPWR.n0 0.0795318
-R995 VPWR.n40 VPWR.n39 0.0790714
-R996 VPWR.n31 VPWR.n30 0.0790714
-R997 VPWR.n22 VPWR.n21 0.0790714
-R998 VPWR.n13 VPWR.n12 0.0790714
-R999 VPWR.n4 VPWR.n3 0.0790714
-R1000 VPWR.n157 VPWR.n156 0.0790714
-R1001 VPWR.n153 VPWR.n152 0.0790714
-R1002 VPWR.n76 VPWR.n75 0.0790714
-R1003 VPWR.n80 VPWR.n79 0.0790714
-R1004 VPWR.n84 VPWR.n83 0.0790714
-R1005 VPWR.n88 VPWR.n87 0.0790714
-R1006 VPWR.n54 VPWR.n46 0.062375
-R1007 VPWR.n68 VPWR.n37 0.062375
-R1008 VPWR.n192 VPWR.n28 0.062375
-R1009 VPWR.n206 VPWR.n19 0.062375
-R1010 VPWR.n220 VPWR.n10 0.062375
-R1011 VPWR.n234 VPWR.n1 0.0606562
-R1012 VPWR.n107 VPWR.n106 0.0535597
-R1013 VPWR.n102 VPWR.n99 0.00385471
-R1014 VPWR.n100 VPWR.n99 0.00245819
-R1015 VPWR.n102 VPWR.n101 0.0021451
-R1016 VPWR.n51 VPWR.n45 0.00166667
-R1017 VPWR.n65 VPWR.n36 0.00166667
-R1018 VPWR.n189 VPWR.n27 0.00166667
-R1019 VPWR.n203 VPWR.n18 0.00166667
-R1020 VPWR.n217 VPWR.n9 0.00166667
-R1021 VPWR.n167 VPWR.n166 0.00155001
-R1022 VPWR.n179 VPWR.n178 0.00155001
-R1023 VPWR.n148 VPWR.n147 0.00155001
-R1024 VPWR.n136 VPWR.n135 0.00155001
-R1025 VPWR.n124 VPWR.n123 0.00155001
-R1026 VPWR.n101 VPWR.n100 0.0015415
-R1027 VPWR.n166 VPWR.n165 0.00144998
-R1028 VPWR.n178 VPWR.n177 0.00144998
-R1029 VPWR.n147 VPWR.n146 0.00144998
-R1030 VPWR.n135 VPWR.n134 0.00144998
-R1031 VPWR.n123 VPWR.n122 0.00144998
-R1032 VPWR.n56 VPWR.n45 0.00133332
-R1033 VPWR.n70 VPWR.n36 0.00133332
-R1034 VPWR.n194 VPWR.n27 0.00133332
-R1035 VPWR.n208 VPWR.n18 0.00133332
-R1036 VPWR.n222 VPWR.n9 0.00133332
-R1037 VPWR.n51 VPWR.n47 0.001
-R1038 VPWR.n56 VPWR.n47 0.001
-R1039 VPWR.n65 VPWR.n38 0.001
-R1040 VPWR.n70 VPWR.n38 0.001
-R1041 VPWR.n189 VPWR.n29 0.001
-R1042 VPWR.n194 VPWR.n29 0.001
-R1043 VPWR.n203 VPWR.n20 0.001
-R1044 VPWR.n208 VPWR.n20 0.001
-R1045 VPWR.n217 VPWR.n11 0.001
-R1046 VPWR.n222 VPWR.n11 0.001
-R1047 VPWR.n165 VPWR.n161 0.001
-R1048 VPWR.n167 VPWR.n161 0.001
-R1049 VPWR.n177 VPWR.n173 0.001
-R1050 VPWR.n179 VPWR.n173 0.001
-R1051 VPWR.n146 VPWR.n142 0.001
-R1052 VPWR.n148 VPWR.n142 0.001
-R1053 VPWR.n134 VPWR.n130 0.001
-R1054 VPWR.n136 VPWR.n130 0.001
-R1055 VPWR.n122 VPWR.n118 0.001
-R1056 VPWR.n124 VPWR.n118 0.001
-R1057 VPWR.n96 VPWR.n94 0.001
-R1058 VPWR.n96 VPWR.n95 0.001
-R1059 VPWR.n94 VPWR.n91 0.001
-R1060 VPWR.n95 VPWR.n91 0.001
-R1061 m1_785_n2484.n1 m1_785_n2484.t3 20.7939
-R1062 m1_785_n2484.n2 m1_785_n2484.n1 20.2828
-R1063 m1_785_n2484.n1 m1_785_n2484.n0 18.9284
-R1064 m1_785_n2484.n2 m1_785_n2484.t2 17.4611
-R1065 m1_785_n2484.t0 m1_785_n2484.n3 17.1844
-R1066 m1_785_n2484.n0 m1_785_n2484.t5 15.3354
-R1067 m1_785_n2484.n0 m1_785_n2484.t4 15.2658
-R1068 m1_785_n2484.n3 m1_785_n2484.t1 6.28745
-R1069 m1_785_n2484.n3 m1_785_n2484.n2 0.3305
-R1070 a_6113_n2395.n1 a_6113_n2395.t4 30.0297
-R1071 a_6113_n2395.n2 a_6113_n2395.t2 17.4611
-R1072 a_6113_n2395.t0 a_6113_n2395.n3 17.1844
-R1073 a_6113_n2395.n0 a_6113_n2395.t5 15.3046
-R1074 a_6113_n2395.n0 a_6113_n2395.t3 15.2787
-R1075 a_6113_n2395.n2 a_6113_n2395.n1 9.9025
-R1076 a_6113_n2395.n1 a_6113_n2395.n0 9.50021
-R1077 a_6113_n2395.n3 a_6113_n2395.t1 6.28745
-R1078 a_6113_n2395.n3 a_6113_n2395.n2 0.3305
-R1079 m1_6041_n1918.t0 m1_6041_n1918.n0 35.6516
-R1080 m1_6041_n1918.n0 m1_6041_n1918.t2 17.4271
-R1081 m1_6041_n1918.n0 m1_6041_n1918.t1 17.4036
-R1082 Vout Vout.t3 20.53
-R1083 Vout.n1 Vout.t2 18.1905
-R1084 Vout.n0 Vout.t0 17.8345
-R1085 Vout.n0 Vout.t1 17.029
-R1086 Vout.n1 Vout.n0 9.76258
-R1087 Vout Vout.n1 9.48343
-R1088 Vout.t3 Vout.t4 0.0188902
-R1089 a_745_n2395.n1 a_745_n2395.t3 29.257
-R1090 a_745_n2395.n2 a_745_n2395.t2 17.4611
-R1091 a_745_n2395.n3 a_745_n2395.t1 17.2274
-R1092 a_745_n2395.n0 a_745_n2395.t4 15.3046
-R1093 a_745_n2395.n0 a_745_n2395.t5 15.2949
-R1094 a_745_n2395.n2 a_745_n2395.n1 10.319
-R1095 a_745_n2395.n1 a_745_n2395.n0 9.18885
-R1096 a_745_n2395.t0 a_745_n2395.n3 6.28781
-R1097 a_745_n2395.n3 a_745_n2395.n2 0.287531
-R1098 a_2087_n2395.n2 a_2087_n2395.t3 29.2952
-R1099 a_2087_n2395.t0 a_2087_n2395.n3 17.4611
-R1100 a_2087_n2395.n0 a_2087_n2395.t1 17.1844
-R1101 a_2087_n2395.n1 a_2087_n2395.t4 15.3046
-R1102 a_2087_n2395.n1 a_2087_n2395.t5 15.2998
-R1103 a_2087_n2395.n3 a_2087_n2395.n2 10.1858
-R1104 a_2087_n2395.n2 a_2087_n2395.n1 9.15725
-R1105 a_2087_n2395.n0 a_2087_n2395.t2 6.28745
-R1106 a_2087_n2395.n3 a_2087_n2395.n0 0.3305
-R1107 m2_1572_105.n2 m2_1572_105.t3 29.2773
-R1108 m2_1572_105.t0 m2_1572_105.n3 17.4955
-R1109 m2_1572_105.n0 m2_1572_105.t2 17.2119
-R1110 m2_1572_105.n1 m2_1572_105.t5 15.3354
-R1111 m2_1572_105.n1 m2_1572_105.t4 15.2658
-R1112 m2_1572_105.n3 m2_1572_105.n2 9.82623
-R1113 m2_1572_105.n2 m2_1572_105.n1 9.60623
-R1114 m2_1572_105.n0 m2_1572_105.t1 6.24309
-R1115 m2_1572_105.n3 m2_1572_105.n0 0.268625
-R1116 m2_3178_104.n2 m2_3178_104.t3 29.2717
-R1117 m2_3178_104.t0 m2_3178_104.n3 17.4955
-R1118 m2_3178_104.n0 m2_3178_104.t1 17.2119
-R1119 m2_3178_104.n1 m2_3178_104.t5 15.3354
-R1120 m2_3178_104.n1 m2_3178_104.t4 15.2658
-R1121 m2_3178_104.n3 m2_3178_104.n2 10.2134
-R1122 m2_3178_104.n2 m2_3178_104.n1 9.21903
-R1123 m2_3178_104.n0 m2_3178_104.t2 6.24309
-R1124 m2_3178_104.n3 m2_3178_104.n0 0.268625
-R1125 m1_673_n2608.n2 m1_673_n2608.n1 18.769
-R1126 m1_673_n2608.n0 m1_673_n2608.t2 17.6485
-R1127 m1_673_n2608.n0 m1_673_n2608.t0 17.6414
-R1128 m1_673_n2608.n1 m1_673_n2608.t4 17.4471
-R1129 m1_673_n2608.n1 m1_673_n2608.t3 17.3716
-R1130 m1_673_n2608.t1 m1_673_n2608.n2 17.1197
-R1131 m1_673_n2608.n2 m1_673_n2608.n0 0.0866667
-R1132 m2_7142_93.n1 m2_7142_93.t5 30.5219
-R1133 m2_7142_93.n2 m2_7142_93.t2 17.4955
-R1134 m2_7142_93.n3 m2_7142_93.t1 17.2119
-R1135 m2_7142_93.n0 m2_7142_93.t3 15.6071
-R1136 m2_7142_93.n0 m2_7142_93.t4 15.0005
-R1137 m2_7142_93.n2 m2_7142_93.n1 13.2786
-R1138 m2_7142_93.n1 m2_7142_93.n0 9.03447
-R1139 m2_7142_93.t0 m2_7142_93.n3 6.24376
-R1140 m2_7142_93.n3 m2_7142_93.n2 0.268625
-R1141 m1_7387_n2608.n2 m1_7387_n2608.n1 18.769
-R1142 m1_7387_n2608.n0 m1_7387_n2608.t2 17.6521
-R1143 m1_7387_n2608.n0 m1_7387_n2608.t0 17.645
-R1144 m1_7387_n2608.n1 m1_7387_n2608.t4 17.3961
-R1145 m1_7387_n2608.n1 m1_7387_n2608.t3 17.3665
-R1146 m1_7387_n2608.t1 m1_7387_n2608.n2 17.1233
-R1147 m1_7387_n2608.n2 m1_7387_n2608.n0 0.0866667
-R1148 m1_3357_n2608.n2 m1_3357_n2608.n1 18.769
-R1149 m1_3357_n2608.n0 m1_3357_n2608.t0 17.6485
-R1150 m1_3357_n2608.n0 m1_3357_n2608.t2 17.6414
-R1151 m1_3357_n2608.n1 m1_3357_n2608.t4 17.4497
-R1152 m1_3357_n2608.n1 m1_3357_n2608.t3 17.3665
-R1153 m1_3357_n2608.t1 m1_3357_n2608.n2 17.1252
-R1154 m1_3357_n2608.n2 m1_3357_n2608.n0 0.0811667
-R1155 m2_4249_107.n1 m2_4249_107.t3 29.2788
-R1156 m2_4249_107.n2 m2_4249_107.t2 17.4955
-R1157 m2_4249_107.t1 m2_4249_107.n3 17.2119
-R1158 m2_4249_107.n0 m2_4249_107.t5 15.3354
-R1159 m2_4249_107.n0 m2_4249_107.t4 15.2658
-R1160 m2_4249_107.n2 m2_4249_107.n1 9.81597
-R1161 m2_4249_107.n1 m2_4249_107.n0 9.6165
-R1162 m2_4249_107.n3 m2_4249_107.t0 6.24309
-R1163 m2_4249_107.n3 m2_4249_107.n2 0.268625
-R1164 vctl.n10 vctl.t7 33.8794
-R1165 vctl.n9 vctl.t0 33.5376
-R1166 vctl.n1 vctl.t5 24.4981
-R1167 vctl.n3 vctl.t3 24.4978
-R1168 vctl.n5 vctl.t8 24.4978
-R1169 vctl.n7 vctl.t10 24.495
-R1170 vctl.n1 vctl.t4 24.4894
-R1171 vctl.n3 vctl.t6 24.488
-R1172 vctl.n7 vctl.t11 24.4838
-R1173 vctl.n5 vctl.t9 24.4796
-R1174 vctl.n0 vctl.t2 24.4574
-R1175 vctl.n0 vctl.t1 24.4469
-R1176 vctl.n2 vctl.n0 10.719
-R1177 vctl.n8 vctl.n7 9.0005
-R1178 vctl.n6 vctl.n5 9.0005
-R1179 vctl.n4 vctl.n3 9.0005
-R1180 vctl.n2 vctl.n1 9.0005
-R1181 vctl.n9 vctl.n8 1.69764
-R1182 vctl.n8 vctl.n6 1.68884
-R1183 vctl.n6 vctl.n4 1.68004
-R1184 vctl.n4 vctl.n2 1.66496
-R1185 vctl vctl.n10 0.698214
-R1186 vctl.n10 vctl.n9 0.569986
-R1187 m1_7387_n1916.t0 m1_7387_n1916.n0 35.6516
-R1188 m1_7387_n1916.n0 m1_7387_n1916.t2 17.4271
-R1189 m1_7387_n1916.n0 m1_7387_n1916.t1 17.4036
-R1190 m2_5324_104.n1 m2_5324_104.t3 29.288
-R1191 m2_5324_104.n2 m2_5324_104.t2 17.4955
-R1192 m2_5324_104.t1 m2_5324_104.n3 17.2119
-R1193 m2_5324_104.n0 m2_5324_104.t5 15.3354
-R1194 m2_5324_104.n0 m2_5324_104.t4 15.2658
-R1195 m2_5324_104.n1 m2_5324_104.n0 10.0081
-R1196 m2_5324_104.n2 m2_5324_104.n1 9.42437
-R1197 m2_5324_104.n3 m2_5324_104.t0 6.24309
-R1198 m2_5324_104.n3 m2_5324_104.n2 0.268625
-R1199 m1_4699_n2608.n2 m1_4699_n2608.n1 18.769
-R1200 m1_4699_n2608.n0 m1_4699_n2608.t1 17.6485
-R1201 m1_4699_n2608.n0 m1_4699_n2608.t2 17.6414
-R1202 m1_4699_n2608.n1 m1_4699_n2608.t4 17.4613
-R1203 m1_4699_n2608.n1 m1_4699_n2608.t3 17.3665
-R1204 m1_4699_n2608.t0 m1_4699_n2608.n2 17.1252
-R1205 m1_4699_n2608.n2 m1_4699_n2608.n0 0.0811667
-R1206 m1_2015_n2608.n2 m1_2015_n2608.n1 18.7879
-R1207 m1_2015_n2608.n0 m1_2015_n2608.t4 17.6485
-R1208 m1_2015_n2608.n0 m1_2015_n2608.t2 17.6414
-R1209 m1_2015_n2608.t0 m1_2015_n2608.n2 17.4797
-R1210 m1_2015_n2608.n2 m1_2015_n2608.t1 17.374
-R1211 m1_2015_n2608.n1 m1_2015_n2608.t3 17.1233
-R1212 m1_2015_n2608.n1 m1_2015_n2608.n0 0.083
-R1213 m1_2110_941.n2 m1_2110_941.n1 18.6957
-R1214 m1_2110_941.n0 m1_2110_941.t4 17.6917
-R1215 m1_2110_941.n0 m1_2110_941.t3 17.6842
-R1216 m1_2110_941.t1 m1_2110_941.n2 17.4203
-R1217 m1_2110_941.n2 m1_2110_941.t0 17.3774
-R1218 m1_2110_941.n1 m1_2110_941.t2 17.16
-R1219 m1_2110_941.n1 m1_2110_941.n0 0.0555
-R1220 m1_2344_n787.t0 m1_2344_n787.n0 35.6802
-R1221 m1_2344_n787.n0 m1_2344_n787.t2 17.4148
-R1222 m1_2344_n787.n0 m1_2344_n787.t1 6.12466
-R1223 m1_1001_n788.t0 m1_1001_n788.n0 35.6823
-R1224 m1_1001_n788.n0 m1_1001_n788.t2 17.4148
-R1225 m1_1001_n788.n0 m1_1001_n788.t1 6.12466
-R1226 m1_3452_942.n2 m1_3452_942.n1 18.6957
-R1227 m1_3452_942.n0 m1_3452_942.t2 17.6917
-R1228 m1_3452_942.n0 m1_3452_942.t1 17.6842
-R1229 m1_3452_942.n1 m1_3452_942.t3 17.3963
-R1230 m1_3452_942.n1 m1_3452_942.t4 17.3774
-R1231 m1_3452_942.t0 m1_3452_942.n2 17.1618
-R1232 m1_3452_942.n2 m1_3452_942.n0 0.0536667
-R1233 m1_3685_n788.n0 m1_3685_n788.t2 35.6823
-R1234 m1_3685_n788.t1 m1_3685_n788.n0 17.4148
-R1235 m1_3685_n788.n0 m1_3685_n788.t0 6.12466
-R1236 m1_4794_941.n2 m1_4794_941.n1 18.6957
-R1237 m1_4794_941.n0 m1_4794_941.t4 17.6917
-R1238 m1_4794_941.n0 m1_4794_941.t3 17.6842
-R1239 m1_4794_941.t1 m1_4794_941.n2 17.4231
-R1240 m1_4794_941.n2 m1_4794_941.t0 17.3742
-R1241 m1_4794_941.n1 m1_4794_941.t2 17.1618
-R1242 m1_4794_941.n1 m1_4794_941.n0 0.0536667
-R1243 a_5037_n783.t0 a_5037_n783.n0 35.6823
-R1244 a_5037_n783.n0 a_5037_n783.t2 17.4148
-R1245 a_5037_n783.n0 a_5037_n783.t1 6.12466
-R1246 m1_6041_n2608.n2 m1_6041_n2608.n1 18.769
-R1247 m1_6041_n2608.n0 m1_6041_n2608.t2 17.6485
-R1248 m1_6041_n2608.n0 m1_6041_n2608.t0 17.6414
-R1249 m1_6041_n2608.n1 m1_6041_n2608.t4 17.3961
-R1250 m1_6041_n2608.n1 m1_6041_n2608.t3 17.3665
-R1251 m1_6041_n2608.t1 m1_6041_n2608.n2 17.1233
-R1252 m1_6041_n2608.n2 m1_6041_n2608.n0 0.083
-R1253 m1_673_n1918.n0 m1_673_n1918.t2 35.6454
-R1254 m1_673_n1918.t1 m1_673_n1918.n0 17.4193
-R1255 m1_673_n1918.n0 m1_673_n1918.t0 17.4114
-R1256 m1_6136_941.n2 m1_6136_941.n1 18.6957
-R1257 m1_6136_941.n0 m1_6136_941.t2 17.6917
-R1258 m1_6136_941.n0 m1_6136_941.t1 17.6842
-R1259 m1_6136_941.n1 m1_6136_941.t4 17.4661
-R1260 m1_6136_941.n1 m1_6136_941.t3 17.3742
-R1261 m1_6136_941.t0 m1_6136_941.n2 17.1582
-R1262 m1_6136_941.n2 m1_6136_941.n0 0.0573333
-R1263 a_6379_n783.n0 a_6379_n783.t2 35.6823
-R1264 a_6379_n783.t1 a_6379_n783.n0 17.4148
-R1265 a_6379_n783.n0 a_6379_n783.t0 6.12466
-R1266 m1_3357_n1918.t0 m1_3357_n1918.n0 35.6604
-R1267 m1_3357_n1918.n0 m1_3357_n1918.t2 17.435
-R1268 m1_3357_n1918.n0 m1_3357_n1918.t1 17.3957
-R1269 m1_2015_n1918.t0 m1_2015_n1918.n0 35.6553
-R1270 m1_2015_n1918.n0 m1_2015_n1918.t1 17.4193
-R1271 m1_2015_n1918.n0 m1_2015_n1918.t2 17.4114
-C77 vctl VGND 11.2953f
-C78 Vout VGND 8.28197f
-C79 VPWR VGND 11.11121f
-C80 m2_7727_571# VGND 0.04717f $ **FLOATING
-C81 a_7397_n2523# VGND 0.05072f
-C82 a_6051_n2525# VGND 0.04654f
-C83 a_4709_n2525# VGND 0.0474f
-C84 a_3367_n2525# VGND 0.04814f
-C85 a_2025_n2525# VGND 0.04567f
-C86 a_683_n2525# VGND 0.07408f
-C87 a_7398_n1956# VGND 0.75072f
-C88 a_6052_n1958# VGND 0.8045f
-C89 a_4710_n1958# VGND 0.81785f
-C90 a_3368_n1958# VGND 0.82955f
-C91 a_2026_n1958# VGND 0.82862f
-C92 a_684_n1958# VGND 0.83893f
-C93 a_7198_n376# VGND 0.27582f
-C94 a_6251_n217# VGND 0.65331f
-C95 a_4909_n217# VGND 0.67139f
-C96 a_3567_n217# VGND 0.6715f
-C97 a_2225_n217# VGND 0.67644f
-C98 a_883_n217# VGND 0.68389f
-C99 a_7212_321# VGND 0.26455f
-C100 a_6118_351# VGND 6.88f
-C101 a_4776_351# VGND 4.93597f
-C102 a_3434_351# VGND 4.4055f
-C103 a_2092_351# VGND 4.40424f
-C104 a_750_351# VGND 4.67142f
-C105 a_542_269# VGND 6.17341f
-C106 a_6024_351# VGND 0.05855f
-C107 a_4682_351# VGND 0.03844f
-C108 a_3340_351# VGND 0.04051f
-C109 a_1998_351# VGND 0.04084f
-C110 a_656_351# VGND 0.05472f
-C111 m2_5324_104.t4 VGND 0.0215f $ **FLOATING
-C112 m2_5324_104.t5 VGND 0.0205f $ **FLOATING
-C113 m2_5324_104.n0 VGND 0.01713f $ **FLOATING
-C114 m2_5324_104.t3 VGND 2.45582f $ **FLOATING
-C115 m2_5324_104.n1 VGND 0.03721f $ **FLOATING
-C116 m2_5324_104.n2 VGND 0.01385f $ **FLOATING
-C117 m2_5324_104.n3 VGND 0.0183f $ **FLOATING
-C118 m2_4249_107.t4 VGND 0.02287f $ **FLOATING
-C119 m2_4249_107.t5 VGND 0.0218f $ **FLOATING
-C120 m2_4249_107.n0 VGND 0.01742f $ **FLOATING
-C121 m2_4249_107.t3 VGND 2.44691f $ **FLOATING
-C122 m2_4249_107.n1 VGND 0.03946f $ **FLOATING
-C123 m2_4249_107.n2 VGND 0.01538f $ **FLOATING
-C124 m2_4249_107.n3 VGND 0.01947f $ **FLOATING
-C125 m2_7142_93.t5 VGND 2.53376f $ **FLOATING
-C126 m2_7142_93.t3 VGND 0.02758f $ **FLOATING
-C127 m2_7142_93.t4 VGND 0.01624f $ **FLOATING
-C128 m2_7142_93.n0 VGND 0.01891f $ **FLOATING
-C129 m2_7142_93.n1 VGND 0.21309f $ **FLOATING
-C130 m2_7142_93.n2 VGND 0.05225f $ **FLOATING
-C131 m2_7142_93.n3 VGND 0.02055f $ **FLOATING
-C132 m2_3178_104.n0 VGND 0.01914f $ **FLOATING
-C133 m2_3178_104.t4 VGND 0.02249f $ **FLOATING
-C134 m2_3178_104.t5 VGND 0.02143f $ **FLOATING
-C135 m2_3178_104.n1 VGND 0.01668f $ **FLOATING
-C136 m2_3178_104.t3 VGND 2.4495f $ **FLOATING
-C137 m2_3178_104.n2 VGND 0.03829f $ **FLOATING
-C138 m2_3178_104.n3 VGND 0.01608f $ **FLOATING
-C139 m2_1572_105.n0 VGND 0.01864f $ **FLOATING
-C140 m2_1572_105.t4 VGND 0.02191f $ **FLOATING
-C141 m2_1572_105.t5 VGND 0.02088f $ **FLOATING
-C142 m2_1572_105.n1 VGND 0.01667f $ **FLOATING
-C143 m2_1572_105.t3 VGND 2.35339f $ **FLOATING
-C144 m2_1572_105.n2 VGND 0.03779f $ **FLOATING
-C145 m2_1572_105.n3 VGND 0.01475f $ **FLOATING
-C146 a_2087_n2395.n0 VGND 0.01697f $ **FLOATING
-C147 a_2087_n2395.t5 VGND 0.01652f $ **FLOATING
-C148 a_2087_n2395.t4 VGND 0.02657f $ **FLOATING
-C149 a_2087_n2395.n1 VGND 0.01857f $ **FLOATING
-C150 a_2087_n2395.t3 VGND 2.6433f $ **FLOATING
-C151 a_2087_n2395.n2 VGND 0.04277f $ **FLOATING
-C152 a_2087_n2395.n3 VGND 0.01819f $ **FLOATING
-C153 a_745_n2395.t5 VGND 0.0161f $ **FLOATING
-C154 a_745_n2395.t4 VGND 0.02555f $ **FLOATING
-C155 a_745_n2395.n0 VGND 0.01786f $ **FLOATING
-C156 a_745_n2395.t3 VGND 2.45243f $ **FLOATING
-C157 a_745_n2395.n1 VGND 0.03642f $ **FLOATING
-C158 a_745_n2395.n2 VGND 0.01696f $ **FLOATING
-C159 a_745_n2395.n3 VGND 0.01816f $ **FLOATING
-C160 Vout.n0 VGND 0.01574f $ **FLOATING
-C161 Vout.n1 VGND 0.05202f $ **FLOATING
-C162 Vout.t4 VGND 2.82665f $ **FLOATING
-C163 Vout.t3 VGND 3.1492f $ **FLOATING
-C164 a_6113_n2395.t3 VGND 0.01896f $ **FLOATING
-C165 a_6113_n2395.t5 VGND 0.02718f $ **FLOATING
-C166 a_6113_n2395.n0 VGND 0.01929f $ **FLOATING
-C167 a_6113_n2395.t4 VGND 2.39941f $ **FLOATING
-C168 a_6113_n2395.n1 VGND 0.08285f $ **FLOATING
-C169 a_6113_n2395.n2 VGND 0.01746f $ **FLOATING
-C170 a_6113_n2395.n3 VGND 0.01735f $ **FLOATING
-C171 m1_785_n2484.t4 VGND 0.02852f $ **FLOATING
-C172 m1_785_n2484.t5 VGND 0.02719f $ **FLOATING
-C173 m1_785_n2484.n0 VGND 0.02765f $ **FLOATING
-C174 m1_785_n2484.t3 VGND 2.81132f $ **FLOATING
-C175 m1_785_n2484.n1 VGND 0.22935f $ **FLOATING
-C176 m1_785_n2484.n2 VGND 0.03456f $ **FLOATING
-C177 m1_785_n2484.n3 VGND 0.02061f $ **FLOATING
-C178 VPWR.n0 VGND 0.01209f $ **FLOATING
-C179 VPWR.n3 VGND 0.01302f $ **FLOATING
-C180 VPWR.n5 VGND 0.03838f $ **FLOATING
-C181 VPWR.t26 VGND 0.31162f $ **FLOATING
-C182 VPWR.n7 VGND 0.08712f $ **FLOATING
-C183 VPWR.n8 VGND 0.01811f $ **FLOATING
-C184 VPWR.t74 VGND 0.31162f $ **FLOATING
-C185 VPWR.n12 VGND 0.01302f $ **FLOATING
-C186 VPWR.n14 VGND 0.03855f $ **FLOATING
-C187 VPWR.t16 VGND 0.31162f $ **FLOATING
-C188 VPWR.n16 VGND 0.08712f $ **FLOATING
-C189 VPWR.n17 VGND 0.01811f $ **FLOATING
-C190 VPWR.t75 VGND 0.31162f $ **FLOATING
-C191 VPWR.n21 VGND 0.01302f $ **FLOATING
-C192 VPWR.n23 VGND 0.03855f $ **FLOATING
-C193 VPWR.t29 VGND 0.31162f $ **FLOATING
-C194 VPWR.n25 VGND 0.08712f $ **FLOATING
-C195 VPWR.n26 VGND 0.01811f $ **FLOATING
-C196 VPWR.t4 VGND 0.31162f $ **FLOATING
-C197 VPWR.n30 VGND 0.01302f $ **FLOATING
-C198 VPWR.n32 VGND 0.03846f $ **FLOATING
-C199 VPWR.t12 VGND 0.31162f $ **FLOATING
-C200 VPWR.n34 VGND 0.08712f $ **FLOATING
-C201 VPWR.n35 VGND 0.01811f $ **FLOATING
-C202 VPWR.t1 VGND 0.31162f $ **FLOATING
-C203 VPWR.n39 VGND 0.01302f $ **FLOATING
-C204 VPWR.n41 VGND 0.05766f $ **FLOATING
-C205 VPWR.t7 VGND 0.31161f $ **FLOATING
-C206 VPWR.n43 VGND 0.08713f $ **FLOATING
-C207 VPWR.n44 VGND 0.01811f $ **FLOATING
-C208 VPWR.t68 VGND 0.31162f $ **FLOATING
-C209 VPWR.n48 VGND 0.01906f $ **FLOATING
-C210 VPWR.n50 VGND 0.01567f $ **FLOATING
-C211 VPWR.n51 VGND 0.0192f $ **FLOATING
-C212 VPWR.n56 VGND 0.06821f $ **FLOATING
-C213 VPWR.n57 VGND 0.04365f $ **FLOATING
-C214 VPWR.n58 VGND 0.01426f $ **FLOATING
-C215 VPWR.n59 VGND 0.0186f $ **FLOATING
-C216 VPWR.n60 VGND 0.04103f $ **FLOATING
-C217 VPWR.n61 VGND 0.03521f $ **FLOATING
-C218 VPWR.n62 VGND 0.01856f $ **FLOATING
-C219 VPWR.n64 VGND 0.01567f $ **FLOATING
-C220 VPWR.n65 VGND 0.0192f $ **FLOATING
-C221 VPWR.n70 VGND 0.06821f $ **FLOATING
-C222 VPWR.n71 VGND 0.04372f $ **FLOATING
-C223 VPWR.n72 VGND 0.01427f $ **FLOATING
-C224 VPWR.n73 VGND 0.01858f $ **FLOATING
-C225 VPWR.n74 VGND 0.03253f $ **FLOATING
-C226 VPWR.n75 VGND 0.01215f $ **FLOATING
-C227 VPWR.n77 VGND 0.01666f $ **FLOATING
-C228 VPWR.n79 VGND 0.01302f $ **FLOATING
-C229 VPWR.n81 VGND 0.01664f $ **FLOATING
-C230 VPWR.n83 VGND 0.01235f $ **FLOATING
-C231 VPWR.n85 VGND 0.01664f $ **FLOATING
-C232 VPWR.n87 VGND 0.01225f $ **FLOATING
-C233 VPWR.n89 VGND 0.01666f $ **FLOATING
-C234 VPWR.n90 VGND 0.01654f $ **FLOATING
-C235 VPWR.n91 VGND 0.08296f $ **FLOATING
-C236 VPWR.t3 VGND 0.35061f $ **FLOATING
-C237 VPWR.n92 VGND 0.11569f $ **FLOATING
-C238 VPWR.n93 VGND 0.01493f $ **FLOATING
-C239 VPWR.t9 VGND 0.31162f $ **FLOATING
-C240 VPWR.n99 VGND 0.04591f $ **FLOATING
-C241 VPWR.t57 VGND 0.31162f $ **FLOATING
-C242 VPWR.n101 VGND 0.05835f $ **FLOATING
-C243 VPWR.n103 VGND 0.034f $ **FLOATING
-C244 VPWR.n104 VGND 0.01979f $ **FLOATING
-C245 VPWR.n105 VGND 0.01816f $ **FLOATING
-C246 VPWR.n111 VGND 0.01429f $ **FLOATING
-C247 VPWR.n112 VGND 0.01714f $ **FLOATING
-C248 VPWR.n114 VGND 0.01862f $ **FLOATING
-C249 VPWR.n115 VGND 0.01786f $ **FLOATING
-C250 VPWR.n116 VGND 0.01533f $ **FLOATING
-C251 VPWR.n117 VGND 0.01772f $ **FLOATING
-C252 VPWR.t39 VGND 0.31162f $ **FLOATING
-C253 VPWR.n119 VGND 0.01467f $ **FLOATING
-C254 VPWR.t0 VGND 0.35063f $ **FLOATING
-C255 VPWR.n120 VGND 0.11548f $ **FLOATING
-C256 VPWR.n121 VGND 0.01661f $ **FLOATING
-C257 VPWR.n122 VGND 0.03984f $ **FLOATING
-C258 VPWR.n124 VGND 0.04728f $ **FLOATING
-C259 VPWR.n126 VGND 0.01815f $ **FLOATING
-C260 VPWR.n127 VGND 0.01779f $ **FLOATING
-C261 VPWR.n128 VGND 0.01525f $ **FLOATING
-C262 VPWR.n129 VGND 0.01772f $ **FLOATING
-C263 VPWR.t34 VGND 0.31162f $ **FLOATING
-C264 VPWR.n131 VGND 0.01477f $ **FLOATING
-C265 VPWR.t2 VGND 0.35063f $ **FLOATING
-C266 VPWR.n132 VGND 0.11565f $ **FLOATING
-C267 VPWR.n133 VGND 0.01668f $ **FLOATING
-C268 VPWR.n134 VGND 0.03984f $ **FLOATING
-C269 VPWR.n136 VGND 0.04728f $ **FLOATING
-C270 VPWR.n138 VGND 0.01815f $ **FLOATING
-C271 VPWR.n139 VGND 0.01777f $ **FLOATING
-C272 VPWR.n140 VGND 0.01525f $ **FLOATING
-C273 VPWR.n141 VGND 0.01772f $ **FLOATING
-C274 VPWR.t36 VGND 0.31162f $ **FLOATING
-C275 VPWR.n143 VGND 0.01472f $ **FLOATING
-C276 VPWR.t6 VGND 0.35063f $ **FLOATING
-C277 VPWR.n144 VGND 0.11555f $ **FLOATING
-C278 VPWR.n145 VGND 0.01662f $ **FLOATING
-C279 VPWR.n146 VGND 0.03984f $ **FLOATING
-C280 VPWR.n148 VGND 0.04728f $ **FLOATING
-C281 VPWR.n150 VGND 0.01815f $ **FLOATING
-C282 VPWR.n151 VGND 0.01394f $ **FLOATING
-C283 VPWR.n152 VGND 0.01225f $ **FLOATING
-C284 VPWR.n154 VGND 0.0167f $ **FLOATING
-C285 VPWR.n155 VGND 0.01794f $ **FLOATING
-C286 VPWR.n156 VGND 0.01235f $ **FLOATING
-C287 VPWR.n158 VGND 0.02667f $ **FLOATING
-C288 VPWR.n159 VGND 0.01658f $ **FLOATING
-C289 VPWR.n160 VGND 0.01889f $ **FLOATING
-C290 VPWR.t14 VGND 0.31162f $ **FLOATING
-C291 VPWR.t67 VGND 0.35063f $ **FLOATING
-C292 VPWR.n163 VGND 0.11553f $ **FLOATING
-C293 VPWR.n164 VGND 0.0147f $ **FLOATING
-C294 VPWR.n165 VGND 0.03984f $ **FLOATING
-C295 VPWR.n167 VGND 0.04728f $ **FLOATING
-C296 VPWR.n169 VGND 0.01767f $ **FLOATING
-C297 VPWR.n170 VGND 0.01525f $ **FLOATING
-C298 VPWR.n171 VGND 0.01779f $ **FLOATING
-C299 VPWR.n172 VGND 0.01806f $ **FLOATING
-C300 VPWR.t18 VGND 0.31162f $ **FLOATING
-C301 VPWR.t5 VGND 0.35063f $ **FLOATING
-C302 VPWR.n175 VGND 0.11829f $ **FLOATING
-C303 VPWR.n176 VGND 0.01531f $ **FLOATING
-C304 VPWR.n177 VGND 0.03984f $ **FLOATING
-C305 VPWR.n179 VGND 0.04728f $ **FLOATING
-C306 VPWR.n181 VGND 0.01859f $ **FLOATING
-C307 VPWR.n182 VGND 0.0115f $ **FLOATING
-C308 VPWR.n183 VGND 0.27063f $ **FLOATING
-C309 VPWR.n184 VGND 0.28013f $ **FLOATING
-C310 VPWR.n185 VGND 0.02624f $ **FLOATING
-C311 VPWR.n186 VGND 0.01856f $ **FLOATING
-C312 VPWR.n188 VGND 0.01564f $ **FLOATING
-C313 VPWR.n189 VGND 0.0192f $ **FLOATING
-C314 VPWR.n194 VGND 0.06821f $ **FLOATING
-C315 VPWR.n195 VGND 0.0437f $ **FLOATING
-C316 VPWR.n196 VGND 0.01422f $ **FLOATING
-C317 VPWR.n197 VGND 0.01856f $ **FLOATING
-C318 VPWR.n198 VGND 0.04103f $ **FLOATING
-C319 VPWR.n199 VGND 0.03513f $ **FLOATING
-C320 VPWR.n200 VGND 0.01856f $ **FLOATING
-C321 VPWR.n202 VGND 0.01567f $ **FLOATING
-C322 VPWR.n203 VGND 0.0192f $ **FLOATING
-C323 VPWR.n208 VGND 0.06821f $ **FLOATING
-C324 VPWR.n209 VGND 0.0437f $ **FLOATING
-C325 VPWR.n210 VGND 0.01422f $ **FLOATING
-C326 VPWR.n211 VGND 0.01856f $ **FLOATING
-C327 VPWR.n212 VGND 0.04111f $ **FLOATING
-C328 VPWR.n213 VGND 0.03513f $ **FLOATING
-C329 VPWR.n214 VGND 0.01856f $ **FLOATING
-C330 VPWR.n216 VGND 0.01567f $ **FLOATING
-C331 VPWR.n217 VGND 0.0192f $ **FLOATING
-C332 VPWR.n222 VGND 0.06821f $ **FLOATING
-C333 VPWR.n223 VGND 0.04372f $ **FLOATING
-C334 VPWR.n224 VGND 0.01423f $ **FLOATING
-C335 VPWR.n225 VGND 0.01856f $ **FLOATING
-C336 VPWR.n226 VGND 0.04098f $ **FLOATING
-C337 VPWR.n227 VGND 0.02491f $ **FLOATING
-C338 VPWR.n229 VGND 0.01243f $ **FLOATING
-C339 VPWR.n230 VGND 0.01257f $ **FLOATING
-C340 VPWR.n231 VGND 0.02639f $ **FLOATING
-C341 VPWR.t69 VGND 0.31162f $ **FLOATING
-C342 VPWR.n232 VGND 0.10628f $ **FLOATING
-C343 VPWR.n235 VGND 0.02864f $ **FLOATING
-C344 a_620_930.t13 VGND 0.28123f $ **FLOATING
-C345 a_620_930.t10 VGND 0.28127f $ **FLOATING
-C346 a_620_930.t12 VGND 0.28177f $ **FLOATING
-C347 a_620_930.t11 VGND 0.28425f $ **FLOATING
-C348 a_620_930.t9 VGND 0.28121f $ **FLOATING
-C349 a_620_930.t15 VGND 0.28126f $ **FLOATING
-C350 a_620_930.t14 VGND 0.33707f $ **FLOATING
-C351 a_620_930.t7 VGND 0.28087f $ **FLOATING
-C352 a_620_930.n0 VGND 0.96303f $ **FLOATING
-C353 a_620_930.t8 VGND 0.2819f $ **FLOATING
-C354 a_620_930.n1 VGND 0.64686f $ **FLOATING
-C355 a_620_930.t16 VGND 0.28139f $ **FLOATING
-C356 a_620_930.n2 VGND 0.64546f $ **FLOATING
-C357 a_620_930.t6 VGND 0.28129f $ **FLOATING
-C358 a_620_930.n3 VGND 1.61821f $ **FLOATING
-C359 a_620_930.n4 VGND 1.8016f $ **FLOATING
-C360 a_620_930.n5 VGND 0.66875f $ **FLOATING
-C361 a_620_930.n6 VGND 0.66764f $ **FLOATING
-C362 a_620_930.n7 VGND 0.66703f $ **FLOATING
-C363 a_620_930.n8 VGND 0.66853f $ **FLOATING
-C364 a_620_930.n9 VGND 0.50909f $ **FLOATING
-C365 a_620_930.t2 VGND 0.03825f $ **FLOATING
-C366 a_620_930.n10 VGND 0.21681f $ **FLOATING
-C367 a_620_930.t1 VGND 0.27736f $ **FLOATING
-C368 a_620_930.n11 VGND 0.04569f $ **FLOATING
-C369 a_620_930.t3 VGND 0.0381f $ **FLOATING
-C370 a_620_930.n12 VGND 0.39848f $ **FLOATING
-C371 a_620_930.t0 VGND 0.17559f $ **FLOATING
-C372 VGND.t17 VGND 0.02826f $ **FLOATING
-C373 VGND.n4 VGND 0.22697f $ **FLOATING
-C374 VGND.n5 VGND 0.02297f $ **FLOATING
-C375 VGND.n13 VGND 0.13247f $ **FLOATING
-C376 VGND.t34 VGND 0.43783f $ **FLOATING
-C377 VGND.t16 VGND 0.67058f $ **FLOATING
-C378 VGND.t56 VGND 0.88275f $ **FLOATING
-C379 VGND.t51 VGND 0.74031f $ **FLOATING
-C380 VGND.t59 VGND 0.7719f $ **FLOATING
-C381 VGND.t35 VGND 0.7719f $ **FLOATING
-C382 VGND.t20 VGND 0.59924f $ **FLOATING
-C383 VGND.t54 VGND 0.59739f $ **FLOATING
-C384 VGND.n16 VGND 0.47001f $ **FLOATING
-C385 VGND.t53 VGND 0.93942f $ **FLOATING
-C386 VGND.t40 VGND 0.73168f $ **FLOATING
-C387 VGND.n17 VGND 0.40063f $ **FLOATING
-C388 VGND.t52 VGND 0.59552f $ **FLOATING
-C389 VGND.n18 VGND 0.26298f $ **FLOATING
-C390 VGND.t29 VGND 0.59528f $ **FLOATING
-C391 VGND.n19 VGND 0.26369f $ **FLOATING
-C392 VGND.t55 VGND 0.59669f $ **FLOATING
-C393 VGND.n20 VGND 0.30393f $ **FLOATING
-C394 VGND.n21 VGND 0.52589f $ **FLOATING
-C395 VGND.n22 VGND 0.18337f $ **FLOATING
-C396 VGND.n26 VGND 0.02685f $ **FLOATING
-C397 VGND.n28 VGND 0.32856f $ **FLOATING
-C398 VGND.n29 VGND 0.67333f $ **FLOATING
-C399 VGND.n30 VGND 0.06999f $ **FLOATING
-C400 VGND.n31 VGND 0.08142f $ **FLOATING
-C401 VGND.n32 VGND 0.09343f $ **FLOATING
-C402 VGND.n33 VGND 0.05508f $ **FLOATING
-C403 VGND.n34 VGND 0.09817f $ **FLOATING
-C404 VGND.n35 VGND 0.02385f $ **FLOATING
-C405 VGND.t0 VGND 0.13477f $ **FLOATING
-C406 VGND.t2 VGND 0.06622f $ **FLOATING
-C407 VGND.t30 VGND 0.06622f $ **FLOATING
-C408 VGND.t31 VGND 0.13477f $ **FLOATING
-C409 VGND.n40 VGND 0.09343f $ **FLOATING
-C410 VGND.n41 VGND 0.01293f $ **FLOATING
-C411 VGND.n44 VGND 0.01957f $ **FLOATING
-C412 VGND.n45 VGND 0.03045f $ **FLOATING
-C413 VGND.n46 VGND 0.03031f $ **FLOATING
-C414 VGND.n47 VGND 0.01582f $ **FLOATING
-C415 VGND.n50 VGND 0.0205f $ **FLOATING
-C416 VGND.n59 VGND 0.02041f $ **FLOATING
-C417 VGND.n73 VGND 0.01896f $ **FLOATING
-C418 VGND.n78 VGND 0.01957f $ **FLOATING
-C419 VGND.n79 VGND 0.09568f $ **FLOATING
-C420 VGND.n80 VGND 0.07387f $ **FLOATING
-C421 VGND.t14 VGND 0.13477f $ **FLOATING
-C422 VGND.n83 VGND 0.06214f $ **FLOATING
-C423 VGND.n86 VGND 0.09343f $ **FLOATING
-C424 VGND.n87 VGND 0.01293f $ **FLOATING
-C425 VGND.n90 VGND 0.03045f $ **FLOATING
-C426 VGND.n91 VGND 0.03031f $ **FLOATING
-C427 VGND.n92 VGND 0.01582f $ **FLOATING
-C428 VGND.n95 VGND 0.0205f $ **FLOATING
-C429 VGND.n104 VGND 0.02041f $ **FLOATING
-C430 VGND.t12 VGND 0.06622f $ **FLOATING
-C431 VGND.t27 VGND 0.06622f $ **FLOATING
-C432 VGND.t25 VGND 0.13477f $ **FLOATING
-C433 VGND.n106 VGND 0.09817f $ **FLOATING
-C434 VGND.n119 VGND 0.01906f $ **FLOATING
-C435 VGND.n124 VGND 0.01979f $ **FLOATING
-C436 VGND.n125 VGND 0.07387f $ **FLOATING
-C437 VGND.t45 VGND 0.13477f $ **FLOATING
-C438 VGND.n128 VGND 0.06483f $ **FLOATING
-C439 VGND.n131 VGND 0.08567f $ **FLOATING
-C440 VGND.n132 VGND 0.01293f $ **FLOATING
-C441 VGND.n135 VGND 0.03063f $ **FLOATING
-C442 VGND.n136 VGND 0.03009f $ **FLOATING
-C443 VGND.n137 VGND 0.01582f $ **FLOATING
-C444 VGND.n140 VGND 0.0205f $ **FLOATING
-C445 VGND.n149 VGND 0.02041f $ **FLOATING
-C446 VGND.t46 VGND 0.06622f $ **FLOATING
-C447 VGND.t22 VGND 0.06622f $ **FLOATING
-C448 VGND.t21 VGND 0.13477f $ **FLOATING
-C449 VGND.n151 VGND 0.09817f $ **FLOATING
-C450 VGND.n164 VGND 0.01913f $ **FLOATING
-C451 VGND.n169 VGND 0.01957f $ **FLOATING
-C452 VGND.n172 VGND 0.03072f $ **FLOATING
-C453 VGND.n173 VGND 0.02891f $ **FLOATING
-C454 VGND.n174 VGND 0.01555f $ **FLOATING
-C455 VGND.n175 VGND 0.09817f $ **FLOATING
-C456 VGND.n176 VGND 0.10619f $ **FLOATING
-C457 VGND.n177 VGND 0.06483f $ **FLOATING
-C458 VGND.t6 VGND 0.13477f $ **FLOATING
-C459 VGND.t4 VGND 0.06622f $ **FLOATING
-C460 VGND.t10 VGND 0.06622f $ **FLOATING
-C461 VGND.t8 VGND 0.13477f $ **FLOATING
-C462 VGND.n178 VGND 0.04637f $ **FLOATING
-C463 VGND.n180 VGND 0.01913f $ **FLOATING
-C464 VGND.n190 VGND 0.02128f $ **FLOATING
-C465 VGND.n191 VGND 1.45148f $ **FLOATING
-C466 VGND.n192 VGND 0.83258f $ **FLOATING
-C467 VGND.n193 VGND 0.6705f $ **FLOATING
-C468 VGND.n194 VGND 0.02079f $ **FLOATING
-C469 VGND.n195 VGND 0.06052f $ **FLOATING
-C470 VGND.n196 VGND 0.09817f $ **FLOATING
-C471 VGND.n199 VGND 0.01582f $ **FLOATING
-C472 VGND.n200 VGND 0.01059f $ **FLOATING
-C473 VGND.n201 VGND 0.01315f $ **FLOATING
-C474 VGND.n203 VGND 0.02587f $ **FLOATING
-C475 VGND.n207 VGND 0.01894f $ **FLOATING
-C476 VGND.t32 VGND 0.20467f $ **FLOATING
-C477 VGND.n208 VGND 0.02085f $ **FLOATING
-C478 VGND.t33 VGND 0.08651f $ **FLOATING
-C479 VGND.t60 VGND 0.09796f $ **FLOATING
-C480 VGND.n212 VGND 0.11027f $ **FLOATING
-C481 VGND.n213 VGND 0.0565f $ **FLOATING
-C482 VGND.n214 VGND 0.28877f $ **FLOATING
-C483 VGND.n215 VGND 0.01906f $ **FLOATING
-C484 VGND.n216 VGND 0.02069f $ **FLOATING
-C485 VGND.n219 VGND 0.02803f $ **FLOATING
-C486 VGND.n220 VGND 0.01394f $ **FLOATING
-C487 VGND.n222 VGND 0.05353f $ **FLOATING
-C488 VGND.n223 VGND 0.02032f $ **FLOATING
-C489 VGND.n224 VGND 0.02252f $ **FLOATING
-C490 VGND.n225 VGND 0.07387f $ **FLOATING
-C491 VGND.n230 VGND 0.0205f $ **FLOATING
-C492 VGND.n241 VGND 0.02041f $ **FLOATING
-C493 VGND.n255 VGND 0.01902f $ **FLOATING
-C494 VGND.t41 VGND 0.13477f $ **FLOATING
-C495 VGND.t43 VGND 0.06622f $ **FLOATING
-C496 VGND.t36 VGND 0.06622f $ **FLOATING
-C497 VGND.t38 VGND 0.13477f $ **FLOATING
-C498 VGND.n256 VGND 0.09817f $ **FLOATING
-C499 VGND.n265 VGND 0.01993f $ **FLOATING
-C500 VGND.n267 VGND 0.03344f $ **FLOATING
-C501 VGND.n268 VGND 0.01293f $ **FLOATING
-C502 VGND.n269 VGND 0.03031f $ **FLOATING
-C503 VGND.n270 VGND 0.03045f $ **FLOATING
-C504 VGND.n271 VGND 0.01966f $ **FLOATING
-C505 VGND.n273 VGND 0.02315f $ **FLOATING
-C506 VGND.n274 VGND 0.03074f $ **FLOATING
-C507 VGND.n275 VGND 0.09726f $ **FLOATING
-C508 VGND.n276 VGND 0.11653f $ **FLOATING
-C509 VGND.n277 VGND 1.61643f $ **FLOATING
-C510 VGND.n278 VGND 0.05891f $ **FLOATING
-C511 VGND.n279 VGND 0.04886f $ **FLOATING
-C512 VGND.n280 VGND 0.05199f $ **FLOATING
-C513 VGND.n281 VGND 0.05199f $ **FLOATING
-C514 VGND.n282 VGND 0.05199f $ **FLOATING
-C515 VGND.n283 VGND 0.05199f $ **FLOATING
-C516 VGND.n284 VGND 0.06814f $ **FLOATING
-C517 VGND.n285 VGND 0.1404f $ **FLOATING
-C518 VGND.n287 VGND 0.08095f $ **FLOATING
-C519 VGND.n288 VGND 0.09568f $ **FLOATING
-C520 VGND.n289 VGND 0.08142f $ **FLOATING
-C521 VGND.n290 VGND 0.67499f $ **FLOATING
-C522 VGND.n291 VGND 0.99242f $ **FLOATING
-C523 VGND.n292 VGND 1.14003f $ **FLOATING
-C524 VGND.n293 VGND 3.1563f $ **FLOATING
-C525 VGND.n294 VGND 0.31346f $ **FLOATING
-C526 VGND.n295 VGND 0.07407f $ **FLOATING
-C527 VGND.n296 VGND 0.09817f $ **FLOATING
-C528 VGND.n297 VGND 0.07387f $ **FLOATING
-C529 VGND.n298 VGND 0.04638f $ **FLOATING
-C530 VGND.n299 VGND 0.02385f $ **FLOATING
-C531 VGND.n300 VGND 0.01993f $ **FLOATING
-C532 VGND.n302 VGND 0.03344f $ **FLOATING
-C533 VGND.n303 VGND 0.07416f $ **FLOATING
-C534 VGND.n304 VGND 0.09817f $ **FLOATING
-C535 VGND.n305 VGND 0.04637f $ **FLOATING
-C536 VGND.n306 VGND 0.02385f $ **FLOATING
-C537 VGND.n307 VGND 0.01993f $ **FLOATING
-C538 VGND.n309 VGND 0.03344f $ **FLOATING
-C539 VGND.n310 VGND 0.07387f $ **FLOATING
-C540 VGND.n311 VGND 0.09817f $ **FLOATING
-C541 VGND.n312 VGND 0.04637f $ **FLOATING
-C542 VGND.n313 VGND 0.02385f $ **FLOATING
-C543 VGND.n314 VGND 0.01993f $ **FLOATING
-C544 VGND.n316 VGND 0.03344f $ **FLOATING
-C545 VGND.n317 VGND 0.07387f $ **FLOATING
-C546 VGND.n318 VGND 0.09817f $ **FLOATING
-C547 VGND.n319 VGND 0.04637f $ **FLOATING
-C548 VGND.n320 VGND 0.07387f $ **FLOATING
-C549 VGND.n321 VGND 0.09568f $ **FLOATING
-C550 VGND.n322 VGND 0.08142f $ **FLOATING
-C551 VGND.n323 VGND 0.13151f $ **FLOATING
-C552 VGND.n324 VGND 1.7866f $ **FLOATING
-C553 VGND.n325 VGND 0.63786f $ **FLOATING
-C554 VGND.n326 VGND 0.8506f $ **FLOATING
-C555 VGND.n327 VGND 0.05199f $ **FLOATING
-C556 a_3429_n2395.n0 VGND 0.01654f $ **FLOATING
-C557 a_3429_n2395.t5 VGND 0.01521f $ **FLOATING
-C558 a_3429_n2395.t4 VGND 0.0259f $ **FLOATING
-C559 a_3429_n2395.n1 VGND 0.01845f $ **FLOATING
-C560 a_3429_n2395.t3 VGND 2.54446f $ **FLOATING
-C561 a_3429_n2395.n2 VGND 0.04595f $ **FLOATING
-C562 a_3429_n2395.n3 VGND 0.01682f $ **FLOATING
-C563 a_4771_n2395.t3 VGND 0.01504f $ **FLOATING
-C564 a_4771_n2395.t5 VGND 0.02721f $ **FLOATING
-C565 a_4771_n2395.n0 VGND 0.01911f $ **FLOATING
-C566 a_4771_n2395.t4 VGND 2.5444f $ **FLOATING
-C567 a_4771_n2395.n1 VGND 0.0411f $ **FLOATING
-C568 a_4771_n2395.n2 VGND 0.01826f $ **FLOATING
-C569 a_4771_n2395.n3 VGND 0.01737f $ **FLOATING
+X0 a_542_269# a_745_n2395# a_684_n1958# VGND sg13_lv_nmos ad=0.11p pd=0.94u as=0.17p ps=1.68u w=0.5u l=0.13u
+X1 a_7398_n1956# vctl VGND VGND sg13_lv_nmos ad=65.99999f pd=0.74u as=0.102p ps=1.28u w=0.3u l=0.13u
+X2 a_4776_351# a_3434_351# a_4909_n217# VGND sg13_lv_nmos ad=0.11p pd=0.94u as=0.17p ps=1.68u w=0.5u l=0.13u
+X3 a_4909_n217# vctl VGND VGND sg13_lv_nmos ad=65.99999f pd=0.74u as=0.102p ps=1.28u w=0.3u l=0.13u
+X4 Vout a_7212_321# VPWR VPWR sg13_lv_pmos ad=0.11p pd=0.94u as=0.11p ps=0.94u w=0.5u l=0.13u
+X5 a_4771_n2395# a_6113_n2395# a_6051_n2525# VPWR sg13_lv_pmos ad=0.1106p pd=0.945u as=0.11p ps=0.94u w=0.5u l=0.13u
+X6 a_2026_n1958# vctl VGND VGND sg13_lv_nmos ad=65.99999f pd=0.74u as=0.102p ps=1.28u w=0.3u l=0.13u
+X7 a_6024_351# a_4776_351# a_6118_351# VPWR sg13_lv_pmos ad=0.17p pd=1.68u as=0.11p ps=0.94u w=0.5u l=0.13u
+X8 a_4909_n217# a_3434_351# a_4776_351# VGND sg13_lv_nmos ad=0.17p pd=1.68u as=0.11p ps=0.94u w=0.5u l=0.13u
+X9 a_6113_n2395# a_6118_351# a_7397_n2523# VPWR sg13_lv_pmos ad=0.1106p pd=0.945u as=0.11p ps=0.94u w=0.5u l=0.13u
+X10 a_656_351# a_542_269# a_750_351# VPWR sg13_lv_pmos ad=0.17p pd=1.68u as=0.11p ps=0.94u w=0.5u l=0.13u
+X11 a_7397_n2523# a_620_930# VPWR VPWR sg13_lv_pmos ad=59f pd=0.74u as=0.104p ps=1.34u w=0.2u l=0.13u
+X12 VGND vctl a_4909_n217# VGND sg13_lv_nmos ad=0.102p pd=1.28u as=65.99999f ps=0.74u w=0.3u l=0.13u
+X13 a_3434_351# VGND cap_cmim l=6.99u w=6.99u
+X14 VPWR a_7212_321# Vout VPWR sg13_lv_pmos ad=0.17p pd=1.68u as=0.11p ps=0.94u w=0.5u l=0.13u
+X15 VPWR a_620_930# a_3367_n2525# VPWR sg13_lv_pmos ad=59f pd=0.74u as=59f ps=0.74u w=0.2u l=0.13u
+X16 a_3340_351# a_620_930# VPWR VPWR sg13_lv_pmos ad=59.75f pd=0.745u as=0.104p ps=1.34u w=0.2u l=0.13u
+X17 a_2092_351# a_750_351# a_1998_351# VPWR sg13_lv_pmos ad=0.11p pd=0.94u as=0.11p ps=0.94u w=0.5u l=0.13u
+X18 a_6051_n2525# a_620_930# VPWR VPWR sg13_lv_pmos ad=59f pd=0.74u as=0.104p ps=1.34u w=0.2u l=0.13u
+X19 VPWR a_620_930# a_3367_n2525# VPWR sg13_lv_pmos ad=0.104p pd=1.34u as=59.75f ps=0.745u w=0.2u l=0.13u
+X20 a_684_n1958# vctl VGND VGND sg13_lv_nmos ad=65.99999f pd=0.74u as=0.102p ps=1.28u w=0.3u l=0.13u
+X21 VPWR a_620_930# a_4682_351# VPWR sg13_lv_pmos ad=0.104p pd=1.34u as=59f ps=0.74u w=0.2u l=0.13u
+X22 a_683_n2525# a_620_930# VPWR VPWR sg13_lv_pmos ad=59.75f pd=0.745u as=59f ps=0.74u w=0.2u l=0.13u
+X23 a_6052_n1958# a_6113_n2395# a_4771_n2395# VGND sg13_lv_nmos ad=0.17p pd=1.68u as=0.11p ps=0.94u w=0.5u l=0.13u
+X24 a_2092_351# a_750_351# a_1998_351# VPWR sg13_lv_pmos ad=0.1106p pd=0.945u as=0.17p ps=1.68u w=0.5u l=0.13u
+X25 a_7398_n1956# a_6118_351# a_6113_n2395# VGND sg13_lv_nmos ad=0.17p pd=1.68u as=0.11p ps=0.94u w=0.5u l=0.13u
+X26 VPWR a_620_930# a_3340_351# VPWR sg13_lv_pmos ad=59f pd=0.74u as=59.75f ps=0.745u w=0.2u l=0.13u
+X27 VGND a_7198_n376# Vout VGND sg13_lv_nmos ad=0.17p pd=1.68u as=0.11p ps=0.94u w=0.5u l=0.13u
+X28 a_7397_n2523# a_6118_351# a_6113_n2395# VPWR sg13_lv_pmos ad=0.17p pd=1.68u as=0.1106p ps=0.945u w=0.5u l=0.13u
+X29 a_2025_n2525# a_2087_n2395# a_745_n2395# VPWR sg13_lv_pmos ad=0.11p pd=0.94u as=0.11p ps=0.94u w=0.5u l=0.13u
+X30 VPWR a_620_930# a_4709_n2525# VPWR sg13_lv_pmos ad=59f pd=0.74u as=59f ps=0.74u w=0.2u l=0.13u
+X31 a_4709_n2525# a_4771_n2395# a_3429_n2395# VPWR sg13_lv_pmos ad=0.11p pd=0.94u as=0.11p ps=0.94u w=0.5u l=0.13u
+X32 VPWR a_620_930# a_2025_n2525# VPWR sg13_lv_pmos ad=0.104p pd=1.34u as=59.75f ps=0.745u w=0.2u l=0.13u
+X33 a_2025_n2525# a_2087_n2395# a_745_n2395# VPWR sg13_lv_pmos ad=0.17p pd=1.68u as=0.1106p ps=0.945u w=0.5u l=0.13u
+X34 VGND vctl a_6052_n1958# VGND sg13_lv_nmos ad=0.102p pd=1.28u as=65.99999f ps=0.74u w=0.3u l=0.13u
+X35 VGND vctl a_7398_n1956# VGND sg13_lv_nmos ad=0.102p pd=1.28u as=65.99999f ps=0.74u w=0.3u l=0.13u
+X36 Vout a_7212_321# VPWR VPWR sg13_lv_pmos ad=0.11p pd=0.94u as=0.17p ps=1.68u w=0.5u l=0.13u
+X37 a_6251_n217# a_4776_351# a_6118_351# VGND sg13_lv_nmos ad=0.17p pd=1.68u as=0.11p ps=0.94u w=0.5u l=0.13u
+X38 VPWR a_620_930# a_7397_n2523# VPWR sg13_lv_pmos ad=59f pd=0.74u as=59f ps=0.74u w=0.2u l=0.13u
+X39 VGND vctl a_6251_n217# VGND sg13_lv_nmos ad=0.102p pd=1.28u as=65.99999f ps=0.74u w=0.3u l=0.13u
+X40 VPWR a_7212_321# Vout VPWR sg13_lv_pmos ad=0.11p pd=0.94u as=0.11p ps=0.94u w=0.5u l=0.13u
+X41 a_883_n217# a_542_269# a_750_351# VGND sg13_lv_nmos ad=0.17p pd=1.68u as=0.11p ps=0.94u w=0.5u l=0.13u
+X42 VGND vctl a_883_n217# VGND sg13_lv_nmos ad=0.102p pd=1.28u as=65.99999f ps=0.74u w=0.3u l=0.13u
+X43 VPWR a_620_930# a_3340_351# VPWR sg13_lv_pmos ad=0.104p pd=1.34u as=59f ps=0.74u w=0.2u l=0.13u
+X44 a_2092_351# a_750_351# a_2225_n217# VGND sg13_lv_nmos ad=0.11p pd=0.94u as=0.17p ps=1.68u w=0.5u l=0.13u
+X45 a_2225_n217# vctl VGND VGND sg13_lv_nmos ad=65.99999f pd=0.74u as=0.102p ps=1.28u w=0.3u l=0.13u
+X46 a_3367_n2525# a_3429_n2395# a_2087_n2395# VPWR sg13_lv_pmos ad=0.11p pd=0.94u as=0.11p ps=0.94u w=0.5u l=0.13u
+X47 a_4682_351# a_620_930# VPWR VPWR sg13_lv_pmos ad=59f pd=0.74u as=59f ps=0.74u w=0.2u l=0.13u
+X48 Vout VGND cap_cmim l=6.99u w=6.99u
+X49 a_4771_n2395# a_6113_n2395# a_6051_n2525# VPWR sg13_lv_pmos ad=0.11p pd=0.94u as=0.17p ps=1.68u w=0.5u l=0.13u
+X50 a_3367_n2525# a_3429_n2395# a_2087_n2395# VPWR sg13_lv_pmos ad=0.17p pd=1.68u as=0.1106p ps=0.945u w=0.5u l=0.13u
+X51 a_6024_351# a_620_930# VPWR VPWR sg13_lv_pmos ad=59.75f pd=0.745u as=0.104p ps=1.34u w=0.2u l=0.13u
+X52 a_6113_n2395# a_6118_351# a_7397_n2523# VPWR sg13_lv_pmos ad=0.11p pd=0.94u as=0.17p ps=1.68u w=0.5u l=0.13u
+X53 a_542_269# a_745_n2395# a_683_n2525# VPWR sg13_lv_pmos ad=0.1106p pd=0.945u as=0.11p ps=0.94u w=0.5u l=0.13u
+X54 a_3340_351# a_2092_351# a_3434_351# VPWR sg13_lv_pmos ad=0.11p pd=0.94u as=0.1106p ps=0.945u w=0.5u l=0.13u
+X55 a_2025_n2525# a_620_930# VPWR VPWR sg13_lv_pmos ad=59f pd=0.74u as=0.104p ps=1.34u w=0.2u l=0.13u
+X56 a_745_n2395# a_2087_n2395# a_2025_n2525# VPWR sg13_lv_pmos ad=0.11p pd=0.94u as=0.17p ps=1.68u w=0.5u l=0.13u
+X57 a_1998_351# a_620_930# VPWR VPWR sg13_lv_pmos ad=59f pd=0.74u as=59f ps=0.74u w=0.2u l=0.13u
+X58 a_542_269# VGND cap_cmim l=6.99u w=6.99u
+X59 a_2025_n2525# a_620_930# VPWR VPWR sg13_lv_pmos ad=59.75f pd=0.745u as=59f ps=0.74u w=0.2u l=0.13u
+X60 a_656_351# a_620_930# VPWR VPWR sg13_lv_pmos ad=59.75f pd=0.745u as=0.104p ps=1.34u w=0.2u l=0.13u
+X61 a_745_n2395# a_2087_n2395# a_2025_n2525# VPWR sg13_lv_pmos ad=0.1106p pd=0.945u as=0.11p ps=0.94u w=0.5u l=0.13u
+X62 a_683_n2525# a_620_930# VPWR VPWR sg13_lv_pmos ad=59f pd=0.74u as=0.104p ps=1.34u w=0.2u l=0.13u
+X63 a_620_930# vctl VGND VGND sg13_lv_nmos ad=65.99999f pd=0.74u as=0.102p ps=1.28u w=0.3u l=0.13u
+X64 a_2087_n2395# a_3429_n2395# a_3368_n1958# VGND sg13_lv_nmos ad=0.11p pd=0.94u as=0.17p ps=1.68u w=0.5u l=0.13u
+X65 a_542_269# a_745_n2395# a_683_n2525# VPWR sg13_lv_pmos ad=0.11p pd=0.94u as=0.17p ps=1.68u w=0.5u l=0.13u
+X66 VPWR a_620_930# a_4709_n2525# VPWR sg13_lv_pmos ad=0.104p pd=1.34u as=59.75f ps=0.745u w=0.2u l=0.13u
+X67 VPWR a_620_930# a_6024_351# VPWR sg13_lv_pmos ad=59f pd=0.74u as=59.75f ps=0.745u w=0.2u l=0.13u
+X68 a_684_n1958# a_745_n2395# a_542_269# VGND sg13_lv_nmos ad=0.17p pd=1.68u as=0.11p ps=0.94u w=0.5u l=0.13u
+X69 a_1998_351# a_750_351# a_2092_351# VPWR sg13_lv_pmos ad=0.17p pd=1.68u as=0.11p ps=0.94u w=0.5u l=0.13u
+X70 VPWR a_620_930# a_656_351# VPWR sg13_lv_pmos ad=59f pd=0.74u as=59.75f ps=0.745u w=0.2u l=0.13u
+X71 a_2225_n217# a_750_351# a_2092_351# VGND sg13_lv_nmos ad=0.17p pd=1.68u as=0.11p ps=0.94u w=0.5u l=0.13u
+X72 VGND vctl a_2225_n217# VGND sg13_lv_nmos ad=0.102p pd=1.28u as=65.99999f ps=0.74u w=0.3u l=0.13u
+X73 VPWR a_620_930# a_620_930# VPWR sg13_lv_pmos ad=59f pd=0.74u as=59f ps=0.74u w=0.2u l=0.13u
+X74 a_3368_n1958# vctl VGND VGND sg13_lv_nmos ad=65.99999f pd=0.74u as=0.102p ps=1.28u w=0.3u l=0.13u
+X75 a_3429_n2395# VGND cap_cmim l=6.99u w=6.99u
+X76 a_3434_351# a_2092_351# a_3340_351# VPWR sg13_lv_pmos ad=0.11p pd=0.94u as=0.11p ps=0.94u w=0.5u l=0.13u
+X77 a_3367_n2525# a_620_930# VPWR VPWR sg13_lv_pmos ad=59.75f pd=0.745u as=59f ps=0.74u w=0.2u l=0.13u
+X78 a_4682_351# a_620_930# VPWR VPWR sg13_lv_pmos ad=59.75f pd=0.745u as=0.104p ps=1.34u w=0.2u l=0.13u
+X79 a_3434_351# a_2092_351# a_3567_n217# VGND sg13_lv_nmos ad=0.11p pd=0.94u as=0.17p ps=1.68u w=0.5u l=0.13u
+X80 a_3567_n217# vctl VGND VGND sg13_lv_nmos ad=65.99999f pd=0.74u as=0.102p ps=1.28u w=0.3u l=0.13u
+X81 a_620_930# a_620_930# VPWR VPWR sg13_lv_pmos ad=59f pd=0.74u as=0.104p ps=1.34u w=0.2u l=0.13u
+X82 a_2087_n2395# a_3429_n2395# a_3367_n2525# VPWR sg13_lv_pmos ad=0.1106p pd=0.945u as=0.11p ps=0.94u w=0.5u l=0.13u
+X83 VPWR a_620_930# a_6051_n2525# VPWR sg13_lv_pmos ad=59f pd=0.74u as=59f ps=0.74u w=0.2u l=0.13u
+X84 a_3429_n2395# a_4771_n2395# a_4710_n1958# VGND sg13_lv_nmos ad=0.11p pd=0.94u as=0.17p ps=1.68u w=0.5u l=0.13u
+X85 VGND vctl a_684_n1958# VGND sg13_lv_nmos ad=0.102p pd=1.28u as=65.99999f ps=0.74u w=0.3u l=0.13u
+X86 a_4682_351# a_3434_351# a_4776_351# VPWR sg13_lv_pmos ad=0.11p pd=0.94u as=0.1106p ps=0.945u w=0.5u l=0.13u
+X87 a_4771_n2395# VGND cap_cmim l=6.99u w=6.99u
+X88 a_6051_n2525# a_6113_n2395# a_4771_n2395# VPWR sg13_lv_pmos ad=0.11p pd=0.94u as=0.11p ps=0.94u w=0.5u l=0.13u
+X89 a_6118_351# a_4776_351# a_6251_n217# VGND sg13_lv_nmos ad=0.11p pd=0.94u as=0.17p ps=1.68u w=0.5u l=0.13u
+X90 a_6251_n217# vctl VGND VGND sg13_lv_nmos ad=65.99999f pd=0.74u as=0.102p ps=1.28u w=0.3u l=0.13u
+X91 VPWR a_620_930# a_6024_351# VPWR sg13_lv_pmos ad=0.104p pd=1.34u as=59f ps=0.74u w=0.2u l=0.13u
+X92 VPWR a_620_930# a_6051_n2525# VPWR sg13_lv_pmos ad=0.104p pd=1.34u as=59.75f ps=0.745u w=0.2u l=0.13u
+X93 a_6051_n2525# a_6113_n2395# a_4771_n2395# VPWR sg13_lv_pmos ad=0.17p pd=1.68u as=0.1106p ps=0.945u w=0.5u l=0.13u
+X94 a_3434_351# a_2092_351# a_3340_351# VPWR sg13_lv_pmos ad=0.1106p pd=0.945u as=0.17p ps=1.68u w=0.5u l=0.13u
+X95 a_4682_351# a_3434_351# a_4776_351# VPWR sg13_lv_pmos ad=0.17p pd=1.68u as=0.11p ps=0.94u w=0.5u l=0.13u
+X96 VPWR a_620_930# a_656_351# VPWR sg13_lv_pmos ad=0.104p pd=1.34u as=59f ps=0.74u w=0.2u l=0.13u
+X97 a_6118_351# VGND cap_cmim l=6.99u w=6.99u
+X98 a_4710_n1958# vctl VGND VGND sg13_lv_nmos ad=65.99999f pd=0.74u as=0.102p ps=1.28u w=0.3u l=0.13u
+X99 a_3368_n1958# a_3429_n2395# a_2087_n2395# VGND sg13_lv_nmos ad=0.17p pd=1.68u as=0.11p ps=0.94u w=0.5u l=0.13u
+X100 a_3340_351# a_2092_351# a_3434_351# VPWR sg13_lv_pmos ad=0.17p pd=1.68u as=0.11p ps=0.94u w=0.5u l=0.13u
+X101 a_4709_n2525# a_620_930# VPWR VPWR sg13_lv_pmos ad=59.75f pd=0.745u as=59f ps=0.74u w=0.2u l=0.13u
+X102 a_4771_n2395# a_6113_n2395# a_6052_n1958# VGND sg13_lv_nmos ad=0.11p pd=0.94u as=0.17p ps=1.68u w=0.5u l=0.13u
+X103 a_656_351# a_542_269# a_750_351# VPWR sg13_lv_pmos ad=0.11p pd=0.94u as=0.1106p ps=0.945u w=0.5u l=0.13u
+X104 a_2087_n2395# VGND cap_cmim l=6.99u w=6.99u
+X105 VGND vctl a_620_930# VGND sg13_lv_nmos ad=0.102p pd=1.28u as=65.99999f ps=0.74u w=0.3u l=0.13u
+X106 a_6118_351# a_4776_351# a_6024_351# VPWR sg13_lv_pmos ad=0.1106p pd=0.945u as=0.17p ps=1.68u w=0.5u l=0.13u
+X107 a_2092_351# VGND cap_cmim l=6.99u w=6.99u
+X108 a_4709_n2525# a_4771_n2395# a_3429_n2395# VPWR sg13_lv_pmos ad=0.17p pd=1.68u as=0.1106p ps=0.945u w=0.5u l=0.13u
+X109 VPWR a_620_930# a_620_930# VPWR sg13_lv_pmos ad=0.104p pd=1.34u as=59.75f ps=0.745u w=0.2u l=0.13u
+X110 a_4776_351# a_3434_351# a_4682_351# VPWR sg13_lv_pmos ad=0.11p pd=0.94u as=0.11p ps=0.94u w=0.5u l=0.13u
+X111 a_750_351# VGND cap_cmim l=6.99u w=6.99u
+X112 VGND vctl a_3368_n1958# VGND sg13_lv_nmos ad=0.102p pd=1.28u as=65.99999f ps=0.74u w=0.3u l=0.13u
+X113 a_4709_n2525# a_620_930# VPWR VPWR sg13_lv_pmos ad=59f pd=0.74u as=0.104p ps=1.34u w=0.2u l=0.13u
+X114 VPWR a_620_930# a_683_n2525# VPWR sg13_lv_pmos ad=0.104p pd=1.34u as=59.75f ps=0.745u w=0.2u l=0.13u
+X115 a_7397_n2523# a_620_930# VPWR VPWR sg13_lv_pmos ad=59.75f pd=0.745u as=59f ps=0.74u w=0.2u l=0.13u
+X116 a_683_n2525# a_745_n2395# a_542_269# VPWR sg13_lv_pmos ad=0.17p pd=1.68u as=0.1106p ps=0.945u w=0.5u l=0.13u
+X117 a_4776_351# a_3434_351# a_4682_351# VPWR sg13_lv_pmos ad=0.1106p pd=0.945u as=0.17p ps=1.68u w=0.5u l=0.13u
+X118 a_6052_n1958# vctl VGND VGND sg13_lv_nmos ad=65.99999f pd=0.74u as=0.102p ps=1.28u w=0.3u l=0.13u
+X119 a_6113_n2395# VGND cap_cmim l=6.99u w=6.99u
+X120 a_620_930# a_620_930# VPWR VPWR sg13_lv_pmos ad=59.75f pd=0.745u as=59f ps=0.74u w=0.2u l=0.13u
+X121 a_2026_n1958# a_2087_n2395# a_745_n2395# VGND sg13_lv_nmos ad=0.17p pd=1.68u as=0.11p ps=0.94u w=0.5u l=0.13u
+X122 a_6024_351# a_4776_351# a_6118_351# VPWR sg13_lv_pmos ad=0.11p pd=0.94u as=0.1106p ps=0.945u w=0.5u l=0.13u
+X123 a_6051_n2525# a_620_930# VPWR VPWR sg13_lv_pmos ad=59.75f pd=0.745u as=59f ps=0.74u w=0.2u l=0.13u
+X124 a_4710_n1958# a_4771_n2395# a_3429_n2395# VGND sg13_lv_nmos ad=0.17p pd=1.68u as=0.11p ps=0.94u w=0.5u l=0.13u
+X125 a_745_n2395# VGND cap_cmim l=6.99u w=6.99u
+X126 a_750_351# a_542_269# a_656_351# VPWR sg13_lv_pmos ad=0.11p pd=0.94u as=0.11p ps=0.94u w=0.5u l=0.13u
+X127 a_4776_351# VGND cap_cmim l=6.99u w=6.99u
+X128 VPWR a_620_930# a_1998_351# VPWR sg13_lv_pmos ad=0.104p pd=1.34u as=59f ps=0.74u w=0.2u l=0.13u
+X129 a_7397_n2523# a_6118_351# a_6113_n2395# VPWR sg13_lv_pmos ad=0.11p pd=0.94u as=0.11p ps=0.94u w=0.5u l=0.13u
+X130 VGND vctl a_2026_n1958# VGND sg13_lv_nmos ad=0.102p pd=1.28u as=65.99999f ps=0.74u w=0.3u l=0.13u
+X131 a_1998_351# a_620_930# VPWR VPWR sg13_lv_pmos ad=59.75f pd=0.745u as=0.104p ps=1.34u w=0.2u l=0.13u
+X132 a_3367_n2525# a_620_930# VPWR VPWR sg13_lv_pmos ad=59f pd=0.74u as=0.104p ps=1.34u w=0.2u l=0.13u
+X133 a_2087_n2395# a_3429_n2395# a_3367_n2525# VPWR sg13_lv_pmos ad=0.11p pd=0.94u as=0.17p ps=1.68u w=0.5u l=0.13u
+X134 VGND vctl a_4710_n1958# VGND sg13_lv_nmos ad=0.102p pd=1.28u as=65.99999f ps=0.74u w=0.3u l=0.13u
+X135 a_3340_351# a_620_930# VPWR VPWR sg13_lv_pmos ad=59f pd=0.74u as=59f ps=0.74u w=0.2u l=0.13u
+X136 a_750_351# a_542_269# a_656_351# VPWR sg13_lv_pmos ad=0.1106p pd=0.945u as=0.17p ps=1.68u w=0.5u l=0.13u
+X137 a_750_351# a_542_269# a_883_n217# VGND sg13_lv_nmos ad=0.11p pd=0.94u as=0.17p ps=1.68u w=0.5u l=0.13u
+X138 a_883_n217# vctl VGND VGND sg13_lv_nmos ad=65.99999f pd=0.74u as=0.102p ps=1.28u w=0.3u l=0.13u
+X139 a_6118_351# a_4776_351# a_6024_351# VPWR sg13_lv_pmos ad=0.11p pd=0.94u as=0.11p ps=0.94u w=0.5u l=0.13u
+X140 VPWR a_620_930# a_4682_351# VPWR sg13_lv_pmos ad=59f pd=0.74u as=59.75f ps=0.745u w=0.2u l=0.13u
+X141 a_6024_351# a_620_930# VPWR VPWR sg13_lv_pmos ad=59f pd=0.74u as=59f ps=0.74u w=0.2u l=0.13u
+X142 VPWR a_620_930# a_683_n2525# VPWR sg13_lv_pmos ad=59f pd=0.74u as=59f ps=0.74u w=0.2u l=0.13u
+X143 a_3429_n2395# a_4771_n2395# a_4709_n2525# VPWR sg13_lv_pmos ad=0.1106p pd=0.945u as=0.11p ps=0.94u w=0.5u l=0.13u
+X144 a_683_n2525# a_745_n2395# a_542_269# VPWR sg13_lv_pmos ad=0.11p pd=0.94u as=0.11p ps=0.94u w=0.5u l=0.13u
+X145 Vout a_7198_n376# VGND VGND sg13_lv_nmos ad=0.11p pd=0.94u as=0.17p ps=1.68u w=0.5u l=0.13u
+X146 a_1998_351# a_750_351# a_2092_351# VPWR sg13_lv_pmos ad=0.11p pd=0.94u as=0.1106p ps=0.945u w=0.5u l=0.13u
+X147 a_6113_n2395# a_6118_351# a_7398_n1956# VGND sg13_lv_nmos ad=0.11p pd=0.94u as=0.17p ps=1.68u w=0.5u l=0.13u
+X148 a_656_351# a_620_930# VPWR VPWR sg13_lv_pmos ad=59f pd=0.74u as=59f ps=0.74u w=0.2u l=0.13u
+X149 VPWR a_620_930# a_7397_n2523# VPWR sg13_lv_pmos ad=0.104p pd=1.34u as=59.75f ps=0.745u w=0.2u l=0.13u
+X150 VPWR a_620_930# a_2025_n2525# VPWR sg13_lv_pmos ad=59f pd=0.74u as=59f ps=0.74u w=0.2u l=0.13u
+X151 VPWR a_620_930# a_1998_351# VPWR sg13_lv_pmos ad=59f pd=0.74u as=59.75f ps=0.745u w=0.2u l=0.13u
+X152 a_745_n2395# a_2087_n2395# a_2026_n1958# VGND sg13_lv_nmos ad=0.11p pd=0.94u as=0.17p ps=1.68u w=0.5u l=0.13u
+X153 Vout VGND cap_cmim l=6.99u w=6.99u
+X154 a_3567_n217# a_2092_351# a_3434_351# VGND sg13_lv_nmos ad=0.17p pd=1.68u as=0.11p ps=0.94u w=0.5u l=0.13u
+X155 VGND vctl a_3567_n217# VGND sg13_lv_nmos ad=0.102p pd=1.28u as=65.99999f ps=0.74u w=0.3u l=0.13u
+X156 a_3429_n2395# a_4771_n2395# a_4709_n2525# VPWR sg13_lv_pmos ad=0.11p pd=0.94u as=0.17p ps=1.68u w=0.5u l=0.13u
+C0 vctl a_3434_351# 0.02497f
+C1 a_3340_351# a_3434_351# 0.42148f
+C2 a_4682_351# a_3434_351# 0.09926f
+C3 a_4776_351# a_4909_n217# 0.22378f
+C4 VPWR a_2225_n217# 0.01623f
+C5 a_620_930# a_4709_n2525# 0.18962f
+C6 a_3429_n2395# a_4710_n1958# 0.23035f
+C7 a_6024_351# a_6118_351# 0.4131f
+C8 a_745_n2395# a_683_n2525# 0.10818f
+C9 a_745_n2395# vctl 0.04038f
+C10 a_4776_351# a_620_930# 0.04298f
+C11 a_6113_n2395# a_6118_351# 0.81343f
+C12 vctl a_6118_351# 0.20887f
+C13 a_7198_n376# Vout 0.01195f
+C14 a_4771_n2395# a_620_930# 0.04406f
+C15 a_7397_n2523# a_6113_n2395# 0.46077f
+C16 vctl a_2026_n1958# 0.04894f
+C17 a_6052_n1958# a_6118_351# 0.02056f
+C18 a_750_351# a_2225_n217# 0.03153f
+C19 vctl a_3567_n217# 0.0811f
+C20 Vout a_6118_351# 0.77478f
+C21 a_745_n2395# a_684_n1958# 0.04971f
+C22 VPWR a_6051_n2525# 1.38336f
+C23 a_3368_n1958# VPWR 0.01475f
+C24 a_2225_n217# a_2092_351# 0.22378f
+C25 a_3368_n1958# a_3429_n2395# 0.03778f
+C26 a_4771_n2395# a_4709_n2525# 0.11922f
+C27 vctl a_6113_n2395# 0.02267f
+C28 a_745_n2395# a_2025_n2525# 0.42019f
+C29 a_6051_n2525# a_620_930# 0.19288f
+C30 a_6052_n1958# a_6113_n2395# 0.03243f
+C31 vctl a_6052_n1958# 0.04998f
+C32 VPWR a_3434_351# 1.00449f
+C33 vctl Vout 0.02121f
+C34 a_7398_n1956# a_6118_351# 0.12881f
+C35 a_4771_n2395# a_4710_n1958# 0.03159f
+C36 vctl a_684_n1958# 0.04284f
+C37 a_6251_n217# a_6118_351# 0.2448f
+C38 vctl a_883_n217# 0.08086f
+C39 a_745_n2395# VPWR 0.81739f
+C40 a_3368_n1958# a_2087_n2395# 0.23444f
+C41 VPWR a_6118_351# 1.28569f
+C42 a_3434_351# a_4909_n217# 0.03153f
+C43 a_3367_n2525# VPWR 1.37334f
+C44 a_3367_n2525# a_3429_n2395# 0.12854f
+C45 a_745_n2395# a_542_269# 0.40206f
+C46 a_3434_351# a_620_930# 0.04103f
+C47 a_7397_n2523# VPWR 1.38295f
+C48 VPWR a_2026_n1958# 0.01457f
+C49 a_7212_321# a_6118_351# 0.02041f
+C50 VPWR a_3567_n217# 0.0108f
+C51 a_7398_n1956# a_6113_n2395# 0.21632f
+C52 vctl a_7398_n1956# 0.05123f
+C53 a_6051_n2525# a_4771_n2395# 0.46167f
+C54 a_745_n2395# a_620_930# 0.08011f
+C55 a_620_930# a_6118_351# 0.16863f
+C56 a_3434_351# a_2092_351# 0.88103f
+C57 vctl a_6251_n217# 0.08336f
+C58 a_6024_351# VPWR 1.37111f
+C59 a_3367_n2525# a_620_930# 0.19098f
+C60 VPWR a_683_n2525# 1.35573f
+C61 vctl VPWR 0.28629f
+C62 VPWR a_6113_n2395# 1.36426f
+C63 a_3429_n2395# vctl 0.04109f
+C64 a_3340_351# VPWR 1.36686f
+C65 a_4682_351# VPWR 1.35049f
+C66 a_7397_n2523# a_620_930# 0.19389f
+C67 a_2087_n2395# a_745_n2395# 0.35714f
+C68 a_542_269# a_683_n2525# 0.45412f
+C69 a_3367_n2525# a_2087_n2395# 0.45379f
+C70 a_4776_351# a_3434_351# 0.91818f
+C71 vctl a_4909_n217# 0.08436f
+C72 a_2087_n2395# a_2026_n1958# 0.03943f
+C73 a_6024_351# a_620_930# 0.10045f
+C74 VPWR Vout 0.79524f
+C75 a_683_n2525# a_620_930# 0.23019f
+C76 a_4776_351# a_6118_351# 0.20869f
+C77 a_3567_n217# a_2092_351# 0.03153f
+C78 a_620_930# a_6113_n2395# 0.06975f
+C79 vctl a_620_930# 0.09057f
+C80 a_3340_351# a_620_930# 0.19603f
+C81 a_4682_351# a_620_930# 0.19696f
+C82 a_750_351# vctl 0.02282f
+C83 a_542_269# a_684_n1958# 0.23665f
+C84 Vout a_7212_321# 0.09147f
+C85 a_2087_n2395# a_683_n2525# 0.01232f
+C86 a_542_269# a_883_n217# 0.03491f
+C87 a_2087_n2395# vctl 0.04184f
+C88 vctl a_2092_351# 0.0248f
+C89 a_3340_351# a_2092_351# 0.10275f
+C90 a_2025_n2525# VPWR 1.36925f
+C91 VPWR a_1998_351# 1.37065f
+C92 a_684_n1958# a_620_930# 0.06371f
+C93 a_6024_351# a_4776_351# 0.1057f
+C94 a_883_n217# a_620_930# 0.02036f
+C95 vctl a_4776_351# 0.026f
+C96 a_4682_351# a_4776_351# 0.42665f
+C97 a_750_351# a_883_n217# 0.22378f
+C98 a_4771_n2395# a_6113_n2395# 0.58365f
+C99 vctl a_4771_n2395# 0.03129f
+C100 a_3429_n2395# VPWR 1.08631f
+C101 a_2025_n2525# a_620_930# 0.18981f
+C102 a_1998_351# a_620_930# 0.19723f
+C103 vctl a_2225_n217# 0.07714f
+C104 vctl a_4710_n1958# 0.05026f
+C105 a_542_269# VPWR 0.7984f
+C106 a_750_351# a_1998_351# 0.09188f
+C107 Vout a_4776_351# 0.18866f
+C108 a_7398_n1956# a_620_930# 0.01439f
+C109 a_4771_n2395# a_6052_n1958# 0.22936f
+C110 a_2087_n2395# a_2025_n2525# 0.12991f
+C111 VPWR a_7212_321# 0.44048f
+C112 a_2092_351# a_1998_351# 0.42202f
+C113 VPWR a_620_930# 13.1884f
+C114 a_3429_n2395# a_620_930# 0.04637f
+C115 a_750_351# VPWR 1.05125f
+C116 VPWR a_656_351# 1.37421f
+C117 a_542_269# a_620_930# 0.93638f
+C118 a_7198_n376# a_6118_351# 0.01604f
+C119 a_750_351# a_542_269# 0.3548f
+C120 a_2087_n2395# VPWR 1.15543f
+C121 a_542_269# a_656_351# 0.08875f
+C122 a_2087_n2395# a_3429_n2395# 0.72984f
+C123 VPWR a_2092_351# 1.29553f
+C124 a_6051_n2525# a_6113_n2395# 0.10827f
+C125 a_3368_n1958# vctl 0.05041f
+C126 VPWR a_4709_n2525# 1.36202f
+C127 a_3429_n2395# a_4709_n2525# 0.45955f
+C128 a_4776_351# a_6251_n217# 0.03205f
+C129 a_750_351# a_620_930# 0.08218f
+C130 a_3434_351# a_3567_n217# 0.22378f
+C131 a_656_351# a_620_930# 0.24146f
+C132 VPWR a_4776_351# 1.11414f
+C133 a_750_351# a_656_351# 0.42803f
+C134 a_7397_n2523# a_6118_351# 0.11621f
+C135 a_745_n2395# a_2026_n1958# 0.23834f
+C136 a_2087_n2395# a_620_930# 0.05403f
+C137 a_2092_351# a_620_930# 0.04f
+C138 VPWR a_4771_n2395# 0.98193f
+C139 a_3429_n2395# a_4771_n2395# 0.7336f
+C140 a_750_351# a_2092_351# 0.77984f
+R0 vctl.n22 vctl.n0 33.8794
+R1 vctl.n21 vctl.n20 33.5376
+R2 vctl.n6 vctl.n4 24.4981
+R3 vctl.n10 vctl.n9 24.4978
+R4 vctl.n14 vctl.n13 24.4978
+R5 vctl.n18 vctl.n17 24.495
+R6 vctl.n6 vctl.n5 24.4894
+R7 vctl.n10 vctl.n8 24.488
+R8 vctl.n18 vctl.n16 24.4838
+R9 vctl.n14 vctl.n12 24.4796
+R10 vctl.n3 vctl.n1 24.4574
+R11 vctl.n3 vctl.n2 24.4469
+R12 vctl.n7 vctl.n3 10.719
+R13 vctl.n19 vctl.n18 9.0005
+R14 vctl.n15 vctl.n14 9.0005
+R15 vctl.n11 vctl.n10 9.0005
+R16 vctl.n7 vctl.n6 9.0005
+R17 vctl.n21 vctl.n19 1.69764
+R18 vctl.n19 vctl.n15 1.68884
+R19 vctl.n15 vctl.n11 1.68004
+R20 vctl.n11 vctl.n7 1.66496
+R21 vctl vctl.n22 0.698214
+R22 vctl.n22 vctl.n21 0.569986
+R23 VGND.n110 VGND.n36 795000
+R24 VGND.n108 VGND.n102 408611
+R25 VGND.n178 VGND.n177 36759.9
+R26 VGND.n92 VGND.n91 27000
+R27 VGND.n91 VGND.n12 27000
+R28 VGND.n46 VGND.n12 27000
+R29 VGND.n105 VGND.n10 24089.8
+R30 VGND.n107 VGND.n106 24089.8
+R31 VGND.n109 VGND.n108 22334.8
+R32 VGND.n176 VGND.n175 21736.5
+R33 VGND.n109 VGND.n101 21565.7
+R34 VGND.n47 VGND.n46 20644.2
+R35 VGND.n177 VGND.n9 19846.7
+R36 VGND.n178 VGND.n8 14324.5
+R37 VGND.n179 VGND.n178 11796.7
+R38 VGND.n86 VGND.n46 10432.6
+R39 VGND.n176 VGND.n8 6890.98
+R40 VGND.n92 VGND.n89 6755.73
+R41 VGND.n91 VGND.n88 6755.73
+R42 VGND.n91 VGND.n90 6755.73
+R43 VGND.n87 VGND.n12 6755.73
+R44 VGND.n173 VGND.n12 6755.73
+R45 VGND.n105 VGND.n18 6068.7
+R46 VGND.n106 VGND.n104 6068.7
+R47 VGND.n107 VGND.n27 6068.7
+R48 VGND.n103 VGND.n10 6068.7
+R49 VGND.n175 VGND.n174 6068.7
+R50 VGND.n102 VGND.n101 5388.03
+R51 VGND.n94 VGND.n93 5194.39
+R52 VGND.n93 VGND.n92 4867.89
+R53 VGND.n86 VGND.n85 4042.39
+R54 VGND.n110 VGND.n109 3958.31
+R55 VGND.n104 VGND.n102 3571.26
+R56 VGND.n93 VGND.n88 3126.84
+R57 VGND.n111 VGND.n110 3045.98
+R58 VGND.n85 VGND.n47 3000
+R59 VGND.n103 VGND.n8 2384.11
+R60 VGND.n104 VGND.n103 2380.84
+R61 VGND.n88 VGND.n87 2371.02
+R62 VGND.n87 VGND.n86 2282.62
+R63 VGND.n57 VGND.n54 1155.83
+R64 VGND.n170 VGND.n13 1155.83
+R65 VGND.n152 VGND.n25 1155.83
+R66 VGND.n135 VGND.n34 1155.83
+R67 VGND.n111 VGND.n101 303.187
+R68 VGND.n48 VGND.n6 295.591
+R69 VGND.n174 VGND.n11 281.534
+R70 VGND.n173 VGND.n172 281.534
+R71 VGND.n169 VGND.n18 281.534
+R72 VGND.n90 VGND.n22 281.534
+R73 VGND.n151 VGND.n27 281.534
+R74 VGND.n89 VGND.n31 281.534
+R75 VGND.n112 VGND.n40 259.877
+R76 VGND.n95 VGND.n94 258.901
+R77 VGND.n47 VGND.n9 167.286
+R78 VGND.n85 VGND.n84 131.024
+R79 VGND.n134 VGND.n36 113.647
+R80 VGND.n112 VGND.n111 113.186
+R81 VGND.n77 VGND.n9 112.975
+R82 VGND.n95 VGND.n36 108.236
+R83 VGND.n40 VGND.n36 108.23
+R84 VGND.n48 VGND.n5 81.1742
+R85 VGND.n180 VGND.n6 76.6484
+R86 VGND.n177 VGND.n176 22.5473
+R87 VGND.n180 VGND.n179 18.3095
+R88 VGND.n106 VGND.n105 17.9646
+R89 VGND.n108 VGND.n107 17.9646
+R90 VGND.n175 VGND.n10 17.9646
+R91 VGND.n76 VGND.n56 17.0607
+R92 VGND.n119 VGND.n118 17.0177
+R93 VGND.n77 VGND.n76 17.0005
+R94 VGND.n79 VGND.n78 17.0005
+R95 VGND.n78 VGND.n53 17.0005
+R96 VGND.n133 VGND.n38 17.0005
+R97 VGND.n150 VGND.n29 17.0005
+R98 VGND.n168 VGND.n20 17.0005
+R99 VGND.n67 VGND.n66 17.0005
+R100 VGND.n132 VGND.n131 9.08291
+R101 VGND.n124 VGND.n32 9.08291
+R102 VGND.n149 VGND.n148 9.08291
+R103 VGND.n141 VGND.n23 9.08291
+R104 VGND.n158 VGND.n157 9.08291
+R105 VGND.n162 VGND.n16 9.08291
+R106 VGND.n65 VGND.n64 9.08291
+R107 VGND.n113 VGND.n41 9.08291
+R108 VGND.n45 VGND.n44 9.07702
+R109 VGND.n3 VGND.n0 9.03039
+R110 VGND VGND.n183 9.02847
+R111 VGND.n126 VGND.n125 9.0005
+R112 VGND.n130 VGND.n123 9.0005
+R113 VGND.n143 VGND.n142 9.0005
+R114 VGND.n147 VGND.n140 9.0005
+R115 VGND.n164 VGND.n163 9.0005
+R116 VGND.n160 VGND.n159 9.0005
+R117 VGND.n62 VGND.n59 9.0005
+R118 VGND.n115 VGND.n114 9.0005
+R119 VGND.n117 VGND.n116 9.0005
+R120 VGND.n99 VGND.n98 9.0005
+R121 VGND.n100 VGND.n43 9.0005
+R122 VGND.n72 VGND.n71 9.0005
+R123 VGND.n70 VGND.n56 9.0005
+R124 VGND.n128 VGND.n127 9.0005
+R125 VGND.n145 VGND.n144 9.0005
+R126 VGND.n166 VGND.n165 9.0005
+R127 VGND.n69 VGND.n53 9.0005
+R128 VGND.n129 VGND.n38 9.0005
+R129 VGND.n146 VGND.n29 9.0005
+R130 VGND.n161 VGND.n20 9.0005
+R131 VGND.n68 VGND.n67 9.0005
+R132 VGND.n2 VGND.n1 9.0005
+R133 VGND.n183 VGND.n182 9.0005
+R134 VGND.n57 VGND.n52 8.501
+R135 VGND.n84 VGND.n83 8.5005
+R136 VGND.n97 VGND.n96 8.4728
+R137 VGND.n119 VGND.n42 8.4706
+R138 VGND.n66 VGND.n61 8.4706
+R139 VGND.n168 VGND.n156 8.4706
+R140 VGND.n150 VGND.n139 8.4706
+R141 VGND.n133 VGND.n122 8.4706
+R142 VGND.n74 VGND.n58 8.4706
+R143 VGND.n74 VGND.n73 8.4706
+R144 VGND.n96 VGND.n45 5.63627
+R145 VGND.n136 VGND.n33 5.63396
+R146 VGND.n153 VGND.n24 5.63396
+R147 VGND.n171 VGND.n17 5.63396
+R148 VGND.n136 VGND.n32 5.63382
+R149 VGND.n153 VGND.n23 5.63382
+R150 VGND.n171 VGND.n16 5.63382
+R151 VGND.n119 VGND.n41 5.63382
+R152 VGND.n66 VGND.n65 5.63382
+R153 VGND.n168 VGND.n157 5.63382
+R154 VGND.n150 VGND.n149 5.63382
+R155 VGND.n133 VGND.n132 5.63382
+R156 VGND.n162 VGND.n14 5.40173
+R157 VGND.n113 VGND.n112 5.39607
+R158 VGND.n70 VGND.n55 5.39516
+R159 VGND.n141 VGND.n26 5.39516
+R160 VGND.n124 VGND.n35 5.39513
+R161 VGND.n94 VGND.n44 5.36707
+R162 VGND.n64 VGND.n63 5.3654
+R163 VGND.n158 VGND.n19 5.3654
+R164 VGND.n148 VGND.n28 5.3654
+R165 VGND.n131 VGND.n37 5.3654
+R166 VGND.n77 VGND.n54 5.16623
+R167 VGND.n57 VGND.n11 5.16623
+R168 VGND.n172 VGND.n13 5.16623
+R169 VGND.n170 VGND.n169 5.16623
+R170 VGND.n25 VGND.n22 5.16623
+R171 VGND.n152 VGND.n151 5.16623
+R172 VGND.n34 VGND.n31 5.16623
+R173 VGND.n135 VGND.n134 5.16623
+R174 VGND VGND.n0 4.5188
+R175 VGND.n75 VGND.n57 4.25119
+R176 VGND.n174 VGND.n173 3.8748
+R177 VGND.n90 VGND.n18 3.8748
+R178 VGND.n89 VGND.n27 3.8748
+R179 VGND.n80 VGND.n50 3.57718
+R180 VGND.n78 VGND.n77 3.4005
+R181 VGND.n84 VGND.n5 3.38905
+R182 VGND.n182 VGND.n181 3.12829
+R183 VGND.n120 VGND.n119 2.95625
+R184 VGND.n171 VGND.n15 2.95625
+R185 VGND.n154 VGND.n153 2.95625
+R186 VGND.n137 VGND.n136 2.95625
+R187 VGND.n133 VGND.n30 2.95617
+R188 VGND.n150 VGND.n21 2.95617
+R189 VGND.n168 VGND.n167 2.95617
+R190 VGND.n66 VGND.n51 2.95617
+R191 VGND.n83 VGND.n49 2.9539
+R192 VGND.n181 VGND.n5 2.83458
+R193 VGND.n57 VGND.n55 2.83383
+R194 VGND.n77 VGND.n55 2.83383
+R195 VGND.n170 VGND.n14 2.83383
+R196 VGND.n172 VGND.n14 2.83383
+R197 VGND.n152 VGND.n26 2.83383
+R198 VGND.n26 VGND.n22 2.83383
+R199 VGND.n135 VGND.n35 2.83383
+R200 VGND.n35 VGND.n31 2.83383
+R201 VGND.n63 VGND.n11 2.83383
+R202 VGND.n63 VGND.n54 2.83383
+R203 VGND.n169 VGND.n19 2.83383
+R204 VGND.n19 VGND.n13 2.83383
+R205 VGND.n151 VGND.n28 2.83383
+R206 VGND.n28 VGND.n25 2.83383
+R207 VGND.n134 VGND.n37 2.83383
+R208 VGND.n37 VGND.n34 2.83383
+R209 VGND.n172 VGND.n171 2.83383
+R210 VGND.n153 VGND.n22 2.83383
+R211 VGND.n136 VGND.n31 2.83383
+R212 VGND.n136 VGND.n135 2.83383
+R213 VGND.n153 VGND.n152 2.83383
+R214 VGND.n171 VGND.n170 2.83383
+R215 VGND.n134 VGND.n133 2.83383
+R216 VGND.n133 VGND.n34 2.83383
+R217 VGND.n151 VGND.n150 2.83383
+R218 VGND.n150 VGND.n25 2.83383
+R219 VGND.n169 VGND.n168 2.83383
+R220 VGND.n168 VGND.n13 2.83383
+R221 VGND.n66 VGND.n11 2.83383
+R222 VGND.n66 VGND.n54 2.83383
+R223 VGND.n181 VGND.n180 2.83383
+R224 VGND.n181 VGND.n4 2.80958
+R225 VGND.n83 VGND.n82 2.73145
+R226 VGND.n82 VGND.n7 2.6007
+R227 VGND.n96 VGND.n39 2.48001
+R228 VGND.n4 VGND.n3 0.962312
+R229 VGND.n179 VGND.n7 0.744593
+R230 VGND.n129 VGND.n128 0.3701
+R231 VGND.n146 VGND.n145 0.3701
+R232 VGND.n165 VGND.n161 0.3701
+R233 VGND.n69 VGND.n68 0.3701
+R234 VGND.n116 VGND.n100 0.3701
+R235 VGND.n182 VGND.n2 0.3555
+R236 VGND.n3 VGND.n2 0.353
+R237 VGND.n53 VGND.n51 0.323287
+R238 VGND.n167 VGND.n166 0.323287
+R239 VGND.n144 VGND.n21 0.323287
+R240 VGND.n127 VGND.n30 0.323287
+R241 VGND.n81 VGND.n49 0.308397
+R242 VGND.n118 VGND.n39 0.262968
+R243 VGND.n82 VGND.n81 0.224343
+R244 VGND.n49 VGND.n4 0.195252
+R245 VGND.n131 VGND.n130 0.192746
+R246 VGND.n126 VGND.n124 0.192746
+R247 VGND.n148 VGND.n147 0.192746
+R248 VGND.n143 VGND.n141 0.192746
+R249 VGND.n160 VGND.n158 0.192746
+R250 VGND.n164 VGND.n162 0.192746
+R251 VGND.n64 VGND.n59 0.192746
+R252 VGND.n71 VGND.n70 0.192746
+R253 VGND.n99 VGND.n44 0.192746
+R254 VGND.n115 VGND.n113 0.192746
+R255 VGND.n130 VGND.n129 0.191392
+R256 VGND.n128 VGND.n126 0.191392
+R257 VGND.n147 VGND.n146 0.191392
+R258 VGND.n145 VGND.n143 0.191392
+R259 VGND.n161 VGND.n160 0.191392
+R260 VGND.n165 VGND.n164 0.191392
+R261 VGND.n68 VGND.n59 0.191392
+R262 VGND.n71 VGND.n69 0.191392
+R263 VGND.n100 VGND.n99 0.191392
+R264 VGND.n116 VGND.n115 0.191392
+R265 VGND.n132 VGND.n123 0.163122
+R266 VGND.n149 VGND.n140 0.163122
+R267 VGND.n159 VGND.n157 0.163122
+R268 VGND.n65 VGND.n62 0.163122
+R269 VGND.n114 VGND.n41 0.163122
+R270 VGND.n163 VGND.n16 0.163122
+R271 VGND.n142 VGND.n23 0.163122
+R272 VGND.n125 VGND.n32 0.163122
+R273 VGND.n138 VGND.n137 0.158669
+R274 VGND.n155 VGND.n154 0.158669
+R275 VGND.n60 VGND.n15 0.158669
+R276 VGND.n121 VGND.n120 0.158669
+R277 VGND.n81 VGND.n80 0.158149
+R278 VGND.n125 VGND.n33 0.154735
+R279 VGND.n142 VGND.n24 0.154735
+R280 VGND.n163 VGND.n17 0.154735
+R281 VGND.n98 VGND.n45 0.151468
+R282 VGND.n123 VGND.n122 0.123672
+R283 VGND.n140 VGND.n139 0.123672
+R284 VGND.n159 VGND.n156 0.123672
+R285 VGND.n62 VGND.n61 0.123672
+R286 VGND.n114 VGND.n42 0.123672
+R287 VGND.n73 VGND.n72 0.123672
+R288 VGND.n58 VGND.n56 0.123672
+R289 VGND.n72 VGND.n58 0.121954
+R290 VGND.n117 VGND.n42 0.120235
+R291 VGND.n98 VGND.n97 0.114798
+R292 VGND.n97 VGND.n43 0.111609
+R293 VGND.n122 VGND.n121 0.0927349
+R294 VGND.n139 VGND.n138 0.0927349
+R295 VGND.n156 VGND.n155 0.0927349
+R296 VGND.n61 VGND.n60 0.0927349
+R297 VGND.n73 VGND.n53 0.0927349
+R298 VGND.n127 VGND.n33 0.06234
+R299 VGND.n144 VGND.n24 0.06234
+R300 VGND.n166 VGND.n17 0.06234
+R301 VGND.n183 VGND.n1 0.0597227
+R302 VGND.n120 VGND.n39 0.0487297
+R303 VGND.n118 VGND.n117 0.04175
+R304 VGND.n118 VGND.n43 0.0403551
+R305 VGND.n1 VGND.n0 0.0302293
+R306 VGND.n7 VGND.n6 0.0072732
+R307 VGND.n167 VGND.n15 0.00274058
+R308 VGND.n154 VGND.n21 0.00274058
+R309 VGND.n137 VGND.n30 0.00274058
+R310 VGND.n79 VGND.n51 0.00194262
+R311 VGND.n67 VGND.n53 0.00194262
+R312 VGND.n166 VGND.n20 0.00194262
+R313 VGND.n144 VGND.n29 0.00194262
+R314 VGND.n127 VGND.n38 0.00194262
+R315 VGND.n76 VGND.n50 0.00170566
+R316 VGND.n76 VGND.n75 0.00162501
+R317 VGND.n83 VGND.n48 0.00157929
+R318 VGND.n75 VGND.n74 0.00137498
+R319 VGND.n96 VGND.n95 0.00135895
+R320 VGND.n78 VGND.n50 0.00129432
+R321 VGND.n119 VGND.n40 0.00111193
+R322 VGND.n78 VGND.n52 0.001
+R323 VGND.n74 VGND.n52 0.001
+R324 VGND.n80 VGND.n79 0.000860656
+R325 VGND.n67 VGND.n60 0.000860656
+R326 VGND.n155 VGND.n20 0.000860656
+R327 VGND.n138 VGND.n29 0.000860656
+R328 VGND.n121 VGND.n38 0.000860656
+R329 Vout Vout.n1 20.53
+R330 Vout.n1 Vout.n0 0.0188902
+C141 vctl VGND 11.2953f
+C142 Vout VGND 8.14842f
+C143 VPWR VGND 11.1055f
+C144 m2_7727_571# VGND 0.04717f $ **FLOATING
+C145 a_7397_n2523# VGND 0.05072f $ **FLOATING
+C146 a_6051_n2525# VGND 0.04654f $ **FLOATING
+C147 a_4709_n2525# VGND 0.0474f $ **FLOATING
+C148 a_3367_n2525# VGND 0.04814f $ **FLOATING
+C149 a_2025_n2525# VGND 0.04567f $ **FLOATING
+C150 a_683_n2525# VGND 0.07408f $ **FLOATING
+C151 a_6113_n2395# VGND 4.52843f $ **FLOATING
+C152 a_4771_n2395# VGND 4.66244f $ **FLOATING
+C153 a_3429_n2395# VGND 4.71205f $ **FLOATING
+C154 a_2087_n2395# VGND 5.15226f $ **FLOATING
+C155 a_745_n2395# VGND 5.27135f $ **FLOATING
+C156 a_7398_n1956# VGND 0.75072f $ **FLOATING
+C157 a_6052_n1958# VGND 0.8045f $ **FLOATING
+C158 a_4710_n1958# VGND 0.81785f $ **FLOATING
+C159 a_3368_n1958# VGND 0.82955f $ **FLOATING
+C160 a_2026_n1958# VGND 0.82862f $ **FLOATING
+C161 a_684_n1958# VGND 0.83893f $ **FLOATING
+C162 a_7198_n376# VGND 0.27582f $ **FLOATING
+C163 a_6251_n217# VGND 0.65331f $ **FLOATING
+C164 a_4909_n217# VGND 0.67139f $ **FLOATING
+C165 a_3567_n217# VGND 0.6715f $ **FLOATING
+C166 a_2225_n217# VGND 0.67644f $ **FLOATING
+C167 a_883_n217# VGND 0.68389f $ **FLOATING
+C168 a_7212_321# VGND 0.26455f $ **FLOATING
+C169 a_6118_351# VGND 6.88f $ **FLOATING
+C170 a_4776_351# VGND 4.93597f $ **FLOATING
+C171 a_3434_351# VGND 4.4055f $ **FLOATING
+C172 a_2092_351# VGND 4.40424f $ **FLOATING
+C173 a_750_351# VGND 4.67142f $ **FLOATING
+C174 a_542_269# VGND 6.17341f $ **FLOATING
+C175 a_6024_351# VGND 0.05855f $ **FLOATING
+C176 a_4682_351# VGND 0.03844f $ **FLOATING
+C177 a_3340_351# VGND 0.04051f $ **FLOATING
+C178 a_1998_351# VGND 0.04084f $ **FLOATING
+C179 a_656_351# VGND 0.05472f $ **FLOATING
+C180 a_620_930# VGND 5.65746f $ **FLOATING
 .ends
 
