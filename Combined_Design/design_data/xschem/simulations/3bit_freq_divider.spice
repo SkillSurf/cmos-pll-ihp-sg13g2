@@ -1,0 +1,72 @@
+** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/3bit_freq_divider.sch
+**.subckt 3bit_freq_divider A0 CLK_IN EN CLK_OUT A1 VDD VSS A2
+*.ipin CLK_IN
+*.ipin EN
+*.ipin A0
+*.ipin A1
+*.opin CLK_OUT
+*.iopin VSS
+*.iopin VDD
+*.ipin A2
+x1 VDD VSS nEQ0 net1 CLK net2 DIV_RST A0 freq_div_cell
+x2 VDD VSS nEQ1 net2 CLK net5 DIV_RST A1 freq_div_cell
+*  x3 -  sg13g2_tiehi  IS MISSING !!!!
+x5 DIV_RST CLK_OUT net3 net3 net4 VDD VSS dff_nclk
+*  x6 -  sg13g2_tiehi  IS MISSING !!!!
+* noconn CLK_OUT
+x7 CLK_IN EN VDD VSS CLK sg13g2_nand2_1
+x4 nEQ2 nEQ1 nEQ0 VDD VSS DIV_RST sg13g2_or3_1
+x8 VDD VSS nEQ2 net5 CLK Cout DIV_RST A2 freq_div_cell
+* noconn Cout
+**.ends
+
+* expanding   symbol:  freq_div_cell.sym # of pins=8
+** sym_path: /foss/designs/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/freq_div_cell.sym
+** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/freq_div_cell.sch
+.subckt freq_div_cell VDD VSS DIV Cin CLK Cout nRST BIT
+*.ipin Cin
+*.ipin CLK
+*.ipin nRST
+*.ipin BIT
+*.opin DIV
+*.opin Cout
+*.iopin VSS
+*.iopin VDD
+x2 CLK net2 net1 net3 nRST VDD VSS dff_nclk
+x3 net2 BIT VDD VSS DIV sg13g2_xor2_1
+* noconn #net3
+x1 net2 net1 Cin VDD VSS Cout half_add
+.ends
+
+
+* expanding   symbol:  dff_nclk.sym # of pins=7
+** sym_path: /foss/designs/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/dff_nclk.sym
+** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/dff_nclk.sch
+.subckt dff_nclk nCLK Q D nQ nRST VDD VSS
+*.ipin nCLK
+*.ipin D
+*.ipin nRST
+*.opin Q
+*.opin nQ
+*.iopin VSS
+*.iopin VDD
+x1 net1 D Q nQ nRST VDD VSS sg13g2_dfrbp_1
+x2 nCLK VDD VSS net1 sg13g2_inv_1
+.ends
+
+
+* expanding   symbol:  half_add.sym # of pins=6
+** sym_path: /foss/designs/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/half_add.sym
+** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/half_add.sch
+.subckt half_add inB sum inA VDD VSS cout
+*.ipin inA
+*.ipin inB
+*.opin sum
+*.opin cout
+*.iopin VSS
+*.iopin VDD
+x1 inA inB VDD VSS sum sg13g2_xor2_1
+x2 inA inB VDD VSS cout sg13g2_and2_1
+.ends
+
+.end

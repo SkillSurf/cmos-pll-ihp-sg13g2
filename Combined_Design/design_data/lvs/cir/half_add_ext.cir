@@ -1,0 +1,44 @@
+* Extracted by KLayout with SG13G2 LVS runset on : 09/07/2025 19:39
+
+.SUBCKT half_add inA inB sum cout
+X$1 \$5 sum \$6 inB inA sg13g2_xor2_1
+X$2 \$6 \$5 cout inA inB sg13g2_and2_1
+.ENDS half_add
+
+.SUBCKT sg13g2_and2_1 VDD VSS X A B
+M$1 \$6 A \$7 VSS sg13_lv_nmos L=0.13u W=0.64u AS=0.2176p AD=0.1216p PS=1.96u
++ PD=1.02u
+M$2 VSS B \$7 VSS sg13_lv_nmos L=0.13u W=0.64u AS=0.1331p AD=0.1216p PS=1.12u
++ PD=1.02u
+M$3 VSS \$6 X VSS sg13_lv_nmos L=0.13u W=0.74u AS=0.1331p AD=0.2516p PS=1.12u
++ PD=2.16u
+M$4 VDD A \$6 VDD sg13_lv_pmos L=0.13u W=0.84u AS=0.2856p AD=0.1596p PS=2.36u
++ PD=1.22u
+M$5 VDD B \$6 VDD sg13_lv_pmos L=0.13u W=0.84u AS=0.1918p AD=0.1596p PS=1.5u
++ PD=1.22u
+M$6 VDD \$6 X VDD sg13_lv_pmos L=0.13u W=1.12u AS=0.1918p AD=0.3808p PS=1.5u
++ PD=2.92u
+.ENDS sg13g2_and2_1
+
+.SUBCKT sg13g2_xor2_1 VSS X VDD B A
+M$1 VSS A \$1 VSS sg13_lv_nmos L=0.13u W=0.55u AS=0.374p AD=0.174625p PS=2.46u
++ PD=1.185u
+M$2 VSS B \$1 VSS sg13_lv_nmos L=0.13u W=0.55u AS=0.15245p AD=0.174625p
++ PS=1.17u PD=1.185u
+M$3 VSS A \$8 VSS sg13_lv_nmos L=0.13u W=0.74u AS=0.15245p AD=0.0888p PS=1.17u
++ PD=0.98u
+M$4 \$8 B X VSS sg13_lv_nmos L=0.13u W=0.74u AS=0.0888p AD=0.1628p PS=0.98u
++ PD=1.18u
+M$5 X \$1 VSS VSS sg13_lv_nmos L=0.13u W=0.74u AS=0.1628p AD=0.3108p PS=1.18u
++ PD=2.32u
+M$6 \$3 A VDD VDD sg13_lv_pmos L=0.13u W=1.12u AS=0.3808p AD=0.2128p PS=2.92u
++ PD=1.5u
+M$7 VDD B \$3 VDD sg13_lv_pmos L=0.13u W=1.12u AS=0.2128p AD=0.2128p PS=1.5u
++ PD=1.5u
+M$8 \$3 \$1 X VDD sg13_lv_pmos L=0.13u W=1.12u AS=0.2128p AD=0.3808p PS=1.5u
++ PD=2.92u
+M$9 VDD A \$9 VDD sg13_lv_pmos L=0.13u W=1u AS=0.36p AD=0.1225p PS=2.72u
++ PD=1.245u
+M$10 \$9 B \$1 VDD sg13_lv_pmos L=0.13u W=1u AS=0.1225p AD=0.34p PS=1.245u
++ PD=2.68u
+.ENDS sg13g2_xor2_1

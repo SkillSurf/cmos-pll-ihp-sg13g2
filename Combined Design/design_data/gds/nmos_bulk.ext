@@ -1,8 +1,0 @@
-timestamp 1581895351
-version 8.3
-tech ihp-sg13g2
-style ngspice()
-scale 1000 1 0.5
-resistclasses 3000000 67000 110 88 88 88 88 18 11
-node "m2_515_14#" 1 234.937 515 14 m2 0 0 0 0 0 0 36096 1256 0 0 0 0 0 0 0 0 0 0
-substrate "VSUB" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0

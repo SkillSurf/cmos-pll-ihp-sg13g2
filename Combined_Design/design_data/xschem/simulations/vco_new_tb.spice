@@ -1,0 +1,87 @@
+** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/vco_new_tb.sch
+**.subckt vco_new_tb Vout
+*.opin Vout
+VPWR net1 GND 1.2
+vctl net2 GND 1.2
+x1 net1 GND net2 Vout vco_new
+**** begin user architecture code
+ .lib cornerMOSlv.lib mos_tt
+
+
+
+.param temp=27
+.control
+save all
+.options maxstep=10n reltol=1e-3 abstol=1e-6
+tran 50p 1u
+plot v(Vout) xlimit 500n 1u
+fft v(Vout)
+let vmag = db(mag(v(Vout)))
+plot vmag xlabel 'Frequency (Hz)' xlimit 1Meg 100Meg
+wrdata fft_output(Vcon=1.2).txt vmag
+.endc
+
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  vco_new.sym # of pins=4
+** sym_path: /foss/designs/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/vco_new.sym
+** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/vco_new.sch
+.subckt vco_new VPWR VGND vctl Vout
+*.iopin VPWR
+*.iopin VGND
+*.ipin vctl
+*.opin Vout
+XM21 mirror_pg mirror_pg VPWR VPWR sg13_lv_pmos w=0.8u l=0.13u ng=1 m=1
+XM22 net1 mirror_pg VPWR VPWR sg13_lv_pmos w=0.8u l=0.13u ng=1 m=1
+XM23 net2 mirror_pg VPWR VPWR sg13_lv_pmos w=0.8u l=0.13u ng=1 m=1
+XM24 net3 mirror_pg VPWR VPWR sg13_lv_pmos w=0.8u l=0.13u ng=1 m=1
+XM25 mirror_pg vctl VGND VGND sg13_lv_nmos w=0.6u l=0.13u ng=1 m=1
+XM26 net9 vctl VGND VGND sg13_lv_nmos w=0.6u l=0.13u ng=1 m=1
+XM27 net8 vctl VGND VGND sg13_lv_nmos w=0.6u l=0.13u ng=1 m=1
+XM28 net7 vctl VGND VGND sg13_lv_nmos w=0.6u l=0.13u ng=1 m=1
+C3 feedback VGND 74.6f m=1
+C4 Vout VGND 149.2f m=1
+XM29 net13 mirror_pg VPWR VPWR sg13_lv_pmos w=0.8u l=0.13u ng=1 m=1
+XM30 net12 mirror_pg VPWR VPWR sg13_lv_pmos w=0.8u l=0.13u ng=1 m=1
+XM31 net10 vctl VGND VGND sg13_lv_nmos w=0.6u l=0.13u ng=1 m=1
+XM32 net11 vctl VGND VGND sg13_lv_nmos w=0.6u l=0.13u ng=1 m=1
+XM33 net15 mirror_pg VPWR VPWR sg13_lv_pmos w=0.8u l=0.13u ng=1 m=1
+XM34 net16 mirror_pg VPWR VPWR sg13_lv_pmos w=0.8u l=0.13u ng=1 m=1
+XM35 net20 vctl VGND VGND sg13_lv_nmos w=0.6u l=0.13u ng=1 m=1
+XM36 net19 vctl VGND VGND sg13_lv_nmos w=0.6u l=0.13u ng=1 m=1
+XM37 net24 mirror_pg VPWR VPWR sg13_lv_pmos w=0.8u l=0.13u ng=1 m=1
+XM38 net23 mirror_pg VPWR VPWR sg13_lv_pmos w=0.8u l=0.13u ng=1 m=1
+XM39 net21 vctl VGND VGND sg13_lv_nmos w=0.6u l=0.13u ng=1 m=1
+XM40 net22 vctl VGND VGND sg13_lv_nmos w=0.6u l=0.13u ng=1 m=1
+XM41 net31 mirror_pg VPWR VPWR sg13_lv_pmos w=0.8u l=0.13u ng=1 m=1
+XM42 net30 mirror_pg VPWR VPWR sg13_lv_pmos w=0.8u l=0.13u ng=1 m=1
+XM43 net28 vctl VGND VGND sg13_lv_nmos w=0.6u l=0.13u ng=1 m=1
+XM44 net29 vctl VGND VGND sg13_lv_nmos w=0.6u l=0.13u ng=1 m=1
+C1 net32 VGND 74.6f m=1
+C2 net27 VGND 74.6f m=1
+C5 net25 VGND 74.6f m=1
+C6 net18 VGND 74.6f m=1
+C7 net17 VGND 74.6f m=1
+C8 net26 VGND 74.6f m=1
+C9 net14 VGND 74.6f m=1
+C10 net6 VGND 74.6f m=1
+C11 net5 VGND 74.6f m=1
+C12 net4 VGND 74.6f m=1
+*  x1 -  vco_inverter  IS MISSING !!!!
+*  x2 -  vco_inverter  IS MISSING !!!!
+*  x3 -  vco_inverter  IS MISSING !!!!
+*  x4 -  vco_inverter  IS MISSING !!!!
+*  x5 -  vco_inverter  IS MISSING !!!!
+*  x6 -  vco_inverter  IS MISSING !!!!
+*  x7 -  vco_inverter  IS MISSING !!!!
+*  x8 -  vco_inverter  IS MISSING !!!!
+*  x9 -  vco_inverter  IS MISSING !!!!
+*  x10 -  vco_inverter  IS MISSING !!!!
+*  x11 -  vco_inverter  IS MISSING !!!!
+*  x12 -  vco_inverter  IS MISSING !!!!
+.ends
+
+.GLOBAL GND
+.end
