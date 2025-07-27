@@ -1,2 +1,4 @@
-# Ignore all .raw files
+# File extensions to ignore
 *.raw
+*.nodes
+*.sim
