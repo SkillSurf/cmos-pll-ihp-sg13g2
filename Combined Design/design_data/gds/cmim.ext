@@ -1,0 +1,12 @@
+timestamp 1581895351
+version 8.3
+tech ihp-sg13g2
+style ngspice()
+scale 1000 1 0.5
+resistclasses 3000000 67000 110 88 88 88 88 18 11
+parameters cap_cmim w=w l=l
+node "mc_0_0#" 0 878.265 0 0 mim 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1587600 5040 0 0
+node "m5_n120_n120#" 0 1380.44 -120 -120 m5 0 0 0 0 0 0 0 0 0 0 0 0 2683044 6552 0 0 0 0
+substrate "VSUB" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "mc_0_0#" "m5_n120_n120#" 2412.57
+device csubckt cap_cmim 0 0 1 1 w=1398 l=1398 "None" "mc_0_0#" 10800 0 "m5_n120_n120#" 0 2683044,6552
