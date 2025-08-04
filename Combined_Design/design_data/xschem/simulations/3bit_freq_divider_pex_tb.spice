@@ -1,9 +1,9 @@
-** sch_path: /foss/designs/PROJECTS/cmos-pll-ihp-sg13g2/Combined_Design/design_data/xschem/3bit_freq_divider_tb.sch
+** sch_path: /foss/designs/PROJECTS/cmos-pll-ihp-sg13g2/Combined_Design/design_data/xschem/3bit_freq_divider_pex_tb.sch
 
 .lib /foss/pdks/ihp-sg13g2/libs.tech/ngspice/models/cornerMOSlv.lib mos_tt
-.include /foss/pdks/ihp-sg13g2/libs.ref/sg13g2_stdcell/spice/sg13g2_stdcell.spice
+.include ../../pex/3bit_freq_divider__3bit_freq_divider/magic_RC/3bit_freq_divider.pex.spice
 
-**.subckt 3bit_freq_divider_tb
+**.subckt 3bit_freq_divider_pex_tb
 Vs VDD GND 1.2
 Vclk CLK_IN GND dc 0 ac 0 pulse(0, 1.2, 0, 100p, 100p, 6.25n, 12.5n)
 * noconn CLK_OUT
@@ -38,11 +38,10 @@ Va0 A0 GND dc {A0}
 .param temp=27
 
 .control
-pre_osdi ./psp103_nqs.osdi
 save all
-tran 50p 350n
+tran 50p 350n uic
 
-write tran_3bit_freq_divider.raw
+write tran_3bit_freq_divider_pex.raw
 .endc
 
 
