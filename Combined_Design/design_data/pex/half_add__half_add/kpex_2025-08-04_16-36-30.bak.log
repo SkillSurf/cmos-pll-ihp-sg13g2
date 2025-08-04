@@ -1,0 +1,108 @@
+[2025-08-04 16:36:29,592] [INFO]    GDS input file passed, running in LVS mode
+[2025-08-04 16:36:29,607] [INFO]    No explicit top cell specified, using top cell 'half_add'
+[2025-08-04 16:36:29,659] [INFO]    Calling MAGIC
+[2025-08-04 16:36:29,660] [SUBPROCESS]    magic -dnull -noconsole -rcfile /foss/pdks/ihp-sg13g2/libs.tech/magic/ihp-sg13g2.magicrc pex/half_add__half_add/magic_RC/half_add_MAGIC_RC_Script.tcl, output file: pex/half_add__half_add/magic_RC/half_add_MAGIC_RC_Output.txt
+[2025-08-04 16:36:29,694] [SUBPROCESS]    
+[2025-08-04 16:36:29,695] [SUBPROCESS]    Magic 8.3 revision 527 - Compiled on Sat May 24 11:19:49 AM CEST 2025.
+[2025-08-04 16:36:29,697] [SUBPROCESS]    Starting magic under Tcl interpreter
+[2025-08-04 16:36:29,698] [SUBPROCESS]    Using the terminal as the console.
+[2025-08-04 16:36:29,699] [SUBPROCESS]    WARNING: RLIMIT_NOFILE is above 1024 and Tcl_Version<9 this may cause runtime issues [rlim_cur=1048576]
+[2025-08-04 16:36:29,700] [SUBPROCESS]    Using NULL graphics device.
+[2025-08-04 16:36:29,756] [SUBPROCESS]    Processing system .magicrc file
+[2025-08-04 16:36:29,772] [SUBPROCESS]    Sourcing design .magicrc for technology ihp-sg13g2 ...
+[2025-08-04 16:36:29,774] [SUBPROCESS]    2 Magic internal units = 1 Lambda
+[2025-08-04 16:36:29,809] [SUBPROCESS]    Input style sg13g2(): scaleFactor=2, multiplier=2
+[2025-08-04 16:36:29,952] [SUBPROCESS]    The following types are not handled by extraction and will be treated as non-electrical types:
+[2025-08-04 16:36:29,953] [SUBPROCESS]        fillfet sealcont difffill nemitter hvnemitter hvisodiffres sealvia1 sealvia2 sealvia3 sealvia4 sealvia5 sealvia6 pad seal thruvia 
+[2025-08-04 16:36:29,959] [SUBPROCESS]    Scaled tech values by 2 / 1 to match internal grid scaling
+[2025-08-04 16:36:29,961] [SUBPROCESS]    Loading "pex/half_add__half_add/magic_RC/half_add_MAGIC_RC_Script.tcl" from command line.
+[2025-08-04 16:36:29,968] [SUBPROCESS]    Warning: Calma reading is not undoable!  I hope that's OK.
+[2025-08-04 16:36:29,969] [SUBPROCESS]    Library written using GDS-II Release 6.0
+[2025-08-04 16:36:29,971] [SUBPROCESS]    Library name: LIB
+[2025-08-04 16:36:29,972] [SUBPROCESS]    Reading "sg13g2_and2_1".
+[2025-08-04 16:36:29,973] [SUBPROCESS]    Reading "sg13g2_xor2_1".
+[2025-08-04 16:36:29,975] [SUBPROCESS]    Reading "half_add".
+[2025-08-04 16:36:29,977] [SUBPROCESS]    CIF file read warning: CIF style sg13g2(): units rescaled by factor of 5 / 1
+[2025-08-04 16:36:29,983] [SUBPROCESS]    Extracting half_add into /foss/designs/PROJECTS/cmos-pll-ihp-sg13g2/Combined_Design/design_data/pex/half_add__half_add/magic_RC/half_add.ext:
+[2025-08-04 16:36:29,999] [SUBPROCESS]    Port: name = inA is new node 0x563925d82a90
+[2025-08-04 16:36:30,000] [SUBPROCESS]    Location is (-728, -93); drivepoint (-728, -93)
+[2025-08-04 16:36:30,002] [SUBPROCESS]    Port: name = inB is new node 0x56392662fa90
+[2025-08-04 16:36:30,003] [SUBPROCESS]    Location is (460, -93); drivepoint (460, -93)
+[2025-08-04 16:36:30,004] [SUBPROCESS]    Port: name = sum is new node 0x563925dd6f40
+[2025-08-04 16:36:30,005] [SUBPROCESS]    Location is (460, 390); drivepoint (460, 390)
+[2025-08-04 16:36:30,006] [SUBPROCESS]    Port: name = cout is new node 0x563925ddb2a0
+[2025-08-04 16:36:30,007] [SUBPROCESS]    Location is (-728, 390); drivepoint (-728, 390)
+[2025-08-04 16:36:30,008] [SUBPROCESS]    Total Nets: 4
+[2025-08-04 16:36:30,009] [SUBPROCESS]    Nets extracted: 4 (1.000000)
+[2025-08-04 16:36:30,010] [SUBPROCESS]    Nets output: 4 (1.000000)
+[2025-08-04 16:36:30,016] [SUBPROCESS]    exttospice finished.
+[2025-08-04 16:36:30,023] [INFO]    MAGIC succeeded after 0.3601s
+[2025-08-04 16:36:30,051] [SUBPROCESS]    Report DB saved at: pex/half_add__half_add/magic_RC/half_add_MAGIC_report.rdb.gz
+[2025-08-04 16:36:30,052] [SUBPROCESS]    SPICE netlist saved at: pex/half_add__half_add/magic_RC/half_add.pex.spice
+[2025-08-04 16:36:30,055] [SUBPROCESS]    * NGSPICE file created from half_add.ext - technology: ihp-sg13g2
+
+.subckt half_add inA inB sum cout
+X0 sg13g2_and2_1_0.VSS a_57_n6# sum sg13g2_and2_1_0.VSS sg13_lv_nmos ad=0.3108p pd=2.32u as=0.1628p ps=1.18u w=0.74u l=0.13u
+X1 sg13g2_and2_1_0.VSS inB a_n589_n14# sg13g2_and2_1_0.VSS sg13_lv_nmos ad=0.1331p pd=1.12u as=0.1216p ps=1.02u w=0.64u l=0.13u
+X2 a_n589_n14# inA a_n683_n14# sg13g2_and2_1_0.VSS sg13_lv_nmos ad=0.1216p pd=1.02u as=0.2176p ps=1.96u w=0.64u l=0.13u
+X3 sg13g2_and2_1_0.VSS inB a_57_n6# sg13g2_and2_1_0.VSS sg13_lv_nmos ad=0.15245p pd=1.17u as=0.17462p ps=1.185u w=0.55u l=0.13u
+X4 sg13g2_and2_1_0.VDD inA a_228_238# sg13g2_and2_1_0.VDD sg13_lv_pmos ad=0.2128p pd=1.5u as=0.3808p ps=2.92u w=1.12u l=0.13u
+X5 a_228_238# inB sg13g2_and2_1_0.VDD sg13g2_and2_1_0.VDD sg13_lv_pmos ad=0.2128p pd=1.5u as=0.2128p ps=1.5u w=1.12u l=0.13u
+X6 a_57_n6# inB a_25_262# sg13g2_and2_1_0.VDD sg13_lv_pmos ad=0.34p pd=2.68u as=0.1225p ps=1.245u w=1u l=0.13u
+X7 cout a_n683_n14# sg13g2_and2_1_0.VSS sg13g2_and2_1_0.VSS sg13_lv_nmos ad=0.2516p pd=2.16u as=0.1331p ps=1.12u w=0.74u l=0.13u
+X8 sg13g2_and2_1_0.VDD inB a_n683_n14# sg13g2_and2_1_0.VDD sg13_lv_pmos ad=0.1918p pd=1.5u as=0.1596p ps=1.22u w=0.84u l=0.13u
+X9 sum a_57_n6# a_228_238# sg13g2_and2_1_0.VDD sg13_lv_pmos ad=0.3808p pd=2.92u as=0.2128p ps=1.5u w=1.12u l=0.13u
+X10 a_n683_n14# inA sg13g2_and2_1_0.VDD sg13g2_and2_1_0.VDD sg13_lv_pmos ad=0.1596p pd=1.22u as=0.2856p ps=2.36u w=0.84u l=0.13u
+X11 cout a_n683_n14# sg13g2_and2_1_0.VDD sg13g2_and2_1_0.VDD sg13_lv_pmos ad=0.3808p pd=2.92u as=0.1918p ps=1.5u w=1.12u l=0.13u
+X12 a_25_262# inA sg13g2_and2_1_0.VDD sg13g2_and2_1_0.VDD sg13_lv_pmos ad=0.1225p pd=1.245u as=0.36p ps=2.72u w=1u l=0.13u
+X13 a_322_n44# inA sg13g2_and2_1_0.VSS sg13g2_and2_1_0.VSS sg13_lv_nmos ad=88.8f pd=0.98u as=0.15245p ps=1.17u w=0.74u l=0.13u
+X14 sum inB a_322_n44# sg13g2_and2_1_0.VSS sg13_lv_nmos ad=0.1628p pd=1.18u as=88.8f ps=0.98u w=0.74u l=0.13u
+X15 a_57_n6# inA sg13g2_and2_1_0.VSS sg13g2_and2_1_0.VSS sg13_lv_nmos ad=0.17462p pd=1.185u as=0.374p ps=2.46u w=0.55u l=0.13u
+C0 cout a_57_n6# 0.01154f
+C1 a_25_262# a_57_n6# 0.0104f
+C2 inB sg13g2_and2_1_0.VDD 0.31435f
+C3 inA sg13g2_and2_1_0.VDD 0.28939f
+C4 sum sg13g2_and2_1_0.VDD 0.08235f
+C5 cout a_n683_n14# 0.13166f
+C6 a_228_238# sg13g2_and2_1_0.VDD 0.20834f
+C7 a_57_n6# sg13g2_and2_1_0.VDD 0.25468f
+C8 inA inB 0.42207f
+C9 sum inB 0.08794f
+C10 inB a_228_238# 0.02512f
+C11 inA a_228_238# 0.01011f
+C12 sum a_228_238# 0.11602f
+C13 inB a_57_n6# 0.45519f
+C14 inA a_57_n6# 0.12082f
+C15 sum a_57_n6# 0.24142f
+C16 a_228_238# a_57_n6# 0.36535f
+C17 a_n683_n14# sg13g2_and2_1_0.VDD 0.43783f
+C18 cout sg13g2_and2_1_0.VDD 0.29974f
+C19 inB a_n683_n14# 0.30545f
+C20 inA a_n683_n14# 0.13033f
+C21 cout inB 0.22229f
+C22 inA cout 0.07689f
+R0 inA.n4 inA.n2 9.81991
+R1 inA.n2 inA.n1 9.01785
+R2 inA.n4 inA.n3 7.50513
+R3 inA.n1 inA.n0 7.501
+R4 inA.n2 inA 0.0702658
+R5 inA inA.n4 0.0654197
+R6 inA.n1 inA 0.0505118
+R7 inB.n4 inB.n1 15.1844
+R8 inB.n6 inB.n0 15.0231
+R9 inB.n3 inB.n2 15.0005
+R10 inB.n6 inB.n5 10.5511
+R11 inB.n5 inB.n4 9.0005
+R12 inB.n5 inB 0.466263
+R13 inB.n4 inB.n3 0.187664
+R14 inB inB.n6 0.0625513
+R15 inB.n3 inB 0.0513955
+C23 sum sg13g2_and2_1_0.VSS 0.30557f
+C24 cout sg13g2_and2_1_0.VSS 0.21277f
+C25 inB sg13g2_and2_1_0.VSS 1.0967f
+C26 inA sg13g2_and2_1_0.VSS 1.52964f
+C27 a_57_n6# sg13g2_and2_1_0.VSS 0.37141f $ **FLOATING
+C28 a_n683_n14# sg13g2_and2_1_0.VSS 0.32069f $ **FLOATING
+C29 sg13g2_and2_1_0.VDD sg13g2_and2_1_0.VSS 0.29349f $ **FLOATING
+.ends
+

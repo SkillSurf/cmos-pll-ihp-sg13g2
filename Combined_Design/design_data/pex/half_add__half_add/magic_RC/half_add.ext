@@ -1,0 +1,92 @@
+timestamp 0
+version 8.3
+tech ihp-sg13g2
+style ngspice()
+scale 1000 1 0.5
+resistclasses 3000000 67000 110 88 88 88 88 18 11
+parameters sg13_lv_nmos l=l w=w a1=as p1=ps a2=ad p2=pd
+parameters sg13_lv_pmos l=l w=w a1=as p1=ps a2=ad p2=pd
+port "sum" 7 460 390 616 501 m2
+port "cout" 8 -728 390 -572 501 m2
+port "inB" 6 460 -93 616 18 m2
+port "inA" 5 -728 -93 -572 18 m2
+port "VDD" 2 -728 538 616 626 m1
+port "VSS" 3 -728 -218 616 -130 m1
+node "a_n166_n204#" 0 1.22153 -166 -204 ndif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_n248_n204#" 0 1.22153 -248 -204 ndif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_322_n44#" 0 8.08395 322 -44 ndif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_n589_n14#" 0 6.43204 -589 -14 ndif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "sum" 2 305.573 460 390 m2 0 0 0 0 28461 1378 22338 658 0 0 0 0 0 0 0 0 0 0
+equiv "sum" "sg13g2_xor2_1_0.X"
+node "a_228_238#" 1 2.64233e-14 228 238 pdif 0 0 0 0 18124 958 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_25_262#" 0 0.539775 25 262 pdif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "cout" 1 212.771 -728 390 m2 0 0 0 0 38332 1238 33440 1090 0 0 0 0 0 0 0 0 0 0
+equiv "cout" "sg13g2_and2_1_0.X"
+node "a_57_n6#" 2 371.408 57 -6 ndif 0 0 0 0 48344 2150 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_n683_n14#" 2 320.692 -683 -14 ndif 0 0 0 0 33954 1578 0 0 0 0 0 0 0 0 0 0 0 0
+node "inB" 3 1096.7 460 -93 m2 0 0 0 0 26283 1046 108815 3502 0 0 0 0 0 0 0 0 0 0
+equiv "inB" "sg13g2_xor2_1_0.B"
+equiv "inB" "sg13g2_and2_1_0.B"
+node "inA" 2 1529.64 -728 -93 m2 0 0 0 0 27540 948 74364 1974 0 0 0 0 0 0 0 0 0 0
+equiv "inA" "sg13g2_xor2_1_0.A"
+equiv "inA" "sg13g2_and2_1_0.A"
+node "VDD" 3 293.489 -728 538 m1 0 0 0 0 162004 4546 0 0 0 0 0 0 0 0 0 0 0 0
+equiv "VDD" "sg13g2_xor2_1_0.VDD"
+equiv "VDD" "sg13g2_and2_1_0.VDD"
+substrate "VSS" 0 0 -728 -218 m1 0 0 0 0 167312 4344 0 0 0 0 0 0 0 0 0 0 0 0
+equiv "VSS" "sg13g2_xor2_1_0.VSS"
+equiv "VSS" "sg13g2_and2_1_0.VSS"
+cap "a_n589_n14#" "inB" 6.67176
+cap "a_n683_n14#" "inB" 305.449
+cap "cout" "a_228_238#" 0.476559
+cap "VDD" "a_n683_n14#" 437.835
+cap "a_322_n44#" "sum" 4.65035
+cap "inA" "inB" 422.067
+cap "VDD" "inA" 289.389
+cap "a_57_n6#" "sum" 241.421
+cap "cout" "a_n589_n14#" 2.04495
+cap "a_57_n6#" "a_25_262#" 10.3958
+cap "a_n683_n14#" "cout" 131.66
+cap "inA" "a_228_238#" 10.1108
+cap "a_n683_n14#" "a_n589_n14#" 3.79789
+cap "cout" "inA" 76.89
+cap "sum" "inB" 87.9382
+cap "VDD" "sum" 82.3492
+cap "a_25_262#" "inB" 2.06109
+cap "inA" "a_n589_n14#" 7.44343
+cap "VDD" "a_25_262#" 6.82976
+cap "a_n683_n14#" "inA" 130.331
+cap "sum" "a_228_238#" 116.016
+cap "a_57_n6#" "a_322_n44#" 0.122716
+cap "sum" "cout" 5.63162
+cap "cout" "a_25_262#" 0.387655
+cap "a_n683_n14#" "sum" 0.296678
+cap "a_322_n44#" "inB" 8.49087
+cap "sum" "inA" 4.59347
+cap "a_57_n6#" "inB" 455.187
+cap "a_57_n6#" "VDD" 254.677
+cap "a_57_n6#" "a_228_238#" 365.347
+cap "a_57_n6#" "cout" 11.5444
+cap "VDD" "inB" 314.352
+cap "sum" "a_25_262#" 0.518353
+cap "a_228_238#" "inB" 25.1167
+cap "VDD" "a_228_238#" 208.337
+cap "cout" "inB" 222.288
+cap "VDD" "cout" 299.74
+cap "a_57_n6#" "inA" 120.818
+device msubckt sg13_lv_nmos 484 -44 485 -43 l=26 w=148 "VSS" "a_57_n6#" 52 0 "sum" 148 6512,236 "VSS" 148 12432,464
+device msubckt sg13_lv_nmos 370 -44 371 -43 l=26 w=148 "VSS" "inB" 52 0 "a_322_n44#" 148 3552,196 "sum" 148 6512,236
+device msubckt sg13_lv_nmos 296 -44 297 -43 l=26 w=148 "VSS" "inA" 52 0 "VSS" 148 6098,234 "a_322_n44#" 148 3552,196
+device msubckt sg13_lv_nmos 184 -6 185 -5 l=26 w=110 "VSS" "inB" 52 0 "a_57_n6#" 110 6985,237 "VSS" 110 6098,234
+device msubckt sg13_lv_nmos 31 -6 32 -5 l=26 w=110 "VSS" "inA" 52 0 "VSS" 110 14960,492 "a_57_n6#" 110 6985,237
+device msubckt sg13_lv_nmos -411 -34 -410 -33 l=26 w=148 "VSS" "a_n683_n14#" 52 0 "VSS" 148 5324,224 "cout" 148 10064,432
+device msubckt sg13_lv_nmos -513 -14 -512 -13 l=26 w=128 "VSS" "inB" 52 0 "a_n589_n14#" 128 4864,204 "VSS" 128 5324,224
+device msubckt sg13_lv_nmos -615 -14 -614 -13 l=26 w=128 "VSS" "inA" 52 0 "a_n683_n14#" 128 8704,392 "a_n589_n14#" 128 4864,204
+device msubckt sg13_lv_pmos 500 238 501 239 l=26 w=224 "VDD" "a_57_n6#" 52 0 "a_228_238#" 224 8512,300 "sum" 224 15232,584
+device msubckt sg13_lv_pmos 398 238 399 239 l=26 w=224 "VDD" "inB" 52 0 "VDD" 224 8512,300 "a_228_238#" 224 8512,300
+device msubckt sg13_lv_pmos 296 238 297 239 l=26 w=224 "VDD" "inA" 52 0 "a_228_238#" 224 15232,584 "VDD" 224 8512,300
+device msubckt sg13_lv_pmos 74 262 75 263 l=26 w=200 "VDD" "inB" 52 0 "a_25_262#" 200 4900,249 "a_57_n6#" 200 13600,536
+device msubckt sg13_lv_pmos -1 262 0 263 l=26 w=200 "VDD" "inA" 52 0 "VDD" 200 14400,544 "a_25_262#" 200 4900,249
+device msubckt sg13_lv_pmos -411 238 -410 239 l=26 w=224 "VDD" "a_n683_n14#" 52 0 "VDD" 224 7672,300 "cout" 224 15232,584
+device msubckt sg13_lv_pmos -513 294 -512 295 l=26 w=168 "VDD" "inB" 52 0 "a_n683_n14#" 168 6384,244 "VDD" 168 7672,300
+device msubckt sg13_lv_pmos -615 294 -614 295 l=26 w=168 "VDD" "inA" 52 0 "VDD" 168 11424,472 "a_n683_n14#" 168 6384,244

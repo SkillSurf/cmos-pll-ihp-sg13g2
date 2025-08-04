@@ -1,0 +1,166 @@
+scale 1000 1 0.5
+rnode "DIV" 0 0 3012 -88 0
+rnode "sg13g2_xor2_1_0.X" 0 0 2922 -138 0
+resist "sg13g2_xor2_1_0.X" "DIV" 9.26896
+rnode "BIT.n0" 0 0 2767 290 0
+rnode "BIT" 0 0 3012 313 0
+rnode "BIT.n1" 0 0 2673 154 0
+rnode "BIT.n2" 0 0 2471 -42 0
+rnode "BIT.n3" 0 0 2558 145 0
+rnode "sg13g2_xor2_1_0.B" 0 0 2527 120 0
+resist "sg13g2_xor2_1_0.B" "BIT.n3" 0.0508955
+resist "BIT.n3" "BIT.n1" 0.188806
+resist "BIT.n1" "BIT" 9.43824
+resist "BIT.n3" "BIT.n2" 15
+resist "BIT.n1" "BIT.n0" 15.1822
+rnode "nRST" 0 0 -20 -1184 0
+rnode "nRST.n0" 0 0 1244 -754 0
+rnode "dff_nclk_0.sg13g2_dfrbp_1_0.RESET_B" 0 0 760 -781 0
+rnode "nRST.n1" 0 0 2221 -617 0
+rnode "nRST.n2" 0 0 1656 -729 0
+rnode "nRST.n3" 0 0 781 -736 0
+rnode "nRST.n4" 0 0 784 -752 0
+rnode "dff_nclk_0.nRST" 0 0 1137 -774 0
+resist "nRST.n4" "dff_nclk_0.sg13g2_dfrbp_1_0.RESET_B" 0.0260741
+resist "dff_nclk_0.nRST" "nRST.n0" 0.2354
+resist "dff_nclk_0.nRST" "nRST.n4" 0.738738
+resist "nRST.n2" "nRST.n0" 0.746454
+resist "nRST.n0" "nRST" 2.37136
+resist "nRST.n4" "nRST.n3" 14.0657
+resist "nRST.n3" "nRST.n2" 24.0461
+resist "nRST.n2" "nRST.n1" 25.1622
+rnode "CLK.n0" 0 0 170 -837 0
+rnode "dff_nclk_0.sg13g2_inv_1_0.A" 0 0 133 -870 0
+rnode "CLK.n1" 0 0 170 -837 0
+rnode "CLK" 0 0 -20 -872 0
+rnode "dff_nclk_0.nCLK" 0 0 173 -872 0
+resist "CLK.n1" "dff_nclk_0.sg13g2_inv_1_0.A" 0.0611796
+resist "dff_nclk_0.nCLK" "CLK" 0.16984
+resist "CLK.n1" "CLK.n0" 7.5025
+resist "dff_nclk_0.nCLK" "CLK.n1" 9.04436
+rnode "half_add_0.sg13g2_and2_1_0.X" 0 0 463 -128 0
+rnode "Cout" 0 0 -20 -181 0
+rnode "half_add_0.cout" 0 0 108 -181 0
+resist "half_add_0.cout" "Cout" 0.101477
+resist "half_add_0.cout" "half_add_0.sg13g2_and2_1_0.X" 9.53436
+rnode "Cin.n0" 0 0 822 161 0
+rnode "half_add_0.sg13g2_xor2_1_0.A" 0 0 713 111 0
+rnode "Cin.n1" 0 0 781 157 0
+rnode "Cin.n2" 0 0 162 382 0
+rnode "half_add_0.sg13g2_and2_1_0.A" 0 0 129 302 0
+rnode "Cin.n3" 0 0 162 382 0
+rnode "Cin.n4" 0 0 196 358 0
+rnode "Cin" 0 0 -20 302 0
+rnode "half_add_0.inA" 0 0 108 302 0
+resist "Cin.n3" "half_add_0.sg13g2_and2_1_0.A" 0.0500118
+resist "Cin.n1" "half_add_0.sg13g2_xor2_1_0.A" 0.0649197
+resist "half_add_0.inA" "Cin.n4" 0.0697658
+resist "half_add_0.inA" "Cin" 0.101477
+resist "Cin.n3" "Cin.n2" 7.5005
+resist "Cin.n1" "Cin.n0" 7.50463
+resist "Cin.n4" "Cin.n3" 9.01735
+resist "Cin.n4" "Cin.n1" 9.81941
+rnode "VDD.n0" 0 0 648 -418 0
+rnode "half_add_0.sg13g2_xor2_1_0.VDD" 0 0 684 -306 0
+rnode "VDD.n1" 0 0 1404 -262 0
+rnode "VDD" 0 -0 108 -374 0
+rnode "dff_nclk_0.sg13g2_dfrbp_1_0.VDD" 0 0 504 -462 0
+rnode "VDD.n2" 0 0 1452 -384 0
+rnode "VDD" 0 -0 108 -374 0
+rnode "dff_nclk_0.sg13g2_dfrbp_1_0.VDD" 0 0 504 -462 0
+rnode "sg13g2_xor2_1_0.VDD" 0 0 2232 -384 0
+rnode "VDD.n3" 0 0 1416 -418 0
+rnode "VDD.n4" 0 0 1416 -418 0
+rnode "VDD" 0 0 108 -374 0
+rnode "VDD.n5" 0 0 348 -418 0
+rnode "dff_nclk_0.sg13g2_dfrbp_1_0.VDD" 0 0 504 -462 0
+resist "dff_nclk_0.sg13g2_dfrbp_1_0.VDD" "VDD.n0" 0.0353992
+resist "half_add_0.sg13g2_xor2_1_0.VDD" "VDD.n0" 0.0476629
+resist "VDD.n5" "VDD" 0.0783303
+resist "VDD.n3" "sg13g2_xor2_1_0.VDD" 0.0912542
+resist "dff_nclk_0.sg13g2_dfrbp_1_0.VDD" "VDD.n5" 0.102365
+resist "VDD.n2" "VDD.n1" 0.172871
+resist "dff_nclk_0.sg13g2_dfrbp_1_0.VDD" "VDD" 0.178525
+resist "VDD.n1" "half_add_0.sg13g2_xor2_1_0.VDD" 0.178686
+resist "dff_nclk_0.sg13g2_dfrbp_1_0.VDD" "VDD" 0.279231
+resist "VDD.n3" "VDD.n2" 0.434867
+resist "VDD.n2" "dff_nclk_0.sg13g2_dfrbp_1_0.VDD" 0.668462
+resist "VDD.n4" "VDD.n3" 0.690317
+resist "sg13g2_xor2_1_0.VDD" "dff_nclk_0.sg13g2_dfrbp_1_0.VDD" 0.779016
+resist "VDD.n4" "VDD.n1" 1.00654
+resist "VDD.n5" "VDD.n4" 2.40454
+resist "VDD.n4" "VDD.n0" 5.65648
+rnode "VSS.n0" 0 0 2952 -1174 0
+rnode "VSS" 0 0 108 -1218 0
+rnode "VSS.n1" 0 0 348 494 0
+rnode "VSS.n2" 0 0 2952 494 0
+rnode "VSS" 0 0 108 450 0
+rnode "VSS.n3" 0 0 156 494 0
+rnode "half_add_0.sg13g2_xor2_1_0.VSS" 0 0 684 450 0
+rnode "VSS.n4" 0 0 732 494 0
+rnode "VSS" 0 -0 108 450 0
+rnode "half_add_0.sg13g2_xor2_1_0.VSS" 0 0 684 450 0
+rnode "VSS.n5" 0 0 741 494 0
+rnode "VSS.n6" 0 0 761 286 0
+rnode "VSS" 0 -0 108 450 0
+rnode "half_add_0.sg13g2_xor2_1_0.VSS" 0 0 684 450 0
+rnode "VSS.n7" 0 0 848 494 0
+rnode "VSS.n8" 0 0 2952 494 0
+rnode "VSS" 0 -0 108 450 0
+rnode "sg13g2_xor2_1_0.VSS" 0 0 2232 450 0
+rnode "VSS.n9" 0 0 2396 494 0
+rnode "VSS.n10" 0 0 2309 286 0
+rnode "VSS" 0 -0 108 450 0
+rnode "sg13g2_xor2_1_0.VSS" 0 0 2232 450 0
+rnode "VSS.n11" 0 0 2289 494 0
+rnode "VSS.n12" 0 0 2280 494 0
+rnode "sg13g2_xor2_1_0.VSS" 0 0 2232 450 0
+rnode "VSS.n13" 0 0 1404 494 0
+rnode "VSS.n14" 0 0 1404 494 0
+rnode "VSS.n15" 0 0 1308 494 0
+rnode "VSS.n16" 0 0 2856 494 0
+rnode "VSS.n17" 0 0 2856 -1174 0
+rnode "VSS.n18" 0 0 348 -1174 0
+rnode "VSS.n19" 0 0 348 -1174 0
+rnode "dff_nclk_0.sg13g2_dfrbp_1_0.VSS" 0 0 504 -1218 0
+resist "VSS.n16" "VSS.n2" 0.000500262
+resist "VSS.n15" "VSS.n14" 0.000500262
+resist "VSS.n10" "VSS.n9" 0.00835683
+resist "VSS.n7" "VSS.n6" 0.00835683
+resist "VSS.n12" "VSS.n11" 0.01125
+resist "VSS.n5" "VSS.n4" 0.01125
+resist "VSS.n11" "sg13g2_xor2_1_0.VSS" 0.0223929
+resist "VSS.n5" "half_add_0.sg13g2_xor2_1_0.VSS" 0.0223929
+resist "VSS.n11" "VSS.n10" 0.0346579
+resist "VSS.n6" "VSS.n5" 0.0346579
+resist "sg13g2_xor2_1_0.VSS" "VSS.n12" 0.06
+resist "VSS.n4" "half_add_0.sg13g2_xor2_1_0.VSS" 0.06
+resist "VSS.n19" "VSS" 0.180325
+resist "VSS.n9" "sg13g2_xor2_1_0.VSS" 0.205
+resist "VSS.n7" "half_add_0.sg13g2_xor2_1_0.VSS" 0.205
+resist "half_add_0.sg13g2_xor2_1_0.VSS" "VSS" 0.226286
+resist "VSS.n3" "VSS" 0.297195
+resist "dff_nclk_0.sg13g2_dfrbp_1_0.VSS" "VSS.n19" 0.314986
+resist "VSS.n17" "VSS.n0" 0.329932
+resist "VSS.n9" "VSS.n8" 0.391092
+resist "VSS.n13" "VSS.n7" 0.391092
+resist "half_add_0.sg13g2_xor2_1_0.VSS" "VSS.n3" 0.418433
+resist "half_add_0.sg13g2_xor2_1_0.VSS" "VSS" 0.72
+resist "sg13g2_xor2_1_0.VSS" "VSS" 0.834429
+resist "dff_nclk_0.sg13g2_dfrbp_1_0.VSS" "VSS.n0" 1.15785
+resist "VSS.n13" "sg13g2_xor2_1_0.VSS" 1.32936
+resist "sg13g2_xor2_1_0.VSS" "VSS" 2.655
+resist "VSS.n8" "VSS.n2" 2.72092
+resist "VSS.n14" "VSS.n13" 2.72092
+resist "VSS.n3" "VSS.n1" 3.30725
+resist "VSS.n8" "VSS.n0" 3.91963
+resist "VSS.n19" "VSS.n18" 5.62376
+resist "VSS.n12" "VSS.n2" 17
+resist "VSS.n14" "VSS.n4" 17
+resist "VSS.n10" "VSS.n2" 17.0005
+resist "VSS.n14" "VSS.n6" 17.0005
+resist "VSS.n15" "VSS.n1" 1451.95
+resist "VSS.n18" "VSS.n17" 1540.62
+resist "VSS.n16" "VSS.n15" 3757.56
+resist "VSS.n17" "VSS.n16" 36108.7
+resist "VSS.n18" "VSS.n1" 38343.1

@@ -1,0 +1,45 @@
+** sch_path: /foss/designs/PROJECTS/cmos-pll-ihp-sg13g2/Combined_Design/design_data/xschem/freq_div_cell_pex_tb.sch
+
+.lib /foss/pdks/ihp-sg13g2/libs.tech/ngspice/models/cornerMOSlv.lib mos_tt
+.include ../../pex/freq_div_cell__freq_div_cell/magic_RC/freq_div_cell.pex.spice
+.include /foss/pdks/ihp-sg13g2/libs.ref/sg13g2_stdcell/spice/sg13g2_stdcell.spice
+.include ../../pex/dff_nclk__dff_nclk/magic_RC/dff_nclk.pex.spice
+
+**.subckt freq_div_cell_pex_tb
+x1 VDD GND DIV net1 CLK_IN Cout DIV net2 freq_div_cell
+Vs VDD GND 1.2
+Vclk CLK_IN GND dc 0 ac 0 pulse(0, 1.2, 0, 100p, 100p, 6.25n, 12.5n)
+x3 net2 VDD VSS sg13g2_tiehi
+x2 net1 VDD VSS sg13g2_tiehi
+* noconn Cout
+x5 DIV CLK_OUT net3 net3 net4 VDD GND dff_nclk
+x6 net4 VDD VSS sg13g2_tiehi
+* noconn CLK_OUT
+**** begin user architecture code
+
+
+.meas tran tperiod_in TRIG v(clk_in) VAL=0.5 FALL=1 TARG v(clk_in) VAL=0.5 FALL=2
+.meas tran freq_in PARAM = '1e-6/tperiod_in'
+
+.meas tran tperiod_out TRIG v(clk_out) VAL=0.5 FALL=1 TARG v(clk_out) VAL=0.5 FALL=2
+.meas tran freq_out PARAM = '1e-6/tperiod_out'
+
+
+
+
+.param temp=27
+
+Vvss VSS 0 0
+
+.control
+save all
+tran 50p 50n
+
+write tran_freq_div_cell_pex.raw
+.endc
+
+
+**** end user architecture code
+**.ends
+.GLOBAL GND
+.end

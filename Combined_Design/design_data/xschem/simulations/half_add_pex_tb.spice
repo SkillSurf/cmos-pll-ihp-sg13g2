@@ -1,0 +1,29 @@
+** sch_path: /foss/designs/PROJECTS/cmos-pll-ihp-sg13g2/Combined_Design/design_data/xschem/half_add_pex_tb.sch
+
+.lib /foss/pdks/ihp-sg13g2/libs.tech/ngspice/models/cornerMOSlv.lib mos_tt
+.include ../../pex/half_add__half_add/magic_RC/half_add.pex.spice
+
+**.subckt half_add_pex_tb
+VinA A GND dc 0 ac 0 pulse(0, 1.2, 0, 100p, 100p, 6.25n, 12.5n)
+VinB B GND dc 0 ac 0 pulse(0, 1.2, 0, 100p, 100p, 12.5n, 25n)
+Vs net1 GND 1.2
+* noconn S
+* noconn C
+x1 A S B net1 GND C half_add
+**** begin user architecture code
+
+
+.param temp=27
+
+.control
+save all
+tran 50p 50n
+
+write tran_half_add_pex.raw
+.endc
+
+
+**** end user architecture code
+**.ends
+.GLOBAL GND
+.end

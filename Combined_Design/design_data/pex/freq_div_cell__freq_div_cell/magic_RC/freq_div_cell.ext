@@ -1,0 +1,349 @@
+timestamp 0
+version 8.3
+tech ihp-sg13g2
+style ngspice()
+scale 1000 1 0.5
+resistclasses 3000000 67000 110 88 88 88 88 18 11
+parameters sg13_lv_nmos l=l w=w a1=as p1=ps a2=ad p2=pd
+parameters sg13_lv_pmos l=l w=w a1=as p1=ps a2=ad p2=pd
+port "nRST" 8 -20 -1184 108 -1084 m2
+port "CLK" 7 -20 -872 108 -772 m2
+port "DIV" 10 3012 -88 3140 12 m2
+port "BIT" 9 3012 313 3140 413 m2
+port "Cout" 6 -20 -181 108 -70 m2
+port "Cin" 5 -20 302 108 413 m2
+port "VDD" 3 108 -374 3000 -306 m1
+port "VSS" 2 108 -1218 3000 -1130 m1
+port "VSS" 2 108 450 3000 538 m1
+node "a_490_n1204#" 0 1.22153 490 -1204 ndif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_396_n1204#" 0 1.22153 396 -1204 ndif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_2224_n1057#" 0 4.36927 2224 -1057 ndif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_2034_n1057#" 0 3.10548 2034 -1057 ndif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "dff_nclk_0.nQ" 1 97.5285 2448 -762 pdif 0 0 0 0 40946 1260 6844 352 0 0 0 0 0 0 0 0 0 0
+equiv "dff_nclk_0.nQ" "dff_nclk_0.sg13g2_dfrbp_1_0.Q_N"
+node "a_1510_n1012#" 0 0 1510 -1012 ndif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_1432_n1012#" 0 0 1432 -1012 ndif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_2065_n659#" 0 0 2065 -659 pdif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_674_n1052#" 0 2.12934 674 -1052 ndif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_2086_n1093#" 3 336.238 2086 -1093 p 0 0 0 0 32768 1878 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_2649_n1056#" 1 423.293 2649 -1056 ndif 0 0 0 0 35533 1382 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_1840_n1057#" 3 775.649 1840 -1057 ndif 0 0 0 0 35860 1984 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_1407_n667#" 0 0 1407 -667 pdif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_1305_n667#" 3 251.165 1305 -667 pdif 0 0 0 0 41008 2352 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_1456_n729#" 3 150.097 1456 -729 p 0 0 0 0 38599 2062 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_1073_n738#" 6 1022.65 1073 -738 pdif 0 0 0 0 75112 4052 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_580_n1052#" 5 121.679 580 -1052 ndif 0 0 0 0 59143 3502 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_877_n738#" 2 787.217 877 -738 pdif 0 0 0 0 29104 1532 0 0 0 0 0 0 0 0 0 0 0 0
+node "nRST" 7 1622.28 -20 -1184 m2 0 0 0 0 21148 1088 170950 6666 0 0 0 0 0 0 0 0 0 0
+equiv "nRST" "dff_nclk_0.sg13g2_dfrbp_1_0.RESET_B"
+equiv "nRST" "dff_nclk_0.nRST"
+node "dff_nclk_0.sg13g2_dfrbp_1_0.CLK" 3 489.828 299 -1056 ndif 0 0 0 0 37892 1622 45332 1668 0 0 0 0 0 0 0 0 0 0
+equiv "dff_nclk_0.sg13g2_dfrbp_1_0.CLK" "dff_nclk_0.sg13g2_inv_1_0.Y"
+node "CLK" 0 432.023 -20 -872 m2 0 0 0 0 13248 468 25100 702 0 0 0 0 0 0 0 0 0 0
+equiv "CLK" "dff_nclk_0.sg13g2_inv_1_0.A"
+equiv "CLK" "dff_nclk_0.nCLK"
+node "a_2612_n142#" 1 0.0996918 2612 -142 pdif 0 0 0 0 18124 958 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_2409_n142#" 0 0.539775 2409 -142 pdif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_1064_n142#" 1 1.62093e-14 1064 -142 pdif 0 0 0 0 18124 958 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_861_n142#" 0 0.539775 861 -142 pdif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "DIV" 2 426.687 3012 -88 m2 0 0 0 0 28461 1378 23100 662 0 0 0 0 0 0 0 0 0 0
+equiv "DIV" "sg13g2_xor2_1_0.X"
+node "a_2706_216#" 0 8.08395 2706 216 ndif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_2441_216#" 2 380.402 2441 216 ndif 0 0 0 0 48344 2150 0 0 0 0 0 0 0 0 0 0 0 0
+node "BIT" 1 818.33 3012 313 m2 0 0 0 0 19497 716 71100 1622 0 0 0 0 0 0 0 0 0 0
+equiv "BIT" "sg13g2_xor2_1_0.B"
+node "dff_nclk_0.D" 4 524.054 593 -930 p 0 0 0 0 42562 1974 187170 4444 0 0 0 0 0 0 0 0 0 0
+equiv "dff_nclk_0.D" "half_add_0.sg13g2_xor2_1_0.X"
+equiv "dff_nclk_0.D" "half_add_0.sum"
+equiv "dff_nclk_0.D" "dff_nclk_0.sg13g2_dfrbp_1_0.D"
+node "a_1158_216#" 0 8.08395 1158 216 ndif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_893_216#" 2 364.092 893 216 ndif 0 0 0 0 48344 2150 0 0 0 0 0 0 0 0 0 0 0 0
+node "Cout" 2 173.066 -20 -181 m2 0 0 0 0 38332 1238 47648 1346 0 0 0 0 0 0 0 0 0 0
+equiv "Cout" "half_add_0.sg13g2_and2_1_0.X"
+equiv "Cout" "half_add_0.cout"
+node "a_247_206#" 0 6.43204 247 206 ndif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_153_206#" 2 318.194 153 206 ndif 0 0 0 0 33954 1578 0 0 0 0 0 0 0 0 0 0 0 0
+node "dff_nclk_0.Q" 8 2545.18 283 114 p 0 0 0 0 69228 2732 361405 9402 0 0 0 0 0 0 0 0 0 0
+equiv "dff_nclk_0.Q" "half_add_0.sg13g2_xor2_1_0.B"
+equiv "dff_nclk_0.Q" "half_add_0.sg13g2_and2_1_0.B"
+equiv "dff_nclk_0.Q" "half_add_0.inB"
+equiv "dff_nclk_0.Q" "sg13g2_xor2_1_0.A"
+equiv "dff_nclk_0.Q" "dff_nclk_0.sg13g2_dfrbp_1_0.Q"
+node "Cin" 2 1548.84 -20 302 m2 0 0 0 0 27540 948 88572 2230 0 0 0 0 0 0 0 0 0 0
+equiv "Cin" "half_add_0.sg13g2_xor2_1_0.A"
+equiv "Cin" "half_add_0.sg13g2_and2_1_0.A"
+equiv "Cin" "half_add_0.inA"
+node "a_2218_464#" 0 1.22153 2218 464 ndif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_1452_464#" 0 1.22153 1452 464 ndif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_670_464#" 0 1.22153 670 464 ndif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_588_464#" 0 1.22153 588 464 ndif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "VDD" 5 396.31 108 -374 m1 0 0 0 0 784169 12396 0 0 0 0 0 0 0 0 0 0 0 0
+equiv "VDD" "half_add_0.sg13g2_xor2_1_0.VDD"
+equiv "VDD" "half_add_0.sg13g2_and2_1_0.VDD"
+equiv "VDD" "sg13g2_xor2_1_0.VDD"
+equiv "VDD" "dff_nclk_0.sg13g2_inv_1_0.VDD"
+equiv "VDD" "dff_nclk_0.sg13g2_dfrbp_1_0.VDD"
+substrate "VSS" 0 0 108 450 m1 0 0 0 0 805436 20194 0 0 0 0 0 0 0 0 0 0 0 0
+equiv "VSS" "half_add_0.sg13g2_xor2_1_0.VSS"
+equiv "VSS" "half_add_0.sg13g2_and2_1_0.VSS"
+equiv "VSS" "sg13g2_xor2_1_0.VSS"
+equiv "VSS" "dff_nclk_0.sg13g2_inv_1_0.VSS"
+equiv "VSS" "dff_nclk_0.sg13g2_dfrbp_1_0.VSS"
+cap "a_1073_n738#" "dff_nclk_0.sg13g2_dfrbp_1_0.CLK" 13.2436
+cap "nRST" "a_1456_n729#" 168.576
+cap "Cin" "a_1073_n738#" 0.0633674
+cap "dff_nclk_0.Q" "a_247_206#" 6.67176
+cap "a_1840_n1057#" "VDD" 426.009
+cap "BIT" "dff_nclk_0.nQ" 0.594294
+cap "a_2409_n142#" "DIV" 0.349341
+cap "a_2612_n142#" "dff_nclk_0.Q" 22.4591
+cap "a_1073_n738#" "a_1432_n1012#" 3.9443
+cap "a_1510_n1012#" "a_1305_n667#" 1.06092
+cap "a_2441_216#" "a_2409_n142#" 10.3958
+cap "dff_nclk_0.D" "a_1064_n142#" 121.851
+cap "Cout" "a_1064_n142#" 0.476559
+cap "dff_nclk_0.D" "VDD" 814.651
+cap "a_580_n1052#" "dff_nclk_0.nQ" 0.0244009
+cap "nRST" "a_1510_n1012#" 0.724983
+cap "Cout" "VDD" 332.805
+cap "BIT" "a_2649_n1056#" 0.523644
+cap "a_674_n1052#" "VDD" 0.00400202
+cap "a_1840_n1057#" "a_2086_n1093#" 410.483
+cap "a_2649_n1056#" "DIV" 0.0551231
+cap "a_2441_216#" "a_2649_n1056#" 0.0665965
+cap "Cin" "CLK" 1.61353
+cap "CLK" "dff_nclk_0.sg13g2_dfrbp_1_0.CLK" 100.185
+cap "dff_nclk_0.nQ" "a_877_n738#" 0.0555845
+cap "a_2224_n1057#" "a_2086_n1093#" 4.96542
+cap "a_1840_n1057#" "a_1073_n738#" 400.267
+cap "a_1305_n667#" "dff_nclk_0.nQ" 0.0376716
+cap "a_1456_n729#" "dff_nclk_0.Q" 3.01749
+cap "nRST" "dff_nclk_0.nQ" 10.8551
+cap "a_580_n1052#" "dff_nclk_0.sg13g2_dfrbp_1_0.CLK" 82.1317
+cap "Cin" "a_580_n1052#" 0.144888
+cap "dff_nclk_0.D" "a_1073_n738#" 4.3584
+cap "Cin" "a_153_206#" 130.331
+cap "a_153_206#" "dff_nclk_0.sg13g2_dfrbp_1_0.CLK" 0.0649495
+cap "a_893_216#" "dff_nclk_0.sg13g2_dfrbp_1_0.CLK" 0.327347
+cap "Cin" "a_877_n738#" 1.7113
+cap "a_893_216#" "Cin" 120.818
+cap "a_2649_n1056#" "nRST" 0.684087
+cap "a_877_n738#" "dff_nclk_0.sg13g2_dfrbp_1_0.CLK" 337.309
+cap "dff_nclk_0.D" "a_861_n142#" 1.3917
+cap "a_1305_n667#" "dff_nclk_0.sg13g2_dfrbp_1_0.CLK" 0.00365761
+cap "a_1064_n142#" "VDD" 208.344
+cap "Cout" "a_861_n142#" 0.387655
+cap "Cin" "nRST" 2.48866
+cap "nRST" "dff_nclk_0.sg13g2_dfrbp_1_0.CLK" 603.012
+cap "BIT" "a_1840_n1057#" 2.13958
+cap "a_2441_216#" "a_1840_n1057#" 0.448034
+cap "a_1456_n729#" "a_1510_n1012#" 2.93308
+cap "a_1432_n1012#" "a_1305_n667#" 3.83924
+cap "a_2034_n1057#" "a_1840_n1057#" 5.21084
+cap "dff_nclk_0.D" "CLK" 46.5573
+cap "nRST" "a_1432_n1012#" 1.70459
+cap "a_2649_n1056#" "a_2612_n142#" 0.188972
+cap "Cout" "CLK" 19.2496
+cap "a_893_216#" "a_1158_216#" 0.122716
+cap "a_2086_n1093#" "VDD" 304.789
+cap "Cin" "a_247_206#" 7.44343
+cap "dff_nclk_0.Q" "dff_nclk_0.nQ" 27.1217
+cap "a_2409_n142#" "dff_nclk_0.Q" 2.70888
+cap "a_2441_216#" "dff_nclk_0.D" 3.35846
+cap "a_2065_n659#" "a_1840_n1057#" 4.49184
+cap "dff_nclk_0.D" "a_580_n1052#" 356.196
+cap "a_1840_n1057#" "a_877_n738#" 23.0201
+cap "a_1073_n738#" "VDD" 193.574
+cap "a_1456_n729#" "dff_nclk_0.nQ" 0.0736947
+cap "dff_nclk_0.D" "a_1407_n667#" 0.250469
+cap "a_580_n1052#" "a_674_n1052#" 5.41159
+cap "dff_nclk_0.D" "a_153_206#" 1.40991
+cap "Cout" "a_153_206#" 131.66
+cap "a_2649_n1056#" "dff_nclk_0.Q" 125.189
+cap "a_1840_n1057#" "nRST" 250.94
+cap "dff_nclk_0.D" "a_893_216#" 247.148
+cap "dff_nclk_0.D" "a_877_n738#" 14.4636
+cap "a_893_216#" "Cout" 11.5444
+cap "a_861_n142#" "VDD" 6.82976
+cap "dff_nclk_0.D" "a_1305_n667#" 4.0753
+cap "Cin" "dff_nclk_0.Q" 422.652
+cap "a_674_n1052#" "a_877_n738#" 0.0364215
+cap "dff_nclk_0.Q" "dff_nclk_0.sg13g2_dfrbp_1_0.CLK" 1.63486
+cap "a_2224_n1057#" "nRST" 0.612915
+cap "a_1073_n738#" "a_2086_n1093#" 43.0574
+cap "dff_nclk_0.D" "nRST" 216.031
+cap "Cout" "nRST" 5.9469
+cap "nRST" "a_674_n1052#" 0.28373
+cap "CLK" "VDD" 203.635
+cap "a_1840_n1057#" "a_2612_n142#" 0.154814
+cap "BIT" "VDD" 165.089
+cap "DIV" "VDD" 64.1203
+cap "BIT" "a_2706_216#" 8.28052
+cap "a_2441_216#" "VDD" 257.08
+cap "DIV" "a_2706_216#" 4.65035
+cap "a_1432_n1012#" "a_1456_n729#" 1.41939
+cap "Cout" "a_247_206#" 2.04495
+cap "a_2441_216#" "a_2706_216#" 0.122716
+cap "a_1158_216#" "dff_nclk_0.Q" 8.87599
+cap "a_580_n1052#" "VDD" 369.951
+cap "a_1407_n667#" "VDD" 0.951222
+cap "a_153_206#" "VDD" 441.369
+cap "a_1840_n1057#" "dff_nclk_0.Q" 20.7124
+cap "a_893_216#" "a_1064_n142#" 365.347
+cap "a_2065_n659#" "VDD" 1.34032
+cap "a_1064_n142#" "a_877_n738#" 0.609523
+cap "a_893_216#" "VDD" 257.263
+cap "VDD" "a_877_n738#" 669.922
+cap "a_2034_n1057#" "a_2086_n1093#" 0.210528
+cap "a_2224_n1057#" "dff_nclk_0.Q" 0.151888
+cap "a_2649_n1056#" "dff_nclk_0.nQ" 216.087
+cap "a_1305_n667#" "VDD" 294.035
+cap "a_1840_n1057#" "a_1456_n729#" 39.5657
+cap "dff_nclk_0.D" "dff_nclk_0.Q" 240.192
+cap "Cout" "dff_nclk_0.Q" 222.302
+cap "nRST" "VDD" 508.683
+cap "a_2034_n1057#" "a_1073_n738#" 0.387062
+cap "dff_nclk_0.nQ" "dff_nclk_0.sg13g2_dfrbp_1_0.CLK" 0.0050473
+cap "a_580_n1052#" "a_1073_n738#" 472.481
+cap "dff_nclk_0.D" "a_1456_n729#" 0.286174
+cap "a_2086_n1093#" "a_877_n738#" 43.244
+cap "nRST" "a_2086_n1093#" 200.669
+cap "a_1073_n738#" "a_877_n738#" 450.473
+cap "a_2612_n142#" "VDD" 208.337
+cap "a_1073_n738#" "a_1305_n667#" 130.676
+cap "Cin" "dff_nclk_0.sg13g2_dfrbp_1_0.CLK" 0.0434848
+cap "a_1073_n738#" "nRST" 177.616
+cap "BIT" "DIV" 96.519
+cap "a_893_216#" "a_861_n142#" 10.3958
+cap "a_2441_216#" "BIT" 399.655
+cap "a_2441_216#" "DIV" 233.141
+cap "a_1840_n1057#" "dff_nclk_0.nQ" 58.2217
+cap "a_1064_n142#" "dff_nclk_0.Q" 25.5901
+cap "CLK" "a_153_206#" 0.400868
+cap "dff_nclk_0.Q" "VDD" 1272.29
+cap "dff_nclk_0.Q" "a_2706_216#" 0.290726
+cap "CLK" "a_877_n738#" 0.0413718
+cap "dff_nclk_0.D" "a_2409_n142#" 0.00693237
+cap "a_1840_n1057#" "a_2649_n1056#" 95.7523
+cap "a_1456_n729#" "VDD" 244.6
+cap "a_580_n1052#" "a_1407_n667#" 0.0256716
+cap "nRST" "CLK" 53.9033
+cap "a_2086_n1093#" "dff_nclk_0.Q" 6.1284
+cap "a_580_n1052#" "a_877_n738#" 177.665
+cap "a_2034_n1057#" "nRST" 0.746739
+cap "a_580_n1052#" "a_1305_n667#" 458.251
+cap "a_1073_n738#" "dff_nclk_0.Q" 1.89521
+cap "a_2086_n1093#" "a_1456_n729#" 0.090424
+cap "a_580_n1052#" "nRST" 372.396
+cap "a_1305_n667#" "a_1407_n667#" 6.10793
+cap "dff_nclk_0.D" "Cin" 6.80536
+cap "dff_nclk_0.D" "dff_nclk_0.sg13g2_dfrbp_1_0.CLK" 403.078
+cap "a_893_216#" "a_877_n738#" 2.05954
+cap "Cout" "dff_nclk_0.sg13g2_dfrbp_1_0.CLK" 2.16378
+cap "Cin" "Cout" 91.5595
+cap "nRST" "a_1407_n667#" 0.279555
+cap "nRST" "a_153_206#" 0.056402
+cap "a_674_n1052#" "dff_nclk_0.sg13g2_dfrbp_1_0.CLK" 1.03216
+cap "a_1305_n667#" "a_877_n738#" 53.1407
+cap "a_2065_n659#" "nRST" 0.279901
+cap "a_1073_n738#" "a_1456_n729#" 660.771
+cap "BIT" "a_2612_n142#" 18.5062
+cap "a_861_n142#" "dff_nclk_0.Q" 2.07286
+cap "a_893_216#" "nRST" 0.0699202
+cap "nRST" "a_877_n738#" 349.888
+cap "a_2612_n142#" "DIV" 106.145
+cap "nRST" "a_1305_n667#" 325.281
+cap "a_2441_216#" "a_2612_n142#" 365.347
+cap "a_153_206#" "a_247_206#" 3.79789
+cap "dff_nclk_0.nQ" "VDD" 180.715
+cap "a_2409_n142#" "VDD" 6.82976
+cap "dff_nclk_0.D" "a_1158_216#" 5.17109
+cap "dff_nclk_0.Q" "CLK" 0.392632
+cap "a_1073_n738#" "a_1510_n1012#" 3.49307
+cap "BIT" "dff_nclk_0.Q" 209.295
+cap "dff_nclk_0.Q" "DIV" 20.6067
+cap "a_2224_n1057#" "a_1840_n1057#" 0.441522
+cap "a_2441_216#" "dff_nclk_0.Q" 149.869
+cap "dff_nclk_0.D" "a_1840_n1057#" 0.162184
+cap "a_2649_n1056#" "VDD" 233.099
+cap "a_2086_n1093#" "dff_nclk_0.nQ" 101.181
+cap "a_580_n1052#" "dff_nclk_0.Q" 0.0963297
+cap "Cin" "a_1064_n142#" 10.1108
+cap "dff_nclk_0.Q" "a_1407_n667#" 0.0283453
+cap "dff_nclk_0.Q" "a_153_206#" 305.462
+cap "VDD" "dff_nclk_0.sg13g2_dfrbp_1_0.CLK" 278.056
+cap "Cin" "VDD" 303.548
+cap "a_1073_n738#" "dff_nclk_0.nQ" 0.142427
+cap "a_2065_n659#" "dff_nclk_0.Q" 0.321774
+cap "dff_nclk_0.D" "Cout" 46.2297
+cap "dff_nclk_0.D" "a_674_n1052#" 0.0155532
+cap "a_580_n1052#" "a_1456_n729#" 0.942192
+cap "a_893_216#" "dff_nclk_0.Q" 460.99
+cap "dff_nclk_0.Q" "a_877_n738#" 8.25529
+cap "dff_nclk_0.Q" "a_1305_n667#" 1.62507
+cap "a_2065_n659#" "a_1456_n729#" 0.238305
+cap "nRST" "dff_nclk_0.Q" 75.2847
+cap "a_1456_n729#" "a_877_n738#" 43.042
+cap "a_1456_n729#" "a_1305_n667#" 702.62
+device msubckt sg13_lv_nmos 2825 -1056 2826 -1055 l=26 w=148 "VSS" "a_2649_n1056#" 52 0 "VSS" 148 5802,230 "dff_nclk_0.Q" 148 10064,432
+device msubckt sg13_lv_nmos 2717 -1056 2718 -1055 l=26 w=110 "VSS" "a_1840_n1057#" 52 0 "a_2649_n1056#" 110 7480,356 "VSS" 110 5802,230
+device msubckt sg13_lv_nmos 2477 -1056 2478 -1055 l=26 w=148 "VSS" "a_1840_n1057#" 52 0 "VSS" 148 10064,432 "dff_nclk_0.nQ" 148 11100,446
+device msubckt sg13_lv_nmos 2269 -1057 2270 -1056 l=26 w=84 "VSS" "a_1840_n1057#" 52 0 "a_2224_n1057#" 84 1890,129 "a_2086_n1093#" 84 5712,304
+device msubckt sg13_lv_nmos 2198 -1057 2199 -1056 l=26 w=84 "VSS" "nRST" 52 0 "VSS" 84 3612,170 "a_2224_n1057#" 84 1890,129
+device msubckt sg13_lv_nmos 2086 -1057 2087 -1056 l=26 w=84 "VSS" "a_2086_n1093#" 52 0 "a_2034_n1057#" 84 2184,136 "VSS" 84 3612,170
+device msubckt sg13_lv_nmos 2008 -1057 2009 -1056 l=26 w=84 "VSS" "a_877_n738#" 52 0 "a_1840_n1057#" 84 8068,296 "a_2034_n1057#" 84 2184,136
+device msubckt sg13_lv_pmos 2819 -762 2820 -761 l=26 w=224 "VDD" "a_2649_n1056#" 52 0 "VDD" 224 8064,300 "dff_nclk_0.Q" 224 15232,584
+device msubckt sg13_lv_pmos 2717 -706 2718 -705 l=26 w=168 "VDD" "a_1840_n1057#" 52 0 "a_2649_n1056#" 168 11424,472 "VDD" 168 8064,300
+device msubckt sg13_lv_pmos 2422 -762 2423 -761 l=26 w=224 "VDD" "a_1840_n1057#" 52 0 "VDD" 224 8652,310 "dff_nclk_0.nQ" 224 30464,720
+device msubckt sg13_lv_nmos 1814 -1057 1815 -1056 l=26 w=128 "VSS" "a_1073_n738#" 52 0 "a_1456_n729#" 128 7759,258 "a_1840_n1057#" 128 8068,296
+device msubckt sg13_lv_nmos 1680 -1057 1681 -1056 l=26 w=128 "VSS" "a_1305_n667#" 52 0 "VSS" 128 7300,265 "a_1456_n729#" 128 7759,258
+device msubckt sg13_lv_nmos 1556 -1012 1557 -1011 l=26 w=84 "VSS" "nRST" 52 0 "a_1510_n1012#" 84 1932,130 "VSS" 84 7300,265
+device msubckt sg13_lv_nmos 1484 -1012 1485 -1011 l=26 w=84 "VSS" "a_1456_n729#" 52 0 "a_1432_n1012#" 84 2184,136 "a_1510_n1012#" 84 1932,130
+device msubckt sg13_lv_nmos 1406 -1012 1407 -1011 l=26 w=84 "VSS" "a_1073_n738#" 52 0 "a_1305_n667#" 84 3192,160 "a_1432_n1012#" 84 2184,136
+device msubckt sg13_lv_nmos 1304 -1012 1305 -1011 l=26 w=84 "VSS" "a_877_n738#" 52 0 "a_580_n1052#" 84 5712,304 "a_1305_n667#" 84 3192,160
+device msubckt sg13_lv_pmos 2310 -659 2311 -658 l=26 w=84 "VDD" "a_1840_n1057#" 52 0 "a_2086_n1093#" 84 3192,160 "VDD" 84 8652,310
+device msubckt sg13_lv_pmos 2208 -659 2209 -658 l=26 w=84 "VDD" "nRST" 52 0 "VDD" 84 3192,160 "a_2086_n1093#" 84 3192,160
+device msubckt sg13_lv_pmos 2106 -659 2107 -658 l=26 w=84 "VDD" "a_2086_n1093#" 52 0 "a_2065_n659#" 84 1722,125 "VDD" 84 3192,160
+device msubckt sg13_lv_pmos 2039 -659 2040 -658 l=26 w=84 "VDD" "a_1073_n738#" 52 0 "a_1840_n1057#" 84 7078,312 "a_2065_n659#" 84 1722,125
+device msubckt sg13_lv_pmos 1909 -783 1910 -782 l=26 w=200 "VDD" "a_877_n738#" 52 0 "a_1456_n729#" 200 7600,276 "a_1840_n1057#" 200 7078,312
+device msubckt sg13_lv_pmos 1807 -783 1808 -782 l=26 w=200 "VDD" "a_1305_n667#" 52 0 "VDD" 200 13600,536 "a_1456_n729#" 200 7600,276
+device msubckt sg13_lv_nmos 1053 -1021 1054 -1020 l=26 w=148 "VSS" "a_877_n738#" 52 0 "VSS" 148 6176,247 "a_1073_n738#" 148 10064,432
+device msubckt sg13_lv_nmos 951 -1021 952 -1020 l=26 w=148 "VSS" "dff_nclk_0.sg13g2_dfrbp_1_0.CLK" 52 0 "a_877_n738#" 148 10064,432 "VSS" 148 6176,247
+device msubckt sg13_lv_nmos 722 -1052 723 -1051 l=26 w=84 "VSS" "nRST" 52 0 "a_674_n1052#" 84 2016,132 "VSS" 84 5712,304
+device msubckt sg13_lv_nmos 648 -1052 649 -1051 l=26 w=84 "VSS" "dff_nclk_0.D" 52 0 "a_580_n1052#" 84 5712,304 "a_674_n1052#" 84 2016,132
+device msubckt sg13_lv_pmos 1571 -667 1572 -666 l=26 w=84 "VDD" "nRST" 52 0 "VDD" 84 4714,205 "a_1305_n667#" 84 6132,314
+device msubckt sg13_lv_pmos 1456 -667 1457 -666 l=26 w=84 "VDD" "a_1456_n729#" 52 0 "a_1407_n667#" 84 2058,133 "VDD" 84 4714,205
+device msubckt sg13_lv_pmos 1381 -667 1382 -666 l=26 w=84 "VDD" "a_877_n738#" 52 0 "a_1305_n667#" 84 3192,160 "a_1407_n667#" 84 2058,133
+device msubckt sg13_lv_pmos 1279 -667 1280 -666 l=26 w=84 "VDD" "a_1073_n738#" 52 0 "a_580_n1052#" 84 5712,304 "a_1305_n667#" 84 3192,160
+device msubckt sg13_lv_pmos 1047 -738 1048 -737 l=26 w=200 "VDD" "a_877_n738#" 52 0 "VDD" 200 7600,276 "a_1073_n738#" 200 13600,536
+device msubckt sg13_lv_pmos 945 -738 946 -737 l=26 w=200 "VDD" "dff_nclk_0.sg13g2_dfrbp_1_0.CLK" 52 0 "a_877_n738#" 200 13600,536 "VDD" 200 7600,276
+device msubckt sg13_lv_nmos 273 -1056 274 -1055 l=26 w=148 "VSS" "CLK" 52 0 "VSS" 148 10360,436 "dff_nclk_0.sg13g2_dfrbp_1_0.CLK" 148 10360,436
+device msubckt sg13_lv_pmos 741 -622 742 -621 l=26 w=84 "VDD" "nRST" 52 0 "a_580_n1052#" 84 3192,160 "VDD" 84 5712,304
+device msubckt sg13_lv_pmos 639 -622 640 -621 l=26 w=84 "VDD" "dff_nclk_0.D" 52 0 "VDD" 84 5712,304 "a_580_n1052#" 84 3192,160
+device msubckt sg13_lv_pmos 275 -759 276 -758 l=26 w=224 "VDD" "CLK" 52 0 "VDD" 224 15680,588 "dff_nclk_0.sg13g2_dfrbp_1_0.CLK" 224 15680,588
+device msubckt sg13_lv_pmos 2884 -142 2885 -141 l=26 w=224 "VDD" "a_2441_216#" 52 0 "a_2612_n142#" 224 8512,300 "DIV" 224 15232,584
+device msubckt sg13_lv_pmos 2782 -142 2783 -141 l=26 w=224 "VDD" "BIT" 52 0 "VDD" 224 8512,300 "a_2612_n142#" 224 8512,300
+device msubckt sg13_lv_pmos 2680 -142 2681 -141 l=26 w=224 "VDD" "dff_nclk_0.Q" 52 0 "a_2612_n142#" 224 15232,584 "VDD" 224 8512,300
+device msubckt sg13_lv_pmos 2458 -142 2459 -141 l=26 w=200 "VDD" "BIT" 52 0 "a_2409_n142#" 200 4900,249 "a_2441_216#" 200 13600,536
+device msubckt sg13_lv_pmos 2383 -142 2384 -141 l=26 w=200 "VDD" "dff_nclk_0.Q" 52 0 "VDD" 200 14400,544 "a_2409_n142#" 200 4900,249
+device msubckt sg13_lv_pmos 1336 -142 1337 -141 l=26 w=224 "VDD" "a_893_216#" 52 0 "a_1064_n142#" 224 8512,300 "dff_nclk_0.D" 224 15232,584
+device msubckt sg13_lv_pmos 1234 -142 1235 -141 l=26 w=224 "VDD" "dff_nclk_0.Q" 52 0 "VDD" 224 8512,300 "a_1064_n142#" 224 8512,300
+device msubckt sg13_lv_pmos 1132 -142 1133 -141 l=26 w=224 "VDD" "Cin" 52 0 "a_1064_n142#" 224 15232,584 "VDD" 224 8512,300
+device msubckt sg13_lv_pmos 910 -142 911 -141 l=26 w=200 "VDD" "dff_nclk_0.Q" 52 0 "a_861_n142#" 200 4900,249 "a_893_216#" 200 13600,536
+device msubckt sg13_lv_pmos 835 -142 836 -141 l=26 w=200 "VDD" "Cin" 52 0 "VDD" 200 14400,544 "a_861_n142#" 200 4900,249
+device msubckt sg13_lv_pmos 425 -142 426 -141 l=26 w=224 "VDD" "a_153_206#" 52 0 "VDD" 224 7672,300 "Cout" 224 15232,584
+device msubckt sg13_lv_pmos 323 -142 324 -141 l=26 w=168 "VDD" "dff_nclk_0.Q" 52 0 "a_153_206#" 168 6384,244 "VDD" 168 7672,300
+device msubckt sg13_lv_pmos 221 -142 222 -141 l=26 w=168 "VDD" "Cin" 52 0 "VDD" 168 11424,472 "a_153_206#" 168 6384,244
+device msubckt sg13_lv_nmos 2868 216 2869 217 l=26 w=148 "VSS" "a_2441_216#" 52 0 "DIV" 148 6512,236 "VSS" 148 12432,464
+device msubckt sg13_lv_nmos 2754 216 2755 217 l=26 w=148 "VSS" "BIT" 52 0 "a_2706_216#" 148 3552,196 "DIV" 148 6512,236
+device msubckt sg13_lv_nmos 2680 216 2681 217 l=26 w=148 "VSS" "dff_nclk_0.Q" 52 0 "VSS" 148 6098,234 "a_2706_216#" 148 3552,196
+device msubckt sg13_lv_nmos 2568 216 2569 217 l=26 w=110 "VSS" "BIT" 52 0 "a_2441_216#" 110 6985,237 "VSS" 110 6098,234
+device msubckt sg13_lv_nmos 2415 216 2416 217 l=26 w=110 "VSS" "dff_nclk_0.Q" 52 0 "VSS" 110 14960,492 "a_2441_216#" 110 6985,237
+device msubckt sg13_lv_nmos 1320 216 1321 217 l=26 w=148 "VSS" "a_893_216#" 52 0 "dff_nclk_0.D" 148 6512,236 "VSS" 148 12432,464
+device msubckt sg13_lv_nmos 1206 216 1207 217 l=26 w=148 "VSS" "dff_nclk_0.Q" 52 0 "a_1158_216#" 148 3552,196 "dff_nclk_0.D" 148 6512,236
+device msubckt sg13_lv_nmos 1132 216 1133 217 l=26 w=148 "VSS" "Cin" 52 0 "VSS" 148 6098,234 "a_1158_216#" 148 3552,196
+device msubckt sg13_lv_nmos 1020 216 1021 217 l=26 w=110 "VSS" "dff_nclk_0.Q" 52 0 "a_893_216#" 110 6985,237 "VSS" 110 6098,234
+device msubckt sg13_lv_nmos 867 216 868 217 l=26 w=110 "VSS" "Cin" 52 0 "VSS" 110 14960,492 "a_893_216#" 110 6985,237
+device msubckt sg13_lv_nmos 425 206 426 207 l=26 w=148 "VSS" "a_153_206#" 52 0 "VSS" 148 5324,224 "Cout" 148 10064,432
+device msubckt sg13_lv_nmos 323 206 324 207 l=26 w=128 "VSS" "dff_nclk_0.Q" 52 0 "a_247_206#" 128 4864,204 "VSS" 128 5324,224
+device msubckt sg13_lv_nmos 221 206 222 207 l=26 w=128 "VSS" "Cin" 52 0 "a_153_206#" 128 8704,392 "a_247_206#" 128 4864,204

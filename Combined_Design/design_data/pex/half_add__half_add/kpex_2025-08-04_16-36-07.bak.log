@@ -1,0 +1,3 @@
+[2025-08-04 16:36:07,557] [INFO]    GDS input file passed, running in LVS mode
+[2025-08-04 16:36:07,590] [INFO]    No explicit top cell specified, using top cell 'half_add'
+[2025-08-04 16:36:07,594] [ERROR]    Can't read schematic (LVS input) at path xschem/simulations/hald_add.spice

@@ -1,0 +1,72 @@
+scale 1000 1 0.5
+rnode "cout" 0 0 -728 390 0
+rnode "sg13g2_and2_1_0.X" 0 0 -297 254 0
+resist "sg13g2_and2_1_0.X" "cout" 9.68421
+rnode "sum" 0 0 460 390 0
+rnode "sg13g2_xor2_1_0.X" 0 0 572 257 0
+resist "sg13g2_xor2_1_0.X" "sum" 9.33969
+rnode "inB.n0" 0 0 -500 378 0
+rnode "inB" 0 0 460 -93 0
+rnode "inB.n1" 0 0 411 350 0
+rnode "sg13g2_xor2_1_0.B" 0 0 143 133 0
+rnode "inB.n2" 0 0 87 362 0
+rnode "inB.n3" 0 0 174 175 0
+rnode "inB.n4" 0 0 288 166 0
+rnode "inB.n5" 0 0 288 166 0
+rnode "inB.n6" 0 0 -533 157 0
+rnode "sg13g2_and2_1_0.B" 0 0 -572 113 0
+resist "inB.n3" "sg13g2_xor2_1_0.B" 0.0508955
+resist "sg13g2_and2_1_0.B" "inB.n6" 0.0620513
+resist "inB.n4" "inB.n3" 0.187164
+resist "inB.n5" "inB" 0.465763
+resist "inB.n5" "inB.n4" 9
+resist "inB.n6" "inB.n5" 10.5506
+resist "inB.n3" "inB.n2" 15
+resist "inB.n6" "inB.n0" 15.0226
+resist "inB.n4" "inB.n1" 15.1839
+rnode "inA" 0 0 -728 -93 0
+rnode "inA.n0" 0 0 -606 -62 0
+rnode "sg13g2_and2_1_0.A" 0 0 -707 -93 0
+rnode "inA.n1" 0 0 -640 -38 0
+rnode "inA.n2" 0 0 -640 -38 0
+rnode "inA.n3" 0 0 -82 159 0
+rnode "inA.n4" 0 0 -82 159 0
+rnode "sg13g2_xor2_1_0.A" 0 0 -123 116 0
+resist "inA.n1" "sg13g2_and2_1_0.A" 0.0500118
+resist "sg13g2_xor2_1_0.A" "inA.n4" 0.0649197
+resist "inA.n2" "inA" 0.0697658
+resist "inA.n1" "inA.n0" 7.5005
+resist "inA.n4" "inA.n3" 7.50463
+resist "inA.n2" "inA.n1" 9.01735
+resist "inA.n4" "inA.n2" 9.81941
+rnode "VSS.n0" 0 0 -104 -174 0
+rnode "VSS" 0 0 -728 -218 0
+rnode "VSS.n1" 0 0 -104 -174 0
+rnode "VSS" 0 -0 -728 -218 0
+rnode "sg13g2_xor2_1_0.VSS" 0 0 -152 -218 0
+rnode "VSS" 0 -0 -728 -218 0
+rnode "sg13g2_xor2_1_0.VSS" 0 0 -152 -218 0
+rnode "VSS.n2" 0 0 -95 -174 0
+rnode "VSS.n3" 0 0 -75 34 0
+rnode "VSS.n4" 0 0 12 -174 0
+rnode "VSS.n5" 0 0 376 -174 0
+rnode "VSS.n6" 0 0 -296 -174 0
+rnode "sg13g2_xor2_1_0.VSS" 0 0 -152 -218 0
+resist "VSS.n5" "VSS.n1" 0.000511702
+resist "VSS.n4" "VSS.n3" 0.00835683
+resist "VSS.n2" "VSS.n0" 0.01125
+resist "VSS.n2" "sg13g2_xor2_1_0.VSS" 0.0223929
+resist "VSS.n3" "VSS.n2" 0.0346579
+resist "sg13g2_xor2_1_0.VSS" "VSS.n0" 0.06
+resist "VSS.n4" "sg13g2_xor2_1_0.VSS" 0.205
+resist "sg13g2_xor2_1_0.VSS" "VSS" 0.226286
+resist "VSS.n6" "VSS" 0.298433
+resist "sg13g2_xor2_1_0.VSS" "VSS.n6" 0.417195
+resist "sg13g2_xor2_1_0.VSS" "VSS" 0.72
+resist "VSS.n5" "VSS.n4" 3.1142
+resist "VSS.n1" "VSS.n0" 17
+resist "VSS.n3" "VSS.n1" 17.0005
+resist "VSS.n6" "VSS.n5" 1455.25
+rnode "VDD" 0 0 -728 538 0
+rnode "sg13g2_xor2_1_0.VDD" 0 0 -152 538 0
+resist "sg13g2_xor2_1_0.VDD" "VDD" 0.68842
