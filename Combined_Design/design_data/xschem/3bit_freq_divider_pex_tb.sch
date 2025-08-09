@@ -4,7 +4,7 @@ K {}
 V {}
 S {}
 E {}
-B 2 220 -440 1020 -40 {flags=graph
+B 2 240 -440 1040 -40 {flags=graph
 y1=0
 y2=1.3
 ypos1=0
@@ -13,7 +13,7 @@ divy=5
 subdivy=1
 unity=1
 x1=0
-x2=4e-07
+x2=3.5e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -26,8 +26,8 @@ unitx=1
 logx=0
 logy=0
 hilight_wave=-1}
-B 2 220 40 1020 440 {flags=graph
-y1=-0.021
+B 2 240 40 1040 440 {flags=graph
+y1=-0.032
 y2=1.3
 ypos1=0
 ypos2=2
@@ -35,7 +35,7 @@ divy=5
 subdivy=1
 unity=1
 x1=0
-x2=4e-07
+x2=3.5e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -77,7 +77,7 @@ C {vsource.sym} -810 130 0 0 {name=Vclk value="dc 0 ac 0 pulse(0, 1.2, 0, 100p, 
 C {lab_pin.sym} -810 60 1 0 {name=p19 sig_type=std_logic lab=CLK_IN}
 C {gnd.sym} -970 200 0 0 {name=l2 lab=GND}
 C {gnd.sym} -810 200 0 0 {name=l3 lab=GND}
-C {devices/code_shown.sym} -1100 -240 0 0 {name=MEASURE only_toplevel=true 
+C {devices/code_shown.sym} -1120 -240 0 0 {name=MEASURE only_toplevel=true 
 value="
 .meas tran tperiod_in TRIG v(clk_in) VAL=0.5 FALL=1 TARG v(clk_in) VAL=0.5 FALL=2
 .meas tran freq_in PARAM = '1e-6/tperiod_in'
@@ -113,7 +113,7 @@ C {gnd.sym} -110 440 0 0 {name=l6 lab=GND}
 C {lab_pin.sym} -210 290 0 0 {name=p3 sig_type=std_logic lab=A1}
 C {lab_pin.sym} -110 310 0 0 {name=p4 sig_type=std_logic lab=A2}
 C {lab_pin.sym} -450 120 0 0 {name=p7 sig_type=std_logic lab=EN}
-C {devices/code_shown.sym} -1100 -360 0 0 {name=MODEL
+C {devices/code_shown.sym} -1120 -360 0 0 {name=MODEL
 only_toplevel=true
 format="tcleval( @value )"
 value="
@@ -127,7 +127,7 @@ value="
 
 .control
 save all 
-tran 50p 350n uic
+tran 50p 350n
 
 write tran_3bit_freq_divider_pex.raw
 .endc
@@ -136,3 +136,10 @@ C {3bit_freq_divider.sym} -170 90 0 0 {name=x1}
 C {vsource.sym} -310 370 0 0 {name=Va0 value="dc \{A0\}" savecurrent=false}
 C {gnd.sym} -310 440 0 0 {name=l7 lab=GND}
 C {lab_pin.sym} -310 260 0 0 {name=p5 sig_type=std_logic lab=A0}
+C {code.sym} -300 -220 0 0 {name=RLEAK only_toplevel=false value=
+"
+RLEAK_C418  x1.a_n232_n2530#  VSS  1e11
+RLEAK_C419  x1.a_n232_n2508#  VSS  1e11
+RLEAK_C443  x1.a_n232_n774#   VSS  1e11
+RLEAK_C444  x1.a_n232_n752#   VSS  1e11
+"}

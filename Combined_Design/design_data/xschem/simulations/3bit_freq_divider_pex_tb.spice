@@ -39,10 +39,18 @@ Va0 A0 GND dc {A0}
 
 .control
 save all
-tran 50p 350n uic
+tran 50p 350n
 
 write tran_3bit_freq_divider_pex.raw
 .endc
+
+
+
+
+RLEAK_C418  x1.a_n232_n2530#  VSS  1e11
+RLEAK_C419  x1.a_n232_n2508#  VSS  1e11
+RLEAK_C443  x1.a_n232_n774#   VSS  1e11
+RLEAK_C444  x1.a_n232_n752#   VSS  1e11
 
 
 **** end user architecture code
