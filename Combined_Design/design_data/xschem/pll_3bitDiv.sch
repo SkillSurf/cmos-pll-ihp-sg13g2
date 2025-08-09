@@ -116,4 +116,4 @@ C {ipin.sym} -180 -70 3 0 {name=p38 lab=Y1}
 C {ipin.sym} -140 -70 3 0 {name=p39 lab=Y2}
 C {lab_pin.sym} -400 -200 0 0 {name=p40 sig_type=std_logic lab=EN}
 C {lab_pin.sym} -440 -290 1 0 {name=p41 sig_type=std_logic lab=VCO_OUT}
-C {11Stage_vco_new.sym} -610 -260 0 0 {name=x8}
+C {vco_wob.sym} -610 -260 0 0 {name=x4}

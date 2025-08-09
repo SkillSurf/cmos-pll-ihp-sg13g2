@@ -156,7 +156,7 @@ value="
 .control
 save all
  
-tran 10n 1u uic
+tran 1n 1u uic
 
 write tran_pll_3bitDiv_tb_post.raw
 .endc
@@ -169,14 +169,6 @@ tclcommand="xschem raw_read $netlist_dir/tran_pll_3bitDiv_tb_post.raw tran"
 C {vsource.sym} -1660 20 0 0 {name=V2 value="PULSE(0 1.2 0.2n 5n 5n 50n 100n)" savecurrent=false}
 C {gnd.sym} -1660 70 0 0 {name=l10 lab=GND}
 C {lab_pin.sym} -1660 -70 0 0 {name=p15 sig_type=std_logic lab=CLK_IN}
-C {code.sym} -410 -330 0 0 {name=MEASURE only_toplevel=false 
-value="
-.meas tran tperiod_in TRIG v(clk_in) VAL=0.6 FALL=1 TARG v(clk_in) VAL=0.6 FALL=2
-.meas tran ref_freq PARAM = '1e-6/tperiod_in'
-
-.meas tran tperiod_out TRIG v(clk_out) VAL=0.6 FALL=1 TARG v(clk_out) VAL=0.6 FALL=2
-.meas tran pll_freq PARAM = '1e-6/tperiod_out'
-"}
 C {vdd.sym} -1180 -160 0 0 {name=l3 lab=VDD}
 C {gnd.sym} -1180 60 0 0 {name=l4 lab=GND}
 C {gnd.sym} -1400 20 0 0 {name=l5 lab=GND}
@@ -204,7 +196,6 @@ value="
 .include $::PDK_ROOT/ihp-sg13g2/libs.ref/sg13g2_stdcell/spice/sg13g2_stdcell.spice
 "
 place=header}
-C {pll_3bitDiv.sym} -1230 -50 0 0 {name=x1}
 C {vsource.sym} -1140 170 0 0 {name=Va2 value="dc \{A2\}" savecurrent=false}
 C {gnd.sym} -1140 240 0 0 {name=l9 lab=GND}
 C {lab_pin.sym} -1140 110 2 0 {name=p1 sig_type=std_logic lab=A2}
@@ -223,3 +214,4 @@ value="
 .param B1 = 0
 .param B2 = 0
 "}
+C {pll_3bitDiv.sym} -1230 -50 0 0 {name=x1}

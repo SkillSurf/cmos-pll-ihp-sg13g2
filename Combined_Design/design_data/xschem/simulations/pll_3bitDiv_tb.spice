@@ -1,4 +1,4 @@
-** sch_path: /foss/designs/PROJECTS/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/pll_3bitDiv_tb.sch
+** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/Combined_Design/design_data/xschem/pll_3bitDiv_tb.sch
 
 .lib /foss/pdks/ihp-sg13g2/libs.tech/ngspice/models/cornerMOSlv.lib mos_tt
 .lib /foss/pdks/ihp-sg13g2/libs.tech/ngspice/models/cornerRES.lib res_typ_stat
@@ -11,11 +11,11 @@ V2 CLK_IN GND PULSE(0 1.2 0.2n 5n 5n 50n 100n)
 Va0 A0 GND dc {A0}
 Va1 A1 GND dc {A1}
 * noconn CLK_OUT
-x1 CLK_IN CLK_OUT B0 B2 B1 VDD GND GND A1 A2 A0 pll_3bitDiv
 Va2 A2 GND dc {A2}
 Vb0 B0 GND dc {B0}
 Vb1 B1 GND dc {B1}
 Vb2 B2 GND dc {B2}
+x1 CLK_IN CLK_OUT B0 B2 B1 VDD GND GND A1 A2 A0 pll_3bitDiv
 **** begin user architecture code
 
 
@@ -27,20 +27,11 @@ Vb2 B2 GND dc {B2}
 .control
 save all
 
-tran 10n 1u uic
+tran 1n 1u uic
 
 write tran_pll_3bitDiv_tb_post.raw
 .endc
 
-
-
-
-
-.meas tran tperiod_in TRIG v(clk_in) VAL=0.6 FALL=1 TARG v(clk_in) VAL=0.6 FALL=2
-.meas tran ref_freq PARAM = '1e-6/tperiod_in'
-
-.meas tran tperiod_out TRIG v(clk_out) VAL=0.6 FALL=1 TARG v(clk_out) VAL=0.6 FALL=2
-.meas tran pll_freq PARAM = '1e-6/tperiod_out'
 
 
 
