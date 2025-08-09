@@ -1,0 +1,48 @@
+
+Magic 8.3 revision 527 - Compiled on Sat May 24 11:19:49 AM CEST 2025.
+Starting magic under Tcl interpreter
+Using the terminal as the console.
+WARNING: RLIMIT_NOFILE is above 1024 and Tcl_Version<9 this may cause runtime issues [rlim_cur=1048576]
+Using NULL graphics device.
+Processing system .magicrc file
+Sourcing design .magicrc for technology ihp-sg13g2 ...
+2 Magic internal units = 1 Lambda
+Input style sg13g2(): scaleFactor=2, multiplier=2
+The following types are not handled by extraction and will be treated as non-electrical types:
+    fillfet sealcont difffill nemitter hvnemitter hvisodiffres sealvia1 sealvia2 sealvia3 sealvia4 sealvia5 sealvia6 pad seal thruvia 
+Scaled tech values by 2 / 1 to match internal grid scaling
+Loading "pex/2bit_freq_divider__2bit_freq_divider/magic_RC/2bit_freq_divider_MAGIC_RC_Script.tcl" from command line.
+Warning: Calma reading is not undoable!  I hope that's OK.
+Library written using GDS-II Release 6.0
+Library name: LIB
+Reading "sg13g2_dfrbp_1".
+Reading "sg13g2_inv_1".
+Reading "sg13g2_xor2_1".
+Reading "sg13g2_and2_1".
+Reading "dff_nclk".
+CIF file read warning: CIF style sg13g2(): units rescaled by factor of 5 / 1
+Reading "half_add".
+Reading "freq_div_cell".
+Reading "sg13g2_tiehi".
+Reading "sg13g2_or2_1".
+Reading "sg13g2_nand2_1".
+Reading "2bit_freq_divider".
+Extracting 2bit_freq_divider into /foss/designs/PROJECTS/cmos-pll-ihp-sg13g2/Combined_Design/design_data/pex/2bit_freq_divider__2bit_freq_divider/magic_RC/2bit_freq_divider.ext:
+Port: name = VSS is new node 0x561b69a6c980
+Location is (-1659, 1378); drivepoint (-1659, 1378)
+Port: name = VDD is new node 0x561b696807e0
+Location is (-1659, -2294); drivepoint (-1659, -2294)
+Port: name = CLK_OUT is new node 0x561b69d0ed40
+Location is (3314, -1521); drivepoint (3314, -1521)
+Port: name = A1 is new node 0x561b69d0e840
+Location is (1941, -407); drivepoint (1941, -407)
+Port: name = CLK_IN is new node 0x561b695d1c30
+Location is (-1747, -794); drivepoint (-1747, -794)
+Port: name = EN is new node 0x561b69650d70
+Location is (-1747, -1800); drivepoint (-1747, -1800)
+Port: name = A0 is new node 0x561b69e0b850
+Location is (2041, 947); drivepoint (2041, 947)
+Total Nets: 7
+Nets extracted: 7 (1.000000)
+Nets output: 7 (1.000000)
+exttospice finished.

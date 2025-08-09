@@ -1,0 +1,1024 @@
+* NGSPICE file created from 2bit_freq_divider.ext - technology: ihp-sg13g2
+
+.subckt 2bit_freq_divider VDD VSS A0 CLK_OUT CLK_IN EN A1
+X0 a_3126_n1943# a_2854_n1975# a_2757_n1845# VDD sg13_lv_pmos ad=0.4657p pd=2.54u as=0.2442p ps=2.06u w=0.66u l=0.13u
+X1 a_935_n1985# a_n222_n1666# a_741_n1985# VSS sg13_lv_nmos ad=54.6f pd=0.68u as=0.2017p ps=1.48u w=0.42u l=0.13u
+X2 a_n1377_624# a_n1576_761# a_n1482_1067# VSS sg13_lv_nmos ad=0.27427p pd=2.28u as=0.2307p ps=1.615u w=0.795u l=0.13u
+X3 a_2819_778# a_2778_n414# a_2778_n280# VDD sg13_lv_pmos ad=0.1428p pd=1.52u as=79.8f ps=0.8u w=0.42u l=0.13u
+X4 freq_div_cell_0.dff_nclk_0.sg13g2_dfrbp_1_0.CLK freq_div_cell_0.CLK VDD VDD sg13_lv_pmos ad=0.392p pd=2.94u as=0.392p ps=2.94u w=1.12u l=0.13u
+X5 VSS freq_div_cell_0.nRST a_n425_n224# VSS sg13_lv_nmos ad=0.1428p pd=1.52u as=50.4f ps=0.66u w=0.42u l=0.13u
+X6 a_411_n1940# a_357_n1657# a_333_n1940# VSS sg13_lv_nmos ad=48.3f pd=0.65u as=54.6f ps=0.68u w=0.42u l=0.13u
+X7 a_2779_n1425# a_2778_n869# VDD VDD sg13_lv_pmos ad=0.2856p pd=2.36u as=0.2016p ps=1.5u w=0.84u l=0.13u
+X8 VSS A1 a_1342_n712# VSS sg13_lv_nmos ad=0.15245p pd=1.17u as=0.17462p ps=1.185u w=0.55u l=0.13u
+X9 VDD CLK_IN freq_div_cell_0.CLK VDD sg13_lv_pmos ad=0.3808p pd=2.92u as=0.2128p ps=1.5u w=1.12u l=0.13u
+X10 a_966_169# a_n26_90# a_741_n229# VDD sg13_lv_pmos ad=43.05f pd=0.625u as=0.17695p ps=1.56u w=0.42u l=0.13u
+X11 a_n852_1034# sg13g2_tiehi_1.L_HI a_n946_1034# VSS sg13_lv_nmos ad=0.1216p pd=1.02u as=0.2176p ps=1.96u w=0.64u l=0.13u
+X12 a_n238_686# sg13g2_tiehi_1.L_HI VDD VDD sg13_lv_pmos ad=0.1225p pd=1.245u as=0.36p ps=2.72u w=1u l=0.13u
+X13 VSS freq_div_cell_0.nRST a_411_n1940# VSS sg13_lv_nmos ad=0.1825p pd=1.325u as=48.3f ps=0.65u w=0.42u l=0.13u
+X14 a_206_n1595# a_n222_n1666# a_n519_n1980# VSS sg13_lv_nmos ad=79.8f pd=0.8u as=0.1428p ps=1.52u w=0.42u l=0.13u
+X15 a_2778_n686# a_2778_n869# VDD VDD sg13_lv_pmos ad=79.8f pd=0.8u as=0.2163p ps=1.55u w=0.42u l=0.13u
+X16 a_n238_n1070# freq_div_cell_0.Cin VDD VDD sg13_lv_pmos ad=0.1225p pd=1.245u as=0.36p ps=2.72u w=1u l=0.13u
+X17 VSS freq_div_cell_0.dff_nclk_0.Q a_n852_n722# VSS sg13_lv_nmos ad=0.1331p pd=1.12u as=0.1216p ps=1.02u w=0.64u l=0.13u
+X18 VDD a_741_n229# a_1550_n228# VDD sg13_lv_pmos ad=0.2016p pd=1.5u as=0.2856p ps=2.36u w=0.84u l=0.13u
+X19 a_n946_n722# freq_div_cell_0.Cin VDD VDD sg13_lv_pmos ad=0.1596p pd=1.22u as=0.2856p ps=2.36u w=0.84u l=0.13u
+X20 VDD freq_div_cell_0.nRST a_n519_n1980# VDD sg13_lv_pmos ad=0.1428p pd=1.52u as=79.8f ps=0.8u w=0.42u l=0.13u
+X21 VDD sg13g2_tiehi_0.L_HI a_2778_n280# VDD sg13_lv_pmos ad=0.11785p pd=1.025u as=0.1533p ps=1.57u w=0.42u l=0.13u
+X22 a_2859_n58# a_2814_n388# a_2859_n130# VSS sg13_lv_nmos ad=54.6f pd=0.68u as=48.3f ps=0.65u w=0.42u l=0.13u
+X23 a_1342_1044# A0 a_1310_686# VDD sg13_lv_pmos ad=0.34p pd=2.68u as=0.1225p ps=1.245u w=1u l=0.13u
+X24 VDD a_987_n265# a_966_169# VDD sg13_lv_pmos ad=79.8f pd=0.8u as=43.05f ps=0.625u w=0.42u l=0.13u
+X25 VDD a_357_99# a_308_161# VDD sg13_lv_pmos ad=0.11785p pd=1.025u as=51.45f ps=0.665u w=0.42u l=0.13u
+X26 a_2819_778# sg13g2_tiehi_0.L_HI VDD VDD sg13_lv_pmos ad=79.8f pd=0.8u as=0.1428p ps=1.52u w=0.42u l=0.13u
+X27 a_741_n1985# a_n26_n1666# a_357_n1657# VSS sg13_lv_nmos ad=0.2017p pd=1.48u as=0.19397p ps=1.29u w=0.64u l=0.13u
+X28 a_1513_n1070# A1 VDD VDD sg13_lv_pmos ad=0.2128p pd=1.5u as=0.2128p ps=1.5u w=1.12u l=0.13u
+X29 VSS A0 a_1342_1044# VSS sg13_lv_nmos ad=0.15245p pd=1.17u as=0.17462p ps=1.185u w=0.55u l=0.13u
+X30 freq_div_cell_0.dff_nclk_0.Q a_1550_n1984# VSS VSS sg13_lv_nmos ad=0.2516p pd=2.16u as=0.14505p ps=1.15u w=0.74u l=0.13u
+X31 VSS freq_div_cell_0.dff_nclk_0.Q a_n206_n712# VSS sg13_lv_nmos ad=0.15245p pd=1.17u as=0.17462p ps=1.185u w=0.55u l=0.13u
+X32 VSS a_2778_n280# a_2814_n388# VSS sg13_lv_nmos ad=0.1825p pd=1.325u as=0.19397p ps=1.29u w=0.64u l=0.13u
+X33 a_987_n265# freq_div_cell_0.nRST VDD VDD sg13_lv_pmos ad=79.8f pd=0.8u as=79.8f ps=0.8u w=0.42u l=0.13u
+X34 a_n26_n1666# a_n222_n1666# VDD VDD sg13_lv_pmos ad=0.34p pd=2.68u as=0.19p ps=1.38u w=1u l=0.13u
+X35 a_741_n229# a_n222_90# a_357_99# VDD sg13_lv_pmos ad=0.17695p pd=1.56u as=0.19p ps=1.38u w=1u l=0.13u
+X36 a_206_161# a_n222_90# a_n519_n224# VSS sg13_lv_nmos ad=79.8f pd=0.8u as=0.1428p ps=1.52u w=0.42u l=0.13u
+X37 a_2733_n1929# a_2854_n1975# a_2854_n1975# VSS sg13_lv_nmos ad=0.2307p pd=1.615u as=0.102p ps=1.28u w=0.3u l=0.13u
+X38 VDD a_741_n229# a_987_n265# VDD sg13_lv_pmos ad=0.2163p pd=1.55u as=79.8f ps=0.8u w=0.42u l=0.13u
+X39 a_n206_n712# freq_div_cell_0.dff_nclk_0.Q a_n238_n1070# VDD sg13_lv_pmos ad=0.34p pd=2.68u as=0.1225p ps=1.245u w=1u l=0.13u
+X40 a_2793_n1819# a_2757_n1845# a_2733_n1929# VSS sg13_lv_nmos ad=0.27427p pd=2.28u as=0.2307p ps=1.615u w=0.795u l=0.13u
+X41 VDD freq_div_cell_0.dff_nclk_0.sg13g2_dfrbp_1_0.CLK a_n222_n1666# VDD sg13_lv_pmos ad=0.19p pd=1.38u as=0.34p ps=2.68u w=1u l=0.13u
+X42 VDD a_2778_n869# dff_nclk_0.D VDD sg13_lv_pmos ad=0.2163p pd=1.55u as=0.7616p ps=3.6u w=1.12u l=0.13u
+X43 a_1310_n1070# freq_div_cell_0.dff_nclk_0.Q VDD VDD sg13_lv_pmos ad=0.1225p pd=1.245u as=0.36p ps=2.72u w=1u l=0.13u
+X44 sg13g2_tiehi_0.L_HI a_2793_n1819# a_3126_n1943# VDD sg13_lv_pmos ad=0.3927p pd=2.99u as=0.4657p ps=2.54u w=1.155u l=0.13u
+X45 VSS a_n206_n712# freq_div_cell_0.dff_nclk_0.D VSS sg13_lv_nmos ad=0.3108p pd=2.32u as=0.1628p ps=1.18u w=0.74u l=0.13u
+X46 sg13g2_tiehi_1.L_HI a_n1377_624# a_n1576_602# VDD sg13_lv_pmos ad=0.3927p pd=2.99u as=0.4657p ps=2.54u w=1.155u l=0.13u
+X47 a_2111_n353# freq_div_cell_0.DIV VSS VSS sg13_lv_nmos ad=0.1045p pd=0.93u as=0.187p ps=1.78u w=0.55u l=0.13u
+X48 VSS a_2778_n608# a_2778_n414# VSS sg13_lv_nmos ad=0.1544p pd=1.235u as=0.2516p ps=2.16u w=0.74u l=0.13u
+X49 a_1607_n712# freq_div_cell_0.dff_nclk_0.Q VSS VSS sg13_lv_nmos ad=88.8f pd=0.98u as=0.15245p ps=1.17u w=0.74u l=0.13u
+X50 VSS sg13g2_or2_1_0.A a_2111_n353# VSS sg13_lv_nmos ad=0.1469p pd=1.155u as=0.1045p ps=0.93u w=0.55u l=0.13u
+X51 VDD sg13g2_or2_1_0.A a_2205_n353# VDD sg13_lv_pmos ad=0.2226p pd=1.535u as=0.1596p ps=1.22u w=0.84u l=0.13u
+X52 a_2859_n130# sg13g2_tiehi_0.L_HI VSS VSS sg13_lv_nmos ad=48.3f pd=0.65u as=0.1825p ps=1.325u w=0.42u l=0.13u
+X53 VDD a_987_n2021# a_966_n1587# VDD sg13_lv_pmos ad=79.8f pd=0.8u as=43.05f ps=0.625u w=0.42u l=0.13u
+X54 VSS freq_div_cell_1.dff_nclk_0.Q a_n206_1044# VSS sg13_lv_nmos ad=0.15245p pd=1.17u as=0.17462p ps=1.185u w=0.55u l=0.13u
+X55 a_2814_n660# a_2778_n686# VSS VSS sg13_lv_nmos ad=54.6f pd=0.68u as=90.3f ps=0.85u w=0.42u l=0.13u
+X56 freq_div_cell_0.CLK CLK_IN a_n1430_n1149# VSS sg13_lv_nmos ad=0.2516p pd=2.16u as=66.6f ps=0.92u w=0.74u l=0.13u
+X57 a_2814_n843# a_2778_n869# a_2778_n686# VSS sg13_lv_nmos ad=47.25f pd=0.645u as=0.1428p ps=1.52u w=0.42u l=0.13u
+X58 VSS a_2779_n1425# CLK_OUT VSS sg13_lv_nmos ad=0.14505p pd=1.15u as=0.2516p ps=2.16u w=0.74u l=0.13u
+X59 a_n35_n1070# freq_div_cell_0.dff_nclk_0.Q VDD VDD sg13_lv_pmos ad=0.2128p pd=1.5u as=0.2128p ps=1.5u w=1.12u l=0.13u
+X60 VSS a_1342_n712# freq_div_cell_0.DIV VSS sg13_lv_nmos ad=0.3108p pd=2.32u as=0.1628p ps=1.18u w=0.74u l=0.13u
+X61 a_357_99# a_206_161# VSS VSS sg13_lv_nmos ad=0.19397p pd=1.29u as=0.1825p ps=1.325u w=0.64u l=0.13u
+X62 a_3212_n680# a_2778_n686# VDD VDD sg13_lv_pmos ad=43.05f pd=0.625u as=79.8f ps=0.8u w=0.42u l=0.13u
+X63 VDD freq_div_cell_1.dff_nclk_0.Q a_1513_686# VDD sg13_lv_pmos ad=0.2128p pd=1.5u as=0.3808p ps=2.92u w=1.12u l=0.13u
+X64 VSS sg13g2_tiehi_0.L_HI a_2814_n843# VSS sg13_lv_nmos ad=90.3f pd=0.85u as=47.25f ps=0.645u w=0.42u l=0.13u
+X65 VSS a_n206_1044# freq_div_cell_1.dff_nclk_0.D VSS sg13_lv_nmos ad=0.3108p pd=2.32u as=0.1628p ps=1.18u w=0.74u l=0.13u
+X66 a_n852_n722# freq_div_cell_0.Cin a_n946_n722# VSS sg13_lv_nmos ad=0.1216p pd=1.02u as=0.2176p ps=1.96u w=0.64u l=0.13u
+X67 a_1342_n712# A1 a_1310_n1070# VDD sg13_lv_pmos ad=0.34p pd=2.68u as=0.1225p ps=1.245u w=1u l=0.13u
+X68 a_2814_n388# a_2778_n414# a_2778_n869# VSS sg13_lv_nmos ad=0.19397p pd=1.29u as=0.2017p ps=1.48u w=0.64u l=0.13u
+X69 a_1607_1044# freq_div_cell_1.dff_nclk_0.Q VSS VSS sg13_lv_nmos ad=88.8f pd=0.98u as=0.15245p ps=1.17u w=0.74u l=0.13u
+X70 a_2819_704# sg13g2_tiehi_0.L_HI VSS VSS sg13_lv_nmos ad=50.4f pd=0.66u as=0.1428p ps=1.52u w=0.42u l=0.13u
+X71 VDD freq_div_cell_0.Cin a_n35_n1070# VDD sg13_lv_pmos ad=0.2128p pd=1.5u as=0.3808p ps=2.92u w=1.12u l=0.13u
+X72 VDD a_741_n1985# a_1550_n1984# VDD sg13_lv_pmos ad=0.2016p pd=1.5u as=0.2856p ps=2.36u w=0.84u l=0.13u
+X73 a_333_n1940# a_n26_n1666# a_206_n1595# VSS sg13_lv_nmos ad=54.6f pd=0.68u as=79.8f ps=0.8u w=0.42u l=0.13u
+X74 a_1513_686# A0 VDD VDD sg13_lv_pmos ad=0.2128p pd=1.5u as=0.2128p ps=1.5u w=1.12u l=0.13u
+X75 a_987_n265# a_741_n229# a_1125_n229# VSS sg13_lv_nmos ad=0.1428p pd=1.52u as=47.25f ps=0.645u w=0.42u l=0.13u
+X76 a_2819_778# a_2778_n608# a_2778_n280# VSS sg13_lv_nmos ad=0.1428p pd=1.52u as=79.8f ps=0.8u w=0.42u l=0.13u
+X77 a_2778_n869# a_2778_n608# a_2814_n660# VSS sg13_lv_nmos ad=0.2017p pd=1.48u as=54.6f ps=0.68u w=0.42u l=0.13u
+X78 freq_div_cell_0.dff_nclk_0.nQ a_741_n1985# VDD VDD sg13_lv_pmos ad=0.7616p pd=3.6u as=0.2163p ps=1.55u w=1.12u l=0.13u
+X79 a_n519_n1980# freq_div_cell_0.dff_nclk_0.D VDD VDD sg13_lv_pmos ad=79.8f pd=0.8u as=0.1428p ps=1.52u w=0.42u l=0.13u
+X80 a_2778_n280# a_2778_n608# a_3204_n30# VDD sg13_lv_pmos ad=79.8f pd=0.8u as=51.45f ps=0.665u w=0.42u l=0.13u
+X81 VSS a_1342_1044# sg13g2_or2_1_0.A VSS sg13_lv_nmos ad=0.3108p pd=2.32u as=0.1628p ps=1.18u w=0.74u l=0.13u
+X82 a_n35_686# freq_div_cell_1.dff_nclk_0.Q VDD VDD sg13_lv_pmos ad=0.2128p pd=1.5u as=0.2128p ps=1.5u w=1.12u l=0.13u
+X83 VDD freq_div_cell_0.nRST a_n519_n224# VDD sg13_lv_pmos ad=0.1428p pd=1.52u as=79.8f ps=0.8u w=0.42u l=0.13u
+X84 a_333_n184# a_n26_90# a_206_161# VSS sg13_lv_nmos ad=54.6f pd=0.68u as=79.8f ps=0.8u w=0.42u l=0.13u
+X85 a_206_161# freq_div_cell_0.nRST VDD VDD sg13_lv_pmos ad=0.1533p pd=1.57u as=0.11785p ps=1.025u w=0.42u l=0.13u
+X86 a_206_n1595# a_n26_n1666# a_n519_n1980# VDD sg13_lv_pmos ad=79.8f pd=0.8u as=0.1428p ps=1.52u w=0.42u l=0.13u
+X87 a_n26_90# a_n222_90# VDD VDD sg13_lv_pmos ad=0.34p pd=2.68u as=0.19p ps=1.38u w=1u l=0.13u
+X88 VDD a_2778_n280# a_2814_n388# VDD sg13_lv_pmos ad=0.34p pd=2.68u as=0.19p ps=1.38u w=1u l=0.13u
+X89 sg13g2_or2_1_0.A a_1342_1044# a_1513_686# VDD sg13_lv_pmos ad=0.3808p pd=2.92u as=0.2128p ps=1.5u w=1.12u l=0.13u
+X90 freq_div_cell_0.dff_nclk_0.sg13g2_dfrbp_1_0.CLK freq_div_cell_0.CLK VSS VSS sg13_lv_nmos ad=0.259p pd=2.18u as=0.259p ps=2.18u w=0.74u l=0.13u
+X91 freq_div_cell_0.DIV a_1342_n712# a_1513_n1070# VDD sg13_lv_pmos ad=0.3808p pd=2.92u as=0.2128p ps=1.5u w=1.12u l=0.13u
+X92 freq_div_cell_0.Cout a_n946_n722# VDD VDD sg13_lv_pmos ad=0.3808p pd=2.92u as=0.1918p ps=1.5u w=1.12u l=0.13u
+X93 freq_div_cell_1.dff_nclk_0.D a_n206_1044# a_n35_686# VDD sg13_lv_pmos ad=0.3808p pd=2.92u as=0.2128p ps=1.5u w=1.12u l=0.13u
+X94 a_n519_n224# freq_div_cell_1.dff_nclk_0.D VDD VDD sg13_lv_pmos ad=79.8f pd=0.8u as=0.1428p ps=1.52u w=0.42u l=0.13u
+X95 VDD a_2778_n608# a_2778_n414# VDD sg13_lv_pmos ad=0.19p pd=1.38u as=0.34p ps=2.68u w=1u l=0.13u
+X96 freq_div_cell_1.dff_nclk_0.nQ a_741_n229# VSS VSS sg13_lv_nmos ad=0.2775p pd=2.23u as=0.2516p ps=2.16u w=0.74u l=0.13u
+X97 freq_div_cell_1.dff_nclk_0.sg13g2_dfrbp_1_0.CLK freq_div_cell_0.CLK VDD VDD sg13_lv_pmos ad=0.392p pd=2.94u as=0.392p ps=2.94u w=1.12u l=0.13u
+X98 a_1125_n1985# freq_div_cell_0.nRST VSS VSS sg13_lv_nmos ad=47.25f pd=0.645u as=90.3f ps=0.85u w=0.42u l=0.13u
+X99 freq_div_cell_0.dff_nclk_0.D freq_div_cell_0.dff_nclk_0.Q a_59_n712# VSS sg13_lv_nmos ad=0.1628p pd=1.18u as=88.8f ps=0.98u w=0.74u l=0.13u
+X100 a_1342_n712# freq_div_cell_0.dff_nclk_0.Q VSS VSS sg13_lv_nmos ad=0.17462p pd=1.185u as=0.374p ps=2.46u w=0.55u l=0.13u
+X101 freq_div_cell_0.CLK EN VDD VDD sg13_lv_pmos ad=0.2128p pd=1.5u as=0.3808p ps=2.92u w=1.12u l=0.13u
+X102 a_411_n184# a_357_99# a_333_n184# VSS sg13_lv_nmos ad=48.3f pd=0.65u as=54.6f ps=0.68u w=0.42u l=0.13u
+X103 freq_div_cell_1.dff_nclk_0.Q a_1550_n228# VSS VSS sg13_lv_nmos ad=0.2516p pd=2.16u as=0.14505p ps=1.15u w=0.74u l=0.13u
+X104 a_n1430_n1149# EN VSS VSS sg13_lv_nmos ad=66.6f pd=0.92u as=0.2516p ps=2.16u w=0.74u l=0.13u
+X105 a_n26_90# a_n222_90# VSS VSS sg13_lv_nmos ad=0.2516p pd=2.16u as=0.1544p ps=1.235u w=0.74u l=0.13u
+X106 a_987_n2021# freq_div_cell_0.nRST VDD VDD sg13_lv_pmos ad=79.8f pd=0.8u as=79.8f ps=0.8u w=0.42u l=0.13u
+X107 a_59_n712# freq_div_cell_0.Cin VSS VSS sg13_lv_nmos ad=88.8f pd=0.98u as=0.15245p ps=1.17u w=0.74u l=0.13u
+X108 freq_div_cell_0.Cin a_n946_1034# VSS VSS sg13_lv_nmos ad=0.2516p pd=2.16u as=0.1331p ps=1.12u w=0.74u l=0.13u
+X109 VSS a_741_n229# a_1550_n228# VSS sg13_lv_nmos ad=0.14505p pd=1.15u as=0.187p ps=1.78u w=0.55u l=0.13u
+X110 freq_div_cell_1.dff_nclk_0.nQ a_741_n229# VDD VDD sg13_lv_pmos ad=0.7616p pd=3.6u as=0.2163p ps=1.55u w=1.12u l=0.13u
+X111 a_2779_n1425# a_2778_n869# VSS VSS sg13_lv_nmos ad=0.187p pd=1.78u as=0.14505p ps=1.15u w=0.55u l=0.13u
+X112 freq_div_cell_0.nRST a_2111_n353# VSS VSS sg13_lv_nmos ad=0.2516p pd=2.16u as=0.1469p ps=1.155u w=0.74u l=0.13u
+X113 a_n1482_1067# a_n1576_991# a_n1576_991# VSS sg13_lv_nmos ad=0.2307p pd=1.615u as=0.102p ps=1.28u w=0.3u l=0.13u
+X114 freq_div_cell_0.Cin a_n946_1034# VDD VDD sg13_lv_pmos ad=0.3808p pd=2.92u as=0.1918p ps=1.5u w=1.12u l=0.13u
+X115 a_2778_n608# dff_nclk_0.sg13g2_dfrbp_1_0.CLK VSS VSS sg13_lv_nmos ad=0.2516p pd=2.16u as=0.1544p ps=1.235u w=0.74u l=0.13u
+X116 a_987_n2021# a_741_n1985# a_1125_n1985# VSS sg13_lv_nmos ad=0.1428p pd=1.52u as=47.25f ps=0.645u w=0.42u l=0.13u
+X117 freq_div_cell_0.dff_nclk_0.D a_n206_n712# a_n35_n1070# VDD sg13_lv_pmos ad=0.3808p pd=2.92u as=0.2128p ps=1.5u w=1.12u l=0.13u
+X118 VDD a_741_n1985# a_987_n2021# VDD sg13_lv_pmos ad=0.2163p pd=1.55u as=79.8f ps=0.8u w=0.42u l=0.13u
+X119 a_2819_778# dff_nclk_0.D a_2819_704# VSS sg13_lv_nmos ad=0.1428p pd=1.52u as=50.4f ps=0.66u w=0.42u l=0.13u
+X120 freq_div_cell_1.dff_nclk_0.D freq_div_cell_1.dff_nclk_0.Q a_59_1044# VSS sg13_lv_nmos ad=0.1628p pd=1.18u as=88.8f ps=0.98u w=0.74u l=0.13u
+X121 VSS a_987_n2021# a_935_n1985# VSS sg13_lv_nmos ad=90.3f pd=0.85u as=54.6f ps=0.68u w=0.42u l=0.13u
+X122 a_1342_1044# freq_div_cell_1.dff_nclk_0.Q VSS VSS sg13_lv_nmos ad=0.17462p pd=1.185u as=0.374p ps=2.46u w=0.55u l=0.13u
+X123 VDD freq_div_cell_0.nRST dff_nclk_0.sg13g2_dfrbp_1_0.CLK VDD sg13_lv_pmos ad=0.392p pd=2.94u as=0.392p ps=2.94u w=1.12u l=0.13u
+X124 a_966_n1587# a_n26_n1666# a_741_n1985# VDD sg13_lv_pmos ad=43.05f pd=0.625u as=0.17695p ps=1.56u w=0.42u l=0.13u
+X125 VDD a_2779_n1425# CLK_OUT VDD sg13_lv_pmos ad=0.2016p pd=1.5u as=0.3808p ps=2.92u w=1.12u l=0.13u
+X126 VDD freq_div_cell_1.dff_nclk_0.Q a_n946_1034# VDD sg13_lv_pmos ad=0.1918p pd=1.5u as=0.1596p ps=1.22u w=0.84u l=0.13u
+X127 a_59_1044# sg13g2_tiehi_1.L_HI VSS VSS sg13_lv_nmos ad=88.8f pd=0.98u as=0.15245p ps=1.17u w=0.74u l=0.13u
+X128 freq_div_cell_1.dff_nclk_0.Q a_1550_n228# VDD VDD sg13_lv_pmos ad=0.3808p pd=2.92u as=0.2016p ps=1.5u w=1.12u l=0.13u
+X129 VSS a_2778_n869# dff_nclk_0.D VSS sg13_lv_nmos ad=0.2516p pd=2.16u as=0.2775p ps=2.23u w=0.74u l=0.13u
+X130 a_3204_n30# a_2814_n388# VDD VDD sg13_lv_pmos ad=51.45f pd=0.665u as=0.11785p ps=1.025u w=0.42u l=0.13u
+X131 VSS freq_div_cell_0.nRST a_411_n184# VSS sg13_lv_nmos ad=0.1825p pd=1.325u as=48.3f ps=0.65u w=0.42u l=0.13u
+X132 a_935_n229# a_n222_90# a_741_n229# VSS sg13_lv_nmos ad=54.6f pd=0.68u as=0.2017p ps=1.48u w=0.42u l=0.13u
+X133 VDD sg13g2_tiehi_0.L_HI a_2778_n686# VDD sg13_lv_pmos ad=79.8f pd=0.8u as=79.8f ps=0.8u w=0.42u l=0.13u
+X134 freq_div_cell_0.dff_nclk_0.nQ a_741_n1985# VSS VSS sg13_lv_nmos ad=0.2775p pd=2.23u as=0.2516p ps=2.16u w=0.74u l=0.13u
+X135 a_206_161# a_n26_90# a_n519_n224# VDD sg13_lv_pmos ad=79.8f pd=0.8u as=0.1428p ps=1.52u w=0.42u l=0.13u
+X136 a_1125_n229# freq_div_cell_0.nRST VSS VSS sg13_lv_nmos ad=47.25f pd=0.645u as=90.3f ps=0.85u w=0.42u l=0.13u
+X137 a_n946_1034# sg13g2_tiehi_1.L_HI VDD VDD sg13_lv_pmos ad=0.1596p pd=1.22u as=0.2856p ps=2.36u w=0.84u l=0.13u
+X138 VDD sg13g2_tiehi_1.L_HI a_n35_686# VDD sg13_lv_pmos ad=0.2128p pd=1.5u as=0.3808p ps=2.92u w=1.12u l=0.13u
+X139 a_2778_n869# a_2778_n414# a_3212_n680# VDD sg13_lv_pmos ad=0.17695p pd=1.56u as=43.05f ps=0.625u w=0.42u l=0.13u
+X140 a_2778_n280# a_2778_n414# a_2859_n58# VSS sg13_lv_nmos ad=79.8f pd=0.8u as=54.6f ps=0.68u w=0.42u l=0.13u
+X141 VSS freq_div_cell_0.nRST a_n425_n1980# VSS sg13_lv_nmos ad=0.1428p pd=1.52u as=50.4f ps=0.66u w=0.42u l=0.13u
+X142 a_308_n1595# a_n222_n1666# a_206_n1595# VDD sg13_lv_pmos ad=51.45f pd=0.665u as=79.8f ps=0.8u w=0.42u l=0.13u
+X143 a_n206_1044# freq_div_cell_1.dff_nclk_0.Q a_n238_686# VDD sg13_lv_pmos ad=0.34p pd=2.68u as=0.1225p ps=1.245u w=1u l=0.13u
+X144 a_2205_n353# freq_div_cell_0.DIV a_2111_n353# VDD sg13_lv_pmos ad=0.1596p pd=1.22u as=0.2856p ps=2.36u w=0.84u l=0.13u
+X145 a_1310_686# freq_div_cell_1.dff_nclk_0.Q VDD VDD sg13_lv_pmos ad=0.1225p pd=1.245u as=0.36p ps=2.72u w=1u l=0.13u
+X146 a_308_161# a_n222_90# a_206_161# VDD sg13_lv_pmos ad=51.45f pd=0.665u as=79.8f ps=0.8u w=0.42u l=0.13u
+X147 VDD freq_div_cell_0.dff_nclk_0.Q a_n946_n722# VDD sg13_lv_pmos ad=0.1918p pd=1.5u as=0.1596p ps=1.22u w=0.84u l=0.13u
+X148 VDD dff_nclk_0.D a_2819_778# VDD sg13_lv_pmos ad=0.1428p pd=1.52u as=79.8f ps=0.8u w=0.42u l=0.13u
+X149 a_206_n1595# freq_div_cell_0.nRST VDD VDD sg13_lv_pmos ad=0.1533p pd=1.57u as=0.11785p ps=1.025u w=0.42u l=0.13u
+X150 VSS a_987_n265# a_935_n229# VSS sg13_lv_nmos ad=90.3f pd=0.85u as=54.6f ps=0.68u w=0.42u l=0.13u
+X151 a_357_n1657# a_206_n1595# VSS VSS sg13_lv_nmos ad=0.19397p pd=1.29u as=0.1825p ps=1.325u w=0.64u l=0.13u
+X152 a_2814_n388# a_2778_n608# a_2778_n869# VDD sg13_lv_pmos ad=0.19p pd=1.38u as=0.17695p ps=1.56u w=1u l=0.13u
+X153 VSS freq_div_cell_1.dff_nclk_0.Q a_n852_1034# VSS sg13_lv_nmos ad=0.1331p pd=1.12u as=0.1216p ps=1.02u w=0.64u l=0.13u
+X154 VDD freq_div_cell_0.dff_nclk_0.Q a_1513_n1070# VDD sg13_lv_pmos ad=0.2128p pd=1.5u as=0.3808p ps=2.92u w=1.12u l=0.13u
+X155 a_n206_n712# freq_div_cell_0.Cin VSS VSS sg13_lv_nmos ad=0.17462p pd=1.185u as=0.374p ps=2.46u w=0.55u l=0.13u
+X156 freq_div_cell_0.Cout a_n946_n722# VSS VSS sg13_lv_nmos ad=0.2516p pd=2.16u as=0.1331p ps=1.12u w=0.74u l=0.13u
+X157 VDD freq_div_cell_1.dff_nclk_0.sg13g2_dfrbp_1_0.CLK a_n222_90# VDD sg13_lv_pmos ad=0.19p pd=1.38u as=0.34p ps=2.68u w=1u l=0.13u
+X158 a_2778_n608# dff_nclk_0.sg13g2_dfrbp_1_0.CLK VDD VDD sg13_lv_pmos ad=0.34p pd=2.68u as=0.19p ps=1.38u w=1u l=0.13u
+X159 freq_div_cell_0.DIV A1 a_1607_n712# VSS sg13_lv_nmos ad=0.1628p pd=1.18u as=88.8f ps=0.98u w=0.74u l=0.13u
+X160 VSS a_741_n1985# a_1550_n1984# VSS sg13_lv_nmos ad=0.14505p pd=1.15u as=0.187p ps=1.78u w=0.55u l=0.13u
+X161 VDD a_357_n1657# a_308_n1595# VDD sg13_lv_pmos ad=0.11785p pd=1.025u as=51.45f ps=0.665u w=0.42u l=0.13u
+X162 a_n1576_602# a_n1576_991# a_n1576_761# VDD sg13_lv_pmos ad=0.4657p pd=2.54u as=0.2442p ps=2.06u w=0.66u l=0.13u
+X163 a_741_n229# a_n26_90# a_357_99# VSS sg13_lv_nmos ad=0.2017p pd=1.48u as=0.19397p ps=1.29u w=0.64u l=0.13u
+X164 a_n26_n1666# a_n222_n1666# VSS VSS sg13_lv_nmos ad=0.2516p pd=2.16u as=0.1544p ps=1.235u w=0.74u l=0.13u
+X165 a_n425_n224# freq_div_cell_1.dff_nclk_0.D a_n519_n224# VSS sg13_lv_nmos ad=50.4f pd=0.66u as=0.1428p ps=1.52u w=0.42u l=0.13u
+X166 a_357_n1657# a_206_n1595# VDD VDD sg13_lv_pmos ad=0.19p pd=1.38u as=0.34p ps=2.68u w=1u l=0.13u
+X167 freq_div_cell_1.dff_nclk_0.sg13g2_dfrbp_1_0.CLK freq_div_cell_0.CLK VSS VSS sg13_lv_nmos ad=0.259p pd=2.18u as=0.259p ps=2.18u w=0.74u l=0.13u
+X168 a_n425_n1980# freq_div_cell_0.dff_nclk_0.D a_n519_n1980# VSS sg13_lv_nmos ad=50.4f pd=0.66u as=0.1428p ps=1.52u w=0.42u l=0.13u
+X169 VSS freq_div_cell_0.nRST dff_nclk_0.sg13g2_dfrbp_1_0.CLK VSS sg13_lv_nmos ad=0.259p pd=2.18u as=0.259p ps=2.18u w=0.74u l=0.13u
+X170 VSS freq_div_cell_0.dff_nclk_0.sg13g2_dfrbp_1_0.CLK a_n222_n1666# VSS sg13_lv_nmos ad=0.1544p pd=1.235u as=0.2516p ps=2.16u w=0.74u l=0.13u
+X171 freq_div_cell_0.dff_nclk_0.Q a_1550_n1984# VDD VDD sg13_lv_pmos ad=0.3808p pd=2.92u as=0.2016p ps=1.5u w=1.12u l=0.13u
+X172 a_n206_1044# sg13g2_tiehi_1.L_HI VSS VSS sg13_lv_nmos ad=0.17462p pd=1.185u as=0.374p ps=2.46u w=0.55u l=0.13u
+X173 a_357_99# a_206_161# VDD VDD sg13_lv_pmos ad=0.19p pd=1.38u as=0.34p ps=2.68u w=1u l=0.13u
+X174 freq_div_cell_0.nRST a_2111_n353# VDD VDD sg13_lv_pmos ad=0.3976p pd=2.95u as=0.2226p ps=1.535u w=1.12u l=0.13u
+X175 a_741_n1985# a_n222_n1666# a_357_n1657# VDD sg13_lv_pmos ad=0.17695p pd=1.56u as=0.19p ps=1.38u w=1u l=0.13u
+X176 VSS freq_div_cell_1.dff_nclk_0.sg13g2_dfrbp_1_0.CLK a_n222_90# VSS sg13_lv_nmos ad=0.1544p pd=1.235u as=0.2516p ps=2.16u w=0.74u l=0.13u
+X177 sg13g2_or2_1_0.A A0 a_1607_1044# VSS sg13_lv_nmos ad=0.1628p pd=1.18u as=88.8f ps=0.98u w=0.74u l=0.13u
+C0 VDD a_n1576_991# 0.06383f
+C1 sg13g2_tiehi_0.L_HI dff_nclk_0.sg13g2_dfrbp_1_0.CLK 0.15794f
+C2 a_2778_n280# a_2778_n414# 0.13068f
+C3 CLK_OUT a_2793_n1819# 0.02679f
+C4 EN freq_div_cell_0.Cout 0.0135f
+C5 freq_div_cell_0.dff_nclk_0.Q freq_div_cell_0.nRST 1.04232f
+C6 freq_div_cell_0.Cout a_n946_n722# 0.13166f
+C7 a_357_n1657# freq_div_cell_0.nRST 0.17248f
+C8 a_n35_686# freq_div_cell_1.dff_nclk_0.Q 0.02559f
+C9 dff_nclk_0.D a_2778_n608# 0.02056f
+C10 freq_div_cell_0.dff_nclk_0.D freq_div_cell_0.nRST 0.21745f
+C11 A0 sg13g2_or2_1_0.A 0.15042f
+C12 freq_div_cell_0.dff_nclk_0.Q freq_div_cell_0.dff_nclk_0.D 0.24019f
+C13 a_2778_n686# a_2778_n869# 0.41048f
+C14 freq_div_cell_0.dff_nclk_0.Q CLK_IN 0.01844f
+C15 a_n26_n1666# freq_div_cell_0.dff_nclk_0.sg13g2_dfrbp_1_0.CLK 0.01324f
+C16 a_2819_778# a_2778_n608# 0.17766f
+C17 A0 a_1342_1044# 0.4043f
+C18 a_2778_n869# a_2778_n414# 0.40027f
+C19 freq_div_cell_1.dff_nclk_0.D a_n519_n224# 0.3562f
+C20 A0 a_1513_686# 0.01851f
+C21 a_n26_n1666# a_741_n1985# 0.40027f
+C22 freq_div_cell_0.dff_nclk_0.Q a_n206_n712# 0.46099f
+C23 VDD a_2778_n608# 0.62644f
+C24 freq_div_cell_1.dff_nclk_0.D a_n222_90# 0.01446f
+C25 a_2111_n353# sg13g2_or2_1_0.A 0.24019f
+C26 a_741_n229# a_1550_n228# 0.09575f
+C27 freq_div_cell_0.dff_nclk_0.D a_n206_n712# 0.24715f
+C28 VDD freq_div_cell_1.dff_nclk_0.sg13g2_dfrbp_1_0.CLK 0.27978f
+C29 VDD a_n1377_624# 0.08992f
+C30 a_n26_90# freq_div_cell_1.dff_nclk_0.sg13g2_dfrbp_1_0.CLK 0.01324f
+C31 freq_div_cell_0.dff_nclk_0.sg13g2_dfrbp_1_0.CLK freq_div_cell_0.CLK 0.10457f
+C32 VDD EN 0.42043f
+C33 VDD a_n946_n722# 0.44257f
+C34 a_2205_n353# freq_div_cell_0.DIV 0.01592f
+C35 a_987_n265# a_741_n229# 0.41048f
+C36 freq_div_cell_0.Cout freq_div_cell_0.CLK 0.0513f
+C37 a_206_n1595# a_n26_n1666# 0.13068f
+C38 a_n26_n1666# a_n519_n1980# 0.47248f
+C39 VDD a_206_161# 0.29443f
+C40 freq_div_cell_0.nRST a_1550_n1984# 0.05903f
+C41 a_2814_n388# a_2778_n608# 0.04255f
+C42 VDD a_2757_n1845# 0.08957f
+C43 a_1342_n712# freq_div_cell_0.DIV 0.2347f
+C44 a_n26_90# a_206_161# 0.13068f
+C45 sg13g2_tiehi_0.L_HI a_2778_n608# 0.33332f
+C46 freq_div_cell_0.dff_nclk_0.Q a_1550_n1984# 0.12389f
+C47 VDD a_2205_n353# 0.01298f
+C48 a_n35_686# a_n206_1044# 0.36535f
+C49 a_n1576_602# a_n1576_761# 0.01952f
+C50 VDD a_1342_n712# 0.25905f
+C51 freq_div_cell_0.nRST a_n519_n224# 0.37259f
+C52 VDD a_n26_n1666# 0.20558f
+C53 a_n35_686# freq_div_cell_1.dff_nclk_0.D 0.12185f
+C54 VDD a_n35_n1070# 0.20834f
+C55 freq_div_cell_0.nRST a_n222_90# 0.35198f
+C56 VDD a_741_n229# 0.42677f
+C57 a_n26_90# a_741_n229# 0.40027f
+C58 a_2778_n414# dff_nclk_0.sg13g2_dfrbp_1_0.CLK 0.01473f
+C59 a_987_n2021# freq_div_cell_0.nRST 0.2629f
+C60 a_2757_n1845# sg13g2_tiehi_0.L_HI 0.02873f
+C61 a_2757_n1845# a_2854_n1975# 0.10864f
+C62 A0 freq_div_cell_0.nRST 0.03924f
+C63 freq_div_cell_0.dff_nclk_0.sg13g2_dfrbp_1_0.CLK a_n519_n1980# 0.08213f
+C64 VDD freq_div_cell_0.CLK 1.46754f
+C65 a_n1576_761# a_n1576_991# 0.10864f
+C66 a_n222_n1666# freq_div_cell_0.nRST 0.35517f
+C67 A1 a_1342_n712# 0.39347f
+C68 a_357_99# a_206_161# 0.70262f
+C69 CLK_OUT a_2779_n1425# 0.11629f
+C70 a_n238_n1070# a_n206_n712# 0.0104f
+C71 a_2111_n353# freq_div_cell_0.nRST 0.11187f
+C72 freq_div_cell_0.Cin freq_div_cell_1.dff_nclk_0.sg13g2_dfrbp_1_0.CLK 0.01301f
+C73 a_357_n1657# a_n222_n1666# 0.04304f
+C74 VDD freq_div_cell_0.dff_nclk_0.sg13g2_dfrbp_1_0.CLK 0.2889f
+C75 freq_div_cell_0.dff_nclk_0.D a_n222_n1666# 0.01446f
+C76 dff_nclk_0.sg13g2_dfrbp_1_0.CLK freq_div_cell_0.nRST 0.22856f
+C77 freq_div_cell_1.dff_nclk_0.Q a_741_n229# 0.02071f
+C78 a_2779_n1425# a_2778_n869# 0.09575f
+C79 freq_div_cell_0.Cin a_n946_n722# 0.13034f
+C80 VDD a_741_n1985# 0.43487f
+C81 a_n35_686# sg13g2_tiehi_1.L_HI 0.01011f
+C82 VDD freq_div_cell_0.Cout 0.52792f
+C83 VDD a_1550_n228# 0.23493f
+C84 a_357_99# a_741_n229# 0.03957f
+C85 a_741_n1985# freq_div_cell_0.dff_nclk_0.nQ 0.0571f
+C86 a_2819_778# dff_nclk_0.D 0.36118f
+C87 a_206_n1595# a_n519_n1980# 0.45825f
+C88 VDD a_987_n265# 0.30512f
+C89 a_987_n265# a_n26_90# 0.04306f
+C90 a_2778_n686# a_2778_n608# 0.04324f
+C91 freq_div_cell_1.dff_nclk_0.D freq_div_cell_1.dff_nclk_0.sg13g2_dfrbp_1_0.CLK 0.40308f
+C92 freq_div_cell_1.dff_nclk_0.nQ a_741_n229# 0.05822f
+C93 a_n222_90# a_n519_n224# 0.17766f
+C94 a_2778_n608# a_2778_n414# 0.45006f
+C95 VDD dff_nclk_0.D 0.94199f
+C96 a_n1576_761# a_n1377_624# 0.14868f
+C97 a_n35_n1070# freq_div_cell_0.Cin 0.01011f
+C98 a_1342_n712# a_1513_n1070# 0.36535f
+C99 VDD a_206_n1595# 0.29891f
+C100 VDD a_n519_n1980# 0.37078f
+C101 VDD a_2819_778# 0.36995f
+C102 VDD freq_div_cell_0.DIV 0.41015f
+C103 freq_div_cell_1.dff_nclk_0.Q a_1550_n228# 0.12519f
+C104 a_2793_n1819# a_2757_n1845# 0.14868f
+C105 VDD a_n26_90# 0.19414f
+C106 freq_div_cell_0.Cin freq_div_cell_0.CLK 0.23771f
+C107 VDD freq_div_cell_0.dff_nclk_0.nQ 0.18195f
+C108 dff_nclk_0.D sg13g2_tiehi_0.L_HI 0.52754f
+C109 a_2819_778# sg13g2_tiehi_0.L_HI 0.34887f
+C110 a_987_n2021# a_n222_n1666# 0.04324f
+C111 A1 freq_div_cell_0.DIV 0.22886f
+C112 freq_div_cell_1.dff_nclk_0.nQ a_1550_n228# 0.21609f
+C113 freq_div_cell_0.nRST freq_div_cell_1.dff_nclk_0.sg13g2_dfrbp_1_0.CLK 0.60301f
+C114 sg13g2_tiehi_1.L_HI a_n1377_624# 0.12587f
+C115 VDD a_2814_n388# 0.2446f
+C116 VDD sg13g2_tiehi_0.L_HI 0.63551f
+C117 freq_div_cell_0.Cout freq_div_cell_0.Cin 0.09143f
+C118 VDD A1 0.19059f
+C119 VDD a_2854_n1975# 0.09414f
+C120 freq_div_cell_0.dff_nclk_0.Q a_n946_n722# 0.30546f
+C121 freq_div_cell_1.dff_nclk_0.D freq_div_cell_0.CLK 0.04723f
+C122 a_987_n265# freq_div_cell_1.dff_nclk_0.nQ 0.10118f
+C123 VDD freq_div_cell_1.dff_nclk_0.Q 1.27642f
+C124 freq_div_cell_0.nRST a_206_161# 0.32742f
+C125 EN CLK_IN 0.12953f
+C126 a_2778_n280# a_2778_n608# 0.05331f
+C127 VDD a_357_99# 0.2446f
+C128 a_n26_90# a_357_99# 0.66077f
+C129 a_1342_n712# freq_div_cell_0.nRST 0.10275f
+C130 a_n26_n1666# freq_div_cell_0.nRST 0.18209f
+C131 freq_div_cell_0.dff_nclk_0.Q a_1342_n712# 0.12248f
+C132 sg13g2_tiehi_0.L_HI a_2814_n388# 0.1626f
+C133 freq_div_cell_0.nRST a_741_n229# 0.29532f
+C134 a_n26_n1666# a_357_n1657# 0.66077f
+C135 freq_div_cell_0.dff_nclk_0.Q a_n35_n1070# 0.02559f
+C136 a_2757_n1845# a_3126_n1943# 0.01952f
+C137 freq_div_cell_0.DIV sg13g2_or2_1_0.A 0.19191f
+C138 freq_div_cell_0.dff_nclk_0.Q a_741_n229# 0.0119f
+C139 VDD freq_div_cell_1.dff_nclk_0.nQ 0.18097f
+C140 a_2778_n869# a_2778_n608# 0.02302f
+C141 a_1513_n1070# freq_div_cell_0.DIV 0.10662f
+C142 VDD freq_div_cell_0.Cin 0.98951f
+C143 A1 freq_div_cell_1.dff_nclk_0.Q 0.01879f
+C144 freq_div_cell_0.dff_nclk_0.D a_n35_n1070# 0.12185f
+C145 VDD sg13g2_or2_1_0.A 0.18422f
+C146 VDD a_1342_1044# 0.25749f
+C147 VDD a_1513_n1070# 0.20834f
+C148 freq_div_cell_0.nRST freq_div_cell_0.CLK 0.1436f
+C149 a_n238_686# a_n206_1044# 0.0104f
+C150 VDD a_1513_686# 0.20834f
+C151 a_n35_n1070# a_n206_n712# 0.36535f
+C152 VDD a_n206_1044# 0.25726f
+C153 a_n519_n224# freq_div_cell_1.dff_nclk_0.sg13g2_dfrbp_1_0.CLK 0.08213f
+C154 dff_nclk_0.D a_2778_n686# 0.11033f
+C155 freq_div_cell_0.dff_nclk_0.D freq_div_cell_0.CLK 0.05047f
+C156 CLK_IN freq_div_cell_0.CLK 0.26273f
+C157 freq_div_cell_0.dff_nclk_0.sg13g2_dfrbp_1_0.CLK freq_div_cell_0.nRST 0.60301f
+C158 a_n222_90# freq_div_cell_1.dff_nclk_0.sg13g2_dfrbp_1_0.CLK 0.33731f
+C159 freq_div_cell_1.dff_nclk_0.nQ freq_div_cell_1.dff_nclk_0.Q 0.02712f
+C160 VDD freq_div_cell_1.dff_nclk_0.D 0.81792f
+C161 a_2819_778# a_2778_n414# 0.47248f
+C162 freq_div_cell_0.nRST a_741_n1985# 0.31114f
+C163 VDD a_2793_n1819# 0.09561f
+C164 freq_div_cell_0.dff_nclk_0.Q a_741_n1985# 0.01984f
+C165 freq_div_cell_0.dff_nclk_0.D freq_div_cell_0.dff_nclk_0.sg13g2_dfrbp_1_0.CLK 0.40308f
+C166 VDD a_n1576_761# 0.05334f
+C167 freq_div_cell_0.dff_nclk_0.Q freq_div_cell_0.Cout 0.2223f
+C168 VDD a_2778_n686# 0.30498f
+C169 freq_div_cell_0.Cin freq_div_cell_1.dff_nclk_0.Q 0.22232f
+C170 a_n519_n224# a_206_161# 0.45825f
+C171 a_357_n1657# a_741_n1985# 0.03957f
+C172 A1 a_1513_n1070# 0.01851f
+C173 sg13g2_or2_1_0.A freq_div_cell_1.dff_nclk_0.Q 0.06584f
+C174 VDD a_n946_1034# 0.4437f
+C175 VDD a_2778_n414# 0.19972f
+C176 a_n222_90# a_206_161# 0.05314f
+C177 a_1310_686# a_1342_1044# 0.0104f
+C178 a_1342_1044# freq_div_cell_1.dff_nclk_0.Q 0.14987f
+C179 freq_div_cell_0.dff_nclk_0.D freq_div_cell_0.Cout 0.04623f
+C180 a_987_n265# freq_div_cell_0.nRST 0.24222f
+C181 a_1513_686# freq_div_cell_1.dff_nclk_0.Q 0.02246f
+C182 a_n206_1044# freq_div_cell_1.dff_nclk_0.Q 0.46099f
+C183 a_2778_n608# dff_nclk_0.sg13g2_dfrbp_1_0.CLK 0.33833f
+C184 dff_nclk_0.D freq_div_cell_0.nRST 0.0832f
+C185 freq_div_cell_0.Cout a_n206_n712# 0.01154f
+C186 a_2793_n1819# sg13g2_tiehi_0.L_HI 0.09937f
+C187 a_206_n1595# freq_div_cell_0.nRST 0.32732f
+C188 a_n519_n1980# freq_div_cell_0.nRST 0.37259f
+C189 a_n222_90# a_741_n229# 0.02302f
+C190 a_2793_n1819# a_2854_n1975# 0.0229f
+C191 freq_div_cell_0.DIV freq_div_cell_0.nRST 0.42016f
+C192 sg13g2_tiehi_0.L_HI a_2778_n686# 0.24607f
+C193 a_987_n2021# a_n26_n1666# 0.04306f
+C194 freq_div_cell_1.dff_nclk_0.D freq_div_cell_1.dff_nclk_0.Q 0.24019f
+C195 a_206_n1595# a_357_n1657# 0.70262f
+C196 a_2814_n388# a_2778_n414# 0.66077f
+C197 sg13g2_tiehi_0.L_HI a_2778_n414# 0.12336f
+C198 freq_div_cell_0.dff_nclk_0.D a_n519_n1980# 0.3562f
+C199 VDD sg13g2_tiehi_1.L_HI 0.48328f
+C200 VDD freq_div_cell_0.nRST 2.78037f
+C201 freq_div_cell_0.nRST a_n26_90# 0.18489f
+C202 VDD freq_div_cell_0.dff_nclk_0.Q 1.23836f
+C203 a_n946_1034# freq_div_cell_1.dff_nclk_0.Q 0.30546f
+C204 sg13g2_or2_1_0.A a_1342_1044# 0.23383f
+C205 a_n26_n1666# a_n222_n1666# 0.45047f
+C206 VDD a_357_n1657# 0.25053f
+C207 a_1513_686# sg13g2_or2_1_0.A 0.10679f
+C208 a_741_n1985# a_1550_n1984# 0.09575f
+C209 freq_div_cell_0.nRST freq_div_cell_0.dff_nclk_0.nQ 0.08552f
+C210 freq_div_cell_0.Cin a_n206_1044# 0.01154f
+C211 VDD freq_div_cell_0.dff_nclk_0.D 0.87972f
+C212 freq_div_cell_0.dff_nclk_0.Q freq_div_cell_0.dff_nclk_0.nQ 0.02712f
+C213 dff_nclk_0.D a_2778_n280# 0.01277f
+C214 a_1513_686# a_1342_1044# 0.36535f
+C215 VDD CLK_IN 0.34492f
+C216 a_n1576_991# a_n1377_624# 0.0229f
+C217 a_1310_n1070# a_1342_n712# 0.0104f
+C218 a_2819_778# a_2778_n280# 0.45825f
+C219 VDD a_3126_n1943# 0.03624f
+C220 CLK_OUT dff_nclk_0.D 0.04809f
+C221 VDD a_n206_n712# 0.25726f
+C222 freq_div_cell_0.Cin freq_div_cell_1.dff_nclk_0.D 0.09629f
+C223 sg13g2_tiehi_0.L_HI freq_div_cell_0.nRST 0.20215f
+C224 VDD a_2778_n280# 0.29691f
+C225 A1 freq_div_cell_0.nRST 0.25298f
+C226 A1 freq_div_cell_0.dff_nclk_0.Q 0.15046f
+C227 freq_div_cell_0.Cin a_n946_1034# 0.13167f
+C228 dff_nclk_0.D a_2778_n869# 0.0719f
+C229 sg13g2_tiehi_1.L_HI freq_div_cell_1.dff_nclk_0.Q 0.42713f
+C230 a_987_n2021# a_741_n1985# 0.41048f
+C231 freq_div_cell_0.nRST freq_div_cell_1.dff_nclk_0.Q 0.09227f
+C232 freq_div_cell_1.dff_nclk_0.D a_n206_1044# 0.24715f
+C233 dff_nclk_0.D a_2779_n1425# 0.22335f
+C234 CLK_OUT VDD 0.29038f
+C235 a_987_n265# a_n222_90# 0.04324f
+C236 freq_div_cell_0.dff_nclk_0.sg13g2_dfrbp_1_0.CLK a_n222_n1666# 0.33731f
+C237 freq_div_cell_0.nRST a_357_99# 0.17312f
+C238 sg13g2_tiehi_0.L_HI a_3126_n1943# 0.013f
+C239 a_n222_n1666# a_741_n1985# 0.02302f
+C240 VDD a_2778_n869# 0.41516f
+C241 VDD a_1550_n1984# 0.23616f
+C242 a_2778_n280# a_2814_n388# 0.70262f
+C243 a_2778_n280# sg13g2_tiehi_0.L_HI 0.31561f
+C244 VDD a_2779_n1425# 0.23409f
+C245 a_1550_n1984# freq_div_cell_0.dff_nclk_0.nQ 0.21609f
+C246 freq_div_cell_1.dff_nclk_0.nQ freq_div_cell_0.nRST 0.02516f
+C247 VDD a_n519_n224# 0.36995f
+C248 a_n519_n224# a_n26_90# 0.47248f
+C249 freq_div_cell_0.Cin sg13g2_tiehi_1.L_HI 0.14622f
+C250 freq_div_cell_0.Cin freq_div_cell_0.nRST 0.27659f
+C251 CLK_OUT sg13g2_tiehi_0.L_HI 0.08708f
+C252 freq_div_cell_0.dff_nclk_0.Q freq_div_cell_0.Cin 0.42266f
+C253 freq_div_cell_0.nRST sg13g2_or2_1_0.A 0.2858f
+C254 VDD a_n222_90# 0.67022f
+C255 a_2778_n686# a_2778_n414# 0.04306f
+C256 a_n222_90# a_n26_90# 0.45047f
+C257 a_1513_n1070# freq_div_cell_0.nRST 0.03449f
+C258 a_2778_n869# a_2814_n388# 0.03957f
+C259 freq_div_cell_0.dff_nclk_0.Q a_1513_n1070# 0.01011f
+C260 sg13g2_tiehi_0.L_HI a_2778_n869# 0.30131f
+C261 CLK_IN freq_div_cell_0.Cin 0.01712f
+C262 a_206_n1595# a_n222_n1666# 0.05314f
+C263 VDD a_987_n2021# 0.30831f
+C264 a_n222_n1666# a_n519_n1980# 0.17766f
+C265 a_n206_1044# sg13g2_tiehi_1.L_HI 0.12082f
+C266 VDD A0 0.16891f
+C267 a_2779_n1425# sg13g2_tiehi_0.L_HI 0.05764f
+C268 a_987_n2021# freq_div_cell_0.dff_nclk_0.nQ 0.10118f
+C269 a_2111_n353# freq_div_cell_0.DIV 0.1466f
+C270 dff_nclk_0.D dff_nclk_0.sg13g2_dfrbp_1_0.CLK 0.4122f
+C271 freq_div_cell_0.Cin a_n206_n712# 0.12082f
+C272 VDD a_n222_n1666# 0.67246f
+C273 a_2819_778# dff_nclk_0.sg13g2_dfrbp_1_0.CLK 0.08437f
+C274 freq_div_cell_1.dff_nclk_0.D freq_div_cell_0.nRST 0.21603f
+C275 VDD a_2111_n353# 0.17076f
+C276 sg13g2_tiehi_1.L_HI a_n1576_761# 0.02151f
+C277 VDD a_n1576_602# 0.02429f
+C278 VDD dff_nclk_0.sg13g2_dfrbp_1_0.CLK 0.27445f
+C279 sg13g2_tiehi_1.L_HI a_n946_1034# 0.18209f
+C280 a_2778_n414# freq_div_cell_0.nRST 0.01507f
+C281 freq_div_cell_0.CLK freq_div_cell_1.dff_nclk_0.sg13g2_dfrbp_1_0.CLK 0.10569f
+C282 VDD a_n35_686# 0.20834f
+C283 a_n222_90# a_357_99# 0.04304f
+C284 EN freq_div_cell_0.CLK 0.10875f
+C285 a_n946_n722# freq_div_cell_0.CLK 0.06217f
+C286 A0 freq_div_cell_1.dff_nclk_0.Q 0.21035f
+R0 VSS.n43 VSS.n38 72930.9
+R1 VSS.n98 VSS.n30 70184.1
+R2 VSS.n56 VSS.n44 31302.7
+R3 VSS.n98 VSS.n97 28045.1
+R4 VSS.n171 VSS.n5 17488.6
+R5 VSS.n73 VSS.n5 16607
+R6 VSS.n96 VSS.n44 16565.2
+R7 VSS.n97 VSS.n96 12065.2
+R8 VSS.n57 VSS.n56 9689.28
+R9 VSS.n85 VSS.n47 5627.91
+R10 VSS.n83 VSS.n47 4711.06
+R11 VSS.n79 VSS.n47 4624.2
+R12 VSS.n74 VSS.n73 4501.37
+R13 VSS.n72 VSS.n53 3751.23
+R14 VSS.n30 VSS.n6 3333.73
+R15 VSS.n52 VSS.n5 3105.82
+R16 VSS.n171 VSS.n170 2008.39
+R17 VSS.n73 VSS.n72 1483.05
+R18 VSS.n170 VSS.n6 1218.27
+R19 VSS.n76 VSS.n75 1217.95
+R20 VSS.n57 VSS.n53 1162.11
+R21 VSS.n78 VSS.n49 794.602
+R22 VSS.n55 VSS.n39 645.545
+R23 VSS.n99 VSS.n34 645.255
+R24 VSS.n75 VSS.n49 589.309
+R25 VSS.n78 VSS.n76 558.908
+R26 VSS.n43 VSS.n40 481.293
+R27 VSS.n83 VSS.n82 418.824
+R28 VSS.n96 VSS.n95 365.483
+R29 VSS.n90 VSS.n89 365.483
+R30 VSS.n102 VSS.n37 275.536
+R31 VSS.n75 VSS.n74 264.519
+R32 VSS.n86 VSS.n85 263.017
+R33 VSS.n80 VSS.n79 261.913
+R34 VSS.n41 VSS.n38 248.654
+R35 VSS.n75 VSS.n52 215.659
+R36 VSS.n83 VSS.n48 182.382
+R37 VSS.n44 VSS.n39 174.494
+R38 VSS.n98 VSS.n37 162.219
+R39 VSS.n99 VSS.n98 155.356
+R40 VSS.n44 VSS.n40 150.124
+R41 VSS.n84 VSS.n83 125.635
+R42 VSS.n85 VSS.n84 118.02
+R43 VSS.n79 VSS.n48 111.663
+R44 VSS.n97 VSS.n41 105.511
+R45 VSS.n56 VSS.n55 73.0944
+R46 VSS.n97 VSS.n43 68.589
+R47 VSS.n101 VSS.n38 53.6784
+R48 VSS.n80 VSS.n78 31.9039
+R49 VSS.n94 VSS.n93 31.1078
+R50 VSS.n92 VSS.n91 31.1078
+R51 VSS.n88 VSS.n87 31.1078
+R52 VSS.n87 VSS.n86 31.1078
+R53 VSS.n93 VSS.n92 31.1078
+R54 VSS.n102 VSS.n101 26.8395
+R55 VSS.n59 VSS.n45 17.0005
+R56 VSS.n89 VSS.n45 17.0005
+R57 VSS.n67 VSS.n45 17.0005
+R58 VSS.n95 VSS.n45 17.0005
+R59 VSS.n81 VSS.n48 17.0005
+R60 VSS.n84 VSS.n46 17.0005
+R61 VSS.n90 VSS.n46 17.0005
+R62 VSS.n100 VSS.n36 17.0005
+R63 VSS.n101 VSS.n100 17.0005
+R64 VSS.n120 VSS.n119 17.0005
+R65 VSS.n119 VSS.n25 17.0005
+R66 VSS.n119 VSS.n29 17.0005
+R67 VSS.n119 VSS.n31 17.0005
+R68 VSS.n119 VSS.n27 17.0005
+R69 VSS.n119 VSS.n32 17.0005
+R70 VSS.n119 VSS.n26 17.0005
+R71 VSS.n119 VSS.n118 17.0005
+R72 VSS.n148 VSS.n147 17.0005
+R73 VSS.n147 VSS.n16 17.0005
+R74 VSS.n147 VSS.n15 17.0005
+R75 VSS.n147 VSS.n17 17.0005
+R76 VSS.n147 VSS.n14 17.0005
+R77 VSS.n147 VSS.n18 17.0005
+R78 VSS.n169 VSS.n9 17.0005
+R79 VSS.n169 VSS.n8 17.0005
+R80 VSS.n169 VSS.n10 17.0005
+R81 VSS.n169 VSS.n7 17.0005
+R82 VSS.n169 VSS.n168 17.0005
+R83 VSS.n172 VSS.n3 17.0005
+R84 VSS.n172 VSS.n4 17.0005
+R85 VSS.n173 VSS.n172 17.0005
+R86 VSS.n172 VSS.n0 17.0005
+R87 VSS.n91 VSS.n90 15.5541
+R88 VSS.n89 VSS.n88 15.5541
+R89 VSS.n95 VSS.n94 15.5541
+R90 VSS.n55 VSS.n54 12.1773
+R91 VSS.n177 VSS.n176 9.0005
+R92 VSS.n175 VSS.n174 9.0005
+R93 VSS.n2 VSS.n1 9.0005
+R94 VSS.n154 VSS.n153 9.0005
+R95 VSS.n156 VSS.n155 9.0005
+R96 VSS.n157 VSS.n152 9.0005
+R97 VSS.n159 VSS.n158 9.0005
+R98 VSS.n161 VSS.n160 9.0005
+R99 VSS.n163 VSS.n162 9.0005
+R100 VSS.n165 VSS.n164 9.0005
+R101 VSS.n167 VSS.n166 9.0005
+R102 VSS.n151 VSS.n11 9.0005
+R103 VSS.n150 VSS.n149 9.0005
+R104 VSS.n13 VSS.n12 9.0005
+R105 VSS.n136 VSS.n135 9.0005
+R106 VSS.n138 VSS.n137 9.0005
+R107 VSS.n140 VSS.n139 9.0005
+R108 VSS.n142 VSS.n141 9.0005
+R109 VSS.n143 VSS.n19 9.0005
+R110 VSS.n145 VSS.n144 9.0005
+R111 VSS.n134 VSS.n20 9.0005
+R112 VSS.n133 VSS.n132 9.0005
+R113 VSS.n131 VSS.n21 9.0005
+R114 VSS.n130 VSS.n129 9.0005
+R115 VSS.n128 VSS.n22 9.0005
+R116 VSS.n127 VSS.n126 9.0005
+R117 VSS.n125 VSS.n23 9.0005
+R118 VSS.n124 VSS.n123 9.0005
+R119 VSS.n122 VSS.n121 9.0005
+R120 VSS.n28 VSS.n24 9.0005
+R121 VSS.n109 VSS.n108 9.0005
+R122 VSS.n111 VSS.n110 9.0005
+R123 VSS.n113 VSS.n112 9.0005
+R124 VSS.n115 VSS.n114 9.0005
+R125 VSS.n117 VSS.n116 9.0005
+R126 VSS.n107 VSS.n33 9.0005
+R127 VSS.n72 VSS.n71 8.59603
+R128 VSS.n147 VSS.n146 8.48636
+R129 VSS.n61 VSS.n45 8.48603
+R130 VSS.n63 VSS.n45 8.48603
+R131 VSS.n65 VSS.n45 8.48603
+R132 VSS.n60 VSS.n46 8.48603
+R133 VSS.n62 VSS.n46 8.48603
+R134 VSS.n64 VSS.n46 8.48603
+R135 VSS.n66 VSS.n46 8.48603
+R136 VSS.n103 VSS.n102 6.8005
+R137 VSS.n81 VSS.n77 5.65282
+R138 VSS.n58 VSS.n46 5.64121
+R139 VSS.n70 VSS.n53 5.63075
+R140 VSS.n69 VSS.n68 3.44589
+R141 VSS.n100 VSS.n35 2.72142
+R142 VSS.n104 VSS 2.40675
+R143 VSS.n81 VSS.n51 2.39597
+R144 VSS.n71 VSS 1.36928
+R145 VSS.n105 VSS.n104 1.27512
+R146 VSS VSS.n69 1.14811
+R147 VSS.n107 VSS.n106 1.01645
+R148 VSS VSS.n42 0.973404
+R149 VSS VSS.n42 0.953014
+R150 VSS.n100 VSS.n99 0.903329
+R151 VSS.n68 VSS 0.777375
+R152 VSS.n87 VSS.n45 0.724436
+R153 VSS.n91 VSS.n45 0.724436
+R154 VSS.n93 VSS.n45 0.724436
+R155 VSS.n86 VSS.n46 0.724436
+R156 VSS.n88 VSS.n46 0.724436
+R157 VSS.n92 VSS.n46 0.724436
+R158 VSS.n94 VSS.n46 0.724436
+R159 VSS.n81 VSS.n50 0.700974
+R160 VSS.n100 VSS.n42 0.605458
+R161 VSS.n106 VSS.n34 0.600416
+R162 VSS.n58 VSS.n50 0.523773
+R163 VSS.n35 VSS 0.491592
+R164 VSS.n106 VSS.n105 0.47729
+R165 VSS.n54 VSS 0.37528
+R166 VSS.n104 VSS.n35 0.348611
+R167 VSS.n69 VSS.n57 0.326734
+R168 VSS VSS.n50 0.323255
+R169 VSS.n70 VSS 0.315486
+R170 VSS.n54 VSS 0.239511
+R171 VSS VSS.n70 0.180825
+R172 VSS VSS.n34 0.180486
+R173 VSS VSS.n51 0.141423
+R174 VSS.n116 VSS.n107 0.1105
+R175 VSS.n116 VSS.n115 0.1105
+R176 VSS.n115 VSS.n113 0.1105
+R177 VSS.n113 VSS.n111 0.1105
+R178 VSS.n111 VSS.n109 0.1105
+R179 VSS.n109 VSS.n24 0.1105
+R180 VSS.n122 VSS.n24 0.1105
+R181 VSS.n123 VSS.n122 0.1105
+R182 VSS.n123 VSS.n23 0.1105
+R183 VSS.n127 VSS.n23 0.1105
+R184 VSS.n128 VSS.n127 0.1105
+R185 VSS.n129 VSS.n128 0.1105
+R186 VSS.n129 VSS.n21 0.1105
+R187 VSS.n133 VSS.n21 0.1105
+R188 VSS.n134 VSS.n133 0.1105
+R189 VSS.n144 VSS.n134 0.1105
+R190 VSS.n144 VSS.n143 0.1105
+R191 VSS.n143 VSS.n142 0.1105
+R192 VSS.n142 VSS.n140 0.1105
+R193 VSS.n140 VSS.n138 0.1105
+R194 VSS.n138 VSS.n136 0.1105
+R195 VSS.n136 VSS.n12 0.1105
+R196 VSS.n150 VSS.n12 0.1105
+R197 VSS.n151 VSS.n150 0.1105
+R198 VSS.n166 VSS.n151 0.1105
+R199 VSS.n166 VSS.n165 0.1105
+R200 VSS.n165 VSS.n163 0.1105
+R201 VSS.n163 VSS.n161 0.1105
+R202 VSS.n161 VSS.n159 0.1105
+R203 VSS.n159 VSS.n152 0.1105
+R204 VSS.n155 VSS.n152 0.1105
+R205 VSS.n155 VSS.n154 0.1105
+R206 VSS.n154 VSS.n1 0.1105
+R207 VSS.n175 VSS.n1 0.1105
+R208 VSS.n176 VSS.n175 0.1105
+R209 VSS.n51 VSS 0.109491
+R210 VSS.n68 VSS.n67 0.093
+R211 VSS VSS.n58 0.091119
+R212 VSS.n176 VSS 0.0731
+R213 VSS.n71 VSS 0.0702983
+R214 VSS.n77 VSS 0.066563
+R215 VSS.n125 VSS.n124 0.0616111
+R216 VSS.n126 VSS.n125 0.0616111
+R217 VSS.n126 VSS.n22 0.0616111
+R218 VSS.n130 VSS.n22 0.0616111
+R219 VSS.n131 VSS.n130 0.0616111
+R220 VSS.n132 VSS.n131 0.0616111
+R221 VSS.n132 VSS.n20 0.0616111
+R222 VSS.n145 VSS.n20 0.0616111
+R223 VSS.n158 VSS.n157 0.0616111
+R224 VSS.n157 VSS.n156 0.0616111
+R225 VSS.n66 VSS.n65 0.0613943
+R226 VSS.n64 VSS.n63 0.0613943
+R227 VSS.n62 VSS.n61 0.0613943
+R228 VSS.n61 VSS.n60 0.0613943
+R229 VSS.n63 VSS.n62 0.0613943
+R230 VSS.n65 VSS.n64 0.0613943
+R231 VSS.n105 VSS.n33 0.0579444
+R232 VSS.n19 VSS.n18 0.0579444
+R233 VSS.n141 VSS.n14 0.0555
+R234 VSS.n139 VSS.n17 0.0530556
+R235 VSS.n137 VSS.n15 0.0506111
+R236 VSS.n100 VSS.n41 0.0490557
+R237 VSS.n77 VSS 0.0487748
+R238 VSS.n135 VSS.n16 0.0481667
+R239 VSS VSS.n11 0.0481667
+R240 VSS.n148 VSS.n13 0.0457222
+R241 VSS.n121 VSS.n25 0.0432778
+R242 VSS.n156 VSS.n3 0.0432778
+R243 VSS.n29 VSS.n28 0.0408333
+R244 VSS.n168 VSS.n11 0.0408333
+R245 VSS.n153 VSS.n4 0.0408333
+R246 VSS.n108 VSS.n31 0.0383889
+R247 VSS.n167 VSS.n7 0.0383889
+R248 VSS.n173 VSS.n2 0.0383889
+R249 VSS.n110 VSS.n27 0.0359444
+R250 VSS.n164 VSS.n10 0.0359444
+R251 VSS.n174 VSS.n0 0.0359444
+R252 VSS.n118 VSS.n33 0.0335
+R253 VSS.n112 VSS.n32 0.0335
+R254 VSS.n162 VSS.n8 0.0335
+R255 VSS.n146 VSS.n145 0.031505
+R256 VSS.n146 VSS.n19 0.031505
+R257 VSS.n117 VSS.n26 0.0310556
+R258 VSS.n114 VSS.n26 0.0310556
+R259 VSS.n160 VSS.n9 0.0310556
+R260 VSS.n67 VSS.n66 0.0309472
+R261 VSS.n60 VSS.n59 0.0309472
+R262 VSS.n59 VSS 0.0305
+R263 VSS.n120 VSS 0.0298333
+R264 VSS VSS.n9 0.0298333
+R265 VSS.n118 VSS.n117 0.0286111
+R266 VSS.n114 VSS.n32 0.0286111
+R267 VSS.n160 VSS.n8 0.0286111
+R268 VSS.n112 VSS.n27 0.0261667
+R269 VSS.n162 VSS.n10 0.0261667
+R270 VSS.n177 VSS.n0 0.0261667
+R271 VSS.n110 VSS.n31 0.0237222
+R272 VSS.n164 VSS.n7 0.0237222
+R273 VSS.n174 VSS.n173 0.0237222
+R274 VSS.n108 VSS.n29 0.0212778
+R275 VSS.n168 VSS.n167 0.0212778
+R276 VSS.n4 VSS.n2 0.0212778
+R277 VSS.n28 VSS.n25 0.0188333
+R278 VSS.n153 VSS.n3 0.0188333
+R279 VSS.n121 VSS.n120 0.0163889
+R280 VSS.n124 VSS 0.0163889
+R281 VSS.n149 VSS.n148 0.0163889
+R282 VSS.n16 VSS.n13 0.0139444
+R283 VSS.n149 VSS 0.0139444
+R284 VSS.n135 VSS.n15 0.0115
+R285 VSS.n81 VSS.n52 0.0112474
+R286 VSS.n81 VSS.n76 0.0112474
+R287 VSS.n137 VSS.n17 0.00905556
+R288 VSS.n81 VSS.n74 0.00774097
+R289 VSS.n104 VSS.n103 0.00670513
+R290 VSS.n139 VSS.n14 0.00661111
+R291 VSS VSS.n36 0.0054359
+R292 VSS.n81 VSS.n49 0.00443824
+R293 VSS.n141 VSS.n18 0.00416667
+R294 VSS VSS.n177 0.00416667
+R295 VSS.n100 VSS.n37 0.00358454
+R296 VSS.n103 VSS.n36 0.00176923
+R297 VSS.n158 VSS 0.00172222
+R298 VSS.n172 VSS.n171 0.00135394
+R299 VSS.n100 VSS.n39 0.0010279
+R300 VSS.n100 VSS.n40 0.00102758
+R301 VSS.n170 VSS.n169 0.00102283
+R302 VSS.n81 VSS.n80 0.00100485
+R303 VSS.n119 VSS.n30 0.00100037
+R304 VSS.n147 VSS.n6 0.00100037
+R305 VSS.n82 VSS.n81 0.001
+R306 VSS.n82 VSS.n46 0.001
+R307 VDD.n91 VDD.n90 9.0005
+R308 VDD.n93 VDD.n92 9.0005
+R309 VDD.n94 VDD.n7 9.0005
+R310 VDD.n96 VDD.n95 9.0005
+R311 VDD.n80 VDD.n6 9.0005
+R312 VDD.n79 VDD.n78 9.0005
+R313 VDD.n77 VDD.n8 9.0005
+R314 VDD.n76 VDD.n75 9.0005
+R315 VDD.n74 VDD.n9 9.0005
+R316 VDD.n73 VDD.n72 9.0005
+R317 VDD.n71 VDD.n10 9.0005
+R318 VDD.n70 VDD.n69 9.0005
+R319 VDD.n68 VDD.n11 9.0005
+R320 VDD.n67 VDD.n66 9.0005
+R321 VDD.n65 VDD.n12 9.0005
+R322 VDD.n64 VDD.n63 9.0005
+R323 VDD.n62 VDD.n13 9.0005
+R324 VDD.n61 VDD.n60 9.0005
+R325 VDD.n59 VDD.n14 9.0005
+R326 VDD.n58 VDD.n57 9.0005
+R327 VDD.n56 VDD.n15 9.0005
+R328 VDD.n55 VDD.n54 9.0005
+R329 VDD.n53 VDD.n16 9.0005
+R330 VDD.n52 VDD.n51 9.0005
+R331 VDD.n50 VDD.n17 9.0005
+R332 VDD.n49 VDD.n48 9.0005
+R333 VDD.n47 VDD.n18 9.0005
+R334 VDD.n46 VDD.n45 9.0005
+R335 VDD.n44 VDD.n19 9.0005
+R336 VDD.n43 VDD.n42 9.0005
+R337 VDD.n41 VDD.n20 9.0005
+R338 VDD.n40 VDD.n39 9.0005
+R339 VDD.n38 VDD.n21 9.0005
+R340 VDD.n37 VDD.n36 9.0005
+R341 VDD.n35 VDD.n22 9.0005
+R342 VDD.n34 VDD.n33 9.0005
+R343 VDD.n32 VDD.n23 9.0005
+R344 VDD.n31 VDD.n30 9.0005
+R345 VDD.n29 VDD.n24 9.0005
+R346 VDD.n4 VDD.n0 5.65698
+R347 VDD.n86 VDD.n82 5.65698
+R348 VDD.n87 VDD.n86 4.19271
+R349 VDD.n98 VDD.n97 3.94115
+R350 VDD.n86 VDD.n81 2.40504
+R351 VDD.n5 VDD.n0 2.40504
+R352 VDD.n90 VDD 2.20175
+R353 VDD.n1 VDD.n0 2.03947
+R354 VDD.n25 VDD 1.89756
+R355 VDD.n27 VDD 1.80676
+R356 VDD VDD.n0 1.18273
+R357 VDD.n29 VDD.n28 1.02222
+R358 VDD.n86 VDD.n83 1.00722
+R359 VDD.n3 VDD.n0 1.00704
+R360 VDD.n28 VDD 0.966926
+R361 VDD.n86 VDD.n85 0.690817
+R362 VDD.n84 VDD 0.668962
+R363 VDD.n2 VDD 0.668962
+R364 VDD VDD.n25 0.51661
+R365 VDD.n85 VDD.n84 0.435367
+R366 VDD.n89 VDD 0.430917
+R367 VDD.n28 VDD.n27 0.425369
+R368 VDD.n87 VDD 0.377233
+R369 VDD.n26 VDD 0.3605
+R370 VDD.n2 VDD.n1 0.278005
+R371 VDD.n1 VDD 0.268753
+R372 VDD.n26 VDD 0.227533
+R373 VDD VDD.n3 0.179186
+R374 VDD.n83 VDD 0.178595
+R375 VDD.n84 VDD.n83 0.173989
+R376 VDD.n3 VDD.n2 0.173371
+R377 VDD.n88 VDD 0.1455
+R378 VDD.n89 VDD 0.1455
+R379 VDD.n31 VDD.n24 0.1255
+R380 VDD.n32 VDD.n31 0.1255
+R381 VDD.n33 VDD.n32 0.1255
+R382 VDD.n33 VDD.n22 0.1255
+R383 VDD.n37 VDD.n22 0.1255
+R384 VDD.n38 VDD.n37 0.1255
+R385 VDD.n39 VDD.n38 0.1255
+R386 VDD.n39 VDD.n20 0.1255
+R387 VDD.n43 VDD.n20 0.1255
+R388 VDD.n44 VDD.n43 0.1255
+R389 VDD.n45 VDD.n44 0.1255
+R390 VDD.n45 VDD.n18 0.1255
+R391 VDD.n49 VDD.n18 0.1255
+R392 VDD.n50 VDD.n49 0.1255
+R393 VDD.n51 VDD.n50 0.1255
+R394 VDD.n51 VDD.n16 0.1255
+R395 VDD.n55 VDD.n16 0.1255
+R396 VDD.n56 VDD.n55 0.1255
+R397 VDD.n57 VDD.n56 0.1255
+R398 VDD.n57 VDD.n14 0.1255
+R399 VDD.n61 VDD.n14 0.1255
+R400 VDD.n62 VDD.n61 0.1255
+R401 VDD.n63 VDD.n62 0.1255
+R402 VDD.n63 VDD.n12 0.1255
+R403 VDD.n67 VDD.n12 0.1255
+R404 VDD.n68 VDD.n67 0.1255
+R405 VDD.n69 VDD.n68 0.1255
+R406 VDD.n69 VDD.n10 0.1255
+R407 VDD.n73 VDD.n10 0.1255
+R408 VDD.n74 VDD.n73 0.1255
+R409 VDD.n75 VDD.n74 0.1255
+R410 VDD.n75 VDD.n8 0.1255
+R411 VDD.n79 VDD.n8 0.1255
+R412 VDD.n80 VDD.n79 0.1255
+R413 VDD.n95 VDD.n80 0.1255
+R414 VDD.n95 VDD.n94 0.1255
+R415 VDD.n94 VDD.n93 0.1255
+R416 VDD.n93 VDD.n90 0.1255
+R417 VDD.n88 VDD.n87 0.116967
+R418 VDD VDD.n81 0.102865
+R419 VDD.n5 VDD 0.102865
+R420 VDD.n30 VDD.n29 0.1005
+R421 VDD.n30 VDD.n23 0.1005
+R422 VDD.n34 VDD.n23 0.1005
+R423 VDD.n35 VDD.n34 0.1005
+R424 VDD.n36 VDD.n35 0.1005
+R425 VDD.n36 VDD.n21 0.1005
+R426 VDD.n40 VDD.n21 0.1005
+R427 VDD.n41 VDD.n40 0.1005
+R428 VDD.n42 VDD.n41 0.1005
+R429 VDD.n42 VDD.n19 0.1005
+R430 VDD.n46 VDD.n19 0.1005
+R431 VDD.n47 VDD.n46 0.1005
+R432 VDD.n48 VDD.n47 0.1005
+R433 VDD.n48 VDD.n17 0.1005
+R434 VDD.n52 VDD.n17 0.1005
+R435 VDD.n53 VDD.n52 0.1005
+R436 VDD.n54 VDD.n53 0.1005
+R437 VDD.n54 VDD.n15 0.1005
+R438 VDD.n58 VDD.n15 0.1005
+R439 VDD.n59 VDD.n58 0.1005
+R440 VDD.n60 VDD.n59 0.1005
+R441 VDD.n60 VDD.n13 0.1005
+R442 VDD.n64 VDD.n13 0.1005
+R443 VDD.n65 VDD.n64 0.1005
+R444 VDD.n66 VDD.n65 0.1005
+R445 VDD.n66 VDD.n11 0.1005
+R446 VDD.n70 VDD.n11 0.1005
+R447 VDD.n71 VDD.n70 0.1005
+R448 VDD.n72 VDD.n71 0.1005
+R449 VDD.n72 VDD.n9 0.1005
+R450 VDD.n76 VDD.n9 0.1005
+R451 VDD.n77 VDD.n76 0.1005
+R452 VDD.n78 VDD.n77 0.1005
+R453 VDD.n78 VDD.n6 0.1005
+R454 VDD.n96 VDD.n7 0.1005
+R455 VDD.n92 VDD.n7 0.1005
+R456 VDD.n92 VDD.n91 0.1005
+R457 VDD.n85 VDD 0.0917542
+R458 VDD.n27 VDD.n24 0.07925
+R459 VDD.n81 VDD 0.0788303
+R460 VDD.n25 VDD 0.075851
+R461 VDD.n91 VDD 0.0665
+R462 VDD.n98 VDD.n5 0.0585434
+R463 VDD.n97 VDD.n6 0.0505
+R464 VDD.n97 VDD.n96 0.0505
+R465 VDD.n4 VDD 0.0481629
+R466 VDD VDD.n82 0.0481629
+R467 VDD VDD.n26 0.0457336
+R468 VDD.n82 VDD 0.0358992
+R469 VDD VDD.n4 0.0358992
+R470 VDD VDD.n98 0.0207869
+R471 VDD VDD.n88 0.0188333
+R472 VDD VDD.n89 0.0188333
+R473 CLK_OUT.n0 CLK_OUT 9.25617
+R474 CLK_OUT.n0 CLK_OUT 9.18618
+R475 CLK_OUT CLK_OUT.n0 0.02602
+R476 A1.n3 A1.n0 15.1827
+R477 A1.n2 A1.n1 15.0005
+R478 A1 A1.n3 9.43874
+R479 A1.n3 A1.n2 0.189306
+R480 A1.n2 A1 0.0513955
+R481 CLK_IN.n1 CLK_IN 18.612
+R482 CLK_IN.n1 CLK_IN.n0 15.0005
+R483 CLK_IN CLK_IN.n1 0.0505
+R484 EN.n1 EN 19.3226
+R485 EN.n1 EN.n0 15.0079
+R486 EN EN.n1 0.0495541
+R487 A0.n3 A0.n0 15.1827
+R488 A0.n2 A0.n1 15.0005
+R489 A0 A0.n3 9.43874
+R490 A0.n3 A0.n2 0.189306
+R491 A0.n2 A0 0.0513955
+C287 CLK_OUT VSS 0.2355f
+C288 A1 VSS 0.90021f
+C289 CLK_IN VSS 0.39453f
+C290 EN VSS 0.74494f
+C291 A0 VSS 1.05289f
+C292 VDD VSS 9.53713f
+C293 a_2854_n1975# VSS 0.21338f $ **FLOATING
+C294 a_2733_n1929# VSS 0.01158f $ **FLOATING
+C295 a_2757_n1845# VSS 0.18287f $ **FLOATING
+C296 a_2793_n1819# VSS 0.1705f $ **FLOATING
+C297 freq_div_cell_0.dff_nclk_0.nQ VSS 0.07921f $ **FLOATING
+C298 a_987_n2021# VSS 0.33561f $ **FLOATING
+C299 a_1550_n1984# VSS 0.42125f $ **FLOATING
+C300 a_741_n1985# VSS 0.77528f $ **FLOATING
+C301 a_206_n1595# VSS 0.25117f $ **FLOATING
+C302 a_357_n1657# VSS 0.1501f $ **FLOATING
+C303 a_n26_n1666# VSS 1.02209f $ **FLOATING
+C304 a_n519_n1980# VSS 0.12168f $ **FLOATING
+C305 a_n222_n1666# VSS 0.77921f $ **FLOATING
+C306 freq_div_cell_0.dff_nclk_0.sg13g2_dfrbp_1_0.CLK VSS 0.4773f $ **FLOATING
+C307 a_2779_n1425# VSS 0.41114f $ **FLOATING
+C308 a_2778_n686# VSS 0.33521f $ **FLOATING
+C309 a_2778_n869# VSS 0.78928f $ **FLOATING
+C310 a_1342_n712# VSS 0.37747f $ **FLOATING
+C311 freq_div_cell_0.dff_nclk_0.D VSS 0.46125f $ **FLOATING
+C312 a_n206_n712# VSS 0.36159f $ **FLOATING
+C313 freq_div_cell_0.Cout VSS 0.14159f $ **FLOATING
+C314 a_n946_n722# VSS 0.28111f $ **FLOATING
+C315 freq_div_cell_0.dff_nclk_0.Q VSS 2.22393f $ **FLOATING
+C316 a_2814_n388# VSS 0.1501f $ **FLOATING
+C317 a_2778_n280# VSS 0.24351f $ **FLOATING
+C318 a_2778_n414# VSS 1.01705f $ **FLOATING
+C319 a_2778_n608# VSS 0.81852f $ **FLOATING
+C320 sg13g2_tiehi_0.L_HI VSS 1.14143f $ **FLOATING
+C321 a_2111_n353# VSS 0.71228f $ **FLOATING
+C322 freq_div_cell_0.DIV VSS 0.745f $ **FLOATING
+C323 freq_div_cell_1.dff_nclk_0.nQ VSS 0.08269f $ **FLOATING
+C324 a_987_n265# VSS 0.33616f $ **FLOATING
+C325 a_1550_n228# VSS 0.41455f $ **FLOATING
+C326 a_741_n229# VSS 0.76427f $ **FLOATING
+C327 a_206_161# VSS 0.25006f $ **FLOATING
+C328 a_357_99# VSS 0.1501f $ **FLOATING
+C329 a_n26_90# VSS 1.02195f $ **FLOATING
+C330 a_n519_n224# VSS 0.12168f $ **FLOATING
+C331 a_n222_90# VSS 0.7879f $ **FLOATING
+C332 freq_div_cell_1.dff_nclk_0.sg13g2_dfrbp_1_0.CLK VSS 0.47437f $ **FLOATING
+C333 freq_div_cell_0.CLK VSS 1.57003f $ **FLOATING
+C334 dff_nclk_0.D VSS 0.72433f $ **FLOATING
+C335 a_2819_778# VSS 0.12168f $ **FLOATING
+C336 dff_nclk_0.sg13g2_dfrbp_1_0.CLK VSS 0.53802f $ **FLOATING
+C337 freq_div_cell_0.nRST VSS 5.10116f $ **FLOATING
+C338 sg13g2_or2_1_0.A VSS 0.88136f $ **FLOATING
+C339 a_1342_1044# VSS 0.38474f $ **FLOATING
+C340 freq_div_cell_1.dff_nclk_0.D VSS 0.46479f $ **FLOATING
+C341 a_n206_1044# VSS 0.36843f $ **FLOATING
+C342 freq_div_cell_0.Cin VSS 1.80311f $ **FLOATING
+C343 a_n946_1034# VSS 0.28192f $ **FLOATING
+C344 freq_div_cell_1.dff_nclk_0.Q VSS 2.58165f $ **FLOATING
+C345 a_n1377_624# VSS 0.17081f $ **FLOATING
+C346 a_n1576_991# VSS 0.23367f $ **FLOATING
+C347 sg13g2_tiehi_1.L_HI VSS 1.93477f $ **FLOATING
+C348 a_n1576_761# VSS 0.20855f $ **FLOATING
+C349 a_n1482_1067# VSS 0.01504f $ **FLOATING
+.ends

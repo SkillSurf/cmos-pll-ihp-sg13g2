@@ -1,0 +1,1163 @@
+timestamp 0
+version 8.3
+tech ihp-sg13g2
+style ngspice()
+scale 1000 1 0.5
+resistclasses 3000000 67000 110 88 88 88 88 18 11
+parameters sg13_lv_nmos l=l w=w a1=as p1=ps a2=ad p2=pd
+parameters sg13_lv_pmos l=l w=w a1=as p1=ps a2=ad p2=pd
+port "CLK_OUT" 5 3314 -1521 3497 -1421 m3
+port "A1" 6 1941 -407 2041 -224 m3
+port "CLK_IN" 7 -1747 -794 -1564 -694 m3
+port "EN" 8 -1747 -1800 -1564 -1700 m3
+port "A0" 9 2041 947 2141 1130 m3
+port "VDD" 3 -1659 -2294 3373 -2206 m2
+port "VSS" 2 -1659 1378 3373 1458 m2
+node "a_n609_n2132#" 0 1.22153 -609 -2132 ndif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_n703_n2132#" 0 1.22153 -703 -2132 ndif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_2854_n1975#" 0 213.381 2854 -1975 p 0 0 0 0 6292 346 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_3126_n1943#" 0 0.023105 3126 -1943 pdif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_2733_n1929#" 0 11.5806 2733 -1929 ndif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_2757_n1845#" 1 182.873 2757 -1845 p 0 0 0 0 16539 832 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_2793_n1819#" 0 170.495 2793 -1819 ndif 0 0 0 0 10615 496 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_1125_n1985#" 0 4.36927 1125 -1985 ndif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_935_n1985#" 0 3.10548 935 -1985 ndif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_2667_n1682#" 0 1.22153 2667 -1682 ndif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_2667_n1588#" 0 1.22153 2667 -1588 ndif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "CLK_OUT" 2 235.5 3314 -1521 m3 0 0 0 0 30390 1230 24100 682 18300 566 0 0 0 0 0 0 0 0
+equiv "CLK_OUT" "dff_nclk_0.sg13g2_dfrbp_1_0.Q"
+equiv "CLK_OUT" "dff_nclk_0.Q"
+node "freq_div_cell_0.dff_nclk_0.nQ" 1 79.21 1349 -1690 pdif 0 0 0 0 40946 1260 6844 352 0 0 0 0 0 0 0 0 0 0
+equiv "freq_div_cell_0.dff_nclk_0.nQ" "freq_div_cell_0.dff_nclk_0.sg13g2_dfrbp_1_0.Q_N"
+node "a_411_n1940#" 0 0 411 -1940 ndif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_333_n1940#" 0 0 333 -1940 ndif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_966_n1587#" 0 0 966 -1587 pdif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_n425_n1980#" 0 2.12934 -425 -1980 ndif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_987_n2021#" 3 335.605 987 -2021 p 0 0 0 0 32768 1878 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_1550_n1984#" 1 421.251 1550 -1984 ndif 0 0 0 0 35533 1382 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_741_n1985#" 3 775.28 741 -1985 ndif 0 0 0 0 35860 1984 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_308_n1595#" 0 0 308 -1595 pdif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_206_n1595#" 3 251.165 206 -1595 pdif 0 0 0 0 41008 2352 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_357_n1657#" 3 150.097 357 -1657 p 0 0 0 0 38599 2062 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_n26_n1666#" 6 1022.09 -26 -1666 pdif 0 0 0 0 75112 4052 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_n519_n1980#" 5 121.679 -519 -1980 ndif 0 0 0 0 59143 3502 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_n222_n1666#" 2 779.212 -222 -1666 pdif 0 0 0 0 29104 1532 0 0 0 0 0 0 0 0 0 0 0 0
+node "freq_div_cell_0.dff_nclk_0.sg13g2_dfrbp_1_0.CLK" 3 477.296 -800 -1984 ndif 0 0 0 0 37892 1622 45332 1668 0 0 0 0 0 0 0 0 0 0
+equiv "freq_div_cell_0.dff_nclk_0.sg13g2_dfrbp_1_0.CLK" "freq_div_cell_0.dff_nclk_0.sg13g2_inv_1_0.Y"
+node "a_2779_n1425#" 1 411.141 2779 -1425 p 0 0 0 0 35533 1382 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_2814_n843#" 0 4.36927 2814 -843 ndif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_1513_n1070#" 1 0.0996918 1513 -1070 pdif 0 0 0 0 18124 958 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_1310_n1070#" 0 0.539775 1310 -1070 pdif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_3212_n680#" 0 0 3212 -680 pdif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_2778_n686#" 3 335.208 2778 -686 p 0 0 0 0 32768 1878 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_n35_n1070#" 1 1.62093e-14 -35 -1070 pdif 0 0 0 0 18124 958 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_n238_n1070#" 0 0.539775 -238 -1070 pdif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_n1430_n1149#" 0 4.55987 -1430 -1149 ndif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_2814_n660#" 0 3.10548 2814 -660 ndif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_2778_n869#" 3 789.281 2778 -869 p 0 0 0 0 35860 1984 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_1607_n712#" 0 8.08395 1607 -712 ndif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_1342_n712#" 2 377.469 1342 -712 ndif 0 0 0 0 48344 2150 0 0 0 0 0 0 0 0 0 0 0 0
+node "A1" 2 900.208 1941 -407 m3 0 0 0 0 19497 716 100200 2204 18300 566 0 0 0 0 0 0 0 0
+equiv "A1" "freq_div_cell_0.sg13g2_xor2_1_0.B"
+equiv "A1" "freq_div_cell_0.BIT"
+node "freq_div_cell_0.dff_nclk_0.D" 4 461.253 -506 -1858 p 0 0 0 0 42562 1974 187170 4444 0 0 0 0 0 0 0 0 0 0
+equiv "freq_div_cell_0.dff_nclk_0.D" "freq_div_cell_0.half_add_0.sg13g2_xor2_1_0.X"
+equiv "freq_div_cell_0.dff_nclk_0.D" "freq_div_cell_0.half_add_0.sum"
+equiv "freq_div_cell_0.dff_nclk_0.D" "freq_div_cell_0.dff_nclk_0.sg13g2_dfrbp_1_0.D"
+node "a_59_n712#" 0 8.08395 59 -712 ndif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_n206_n712#" 2 361.588 -206 -712 ndif 0 0 0 0 48344 2150 0 0 0 0 0 0 0 0 0 0 0 0
+node "freq_div_cell_0.Cout" 2 141.588 -648 -1070 pdif 0 0 0 0 38332 1238 47648 1346 0 0 0 0 0 0 0 0 0 0
+equiv "freq_div_cell_0.Cout" "freq_div_cell_0.half_add_0.sg13g2_and2_1_0.X"
+equiv "freq_div_cell_0.Cout" "freq_div_cell_0.half_add_0.cout"
+node "a_n852_n722#" 0 6.43204 -852 -722 ndif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "CLK_IN" 1 394.531 -1747 -794 m3 0 0 0 0 4884 280 57180 1486 18300 566 0 0 0 0 0 0 0 0
+equiv "CLK_IN" "sg13g2_nand2_1_0.A"
+node "EN" 2 744.94 -1747 -1800 m3 0 0 0 0 4884 280 74240 2316 18300 566 0 0 0 0 0 0 0 0
+equiv "EN" "sg13g2_nand2_1_0.B"
+node "a_n946_n722#" 2 281.109 -946 -722 ndif 0 0 0 0 33954 1578 0 0 0 0 0 0 0 0 0 0 0 0
+node "freq_div_cell_0.dff_nclk_0.Q" 8 2223.93 -816 -814 p 0 0 0 0 69228 2732 361405 9402 0 0 0 0 0 0 0 0 0 0
+equiv "freq_div_cell_0.dff_nclk_0.Q" "freq_div_cell_0.half_add_0.sg13g2_xor2_1_0.B"
+equiv "freq_div_cell_0.dff_nclk_0.Q" "freq_div_cell_0.half_add_0.sg13g2_and2_1_0.B"
+equiv "freq_div_cell_0.dff_nclk_0.Q" "freq_div_cell_0.half_add_0.inB"
+equiv "freq_div_cell_0.dff_nclk_0.Q" "freq_div_cell_0.sg13g2_xor2_1_0.A"
+equiv "freq_div_cell_0.dff_nclk_0.Q" "freq_div_cell_0.dff_nclk_0.sg13g2_dfrbp_1_0.Q"
+node "a_1133_n404#" 0 6.70095 1133 -404 ndif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_1133_n382#" 0 6.70095 1133 -382 ndif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_2859_n130#" 0 0 2859 -130 ndif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_2814_n388#" 3 150.097 2814 -388 ndif 0 0 0 0 38599 2062 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_3204_n30#" 0 0 3204 -30 pdif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_2859_n58#" 0 0 2859 -58 ndif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_2778_n280#" 3 243.514 2778 -280 p 0 0 0 0 41008 2352 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_2778_n414#" 6 1017.05 2778 -414 p 0 0 0 0 75112 4052 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_2778_n608#" 2 818.524 2778 -608 p 0 0 0 0 29104 1532 0 0 0 0 0 0 0 0 0 0 0 0
+node "sg13g2_tiehi_0.L_HI" 6 1141.43 2744 -156 p 0 0 0 0 30040 1514 172370 5882 0 0 0 0 0 0 0 0 0 0
+equiv "sg13g2_tiehi_0.L_HI" "dff_nclk_0.sg13g2_dfrbp_1_0.RESET_B"
+equiv "sg13g2_tiehi_0.L_HI" "dff_nclk_0.nRST"
+node "a_2205_n353#" 0 0.373628 2205 -353 pdif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_1125_n229#" 0 4.36927 1125 -229 ndif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_935_n229#" 0 3.10548 935 -229 ndif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_2111_n353#" 2 712.279 2111 -353 pdif 0 0 0 0 32981 1670 0 0 0 0 0 0 0 0 0 0 0 0
+node "freq_div_cell_0.DIV" 3 745.001 1681 -712 ndif 0 0 0 0 35129 1750 126100 2722 0 0 0 0 0 0 0 0 0 0
+equiv "freq_div_cell_0.DIV" "sg13g2_or2_1_0.B"
+equiv "freq_div_cell_0.DIV" "freq_div_cell_0.sg13g2_xor2_1_0.X"
+node "a_2661_277#" 0 0.523512 2661 277 ndif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_2569_277#" 0 1.22153 2569 277 ndif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "freq_div_cell_1.dff_nclk_0.nQ" 1 82.693 1349 66 pdif 0 0 0 0 40946 1260 6844 352 0 0 0 0 0 0 0 0 0 0
+equiv "freq_div_cell_1.dff_nclk_0.nQ" "freq_div_cell_1.dff_nclk_0.sg13g2_dfrbp_1_0.Q_N"
+node "a_411_n184#" 0 0 411 -184 ndif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_333_n184#" 0 0 333 -184 ndif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_966_169#" 0 0 966 169 pdif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_n425_n224#" 0 2.12934 -425 -224 ndif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_987_n265#" 3 336.162 987 -265 p 0 0 0 0 32768 1878 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_1550_n228#" 1 414.551 1550 -228 ndif 0 0 0 0 35533 1382 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_741_n229#" 3 764.267 741 -229 ndif 0 0 0 0 35860 1984 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_308_161#" 0 0 308 161 pdif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_206_161#" 3 250.064 206 161 pdif 0 0 0 0 41008 2352 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_357_99#" 3 150.097 357 99 p 0 0 0 0 38599 2062 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_n26_90#" 6 1021.95 -26 90 pdif 0 0 0 0 75112 4052 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_n519_n224#" 5 121.679 -519 -224 ndif 0 0 0 0 59143 3502 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_n222_90#" 2 787.897 -222 90 pdif 0 0 0 0 29104 1532 0 0 0 0 0 0 0 0 0 0 0 0
+node "freq_div_cell_1.dff_nclk_0.sg13g2_dfrbp_1_0.CLK" 3 474.375 -800 -228 ndif 0 0 0 0 37892 1622 45332 1668 0 0 0 0 0 0 0 0 0 0
+equiv "freq_div_cell_1.dff_nclk_0.sg13g2_dfrbp_1_0.CLK" "freq_div_cell_1.dff_nclk_0.sg13g2_inv_1_0.Y"
+node "freq_div_cell_0.CLK" 5 1570.03 -1445 -855 pdif 0 0 0 0 242405 6142 50200 1404 0 0 0 0 0 0 0 0 0 0
+equiv "freq_div_cell_0.CLK" "freq_div_cell_1.dff_nclk_0.sg13g2_inv_1_0.A"
+equiv "freq_div_cell_0.CLK" "freq_div_cell_1.dff_nclk_0.nCLK"
+equiv "freq_div_cell_0.CLK" "freq_div_cell_1.CLK"
+equiv "freq_div_cell_0.CLK" "sg13g2_nand2_1_0.Y"
+equiv "freq_div_cell_0.CLK" "freq_div_cell_0.dff_nclk_0.sg13g2_inv_1_0.A"
+equiv "freq_div_cell_0.CLK" "freq_div_cell_0.dff_nclk_0.nCLK"
+node "a_2819_704#" 0 2.12934 2819 704 ndif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "dff_nclk_0.D" 5 724.325 2783 752 p 0 0 0 0 55047 1856 286440 6632 0 0 0 0 0 0 0 0 0 0
+equiv "dff_nclk_0.D" "dff_nclk_0.sg13g2_dfrbp_1_0.Q_N"
+equiv "dff_nclk_0.D" "dff_nclk_0.sg13g2_dfrbp_1_0.D"
+equiv "dff_nclk_0.D" "dff_nclk_0.nQ"
+node "a_2819_778#" 5 121.679 2819 778 ndif 0 0 0 0 59143 3502 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_1513_686#" 1 0.271917 1513 686 pdif 0 0 0 0 18124 958 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_1310_686#" 0 1.10322 1310 686 pdif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_2667_922#" 0 1.22153 2667 922 ndif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_2667_1016#" 0 1.22153 2667 1016 ndif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "dff_nclk_0.sg13g2_dfrbp_1_0.CLK" 3 538.024 2814 449 p 0 0 0 0 37892 1622 45332 1668 0 0 0 0 0 0 0 0 0 0
+equiv "dff_nclk_0.sg13g2_dfrbp_1_0.CLK" "dff_nclk_0.sg13g2_inv_1_0.Y"
+node "a_n35_686#" 1 0.0833751 -35 686 pdif 0 0 0 0 18124 958 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_n238_686#" 0 0.539775 -238 686 pdif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_n1576_602#" 0 3.09492 -1576 602 pdif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "freq_div_cell_0.nRST" 22 5101.16 -377 -2055 p 0 0 0 0 87827 4036 1012032 28420 0 0 0 0 0 0 0 0 0 0
+equiv "freq_div_cell_0.nRST" "freq_div_cell_1.dff_nclk_0.sg13g2_dfrbp_1_0.RESET_B"
+equiv "freq_div_cell_0.nRST" "freq_div_cell_1.dff_nclk_0.nRST"
+equiv "freq_div_cell_0.nRST" "freq_div_cell_1.nRST"
+equiv "freq_div_cell_0.nRST" "sg13g2_or2_1_0.X"
+equiv "freq_div_cell_0.nRST" "dff_nclk_0.sg13g2_inv_1_0.A"
+equiv "freq_div_cell_0.nRST" "dff_nclk_0.nCLK"
+equiv "freq_div_cell_0.nRST" "freq_div_cell_0.dff_nclk_0.sg13g2_dfrbp_1_0.RESET_B"
+equiv "freq_div_cell_0.nRST" "freq_div_cell_0.dff_nclk_0.nRST"
+node "sg13g2_or2_1_0.A" 3 881.359 1681 1044 ndif 0 0 0 0 34677 1694 133000 2860 0 0 0 0 0 0 0 0 0 0
+equiv "sg13g2_or2_1_0.A" "freq_div_cell_1.sg13g2_xor2_1_0.X"
+equiv "sg13g2_or2_1_0.A" "freq_div_cell_1.DIV"
+node "a_1607_1044#" 0 8.08395 1607 1044 ndif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_1342_1044#" 2 384.741 1342 1044 ndif 0 0 0 0 48344 2150 0 0 0 0 0 0 0 0 0 0 0 0
+node "A0" 2 1052.89 2041 947 m3 0 0 0 0 19497 716 100500 2210 18300 566 0 0 0 0 0 0 0 0
+equiv "A0" "freq_div_cell_1.sg13g2_xor2_1_0.B"
+equiv "A0" "freq_div_cell_1.BIT"
+node "freq_div_cell_1.dff_nclk_0.D" 4 464.79 -506 -102 p 0 0 0 0 42562 1974 187170 4444 0 0 0 0 0 0 0 0 0 0
+equiv "freq_div_cell_1.dff_nclk_0.D" "freq_div_cell_1.half_add_0.sg13g2_xor2_1_0.X"
+equiv "freq_div_cell_1.dff_nclk_0.D" "freq_div_cell_1.half_add_0.sum"
+equiv "freq_div_cell_1.dff_nclk_0.D" "freq_div_cell_1.dff_nclk_0.sg13g2_dfrbp_1_0.D"
+node "a_59_1044#" 0 8.08395 59 1044 ndif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_n206_1044#" 2 368.432 -206 1044 ndif 0 0 0 0 48344 2150 0 0 0 0 0 0 0 0 0 0 0 0
+node "freq_div_cell_0.Cin" 5 1803.11 -970 -580 p 0 0 0 0 65872 2186 292380 6420 0 0 0 0 0 0 0 0 0 0
+equiv "freq_div_cell_0.Cin" "freq_div_cell_1.half_add_0.sg13g2_and2_1_0.X"
+equiv "freq_div_cell_0.Cin" "freq_div_cell_1.half_add_0.cout"
+equiv "freq_div_cell_0.Cin" "freq_div_cell_1.Cout"
+equiv "freq_div_cell_0.Cin" "freq_div_cell_0.half_add_0.sg13g2_xor2_1_0.A"
+equiv "freq_div_cell_0.Cin" "freq_div_cell_0.half_add_0.sg13g2_and2_1_0.A"
+equiv "freq_div_cell_0.Cin" "freq_div_cell_0.half_add_0.inA"
+node "a_n852_1034#" 0 6.43204 -852 1034 ndif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_n946_1034#" 2 281.917 -946 1034 ndif 0 0 0 0 33954 1578 0 0 0 0 0 0 0 0 0 0 0 0
+node "freq_div_cell_1.dff_nclk_0.Q" 8 2581.65 -816 942 p 0 0 0 0 69228 2732 361405 9402 0 0 0 0 0 0 0 0 0 0
+equiv "freq_div_cell_1.dff_nclk_0.Q" "freq_div_cell_1.half_add_0.sg13g2_xor2_1_0.B"
+equiv "freq_div_cell_1.dff_nclk_0.Q" "freq_div_cell_1.half_add_0.sg13g2_and2_1_0.B"
+equiv "freq_div_cell_1.dff_nclk_0.Q" "freq_div_cell_1.half_add_0.inB"
+equiv "freq_div_cell_1.dff_nclk_0.Q" "freq_div_cell_1.sg13g2_xor2_1_0.A"
+equiv "freq_div_cell_1.dff_nclk_0.Q" "freq_div_cell_1.dff_nclk_0.sg13g2_dfrbp_1_0.Q"
+node "a_n1377_624#" 0 170.806 -1377 624 p 0 0 0 0 10615 496 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_n1576_991#" 0 233.669 -1576 991 p 0 0 0 0 6292 346 0 0 0 0 0 0 0 0 0 0 0 0
+node "sg13g2_tiehi_1.L_HI" 2 1934.77 -1351 662 pdif 0 0 0 0 102519 2466 88572 2230 0 0 0 0 0 0 0 0 0 0
+equiv "sg13g2_tiehi_1.L_HI" "freq_div_cell_1.half_add_0.sg13g2_xor2_1_0.A"
+equiv "sg13g2_tiehi_1.L_HI" "freq_div_cell_1.half_add_0.sg13g2_and2_1_0.A"
+equiv "sg13g2_tiehi_1.L_HI" "freq_div_cell_1.half_add_0.inA"
+equiv "sg13g2_tiehi_1.L_HI" "freq_div_cell_1.Cin"
+node "a_n1576_761#" 1 208.553 -1576 761 pdif 0 0 0 0 16539 832 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_n1482_1067#" 0 15.0403 -1482 1067 ndif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_n429_1292#" 0 1.22153 -429 1292 ndif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_n511_1292#" 0 1.22153 -511 1292 ndif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_n1005_1292#" 0 1.22153 -1005 1292 ndif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_n1215_1292#" 0 1.22153 -1215 1292 ndif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "VDD" 36 9537.13 -1659 -2294 m2 0 0 0 0 3226958 59324 600618 12920 0 0 0 0 0 0 0 0 0 0
+equiv "VDD" "freq_div_cell_1.half_add_0.sg13g2_xor2_1_0.VDD"
+equiv "VDD" "freq_div_cell_1.half_add_0.sg13g2_and2_1_0.VDD"
+equiv "VDD" "freq_div_cell_1.sg13g2_xor2_1_0.VDD"
+equiv "VDD" "freq_div_cell_1.dff_nclk_0.sg13g2_inv_1_0.VDD"
+equiv "VDD" "freq_div_cell_1.dff_nclk_0.sg13g2_dfrbp_1_0.VDD"
+equiv "VDD" "sg13g2_tiehi_1.VDD"
+equiv "VDD" "sg13g2_or2_1_0.VDD"
+equiv "VDD" "sg13g2_nand2_1_0.VDD"
+equiv "VDD" "dff_nclk_0.sg13g2_inv_1_0.VDD"
+equiv "VDD" "dff_nclk_0.sg13g2_dfrbp_1_0.VDD"
+equiv "VDD" "freq_div_cell_0.half_add_0.sg13g2_xor2_1_0.VDD"
+equiv "VDD" "freq_div_cell_0.half_add_0.sg13g2_and2_1_0.VDD"
+equiv "VDD" "freq_div_cell_0.sg13g2_xor2_1_0.VDD"
+equiv "VDD" "freq_div_cell_0.dff_nclk_0.sg13g2_inv_1_0.VDD"
+equiv "VDD" "freq_div_cell_0.dff_nclk_0.sg13g2_dfrbp_1_0.VDD"
+equiv "VDD" "sg13g2_tiehi_0.VDD"
+substrate "VSS" 0 0 -1659 1378 m2 0 0 0 0 2725528 53032 402560 10224 0 0 0 0 0 0 0 0 0 0
+equiv "VSS" "freq_div_cell_1.half_add_0.sg13g2_xor2_1_0.VSS"
+equiv "VSS" "freq_div_cell_1.half_add_0.sg13g2_and2_1_0.VSS"
+equiv "VSS" "freq_div_cell_1.sg13g2_xor2_1_0.VSS"
+equiv "VSS" "freq_div_cell_1.dff_nclk_0.sg13g2_inv_1_0.VSS"
+equiv "VSS" "freq_div_cell_1.dff_nclk_0.sg13g2_dfrbp_1_0.VSS"
+equiv "VSS" "sg13g2_tiehi_1.VSS"
+equiv "VSS" "sg13g2_or2_1_0.VSS"
+equiv "VSS" "sg13g2_nand2_1_0.VSS"
+equiv "VSS" "dff_nclk_0.sg13g2_inv_1_0.VSS"
+equiv "VSS" "dff_nclk_0.sg13g2_dfrbp_1_0.VSS"
+equiv "VSS" "freq_div_cell_0.half_add_0.sg13g2_xor2_1_0.VSS"
+equiv "VSS" "freq_div_cell_0.half_add_0.sg13g2_and2_1_0.VSS"
+equiv "VSS" "freq_div_cell_0.sg13g2_xor2_1_0.VSS"
+equiv "VSS" "freq_div_cell_0.dff_nclk_0.sg13g2_inv_1_0.VSS"
+equiv "VSS" "freq_div_cell_0.dff_nclk_0.sg13g2_dfrbp_1_0.VSS"
+equiv "VSS" "sg13g2_tiehi_0.VSS"
+cap "freq_div_cell_0.dff_nclk_0.Q" "a_206_161#" 4.01784
+cap "a_308_n1595#" "a_206_n1595#" 6.10793
+cap "a_n26_90#" "a_987_n265#" 43.0574
+cap "a_n222_n1666#" "freq_div_cell_0.dff_nclk_0.Q" 8.25529
+cap "freq_div_cell_0.Cin" "a_n946_n722#" 130.339
+cap "freq_div_cell_1.dff_nclk_0.Q" "a_n1576_991#" 0.411676
+cap "a_935_n229#" "freq_div_cell_0.dff_nclk_0.Q" 0.108619
+cap "freq_div_cell_1.dff_nclk_0.D" "freq_div_cell_1.dff_nclk_0.Q" 240.192
+cap "freq_div_cell_0.Cout" "a_n35_n1070#" 0.476559
+cap "freq_div_cell_1.dff_nclk_0.Q" "a_n222_90#" 8.25529
+cap "CLK_IN" "freq_div_cell_0.CLK" 262.727
+cap "a_1342_1044#" "a_1607_1044#" 0.122716
+cap "a_n238_n1070#" "freq_div_cell_0.dff_nclk_0.D" 1.3917
+cap "freq_div_cell_0.Cin" "sg13g2_tiehi_1.L_HI" 146.223
+cap "freq_div_cell_0.dff_nclk_0.nQ" "A1" 0.594294
+cap "a_n519_n1980#" "a_357_n1657#" 0.942192
+cap "a_741_n229#" "freq_div_cell_0.dff_nclk_0.Q" 11.8971
+cap "VDD" "a_3212_n680#" 1.34032
+cap "freq_div_cell_0.dff_nclk_0.Q" "freq_div_cell_0.DIV" 3.7171
+cap "a_2779_n1425#" "a_1550_n1984#" 0.0187402
+cap "freq_div_cell_1.dff_nclk_0.Q" "a_n26_90#" 1.89521
+cap "freq_div_cell_1.dff_nclk_0.Q" "a_n1576_761#" 0.968494
+cap "dff_nclk_0.D" "a_2819_778#" 361.177
+cap "freq_div_cell_0.dff_nclk_0.Q" "a_1513_n1070#" 10.1108
+cap "a_1342_n712#" "freq_div_cell_0.dff_nclk_0.D" 3.35846
+cap "CLK_OUT" "freq_div_cell_0.nRST" 3.44022
+cap "a_1607_n712#" "freq_div_cell_0.DIV" 4.9597
+cap "a_2793_n1819#" "a_2778_n608#" 0.1527
+cap "a_n425_n224#" "a_n519_n224#" 5.41159
+cap "a_n222_n1666#" "a_n519_n1980#" 177.665
+cap "EN" "CLK_IN" 129.531
+cap "freq_div_cell_0.Cin" "VDD" 989.505
+cap "freq_div_cell_0.dff_nclk_0.D" "a_1310_n1070#" 0.00693237
+cap "freq_div_cell_0.dff_nclk_0.Q" "a_1550_n1984#" 123.889
+cap "A0" "A1" 0.419631
+cap "a_n425_n1980#" "freq_div_cell_0.nRST" 0.28373
+cap "a_2111_n353#" "a_2205_n353#" 6.48545
+cap "EN" "a_n206_n712#" 0.0423345
+cap "a_n238_686#" "VDD" 6.82976
+cap "a_2819_704#" "freq_div_cell_0.nRST" 0.270804
+cap "a_2814_n388#" "a_2778_n608#" 42.5474
+cap "a_n1430_n1149#" "freq_div_cell_0.Cout" 0.390219
+cap "freq_div_cell_0.nRST" "a_333_n184#" 1.98435
+cap "freq_div_cell_0.Cout" "freq_div_cell_0.nRST" 5.9469
+cap "A0" "a_1550_n228#" 0.523644
+cap "VDD" "A1" 190.592
+cap "freq_div_cell_0.Cin" "a_n35_n1070#" 10.1108
+cap "a_2779_n1425#" "freq_div_cell_0.dff_nclk_0.Q" 0.0449068
+cap "a_1342_n712#" "a_2778_n608#" 0.227428
+cap "freq_div_cell_0.dff_nclk_0.sg13g2_dfrbp_1_0.CLK" "a_n222_n1666#" 337.309
+cap "a_2778_n280#" "CLK_OUT" 0.0121325
+cap "freq_div_cell_1.dff_nclk_0.D" "a_n35_686#" 121.851
+cap "freq_div_cell_1.dff_nclk_0.D" "a_59_1044#" 5.17109
+cap "freq_div_cell_1.dff_nclk_0.Q" "a_1607_1044#" 0.290726
+cap "a_1550_n228#" "VDD" 234.928
+cap "a_n35_686#" "a_n222_90#" 0.609523
+cap "a_n26_n1666#" "a_357_n1657#" 660.771
+cap "a_3204_n30#" "VDD" 0.951222
+cap "a_741_n1985#" "A1" 2.13958
+cap "dff_nclk_0.sg13g2_dfrbp_1_0.CLK" "a_2819_778#" 84.3691
+cap "sg13g2_or2_1_0.A" "a_357_99#" 0.0967774
+cap "a_2859_n130#" "dff_nclk_0.sg13g2_dfrbp_1_0.CLK" 0.17406
+cap "a_357_n1657#" "a_987_n2021#" 0.090424
+cap "a_n1377_624#" "a_n946_1034#" 0.288372
+cap "a_2819_778#" "sg13g2_tiehi_0.L_HI" 348.87
+cap "a_2854_n1975#" "a_2793_n1819#" 22.8971
+cap "a_n222_n1666#" "a_n26_n1666#" 450.473
+cap "a_n238_n1070#" "CLK_IN" 0.0499652
+cap "a_2859_n130#" "sg13g2_tiehi_0.L_HI" 0.376385
+cap "freq_div_cell_0.dff_nclk_0.D" "a_n425_n1980#" 0.0155532
+cap "a_1125_n229#" "a_741_n229#" 0.441522
+cap "A0" "dff_nclk_0.D" 1.19807
+cap "a_n238_n1070#" "a_n206_n712#" 10.3958
+cap "a_1125_n229#" "freq_div_cell_0.DIV" 0.0642774
+cap "VDD" "a_2757_n1845#" 89.5699
+cap "a_n26_90#" "a_333_n184#" 3.9443
+cap "freq_div_cell_1.dff_nclk_0.sg13g2_dfrbp_1_0.CLK" "freq_div_cell_1.dff_nclk_0.nQ" 0.0050473
+cap "a_411_n184#" "freq_div_cell_0.nRST" 0.871015
+cap "freq_div_cell_0.CLK" "freq_div_cell_1.dff_nclk_0.sg13g2_dfrbp_1_0.CLK" 105.688
+cap "freq_div_cell_0.Cin" "freq_div_cell_0.nRST" 276.59
+cap "freq_div_cell_0.dff_nclk_0.D" "freq_div_cell_0.Cout" 46.2297
+cap "a_741_n229#" "a_n26_n1666#" 0.0280781
+cap "a_n222_n1666#" "a_987_n2021#" 43.244
+cap "a_2111_n353#" "a_2778_n414#" 0.0674293
+cap "freq_div_cell_0.dff_nclk_0.Q" "a_n519_n1980#" 0.0963297
+cap "VDD" "a_n609_n2132#" 3.2049e-18
+cap "a_206_161#" "a_357_99#" 702.62
+cap "dff_nclk_0.D" "VDD" 941.994
+cap "sg13g2_or2_1_0.A" "a_966_169#" 0.00469818
+cap "CLK_OUT" "a_2778_n608#" 0.694302
+cap "freq_div_cell_1.dff_nclk_0.sg13g2_dfrbp_1_0.CLK" "a_n519_n224#" 82.1317
+cap "a_n222_n1666#" "a_357_99#" 0.0671889
+cap "A0" "a_1513_686#" 18.5062
+cap "a_741_n229#" "a_987_n2021#" 0.000901653
+cap "A1" "freq_div_cell_0.nRST" 252.983
+cap "a_n1576_602#" "freq_div_cell_0.Cin" 5.22696
+cap "a_2859_n58#" "freq_div_cell_0.nRST" 0.636175
+cap "a_2819_704#" "a_2778_n608#" 0.0364215
+cap "a_2778_n414#" "a_2814_n388#" 660.771
+cap "sg13g2_tiehi_1.L_HI" "a_n206_1044#" 120.818
+cap "freq_div_cell_0.Cin" "a_n1576_991#" 0.225203
+cap "a_357_n1657#" "freq_div_cell_0.dff_nclk_0.nQ" 0.0736947
+cap "a_741_n229#" "a_357_99#" 39.5657
+cap "freq_div_cell_1.dff_nclk_0.D" "freq_div_cell_0.Cin" 96.285
+cap "a_1550_n228#" "freq_div_cell_0.nRST" 3.80893
+cap "a_n852_n722#" "a_n946_n722#" 3.79789
+cap "freq_div_cell_0.Cin" "a_n222_90#" 0.117267
+cap "freq_div_cell_0.dff_nclk_0.sg13g2_dfrbp_1_0.CLK" "freq_div_cell_0.dff_nclk_0.Q" 1.63486
+cap "VDD" "a_1513_686#" 208.337
+cap "sg13g2_or2_1_0.A" "A0" 150.417
+cap "freq_div_cell_1.dff_nclk_0.D" "a_n238_686#" 1.3917
+cap "a_n946_1034#" "a_n946_n722#" 0.257409
+cap "freq_div_cell_0.dff_nclk_0.D" "a_59_n712#" 5.17109
+cap "freq_div_cell_1.dff_nclk_0.nQ" "a_n519_n224#" 0.0244009
+cap "a_1342_n712#" "a_2778_n414#" 0.125369
+cap "EN" "freq_div_cell_0.CLK" 108.747
+cap "a_411_n184#" "a_n26_90#" 3.49307
+cap "a_n222_n1666#" "freq_div_cell_0.dff_nclk_0.nQ" 0.0555845
+cap "a_n852_1034#" "sg13g2_tiehi_1.L_HI" 8.08588
+cap "freq_div_cell_0.Cin" "a_n26_90#" 0.0447697
+cap "dff_nclk_0.sg13g2_dfrbp_1_0.CLK" "A0" 1.75091
+cap "a_n206_1044#" "VDD" 257.263
+cap "freq_div_cell_0.dff_nclk_0.D" "freq_div_cell_0.Cin" 6.80536
+cap "sg13g2_tiehi_1.L_HI" "a_n946_1034#" 182.087
+cap "a_2778_n280#" "A1" 0.739107
+cap "sg13g2_or2_1_0.A" "VDD" 184.224
+cap "a_n222_90#" "A1" 0.0502882
+cap "a_2778_n280#" "a_2859_n58#" 3.83924
+cap "a_2757_n1845#" "freq_div_cell_0.nRST" 0.669803
+cap "freq_div_cell_0.dff_nclk_0.Q" "a_n26_n1666#" 1.89521
+cap "dff_nclk_0.sg13g2_dfrbp_1_0.CLK" "a_2814_n660#" 0.0662044
+cap "a_741_n229#" "a_966_169#" 4.49184
+cap "a_2814_n660#" "a_2778_n686#" 0.210528
+cap "a_2778_n869#" "a_2814_n660#" 5.21084
+cap "freq_div_cell_0.dff_nclk_0.sg13g2_dfrbp_1_0.CLK" "a_n519_n1980#" 82.1317
+cap "a_n26_90#" "A1" 0.176325
+cap "a_2814_n660#" "sg13g2_tiehi_0.L_HI" 0.564461
+cap "dff_nclk_0.sg13g2_dfrbp_1_0.CLK" "VDD" 274.451
+cap "VDD" "a_2778_n686#" 304.98
+cap "a_2778_n280#" "a_3204_n30#" 6.10793
+cap "VDD" "a_357_n1657#" 250.533
+cap "a_2111_n353#" "freq_div_cell_1.dff_nclk_0.nQ" 0.0482434
+cap "VDD" "a_n946_1034#" 443.702
+cap "a_2778_n869#" "VDD" 415.163
+cap "a_2854_n1975#" "CLK_OUT" 0.347828
+cap "a_308_161#" "a_n519_n224#" 0.0256716
+cap "dff_nclk_0.D" "freq_div_cell_0.nRST" 83.1954
+cap "VDD" "sg13g2_tiehi_0.L_HI" 635.509
+cap "freq_div_cell_0.dff_nclk_0.Q" "a_987_n2021#" 5.12618
+cap "CLK_IN" "freq_div_cell_0.Cout" 1.12605
+cap "freq_div_cell_0.Cout" "a_n206_n712#" 11.5444
+cap "a_206_161#" "VDD" 294.432
+cap "freq_div_cell_0.dff_nclk_0.nQ" "a_1550_n1984#" 216.087
+cap "A0" "a_741_n229#" 2.13958
+cap "freq_div_cell_1.dff_nclk_0.Q" "freq_div_cell_1.dff_nclk_0.sg13g2_dfrbp_1_0.CLK" 1.63486
+cap "a_987_n265#" "freq_div_cell_1.dff_nclk_0.nQ" 101.181
+cap "freq_div_cell_0.dff_nclk_0.Q" "a_357_99#" 4.556
+cap "a_n222_n1666#" "VDD" 672.46
+cap "a_1310_686#" "sg13g2_or2_1_0.A" 0.435133
+cap "a_n519_n1980#" "a_n26_n1666#" 472.481
+cap "a_357_n1657#" "a_741_n1985#" 39.5657
+cap "freq_div_cell_0.nRST" "a_1513_686#" 0.262951
+cap "a_2778_n414#" "CLK_OUT" 0.0367
+cap "a_741_n229#" "VDD" 426.767
+cap "A1" "a_2778_n608#" 0.20875
+cap "freq_div_cell_0.DIV" "VDD" 410.155
+cap "a_n222_n1666#" "a_n35_n1070#" 0.609523
+cap "freq_div_cell_1.dff_nclk_0.Q" "freq_div_cell_1.dff_nclk_0.nQ" 27.1217
+cap "dff_nclk_0.D" "a_2778_n280#" 12.7739
+cap "freq_div_cell_1.dff_nclk_0.Q" "freq_div_cell_0.CLK" 0.392632
+cap "a_n206_1044#" "freq_div_cell_0.nRST" 0.0699202
+cap "a_n222_n1666#" "a_741_n1985#" 23.0201
+cap "a_1342_n712#" "freq_div_cell_1.dff_nclk_0.nQ" 0.237376
+cap "VDD" "a_1513_n1070#" 208.337
+cap "sg13g2_or2_1_0.A" "freq_div_cell_0.nRST" 285.802
+cap "a_n1482_1067#" "a_n1377_624#" 3.88904
+cap "a_n206_n712#" "a_59_n712#" 0.122716
+cap "freq_div_cell_0.dff_nclk_0.Q" "freq_div_cell_0.dff_nclk_0.nQ" 27.1217
+cap "freq_div_cell_0.dff_nclk_0.sg13g2_dfrbp_1_0.CLK" "a_n26_n1666#" 13.2436
+cap "a_n238_n1070#" "EN" 0.0219372
+cap "VDD" "a_1550_n1984#" 236.156
+cap "CLK_IN" "freq_div_cell_0.Cin" 17.1222
+cap "freq_div_cell_0.Cin" "a_n425_n224#" 0.0577986
+cap "a_741_n229#" "a_741_n1985#" 0.28605
+cap "freq_div_cell_0.dff_nclk_0.Q" "a_n946_n722#" 305.462
+cap "dff_nclk_0.sg13g2_dfrbp_1_0.CLK" "freq_div_cell_0.nRST" 228.557
+cap "freq_div_cell_1.dff_nclk_0.Q" "a_n519_n224#" 0.0963297
+cap "freq_div_cell_0.Cin" "a_n206_n712#" 120.818
+cap "freq_div_cell_0.nRST" "a_2778_n686#" 4.86296
+cap "a_2778_n869#" "freq_div_cell_0.nRST" 8.96105
+cap "a_357_n1657#" "freq_div_cell_0.nRST" 172.479
+cap "freq_div_cell_0.nRST" "a_n946_1034#" 0.056402
+cap "freq_div_cell_0.nRST" "sg13g2_tiehi_0.L_HI" 202.153
+cap "a_741_n1985#" "a_1513_n1070#" 0.154814
+cap "a_308_161#" "freq_div_cell_1.dff_nclk_0.Q" 0.0283453
+cap "freq_div_cell_1.dff_nclk_0.Q" "a_1342_1044#" 149.869
+cap "freq_div_cell_1.dff_nclk_0.D" "a_n206_1044#" 247.148
+cap "a_206_161#" "freq_div_cell_0.nRST" 327.419
+cap "a_2779_n1425#" "VDD" 234.089
+cap "a_n206_1044#" "a_n222_90#" 2.05954
+cap "a_1342_n712#" "a_1342_1044#" 0.369705
+cap "a_2111_n353#" "a_2814_n388#" 0.109977
+cap "a_1550_n1984#" "a_741_n1985#" 95.7523
+cap "sg13g2_or2_1_0.A" "a_n222_90#" 0.0432076
+cap "a_n222_n1666#" "freq_div_cell_0.nRST" 355.173
+cap "a_n519_n1980#" "freq_div_cell_0.dff_nclk_0.nQ" 0.0244009
+cap "a_935_n229#" "freq_div_cell_0.nRST" 1.45928
+cap "a_987_n2021#" "a_1125_n1985#" 4.96542
+cap "dff_nclk_0.D" "a_2778_n608#" 20.5576
+cap "freq_div_cell_0.dff_nclk_0.Q" "VDD" 1238.36
+cap "a_n26_n1666#" "a_987_n2021#" 43.0574
+cap "a_n1576_991#" "a_n946_1034#" 0.00873196
+cap "dff_nclk_0.sg13g2_dfrbp_1_0.CLK" "a_2778_n280#" 2.09473
+cap "sg13g2_or2_1_0.A" "a_n26_90#" 0.0268806
+cap "a_741_n229#" "freq_div_cell_0.nRST" 295.324
+cap "freq_div_cell_1.dff_nclk_0.D" "a_n946_1034#" 1.40991
+cap "VDD" "a_2733_n1929#" 5.6464
+cap "freq_div_cell_0.DIV" "freq_div_cell_0.nRST" 420.164
+cap "a_2778_n280#" "sg13g2_tiehi_0.L_HI" 315.614
+cap "freq_div_cell_0.nRST" "a_1513_n1070#" 34.4858
+cap "freq_div_cell_1.dff_nclk_0.Q" "a_987_n265#" 6.1284
+cap "freq_div_cell_1.dff_nclk_0.D" "a_206_161#" 4.0753
+cap "a_n1482_1067#" "sg13g2_tiehi_1.L_HI" 4.234
+cap "freq_div_cell_0.dff_nclk_0.sg13g2_dfrbp_1_0.CLK" "freq_div_cell_0.dff_nclk_0.nQ" 0.0050473
+cap "a_206_161#" "a_n222_90#" 53.1407
+cap "freq_div_cell_0.dff_nclk_0.Q" "a_n35_n1070#" 25.5901
+cap "a_n1576_761#" "a_n946_1034#" 0.17032
+cap "freq_div_cell_0.dff_nclk_0.Q" "a_741_n1985#" 19.8444
+cap "freq_div_cell_0.dff_nclk_0.D" "a_357_n1657#" 0.286174
+cap "freq_div_cell_0.CLK" "freq_div_cell_0.Cout" 51.3002
+cap "a_2778_n414#" "A1" 0.750431
+cap "a_1550_n1984#" "freq_div_cell_0.nRST" 59.0287
+cap "a_2778_n414#" "a_2859_n58#" 3.9443
+cap "freq_div_cell_0.dff_nclk_0.sg13g2_dfrbp_1_0.CLK" "a_n946_n722#" 0.0649495
+cap "a_n519_n1980#" "VDD" 370.784
+cap "CLK_OUT" "a_3126_n1943#" 5.94526
+cap "a_n26_90#" "a_206_161#" 130.676
+cap "freq_div_cell_1.dff_nclk_0.D" "a_741_n229#" 0.162184
+cap "a_n222_n1666#" "a_n26_90#" 1.20041
+cap "a_741_n229#" "a_n222_90#" 23.0201
+cap "a_2854_n1975#" "a_2757_n1845#" 108.64
+cap "freq_div_cell_0.dff_nclk_0.D" "a_n222_n1666#" 14.4636
+cap "a_1342_n712#" "freq_div_cell_1.dff_nclk_0.Q" 0.664309
+cap "a_935_n229#" "a_n26_90#" 0.387062
+cap "a_n26_n1666#" "freq_div_cell_0.dff_nclk_0.nQ" 0.142427
+cap "a_357_n1657#" "a_411_n1940#" 2.93308
+cap "a_2779_n1425#" "freq_div_cell_0.nRST" 3.15426
+cap "sg13g2_or2_1_0.A" "a_1607_1044#" 4.65035
+cap "EN" "freq_div_cell_0.Cout" 13.5031
+cap "freq_div_cell_0.Cin" "freq_div_cell_1.dff_nclk_0.sg13g2_dfrbp_1_0.CLK" 13.0146
+cap "a_1342_n712#" "a_1310_n1070#" 10.3958
+cap "a_741_n229#" "a_n26_90#" 400.267
+cap "dff_nclk_0.sg13g2_dfrbp_1_0.CLK" "a_2778_n608#" 338.328
+cap "a_2778_n608#" "a_2778_n686#" 43.244
+cap "dff_nclk_0.D" "a_2854_n1975#" 0.00459189
+cap "sg13g2_or2_1_0.A" "a_2205_n353#" 0.729663
+cap "a_2778_n869#" "a_2778_n608#" 23.0201
+cap "a_2778_n608#" "sg13g2_tiehi_0.L_HI" 333.321
+cap "a_987_n2021#" "freq_div_cell_0.dff_nclk_0.nQ" 101.181
+cap "freq_div_cell_0.dff_nclk_0.sg13g2_dfrbp_1_0.CLK" "VDD" 288.904
+cap "freq_div_cell_0.dff_nclk_0.Q" "freq_div_cell_0.nRST" 1042.32
+cap "a_2793_n1819#" "CLK_OUT" 26.7917
+cap "a_2733_n1929#" "freq_div_cell_0.nRST" 0.814865
+cap "a_1607_n712#" "freq_div_cell_0.nRST" 0.422023
+cap "a_966_169#" "a_357_99#" 0.238305
+cap "freq_div_cell_0.Cin" "freq_div_cell_0.CLK" 237.714
+cap "a_357_n1657#" "a_206_n1595#" 702.62
+cap "a_2814_n388#" "CLK_OUT" 0.00778335
+cap "sg13g2_tiehi_1.L_HI" "a_n1377_624#" 125.866
+cap "a_2778_n414#" "dff_nclk_0.D" 8.17841
+cap "VDD" "a_1125_n1985#" 0.648388
+cap "a_n26_n1666#" "VDD" 205.576
+cap "a_n222_n1666#" "a_206_n1595#" 53.1407
+cap "CLK_IN" "a_n852_n722#" 0.401518
+cap "freq_div_cell_0.Cin" "a_n519_n224#" 0.182244
+cap "A1" "freq_div_cell_1.dff_nclk_0.nQ" 0.340264
+cap "a_n519_n1980#" "freq_div_cell_0.nRST" 372.588
+cap "freq_div_cell_0.DIV" "a_2778_n608#" 0.111468
+cap "freq_div_cell_1.dff_nclk_0.D" "freq_div_cell_0.dff_nclk_0.Q" 0.0906849
+cap "EN" "freq_div_cell_0.Cin" 0.363099
+cap "freq_div_cell_0.dff_nclk_0.Q" "a_n222_90#" 0.872966
+cap "freq_div_cell_1.dff_nclk_0.Q" "a_n35_686#" 25.5901
+cap "freq_div_cell_1.dff_nclk_0.Q" "a_59_1044#" 8.87599
+cap "VDD" "a_2819_778#" 369.951
+cap "VDD" "a_987_n2021#" 308.313
+cap "VDD" "a_n1377_624#" 89.919
+cap "a_n238_n1070#" "freq_div_cell_0.Cout" 0.387655
+cap "a_1125_n1985#" "a_741_n1985#" 0.441522
+cap "a_1550_n228#" "freq_div_cell_1.dff_nclk_0.nQ" 216.087
+cap "a_n26_n1666#" "a_741_n1985#" 400.267
+cap "freq_div_cell_0.dff_nclk_0.Q" "a_n26_90#" 7.22997
+cap "freq_div_cell_0.DIV" "a_2205_n353#" 15.9235
+cap "freq_div_cell_0.dff_nclk_0.D" "freq_div_cell_0.dff_nclk_0.Q" 240.192
+cap "VDD" "a_357_99#" 244.6
+cap "a_357_n1657#" "a_333_n1940#" 1.41939
+cap "a_2854_n1975#" "sg13g2_tiehi_0.L_HI" 4.9624
+cap "a_n222_n1666#" "a_n206_n712#" 2.05954
+cap "freq_div_cell_0.dff_nclk_0.sg13g2_dfrbp_1_0.CLK" "freq_div_cell_0.nRST" 603.012
+cap "a_987_n2021#" "a_741_n1985#" 410.483
+cap "a_1342_1044#" "A1" 0.0220219
+cap "a_2814_n388#" "a_3212_n680#" 0.238305
+cap "a_n1482_1067#" "a_n1576_991#" 3.30016
+cap "dff_nclk_0.sg13g2_dfrbp_1_0.CLK" "a_2778_n414#" 14.7313
+cap "a_2778_n414#" "a_2778_n686#" 43.0574
+cap "a_1125_n229#" "freq_div_cell_0.nRST" 2.00781
+cap "a_1550_n228#" "a_1342_1044#" 0.0665965
+cap "a_2778_n869#" "a_2778_n414#" 400.267
+cap "a_2778_n414#" "sg13g2_tiehi_0.L_HI" 123.359
+cap "freq_div_cell_0.dff_nclk_0.D" "a_n519_n1980#" 356.196
+cap "a_1125_n1985#" "freq_div_cell_0.nRST" 1.32848
+cap "a_2111_n353#" "A1" 7.55658
+cap "VDD" "a_966_169#" 1.34032
+cap "VDD" "freq_div_cell_0.dff_nclk_0.nQ" 181.945
+cap "a_n26_n1666#" "freq_div_cell_0.nRST" 182.087
+cap "a_n1482_1067#" "a_n1576_761#" 8.53183
+cap "VDD" "a_n946_n722#" 442.566
+cap "a_2111_n353#" "a_1550_n228#" 0.472596
+cap "a_3126_n1943#" "a_2757_n1845#" 19.517
+cap "a_987_n265#" "A1" 0.105686
+cap "a_2819_778#" "freq_div_cell_0.nRST" 2.50428
+cap "freq_div_cell_1.dff_nclk_0.Q" "freq_div_cell_0.Cin" 222.317
+cap "freq_div_cell_0.dff_nclk_0.Q" "a_206_n1595#" 1.62507
+cap "freq_div_cell_1.dff_nclk_0.sg13g2_dfrbp_1_0.CLK" "a_n206_1044#" 0.327347
+cap "a_987_n2021#" "freq_div_cell_0.nRST" 262.897
+cap "a_2859_n130#" "freq_div_cell_0.nRST" 0.278393
+cap "sg13g2_tiehi_1.L_HI" "VDD" 483.28
+cap "a_2814_n388#" "A1" 1.07743
+cap "freq_div_cell_1.dff_nclk_0.Q" "a_n238_686#" 2.07286
+cap "a_2854_n1975#" "a_1550_n1984#" 0.251197
+cap "freq_div_cell_0.dff_nclk_0.nQ" "a_741_n1985#" 57.0958
+cap "a_2859_n58#" "a_2814_n388#" 1.41939
+cap "A0" "VDD" 168.905
+cap "freq_div_cell_0.dff_nclk_0.D" "freq_div_cell_0.dff_nclk_0.sg13g2_dfrbp_1_0.CLK" 403.078
+cap "dff_nclk_0.D" "a_3126_n1943#" 0.0207195
+cap "freq_div_cell_0.nRST" "a_357_99#" 173.115
+cap "a_2778_n414#" "freq_div_cell_0.DIV" 0.167351
+cap "a_2814_n660#" "VDD" 0.0537448
+cap "dff_nclk_0.D" "a_1342_1044#" 0.207191
+cap "freq_div_cell_1.dff_nclk_0.Q" "A1" 18.7941
+cap "a_n26_n1666#" "a_n222_90#" 0.225617
+cap "freq_div_cell_1.dff_nclk_0.sg13g2_dfrbp_1_0.CLK" "a_n946_1034#" 0.0649495
+cap "a_1342_n712#" "A1" 393.472
+cap "CLK_IN" "freq_div_cell_0.dff_nclk_0.Q" 18.4384
+cap "sg13g2_or2_1_0.A" "freq_div_cell_1.dff_nclk_0.nQ" 3.99098
+cap "a_2779_n1425#" "a_2854_n1975#" 0.137099
+cap "a_n1576_991#" "a_n1377_624#" 22.8971
+cap "freq_div_cell_0.dff_nclk_0.Q" "a_n206_n712#" 460.99
+cap "a_2793_n1819#" "a_2757_n1845#" 148.683
+cap "a_n519_n1980#" "a_206_n1595#" 458.251
+cap "freq_div_cell_1.dff_nclk_0.Q" "a_1550_n228#" 125.189
+cap "freq_div_cell_1.dff_nclk_0.D" "a_n1377_624#" 0.00665405
+cap "a_206_161#" "freq_div_cell_1.dff_nclk_0.sg13g2_dfrbp_1_0.CLK" 0.00365761
+cap "a_2778_n280#" "a_2819_778#" 458.251
+cap "a_n26_90#" "a_n26_n1666#" 0.210849
+cap "a_1342_n712#" "a_1550_n228#" 0.0628121
+cap "freq_div_cell_0.dff_nclk_0.D" "a_n26_n1666#" 4.3584
+cap "a_2859_n130#" "a_2778_n280#" 1.06092
+cap "freq_div_cell_0.CLK" "a_n852_n722#" 0.726384
+cap "a_357_n1657#" "a_966_n1587#" 0.238305
+cap "freq_div_cell_0.dff_nclk_0.Q" "a_2854_n1975#" 0.0172451
+cap "a_1342_1044#" "a_1513_686#" 365.347
+cap "VDD" "a_n35_n1070#" 208.344
+cap "a_966_169#" "freq_div_cell_0.nRST" 0.279901
+cap "dff_nclk_0.D" "a_2793_n1819#" 0.0672931
+cap "freq_div_cell_0.dff_nclk_0.nQ" "freq_div_cell_0.nRST" 85.524
+cap "freq_div_cell_0.CLK" "a_n946_1034#" 0.400868
+cap "freq_div_cell_1.dff_nclk_0.D" "a_357_99#" 0.286174
+cap "VDD" "a_741_n1985#" 434.871
+cap "a_2854_n1975#" "a_2733_n1929#" 3.30016
+cap "a_n222_90#" "a_357_99#" 43.042
+cap "a_n1576_761#" "a_n1377_624#" 148.683
+cap "freq_div_cell_0.nRST" "a_n946_n722#" 0.15774
+cap "a_206_161#" "freq_div_cell_1.dff_nclk_0.nQ" 0.0376716
+cap "freq_div_cell_0.Cin" "a_n35_686#" 0.476559
+cap "dff_nclk_0.D" "a_2814_n388#" 6.13716
+cap "a_n26_n1666#" "a_411_n1940#" 3.49307
+cap "sg13g2_or2_1_0.A" "a_1342_1044#" 233.828
+cap "a_1310_686#" "VDD" 6.82976
+cap "freq_div_cell_0.dff_nclk_0.sg13g2_dfrbp_1_0.CLK" "a_206_n1595#" 0.00365761
+cap "a_n26_90#" "a_357_99#" 660.771
+cap "a_n222_n1666#" "freq_div_cell_0.CLK" 0.049176
+cap "sg13g2_tiehi_1.L_HI" "freq_div_cell_0.nRST" 2.48866
+cap "a_n26_n1666#" "a_935_n1985#" 0.387062
+cap "a_2778_n414#" "freq_div_cell_0.dff_nclk_0.Q" 0.268443
+cap "A0" "freq_div_cell_0.nRST" 39.2392
+cap "dff_nclk_0.sg13g2_dfrbp_1_0.CLK" "a_1342_1044#" 0.0941705
+cap "freq_div_cell_0.Cin" "freq_div_cell_0.Cout" 91.4298
+cap "a_3126_n1943#" "sg13g2_tiehi_0.L_HI" 12.999
+cap "a_741_n229#" "freq_div_cell_1.dff_nclk_0.nQ" 58.2217
+cap "a_206_161#" "a_n519_n224#" 458.251
+cap "a_1342_n712#" "dff_nclk_0.D" 0.0150709
+cap "sg13g2_or2_1_0.A" "a_2111_n353#" 240.191
+cap "a_2814_n660#" "freq_div_cell_0.nRST" 0.526005
+cap "a_987_n2021#" "a_935_n1985#" 0.210528
+cap "freq_div_cell_0.DIV" "freq_div_cell_1.dff_nclk_0.nQ" 0.411279
+cap "a_n1430_n1149#" "VDD" 0.143775
+cap "a_1342_1044#" "sg13g2_tiehi_0.L_HI" 0.283902
+cap "a_2778_n608#" "a_2819_778#" 177.665
+cap "a_n1576_602#" "sg13g2_tiehi_1.L_HI" 9.72087
+cap "VDD" "freq_div_cell_0.nRST" 2780.37
+cap "freq_div_cell_1.dff_nclk_0.D" "a_n946_n722#" 0.60618
+cap "EN" "a_n222_n1666#" 0.254319
+cap "a_n26_n1666#" "a_206_n1595#" 130.676
+cap "a_308_161#" "a_206_161#" 6.10793
+cap "freq_div_cell_0.dff_nclk_0.sg13g2_dfrbp_1_0.CLK" "a_n206_n712#" 0.327347
+cap "sg13g2_tiehi_1.L_HI" "a_n1576_991#" 2.88758
+cap "sg13g2_or2_1_0.A" "a_987_n265#" 0.359602
+cap "freq_div_cell_1.dff_nclk_0.D" "sg13g2_tiehi_1.L_HI" 6.96336
+cap "freq_div_cell_1.dff_nclk_0.Q" "a_1513_686#" 22.4591
+cap "sg13g2_tiehi_1.L_HI" "a_n222_90#" 1.7113
+cap "a_2111_n353#" "sg13g2_tiehi_0.L_HI" 8.87721
+cap "a_1342_n712#" "a_1513_686#" 0.00826174
+cap "freq_div_cell_0.dff_nclk_0.D" "a_n946_n722#" 1.40991
+cap "a_n1576_602#" "VDD" 24.2889
+cap "freq_div_cell_0.nRST" "a_n35_n1070#" 0.193606
+cap "a_2793_n1819#" "sg13g2_tiehi_0.L_HI" 99.3739
+cap "a_741_n1985#" "freq_div_cell_0.nRST" 311.142
+cap "a_741_n229#" "a_1342_1044#" 0.448034
+cap "freq_div_cell_0.dff_nclk_0.Q" "freq_div_cell_1.dff_nclk_0.sg13g2_dfrbp_1_0.CLK" 0.470643
+cap "sg13g2_tiehi_1.L_HI" "a_n26_90#" 0.0633674
+cap "freq_div_cell_1.dff_nclk_0.Q" "a_n206_1044#" 460.99
+cap "a_n1576_761#" "sg13g2_tiehi_1.L_HI" 21.5136
+cap "freq_div_cell_0.DIV" "a_1342_1044#" 0.00356628
+cap "CLK_OUT" "a_2757_n1845#" 3.13124
+cap "dff_nclk_0.sg13g2_dfrbp_1_0.CLK" "a_2814_n388#" 2.04733
+cap "a_n1576_991#" "VDD" 63.8296
+cap "a_2814_n388#" "a_2778_n686#" 0.090424
+cap "sg13g2_or2_1_0.A" "freq_div_cell_1.dff_nclk_0.Q" 65.8445
+cap "freq_div_cell_1.dff_nclk_0.D" "VDD" 817.923
+cap "a_1342_n712#" "sg13g2_or2_1_0.A" 0.006475
+cap "a_2778_n869#" "a_2814_n388#" 39.5657
+cap "a_2778_n280#" "VDD" 296.914
+cap "VDD" "a_n222_90#" 670.218
+cap "a_2814_n388#" "sg13g2_tiehi_0.L_HI" 162.596
+cap "a_1310_686#" "freq_div_cell_0.nRST" 0.0448824
+cap "dff_nclk_0.sg13g2_dfrbp_1_0.CLK" "a_2814_n843#" 0.0819109
+cap "a_2814_n843#" "a_2778_n686#" 4.96542
+cap "CLK_IN" "a_n1377_624#" 0.453776
+cap "a_n238_686#" "freq_div_cell_0.Cin" 0.387655
+cap "freq_div_cell_0.dff_nclk_0.Q" "a_966_n1587#" 0.321774
+cap "a_2111_n353#" "a_741_n229#" 0.000538042
+cap "a_n26_n1666#" "a_333_n1940#" 3.9443
+cap "a_2778_n869#" "a_2814_n843#" 0.441522
+cap "dff_nclk_0.D" "CLK_OUT" 48.0871
+cap "a_2814_n843#" "sg13g2_tiehi_0.L_HI" 0.939658
+cap "a_2111_n353#" "freq_div_cell_0.DIV" 146.6
+cap "freq_div_cell_1.dff_nclk_0.Q" "a_n852_1034#" 6.67176
+cap "freq_div_cell_0.dff_nclk_0.Q" "freq_div_cell_1.dff_nclk_0.nQ" 0.709531
+cap "a_1342_n712#" "a_2778_n686#" 0.211003
+cap "freq_div_cell_0.dff_nclk_0.Q" "freq_div_cell_0.CLK" 4.70263
+cap "a_n26_90#" "VDD" 194.142
+cap "freq_div_cell_1.dff_nclk_0.Q" "a_n946_1034#" 305.462
+cap "a_n1576_761#" "VDD" 53.3398
+cap "a_935_n229#" "a_987_n265#" 0.210528
+cap "freq_div_cell_0.dff_nclk_0.D" "VDD" 879.722
+cap "freq_div_cell_1.dff_nclk_0.Q" "sg13g2_tiehi_0.L_HI" 0.145918
+cap "a_1342_n712#" "a_2778_n869#" 0.28358
+cap "a_1342_n712#" "sg13g2_tiehi_0.L_HI" 0.669643
+cap "dff_nclk_0.D" "a_2819_704#" 0.0181862
+cap "freq_div_cell_0.dff_nclk_0.Q" "a_308_n1595#" 0.0283453
+cap "a_741_n229#" "a_987_n265#" 410.483
+cap "a_n222_90#" "a_741_n1985#" 0.0161248
+cap "freq_div_cell_1.dff_nclk_0.Q" "a_206_161#" 1.62507
+cap "freq_div_cell_0.dff_nclk_0.nQ" "a_206_n1595#" 0.0376716
+cap "freq_div_cell_0.DIV" "a_987_n265#" 0.177239
+cap "freq_div_cell_0.dff_nclk_0.Q" "a_n519_n224#" 0.505086
+cap "a_1310_686#" "freq_div_cell_1.dff_nclk_0.D" 0.00693237
+cap "a_n26_90#" "a_741_n1985#" 0.00267919
+cap "a_2793_n1819#" "a_1550_n1984#" 0.696214
+cap "freq_div_cell_0.dff_nclk_0.D" "a_n35_n1070#" 121.851
+cap "EN" "freq_div_cell_0.dff_nclk_0.Q" 0.0477006
+cap "freq_div_cell_0.dff_nclk_0.D" "a_741_n1985#" 0.162184
+cap "VDD" "a_411_n1940#" 0.29283
+cap "A0" "a_1607_1044#" 9.0096
+cap "a_2569_277#" "sg13g2_tiehi_0.L_HI" -1.92294e-17
+cap "VDD" "a_935_n1985#" 0.551205
+cap "freq_div_cell_1.dff_nclk_0.Q" "a_741_n229#" 20.7124
+cap "a_2778_n414#" "a_2819_778#" 472.481
+cap "a_1342_n712#" "a_741_n229#" 0.0256146
+cap "freq_div_cell_1.dff_nclk_0.Q" "freq_div_cell_0.DIV" 2.29323
+cap "a_2859_n130#" "a_2778_n414#" 3.49307
+cap "VDD" "a_2778_n608#" 626.438
+cap "a_1342_n712#" "freq_div_cell_0.DIV" 234.699
+cap "a_n35_686#" "a_n206_1044#" 365.347
+cap "a_n206_1044#" "a_59_1044#" 0.122716
+cap "a_n519_n1980#" "a_308_n1595#" 0.0256716
+cap "a_1550_n228#" "A1" 6.55181
+cap "freq_div_cell_1.dff_nclk_0.Q" "a_1513_n1070#" 0.039838
+cap "CLK_IN" "a_n946_n722#" 3.31367
+cap "a_1342_n712#" "a_1513_n1070#" 365.347
+cap "a_2779_n1425#" "a_2793_n1819#" 3.34233
+cap "dff_nclk_0.D" "a_3212_n680#" 0.457342
+cap "freq_div_cell_1.dff_nclk_0.D" "freq_div_cell_0.nRST" 216.031
+cap "a_n222_90#" "freq_div_cell_0.nRST" 351.979
+cap "a_2778_n280#" "freq_div_cell_0.nRST" 4.56075
+cap "CLK_OUT" "a_2778_n686#" 0.0334605
+cap "VDD" "a_206_n1595#" 298.913
+cap "a_935_n1985#" "a_741_n1985#" 5.21084
+cap "a_2205_n353#" "VDD" 12.9811
+cap "a_1342_n712#" "a_1550_n1984#" 0.0665965
+cap "a_2778_n869#" "CLK_OUT" 3.77551
+cap "EN" "a_n519_n1980#" 0.105109
+cap "CLK_IN" "sg13g2_tiehi_1.L_HI" 0.199275
+cap "CLK_OUT" "sg13g2_tiehi_0.L_HI" 87.0765
+cap "a_n1430_n1149#" "freq_div_cell_0.dff_nclk_0.D" 0.00675297
+cap "freq_div_cell_0.dff_nclk_0.Q" "a_2793_n1819#" 0.0152881
+cap "freq_div_cell_0.dff_nclk_0.sg13g2_dfrbp_1_0.CLK" "freq_div_cell_0.CLK" 104.568
+cap "dff_nclk_0.sg13g2_dfrbp_1_0.CLK" "a_2819_704#" 1.03216
+cap "a_n26_90#" "freq_div_cell_0.nRST" 184.886
+cap "freq_div_cell_0.dff_nclk_0.D" "freq_div_cell_0.nRST" 217.45
+cap "a_2733_n1929#" "a_2793_n1819#" 3.88904
+cap "freq_div_cell_0.dff_nclk_0.Q" "a_987_n265#" 0.575863
+cap "a_n852_n722#" "freq_div_cell_0.Cout" 2.04495
+cap "a_2661_277#" "freq_div_cell_0.nRST" -1.92294e-17
+cap "CLK_IN" "VDD" 344.925
+cap "VDD" "a_n425_n224#" 0.00400202
+cap "a_n238_n1070#" "freq_div_cell_0.dff_nclk_0.Q" 2.07286
+cap "freq_div_cell_1.dff_nclk_0.D" "a_n222_90#" 14.4636
+cap "a_n222_n1666#" "a_n425_n1980#" 0.0364215
+cap "VDD" "a_n206_n712#" 257.263
+cap "a_n1576_602#" "a_n1576_761#" 19.517
+cap "dff_nclk_0.D" "A1" 0.18755
+cap "a_206_161#" "a_333_n184#" 3.83924
+cap "freq_div_cell_0.dff_nclk_0.sg13g2_dfrbp_1_0.CLK" "EN" 0.429968
+cap "a_411_n1940#" "freq_div_cell_0.nRST" 0.871015
+cap "freq_div_cell_1.dff_nclk_0.Q" "freq_div_cell_0.dff_nclk_0.Q" 0.330528
+cap "a_1342_n712#" "freq_div_cell_0.dff_nclk_0.Q" 122.482
+cap "a_935_n1985#" "freq_div_cell_0.nRST" 0.833811
+cap "a_n1576_761#" "a_n1576_991#" 108.64
+cap "VDD" "a_2854_n1975#" 94.1389
+cap "VDD" "a_333_n1940#" 0.668723
+cap "freq_div_cell_1.dff_nclk_0.D" "a_n26_90#" 4.3584
+cap "CLK_IN" "a_n35_n1070#" 0.152369
+cap "a_n26_90#" "a_n222_90#" 450.473
+cap "freq_div_cell_1.dff_nclk_0.D" "freq_div_cell_0.dff_nclk_0.D" 0.69545
+cap "a_1310_n1070#" "freq_div_cell_0.dff_nclk_0.Q" 2.70397
+cap "a_2778_n608#" "freq_div_cell_0.nRST" 5.25645
+cap "freq_div_cell_0.Cin" "a_n206_1044#" 11.5444
+cap "a_1342_n712#" "a_1607_n712#" 0.122716
+cap "dff_nclk_0.D" "a_3204_n30#" 0.36965
+cap "a_n206_n712#" "a_n35_n1070#" 365.347
+cap "a_n238_686#" "a_n206_1044#" 10.3958
+cap "a_2778_n869#" "a_3212_n680#" 4.49184
+cap "A1" "a_1513_686#" 0.0046312
+cap "CLK_OUT" "a_1550_n1984#" 0.119212
+cap "a_3212_n680#" "sg13g2_tiehi_0.L_HI" 0.279901
+cap "a_2778_n414#" "a_2814_n660#" 0.387062
+cap "freq_div_cell_1.dff_nclk_0.nQ" "a_357_99#" 0.0736947
+cap "a_206_n1595#" "freq_div_cell_0.nRST" 327.318
+cap "freq_div_cell_0.Cin" "a_n852_n722#" 7.44343
+cap "a_2778_n414#" "VDD" 199.716
+cap "a_1550_n228#" "a_1513_686#" 0.188972
+cap "a_n852_1034#" "freq_div_cell_0.Cin" 2.04495
+cap "dff_nclk_0.D" "a_2757_n1845#" 0.0124475
+cap "freq_div_cell_0.Cin" "a_n946_1034#" 131.671
+cap "sg13g2_or2_1_0.A" "A1" 7.86466
+cap "freq_div_cell_1.dff_nclk_0.sg13g2_dfrbp_1_0.CLK" "a_n946_n722#" 0.255132
+cap "a_2779_n1425#" "CLK_OUT" 116.289
+cap "a_357_99#" "a_n519_n224#" 0.942192
+cap "a_2778_n280#" "a_2778_n608#" 53.3051
+cap "a_411_n184#" "a_206_161#" 1.06092
+cap "a_n1430_n1149#" "CLK_IN" 0.643195
+cap "sg13g2_or2_1_0.A" "a_1550_n228#" 2.44844
+cap "a_n222_n1666#" "freq_div_cell_0.Cin" 1.7113
+cap "a_n425_n224#" "freq_div_cell_0.nRST" 0.28373
+cap "dff_nclk_0.sg13g2_dfrbp_1_0.CLK" "a_2859_n58#" 0.45774
+cap "sg13g2_tiehi_1.L_HI" "freq_div_cell_1.dff_nclk_0.sg13g2_dfrbp_1_0.CLK" 0.0434848
+cap "a_1125_n229#" "a_987_n265#" 4.96542
+cap "a_n206_n712#" "freq_div_cell_0.nRST" 5.72339
+cap "freq_div_cell_0.dff_nclk_0.Q" "CLK_OUT" 0.103926
+cap "A1" "sg13g2_tiehi_0.L_HI" 0.206214
+cap "a_2859_n58#" "sg13g2_tiehi_0.L_HI" 0.824893
+cap "a_2733_n1929#" "CLK_OUT" 0.814931
+cap "freq_div_cell_0.CLK" "a_n946_n722#" 62.1703
+cap "a_206_161#" "A1" 0.0241144
+cap "a_333_n1940#" "freq_div_cell_0.nRST" 1.88494
+cap "a_n1576_602#" "CLK_IN" 0.872184
+cap "a_1550_n228#" "sg13g2_tiehi_0.L_HI" 0.424539
+cap "freq_div_cell_0.dff_nclk_0.Q" "a_333_n184#" 0.579365
+cap "a_3204_n30#" "sg13g2_tiehi_0.L_HI" 0.279555
+cap "freq_div_cell_1.dff_nclk_0.sg13g2_dfrbp_1_0.CLK" "VDD" 279.781
+cap "freq_div_cell_0.dff_nclk_0.Q" "freq_div_cell_0.Cout" 222.302
+cap "a_1125_n229#" "freq_div_cell_1.dff_nclk_0.Q" 0.151888
+cap "a_935_n229#" "A1" 0.0130068
+cap "sg13g2_tiehi_1.L_HI" "freq_div_cell_0.CLK" 1.61274
+cap "freq_div_cell_0.dff_nclk_0.D" "a_206_n1595#" 4.0753
+cap "A0" "freq_div_cell_1.dff_nclk_0.nQ" 0.594294
+cap "CLK_IN" "a_n1576_991#" 0.0962267
+cap "a_987_n265#" "a_987_n2021#" 0.495022
+cap "freq_div_cell_1.dff_nclk_0.D" "a_n425_n224#" 0.0155532
+cap "a_2814_n388#" "a_2819_778#" 0.942192
+cap "a_741_n229#" "A1" 2.81819
+cap "a_n425_n224#" "a_n222_90#" 0.0364215
+cap "EN" "a_n946_n722#" 0.158085
+cap "a_2859_n130#" "a_2814_n388#" 2.93308
+cap "freq_div_cell_0.DIV" "A1" 228.864
+cap "sg13g2_or2_1_0.A" "dff_nclk_0.D" 0.623904
+cap "a_2778_n414#" "freq_div_cell_0.nRST" 15.0662
+cap "a_987_n265#" "a_357_99#" 0.090424
+cap "VDD" "a_966_n1587#" 1.34032
+cap "a_2778_n869#" "a_2757_n1845#" 0.0123911
+cap "sg13g2_tiehi_1.L_HI" "a_n519_n224#" 0.144888
+cap "A1" "a_1513_n1070#" 18.5062
+cap "a_2757_n1845#" "sg13g2_tiehi_0.L_HI" 28.7289
+cap "VDD" "freq_div_cell_1.dff_nclk_0.nQ" 180.97
+cap "a_n519_n1980#" "a_n425_n1980#" 5.41159
+cap "freq_div_cell_0.CLK" "VDD" 1467.54
+cap "a_n1576_761#" "CLK_IN" 0.21355
+cap "a_741_n229#" "a_1550_n228#" 95.7523
+cap "a_411_n1940#" "a_206_n1595#" 1.06092
+cap "freq_div_cell_0.dff_nclk_0.D" "CLK_IN" 0.990042
+cap "freq_div_cell_1.dff_nclk_0.Q" "a_n1377_624#" 0.888581
+cap "a_1550_n228#" "freq_div_cell_0.DIV" 5.06434
+cap "dff_nclk_0.sg13g2_dfrbp_1_0.CLK" "dff_nclk_0.D" 412.205
+cap "freq_div_cell_0.dff_nclk_0.D" "a_n206_n712#" 247.148
+cap "a_1550_n1984#" "A1" 0.523644
+cap "dff_nclk_0.D" "a_2778_n686#" 110.335
+cap "VDD" "a_308_n1595#" 0.951222
+cap "a_2778_n869#" "dff_nclk_0.D" 71.8957
+cap "a_1550_n228#" "a_1513_n1070#" 0.069066
+cap "dff_nclk_0.D" "sg13g2_tiehi_0.L_HI" 527.542
+cap "freq_div_cell_0.dff_nclk_0.Q" "a_59_n712#" 8.87599
+cap "A0" "a_1342_1044#" 404.298
+cap "sg13g2_or2_1_0.A" "a_1513_686#" 106.789
+cap "freq_div_cell_1.dff_nclk_0.Q" "a_357_99#" 3.01749
+cap "a_966_n1587#" "a_741_n1985#" 4.49184
+cap "VDD" "a_n519_n224#" 369.951
+cap "a_1550_n228#" "a_1550_n1984#" 0.292145
+cap "EN" "VDD" 420.432
+cap "a_411_n184#" "freq_div_cell_0.dff_nclk_0.Q" 0.253321
+cap "freq_div_cell_0.Cin" "freq_div_cell_0.dff_nclk_0.Q" 422.656
+cap "VDD" "a_3126_n1943#" 36.2365
+cap "a_2778_n414#" "a_2778_n280#" 130.676
+cap "freq_div_cell_0.dff_nclk_0.sg13g2_dfrbp_1_0.CLK" "a_n425_n1980#" 1.03216
+cap "a_308_161#" "VDD" 0.951222
+cap "a_2111_n353#" "A0" 0.453771
+cap "a_1342_1044#" "VDD" 257.485
+cap "freq_div_cell_1.dff_nclk_0.sg13g2_dfrbp_1_0.CLK" "freq_div_cell_0.nRST" 603.012
+cap "freq_div_cell_0.dff_nclk_0.sg13g2_dfrbp_1_0.CLK" "freq_div_cell_0.Cout" 2.16378
+cap "EN" "a_n35_n1070#" 0.0233379
+cap "freq_div_cell_0.dff_nclk_0.Q" "A1" 150.461
+cap "freq_div_cell_1.dff_nclk_0.Q" "a_966_169#" 0.321774
+cap "a_2757_n1845#" "a_1550_n1984#" 0.0995375
+cap "a_2111_n353#" "VDD" 170.759
+cap "a_966_n1587#" "freq_div_cell_0.nRST" 0.287098
+cap "sg13g2_or2_1_0.A" "sg13g2_tiehi_0.L_HI" 1.28208
+cap "freq_div_cell_1.dff_nclk_0.Q" "a_n946_n722#" 0.00628101
+cap "a_1607_n712#" "A1" 8.28052
+cap "freq_div_cell_0.Cin" "a_n519_n1980#" 0.144888
+cap "a_n1430_n1149#" "freq_div_cell_0.CLK" 7.66848
+cap "a_1550_n228#" "freq_div_cell_0.dff_nclk_0.Q" 0.532918
+cap "VDD" "a_2793_n1819#" 95.6071
+cap "freq_div_cell_1.dff_nclk_0.nQ" "freq_div_cell_0.nRST" 25.1582
+cap "freq_div_cell_0.CLK" "freq_div_cell_0.nRST" 143.598
+cap "dff_nclk_0.sg13g2_dfrbp_1_0.CLK" "a_2778_n686#" 0.434977
+cap "sg13g2_or2_1_0.A" "a_206_161#" 0.0379019
+cap "a_741_n229#" "a_1513_686#" 0.154814
+cap "dff_nclk_0.sg13g2_dfrbp_1_0.CLK" "a_2778_n869#" 0.766617
+cap "a_987_n265#" "VDD" 305.119
+cap "freq_div_cell_1.dff_nclk_0.Q" "sg13g2_tiehi_1.L_HI" 427.126
+cap "a_2819_704#" "a_2819_778#" 5.41159
+cap "a_2778_n869#" "a_2778_n686#" 410.483
+cap "dff_nclk_0.sg13g2_dfrbp_1_0.CLK" "sg13g2_tiehi_0.L_HI" 157.943
+cap "a_n852_1034#" "a_n946_1034#" 3.79789
+cap "a_308_n1595#" "freq_div_cell_0.nRST" 0.281802
+cap "freq_div_cell_1.dff_nclk_0.D" "freq_div_cell_1.dff_nclk_0.sg13g2_dfrbp_1_0.CLK" 403.078
+cap "a_2778_n686#" "sg13g2_tiehi_0.L_HI" 246.071
+cap "a_1310_686#" "a_1342_1044#" 10.3958
+cap "a_333_n1940#" "a_206_n1595#" 3.83924
+cap "freq_div_cell_1.dff_nclk_0.Q" "A0" 210.355
+cap "a_2779_n1425#" "a_2757_n1845#" 2.29768
+cap "VDD" "a_2814_n388#" 244.6
+cap "freq_div_cell_1.dff_nclk_0.sg13g2_dfrbp_1_0.CLK" "a_n222_90#" 337.309
+cap "a_2778_n869#" "sg13g2_tiehi_0.L_HI" 301.313
+cap "a_n238_n1070#" "VDD" 6.82976
+cap "a_2778_n414#" "a_2778_n608#" 450.057
+cap "a_n1430_n1149#" "EN" 0.934314
+cap "freq_div_cell_0.nRST" "a_n519_n224#" 372.59
+cap "CLK_IN" "a_n206_n712#" 0.252426
+cap "VDD" "a_2814_n843#" 0.0919615
+cap "EN" "freq_div_cell_0.nRST" 0.30058
+cap "freq_div_cell_0.dff_nclk_0.Q" "a_2757_n1845#" 0.0351607
+cap "sg13g2_or2_1_0.A" "a_741_n229#" 2.06035
+cap "freq_div_cell_0.dff_nclk_0.sg13g2_dfrbp_1_0.CLK" "freq_div_cell_0.Cin" 0.0434848
+cap "a_n26_90#" "freq_div_cell_1.dff_nclk_0.sg13g2_dfrbp_1_0.CLK" 13.2436
+cap "a_2779_n1425#" "dff_nclk_0.D" 223.345
+cap "a_3126_n1943#" "freq_div_cell_0.nRST" 0.573214
+cap "a_n222_n1666#" "a_357_n1657#" 43.042
+cap "freq_div_cell_1.dff_nclk_0.Q" "VDD" 1276.42
+cap "sg13g2_or2_1_0.A" "freq_div_cell_0.DIV" 191.905
+cap "freq_div_cell_0.dff_nclk_0.D" "freq_div_cell_1.dff_nclk_0.sg13g2_dfrbp_1_0.CLK" 0.00339499
+cap "a_333_n184#" "a_357_99#" 1.41939
+cap "a_987_n265#" "a_741_n1985#" 0.024096
+cap "a_1342_n712#" "VDD" 259.051
+cap "a_2733_n1929#" "a_2757_n1845#" 8.53183
+cap "a_308_161#" "freq_div_cell_0.nRST" 0.279555
+cap "freq_div_cell_1.dff_nclk_0.D" "freq_div_cell_0.CLK" 47.2322
+cap "a_1342_1044#" "freq_div_cell_0.nRST" 1.59424
+cap "a_n222_90#" "freq_div_cell_1.dff_nclk_0.nQ" 0.0555845
+cap "freq_div_cell_0.CLK" "a_n222_90#" 0.0413718
+cap "a_1310_n1070#" "VDD" 6.82976
+cap "a_n222_n1666#" "a_206_161#" 1.43923
+cap "freq_div_cell_0.DIV" "a_2778_n686#" 0.16753
+cap "a_2778_n869#" "freq_div_cell_0.DIV" 0.672486
+cap "freq_div_cell_0.DIV" "sg13g2_tiehi_0.L_HI" 0.12759
+cap "a_n26_90#" "freq_div_cell_1.dff_nclk_0.nQ" 0.142427
+cap "freq_div_cell_0.Cin" "a_n26_n1666#" 0.0633674
+cap "a_2111_n353#" "freq_div_cell_0.nRST" 111.874
+cap "freq_div_cell_0.dff_nclk_0.D" "freq_div_cell_0.CLK" 50.4684
+cap "freq_div_cell_1.dff_nclk_0.D" "a_n519_n224#" 356.196
+cap "a_1342_n712#" "a_741_n1985#" 0.448034
+cap "a_n222_90#" "a_n519_n224#" 177.665
+cap "a_1125_n229#" "A1" 0.0129675
+cap "a_741_n229#" "a_n222_n1666#" 0.0109705
+cap "a_2793_n1819#" "freq_div_cell_0.nRST" 0.875803
+cap "freq_div_cell_0.dff_nclk_0.D" "a_308_n1595#" 0.250469
+cap "a_935_n229#" "a_741_n229#" 5.21084
+cap "sg13g2_tiehi_1.L_HI" "a_n35_686#" 10.1108
+cap "a_1550_n1984#" "sg13g2_tiehi_0.L_HI" 0.0798871
+cap "a_1310_686#" "freq_div_cell_1.dff_nclk_0.Q" 2.70888
+cap "freq_div_cell_0.Cin" "a_n1377_624#" 3.13791
+cap "a_308_161#" "freq_div_cell_1.dff_nclk_0.D" 0.250469
+cap "freq_div_cell_1.dff_nclk_0.D" "a_1342_1044#" 3.35846
+cap "a_987_n265#" "freq_div_cell_0.nRST" 242.216
+cap "a_n26_90#" "a_n519_n224#" 472.481
+cap "freq_div_cell_0.Cout" "a_n946_n722#" 131.66
+cap "freq_div_cell_0.dff_nclk_0.D" "a_n519_n224#" 0.0133653
+cap "EN" "a_n1576_761#" 0.00444527
+cap "a_2814_n388#" "freq_div_cell_0.nRST" 5.45187
+cap "freq_div_cell_0.dff_nclk_0.D" "EN" 0.563323
+cap "a_411_n184#" "a_357_99#" 2.93308
+cap "a_741_n229#" "freq_div_cell_0.DIV" 0.432278
+cap "VDD" "CLK_OUT" 290.384
+cap "a_2814_n843#" "freq_div_cell_0.nRST" 0.712966
+cap "a_741_n229#" "a_1513_n1070#" 0.0198593
+cap "a_2779_n1425#" "a_2778_n869#" 95.7523
+cap "a_2111_n353#" "a_2778_n280#" 0.668192
+cap "a_2779_n1425#" "sg13g2_tiehi_0.L_HI" 57.636
+cap "a_n35_686#" "VDD" 208.344
+cap "freq_div_cell_0.DIV" "a_1513_n1070#" 106.619
+cap "freq_div_cell_1.dff_nclk_0.Q" "freq_div_cell_0.nRST" 92.2696
+cap "a_1342_n712#" "freq_div_cell_0.nRST" 102.753
+cap "VDD" "a_n425_n1980#" 0.0618006
+cap "freq_div_cell_0.dff_nclk_0.Q" "a_n852_n722#" 6.67176
+cap "a_2819_704#" "VDD" 0.00400202
+cap "freq_div_cell_0.dff_nclk_0.Q" "a_357_n1657#" 3.01749
+cap "freq_div_cell_0.DIV" "a_1550_n1984#" 0.0551231
+cap "a_2778_n869#" "freq_div_cell_0.dff_nclk_0.Q" 0.00464333
+cap "freq_div_cell_0.dff_nclk_0.Q" "a_n946_1034#" 0.00612459
+cap "a_1310_n1070#" "freq_div_cell_0.nRST" 2.34036
+cap "a_3204_n30#" "a_2819_778#" 0.0256716
+cap "a_987_n265#" "a_n222_90#" 43.244
+cap "VDD" "freq_div_cell_0.Cout" 527.92
+cap "freq_div_cell_1.dff_nclk_0.sg13g2_dfrbp_1_0.CLK" "a_n425_n224#" 1.03216
+cap "a_1550_n1984#" "a_1513_n1070#" 0.188972
+cap "a_2778_n280#" "a_2814_n388#" 702.62
+cap "freq_div_cell_1.dff_nclk_0.Q" "a_n1576_602#" 0.599492
+device msubckt sg13_lv_pmos 3126 -1969 3127 -1968 l=26 w=132 "VDD" "a_2854_n1975#" 52 0 "a_2757_n1845#" 132 9768,412 "a_3126_n1943#" 132 18628,508
+device msubckt sg13_lv_nmos 2892 -1975 2893 -1974 l=26 w=60 "VSS" "a_2854_n1975#" 52 0 "a_2854_n1975#" 60 4080,256 "a_2733_n1929#" 60 9228,323
+device msubckt sg13_lv_pmos 3126 -1844 3127 -1843 l=26 w=231 "VDD" "a_2793_n1819#" 52 0 "a_3126_n1943#" 231 18628,508 "sg13g2_tiehi_0.L_HI" 231 15708,598
+device msubckt sg13_lv_nmos 2793 -1845 2794 -1844 l=26 w=159 "VSS" "a_2757_n1845#" 52 0 "a_2733_n1929#" 159 9228,323 "a_2793_n1819#" 159 10971,456
+device msubckt sg13_lv_nmos 1726 -1984 1727 -1983 l=26 w=148 "VSS" "a_1550_n1984#" 52 0 "VSS" 148 5802,230 "freq_div_cell_0.dff_nclk_0.Q" 148 10064,432
+device msubckt sg13_lv_nmos 1618 -1984 1619 -1983 l=26 w=110 "VSS" "a_741_n1985#" 52 0 "a_1550_n1984#" 110 7480,356 "VSS" 110 5802,230
+device msubckt sg13_lv_nmos 1378 -1984 1379 -1983 l=26 w=148 "VSS" "a_741_n1985#" 52 0 "VSS" 148 10064,432 "freq_div_cell_0.dff_nclk_0.nQ" 148 11100,446
+device msubckt sg13_lv_nmos 1170 -1985 1171 -1984 l=26 w=84 "VSS" "a_741_n1985#" 52 0 "a_1125_n1985#" 84 1890,129 "a_987_n2021#" 84 5712,304
+device msubckt sg13_lv_nmos 1099 -1985 1100 -1984 l=26 w=84 "VSS" "freq_div_cell_0.nRST" 52 0 "VSS" 84 3612,170 "a_1125_n1985#" 84 1890,129
+device msubckt sg13_lv_nmos 987 -1985 988 -1984 l=26 w=84 "VSS" "a_987_n2021#" 52 0 "a_935_n1985#" 84 2184,136 "VSS" 84 3612,170
+device msubckt sg13_lv_nmos 909 -1985 910 -1984 l=26 w=84 "VSS" "a_n222_n1666#" 52 0 "a_741_n1985#" 84 8068,296 "a_935_n1985#" 84 2184,136
+device msubckt sg13_lv_pmos 1720 -1690 1721 -1689 l=26 w=224 "VDD" "a_1550_n1984#" 52 0 "VDD" 224 8064,300 "freq_div_cell_0.dff_nclk_0.Q" 224 15232,584
+device msubckt sg13_lv_pmos 1618 -1634 1619 -1633 l=26 w=168 "VDD" "a_741_n1985#" 52 0 "a_1550_n1984#" 168 11424,472 "VDD" 168 8064,300
+device msubckt sg13_lv_pmos 1323 -1690 1324 -1689 l=26 w=224 "VDD" "a_741_n1985#" 52 0 "VDD" 224 8652,310 "freq_div_cell_0.dff_nclk_0.nQ" 224 30464,720
+device msubckt sg13_lv_nmos 715 -1985 716 -1984 l=26 w=128 "VSS" "a_n26_n1666#" 52 0 "a_357_n1657#" 128 7759,258 "a_741_n1985#" 128 8068,296
+device msubckt sg13_lv_nmos 581 -1985 582 -1984 l=26 w=128 "VSS" "a_206_n1595#" 52 0 "VSS" 128 7300,265 "a_357_n1657#" 128 7759,258
+device msubckt sg13_lv_nmos 457 -1940 458 -1939 l=26 w=84 "VSS" "freq_div_cell_0.nRST" 52 0 "a_411_n1940#" 84 1932,130 "VSS" 84 7300,265
+device msubckt sg13_lv_nmos 385 -1940 386 -1939 l=26 w=84 "VSS" "a_357_n1657#" 52 0 "a_333_n1940#" 84 2184,136 "a_411_n1940#" 84 1932,130
+device msubckt sg13_lv_nmos 307 -1940 308 -1939 l=26 w=84 "VSS" "a_n26_n1666#" 52 0 "a_206_n1595#" 84 3192,160 "a_333_n1940#" 84 2184,136
+device msubckt sg13_lv_nmos 205 -1940 206 -1939 l=26 w=84 "VSS" "a_n222_n1666#" 52 0 "a_n519_n1980#" 84 5712,304 "a_206_n1595#" 84 3192,160
+device msubckt sg13_lv_pmos 1211 -1587 1212 -1586 l=26 w=84 "VDD" "a_741_n1985#" 52 0 "a_987_n2021#" 84 3192,160 "VDD" 84 8652,310
+device msubckt sg13_lv_pmos 1109 -1587 1110 -1586 l=26 w=84 "VDD" "freq_div_cell_0.nRST" 52 0 "VDD" 84 3192,160 "a_987_n2021#" 84 3192,160
+device msubckt sg13_lv_pmos 1007 -1587 1008 -1586 l=26 w=84 "VDD" "a_987_n2021#" 52 0 "a_966_n1587#" 84 1722,125 "VDD" 84 3192,160
+device msubckt sg13_lv_pmos 940 -1587 941 -1586 l=26 w=84 "VDD" "a_n26_n1666#" 52 0 "a_741_n1985#" 84 7078,312 "a_966_n1587#" 84 1722,125
+device msubckt sg13_lv_pmos 810 -1711 811 -1710 l=26 w=200 "VDD" "a_n222_n1666#" 52 0 "a_357_n1657#" 200 7600,276 "a_741_n1985#" 200 7078,312
+device msubckt sg13_lv_pmos 708 -1711 709 -1710 l=26 w=200 "VDD" "a_206_n1595#" 52 0 "VDD" 200 13600,536 "a_357_n1657#" 200 7600,276
+device msubckt sg13_lv_nmos -46 -1949 -45 -1948 l=26 w=148 "VSS" "a_n222_n1666#" 52 0 "VSS" 148 6176,247 "a_n26_n1666#" 148 10064,432
+device msubckt sg13_lv_nmos -148 -1949 -147 -1948 l=26 w=148 "VSS" "freq_div_cell_0.dff_nclk_0.sg13g2_dfrbp_1_0.CLK" 52 0 "a_n222_n1666#" 148 10064,432 "VSS" 148 6176,247
+device msubckt sg13_lv_nmos -377 -1980 -376 -1979 l=26 w=84 "VSS" "freq_div_cell_0.nRST" 52 0 "a_n425_n1980#" 84 2016,132 "VSS" 84 5712,304
+device msubckt sg13_lv_nmos -451 -1980 -450 -1979 l=26 w=84 "VSS" "freq_div_cell_0.dff_nclk_0.D" 52 0 "a_n519_n1980#" 84 5712,304 "a_n425_n1980#" 84 2016,132
+device msubckt sg13_lv_pmos 472 -1595 473 -1594 l=26 w=84 "VDD" "freq_div_cell_0.nRST" 52 0 "VDD" 84 4714,205 "a_206_n1595#" 84 6132,314
+device msubckt sg13_lv_pmos 3109 -1419 3110 -1418 l=26 w=224 "VDD" "a_2779_n1425#" 52 0 "CLK_OUT" 224 15232,584 "VDD" 224 8064,300
+device msubckt sg13_lv_nmos 2815 -1425 2816 -1424 l=26 w=148 "VSS" "a_2779_n1425#" 52 0 "CLK_OUT" 148 10064,432 "VSS" 148 5802,230
+device msubckt sg13_lv_pmos 357 -1595 358 -1594 l=26 w=84 "VDD" "a_357_n1657#" 52 0 "a_308_n1595#" 84 2058,133 "VDD" 84 4714,205
+device msubckt sg13_lv_pmos 282 -1595 283 -1594 l=26 w=84 "VDD" "a_n222_n1666#" 52 0 "a_206_n1595#" 84 3192,160 "a_308_n1595#" 84 2058,133
+device msubckt sg13_lv_pmos 180 -1595 181 -1594 l=26 w=84 "VDD" "a_n26_n1666#" 52 0 "a_n519_n1980#" 84 5712,304 "a_206_n1595#" 84 3192,160
+device msubckt sg13_lv_pmos -52 -1666 -51 -1665 l=26 w=200 "VDD" "a_n222_n1666#" 52 0 "VDD" 200 7600,276 "a_n26_n1666#" 200 13600,536
+device msubckt sg13_lv_pmos -154 -1666 -153 -1665 l=26 w=200 "VDD" "freq_div_cell_0.dff_nclk_0.sg13g2_dfrbp_1_0.CLK" 52 0 "a_n222_n1666#" 200 13600,536 "VDD" 200 7600,276
+device msubckt sg13_lv_nmos -826 -1984 -825 -1983 l=26 w=148 "VSS" "freq_div_cell_0.CLK" 52 0 "VSS" 148 10360,436 "freq_div_cell_0.dff_nclk_0.sg13g2_dfrbp_1_0.CLK" 148 10360,436
+device msubckt sg13_lv_pmos -358 -1550 -357 -1549 l=26 w=84 "VDD" "freq_div_cell_0.nRST" 52 0 "a_n519_n1980#" 84 3192,160 "VDD" 84 5712,304
+device msubckt sg13_lv_pmos -460 -1550 -459 -1549 l=26 w=84 "VDD" "freq_div_cell_0.dff_nclk_0.D" 52 0 "VDD" 84 5712,304 "a_n519_n1980#" 84 3192,160
+device msubckt sg13_lv_pmos -824 -1687 -823 -1686 l=26 w=224 "VDD" "freq_div_cell_0.CLK" 52 0 "VDD" 224 15680,588 "freq_div_cell_0.dff_nclk_0.sg13g2_dfrbp_1_0.CLK" 224 15680,588
+device msubckt sg13_lv_pmos 3165 -1317 3166 -1316 l=26 w=168 "VDD" "a_2778_n869#" 52 0 "VDD" 168 8064,300 "a_2779_n1425#" 168 11424,472
+device msubckt sg13_lv_nmos 2815 -1317 2816 -1316 l=26 w=110 "VSS" "a_2778_n869#" 52 0 "VSS" 110 5802,230 "a_2779_n1425#" 110 7480,356
+device msubckt sg13_lv_nmos 2815 -1077 2816 -1076 l=26 w=148 "VSS" "a_2778_n869#" 52 0 "dff_nclk_0.D" 148 11100,446 "VSS" 148 10064,432
+device msubckt sg13_lv_pmos 3109 -1022 3110 -1021 l=26 w=224 "VDD" "a_2778_n869#" 52 0 "dff_nclk_0.D" 224 30464,720 "VDD" 224 8652,310
+device msubckt sg13_lv_pmos 3212 -910 3213 -909 l=26 w=84 "VDD" "a_2778_n869#" 52 0 "VDD" 84 8652,310 "a_2778_n686#" 84 3192,160
+device msubckt sg13_lv_nmos 2814 -869 2815 -868 l=26 w=84 "VSS" "a_2778_n869#" 52 0 "a_2778_n686#" 84 5712,304 "a_2814_n843#" 84 1890,129
+device msubckt sg13_lv_pmos 3212 -808 3213 -807 l=26 w=84 "VDD" "sg13g2_tiehi_0.L_HI" 52 0 "a_2778_n686#" 84 3192,160 "VDD" 84 3192,160
+device msubckt sg13_lv_pmos 1785 -1070 1786 -1069 l=26 w=224 "VDD" "a_1342_n712#" 52 0 "a_1513_n1070#" 224 8512,300 "freq_div_cell_0.DIV" 224 15232,584
+device msubckt sg13_lv_pmos 1683 -1070 1684 -1069 l=26 w=224 "VDD" "A1" 52 0 "VDD" 224 8512,300 "a_1513_n1070#" 224 8512,300
+device msubckt sg13_lv_pmos 1581 -1070 1582 -1069 l=26 w=224 "VDD" "freq_div_cell_0.dff_nclk_0.Q" 52 0 "a_1513_n1070#" 224 15232,584 "VDD" 224 8512,300
+device msubckt sg13_lv_pmos 1359 -1070 1360 -1069 l=26 w=200 "VDD" "A1" 52 0 "a_1310_n1070#" 200 4900,249 "a_1342_n712#" 200 13600,536
+device msubckt sg13_lv_pmos 1284 -1070 1285 -1069 l=26 w=200 "VDD" "freq_div_cell_0.dff_nclk_0.Q" 52 0 "VDD" 200 14400,544 "a_1310_n1070#" 200 4900,249
+device msubckt sg13_lv_nmos 2814 -798 2815 -797 l=26 w=84 "VSS" "sg13g2_tiehi_0.L_HI" 52 0 "a_2814_n843#" 84 1890,129 "VSS" 84 3612,170
+device msubckt sg13_lv_pmos 3212 -706 3213 -705 l=26 w=84 "VDD" "a_2778_n686#" 52 0 "VDD" 84 3192,160 "a_3212_n680#" 84 1722,125
+device msubckt sg13_lv_nmos 2814 -686 2815 -685 l=26 w=84 "VSS" "a_2778_n686#" 52 0 "VSS" 84 3612,170 "a_2814_n660#" 84 2184,136
+device msubckt sg13_lv_pmos 237 -1070 238 -1069 l=26 w=224 "VDD" "a_n206_n712#" 52 0 "a_n35_n1070#" 224 8512,300 "freq_div_cell_0.dff_nclk_0.D" 224 15232,584
+device msubckt sg13_lv_pmos 135 -1070 136 -1069 l=26 w=224 "VDD" "freq_div_cell_0.dff_nclk_0.Q" 52 0 "VDD" 224 8512,300 "a_n35_n1070#" 224 8512,300
+device msubckt sg13_lv_pmos 33 -1070 34 -1069 l=26 w=224 "VDD" "freq_div_cell_0.Cin" 52 0 "a_n35_n1070#" 224 15232,584 "VDD" 224 8512,300
+device msubckt sg13_lv_pmos -189 -1070 -188 -1069 l=26 w=200 "VDD" "freq_div_cell_0.dff_nclk_0.Q" 52 0 "a_n238_n1070#" 200 4900,249 "a_n206_n712#" 200 13600,536
+device msubckt sg13_lv_pmos -264 -1070 -263 -1069 l=26 w=200 "VDD" "freq_div_cell_0.Cin" 52 0 "VDD" 200 14400,544 "a_n238_n1070#" 200 4900,249
+device msubckt sg13_lv_pmos -674 -1070 -673 -1069 l=26 w=224 "VDD" "a_n946_n722#" 52 0 "VDD" 224 7672,300 "freq_div_cell_0.Cout" 224 15232,584
+device msubckt sg13_lv_pmos -776 -1070 -775 -1069 l=26 w=168 "VDD" "freq_div_cell_0.dff_nclk_0.Q" 52 0 "a_n946_n722#" 168 6384,244 "VDD" 168 7672,300
+device msubckt sg13_lv_pmos -878 -1070 -877 -1069 l=26 w=168 "VDD" "freq_div_cell_0.Cin" 52 0 "VDD" 168 11424,472 "a_n946_n722#" 168 6384,244
+device msubckt sg13_lv_nmos -1394 -1149 -1393 -1148 l=26 w=148 "VSS" "CLK_IN" 52 0 "a_n1430_n1149#" 148 2664,184 "freq_div_cell_0.CLK" 148 10064,432
+device msubckt sg13_lv_nmos -1456 -1149 -1455 -1148 l=26 w=148 "VSS" "EN" 52 0 "VSS" 148 10064,432 "a_n1430_n1149#" 148 2664,184
+device msubckt sg13_lv_pmos 3212 -639 3213 -638 l=26 w=84 "VDD" "a_2778_n414#" 52 0 "a_3212_n680#" 84 1722,125 "a_2778_n869#" 84 7078,312
+device msubckt sg13_lv_nmos 2814 -608 2815 -607 l=26 w=84 "VSS" "a_2778_n608#" 52 0 "a_2814_n660#" 84 2184,136 "a_2778_n869#" 84 8068,296
+device msubckt sg13_lv_pmos 3088 -509 3089 -508 l=26 w=200 "VDD" "a_2778_n608#" 52 0 "a_2778_n869#" 200 7078,312 "a_2814_n388#" 200 7600,276
+device msubckt sg13_lv_nmos 1769 -712 1770 -711 l=26 w=148 "VSS" "a_1342_n712#" 52 0 "freq_div_cell_0.DIV" 148 6512,236 "VSS" 148 12432,464
+device msubckt sg13_lv_nmos 1655 -712 1656 -711 l=26 w=148 "VSS" "A1" 52 0 "a_1607_n712#" 148 3552,196 "freq_div_cell_0.DIV" 148 6512,236
+device msubckt sg13_lv_nmos 1581 -712 1582 -711 l=26 w=148 "VSS" "freq_div_cell_0.dff_nclk_0.Q" 52 0 "VSS" 148 6098,234 "a_1607_n712#" 148 3552,196
+device msubckt sg13_lv_nmos 1469 -712 1470 -711 l=26 w=110 "VSS" "A1" 52 0 "a_1342_n712#" 110 6985,237 "VSS" 110 6098,234
+device msubckt sg13_lv_nmos 1316 -712 1317 -711 l=26 w=110 "VSS" "freq_div_cell_0.dff_nclk_0.Q" 52 0 "VSS" 110 14960,492 "a_1342_n712#" 110 6985,237
+device msubckt sg13_lv_nmos 221 -712 222 -711 l=26 w=148 "VSS" "a_n206_n712#" 52 0 "freq_div_cell_0.dff_nclk_0.D" 148 6512,236 "VSS" 148 12432,464
+device msubckt sg13_lv_nmos 107 -712 108 -711 l=26 w=148 "VSS" "freq_div_cell_0.dff_nclk_0.Q" 52 0 "a_59_n712#" 148 3552,196 "freq_div_cell_0.dff_nclk_0.D" 148 6512,236
+device msubckt sg13_lv_nmos 33 -712 34 -711 l=26 w=148 "VSS" "freq_div_cell_0.Cin" 52 0 "VSS" 148 6098,234 "a_59_n712#" 148 3552,196
+device msubckt sg13_lv_nmos -79 -712 -78 -711 l=26 w=110 "VSS" "freq_div_cell_0.dff_nclk_0.Q" 52 0 "a_n206_n712#" 110 6985,237 "VSS" 110 6098,234
+device msubckt sg13_lv_nmos -232 -712 -231 -711 l=26 w=110 "VSS" "freq_div_cell_0.Cin" 52 0 "VSS" 110 14960,492 "a_n206_n712#" 110 6985,237
+device msubckt sg13_lv_nmos -674 -722 -673 -721 l=26 w=148 "VSS" "a_n946_n722#" 52 0 "VSS" 148 5324,224 "freq_div_cell_0.Cout" 148 10064,432
+device msubckt sg13_lv_nmos -776 -722 -775 -721 l=26 w=128 "VSS" "freq_div_cell_0.dff_nclk_0.Q" 52 0 "a_n852_n722#" 128 4864,204 "VSS" 128 5324,224
+device msubckt sg13_lv_nmos -878 -722 -877 -721 l=26 w=128 "VSS" "freq_div_cell_0.Cin" 52 0 "a_n946_n722#" 128 8704,392 "a_n852_n722#" 128 4864,204
+device msubckt sg13_lv_pmos -1369 -855 -1368 -854 l=26 w=224 "VDD" "CLK_IN" 52 0 "freq_div_cell_0.CLK" 224 8512,300 "VDD" 224 15232,584
+device msubckt sg13_lv_pmos -1471 -855 -1470 -854 l=26 w=224 "VDD" "EN" 52 0 "VDD" 224 15232,584 "freq_div_cell_0.CLK" 224 8512,300
+device msubckt sg13_lv_pmos 3088 -407 3089 -406 l=26 w=200 "VDD" "a_2778_n280#" 52 0 "a_2814_n388#" 200 7600,276 "VDD" 200 13600,536
+device msubckt sg13_lv_nmos 2814 -414 2815 -413 l=26 w=128 "VSS" "a_2778_n414#" 52 0 "a_2778_n869#" 128 8068,296 "a_2814_n388#" 128 7759,258
+device msubckt sg13_lv_nmos 2814 -280 2815 -279 l=26 w=128 "VSS" "a_2778_n280#" 52 0 "a_2814_n388#" 128 7759,258 "VSS" 128 7300,265
+device msubckt sg13_lv_pmos 3204 -171 3205 -170 l=26 w=84 "VDD" "sg13g2_tiehi_0.L_HI" 52 0 "a_2778_n280#" 84 6132,314 "VDD" 84 4714,205
+device msubckt sg13_lv_nmos 2859 -156 2860 -155 l=26 w=84 "VSS" "sg13g2_tiehi_0.L_HI" 52 0 "VSS" 84 7300,265 "a_2859_n130#" 84 1932,130
+device msubckt sg13_lv_pmos 3204 -56 3205 -55 l=26 w=84 "VDD" "a_2814_n388#" 52 0 "VDD" 84 4714,205 "a_3204_n30#" 84 2058,133
+device msubckt sg13_lv_nmos 2859 -84 2860 -83 l=26 w=84 "VSS" "a_2814_n388#" 52 0 "a_2859_n130#" 84 1932,130 "a_2859_n58#" 84 2184,136
+device msubckt sg13_lv_pmos 3204 19 3205 20 l=26 w=84 "VDD" "a_2778_n608#" 52 0 "a_3204_n30#" 84 2058,133 "a_2778_n280#" 84 3192,160
+device msubckt sg13_lv_nmos 2859 -6 2860 -5 l=26 w=84 "VSS" "a_2778_n414#" 52 0 "a_2859_n58#" 84 2184,136 "a_2778_n280#" 84 3192,160
+device msubckt sg13_lv_pmos 3204 121 3205 122 l=26 w=84 "VDD" "a_2778_n414#" 52 0 "a_2778_n280#" 84 3192,160 "a_2819_778#" 84 5712,304
+device msubckt sg13_lv_nmos 2859 96 2860 97 l=26 w=84 "VSS" "a_2778_n608#" 52 0 "a_2778_n280#" 84 3192,160 "a_2819_778#" 84 5712,304
+device msubckt sg13_lv_pmos 3133 353 3134 354 l=26 w=200 "VDD" "a_2778_n608#" 52 0 "a_2778_n414#" 200 13600,536 "VDD" 200 7600,276
+device msubckt sg13_lv_nmos 2850 347 2851 348 l=26 w=148 "VSS" "a_2778_n608#" 52 0 "a_2778_n414#" 148 10064,432 "VSS" 148 6176,247
+device msubckt sg13_lv_pmos 3133 455 3134 456 l=26 w=200 "VDD" "dff_nclk_0.sg13g2_dfrbp_1_0.CLK" 52 0 "VDD" 200 7600,276 "a_2778_n608#" 200 13600,536
+device msubckt sg13_lv_nmos 2850 449 2851 450 l=26 w=148 "VSS" "dff_nclk_0.sg13g2_dfrbp_1_0.CLK" 52 0 "VSS" 148 6176,247 "a_2778_n608#" 148 10064,432
+device msubckt sg13_lv_pmos 3249 659 3250 660 l=26 w=84 "VDD" "sg13g2_tiehi_0.L_HI" 52 0 "VDD" 84 5712,304 "a_2819_778#" 84 3192,160
+device msubckt sg13_lv_nmos 2819 678 2820 679 l=26 w=84 "VSS" "sg13g2_tiehi_0.L_HI" 52 0 "VSS" 84 5712,304 "a_2819_704#" 84 2016,132
+device msubckt sg13_lv_pmos 2390 -353 2391 -352 l=26 w=224 "VDD" "a_2111_n353#" 52 0 "VDD" 224 8904,307 "freq_div_cell_0.nRST" 224 15904,590
+device msubckt sg13_lv_pmos 2281 -353 2282 -352 l=26 w=168 "VDD" "sg13g2_or2_1_0.A" 52 0 "a_2205_n353#" 168 6384,244 "VDD" 168 8904,307
+device msubckt sg13_lv_pmos 2179 -353 2180 -352 l=26 w=168 "VDD" "freq_div_cell_0.DIV" 52 0 "a_2111_n353#" 168 11424,472 "a_2205_n353#" 168 6384,244
+device msubckt sg13_lv_nmos 2390 63 2391 64 l=26 w=148 "VSS" "a_2111_n353#" 52 0 "VSS" 148 5876,231 "freq_div_cell_0.nRST" 148 10064,432
+device msubckt sg13_lv_nmos 1726 -228 1727 -227 l=26 w=148 "VSS" "a_1550_n228#" 52 0 "VSS" 148 5802,230 "freq_div_cell_1.dff_nclk_0.Q" 148 10064,432
+device msubckt sg13_lv_nmos 1618 -228 1619 -227 l=26 w=110 "VSS" "a_741_n229#" 52 0 "a_1550_n228#" 110 7480,356 "VSS" 110 5802,230
+device msubckt sg13_lv_nmos 1378 -228 1379 -227 l=26 w=148 "VSS" "a_741_n229#" 52 0 "VSS" 148 10064,432 "freq_div_cell_1.dff_nclk_0.nQ" 148 11100,446
+device msubckt sg13_lv_nmos 1170 -229 1171 -228 l=26 w=84 "VSS" "a_741_n229#" 52 0 "a_1125_n229#" 84 1890,129 "a_987_n265#" 84 5712,304
+device msubckt sg13_lv_nmos 1099 -229 1100 -228 l=26 w=84 "VSS" "freq_div_cell_0.nRST" 52 0 "VSS" 84 3612,170 "a_1125_n229#" 84 1890,129
+device msubckt sg13_lv_nmos 987 -229 988 -228 l=26 w=84 "VSS" "a_987_n265#" 52 0 "a_935_n229#" 84 2184,136 "VSS" 84 3612,170
+device msubckt sg13_lv_nmos 909 -229 910 -228 l=26 w=84 "VSS" "a_n222_90#" 52 0 "a_741_n229#" 84 8068,296 "a_935_n229#" 84 2184,136
+device msubckt sg13_lv_nmos 2281 101 2282 102 l=26 w=110 "VSS" "sg13g2_or2_1_0.A" 52 0 "a_2111_n353#" 110 4180,186 "VSS" 110 5876,231
+device msubckt sg13_lv_nmos 2179 101 2180 102 l=26 w=110 "VSS" "freq_div_cell_0.DIV" 52 0 "VSS" 110 7480,356 "a_2111_n353#" 110 4180,186
+device msubckt sg13_lv_pmos 1720 66 1721 67 l=26 w=224 "VDD" "a_1550_n228#" 52 0 "VDD" 224 8064,300 "freq_div_cell_1.dff_nclk_0.Q" 224 15232,584
+device msubckt sg13_lv_pmos 1618 122 1619 123 l=26 w=168 "VDD" "a_741_n229#" 52 0 "a_1550_n228#" 168 11424,472 "VDD" 168 8064,300
+device msubckt sg13_lv_pmos 1323 66 1324 67 l=26 w=224 "VDD" "a_741_n229#" 52 0 "VDD" 224 8652,310 "freq_div_cell_1.dff_nclk_0.nQ" 224 30464,720
+device msubckt sg13_lv_nmos 715 -229 716 -228 l=26 w=128 "VSS" "a_n26_90#" 52 0 "a_357_99#" 128 7759,258 "a_741_n229#" 128 8068,296
+device msubckt sg13_lv_nmos 581 -229 582 -228 l=26 w=128 "VSS" "a_206_161#" 52 0 "VSS" 128 7300,265 "a_357_99#" 128 7759,258
+device msubckt sg13_lv_nmos 457 -184 458 -183 l=26 w=84 "VSS" "freq_div_cell_0.nRST" 52 0 "a_411_n184#" 84 1932,130 "VSS" 84 7300,265
+device msubckt sg13_lv_nmos 385 -184 386 -183 l=26 w=84 "VSS" "a_357_99#" 52 0 "a_333_n184#" 84 2184,136 "a_411_n184#" 84 1932,130
+device msubckt sg13_lv_nmos 307 -184 308 -183 l=26 w=84 "VSS" "a_n26_90#" 52 0 "a_206_161#" 84 3192,160 "a_333_n184#" 84 2184,136
+device msubckt sg13_lv_nmos 205 -184 206 -183 l=26 w=84 "VSS" "a_n222_90#" 52 0 "a_n519_n224#" 84 5712,304 "a_206_161#" 84 3192,160
+device msubckt sg13_lv_pmos 1211 169 1212 170 l=26 w=84 "VDD" "a_741_n229#" 52 0 "a_987_n265#" 84 3192,160 "VDD" 84 8652,310
+device msubckt sg13_lv_pmos 1109 169 1110 170 l=26 w=84 "VDD" "freq_div_cell_0.nRST" 52 0 "VDD" 84 3192,160 "a_987_n265#" 84 3192,160
+device msubckt sg13_lv_pmos 1007 169 1008 170 l=26 w=84 "VDD" "a_987_n265#" 52 0 "a_966_169#" 84 1722,125 "VDD" 84 3192,160
+device msubckt sg13_lv_pmos 940 169 941 170 l=26 w=84 "VDD" "a_n26_90#" 52 0 "a_741_n229#" 84 7078,312 "a_966_169#" 84 1722,125
+device msubckt sg13_lv_pmos 810 45 811 46 l=26 w=200 "VDD" "a_n222_90#" 52 0 "a_357_99#" 200 7600,276 "a_741_n229#" 200 7078,312
+device msubckt sg13_lv_pmos 708 45 709 46 l=26 w=200 "VDD" "a_206_161#" 52 0 "VDD" 200 13600,536 "a_357_99#" 200 7600,276
+device msubckt sg13_lv_nmos -46 -193 -45 -192 l=26 w=148 "VSS" "a_n222_90#" 52 0 "VSS" 148 6176,247 "a_n26_90#" 148 10064,432
+device msubckt sg13_lv_nmos -148 -193 -147 -192 l=26 w=148 "VSS" "freq_div_cell_1.dff_nclk_0.sg13g2_dfrbp_1_0.CLK" 52 0 "a_n222_90#" 148 10064,432 "VSS" 148 6176,247
+device msubckt sg13_lv_nmos -377 -224 -376 -223 l=26 w=84 "VSS" "freq_div_cell_0.nRST" 52 0 "a_n425_n224#" 84 2016,132 "VSS" 84 5712,304
+device msubckt sg13_lv_nmos -451 -224 -450 -223 l=26 w=84 "VSS" "freq_div_cell_1.dff_nclk_0.D" 52 0 "a_n519_n224#" 84 5712,304 "a_n425_n224#" 84 2016,132
+device msubckt sg13_lv_pmos 472 161 473 162 l=26 w=84 "VDD" "freq_div_cell_0.nRST" 52 0 "VDD" 84 4714,205 "a_206_161#" 84 6132,314
+device msubckt sg13_lv_pmos 357 161 358 162 l=26 w=84 "VDD" "a_357_99#" 52 0 "a_308_161#" 84 2058,133 "VDD" 84 4714,205
+device msubckt sg13_lv_pmos 282 161 283 162 l=26 w=84 "VDD" "a_n222_90#" 52 0 "a_206_161#" 84 3192,160 "a_308_161#" 84 2058,133
+device msubckt sg13_lv_pmos 180 161 181 162 l=26 w=84 "VDD" "a_n26_90#" 52 0 "a_n519_n224#" 84 5712,304 "a_206_161#" 84 3192,160
+device msubckt sg13_lv_pmos -52 90 -51 91 l=26 w=200 "VDD" "a_n222_90#" 52 0 "VDD" 200 7600,276 "a_n26_90#" 200 13600,536
+device msubckt sg13_lv_pmos -154 90 -153 91 l=26 w=200 "VDD" "freq_div_cell_1.dff_nclk_0.sg13g2_dfrbp_1_0.CLK" 52 0 "a_n222_90#" 200 13600,536 "VDD" 200 7600,276
+device msubckt sg13_lv_nmos -826 -228 -825 -227 l=26 w=148 "VSS" "freq_div_cell_0.CLK" 52 0 "VSS" 148 10360,436 "freq_div_cell_1.dff_nclk_0.sg13g2_dfrbp_1_0.CLK" 148 10360,436
+device msubckt sg13_lv_pmos -358 206 -357 207 l=26 w=84 "VDD" "freq_div_cell_0.nRST" 52 0 "a_n519_n224#" 84 3192,160 "VDD" 84 5712,304
+device msubckt sg13_lv_pmos -460 206 -459 207 l=26 w=84 "VDD" "freq_div_cell_1.dff_nclk_0.D" 52 0 "VDD" 84 5712,304 "a_n519_n224#" 84 3192,160
+device msubckt sg13_lv_pmos -824 69 -823 70 l=26 w=224 "VDD" "freq_div_cell_0.CLK" 52 0 "VDD" 224 15680,588 "freq_div_cell_1.dff_nclk_0.sg13g2_dfrbp_1_0.CLK" 224 15680,588
+device msubckt sg13_lv_pmos 3249 761 3250 762 l=26 w=84 "VDD" "dff_nclk_0.D" 52 0 "a_2819_778#" 84 3192,160 "VDD" 84 5712,304
+device msubckt sg13_lv_nmos 2819 752 2820 753 l=26 w=84 "VSS" "dff_nclk_0.D" 52 0 "a_2819_704#" 84 2016,132 "a_2819_778#" 84 5712,304
+device msubckt sg13_lv_pmos 1785 686 1786 687 l=26 w=224 "VDD" "a_1342_1044#" 52 0 "a_1513_686#" 224 8512,300 "sg13g2_or2_1_0.A" 224 15232,584
+device msubckt sg13_lv_pmos 1683 686 1684 687 l=26 w=224 "VDD" "A0" 52 0 "VDD" 224 8512,300 "a_1513_686#" 224 8512,300
+device msubckt sg13_lv_pmos 1581 686 1582 687 l=26 w=224 "VDD" "freq_div_cell_1.dff_nclk_0.Q" 52 0 "a_1513_686#" 224 15232,584 "VDD" 224 8512,300
+device msubckt sg13_lv_pmos 1359 686 1360 687 l=26 w=200 "VDD" "A0" 52 0 "a_1310_686#" 200 4900,249 "a_1342_1044#" 200 13600,536
+device msubckt sg13_lv_pmos 1284 686 1285 687 l=26 w=200 "VDD" "freq_div_cell_1.dff_nclk_0.Q" 52 0 "VDD" 200 14400,544 "a_1310_686#" 200 4900,249
+device msubckt sg13_lv_pmos 3112 1125 3113 1126 l=26 w=224 "VDD" "freq_div_cell_0.nRST" 52 0 "dff_nclk_0.sg13g2_dfrbp_1_0.CLK" 224 15680,588 "VDD" 224 15680,588
+device msubckt sg13_lv_pmos 237 686 238 687 l=26 w=224 "VDD" "a_n206_1044#" 52 0 "a_n35_686#" 224 8512,300 "freq_div_cell_1.dff_nclk_0.D" 224 15232,584
+device msubckt sg13_lv_pmos 135 686 136 687 l=26 w=224 "VDD" "freq_div_cell_1.dff_nclk_0.Q" 52 0 "VDD" 224 8512,300 "a_n35_686#" 224 8512,300
+device msubckt sg13_lv_pmos 33 686 34 687 l=26 w=224 "VDD" "sg13g2_tiehi_1.L_HI" 52 0 "a_n35_686#" 224 15232,584 "VDD" 224 8512,300
+device msubckt sg13_lv_pmos -189 686 -188 687 l=26 w=200 "VDD" "freq_div_cell_1.dff_nclk_0.Q" 52 0 "a_n238_686#" 200 4900,249 "a_n206_1044#" 200 13600,536
+device msubckt sg13_lv_pmos -264 686 -263 687 l=26 w=200 "VDD" "sg13g2_tiehi_1.L_HI" 52 0 "VDD" 200 14400,544 "a_n238_686#" 200 4900,249
+device msubckt sg13_lv_pmos -674 686 -673 687 l=26 w=224 "VDD" "a_n946_1034#" 52 0 "VDD" 224 7672,300 "freq_div_cell_0.Cin" 224 15232,584
+device msubckt sg13_lv_pmos -776 686 -775 687 l=26 w=168 "VDD" "freq_div_cell_1.dff_nclk_0.Q" 52 0 "a_n946_1034#" 168 6384,244 "VDD" 168 7672,300
+device msubckt sg13_lv_pmos -878 686 -877 687 l=26 w=168 "VDD" "sg13g2_tiehi_1.L_HI" 52 0 "VDD" 168 11424,472 "a_n946_1034#" 168 6384,244
+device msubckt sg13_lv_pmos -1377 662 -1376 663 l=26 w=231 "VDD" "a_n1377_624#" 52 0 "a_n1576_602#" 231 18628,508 "sg13g2_tiehi_1.L_HI" 231 15708,598
+device msubckt sg13_lv_pmos -1502 761 -1501 762 l=26 w=132 "VDD" "a_n1576_991#" 52 0 "a_n1576_761#" 132 9768,412 "a_n1576_602#" 132 18628,508
+device msubckt sg13_lv_nmos 2815 1127 2816 1128 l=26 w=148 "VSS" "freq_div_cell_0.nRST" 52 0 "dff_nclk_0.sg13g2_dfrbp_1_0.CLK" 148 10360,436 "VSS" 148 10360,436
+device msubckt sg13_lv_nmos 1769 1044 1770 1045 l=26 w=148 "VSS" "a_1342_1044#" 52 0 "sg13g2_or2_1_0.A" 148 6512,236 "VSS" 148 12432,464
+device msubckt sg13_lv_nmos 1655 1044 1656 1045 l=26 w=148 "VSS" "A0" 52 0 "a_1607_1044#" 148 3552,196 "sg13g2_or2_1_0.A" 148 6512,236
+device msubckt sg13_lv_nmos 1581 1044 1582 1045 l=26 w=148 "VSS" "freq_div_cell_1.dff_nclk_0.Q" 52 0 "VSS" 148 6098,234 "a_1607_1044#" 148 3552,196
+device msubckt sg13_lv_nmos 1469 1044 1470 1045 l=26 w=110 "VSS" "A0" 52 0 "a_1342_1044#" 110 6985,237 "VSS" 110 6098,234
+device msubckt sg13_lv_nmos 1316 1044 1317 1045 l=26 w=110 "VSS" "freq_div_cell_1.dff_nclk_0.Q" 52 0 "VSS" 110 14960,492 "a_1342_1044#" 110 6985,237
+device msubckt sg13_lv_nmos 221 1044 222 1045 l=26 w=148 "VSS" "a_n206_1044#" 52 0 "freq_div_cell_1.dff_nclk_0.D" 148 6512,236 "VSS" 148 12432,464
+device msubckt sg13_lv_nmos 107 1044 108 1045 l=26 w=148 "VSS" "freq_div_cell_1.dff_nclk_0.Q" 52 0 "a_59_1044#" 148 3552,196 "freq_div_cell_1.dff_nclk_0.D" 148 6512,236
+device msubckt sg13_lv_nmos 33 1044 34 1045 l=26 w=148 "VSS" "sg13g2_tiehi_1.L_HI" 52 0 "VSS" 148 6098,234 "a_59_1044#" 148 3552,196
+device msubckt sg13_lv_nmos -79 1044 -78 1045 l=26 w=110 "VSS" "freq_div_cell_1.dff_nclk_0.Q" 52 0 "a_n206_1044#" 110 6985,237 "VSS" 110 6098,234
+device msubckt sg13_lv_nmos -232 1044 -231 1045 l=26 w=110 "VSS" "sg13g2_tiehi_1.L_HI" 52 0 "VSS" 110 14960,492 "a_n206_1044#" 110 6985,237
+device msubckt sg13_lv_nmos -674 1034 -673 1035 l=26 w=148 "VSS" "a_n946_1034#" 52 0 "VSS" 148 5324,224 "freq_div_cell_0.Cin" 148 10064,432
+device msubckt sg13_lv_nmos -776 1034 -775 1035 l=26 w=128 "VSS" "freq_div_cell_1.dff_nclk_0.Q" 52 0 "a_n852_1034#" 128 4864,204 "VSS" 128 5324,224
+device msubckt sg13_lv_nmos -878 1034 -877 1035 l=26 w=128 "VSS" "sg13g2_tiehi_1.L_HI" 52 0 "a_n946_1034#" 128 8704,392 "a_n852_1034#" 128 4864,204
+device msubckt sg13_lv_nmos -1378 1067 -1377 1068 l=26 w=159 "VSS" "a_n1576_761#" 52 0 "a_n1482_1067#" 159 9228,323 "a_n1377_624#" 159 10971,456
+device msubckt sg13_lv_nmos -1508 1067 -1507 1068 l=26 w=60 "VSS" "a_n1576_991#" 52 0 "a_n1576_991#" 60 4080,256 "a_n1482_1067#" 60 9228,323
