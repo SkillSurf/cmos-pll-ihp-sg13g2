@@ -5,8 +5,7 @@
 .lib /foss/pdks/ihp-sg13g2/libs.tech/ngspice/models/cornerCAP.lib cap_typ
 .include ../../pex/pll_3bitDiv__pll_3bitDiv/magic_RC/pll_3bitDiv.pex.spice
 
-.SUBCKT pll_3bitDiv_pex_tb
-
+**.subckt pll_3bitDiv_pex_tb
 V1 VDD GND 1.2
 V2 CLK_IN GND PULSE(0 1.2 0.2n 5n 5n 50n 100n)
 Va0 A0 GND dc {A0}
@@ -21,10 +20,11 @@ x1 CLK_IN CLK_OUT B0 B2 B1 VDD GND GND A1 A2 A0 pll_3bitDiv
 
 
 .param temp=27
+.options method=gear gmin=1e-10
 
 .control
 save all
-tran 50p 350n uic
+tran 10n 2u
 
 write tran_pll_3bitDiv_tb_pex.raw
 .endc
@@ -45,7 +45,40 @@ write tran_pll_3bitDiv_tb_pex.raw
 .param B2 = 0
 
 
+
+
+RLEAK_0001 x1.a_52808_21795# VSS 1e11
+RLEAK_0002 x1.a_52808_21817# VSS 1e11
+RLEAK_0003 x1.a_52808_23551# VSS 1e11
+RLEAK_0004 x1.a_52808_23573# VSS 1e11
+RLEAK_0005 x1.a_55948_56737# VSS 1e11
+RLEAK_0006 x1.a_56695_49467# VSS 1e11
+RLEAK_0007 x1.a_56828_53480# VSS 1e11
+RLEAK_0008 x1.a_56887_49467# VSS 1e11
+RLEAK_0009 x1.a_60528_49446# VSS 1e11
+RLEAK_0010 x1.a_60922_21796# VSS 1e11
+RLEAK_0011 x1.a_60922_21818# VSS 1e11
+RLEAK_0012 x1.a_60922_23552# VSS 1e11
+RLEAK_0013 x1.a_60922_23574# VSS 1e11
+RLEAK_0014 x1.m1_16847_2260# VSS 1e11
+RLEAK_0015 x1.m1_17285_2698# VSS 1e11
+RLEAK_0016 x1.m2_16847_2260# VSS 1e11
+RLEAK_0017 x1.m2_17285_2698# VSS 1e11
+RLEAK_0018 x1.m3_16847_2260# VSS 1e11
+RLEAK_0019 x1.m3_17285_2698# VSS 1e11
+RLEAK_0020 x1.m4_16847_2260# VSS 1e11
+RLEAK_0021 x1.m4_17285_2698# VSS 1e11
+RLEAK_0022 x1.m5_16847_2260# VSS 1e11
+RLEAK_0023 x1.m5_17331_2744# VSS 1e11
+RLEAK_0024 x1.m6_16847_2260# VSS 1e11
+RLEAK_0025 x1.m6_17427_2840# VSS 1e11
+RLEAK_0026 x1.m6_60810_42209# VSS 1e11
+RLEAK_0027 x1.m7_16847_2260# VSS 1e11
+RLEAK_0028 x1.a_53968_20434# VSS 1e11
+
+
 **** end user architecture code
-.ENDS
+**.ends
 .GLOBAL GND
 .GLOBAL VDD
+.end
