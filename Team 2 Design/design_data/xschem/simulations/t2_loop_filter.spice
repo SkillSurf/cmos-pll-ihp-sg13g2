@@ -1,9 +1,0 @@
-** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_loop_filter.sch
-.subckt t2_loop_filter VGND vout vin
-*.PININFO VGND:B vin:I vout:O
-R1 vin vout rhigh w=0.5e-6 l=0.96e-6 m=1 b=0
-M1 VGND vin VGND VGND sg13_lv_nmos w=0.5u l=0.650u ng=1 m=15
-M2 VGND vout VGND VGND sg13_lv_nmos w=0.15u l=0.13u ng=1 m=1
-M3 VGND vin VGND VGND sg13_lv_nmos w=0.5u l=0.650u ng=1 m=15
-M4 VGND vout VGND VGND sg13_lv_nmos w=0.15u l=0.13u ng=1 m=1
-.ends

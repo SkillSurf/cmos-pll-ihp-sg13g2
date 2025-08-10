@@ -1,8 +1,0 @@
-** sch_path: /foss/designs/PROJECTS/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_tie.sch
-.subckt t2_tie VDD VSS outHI outLO
-*.PININFO VSS:B outLO:O VDD:B outHI:O
-M1 outHI net1 VDD VDD sg13_lv_pmos w=0.3u l=0.13u ng=1 m=1
-M2 net1 net1 VSS VSS sg13_lv_nmos w=0.15u l=0.13u ng=1 m=1
-M3 net2 net2 VDD VDD sg13_lv_pmos w=0.3u l=0.13u ng=1 m=1
-M4 outLO net2 VSS VSS sg13_lv_nmos w=0.15u l=0.13u ng=1 m=1
-.ends

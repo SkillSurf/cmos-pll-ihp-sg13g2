@@ -1,6 +1,0 @@
-** sch_path: /foss/designs/PROJECTS/cmos-pll-ihp-sg13g2/Team 2 Design/design_data/xschem/t2_vco_inverter.sch
-.subckt t2_vco_inverter VPWR VPB A Y VNB VGND
-*.PININFO VPWR:B VGND:B A:I Y:O VPB:B VNB:B
-M2 Y A VPWR VPB sg13_lv_pmos w=1u l=0.13u ng=1 m=1
-M1 Y A VGND VNB sg13_lv_nmos w=0.5u l=0.13u ng=1 m=1
-.ends

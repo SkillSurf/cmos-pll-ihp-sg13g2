@@ -1,0 +1,68 @@
+** sch_path: /foss/designs/Team1/VCO/VCO_3Stages_tb.sch
+**.subckt VCO_3Stages_tb VOUT
+*.opin VOUT
+VDD VDD GND 1.2
+Vin Vin GND 0.9
+x1 VDD VOUT Vin GND VCO_3Stages
+**** begin user architecture code
+
+
+.param temp=27
+.control
+save all
+.options maxstep=10n reltol=1e-3 abstol=1e-6
+tran 50p 100n
+plot v(VOUT) xlimit 0 100n
+fft v(VOUT)
+let vmag = db(mag(v(VOUT)))
+plot vmag xlabel 'Frequency (Hz)' xlimit 0  5Gig
+wrdata fft_output(Vcon=0.9).txt vmag
+.endc
+
+
+ .lib cornerMOSlv.lib mos_tt
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  /foss/designs/Team1/VCO/VCO_3Stages.sym # of pins=4
+** sym_path: /foss/designs/Team1/VCO/VCO_3Stages.sym
+** sch_path: /foss/designs/Team1/VCO/VCO_3Stages.sch
+.subckt VCO_3Stages VDD VOUT VCON VSS
+*.iopin VDD
+*.iopin VSS
+*.ipin VCON
+*.opin VOUT
+XM1 net1 net1 VDD VDD sg13_lv_pmos w=3u l=0.13u ng=1 m=1
+XM2 net9 net1 VDD VDD sg13_lv_pmos w=3u l=0.13u ng=1 m=1
+XM3 net8 net1 VDD VDD sg13_lv_pmos w=3u l=0.13u ng=1 m=1
+XM4 net6 net1 VDD VDD sg13_lv_pmos w=3u l=0.13u ng=1 m=1
+XM5 net1 VCON VSS VSS sg13_lv_nmos w=2u l=0.13u ng=1 m=1
+XM6 net10 VCON VSS VSS sg13_lv_nmos w=2u l=0.13u ng=1 m=1
+XM7 net7 VCON VSS VSS sg13_lv_nmos w=2u l=0.13u ng=1 m=1
+XM8 net5 VCON VSS VSS sg13_lv_nmos w=2u l=0.13u ng=1 m=1
+C2 VOUT VSS 10f m=1
+x1 net9 net10 net2 net4 net2 New_2NAND
+x2 net8 net7 net4 net3 net4 New_2NAND
+x3 net6 net5 net3 net2 net3 New_2NAND
+x4 VDD VSS net2 VOUT net2 New_2NAND
+.ends
+
+
+* expanding   symbol:  /foss/designs/Team1/New_2NAND/New_2NAND.sym # of pins=5
+** sym_path: /foss/designs/Team1/New_2NAND/New_2NAND.sym
+** sch_path: /foss/designs/Team1/New_2NAND/New_2NAND.sch
+.subckt New_2NAND VDD VSS A Y B
+*.ipin B
+*.opin Y
+*.ipin A
+*.iopin VDD
+*.iopin VSS
+XM1 Y A VDD VDD sg13_lv_pmos w=3u l=0.13u ng=1 m=1
+XM2 Y B VDD VDD sg13_lv_pmos w=3u l=0.13u ng=1 m=1
+XM3 Y B net1 VSS sg13_lv_nmos w=2u l=0.13u ng=1 m=1
+XM4 net1 A VSS VSS sg13_lv_nmos w=2u l=0.13u ng=1 m=1
+.ends
+
+.GLOBAL GND
+.end

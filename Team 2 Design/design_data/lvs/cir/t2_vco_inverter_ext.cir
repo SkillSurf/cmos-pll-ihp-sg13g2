@@ -1,9 +1,0 @@
-* Extracted by KLayout with SG13G2 LVS runset on : 11/06/2025 06:16
-
-.SUBCKT t2_vco_inverter
-M$1 2 4 3 1 sg13_lv_nmos L=0.13u W=0.155u AS=0.10085p AD=0.05585p PS=1.34u
-+ PD=0.74u
-M$2 3 4 7 1 sg13_lv_nmos L=0.13u W=0.155u AS=0.05585p AD=0.10085p PS=0.74u
-+ PD=1.34u
-M$3 5 4 3 6 sg13_lv_pmos L=0.13u W=0.72u AS=0.2754p AD=0.2754p PS=3.56u PD=3.56u
-.ENDS t2_vco_inverter

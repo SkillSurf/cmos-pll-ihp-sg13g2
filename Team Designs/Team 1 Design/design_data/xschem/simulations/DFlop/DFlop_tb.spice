@@ -1,0 +1,51 @@
+** sch_path: /foss/designs/Team1/DFlop/DFlop_tb.sch
+**.subckt DFlop_tb Q QBAR
+*.opin Q
+*.opin QBAR
+VDD VDD GND 1.2
+Vin D GND dc 0 ac 0 pulse(0, 1.2, 3n, 100p, 100p, 3n, 6n)
+Vin2 CLK GND dc 0 ac 0 pulse(0, 1.2, 5n, 100p, 100p, 5n, 10n)
+x1 VDD D Q CLK QBAR GND DFlop
+**** begin user architecture code
+ .lib cornerMOSlv.lib mos_tt
+
+
+
+.param temp=27
+.control
+save all
+tran 50p 100n
+plot v(D)+4 v(CLK)+2 v(Q)
+.endc
+
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  /foss/designs/Team1/DFlop/DFlop.sym # of pins=6
+** sym_path: /foss/designs/Team1/DFlop/DFlop.sym
+** sch_path: /foss/designs/Team1/DFlop/DFlop.sch
+.subckt DFlop VDD D Q CLK QBAR VSS
+*.iopin VDD
+*.iopin VSS
+*.ipin D
+*.ipin CLK
+*.opin Q
+*.opin QBAR
+XM1 net1 D VDD VDD sg13_lv_pmos w=2u l=0.13u ng=1 m=1
+XM2 net4 CLK VDD VDD sg13_lv_pmos w=2u l=0.13u ng=1 m=1
+XM3 QBAR net4 VDD VDD sg13_lv_pmos w=2u l=0.13u ng=1 m=1
+XM4 Q QBAR VDD VDD sg13_lv_pmos w=2u l=0.13u ng=1 m=1
+XM5 net2 CLK net1 VDD sg13_lv_pmos w=2u l=0.13u ng=1 m=1
+XM6 QBAR CLK net5 VSS sg13_lv_nmos w=1u l=0.13u ng=1 m=1
+XM7 net4 net2 net3 VSS sg13_lv_nmos w=1u l=0.13u ng=1 m=1
+XM8 net2 D VSS VSS sg13_lv_nmos w=1u l=0.13u ng=1 m=1
+XM9 net3 CLK VSS VSS sg13_lv_nmos w=1u l=0.13u ng=1 m=1
+XM10 net5 net4 VSS VSS sg13_lv_nmos w=1u l=0.13u ng=1 m=1
+XM11 Q QBAR VSS VSS sg13_lv_nmos w=1u l=0.13u ng=1 m=1
+C1 QBAR VSS 10f m=1
+C2 Q VSS 10f m=1
+.ends
+
+.GLOBAL GND
+.end

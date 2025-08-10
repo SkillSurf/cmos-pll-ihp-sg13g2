@@ -1,0 +1,33 @@
+v {xschem version=3.4.7 file_version=1.2}
+G {}
+K {type=subcircuit
+format="@name @pinlist @symname"
+template="name=x1"
+}
+V {}
+S {}
+E {}
+L 4 -100 0 -80 0 {}
+L 4 80 0 100 0 {}
+L 4 80 -20 100 -20 {}
+L 4 80 40 100 40 {}
+L 4 80 20 100 20 {}
+L 4 -100 20 -80 20 {}
+L 4 80 -40 80 60 {}
+L 4 -80 -40 80 -40 {}
+L 4 -80 -40 -80 60 {}
+L 4 -80 60 80 60 {}
+B 5 -102.5 -2.5 -97.5 2.5 {name=Fref dir=in}
+B 5 97.5 -2.5 102.5 2.5 {name=UP dir=out}
+B 5 97.5 -22.5 102.5 -17.5 {name=UPB dir=out}
+B 5 97.5 37.5 102.5 42.5 {name=DN dir=out}
+B 5 97.5 17.5 102.5 22.5 {name=DNB dir=out}
+B 5 -102.5 17.5 -97.5 22.5 {name=Ffeed dir=in}
+T {@symname} -51.5 -16 0 0 0.3 0.3 {}
+T {@name} -35 8 0 0 0.2 0.2 {}
+T {Fref} -75 -4 0 0 0.2 0.2 {}
+T {UP} 75 -4 0 1 0.2 0.2 {}
+T {UPB} 75 -24 0 1 0.2 0.2 {}
+T {DN} 75 36 0 1 0.2 0.2 {}
+T {DNB} 75 16 0 1 0.2 0.2 {}
+T {Ffeed} -75 16 0 0 0.2 0.2 {}

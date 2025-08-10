@@ -1,0 +1,36 @@
+v {xschem version=3.4.7 file_version=1.2}
+G {}
+K {type=subcircuit
+format="@name @pinlist @symname"
+template="name=x1"
+}
+V {}
+S {}
+E {}
+L 4 -150 -10 -130 -10 {}
+L 4 130 -10 150 -10 {}
+L 4 130 10 150 10 {}
+L 4 -150 10 -130 10 {}
+L 7 -10 -80 -10 -60 {}
+L 7 10 -80 10 -60 {}
+L 7 10 60 10 80 {}
+L 7 -10 60 -10 80 {}
+B 5 -12.5 -82.5 -7.5 -77.5 {name=VPWR dir=inout}
+B 5 7.5 -82.5 12.5 -77.5 {name=VPB dir=inout}
+B 5 7.5 77.5 12.5 82.5 {name=VGND dir=inout}
+B 5 -12.5 77.5 -7.5 82.5 {name=VNB dir=inout}
+B 5 -152.5 -12.5 -147.5 -7.5 {name=en dir=in}
+B 5 147.5 -12.5 152.5 -7.5 {name=bias_n dir=out}
+B 5 147.5 7.5 152.5 12.5 {name=bias_p dir=out}
+B 5 -152.5 7.5 -147.5 12.5 {name=enb dir=in}
+P 4 5 130 -60 -130 -60 -130 60 130 60 130 -60 {}
+T {bias_generator} -49.5 -6 0 0 0.3 0.3 {}
+T {xbias} 75 68 0 0 0.2 0.2 {}
+T {VPWR} -14 -55 3 1 0.2 0.2 {}
+T {VPB} 6 -55 3 1 0.2 0.2 {}
+T {VGND} 14 55 1 1 0.2 0.2 {}
+T {VNB} -6 55 1 1 0.2 0.2 {}
+T {en} -125 -14 0 0 0.2 0.2 {}
+T {bias_n} 125 -14 0 1 0.2 0.2 {}
+T {bias_p} 125 6 0 1 0.2 0.2 {}
+T {enb} -125 6 0 0 0.2 0.2 {}
