@@ -1,0 +1,154 @@
+* Extracted by KLayout with SG13G2 LVS runset on : 12/08/2025 11:42
+
+.SUBCKT 3bit_freq_divider 1 2 3 5 10 12 15 17
+X$1 13 5 1 sg13g2_tiehi
+X$2 6 11 11 15 1 13 5 dff_nclk
+X$3 5 1 8 9 7 6 sg13g2_or3_1
+X$4 16 14 4 12 7 1 6 5 freq_div_cell
+X$5 18 16 4 17 8 1 6 5 freq_div_cell
+X$6 18 5 1 sg13g2_tiehi
+X$7 14 19 4 10 9 1 6 5 freq_div_cell
+X$8 5 1 4 3 2 sg13g2_nand2_1
+.ENDS 3bit_freq_divider
+
+.SUBCKT sg13g2_nand2_1 1 2 3 4 5
+M$1 2 5 6 2 sg13_lv_nmos L=0.13u W=0.74u AS=0.2516p AD=0.0666p PS=2.16u PD=0.92u
+M$2 6 4 3 2 sg13_lv_nmos L=0.13u W=0.74u AS=0.0666p AD=0.2516p PS=0.92u PD=2.16u
+M$3 1 5 3 1 sg13_lv_pmos L=0.13u W=1.12u AS=0.3808p AD=0.2128p PS=2.92u PD=1.5u
+M$4 3 4 1 1 sg13_lv_pmos L=0.13u W=1.12u AS=0.2128p AD=0.3808p PS=1.5u PD=2.92u
+.ENDS sg13g2_nand2_1
+
+.SUBCKT sg13g2_or3_1 1 2 3 4 5 7
+M$1 6 3 2 2 sg13_lv_nmos L=0.13u W=0.55u AS=0.187p AD=0.1045p PS=1.78u PD=0.93u
+M$2 2 5 6 2 sg13_lv_nmos L=0.13u W=0.55u AS=0.1045p AD=0.198p PS=0.93u PD=1.27u
+M$3 6 4 2 2 sg13_lv_nmos L=0.13u W=0.55u AS=0.198p AD=0.13395p PS=1.27u PD=1.12u
+M$4 2 6 7 2 sg13_lv_nmos L=0.13u W=0.74u AS=0.13395p AD=0.2516p PS=1.12u
++ PD=2.16u
+M$5 6 3 9 1 sg13_lv_pmos L=0.13u W=1u AS=0.34p AD=0.1275p PS=2.68u PD=1.255u
+M$6 9 5 8 1 sg13_lv_pmos L=0.13u W=1u AS=0.1275p AD=0.22p PS=1.255u PD=1.44u
+M$7 8 4 1 1 sg13_lv_pmos L=0.13u W=1u AS=0.22p AD=0.3822p PS=1.44u PD=1.84u
+M$8 1 6 7 1 sg13_lv_pmos L=0.13u W=1.12u AS=0.3822p AD=0.3808p PS=1.84u PD=2.92u
+.ENDS sg13g2_or3_1
+
+.SUBCKT sg13g2_tiehi 2 5 6
+M$1 6 4 4 6 sg13_lv_nmos L=0.13u W=0.3u AS=0.2307p AD=0.102p PS=1.615u PD=1.28u
+M$2 6 3 1 6 sg13_lv_nmos L=0.13u W=0.795u AS=0.2307p AD=0.274275p PS=1.615u
++ PD=2.28u
+M$3 3 4 5 5 sg13_lv_pmos L=0.13u W=0.66u AS=0.2442p AD=0.4657125p PS=2.06u
++ PD=2.54u
+M$4 5 1 2 5 sg13_lv_pmos L=0.13u W=1.155u AS=0.4657125p AD=0.3927p PS=2.54u
++ PD=2.99u
+.ENDS sg13g2_tiehi
+
+.SUBCKT freq_div_cell 1 2 3 4 5 7 8 10
+X$1 1 6 9 2 7 10 half_add
+X$2 3 9 11 6 7 8 10 dff_nclk
+X$3 7 5 10 4 6 sg13g2_xor2_1
+.ENDS freq_div_cell
+
+.SUBCKT dff_nclk 1 2 3 4 6 7 8
+X$1 8 6 1 5 sg13g2_inv_1
+X$2 6 7 3 4 2 5 8 sg13g2_dfrbp_1
+.ENDS dff_nclk
+
+.SUBCKT half_add 1 2 3 4 5 6
+X$1 5 3 6 2 1 sg13g2_xor2_1
+X$2 6 5 4 1 2 sg13g2_and2_1
+.ENDS half_add
+
+.SUBCKT sg13g2_dfrbp_1 1 2 7 9 10 12 20
+M$1 1 12 11 1 sg13_lv_nmos L=0.13u W=0.74u AS=0.1544p AD=0.2516p PS=1.235u
++ PD=2.16u
+M$2 1 11 3 1 sg13_lv_nmos L=0.13u W=0.74u AS=0.1544p AD=0.2516p PS=1.235u
++ PD=2.16u
+M$3 5 11 19 1 sg13_lv_nmos L=0.13u W=0.42u AS=0.2017p AD=0.0546p PS=1.48u
++ PD=0.68u
+M$4 19 6 1 1 sg13_lv_nmos L=0.13u W=0.42u AS=0.0546p AD=0.0903p PS=0.68u
++ PD=0.85u
+M$5 1 2 18 1 sg13_lv_nmos L=0.13u W=0.42u AS=0.0903p AD=0.04725p PS=0.85u
++ PD=0.645u
+M$6 18 5 6 1 sg13_lv_nmos L=0.13u W=0.42u AS=0.04725p AD=0.1428p PS=0.645u
++ PD=1.52u
+M$7 1 13 14 1 sg13_lv_nmos L=0.13u W=0.64u AS=0.1825p AD=0.193975p PS=1.325u
++ PD=1.29u
+M$8 14 3 5 1 sg13_lv_nmos L=0.13u W=0.64u AS=0.193975p AD=0.2017p PS=1.29u
++ PD=1.48u
+M$9 4 11 13 1 sg13_lv_nmos L=0.13u W=0.42u AS=0.1428p AD=0.0798p PS=1.52u
++ PD=0.8u
+M$10 13 3 16 1 sg13_lv_nmos L=0.13u W=0.42u AS=0.0798p AD=0.0546p PS=0.8u
++ PD=0.68u
+M$11 16 14 17 1 sg13_lv_nmos L=0.13u W=0.42u AS=0.0546p AD=0.0483p PS=0.68u
++ PD=0.65u
+M$12 1 2 17 1 sg13_lv_nmos L=0.13u W=0.42u AS=0.1825p AD=0.0483p PS=1.325u
++ PD=0.65u
+M$13 1 5 7 1 sg13_lv_nmos L=0.13u W=0.74u AS=0.2516p AD=0.2775p PS=2.16u
++ PD=2.23u
+M$14 8 5 1 1 sg13_lv_nmos L=0.13u W=0.55u AS=0.187p AD=0.14505p PS=1.78u
++ PD=1.15u
+M$15 1 8 9 1 sg13_lv_nmos L=0.13u W=0.74u AS=0.14505p AD=0.2516p PS=1.15u
++ PD=2.16u
+M$16 4 10 15 1 sg13_lv_nmos L=0.13u W=0.42u AS=0.1428p AD=0.0504p PS=1.52u
++ PD=0.66u
+M$17 15 2 1 1 sg13_lv_nmos L=0.13u W=0.42u AS=0.0504p AD=0.1428p PS=0.66u
++ PD=1.52u
+M$18 20 5 8 20 sg13_lv_pmos L=0.13u W=0.84u AS=0.2016p AD=0.2856p PS=1.5u
++ PD=2.36u
+M$19 20 8 9 20 sg13_lv_pmos L=0.13u W=1.12u AS=0.2016p AD=0.3808p PS=1.5u
++ PD=2.92u
+M$20 11 12 20 20 sg13_lv_pmos L=0.13u W=1u AS=0.34p AD=0.19p PS=2.68u PD=1.38u
+M$21 20 11 3 20 sg13_lv_pmos L=0.13u W=1u AS=0.19p AD=0.34p PS=1.38u PD=2.68u
+M$22 20 13 14 20 sg13_lv_pmos L=0.13u W=1u AS=0.34p AD=0.19p PS=2.68u PD=1.38u
+M$23 14 11 5 20 sg13_lv_pmos L=0.13u W=1u AS=0.19p AD=0.17695p PS=1.38u PD=1.56u
+M$24 5 3 22 20 sg13_lv_pmos L=0.13u W=0.42u AS=0.17695p AD=0.04305p PS=1.56u
++ PD=0.625u
+M$25 22 6 20 20 sg13_lv_pmos L=0.13u W=0.42u AS=0.04305p AD=0.0798p PS=0.625u
++ PD=0.8u
+M$26 20 2 6 20 sg13_lv_pmos L=0.13u W=0.42u AS=0.0798p AD=0.0798p PS=0.8u
++ PD=0.8u
+M$27 20 5 6 20 sg13_lv_pmos L=0.13u W=0.42u AS=0.2163p AD=0.0798p PS=1.55u
++ PD=0.8u
+M$28 20 5 7 20 sg13_lv_pmos L=0.13u W=1.12u AS=0.2163p AD=0.7616p PS=1.55u
++ PD=3.6u
+M$29 4 3 13 20 sg13_lv_pmos L=0.13u W=0.42u AS=0.1428p AD=0.0798p PS=1.52u
++ PD=0.8u
+M$30 13 11 21 20 sg13_lv_pmos L=0.13u W=0.42u AS=0.0798p AD=0.05145p PS=0.8u
++ PD=0.665u
+M$31 21 14 20 20 sg13_lv_pmos L=0.13u W=0.42u AS=0.05145p AD=0.11785p PS=0.665u
++ PD=1.025u
+M$32 20 2 13 20 sg13_lv_pmos L=0.13u W=0.42u AS=0.11785p AD=0.1533p PS=1.025u
++ PD=1.57u
+M$33 20 10 4 20 sg13_lv_pmos L=0.13u W=0.42u AS=0.1428p AD=0.0798p PS=1.52u
++ PD=0.8u
+M$34 4 2 20 20 sg13_lv_pmos L=0.13u W=0.42u AS=0.0798p AD=0.1428p PS=0.8u
++ PD=1.52u
+.ENDS sg13g2_dfrbp_1
+
+.SUBCKT sg13g2_inv_1 1 2 3 4
+M$1 2 3 4 2 sg13_lv_nmos L=0.13u W=0.74u AS=0.259p AD=0.259p PS=2.18u PD=2.18u
+M$2 1 3 4 1 sg13_lv_pmos L=0.13u W=1.12u AS=0.392p AD=0.392p PS=2.94u PD=2.94u
+.ENDS sg13g2_inv_1
+
+.SUBCKT sg13g2_and2_1 1 2 3 4 5
+M$1 6 4 7 2 sg13_lv_nmos L=0.13u W=0.64u AS=0.2176p AD=0.1216p PS=1.96u PD=1.02u
+M$2 2 5 7 2 sg13_lv_nmos L=0.13u W=0.64u AS=0.1331p AD=0.1216p PS=1.12u PD=1.02u
+M$3 2 6 3 2 sg13_lv_nmos L=0.13u W=0.74u AS=0.1331p AD=0.2516p PS=1.12u PD=2.16u
+M$4 1 4 6 1 sg13_lv_pmos L=0.13u W=0.84u AS=0.2856p AD=0.1596p PS=2.36u PD=1.22u
+M$5 1 5 6 1 sg13_lv_pmos L=0.13u W=0.84u AS=0.1918p AD=0.1596p PS=1.5u PD=1.22u
+M$6 1 6 3 1 sg13_lv_pmos L=0.13u W=1.12u AS=0.1918p AD=0.3808p PS=1.5u PD=2.92u
+.ENDS sg13g2_and2_1
+
+.SUBCKT sg13g2_xor2_1 2 4 5 6 7
+M$1 2 7 1 2 sg13_lv_nmos L=0.13u W=0.55u AS=0.374p AD=0.174625p PS=2.46u
++ PD=1.185u
+M$2 2 6 1 2 sg13_lv_nmos L=0.13u W=0.55u AS=0.15245p AD=0.174625p PS=1.17u
++ PD=1.185u
+M$3 2 7 8 2 sg13_lv_nmos L=0.13u W=0.74u AS=0.15245p AD=0.0888p PS=1.17u
++ PD=0.98u
+M$4 8 6 4 2 sg13_lv_nmos L=0.13u W=0.74u AS=0.0888p AD=0.1628p PS=0.98u PD=1.18u
+M$5 4 1 2 2 sg13_lv_nmos L=0.13u W=0.74u AS=0.1628p AD=0.3108p PS=1.18u PD=2.32u
+M$6 3 7 5 5 sg13_lv_pmos L=0.13u W=1.12u AS=0.3808p AD=0.2128p PS=2.92u PD=1.5u
+M$7 5 6 3 5 sg13_lv_pmos L=0.13u W=1.12u AS=0.2128p AD=0.2128p PS=1.5u PD=1.5u
+M$8 3 1 4 5 sg13_lv_pmos L=0.13u W=1.12u AS=0.2128p AD=0.3808p PS=1.5u PD=2.92u
+M$9 5 7 9 5 sg13_lv_pmos L=0.13u W=1u AS=0.36p AD=0.1225p PS=2.72u PD=1.245u
+M$10 9 6 1 5 sg13_lv_pmos L=0.13u W=1u AS=0.1225p AD=0.34p PS=1.245u PD=2.68u
+.ENDS sg13g2_xor2_1
