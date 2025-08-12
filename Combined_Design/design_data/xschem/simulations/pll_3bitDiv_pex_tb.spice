@@ -23,11 +23,14 @@ x1 CLK_IN CLK_OUT B0 B2 B1 VDD GND GND A1 A2 A0 pll_3bitDiv
 .options klu
 .options method=gear gmin=1e-10
 
+*RPUP x1.vco_wob_0.vctl VDD 1e5
+*RPDN x1.vco_wob_0.vctl VSS 1e5
+
 .control
 save v(x1.PFD_0.UP) v(x1.PFD_0.DOWN) v(clk_in) v(clk_out) v(x1.vco_wob_0.vctl) v(x1.3bit_freq_divider_0.CLK_IN) v(x1.PFD_0.VCO_CLK)
-tran 0.2n 500n
+tran 0.1n 10u
 
-write tran_pll_3bitDiv_tb_pex.raw
+write tran_pll_3bitDiv_tb_pex_1.5f.raw
 .endc
 
 
@@ -35,14 +38,14 @@ write tran_pll_3bitDiv_tb_pex.raw
 
 
 .param A0 = 1.2
-.param A1 = 0
+.param A1 = 1.2
 .param A2 = 0
 
 
 
 
-.param B0 = 1.2
-.param B1 = 0
+.param B0 = 0
+.param B1 = 1.2
 .param B2 = 0
 
 
@@ -79,14 +82,14 @@ RLEAK_0026 x1.m6_60810_42209# VSS 1e11
 
 
 .ic V(VSS) = 0
-.ic V(B2) = 0
-.ic V(B1) = 0
-.ic V(B0) = 1.2
-.ic V(A2) = 0
-.ic V(A1) = 0
-.ic V(A0) = 1.2
-.ic V(CLK_IN) = 0
 .ic V(VDD) = 1.2
+*.ic V(B2) = 0
+*.ic V(B1) = 0
+*.ic V(B0) = 1.2
+*.ic V(A2) = 0
+*.ic V(A1) = 0
+*.ic V(A0) = 1.2
+*.ic V(CLK_IN) = 0
 .ic V(x1.vco_wob_0.vctl) = 0.6
 *.ic V(x1.3bit_freq_divider_1.dff_nclk_0.nCLK) = 1.2
 *.ic V(x1.3bit_freq_divider_0.dff_nclk_0.nCLK) = 1.2

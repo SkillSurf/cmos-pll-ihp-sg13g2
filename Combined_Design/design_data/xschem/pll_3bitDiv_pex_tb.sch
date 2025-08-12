@@ -5,7 +5,7 @@ V {}
 S {}
 E {}
 B 2 590 -880 1390 -480 {flags=graph
-y1=1.1
+y1=-0.0038
 y2=1.3
 ypos1=0
 ypos2=2
@@ -13,7 +13,7 @@ divy=5
 subdivy=1
 unity=1
 x1=0
-x2=5e-07
+x2=1e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -26,15 +26,15 @@ logx=0
 logy=0
 hilight_wave=0}
 B 2 590 -60 1390 340 {flags=graph
-y1=0.77
-y2=0.8
+y1=-0.0041
+y2=1.3
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
 x1=0
-x2=5e-07
+x2=1e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -47,7 +47,7 @@ logx=0
 logy=0
 }
 B 2 -1840 -880 -1040 -480 {flags=graph
-y1=-0.012
+y1=-0.015
 y2=1.3
 ypos1=0
 ypos2=2
@@ -55,7 +55,7 @@ divy=5
 subdivy=1
 unity=1
 x1=0
-x2=5e-07
+x2=1e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -68,15 +68,15 @@ logx=0
 logy=0
 }
 B 2 -1030 -880 -230 -480 {flags=graph
-y1=-0.003
-y2=0.0023
+y1=-0.014
+y2=1.3
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
 x1=0
-x2=5e-07
+x2=1e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -97,7 +97,7 @@ divy=5
 subdivy=1
 unity=1
 x1=0
-x2=5e-07
+x2=1e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -110,15 +110,15 @@ logx=0
 logy=0
 hilight_wave=0}
 B 2 590 -470 1390 -70 {flags=graph
-y1=0.37
-y2=0.4
+y1=0.56
+y2=1.1
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
 x1=0
-x2=5e-07
+x2=1e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -131,7 +131,7 @@ logx=0
 logy=0
 hilight_wave=0}
 B 2 -220 -60 580 340 {flags=graph
-y1=1.1
+y1=-0.0074
 y2=1.3
 ypos1=0
 ypos2=2
@@ -139,7 +139,7 @@ divy=5
 subdivy=1
 unity=1
 x1=0
-x2=5e-07
+x2=1e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -194,11 +194,14 @@ value="
 .options klu
 .options method=gear gmin=1e-10
 
+*RPUP x1.vco_wob_0.vctl VDD 1e5
+*RPDN x1.vco_wob_0.vctl VSS 1e5
+
 .control
 save v(x1.PFD_0.UP) v(x1.PFD_0.DOWN) v(clk_in) v(clk_out) v(x1.vco_wob_0.vctl) v(x1.3bit_freq_divider_0.CLK_IN) v(x1.PFD_0.VCO_CLK)
-tran 0.2n 500n
+tran 0.2n 10u
 
-write tran_pll_3bitDiv_tb_pex.raw
+write tran_pll_3bitDiv_tb_pex_fmin.raw
 .endc
 
 "}
@@ -206,7 +209,7 @@ C {launcher.sym} -443 161 0 0 {name=h5
 descr="load waves" 
 tclcommand="xschem raw_read $netlist_dir/tran_pll_3bitDiv_tb_pex.raw tran"
 }
-C {vsource.sym} -1560 20 0 0 {name=V2 value="PULSE(0 1.2 50n 5n 5n 50n 100n)" savecurrent=false}
+C {vsource.sym} -1560 20 0 0 {name=V2 value="PULSE(0 1.2 50n 1n 1n 50n 100n)" savecurrent=false}
 C {gnd.sym} -1560 70 0 0 {name=l10 lab=GND}
 C {lab_pin.sym} -1560 -70 0 0 {name=p15 sig_type=std_logic lab=CLK_IN}
 C {vdd.sym} -1080 -160 0 0 {name=l3 lab=VDD}
@@ -226,7 +229,7 @@ value="
 .param A1 = 0
 .param A2 = 0
 "}
-C {devices/code_shown.sym} -520 -200 0 0 {name=MODEL
+C {devices/code_shown.sym} -520 -180 0 0 {name=MODEL
 only_toplevel=true
 format="tcleval( @value )"
 value="
@@ -251,8 +254,8 @@ C {lab_pin.sym} -1120 -320 2 0 {name=p6 sig_type=std_logic lab=B2}
 C {devices/code_shown.sym} -1750 -310 0 0 {name=PARAMS_B only_toplevel=true 
 value="
 .param B0 = 1.2
-.param B1 = 0
-.param B2 = 0
+.param B1 = 1.2
+.param B2 = 1.2
 "}
 C {pll_3bitDiv.sym} -1130 -50 0 0 {name=x1}
 C {code.sym} -870 110 0 0 {name=RLEAK only_toplevel=false value=
@@ -287,14 +290,14 @@ RLEAK_0026 x1.m6_60810_42209# VSS 1e11
 C {code.sym} -720 110 0 0 {name=NODESET only_toplevel=false value=
 "
 .ic V(VSS) = 0
-.ic V(B2) = 0
-.ic V(B1) = 0
-.ic V(B0) = 1.2
-.ic V(A2) = 0
-.ic V(A1) = 0
-.ic V(A0) = 1.2
-.ic V(CLK_IN) = 0
 .ic V(VDD) = 1.2
+*.ic V(B2) = 0
+*.ic V(B1) = 0
+*.ic V(B0) = 1.2
+*.ic V(A2) = 0
+*.ic V(A1) = 0
+*.ic V(A0) = 1.2
+*.ic V(CLK_IN) = 0
 .ic V(x1.vco_wob_0.vctl) = 0.6
 *.ic V(x1.3bit_freq_divider_1.dff_nclk_0.nCLK) = 1.2
 *.ic V(x1.3bit_freq_divider_0.dff_nclk_0.nCLK) = 1.2
