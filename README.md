@@ -27,25 +27,16 @@ The PLL is a charge-pump (CP) based (Type-II) PLL which uses a standard fraction
 #### 5.2 Phase-frequency detector (PFD):
 
 #### 5.3 Charge pump (CP):
-##### Charge Pump Schematic
 
 <center> <img src="Combined_Design/design_data/xschem/images/charge_pump_sch.png" width="1000" > </center>
 
-##### Charge Pump Layout
-
-<center> <img src="Combined_Design/design_data/gds/images/charge_pump.png" width="1000" > </center>
-
 #### 5.4 Loop filter:
-
-##### Loop Filter Schematic
 
 <center> <img src="Combined_Design/design_data/xschem/images/loop_filter_sch.png" width="1000" > </center>
 
-##### Loop Filter Layout
+#### 5.4 Bias Generator:
 
-<center> <img src="Combined_Design/design_data/gds/images/loop_filter.png" width="1000" > </center>
-
-#### 5.4 Loop filter:
+<center> <img src="Combined_Design/design_data/xschem/images/bias_gen_sch.png" width="1000" > </center>
 
 #### 5.5 Voltage-controlled oscillator (VCO):
 
@@ -64,6 +55,28 @@ The PLL is a charge-pump (CP) based (Type-II) PLL which uses a standard fraction
 ### 7. Control Interface:
 
 ### 8. Layout Design:
+
+##### Charge Pump Layout
+
+<center> <img src="Combined_Design/design_data/gds/images/charge_pump.png" width="1000" > </center>
+
+##### Loop Filter Layout
+
+<center> <img src="Combined_Design/design_data/gds/images/loop_filter.png" width="1000" > </center>
+
+##### Bias Generator Layout
+
+<center> <img src="Combined_Design/design_data/gds/images/bias_gen_layout.png" width="1000" > </center>
+
+##### PLL  Layout
+
+<center> <img src="Combined_Design/design_data/gds/images/pll_layout_without_fillers.png" width="1000" > </center>
+
+<center> <img src="Combined_Design/design_data/gds/images/pll_layout_with_fillers.png" width="1000" > </center>
+
+
+
+
 
 ### 9. Physical Verification (DRC, LVS):
 
