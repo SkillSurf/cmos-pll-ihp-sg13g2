@@ -27,6 +27,23 @@ The PLL is a charge-pump (CP) based (Type-II) PLL which uses a standard fraction
 #### 5.2 Phase-frequency detector (PFD):
 
 #### 5.3 Charge pump (CP):
+##### Charge Pump Schematic
+
+![Charge Pump Schematic](/Combined_Design/design_data/xschem/images/charge_pump_sch.png)
+
+##### Charge Pump Layout
+
+![Charge Pump Layout](/Combined_Design/design_data/gds/images/charge_pump.png)
+
+#### 5.4 Loop filter:
+
+##### Loop Filter Schematic
+
+![Loop Filter Schematic](/Combined_Design/design_data/xschem/images/loop_filter_sch.png)
+
+##### Loop Filter Layout
+
+![Loop Filter Layout](/Combined_Design/design_data/gds/images/loop_filter.png)
 
 #### 5.4 Loop filter:
 
