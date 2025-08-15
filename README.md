@@ -50,6 +50,12 @@ The PLL is a charge-pump (CP) based (Type-II) PLL which uses a standard fraction
 
 #### 6.3 Charge pump (CP):
 
+<center> <img src="Combined_Design/design_data/xschem/images/charge_pump_lpf_bias_gen_tb.png" width="1000" > </center>
+
+<center> <img src="Combined_Design/design_data/xschem/images/vctl_up.png" width="1000" > </center>
+
+<center> <img src="Combined_Design/design_data/xschem/images/vctl_down.png" width="1000" > </center>
+
 #### 6.4 Frequency divider (FD):
 
 ### 7. Control Interface:
