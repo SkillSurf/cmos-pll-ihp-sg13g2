@@ -1,4 +1,4 @@
-** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/Combined_Design/design_data/xschem/vco_wob_tb.sch
+** sch_path: /foss/designs/iic-osic-tools/cmos-pll-ihp-sg13g2/Combined_Design/design_data/xschem/vco_wob_tb.sch
 **.subckt vco_wob_tb Vout
 *.opin Vout
 VPWR net1 GND 1.2
@@ -23,8 +23,8 @@ write op_vco_wob_tb.raw
 **.ends
 
 * expanding   symbol:  vco_wob.sym # of pins=4
-** sym_path: /foss/designs/cmos-pll-ihp-sg13g2/Combined_Design/design_data/xschem/vco_wob.sym
-** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/Combined_Design/design_data/xschem/vco_wob.sch
+** sym_path: /foss/designs/iic-osic-tools/cmos-pll-ihp-sg13g2/Combined_Design/design_data/xschem/vco_wob.sym
+** sch_path: /foss/designs/iic-osic-tools/cmos-pll-ihp-sg13g2/Combined_Design/design_data/xschem/vco_wob.sch
 .subckt vco_wob VPWR VGND vctl Vout
 *.iopin VPWR
 *.iopin VGND
@@ -80,8 +80,8 @@ x11 net30 VPWR net32 Vout VGND net29 vco_inverter
 
 
 * expanding   symbol:  vco_inverter.sym # of pins=6
-** sym_path: /foss/designs/cmos-pll-ihp-sg13g2/Combined_Design/design_data/xschem/vco_inverter.sym
-** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/Combined_Design/design_data/xschem/vco_inverter.sch
+** sym_path: /foss/designs/iic-osic-tools/cmos-pll-ihp-sg13g2/Combined_Design/design_data/xschem/vco_inverter.sym
+** sch_path: /foss/designs/iic-osic-tools/cmos-pll-ihp-sg13g2/Combined_Design/design_data/xschem/vco_inverter.sch
 .subckt vco_inverter VPWR VPB A Y VNB VGND
 *.iopin VPWR
 *.iopin VGND
