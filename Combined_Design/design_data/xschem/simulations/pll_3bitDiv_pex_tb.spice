@@ -7,7 +7,7 @@
 
 **.subckt pll_3bitDiv_pex_tb
 V1 VDD GND 1.2
-V2 CLK_IN GND PULSE(0 1.2 50n 5n 5n 50n 100n)
+V2 CLK_IN GND PULSE(0 1.2 50n 1n 1n 50n 100n)
 Va0 A0 GND dc {A0}
 Va1 A1 GND dc {A1}
 * noconn CLK_OUT
@@ -30,7 +30,7 @@ x1 CLK_IN CLK_OUT B0 B2 B1 VDD GND GND A1 A2 A0 pll_3bitDiv
 save v(x1.PFD_0.UP) v(x1.PFD_0.DOWN) v(clk_in) v(clk_out) v(x1.vco_wob_0.vctl) v(x1.3bit_freq_divider_0.CLK_IN) v(x1.PFD_0.VCO_CLK)
 tran 0.1n 10u
 
-write tran_pll_3bitDiv_tb_pex_1.5f.raw
+write tran_pll_3bitDiv_tb_pex_fmax.raw
 .endc
 
 
@@ -44,8 +44,8 @@ write tran_pll_3bitDiv_tb_pex_1.5f.raw
 
 
 
-.param B0 = 0
-.param B1 = 1.2
+.param B0 = 1.2
+.param B1 = 0
 .param B2 = 0
 
 

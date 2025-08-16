@@ -13,7 +13,7 @@ divy=5
 subdivy=1
 unity=1
 x1=0
-x2=1e-05
+x2=1e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -26,7 +26,7 @@ logx=0
 logy=0
 hilight_wave=0}
 B 2 590 -60 1390 340 {flags=graph
-y1=-0.0041
+y1=-0.0027
 y2=1.3
 ypos1=0
 ypos2=2
@@ -34,7 +34,7 @@ divy=5
 subdivy=1
 unity=1
 x1=0
-x2=1e-05
+x2=1e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -47,15 +47,15 @@ logx=0
 logy=0
 }
 B 2 -1840 -880 -1040 -480 {flags=graph
-y1=-0.015
-y2=1.3
+y1=-0.0024
+y2=0.00044
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
 x1=0
-x2=1e-05
+x2=1e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -68,7 +68,7 @@ logx=0
 logy=0
 }
 B 2 -1030 -880 -230 -480 {flags=graph
-y1=-0.014
+y1=-0.013
 y2=1.3
 ypos1=0
 ypos2=2
@@ -76,7 +76,7 @@ divy=5
 subdivy=1
 unity=1
 x1=0
-x2=1e-05
+x2=1e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -97,7 +97,7 @@ divy=5
 subdivy=1
 unity=1
 x1=0
-x2=1e-05
+x2=1e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -110,15 +110,15 @@ logx=0
 logy=0
 hilight_wave=0}
 B 2 590 -470 1390 -70 {flags=graph
-y1=0.56
-y2=1.1
+y1=0.57
+y2=0.68
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
 x1=0
-x2=1e-05
+x2=1e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -131,7 +131,7 @@ logx=0
 logy=0
 hilight_wave=0}
 B 2 -220 -60 580 340 {flags=graph
-y1=-0.0074
+y1=-0.011
 y2=1.3
 ypos1=0
 ypos2=2
@@ -139,7 +139,7 @@ divy=5
 subdivy=1
 unity=1
 x1=0
-x2=1e-05
+x2=1e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -199,9 +199,9 @@ value="
 
 .control
 save v(x1.PFD_0.UP) v(x1.PFD_0.DOWN) v(clk_in) v(clk_out) v(x1.vco_wob_0.vctl) v(x1.3bit_freq_divider_0.CLK_IN) v(x1.PFD_0.VCO_CLK)
-tran 0.2n 10u
+tran 0.1n 10u
 
-write tran_pll_3bitDiv_tb_pex_fmin.raw
+write tran_pll_3bitDiv_tb_pex_fmax.raw
 .endc
 
 "}
@@ -226,7 +226,7 @@ C {noconn.sym} -970 -80 3 1 {name=l8}
 C {devices/code_shown.sym} -1560 180 0 0 {name=PARAMS_A only_toplevel=true 
 value="
 .param A0 = 1.2
-.param A1 = 0
+.param A1 = 1.2
 .param A2 = 0
 "}
 C {devices/code_shown.sym} -520 -180 0 0 {name=MODEL
@@ -254,8 +254,8 @@ C {lab_pin.sym} -1120 -320 2 0 {name=p6 sig_type=std_logic lab=B2}
 C {devices/code_shown.sym} -1750 -310 0 0 {name=PARAMS_B only_toplevel=true 
 value="
 .param B0 = 1.2
-.param B1 = 1.2
-.param B2 = 1.2
+.param B1 = 0
+.param B2 = 0
 "}
 C {pll_3bitDiv.sym} -1130 -50 0 0 {name=x1}
 C {code.sym} -870 110 0 0 {name=RLEAK only_toplevel=false value=
