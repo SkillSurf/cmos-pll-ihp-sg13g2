@@ -1,4 +1,4 @@
-** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/charge_pump_wo_lpf_tb.sch
+** sch_path: /foss/designs/iic-osic-tools/cmos-pll-ihp-sg13g2/Combined_Design/design_data/xschem/charge_pump_wo_lpf_tb.sch
 **.subckt charge_pump_wo_lpf_tb
 V1 VDD GND 1.2
 V4 up GND PULSE(0 1.2 .2NS .2NS .2NS 0.02NS 10NS)
@@ -25,8 +25,8 @@ C1 vout_cp GND 100f ic=0.5 m=1
 **.ends
 
 * expanding   symbol:  charge_pump.sym # of pins=7
-** sym_path: /foss/designs/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/charge_pump.sym
-** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/charge_pump.sch
+** sym_path: /foss/designs/iic-osic-tools/cmos-pll-ihp-sg13g2/Combined_Design/design_data/xschem/charge_pump.sym
+** sch_path: /foss/designs/iic-osic-tools/cmos-pll-ihp-sg13g2/Combined_Design/design_data/xschem/charge_pump.sch
 .subckt charge_pump VP bias_p up vout down bias_n VN
 *.ipin bias_p
 *.ipin up
@@ -44,8 +44,8 @@ x1 VP up net3 VN inverter
 
 
 * expanding   symbol:  Bias_gen.sym # of pins=8
-** sym_path: /foss/designs/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/Bias_gen.sym
-** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/Bias_gen.sch
+** sym_path: /foss/designs/iic-osic-tools/cmos-pll-ihp-sg13g2/Combined_Design/design_data/xschem/Bias_gen.sym
+** sch_path: /foss/designs/iic-osic-tools/cmos-pll-ihp-sg13g2/Combined_Design/design_data/xschem/Bias_gen.sch
 .subckt Bias_gen VPWR VPB VGND VNB en bias_n bias_p enb
 *.ipin en
 *.opin bias_n
@@ -67,14 +67,14 @@ XM9 bias_p en VPWR VPB sg13_lv_pmos w=0.5u l=0.15u ng=1 m=1
 XM10 bias_n bias_p res_bot VPB sg13_lv_pmos w=4.0u l=1.0u ng=1 m=1
 XM11 kick en VPWR VPB sg13_lv_pmos w=0.5u l=0.15u ng=1 m=1
 XM12 dio_mid dio_mid VPWR VPB sg13_lv_pmos w=0.5u l=0.15u ng=1 m=1
-XR1 res_bot VPWR rhigh w=1.0e-6 l=7.0e-6 m=1 b=0
-XR2 VGND net1 rhigh w=1.0e-6 l=8.0e-6 m=1 b=0
+XR1 res_bot VPWR sub! rhigh w=1.0e-6 l=12.0e-6 m=1 b=0
+XR2 VGND net1 sub! rhigh w=1.0e-6 l=12.0e-6 m=1 b=0
 .ends
 
 
 * expanding   symbol:  inverter.sym # of pins=4
-** sym_path: /foss/designs/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/inverter.sym
-** sch_path: /foss/designs/cmos-pll-ihp-sg13g2/Combined Design/design_data/xschem/inverter.sch
+** sym_path: /foss/designs/iic-osic-tools/cmos-pll-ihp-sg13g2/Combined_Design/design_data/xschem/inverter.sym
+** sch_path: /foss/designs/iic-osic-tools/cmos-pll-ihp-sg13g2/Combined_Design/design_data/xschem/inverter.sch
 .subckt inverter VP IN OUT VN
 *.iopin VN
 *.iopin VP

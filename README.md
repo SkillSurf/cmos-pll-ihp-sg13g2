@@ -52,6 +52,15 @@ The PLL is a charge-pump (CP) based (Type-II) PLL which uses a standard fraction
 #### 6.1 PLL:
 
 #### 6.2 Voltage-controlled oscillator (VCO):
+##### VCO Output waveform at control voltage = 1V
+<center> <img src="Combined_Design/design_data/xschem/plots/11Stages_VCO_Range.png" width="1000" > </center>
+
+##### VCO Output frequency spectrum at control voltage = 1V
+<center> <img src="Combined_Design/design_data/xschem/images/VCO_Frequency_spectrum.jpeg" width="1000" > </center>
+
+##### VCO Oscillation Frequency VS Control Voltage
+<center> <img src="Combined_Design/design_data/xschem/images/" width="1000" > </center>
+
 
 #### 6.3 Charge pump (CP):
 

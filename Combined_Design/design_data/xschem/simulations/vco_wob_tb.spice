@@ -15,7 +15,7 @@ x1 net1 GND net2 Vout vco_wob
 save all
 
 op
-write op_vco_wob_tb.raw
+write vco_wob_tb.raw
 .endc
 
 
