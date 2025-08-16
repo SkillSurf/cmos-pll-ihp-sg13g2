@@ -39,6 +39,11 @@ The PLL is a charge-pump (CP) based (Type-II) PLL which uses a standard fraction
 <center> <img src="Combined_Design/design_data/xschem/images/bias_gen_sch.png" width="1000" > </center>
 
 #### 5.5 Voltage-controlled oscillator (VCO):
+##### Inverter for VCO
+<center> <img src="Combined_Design/design_data/xschem/images/11Stages_VCO_Inverter_sch.png" width="1000" > </center>
+
+##### 11-stage Voltage-controlled oscillator (VCO)
+<center> <img src="Combined_Design/design_data/xschem/images/11Stages_VCO_sch.png" width="1000" > </center>
 
 #### 5.6 Frequency divider (FD):
 
@@ -73,6 +78,11 @@ The PLL is a charge-pump (CP) based (Type-II) PLL which uses a standard fraction
 ##### Bias Generator Layout
 
 <center> <img src="Combined_Design/design_data/gds/images/bias_gen_layout.png" width="1000" > </center>
+
+
+##### Voltage-controlled oscillator (VCO)  Layout
+
+<center> <img src="Combined_Design/design_data/gds/images/11Stage_vco_wob.png" width="1000" > </center>
 
 ##### PLL  Layout
 
