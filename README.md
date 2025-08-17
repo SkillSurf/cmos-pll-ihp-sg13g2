@@ -126,6 +126,18 @@ Dedicated keeper devices are included to disable the oscillator during standby, 
 
 <a name="fd"></a>
 ### 5.7 Frequency divider (FD)
+
+<center><img src="Combined_Design/design_data/xschem/images/3bit_freq_divider.png" width="1000"></center> 
+
+#### Frequency Divider Cell
+<center><img src="Combined_Design/design_data/xschem/images/freq_div_cell.png" width="1000"></center>
+
+#### Half Adder for Divider
+<center><img src="Combined_Design/design_data/xschem/images/half_add.png" width="1000"></center>
+
+#### DFF with Inverterd CLK for Divider
+<center><img src="Combined_Design/design_data/xschem/images/dff_nclk.png" width="1000"></center>
+
 [Return to top](#toc)
 
 ---
@@ -162,6 +174,12 @@ The VCO was characterized by measuring its output frequency while sweeping the c
 
 <a name="sim_fd"></a>
 ### 6.4 Frequency Divider (FD)
+
+<center><img src="Combined_Design/design_data/xschem/images/3bit_freq_divider_pex_tb.png" width="1000"></center>
+<center><img src="Combined_Design/design_data/xschem/images/freq_div_cell_tb.png" width="1000"></center>
+<center><img src="Combined_Design/design_data/xschem/images/half_add_tb.png" width="1000"></center>
+<center><img src="Combined_Design/design_data/xschem/images/dff_nclk_tb.png" width="1000"></center>
+
 [Return to top](#toc)
 
 ---
@@ -186,6 +204,9 @@ The VCO was characterized by measuring its output frequency while sweeping the c
 
 - VCO Layout  
   <center><img src="Combined_Design/design_data/gds/images/11Stage_vco_wob.png" width="1000"></center>  
+
+- Frequency Divider Layout  
+  <center><img src="Combined_Design/design_data/gds/images/3bit_freq_divider.png" width="1000"></center>
 
 - PLL Layout (without fillers)  
   <center><img src="Combined_Design/design_data/gds/images/pll_layout_without_fillers.png" width="1000"></center>  
