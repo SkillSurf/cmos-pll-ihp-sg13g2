@@ -85,6 +85,8 @@ N can be between 1 and 15, and is designed for a 10 MHz reference input, which i
 ### 5.3 Charge pump (CP)
 <center><img src="Combined_Design/design_data/xschem/images/charge_pump_sch.png" width="1000"></center>  
 
+The charge pump design in this project is based on the [tt08-tiny-pll](https://github.com/LegumeEmittingDiode/tt08-tiny-pll). The charge pump uses two current sources (bias_p and bias_n), which are switched to the output by the up and down control signals. The nominal charge pump current (set by the bias generator) is configurable to suit the PLL requirements.
+
 [Return to top](#toc)
 
 <a name="lf"></a>
@@ -96,6 +98,9 @@ N can be between 1 and 15, and is designed for a 10 MHz reference input, which i
 <a name="bias"></a>
 ### 5.5 Bias Generator
 <center><img src="Combined_Design/design_data/xschem/images/bias_gen_sch.png" width="1000"></center>  
+
+The bias generator design in this project is also based on the [tt08-tiny-pll](https://github.com/LegumeEmittingDiode/tt08-tiny-pll), but we added an extra resistor to increase bias_n value. The bias generator is a self-biased current mirror, which provides a roughly supply-independent current for the charge pump. A startup circuit is included to ensure the bias generator does not fall into an undesirable operating point where IOUT = 0. The diode devices M3 and M7 charge the kick node to VPWR when the circuit is enabled, which pulls bias_p low and establishes a current in the mirror devices. Once the mirror is active, M3 pulls kick low and disables the startup circuit.
+
 
 [Return to top](#toc)
 
