@@ -102,6 +102,15 @@ N can be between 1 and 15, and is designed for a 10 MHz reference input, which i
 <a name="vco"></a>
 ### 5.6 Voltage-controlled oscillator (VCO)
 
+Each stage is a standard-cell inverter with delay controlled by current-limiting transistors. The use of eleven stages sets the oscillation frequency in the tens of megahertz range and improves phase noise performance by spreading delay across multiple elements.
+
+A control transistor operating in the triode region regulates the current supplied to the inverter chain, enabling smooth tuning of the oscillation frequency. Minimum channel-length devices are used to maximize the width-to-length ratio, reduce \(V_{DSAT}\), and minimize parasitic capacitances.
+
+Low-threshold (LVT) NMOS devices are employed so that the control voltage operates around mid-supply, ensuring robust operation across process and temperature variations. The nominal oscillation frequency is approximately **50 MHz**, with tuning capability around this point.
+
+Dedicated keeper devices are included to disable the oscillator during standby, achieving **zero static power consumption** when the circuit is turned off.
+
+
 #### Inverter for VCO
 <center><img src="Combined_Design/design_data/xschem/images/11Stages_VCO_Inverter_sch.png" width="1000"></center>  
 
@@ -125,6 +134,7 @@ N can be between 1 and 15, and is designed for a 10 MHz reference input, which i
 
 <a name="sim_vco"></a>
 ### 6.2 VCO
+We used the nominal control voltage as 1V to characterized the VCO.
 - VCO Output waveform at control voltage = 1V  
   <center><img src="Combined_Design/design_data/xschem/images/VCO_Out.jpeg" width="1000"></center>  
 
@@ -132,6 +142,7 @@ N can be between 1 and 15, and is designed for a 10 MHz reference input, which i
   <center><img src="Combined_Design/design_data/xschem/images/VCO_Frequency_spectrum.jpeg" width="1000"></center>  
 
 - VCO Oscillation Frequency vs Control Voltage  
+The VCO was characterized by measuring its output frequency while sweeping the control voltage. The results of this simulation are shown below:
   <center><img src="Combined_Design/design_data/xschem/plots/11Stages_VCO_Range.png" width="1000"></center>  
 
 [Return to top](#toc)
