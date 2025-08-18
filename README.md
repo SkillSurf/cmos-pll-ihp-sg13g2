@@ -48,9 +48,25 @@
 <a name="overview"></a>
 ## 2. Overview of the Project
 
-The PLL is a charge-pump (CP) based (Type-II) PLL which uses a standard fractional-N architecture, where an output frequency divider (FD) is used to set the frequency multiplication with respect to the reference clock input.  
-The output frequency `f_out` is `N * f_ref`, where `N` is the division ratio of `XDIV_OUT` and `f_ref` is the input clock frequency.  
-N can be between 1 and 15, and is designed for a 10 MHz reference input, which implies an output frequency between 10 kHz and 150 MHz.  
+This project implements a charge-pump (CP) based (Type-II) Phase-Locked Loop (PLL) system designed to generate programmable output frequencies from a stable `10 MHz` reference input. The architecture uses a Voltage-Controlled Oscillator (VCO) together with two 3-bit programmable Frequency Dividers (FDs) to achieve a tunable output frequency.
+
+### Architecture
+
+- **Feedback Divider (M):**  
+  Divides the VCO output by a `3-bit integer input M`. This allows the PLL to lock the VCO frequency at an integer multiple of the reference input:  
+  `f_vco = M × f_ref`
+
+- **Output Divider (N):**  
+  Divides the VCO output by a `3-bit integer input N` to produce the final output:  
+  `f_out = f_vco / N`
+
+### Frequency Relationship
+
+By configuring **M** and **N** via six digital I/O control pads (3 bits each), the system achieves a fractional multiplication of the reference input:
+
+`f_out = (M / N) × f_ref`
+
+Since both M and N can be varied between 1 and 7, the **theoretical frequency range** spans from `1.428 MHz to 70 MHz`, based on the 3-bit divider limits. However, due to VCO constraints, the **practical output frequency range** is limited to approximately `1.428 MHz to 30 MHz`. This design demonstrates a compact, digitally controlled fractional frequency synthesizer, suitable for clock generation and frequency scaling applications.
 
 [Return to top](#toc)
 
@@ -66,6 +82,11 @@ N can be between 1 and 15, and is designed for a 10 MHz reference input, which i
 <a name="specs"></a>
 ## 4. Specifications of the Project
 
+### Frequency Range
+
+- **Theoretical:** 1.428 MHz – 70 MHz (from divider limits)  
+- **Practical:** 1.428 MHz – 30 MHz (limited by VCO performance)  
+
 [Return to top](#toc)
 
 ---
@@ -75,15 +96,21 @@ N can be between 1 and 15, and is designed for a 10 MHz reference input, which i
 
 <a name="pll"></a>
 ### 5.1 PLL
+
+<center><img src="Combined_Design/design_data/xschem/images/pll_3bitDiv.png" width="1000"></center>
+
 [Return to top](#toc)
 
 <a name="pfd"></a>
 ### 5.2 Phase-frequency detector (PFD)
+
+<center><img src="Combined_Design/design_data/xschem/images/PFD.png" width="1000"></center> 
+
 [Return to top](#toc)
 
 <a name="cp"></a>
 ### 5.3 Charge pump (CP)
-<center><img src="Combined_Design/design_data/xschem/images/charge_pump_sch.png" width="1000"></center>  
+<center><img src="Combined_Design/design_data/xschem/images/charge_pump_sch.png" width="450"></center>  
 
 The charge pump design in this project is based on the [tt08-tiny-pll](https://github.com/LegumeEmittingDiode/tt08-tiny-pll). The charge pump uses two current sources (bias_p and bias_n), which are switched to the output by the up and down control signals. The nominal charge pump current (set by the bias generator) is configurable to suit the PLL requirements.
 
@@ -91,7 +118,7 @@ The charge pump design in this project is based on the [tt08-tiny-pll](https://g
 
 <a name="lf"></a>
 ### 5.4 Loop filter
-<center><img src="Combined_Design/design_data/xschem/images/loop_filter_sch.png" width="1000"></center>  
+<center><img src="Combined_Design/design_data/xschem/images/loop_filter_sch.png" width="800"></center>  
 
 [Return to top](#toc)
 
@@ -117,10 +144,10 @@ Dedicated keeper devices are included to disable the oscillator during standby, 
 
 
 #### Inverter for VCO
-<center><img src="Combined_Design/design_data/xschem/images/11Stages_VCO_Inverter_sch.png" width="1000"></center>  
+<center><img src="Combined_Design/design_data/xschem/images/11Stages_VCO_Inverter_sch.png" width="400"></center>  
 
-#### 11-stage VCO
-<center><img src="Combined_Design/design_data/xschem/images/11Stages_VCO_sch.png" width="1000"></center>  
+#### 11-Stage Ring VCO
+<center><img src="Combined_Design/design_data/xschem/images/11Stages_VCO_sch.png" width="1500"></center>  
 
 [Return to top](#toc)
 
@@ -130,13 +157,13 @@ Dedicated keeper devices are included to disable the oscillator during standby, 
 <center><img src="Combined_Design/design_data/xschem/images/3bit_freq_divider.png" width="1000"></center> 
 
 #### Frequency Divider Cell
-<center><img src="Combined_Design/design_data/xschem/images/freq_div_cell.png" width="1000"></center>
+<center><img src="Combined_Design/design_data/xschem/images/freq_div_cell.png" width="700"></center>
 
 #### Half Adder for Divider
-<center><img src="Combined_Design/design_data/xschem/images/half_add.png" width="1000"></center>
+<center><img src="Combined_Design/design_data/xschem/images/half_add.png" width="500"></center>
 
 #### DFF with Inverterd CLK for Divider
-<center><img src="Combined_Design/design_data/xschem/images/dff_nclk.png" width="1000"></center>
+<center><img src="Combined_Design/design_data/xschem/images/dff_nclk.png" width="500"></center>
 
 [Return to top](#toc)
 
@@ -147,18 +174,21 @@ Dedicated keeper devices are included to disable the oscillator during standby, 
 
 <a name="sim_pll"></a>
 ### 6.1 PLL
+
 [Return to top](#toc)
 
 <a name="sim_vco"></a>
 ### 6.2 VCO
+
 We used the nominal control voltage as 1V to characterized the VCO.
-- VCO Output waveform at control voltage = 1V  
+
+#### VCO Output waveform at control voltage = 1V  
   <center><img src="Combined_Design/design_data/xschem/images/VCO_Out.jpeg" width="1000"></center>  
 
-- VCO Output frequency spectrum at control voltage = 1V  
+#### VCO Output Frequency Spectrum at Control Voltage = 1V 
   <center><img src="Combined_Design/design_data/xschem/images/VCO_Frequency_spectrum.jpeg" width="1000"></center>  
 
-- VCO Oscillation Frequency vs Control Voltage  
+#### VCO Oscillation Frequency vs Control Voltage 
 The VCO was characterized by measuring its output frequency while sweeping the control voltage. The results of this simulation are shown below:
   <center><img src="Combined_Design/design_data/xschem/plots/11Stages_VCO_Range.png" width="1000"></center>  
 
@@ -175,9 +205,16 @@ The VCO was characterized by measuring its output frequency while sweeping the c
 <a name="sim_fd"></a>
 ### 6.4 Frequency Divider (FD)
 
+#### 3-Bit Frequency Divider Testbench
 <center><img src="Combined_Design/design_data/xschem/images/3bit_freq_divider_pex_tb.png" width="1000"></center>
+
+#### Divider Cell Testbench
 <center><img src="Combined_Design/design_data/xschem/images/freq_div_cell_tb.png" width="1000"></center>
+
+#### Half Adder Testbench
 <center><img src="Combined_Design/design_data/xschem/images/half_add_tb.png" width="1000"></center>
+
+#### DFF with Inverterd CLK Testbench
 <center><img src="Combined_Design/design_data/xschem/images/dff_nclk_tb.png" width="1000"></center>
 
 [Return to top](#toc)
@@ -193,26 +230,26 @@ The VCO was characterized by measuring its output frequency while sweeping the c
 <a name="layout"></a>
 ## 8. Layout Design
 
-- Charge Pump Layout  
-  <center><img src="Combined_Design/design_data/gds/images/charge_pump.png" width="1000"></center>  
+### Charge Pump Layout  
+  <center><img src="Combined_Design/design_data/gds/images/charge_pump.png" width="500"></center>  
 
-- Loop Filter Layout  
-  <center><img src="Combined_Design/design_data/gds/images/loop_filter.png" width="1000"></center>  
+### Loop Filter Layout  
+  <center><img src="Combined_Design/design_data/gds/images/loop_filter.png" width="700"></center>  
 
-- Bias Generator Layout  
-  <center><img src="Combined_Design/design_data/gds/images/bias_gen_layout.png" width="1000"></center>  
+### Bias Generator Layout  
+  <center><img src="Combined_Design/design_data/gds/images/bias_gen_layout.png" width="600"></center>  
 
-- VCO Layout  
-  <center><img src="Combined_Design/design_data/gds/images/11Stage_vco_wob.png" width="1000"></center>  
+### VCO Layout  
+  <center><img src="Combined_Design/design_data/gds/images/11Stage_vco_wob.png" width="800"></center>  
 
-- Frequency Divider Layout  
+### Frequency Divider Layout  
   <center><img src="Combined_Design/design_data/gds/images/3bit_freq_divider.png" width="1000"></center>
 
-- PLL Layout (without fillers)  
-  <center><img src="Combined_Design/design_data/gds/images/pll_layout_without_fillers.png" width="1000"></center>  
+### PLL Layout (without fillers)  
+  <center><img src="Combined_Design/design_data/gds/images/pll_layout_without_fillers.png" width="600"></center>  
 
-- PLL Layout (with fillers)  
-  <center><img src="Combined_Design/design_data/gds/images/pll_layout_with_fillers.png" width="1000"></center>  
+### PLL Layout (with fillers)  
+  <center><img src="Combined_Design/design_data/gds/images/pll_layout_with_fillers.png" width="600"></center>  
 
 [Return to top](#toc)
 
@@ -220,16 +257,32 @@ The VCO was characterized by measuring its output frequency while sweeping the c
 
 <a name="pv"></a>
 ## 9. Physical Verification (DRC, LVS)
+
+### Design Rule Check (DRC) Results
+
+### Layout vs. Schematics (LVS) Results 
+<center><img src="Combined_Design/design_data/lvs/pll_3bitDiv.png" width="1000"></center>
+
 [Return to top](#toc)
 
 ---
 
 <a name="pex"></a>
 ## 10. Post-layout Verification after PEX
+
+### For a division ratio of 1 (M = 1 and N = 1)
+<center><img src="Combined_Design/design_data/xschem/images/pll_3bitDiv_pex_tb.png" width="1000"></center> 
+
+### For a division ratio of 1/7 (M = 1 and N = 7)
+
+### For a division ratio of 3 (M = 3 and N = 1)
+
 [Return to top](#toc)
 
 ---
 
 <a name="gds"></a>
+
 ## 11. GDS Streaming
+
 [Return to top](#toc)

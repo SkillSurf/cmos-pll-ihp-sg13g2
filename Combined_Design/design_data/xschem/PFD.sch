@@ -40,10 +40,10 @@ N -280 90 -280 140 {lab=vss}
 N -320 140 -280 140 {lab=vss}
 N -280 230 -280 280 {lab=vdd}
 N -320 280 -280 280 {lab=vdd}
-N -710 -260 -650 -260 {lab=vdd}
-N -710 -230 -650 -230 {lab=vss}
-N -710 -200 -650 -200 {lab=ref_clk}
-N -710 -170 -650 -170 {lab=vco_clk}
+N -950 620 -890 620 {lab=vdd}
+N -950 650 -890 650 {lab=vss}
+N -950 680 -890 680 {lab=ref_clk}
+N -950 710 -890 710 {lab=vco_clk}
 N -660 510 -640 510 {lab=vco_clk}
 N -660 580 -660 630 {lab=vco_clk}
 N -660 630 -640 630 {lab=vco_clk}
@@ -161,8 +161,8 @@ N -170 500 -10 500 {lab=#net6}
 N -170 500 -170 550 {lab=#net6}
 N -170 650 -10 650 {lab=#net6}
 N -170 550 -170 650 {lab=#net6}
-N -410 -260 -360 -260 {lab=up}
-N -410 -220 -360 -220 {lab=down}
+N -950 500 -900 500 {lab=up}
+N -950 540 -900 540 {lab=down}
 N -750 250 -710 250 {lab=ref_clk}
 N -710 170 -710 250 {lab=ref_clk}
 N -750 380 -660 380 {lab=vco_clk}
@@ -199,14 +199,14 @@ m=1
 model=sg13_lv_pmos
 spiceprefix=X
 }
-C {iopin.sym} -710 -260 0 1 {name=p1 lab=vdd}
-C {ipin.sym} -710 -200 0 0 {name=p2 lab=ref_clk}
-C {lab_pin.sym} -650 -260 0 1 {name=p3 sig_type=std_logic lab=vdd}
-C {iopin.sym} -710 -230 0 1 {name=p4 lab=vss}
-C {lab_pin.sym} -650 -230 0 1 {name=p5 sig_type=std_logic lab=vss}
-C {lab_pin.sym} -650 -200 0 1 {name=p6 sig_type=std_logic lab=ref_clk}
-C {ipin.sym} -710 -170 0 0 {name=p7 lab=vco_clk}
-C {lab_pin.sym} -650 -170 0 1 {name=p8 sig_type=std_logic lab=vco_clk}
+C {iopin.sym} -950 620 0 1 {name=p1 lab=vdd}
+C {ipin.sym} -950 680 0 0 {name=p2 lab=ref_clk}
+C {lab_pin.sym} -890 620 0 1 {name=p3 sig_type=std_logic lab=vdd}
+C {iopin.sym} -950 650 0 1 {name=p4 lab=vss}
+C {lab_pin.sym} -890 650 0 1 {name=p5 sig_type=std_logic lab=vss}
+C {lab_pin.sym} -890 680 0 1 {name=p6 sig_type=std_logic lab=ref_clk}
+C {ipin.sym} -950 710 0 0 {name=p7 lab=vco_clk}
+C {lab_pin.sym} -890 710 0 1 {name=p8 sig_type=std_logic lab=vco_clk}
 C {lab_pin.sym} -600 -10 0 1 {name=p9 sig_type=std_logic lab=vdd}
 C {lab_pin.sym} -320 280 0 0 {name=p10 sig_type=std_logic lab=vdd}
 C {lab_pin.sym} -600 360 0 1 {name=p11 sig_type=std_logic lab=vss}
@@ -255,10 +255,10 @@ C {lab_pin.sym} -70 610 0 0 {name=p21 sig_type=std_logic lab=vdd}
 C {lab_pin.sym} -70 770 0 0 {name=p22 sig_type=std_logic lab=vss}
 C {lab_pin.sym} 110 610 0 0 {name=p23 sig_type=std_logic lab=vdd}
 C {lab_pin.sym} 110 770 0 0 {name=p24 sig_type=std_logic lab=vss}
-C {opin.sym} -360 -260 0 0 {name=p25 lab=up}
-C {opin.sym} -360 -220 0 0 {name=p26 lab=down}
-C {lab_pin.sym} -410 -260 0 0 {name=p27 sig_type=std_logic lab=up}
-C {lab_pin.sym} -410 -220 0 0 {name=p28 sig_type=std_logic lab=down}
+C {opin.sym} -900 500 0 0 {name=p25 lab=up}
+C {opin.sym} -900 540 0 0 {name=p26 lab=down}
+C {lab_pin.sym} -950 500 0 0 {name=p27 sig_type=std_logic lab=up}
+C {lab_pin.sym} -950 540 0 0 {name=p28 sig_type=std_logic lab=down}
 C {lab_pin.sym} 350 170 0 1 {name=p31 sig_type=std_logic lab=up}
 C {lab_pin.sym} 350 630 0 1 {name=p32 sig_type=std_logic lab=down}
 C {lab_pin.sym} -750 250 0 0 {name=p29 sig_type=std_logic lab=ref_clk}
