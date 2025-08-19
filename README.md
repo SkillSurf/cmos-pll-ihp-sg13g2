@@ -251,12 +251,24 @@ The VCO was characterized by measuring its output frequency while sweeping the c
 ### PLL Layout (with fillers)  
   <center><img src="Combined_Design/design_data/gds/images/pll_layout_with_fillers.png" width="600"></center>  
 
-### PLL pinout
-  <center><img src="Combined_Design/design_data/gds/images/PLL_pinout.png" width="600"></center>
-
 [Return to top](#toc)
 
+<a name="pinout"></a>
+### 9. PLL pinout
 ---
+
+  <center><img src="Combined_Design/design_data/gds/images/PLL_pinout.png" width="600"></center>
+
+<a name="layout_info"></a>
+### 10. Layout Information
+---
+
+|           | Width (µm) | Height (µm) | Pitch (µm) | Area (µm²) |   Layers   |
+|-----------|------------|-------------|------------|------------|------------|
+| Layout    | 400        | 400         | -          | 160,000    |    all     |
+| Pads      | 60         | 60          | 75         | 3,600      |  TM2 -  M3 |
+| RF Pads   | 60         | 60          | 75         | ~2,984     |  TM2 - TM1 |
+
 
 <a name="pv"></a>
 ## 9. Physical Verification (DRC, LVS)
