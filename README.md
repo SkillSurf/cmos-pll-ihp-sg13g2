@@ -251,6 +251,9 @@ The VCO was characterized by measuring its output frequency while sweeping the c
 ### PLL Layout (with fillers)  
   <center><img src="Combined_Design/design_data/gds/images/pll_layout_with_fillers.png" width="600"></center>  
 
+### PLL pinout
+  <center><img src="Combined_Design/design_data/gds/images/PLL_pinout.png" width="600"></center>
+
 [Return to top](#toc)
 
 ---
