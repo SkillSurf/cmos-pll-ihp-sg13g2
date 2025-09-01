@@ -35,7 +35,7 @@
     - [Simulation for a Multiplier Ratio of 1/7 (M = 1 and N = 7)](#pex_m1_n7) 
     - [Simulation for a Multiplier Ratio of 3 (M = 3 and N = 1)](#pex_m3_n1)       
 11. [IHP OpenMPW Submission](#mpw)
-12. [Refernces](#ref)
+12. [References](#ref)
 
 ---
 
